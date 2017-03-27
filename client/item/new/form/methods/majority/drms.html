@@ -1,0 +1,88 @@
+<template name="method_techniques_drms">
+<div class="toggle" id="object_toggle-drms">
+  <div class="row align-center">
+    <div class="uderline-method">
+      <h4>drms</h4>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 col-md-6 individual-property drmsExperimental">EXPERIMENTAL PARAMETERS
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_drmsExperimental" placeholder="(e.g. X-ray tube voltage, laser wavelength, air/vacuum, etc.)" value="{{details.methods.drms.experimentalParameters}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property drmsElements">ELEMENTS DETERMINED
+    </div>
+    <div class="col-xs-12 col-md-6"> 
+      <input type="text" class="individual-value individual-form" id="object_drmsElements" placeholder="(e.g. cobalt blue, red ochre, indigo, etc.)" value="{{details.methods.drms.elements}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property drmsFormulae">CHEMICAL FORMULAE DETERMINED
+    </div>
+    <div class="col-xs-12 col-md-6"> 
+      <input type="text" class="individual-value individual-form" id="object_drmsFormulae" placeholder="" value="{{details.methods.drms.formulae}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property drmsPigmentsDyes">PIGMENTS/DYES IDENTIFIED
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_drmsPigmentsDyes" placeholder="" value="{{details.methods.drms.pigmentsDyes}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property drmsPriming">PRIMING IDENTIFIED
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_drmsPriming" placeholder="" value="{{details.methods.drms.priming}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property drmsBindingMedia">BINDING MEDIA IDENTIFIED
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_drmsBindingMedia" placeholder="" value="{{details.methods.drms.bindingMedia}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property drmsVarnish">VARNISH IDENTIFIED
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_drmsVarnish" placeholder="" value="{{details.methods.drms.varnish}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property drmsStretcherSupportStrainer">STRETCHER/SUPPORT/STRAINER IDENTIFIED
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_drmsStretcherSupportStrainer" placeholder="" value="{{details.methods.drms.stretcherSupportStrainer}}">
+    </div>
+    <div class="col-xs-12">
+      &nbsp;
+    </div>
+  </div>
+  <div class="row align-center">
+    <div class="col-xs-12 notes">Brief info about possible multilayers/underpaintings/retouches
+    </div>
+    <div class="col-sm-8 col-sm-offset-2">
+        <textarea class="" id="object_drmsBrief" name="sources" rows="4" placeholder="(e.g. secondary effects from underlying signal sources)" value="{{details.methods.drms.notes.brief}}"></textarea>
+    </div>
+    <div class="col-xs-12 notes">Comments
+    </div>
+    <div class="col-sm-8 col-sm-offset-2">
+        <textarea class="" id="object_drmsComments" name="sources" rows="4" placeholder="(e.g. additional info not covered by the points above)" value="{{details.methods.drms.notes.comments}}"></textarea>
+    </div>
+    <div class="col-xs-12 notes">Sources
+    </div>
+    <div class="col-sm-8 col-sm-offset-2">
+        <textarea class="" id="object_drmsSources" name="sources" rows="4" placeholder="(literature)" value="{{details.methods.drms.notes.sources}}"></textarea>
+    </div>
+    <div class="col-xs-12">
+      &nbsp;
+    </div>
+  </div>
+
+
+
+  {{> files_methods_drms}}
+
+
+  <div class="row align-center">
+    <div class="col-xs-12 notes">Figure captions
+    </div>
+    <div class="col-sm-8 col-sm-offset-2">
+        <textarea class="" id="object_drmsCaption" name="history" rows="4" placeholder="(e.g. additional info not covered by the points above)" value="{{details.methods.drms.notes.caption}}"></textarea>
+    </div>
+    <br/>
+  </div>
+</div>
+</template>

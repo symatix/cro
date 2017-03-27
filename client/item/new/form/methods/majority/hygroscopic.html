@@ -1,0 +1,88 @@
+<template name="method_techniques_hygroscopic">
+<div class="toggle" id="object_toggle-hygroscopic">
+  <div class="row align-center">
+    <div class="uderline-method">
+      <h4>hygroscopic</h4>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 col-md-6 individual-property hygroscopicExperimental">EXPERIMENTAL PARAMETERS
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_hygroscopicExperimental" placeholder="(e.g. X-ray tube voltage, laser wavelength, air/vacuum, etc.)" value="{{details.methods.hygroscopic.experimentalParameters}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property hygroscopicElements">ELEMENTS DETERMINED
+    </div>
+    <div class="col-xs-12 col-md-6"> 
+      <input type="text" class="individual-value individual-form" id="object_hygroscopicElements" placeholder="(e.g. cobalt blue, red ochre, indigo, etc.)" value="{{details.methods.hygroscopic.elements}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property hygroscopicFormulae">CHEMICAL FORMULAE DETERMINED
+    </div>
+    <div class="col-xs-12 col-md-6"> 
+      <input type="text" class="individual-value individual-form" id="object_hygroscopicFormulae" placeholder="" value="{{details.methods.hygroscopic.formulae}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property hygroscopicPigmentsDyes">PIGMENTS/DYES IDENTIFIED
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_hygroscopicPigmentsDyes" placeholder="" value="{{details.methods.hygroscopic.pigmentsDyes}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property hygroscopicPriming">PRIMING IDENTIFIED
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_hygroscopicPriming" placeholder="" value="{{details.methods.hygroscopic.priming}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property hygroscopicBindingMedia">BINDING MEDIA IDENTIFIED
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_hygroscopicBindingMedia" placeholder="" value="{{details.methods.hygroscopic.bindingMedia}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property hygroscopicVarnish">VARNISH IDENTIFIED
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_hygroscopicVarnish" placeholder="" value="{{details.methods.hygroscopic.varnish}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property hygroscopicStretcherSupportStrainer">STRETCHER/SUPPORT/STRAINER IDENTIFIED
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_hygroscopicStretcherSupportStrainer" placeholder="" value="{{details.methods.hygroscopic.stretcherSupportStrainer}}">
+    </div>
+    <div class="col-xs-12">
+      &nbsp;
+    </div>
+  </div>
+  <div class="row align-center">
+    <div class="col-xs-12 notes">Brief info about possible multilayers/underpaintings/retouches
+    </div>
+    <div class="col-sm-8 col-sm-offset-2">
+        <textarea class="" id="object_hygroscopicBrief" name="sources" rows="4" placeholder="(e.g. secondary effects from underlying signal sources)" value="{{details.methods.hygroscopic.notes.brief}}"></textarea>
+    </div>
+    <div class="col-xs-12 notes">Comments
+    </div>
+    <div class="col-sm-8 col-sm-offset-2">
+        <textarea class="" id="object_hygroscopicComments" name="sources" rows="4" placeholder="(e.g. additional info not covered by the points above)" value="{{details.methods.hygroscopic.notes.comments}}"></textarea>
+    </div>
+    <div class="col-xs-12 notes">Sources
+    </div>
+    <div class="col-sm-8 col-sm-offset-2">
+        <textarea class="" id="object_hygroscopicSources" name="sources" rows="4" placeholder="(literature)" value="{{details.methods.hygroscopic.notes.sources}}"></textarea>
+    </div>
+    <div class="col-xs-12">
+      &nbsp;
+    </div>
+  </div>
+
+
+
+  {{> files_methods_hygroscopic}}
+
+
+  <div class="row align-center">
+    <div class="col-xs-12 notes">Figure captions
+    </div>
+    <div class="col-sm-8 col-sm-offset-2">
+        <textarea class="" id="object_hygroscopicCaption" name="history" rows="4" placeholder="(e.g. additional info not covered by the points above)" value="{{details.methods.hygroscopic.notes.caption}}"></textarea>
+    </div>
+    <br/>
+  </div>
+</div>
+</template>

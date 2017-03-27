@@ -1,0 +1,88 @@
+<template name="method_techniques_pigment_plm">
+<div class="toggle" id="object_toggle-plm">
+  <div class="row align-center">
+    <div class="uderline-method">
+      <h4>plm</h4>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 col-md-6 individual-property plmExperimental">
+      EXPERIMENTAL PARAMETERS
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_plmExperimental" placeholder="(e.g. X-ray tube voltage, laser wavelength, air/vacuum, etc.)" value="{{details.methods.plm.experimentalParameters}}">
+    </div>
+
+    <div class="col-xs-12 col-md-6 individual-property plmElements">
+      ELEMENTS DETERMINED
+    </div>
+    <div class="col-xs-12 col-md-6"> 
+      <input type="text" class="individual-value individual-form" id="object_plmElements" placeholder="(e.g. cobalt blue, red ochre, indigo, etc.)" value="{{details.methods.plm.elements}}">
+    </div>
+
+    <div class="col-xs-12 col-md-6 individual-property plmQuantification">
+      QUANTIFICATION RESULTS
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_plmQuantification" placeholder="(e.g. 92% Cu, 7,2% Sn, 0,8% Pb)" value="{{details.methods.plm.quantification}}">
+    </div>
+
+    <div class="col-xs-12 col-md-6 individual-property plmFormulae">
+      CHEMICAL FORMULAE DETERMINED
+    </div>
+    <div class="col-xs-12 col-md-6"> 
+      <input type="text" class="individual-value individual-form" id="object_plmFormulae" placeholder="" value="{{details.methods.plm.formulae}}">
+    </div>
+
+    <div class="col-xs-12 col-md-6 individual-property plmInfluence">
+      SAMPLE HOLDER/PURITY INFLUENCE
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_plmInfluence" placeholder="(e.g. elements from pigment powder holder, binding media effects, etc.)" value="{{details.methods.plm.influence}}">
+    </div>
+
+    <div class="col-xs-12 col-md-6 individual-property plmColorValues">
+      COLOR SPACE VALUES
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_plmColorValues" placeholder="(e.g. CIE Lab, LCh, CIE XYZ, etc.)" value="{{details.methods.plm.colorValues}}">
+    </div>
+
+    <div class="col-xs-12 col-md-6 individual-property plmBands">
+      MAIN ROTATIONAL/VIBRATIONAL BANDS AND THEIR RELATIVE INTENSITIES
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_plmBands" placeholder="(e.g. Raman band wavenumbers (cm-1) for cerulean blue: 495m(sh), 534s, 674vs)" value="{{details.methods.plm.bands}}">
+    </div>
+
+    <div class="col-xs-12">
+      &nbsp;
+    </div>
+  </div>
+
+
+  <div class="row align-center">
+
+    <div class="col-xs-12 notes">Comments
+    </div>
+    <div class="col-sm-8 col-sm-offset-2">
+        <textarea class="" id="object_plmComments" name="sources" rows="4" placeholder="(e.g. additional info not covered by the points above)" value="{{details.methods.plm.notes.comments}}"></textarea>
+    </div>
+
+    <div class="col-xs-12">
+      &nbsp;
+    </div>
+  </div>
+
+  {{> files_methods_plm}}
+
+  <div class="row align-center">
+    <div class="col-xs-12 notes">Figure captions
+    </div>
+    <div class="col-sm-8 col-sm-offset-2">
+        <textarea class="" id="object_plmCaption" name="history" rows="4" placeholder="(e.g. additional info not covered by the points above)" value="{{details.methods.plm.notes.caption}}"></textarea>
+    </div>
+    <br/>
+  </div>
+</div>
+</template>

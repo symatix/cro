@@ -1,0 +1,25 @@
+<template name="nav_scrollspy_affix">
+  <nav class="hidden-xs navbar-fixed-top nav-hover col-sm-offset-11 col-sm-1" id="spy">
+    <div class="affix-size">
+      <ul class="nav nav-pills nav-stacked" data-spy="affix" data-offset-top="50">
+          <li><a href="#documentTop">Top</a></li>
+          <li><a href="#basic_href">Basic info</a></li>
+
+          {{#if notPigment}}
+          <li><a href="#material_href">Materials and techniques</a></li>
+          {{/if}}
+
+          <li><a href="#methods_href">Methods</a></li>
+          <li><a href="#submit_href">Submit</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <script>
+      $('body').scrollspy({target:'#spy'})
+      $(window).on('activate.bs.scrollspy', function (e) {
+          history.replaceState({}, "", $("a[href^='#']", e.target).attr("href"));
+      });
+  </script>
+
+</template>

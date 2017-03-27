@@ -1,0 +1,103 @@
+<template name="files_methods_tl">
+<div class="row align-center">
+<div class="col-xs-12">
+  <h3>upload VIS/GL/UVF/IRP/RTG/SEM/spectrum photo</h3>
+</div>
+</div>
+<div class="row">
+  <div class="col-xs-12 col-sm-2 individual-property">PHOTO ONE
+  </div>
+  <div class="col-xs-12 col-sm-4">
+    <label for="tlFiles1_label" class="upload_label" id="upload_tlFiles1">(.jpg or .tiff, max size 5 mb)</label>
+    <input class="individual-data-value" type="file" id="tlFiles1_label">
+  </div>
+  <div class="col-xs-12 col-sm-2 individual-property"> PHOTO TWO
+  </div>
+  <div class="col-xs-12 col-sm-4">
+    <label for="tlFiles2_label" class="upload_label" id="upload_tlFiles2">(.jpg or .tiff, max size 5 mb)</label>
+    <input class="individual-data-value" type="file" id="tlFiles2_label">
+  </div>
+  <div class="col-xs-12 col-sm-2 individual-property"> PHOTO THREE
+  </div>
+  <div class="col-xs-12 col-sm-4">
+    <label for="tlFiles3_label" class="upload_label" id="upload_tlFiles3">(.jpg or .tiff, max size 5 mb)</label>
+    <input class="individual-data-value" type="file" id="tlFiles3_label">
+  </div>
+  <div class="col-xs-12 col-sm-2 individual-property"> PHOTO FOUR
+  </div>
+  <div class="col-xs-12 col-sm-4">
+    <label for="tlFiles4_label" class="upload_label" id="upload_tlFiles4">(.jpg or .tiff, max size 5 mb)</label>
+    <input class="individual-data-value" type="file" id="tlFiles4_label">
+  </div>
+  <div class="col-xs-12 col-sm-8 individual-property"> UPLOAD RELEVANT FILES (e.g. treatment documentation, conservation report, etc.)
+  </div>
+  <div class="col-xs-12 col-sm-4">
+    <label for="tlFiles5_label" class="upload_label" id="upload_tlFiles5">(.zip)</label>
+    <input class="individual-data-value" type="file" id="tlFiles5_label">
+  </div>
+  <div class="col-xs-12">
+    &nbsp;
+  </div>
+</div>
+
+<!-- hidden part1 -->
+<div class="tlFiles1 hidden">
+  <div class="individual-property">URL
+    <input type="text" class="individual-value individual-form" id="tlFiles1" placeholder="" value="{{details.methods.tl.files.tlFiles1}}">
+  </div>
+</div>
+<div class="tlFiles1_id hidden">
+  <div class="individual-property">ID
+    <input type="text" class="individual-value individual-form" id="tlFiles1_id" placeholder="" value="{{details.methods.tl.files.tlFiles1_id}}">
+  </div>
+</div>
+<!-- /hidden part1 -->
+<!-- hidden part 2-->
+<div class="tlFiles2 hidden">
+  <div class="individual-property">URL
+    <input type="text" class="individual-value individual-form" id="tlFiles2" placeholder="" value="{{details.methods.tl.files.tlFiles2}}">
+  </div>
+</div>
+<div class="tlFiles2_id hidden">
+  <div class="individual-property">ID
+    <input type="text" class="individual-value individual-form" id="tlFiles2_id" placeholder="" value="{{details.methods.tl.files.tlFiles2_id}}">
+  </div>
+</div>
+<!-- /hidden part 2-->
+<!-- hidden part 3-->
+<div class="tlFiles3 hidden">
+  <div class="individual-property">URL
+    <input type="text" class="individual-value individual-form" id="tlFiles3" placeholder="" value="{{details.methods.tl.files.tlFiles3}}">
+  </div>
+</div>
+<div class="tlFiles3_id hidden">
+  <div class="individual-property">ID
+    <input type="text" class="individual-value individual-form" id="tlFiles3_id" placeholder="" value="{{details.methods.tl.files.tlFiles3_id}}">
+  </div>
+</div>
+<!-- / hidden part 3-->
+<!-- hidden part4 -->
+<div class="tlFiles4 hidden">
+  <div class="individual-property">URL
+    <input type="text" class="individual-value individual-form" id="tlFiles4" placeholder="" value="{{details.methods.tl.files.tlFiles4}}">
+  </div>
+</div>
+<div class="tlFiles4_id hidden">
+  <div class="individual-property">ID
+    <input type="text" class="individual-value individual-form" id="tlFiles4_id" placeholder="" value="{{details.methods.tl.files.tlFiles4_id}}">
+  </div>
+</div>
+<!-- / hidden part4 -->
+<!-- hidden part 5-->
+<div class="tlFiles5 hidden">
+  <div class="individual-property">URL
+    <input type="text" class="individual-value individual-form" id="tlFiles5" placeholder="" value="{{details.methods.tl.files.tlFiles5}}">
+  </div>
+</div>
+<div class="tlFiles5_id hidden">
+  <div class="individual-property">ID
+    <input type="text" class="individual-value individual-form" id="tlFiles5_id" placeholder="" value="{{details.methods.tl.files.tlFiles5_id}}">
+  </div>
+</div>
+<!-- /hidden part 5-->
+</template>

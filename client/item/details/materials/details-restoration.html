@@ -1,0 +1,80 @@
+<template name="materials_restoration">
+	{{#if materials.restoration.executor}}
+	<div class="col-md-6">
+	  <div class="executor">
+	    <div class="individual-property-display">Executor of treatment:<br/>
+	      <div class="individual-value-display">{{materials.restoration.executor}}</div>
+	    </div>
+	  </div>
+	</div>
+	{{/if}}
+	{{#if materials.restoration.responsiblePerson}}
+	<div class="col-md-6">
+	  <div class="responsiblePerson">
+	    <div class="individual-property-display">Responsible person/leader of restorations:<br/>
+	      <div class="individual-value-display">{{materials.restoration.responsiblePerson}}</div>
+	    </div>
+	  </div>
+	</div>
+	{{/if}}
+	{{#if materials.restoration.investor}}
+	<div class="col-md-6">
+	  <div class="investor">
+	    <div class="individual-property-display">Investor:<br/>
+	      <div class="individual-value-display">{{materials.restoration.investor}}</div>
+	    </div>
+	  </div>
+	</div>
+	{{/if}}
+	{{#if materials.restoration.people}}
+	<div class="col-md-6">
+	  <div class="people">
+	    <div class="individual-property-display">People involved in treatment:<br/>
+	      <div class="individual-value-display">{{materials.restoration.people}}</div>
+	    </div>
+	  </div>
+	</div>
+	{{/if}}
+	{{#if materials.restoration.chronologicalProcess}}
+	<div class="col-md-6">
+	  <div class="chronologicalProcess">
+	    <div class="individual-property-display">Processes in a chronological order:<br/> 
+	      <div class="individual-value-display">{{materials.restoration.chronologicalProcess}}</div>
+	    </div>
+	  </div>
+	</div>
+	{{/if}}
+	{{#if materials.restoration.duration}}
+	<div class="col-md-6">
+	  <div class="duration">
+	    <div class="individual-property-display">Date/duration of the treatment (MM/YYYY-MM/YYYY):<br/> 
+	      <div class="individual-value-display">{{materials.restoration.duration}}</div>
+	    </div>
+	  </div>
+	</div>
+	{{/if}}
+	{{#if originalObj}}
+		<div class="col-xs-12 add-bottom-space">
+	    	{{> images_restoration}}
+	    </div>
+	{{/if}}
+	{{#if materials.restoration.notes.comments}}
+	<div class="col-md-12 align-center">
+	  <div class="artHistory">
+	    <div class="individual-property-display">Comments:<br/>
+	      <div class="individual-value-display">
+	      	<pre>
+	      		{{materials.restoration.notes.comments}}
+	      	</pre>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	{{/if}}
+
+	<!-- 
+	missing - Fillers / Short overview of art history
+	2add
+	-->
+
+</template>

@@ -1,0 +1,19 @@
+<!--
+maybe change this to global if user/admin
+-->
+
+<template name="edit_button">
+
+	    
+    {{#if admin}}
+	    <a href="/edit/{{_id}}">
+	       <button class="btn btn-default btn-submit js-setSessionEdit">EDIT</button>
+	    </a>  
+	{{else}}
+	{{#if owner}}
+	    <a href="/edit/{{_id}}">
+	      <button class="btn btn-default btn-submit js-setSessionEdit">EDIT</button>
+	    </a>
+   {{/if}}
+  {{/if}}
+</template>

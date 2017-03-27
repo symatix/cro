@@ -1,0 +1,88 @@
+<template name="method_techniques_pigment_irpIrrIrfc">
+<div class="toggle" id="object_toggle-irpIrrIrfc">
+  <div class="row align-center">
+    <div class="uderline-method">
+      <h4>irpIrrIrfc</h4>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 col-md-6 individual-property irpIrrIrfcExperimental">
+      EXPERIMENTAL PARAMETERS
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_irpIrrIrfcExperimental" placeholder="(e.g. X-ray tube voltage, laser wavelength, air/vacuum, etc.)" value="{{details.methods.irpIrrIrfc.experimentalParameters}}">
+    </div>
+
+    <div class="col-xs-12 col-md-6 individual-property irpIrrIrfcElements">
+      ELEMENTS DETERMINED
+    </div>
+    <div class="col-xs-12 col-md-6"> 
+      <input type="text" class="individual-value individual-form" id="object_irpIrrIrfcElements" placeholder="(e.g. cobalt blue, red ochre, indigo, etc.)" value="{{details.methods.irpIrrIrfc.elements}}">
+    </div>
+
+    <div class="col-xs-12 col-md-6 individual-property irpIrrIrfcQuantification">
+      QUANTIFICATION RESULTS
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_irpIrrIrfcQuantification" placeholder="(e.g. 92% Cu, 7,2% Sn, 0,8% Pb)" value="{{details.methods.irpIrrIrfc.quantification}}">
+    </div>
+
+    <div class="col-xs-12 col-md-6 individual-property irpIrrIrfcFormulae">
+      CHEMICAL FORMULAE DETERMINED
+    </div>
+    <div class="col-xs-12 col-md-6"> 
+      <input type="text" class="individual-value individual-form" id="object_irpIrrIrfcFormulae" placeholder="" value="{{details.methods.irpIrrIrfc.formulae}}">
+    </div>
+
+    <div class="col-xs-12 col-md-6 individual-property irpIrrIrfcInfluence">
+      SAMPLE HOLDER/PURITY INFLUENCE
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_irpIrrIrfcInfluence" placeholder="(e.g. elements from pigment powder holder, binding media effects, etc.)" value="{{details.methods.irpIrrIrfc.influence}}">
+    </div>
+
+    <div class="col-xs-12 col-md-6 individual-property irpIrrIrfcColorValues">
+      COLOR SPACE VALUES
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_irpIrrIrfcColorValues" placeholder="(e.g. CIE Lab, LCh, CIE XYZ, etc.)" value="{{details.methods.irpIrrIrfc.colorValues}}">
+    </div>
+
+    <div class="col-xs-12 col-md-6 individual-property irpIrrIrfcBands">
+      MAIN ROTATIONAL/VIBRATIONAL BANDS AND THEIR RELATIVE INTENSITIES
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_irpIrrIrfcBands" placeholder="(e.g. Raman band wavenumbers (cm-1) for cerulean blue: 495m(sh), 534s, 674vs)" value="{{details.methods.irpIrrIrfc.bands}}">
+    </div>
+
+    <div class="col-xs-12">
+      &nbsp;
+    </div>
+  </div>
+
+
+  <div class="row align-center">
+
+    <div class="col-xs-12 notes">Comments
+    </div>
+    <div class="col-sm-8 col-sm-offset-2">
+        <textarea class="" id="object_irpIrrIrfcComments" name="sources" rows="4" placeholder="(e.g. additional info not covered by the points above)" value="{{details.methods.irpIrrIrfc.notes.comments}}"></textarea>
+    </div>
+
+    <div class="col-xs-12">
+      &nbsp;
+    </div>
+  </div>
+
+  {{> files_methods_irpIrrIrfc}}
+
+  <div class="row align-center">
+    <div class="col-xs-12 notes">Figure captions
+    </div>
+    <div class="col-sm-8 col-sm-offset-2">
+        <textarea class="" id="object_irpIrrIrfcCaption" name="history" rows="4" placeholder="(e.g. additional info not covered by the points above)" value="{{details.methods.irpIrrIrfc.notes.caption}}"></textarea>
+    </div>
+    <br/>
+  </div>
+</div>
+</template>

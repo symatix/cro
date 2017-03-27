@@ -1,0 +1,88 @@
+<template name="method_techniques_libs">
+<div class="toggle" id="object_toggle-libs">
+  <div class="row align-center">
+    <div class="uderline-method">
+      <h4>libs</h4>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 col-md-6 individual-property libsExperimental">EXPERIMENTAL PARAMETERS
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_libsExperimental" placeholder="(e.g. X-ray tube voltage, laser wavelength, air/vacuum, etc.)" value="{{details.methods.libs.experimentalParameters}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property libsElements">ELEMENTS DETERMINED
+    </div>
+    <div class="col-xs-12 col-md-6"> 
+      <input type="text" class="individual-value individual-form" id="object_libsElements" placeholder="(e.g. cobalt blue, red ochre, indigo, etc.)" value="{{details.methods.libs.elements}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property libsFormulae">CHEMICAL FORMULAE DETERMINED
+    </div>
+    <div class="col-xs-12 col-md-6"> 
+      <input type="text" class="individual-value individual-form" id="object_libsFormulae" placeholder="" value="{{details.methods.libs.formulae}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property libsPigmentsDyes">PIGMENTS/DYES IDENTIFIED
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_libsPigmentsDyes" placeholder="" value="{{details.methods.libs.pigmentsDyes}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property libsPriming">PRIMING IDENTIFIED
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_libsPriming" placeholder="" value="{{details.methods.libs.priming}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property libsBindingMedia">BINDING MEDIA IDENTIFIED
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_libsBindingMedia" placeholder="" value="{{details.methods.libs.bindingMedia}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property libsVarnish">VARNISH IDENTIFIED
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_libsVarnish" placeholder="" value="{{details.methods.libs.varnish}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property libsStretcherSupportStrainer">STRETCHER/SUPPORT/STRAINER IDENTIFIED
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_libsStretcherSupportStrainer" placeholder="" value="{{details.methods.libs.stretcherSupportStrainer}}">
+    </div>
+    <div class="col-xs-12">
+      &nbsp;
+    </div>
+  </div>
+  <div class="row align-center">
+    <div class="col-xs-12 notes">Brief info about possible multilayers/underpaintings/retouches
+    </div>
+    <div class="col-sm-8 col-sm-offset-2">
+        <textarea class="" id="object_libsBrief" name="sources" rows="4" placeholder="(e.g. secondary effects from underlying signal sources)" value="{{details.methods.libs.notes.brief}}"></textarea>
+    </div>
+    <div class="col-xs-12 notes">Comments
+    </div>
+    <div class="col-sm-8 col-sm-offset-2">
+        <textarea class="" id="object_libsComments" name="sources" rows="4" placeholder="(e.g. additional info not covered by the points above)" value="{{details.methods.libs.notes.comments}}"></textarea>
+    </div>
+    <div class="col-xs-12 notes">Sources
+    </div>
+    <div class="col-sm-8 col-sm-offset-2">
+        <textarea class="" id="object_libsSources" name="sources" rows="4" placeholder="(literature)" value="{{details.methods.libs.notes.sources}}"></textarea>
+    </div>
+    <div class="col-xs-12">
+      &nbsp;
+    </div>
+  </div>
+
+
+
+  {{> files_methods_libs}}
+
+
+  <div class="row align-center">
+    <div class="col-xs-12 notes">Figure captions
+    </div>
+    <div class="col-sm-8 col-sm-offset-2">
+        <textarea class="" id="object_libsCaption" name="history" rows="4" placeholder="(e.g. additional info not covered by the points above)" value="{{details.methods.libs.notes.caption}}"></textarea>
+    </div>
+    <br/>
+  </div>
+</div>
+</template>

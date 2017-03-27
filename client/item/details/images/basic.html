@@ -1,0 +1,105 @@
+<template name="images_basic">
+    <div class="row img-box align-center">
+		{{#if data.basic.front}}
+		<div class="col-xs-6">
+		<h4>&nbsp;</h4>
+			<img class="img-materials-sm" src="{{data.basic.front}}" data-toggle="modal" data-target="#thumb-modal-front">
+		</div>
+          <!-- modal - front -->
+	      <div class="modal fade" id="thumb-modal-front" role="dialog">
+	        <div class="modal-dialog">
+	          <div class="modal-content modal-div">
+	            <div class="modal-header">
+	              <h4 class="modal-title">
+	        		{{basic.title}} • front image
+	        		<button type="button" class="close" data-dismiss="modal">&times;</button>
+	      	 	  </h4>
+	            </div>
+	            <div class="modal-body align-center">
+	              <img class="img-modal" src="{{data.basic.front}}">
+	            </div>
+	          </div>
+	        </div>
+	      </div>
+		{{/if}}
+
+		{{#if data.basic.back}}
+		<div class="col-xs-6">
+		<h4>&nbsp;</h4>
+			<img class="img-materials-sm" src="{{data.basic.back}}" data-toggle="modal" data-target="#thumb-modal-back">
+		</div>
+          <!-- modal - back -->
+	      <div class="modal fade" id="thumb-modal-back" role="dialog">
+	        <div class="modal-dialog">
+	          <div class="modal-content modal-div">
+	            <div class="modal-header">
+	              <h4 class="modal-title">
+	        		{{basic.title}} • back image
+	        		<button type="button" class="close" data-dismiss="modal">&times;</button>
+	      	 	  </h4>
+	            </div>
+	            <div class="modal-body align-center">
+	              <img class="img-modal" src="{{data.basic.back}}">
+	            </div>
+	          </div>
+	        </div>
+	      </div>
+		{{/if}}
+
+		{{#if data.basic.side}}
+		<div class="col-xs-6">
+		<h4>&nbsp;</h4>
+			<img class="img-materials-sm" src="{{data.basic.side}}" data-toggle="modal" data-target="#thumb-modal-side">
+		</div>
+          <!-- modal - side -->
+	      <div class="modal fade" id="thumb-modal-side" role="dialog">
+	        <div class="modal-dialog">
+	          <div class="modal-content modal-div">
+	            <div class="modal-header">
+	              <h4 class="modal-title">
+	        		{{basic.title}} • side image
+	        		<button type="button" class="close" data-dismiss="modal">&times;</button>
+	      	 	  </h4>
+	            </div>
+	            <div class="modal-body align-center">
+	              <img class="img-modal" src="{{data.basic.side}}">
+	            </div>
+	          </div>
+	        </div>
+	      </div>
+		{{/if}}
+
+		{{#if data.basic.signature}}
+		<div class="col-xs-6">
+		<h4>&nbsp;</h4>
+			<img class="img-materials-sm" src="{{data.basic.signature}}" data-toggle="modal" data-target="#thumb-modal-signature">
+		</div>
+          <!-- modal - signature -->
+	      <div class="modal fade" id="thumb-modal-signature" role="dialog">
+	        <div class="modal-dialog">
+	          <div class="modal-content modal-div">
+	            <div class="modal-header">
+	              <h4 class="modal-title">
+	        		{{basic.title}} • signature image
+	        		<button type="button" class="close" data-dismiss="modal">&times;</button>
+	      	 	  </h4>
+	            </div>
+	            <div class="modal-body align-center">
+	              <img class="img-modal" src="{{data.basic.signature}}">
+	            </div>
+	          </div>
+	        </div>
+	      </div>
+		{{/if}}
+
+		{{#if materials.original.notes.figureCaption}}
+		<div class="col-md-12">
+		  <div class="figureCaption">
+		    <div class="individual-property-display">Figure captions<br/> 
+		      <div class="individual-value-display">{{materials.original.notes.figureCaption}}</div>
+		    </div>
+		  </div>
+		</div>
+		{{/if}}
+	</div>
+</template>

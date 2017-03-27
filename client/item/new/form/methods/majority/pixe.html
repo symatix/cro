@@ -1,0 +1,88 @@
+<template name="method_techniques_pixe">
+<div class="toggle" id="object_toggle-pixe">
+  <div class="row align-center">
+    <div class="uderline-method">
+      <h4>pixe</h4>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 col-md-6 individual-property pixeExperimental">EXPERIMENTAL PARAMETERS
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_pixeExperimental" placeholder="(e.g. X-ray tube voltage, laser wavelength, air/vacuum, etc.)" value="{{details.methods.pixe.experimentalParameters}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property pixeElements">ELEMENTS DETERMINED
+    </div>
+    <div class="col-xs-12 col-md-6"> 
+      <input type="text" class="individual-value individual-form" id="object_pixeElements" placeholder="(e.g. cobalt blue, red ochre, indigo, etc.)" value="{{details.methods.pixe.elements}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property pixeFormulae">CHEMICAL FORMULAE DETERMINED
+    </div>
+    <div class="col-xs-12 col-md-6"> 
+      <input type="text" class="individual-value individual-form" id="object_pixeFormulae" placeholder="" value="{{details.methods.pixe.formulae}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property pixePigmentsDyes">PIGMENTS/DYES IDENTIFIED
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_pixePigmentsDyes" placeholder="" value="{{details.methods.pixe.pigmentsDyes}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property pixePriming">PRIMING IDENTIFIED
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_pixePriming" placeholder="" value="{{details.methods.pixe.priming}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property pixeBindingMedia">BINDING MEDIA IDENTIFIED
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_pixeBindingMedia" placeholder="" value="{{details.methods.pixe.bindingMedia}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property pixeVarnish">VARNISH IDENTIFIED
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_pixeVarnish" placeholder="" value="{{details.methods.pixe.varnish}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property pixeStretcherSupportStrainer">STRETCHER/SUPPORT/STRAINER IDENTIFIED
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_pixeStretcherSupportStrainer" placeholder="" value="{{details.methods.pixe.stretcherSupportStrainer}}">
+    </div>
+    <div class="col-xs-12">
+      &nbsp;
+    </div>
+  </div>
+  <div class="row align-center">
+    <div class="col-xs-12 notes">Brief info about possible multilayers/underpaintings/retouches
+    </div>
+    <div class="col-sm-8 col-sm-offset-2">
+        <textarea class="" id="object_pixeBrief" name="sources" rows="4" placeholder="(e.g. secondary effects from underlying signal sources)" value="{{details.methods.pixe.notes.brief}}"></textarea>
+    </div>
+    <div class="col-xs-12 notes">Comments
+    </div>
+    <div class="col-sm-8 col-sm-offset-2">
+        <textarea class="" id="object_pixeComments" name="sources" rows="4" placeholder="(e.g. additional info not covered by the points above)" value="{{details.methods.pixe.notes.comments}}"></textarea>
+    </div>
+    <div class="col-xs-12 notes">Sources
+    </div>
+    <div class="col-sm-8 col-sm-offset-2">
+        <textarea class="" id="object_pixeSources" name="sources" rows="4" placeholder="(literature)" value="{{details.methods.pixe.notes.sources}}"></textarea>
+    </div>
+    <div class="col-xs-12">
+      &nbsp;
+    </div>
+  </div>
+
+
+
+  {{> files_methods_pixe}}
+
+
+  <div class="row align-center">
+    <div class="col-xs-12 notes">Figure captions
+    </div>
+    <div class="col-sm-8 col-sm-offset-2">
+        <textarea class="" id="object_pixeCaption" name="history" rows="4" placeholder="(e.g. additional info not covered by the points above)" value="{{details.methods.pixe.notes.caption}}"></textarea>
+    </div>
+    <br/>
+  </div>
+</div>
+</template>

@@ -1,0 +1,360 @@
+<template name="materials_original">
+<div class="row">
+	<div class="col-xs-7">
+		<div class="row">
+	{{#if materials.original.materials}}
+	<div class="col-md-12">
+	  <div class="materials">
+	    <div class="individual-property-display">Materials involved:<br/>
+	      <div class="individual-value-display">{{materials.original.materials}}</div>
+	    </div>
+	  </div>
+	</div>
+	{{/if}}
+	{{#if materials.original.primingGround}}
+	<div class="col-md-12">
+	  <div class="primingGround">
+	    <div class="individual-property-display">Priming/ground:<br/>
+	      <div class="individual-value-display">{{materials.original.primingGround}}</div>
+	    </div>
+	  </div>
+	</div>
+	{{/if}}
+	{{#if materials.original.pigmentsDyes}}
+	<div class="col-md-12">
+	  <div class="pigmentsDyes">
+	    <div class="individual-property-display">Pigments/dyes identified:<br/>
+	      <div class="individual-value-display">{{materials.original.pigmentsDyes}}</div>
+	    </div>
+	  </div>
+	</div>
+	{{/if}}
+	{{#if materials.original.bendingMedium}}
+	<div class="col-md-12">
+	  <div class="bendingMedium">
+	    <div class="individual-property-display">Binding medium identified:<br/>
+	      <div class="individual-value-display">{{materials.original.bendingMedium}}</div>
+	    </div>
+	  </div>
+	</div>
+	{{/if}}
+	{{#if materials.original.additives}}
+	<div class="col-md-12">
+	  <div class="additives">
+	    <div class="individual-property-display">Additives:<br/>
+	      <div class="individual-value-display">{{materials.original.additives}}</div>
+	    </div>
+	  </div>
+	</div>
+	{{/if}}
+	{{#if materials.original.filler}}
+	<div class="col-md-12">
+	  <div class="filler">
+	    <div class="individual-property-display">Fillers:<br/> 
+	      <div class="individual-value-display">{{materials.original.filler}}</div>
+	    </div>
+	  </div>
+	</div>
+	{{/if}}
+	{{#if materials.original.layerVarnish}}
+	<div class="col-md-12">
+	  <div class="layerVarnish">
+	    <div class="individual-property-display">Finishing layer/varnish:<br/> 
+	      <div class="individual-value-display">{{materials.original.layerVarnish}}</div>
+	    </div>
+	  </div>
+	</div>
+	{{/if}}
+	{{#if materials.original.underdrawingPentimento}}
+	<div class="col-md-12">
+	  <div class="underdrawingPentimento">
+	    <div class="individual-property-display">Underdrawing/pentimento:<br/> 
+	      <div class="individual-value-display">{{materials.original.underdrawingPentimento}}</div>
+	    </div>
+	  </div>
+	</div>
+	{{/if}}
+	{{#if materials.original.leafs}}
+	<div class="col-md-12">
+	  <div class="leafs">
+	    <div class="individual-property-display">Metal leafs:<br/> 
+	      <div class="individual-value-display">{{materials.original.leafs}}</div>
+	    </div>
+	  </div>
+	</div>
+	{{/if}}
+	{{#if materials.original.leafsApplication}}
+	<div class="col-md-12">
+	  <div class="leafsApplication">
+	    <div class="individual-property-display">Metal leafs application technique:<br/> 
+	      <div class="individual-value-display">{{materials.original.leafsApplication}}</div>
+	    </div>
+	  </div>
+	</div>
+	{{/if}}
+	{{#if materials.original.periodStyle}}
+	<div class="col-md-12">
+	  <div class="periodStyle">
+	    <div class="individual-property-display">Period/style:<br/> 
+	      <div class="individual-value-display">{{materials.original.periodStyle}}</div>
+	    </div>
+	  </div>
+	</div>
+	{{/if}}
+	{{#if materials.original.stretcher}}
+	<div class="col-md-12">
+	  <div class="stretcher">
+	    <div class="individual-property-display">Stretcher:<br/> 
+	      <div class="individual-value-display">{{materials.original.stretcher}}</div>
+	    </div>
+	  </div>
+	</div>
+	{{/if}}
+	{{#if materials.original.supportStrainer}}
+	<div class="col-md-12">
+	  <div class="stretcher">
+	    <div class="individual-property-display">Support/strainer:<br/> 
+	      <div class="individual-value-display">{{materials.original.supportStrainer}}</div>
+	    </div>
+	  </div>
+	</div>
+	{{/if}}
+	{{#if materials.original.support}}
+	<div class="col-md-12">
+	  <div class="support">
+	    <div class="individual-property-display">Type of support:<br/> 
+	      <div class="individual-value-display">{{materials.original.support}}</div>
+	    </div>
+	  </div>
+	</div>
+	{{/if}}
+	{{#if materials.original.thickness}}
+	<div class="col-md-12">
+	  <div class="thickness">
+	    <div class="individual-property-display">Thickness:<br/> 
+	      <div class="individual-value-display">{{materials.original.thickness}}</div>
+	    </div>
+	  </div>
+	</div>
+	{{/if}}
+	{{#if materials.original.piecesJoints}}
+	<div class="col-md-12">
+	  <div class="piecesJoints">
+	    <div class="individual-property-display">Pieces/cut orientation/joints (for wood):<br/>
+	      <div class="individual-value-display">{{materials.original.piecesJoints}}</div>
+	    </div>
+	  </div>
+	</div>
+	{{/if}}
+	{{#if materials.original.texture}}
+	<div class="col-md-12">
+	  <div class="texture">
+	    <div class="individual-property-display">Texture:<br/>
+	      <div class="individual-value-display">{{materials.original.texture}}</div>
+	    </div>
+	  </div>
+	</div>
+	{{/if}}
+	{{#if materials.original.color}}
+	<div class="col-md-12">
+	  <div class="color">
+	    <div class="individual-property-display">Color:<br/>
+	      <div class="individual-value-display">{{materials.original.color}}</div>
+	    </div>
+	  </div>
+	</div>
+	{{/if}}
+	{{#if materials.original.manufacturer}}
+	<div class="col-md-12">
+	  <div class="manufacturer">
+	    <div class="individual-property-display">Manufacturer:<br/>
+	      <div class="individual-value-display">{{materials.original.manufacturer}}</div>
+	    </div>
+	  </div>
+	</div>
+	{{/if}}
+	{{#if materials.original.wave}}
+	<div class="col-md-12">
+	  <div class="wave">
+	    <div class="individual-property-display">Type of weave:<br/>
+	      <div class="individual-value-display">{{materials.original.wave}}</div>
+	    </div>
+	  </div>
+	</div>
+	{{/if}}
+	{{#if materials.original.density}}
+	<div class="col-md-12">
+	  <div class="density">
+	    <div class="individual-property-display">Density per cm²:<br/>
+	      <div class="individual-value-display">
+	      {{#if materials.original.density.weft}}
+	      	Weft: {{materials.original.density.weft}}<br/>
+	      {{/if}}
+	      {{#if materials.original.density.weft}}
+	      	Warp: {{materials.original.density.weft}}
+	      {{/if}}
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	{{/if}}
+	{{#if materials.original.thickness}}
+	<div class="col-md-12">
+	  <div class="density">
+	    <div class="individual-property-display">Thickness of threads:<br/>
+	      <div class="individual-value-display">
+	      {{#if materials.original.thicknessOfThread.weft}}
+	      	Weft: {{materials.original.thicknessOfThread.weft}}<br/>
+	      {{/if}}
+	      {{#if materials.original.thicknessOfThread.warp}}
+	      	Warp: {{materials.original.thicknessOfThread.warp}}
+	      {{/if}}
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	{{/if}}
+	{{#if materials.original.decorativeFrame}}
+	<div class="col-md-12">
+	  <div class="density">
+	    <div class="individual-property-display">Decorative frame:<br/>
+	      <div class="individual-value-display">
+	      {{#if materials.original.decorativeFrame.periodStyle}}
+	      	Period/Style: {{materials.original.decorativeFrame.periodStyle}}<br/>
+	      {{/if}}
+	      {{#if materials.original.decorativeFrame.support}}
+	      	Support: {{materials.original.decorativeFrame.support}}<br/>
+	      {{/if}}
+	      {{#if materials.original.decorativeFrame.priming}}
+	      	Priming: {{materials.original.decorativeFrame.priming}}<br/>
+	      {{/if}}
+	      {{#if materials.original.decorativeFrame.decorativeLayer}}
+	      	Decorative layer: {{materials.original.decorativeFrame.decorativeLayer}}<br/>
+	      {{/if}}
+	      {{#if materials.original.decorativeFrame.varnish}}
+	      	Varnish: {{materials.original.decorativeFrame.varnish}}
+	      {{/if}}
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	{{/if}}
+	{{#if materials.original.plaster}}
+	<div class="col-md-12">
+	  <div class="plaster">
+	    <div class="individual-property-display">Plaster information (for wall painting):<br/>
+	      <div class="individual-value-display">
+	      {{#if materials.original.plaster.layers}}
+	      	No. of layers: {{materials.original.plaster.layers}}<br/>
+	      {{/if}}
+	      {{#if materials.original.decorativeFrame.composition}}
+	      	Composition: {{materials.original.plaster.composition}}<br/>
+	      {{/if}}
+	      {{#if materials.original.decorativeFrame.binderFiller}}
+	      	Binder/filler ratio: {{materials.original.plaster.binderFiller}}<br/>
+	      {{/if}}
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	{{/if}}
+	{{#if materials.original.potataGiornata}}
+	<div class="col-md-12">
+	  <div class="potataGiornata">
+	    <div class="individual-property-display">Pontata/giornata (for wall painting):<br/>
+	      <div class="individual-value-display">{{materials.original.potataGiornata}}</div>
+	    </div>
+	  </div>
+	</div>
+	{{/if}}
+	{{#if materials.original.relief}}
+	<div class="col-md-12">
+	  <div class="relief">
+	    <div class="individual-property-display">Relief (for wall painting):<br/>
+	      <div class="individual-value-display">{{materials.original.relief}}</div>
+	    </div>
+	  </div>
+	</div>
+	{{/if}}
+	{{#if materials.original.constructionAids}}
+	<div class="col-md-12">
+	  <div class="constructionAids">
+	    <div class="individual-property-display">Construction aids (for wall painting):<br/>
+	      <div class="individual-value-display">{{materials.original.constructionAids}}</div>
+	    </div>
+	  </div>
+	</div>
+	{{/if}}
+	{{#if materials.original.decorativeApplications}}
+	<div class="col-md-12">
+	  <div class="decorativeApplications">
+	    <div class="individual-property-display">Decorative applications (for wall painting):<br/>
+	      <div class="individual-value-display">{{materials.original.decorativeApplications}}</div>
+	    </div>
+	  </div>
+	</div>
+	{{/if}}
+	</div>
+	</div>
+	{{#if originalObj}}
+		<div class="col-xs-12 col-sm-5 add-bottom-space">
+	    	{{> images_original}}
+	    </div>
+	{{/if}}
+    <div class="col-xs-12">
+    	&nbsp;
+    </div>
+	{{#if materials.original.notes.samples}}
+	<div class="col-md-12 align-center">
+	  <div class="samples">
+	    <div class="individual-property-display">Samples investigated:<br/>
+	      <div class="individual-value-display">
+	      	<pre>
+	      		{{materials.original.notes.samples}}
+	      	</pre>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	{{/if}}
+	{{#if materials.original.notes.artHistory}}
+	<div class="col-md-12 align-center">
+	  <div class="artHistory">
+	    <div class="individual-property-display">Short overview of art history:<br/>
+	      <div class="individual-value-display">
+	      	<pre>
+	      		{{materials.original.notes.artHistory}}
+	      	</pre>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	{{/if}}
+	{{#if materials.original.notes.comments}}
+	<div class="col-md-12 align-center">
+	  <div class="artHistory">
+	    <div class="individual-property-display">Comments:<br/>
+	      <div class="individual-value-display">
+	      	<pre>
+	      		{{materials.original.notes.comments}}
+	      	</pre>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	{{/if}}
+	{{#if materials.original.notes.sources}}
+	<div class="col-md-12 align-center">
+	  <div class="sources">
+	    <div class="individual-property-display">Sources:<br/>
+	      <div class="individual-value-display">
+	      	<pre>
+	      		{{materials.original.notes.sources}}
+	      	</pre>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	{{/if}}
+</div>
+</template>

@@ -1,0 +1,55 @@
+<template name="new_user">
+  <!-- container -->
+    <div class="container">
+      <h1 class="breadcrumbs">admin } 
+      <a class="a-heading" href="/admin/users">usersDB</a> \<span class="post-heading"> add new user</span></h1>
+    <form class="js-add-user">
+      <!-- first row -->
+      <div class="row">
+        <!-- first col -->
+        <div class="col-xs-12 col-md-6">
+          <div class="username">
+            <div class="individual-property">USERNAME
+              <input type="text" name="username" class="individual-value individual-form" id="username" placeholder="">
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12 col-md-6">
+          <div class="password">
+            <div class="individual-property">PASSWORD
+              <input type="text" name="password" class="individual-value individual-form" id="password" placeholder="">
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12 col-md-6">
+          <div class="email">
+            <div class="individual-property">E-MAIL
+              <input type="text" name="email" class="individual-value individual-form" id="email" placeholder="">
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12 col-md-6">
+          <div class="full_name">
+            <div class="individual-property">FULL NAME
+              <input type="text" name="full_name" class="individual-value individual-form" id="full_name" placeholder="">
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12 col-md-6">
+          <div class="institution">
+            <div class="individual-property">INSTITUTION
+              <input type="text" name="institution" class="individual-value individual-form" id="institution" placeholder="">
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12 col-md-6">
+          <div class="telephone">
+            <div class="individual-property">TELEPHONE
+              <input type="text" name="telephone" class="individual-value individual-form" id="telephone" placeholder=""></div>
+          </div>
+        </div>
+      </div><!-- first row -->
+      <button type="submit" class="btn btn-default float-right btn-submit">CREATE USER</button>
+    </form>
+    </div>
+</template>

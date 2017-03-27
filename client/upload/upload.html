@@ -1,0 +1,33 @@
+<template name="upload_form">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12">
+				{{> upload_data}}
+			</div>
+			<div class="col-xs-12">
+				{{> submit_data}}
+			</div>
+		</div>
+	</div>
+</template>
+
+<template name="upload_data">
+	<h1>Upload</h1>
+		<form class="upload">
+			<input type="file" id="dataInput">
+			<button class="btn btn-default bt-submit" type="submit">UPLOAD
+			</button>
+		</form>
+<p></p>
+</template>
+
+<template name="submit_data">
+
+{{#each data}}
+<div class ="img-upload-div">  
+  <img src="{{this.url}}" class="img-upload" alt="thumbnail">
+</div>   
+<a href="{{this.url}}" download="kasli">{{this.url}} download</a>
+{{/each}}
+
+</template>

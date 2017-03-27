@@ -1,0 +1,88 @@
+<template name="method_techniques_scanning">
+<div class="toggle" id="object_toggle-scanning">
+  <div class="row align-center">
+    <div class="uderline-method">
+      <h4>scanning</h4>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 col-md-6 individual-property scanningExperimental">EXPERIMENTAL PARAMETERS
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_scanningExperimental" placeholder="(e.g. X-ray tube voltage, laser wavelength, air/vacuum, etc.)" value="{{details.methods.scanning.experimentalParameters}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property scanningElements">ELEMENTS DETERMINED
+    </div>
+    <div class="col-xs-12 col-md-6"> 
+      <input type="text" class="individual-value individual-form" id="object_scanningElements" placeholder="(e.g. cobalt blue, red ochre, indigo, etc.)" value="{{details.methods.scanning.elements}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property scanningFormulae">CHEMICAL FORMULAE DETERMINED
+    </div>
+    <div class="col-xs-12 col-md-6"> 
+      <input type="text" class="individual-value individual-form" id="object_scanningFormulae" placeholder="" value="{{details.methods.scanning.formulae}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property scanningPigmentsDyes">PIGMENTS/DYES IDENTIFIED
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_scanningPigmentsDyes" placeholder="" value="{{details.methods.scanning.pigmentsDyes}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property scanningPriming">PRIMING IDENTIFIED
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_scanningPriming" placeholder="" value="{{details.methods.scanning.priming}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property scanningBindingMedia">BINDING MEDIA IDENTIFIED
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_scanningBindingMedia" placeholder="" value="{{details.methods.scanning.bindingMedia}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property scanningVarnish">VARNISH IDENTIFIED
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_scanningVarnish" placeholder="" value="{{details.methods.scanning.varnish}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property scanningStretcherSupportStrainer">STRETCHER/SUPPORT/STRAINER IDENTIFIED
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_scanningStretcherSupportStrainer" placeholder="" value="{{details.methods.scanning.stretcherSupportStrainer}}">
+    </div>
+    <div class="col-xs-12">
+      &nbsp;
+    </div>
+  </div>
+  <div class="row align-center">
+    <div class="col-xs-12 notes">Brief info about possible multilayers/underpaintings/retouches
+    </div>
+    <div class="col-sm-8 col-sm-offset-2">
+        <textarea class="" id="object_scanningBrief" name="sources" rows="4" placeholder="(e.g. secondary effects from underlying signal sources)" value="{{details.methods.scanning.notes.brief}}"></textarea>
+    </div>
+    <div class="col-xs-12 notes">Comments
+    </div>
+    <div class="col-sm-8 col-sm-offset-2">
+        <textarea class="" id="object_scanningComments" name="sources" rows="4" placeholder="(e.g. additional info not covered by the points above)" value="{{details.methods.scanning.notes.comments}}"></textarea>
+    </div>
+    <div class="col-xs-12 notes">Sources
+    </div>
+    <div class="col-sm-8 col-sm-offset-2">
+        <textarea class="" id="object_scanningSources" name="sources" rows="4" placeholder="(literature)" value="{{details.methods.scanning.notes.sources}}"></textarea>
+    </div>
+    <div class="col-xs-12">
+      &nbsp;
+    </div>
+  </div>
+
+
+
+  {{> files_methods_scanning}}
+
+
+  <div class="row align-center">
+    <div class="col-xs-12 notes">Figure captions
+    </div>
+    <div class="col-sm-8 col-sm-offset-2">
+        <textarea class="" id="object_scanningCaption" name="history" rows="4" placeholder="(e.g. additional info not covered by the points above)" value="{{details.methods.scanning.notes.caption}}"></textarea>
+    </div>
+    <br/>
+  </div>
+</div>
+</template>

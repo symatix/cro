@@ -1,0 +1,88 @@
+<template name="method_techniques_pigment_xrf">
+<div class="toggle" id="object_toggle-xrf">
+  <div class="row align-center">
+    <div class="uderline-method">
+      <h4>xrf</h4>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 col-md-6 individual-property xrfExperimental">
+      EXPERIMENTAL PARAMETERS
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_xrfExperimental" placeholder="(e.g. X-ray tube voltage, laser wavelength, air/vacuum, etc.)" value="{{details.methods.xrf.experimentalParameters}}">
+    </div>
+
+    <div class="col-xs-12 col-md-6 individual-property xrfElements">
+      ELEMENTS DETERMINED
+    </div>
+    <div class="col-xs-12 col-md-6"> 
+      <input type="text" class="individual-value individual-form" id="object_xrfElements" placeholder="(e.g. cobalt blue, red ochre, indigo, etc.)" value="{{details.methods.xrf.elements}}">
+    </div>
+
+    <div class="col-xs-12 col-md-6 individual-property xrfQuantification">
+      QUANTIFICATION RESULTS
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_xrfQuantification" placeholder="(e.g. 92% Cu, 7,2% Sn, 0,8% Pb)" value="{{details.methods.xrf.quantification}}">
+    </div>
+
+    <div class="col-xs-12 col-md-6 individual-property xrfFormulae">
+      CHEMICAL FORMULAE DETERMINED
+    </div>
+    <div class="col-xs-12 col-md-6"> 
+      <input type="text" class="individual-value individual-form" id="object_xrfFormulae" placeholder="" value="{{details.methods.xrf.formulae}}">
+    </div>
+
+    <div class="col-xs-12 col-md-6 individual-property xrfInfluence">
+      SAMPLE HOLDER/PURITY INFLUENCE
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_xrfInfluence" placeholder="(e.g. elements from pigment powder holder, binding media effects, etc.)" value="{{details.methods.xrf.influence}}">
+    </div>
+
+    <div class="col-xs-12 col-md-6 individual-property xrfColorValues">
+      COLOR SPACE VALUES
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_xrfColorValues" placeholder="(e.g. CIE Lab, LCh, CIE XYZ, etc.)" value="{{details.methods.xrf.colorValues}}">
+    </div>
+
+    <div class="col-xs-12 col-md-6 individual-property xrfBands">
+      MAIN ROTATIONAL/VIBRATIONAL BANDS AND THEIR RELATIVE INTENSITIES
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_xrfBands" placeholder="(e.g. Raman band wavenumbers (cm-1) for cerulean blue: 495m(sh), 534s, 674vs)" value="{{details.methods.xrf.bands}}">
+    </div>
+
+    <div class="col-xs-12">
+      &nbsp;
+    </div>
+  </div>
+
+
+  <div class="row align-center">
+
+    <div class="col-xs-12 notes">Comments
+    </div>
+    <div class="col-sm-8 col-sm-offset-2">
+        <textarea class="" id="object_xrfComments" name="sources" rows="4" placeholder="(e.g. additional info not covered by the points above)" value="{{details.methods.xrf.notes.comments}}"></textarea>
+    </div>
+
+    <div class="col-xs-12">
+      &nbsp;
+    </div>
+  </div>
+
+  {{> files_methods_xrf}}
+
+  <div class="row align-center">
+    <div class="col-xs-12 notes">Figure captions
+    </div>
+    <div class="col-sm-8 col-sm-offset-2">
+        <textarea class="" id="object_xrfCaption" name="history" rows="4" placeholder="(e.g. additional info not covered by the points above)" value="{{details.methods.xrf.notes.caption}}"></textarea>
+    </div>
+    <br/>
+  </div>
+</div>
+</template>

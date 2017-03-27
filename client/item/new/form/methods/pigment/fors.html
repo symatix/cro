@@ -1,0 +1,88 @@
+<template name="method_techniques_pigment_fors">
+<div class="toggle" id="object_toggle-fors">
+  <div class="row align-center">
+    <div class="uderline-method">
+      <h4>fors</h4>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 col-md-6 individual-property forsExperimental">
+      EXPERIMENTAL PARAMETERS
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_forsExperimental" placeholder="(e.g. X-ray tube voltage, laser wavelength, air/vacuum, etc.)" value="{{details.methods.fors.experimentalParameters}}">
+    </div>
+
+    <div class="col-xs-12 col-md-6 individual-property forsElements">
+      ELEMENTS DETERMINED
+    </div>
+    <div class="col-xs-12 col-md-6"> 
+      <input type="text" class="individual-value individual-form" id="object_forsElements" placeholder="(e.g. cobalt blue, red ochre, indigo, etc.)" value="{{details.methods.fors.elements}}">
+    </div>
+
+    <div class="col-xs-12 col-md-6 individual-property forsQuantification">
+      QUANTIFICATION RESULTS
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_forsQuantification" placeholder="(e.g. 92% Cu, 7,2% Sn, 0,8% Pb)" value="{{details.methods.fors.quantification}}">
+    </div>
+
+    <div class="col-xs-12 col-md-6 individual-property forsFormulae">
+      CHEMICAL FORMULAE DETERMINED
+    </div>
+    <div class="col-xs-12 col-md-6"> 
+      <input type="text" class="individual-value individual-form" id="object_forsFormulae" placeholder="" value="{{details.methods.fors.formulae}}">
+    </div>
+
+    <div class="col-xs-12 col-md-6 individual-property forsInfluence">
+      SAMPLE HOLDER/PURITY INFLUENCE
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_forsInfluence" placeholder="(e.g. elements from pigment powder holder, binding media effects, etc.)" value="{{details.methods.fors.influence}}">
+    </div>
+
+    <div class="col-xs-12 col-md-6 individual-property forsColorValues">
+      COLOR SPACE VALUES
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_forsColorValues" placeholder="(e.g. CIE Lab, LCh, CIE XYZ, etc.)" value="{{details.methods.fors.colorValues}}">
+    </div>
+
+    <div class="col-xs-12 col-md-6 individual-property forsBands">
+      MAIN ROTATIONAL/VIBRATIONAL BANDS AND THEIR RELATIVE INTENSITIES
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_forsBands" placeholder="(e.g. Raman band wavenumbers (cm-1) for cerulean blue: 495m(sh), 534s, 674vs)" value="{{details.methods.fors.bands}}">
+    </div>
+
+    <div class="col-xs-12">
+      &nbsp;
+    </div>
+  </div>
+
+
+  <div class="row align-center">
+
+    <div class="col-xs-12 notes">Comments
+    </div>
+    <div class="col-sm-8 col-sm-offset-2">
+        <textarea class="" id="object_forsComments" name="sources" rows="4" placeholder="(e.g. additional info not covered by the points above)" value="{{details.methods.fors.notes.comments}}"></textarea>
+    </div>
+
+    <div class="col-xs-12">
+      &nbsp;
+    </div>
+  </div>
+
+  {{> files_methods_fors}}
+
+  <div class="row align-center">
+    <div class="col-xs-12 notes">Figure captions
+    </div>
+    <div class="col-sm-8 col-sm-offset-2">
+        <textarea class="" id="object_forsCaption" name="history" rows="4" placeholder="(e.g. additional info not covered by the points above)" value="{{details.methods.fors.notes.caption}}"></textarea>
+    </div>
+    <br/>
+  </div>
+</div>
+</template>

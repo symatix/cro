@@ -1,0 +1,107 @@
+<template name="images_restoration">
+	{{#if restorationDisplay}}
+    <div class="row img-box align-center">
+		{{#if data.restoration.photoOne}}
+		<div class="col-xs-3">
+		<h4>&nbsp;</h4>
+			<img class="img-materials-sm" src="{{data.restoration.photoOne}}" data-toggle="modal" data-target="#restoration-modal-photoOne">
+		</div>
+          <!-- modal - photoOne -->
+	      <div class="modal fade" id="restoration-modal-photoOne" role="dialog">
+	        <div class="modal-dialog">
+	          <div class="modal-content modal-div">
+	            <div class="modal-header">
+	              <h4 class="modal-title">
+	        		{{basic.title}}
+	        		<button type="button" class="close" data-dismiss="modal">&times;</button>
+	      	 	  </h4>
+	            </div>
+	            <div class="modal-body align-center">
+	              <img class="img-modal" src="{{data.restoration.photoOne}}">
+	            </div>
+	          </div>
+	        </div>
+	      </div>
+		{{/if}}
+
+		{{#if data.restoration.photoTwo}}
+		<div class="col-xs-3">
+		<h4>&nbsp;</h4>
+			<img class="img-materials-sm" src="{{data.restoration.photoTwo}}" data-toggle="modal" data-target="#restoration-modal-photoTwo">
+		</div>
+          <!-- modal - photoTwo -->
+	      <div class="modal fade" id="restoration-modal-photoTwo" role="dialog">
+	        <div class="modal-dialog">
+	          <div class="modal-content modal-div">
+	            <div class="modal-header">
+	              <h4 class="modal-title">
+	        		{{basic.title}}
+	        		<button type="button" class="close" data-dismiss="modal">&times;</button>
+	      	 	  </h4>
+	            </div>
+	            <div class="modal-body align-center">
+	              <img class="img-modal" src="{{data.restoration.photoTwo}}">
+	            </div>
+	          </div>
+	        </div>
+	      </div>
+		{{/if}}
+
+		{{#if data.restoration.photoThree}}
+		<div class="col-xs-3">
+		<h4>&nbsp;</h4>
+			<img class="img-materials-sm" src="{{data.restoration.photoThree}}" data-toggle="modal" data-target="#restoration-modal-photoThree">
+		</div>
+          <!-- modal - photoThree -->
+	      <div class="modal fade" id="restoration-modal-photoThree" role="dialog">
+	        <div class="modal-dialog">
+	          <div class="modal-content modal-div">
+	            <div class="modal-header">
+	              <h4 class="modal-title">
+	        		{{basic.title}}
+	        		<button type="button" class="close" data-dismiss="modal">&times;</button>
+	      	 	  </h4>
+	            </div>
+	            <div class="modal-body align-center">
+	              <img class="img-modal" src="{{data.restoration.photoThree}}">
+	            </div>
+	          </div>
+	        </div>
+	      </div>
+		{{/if}}
+
+		{{#if data.restoration.photoFour}}
+		<div class="col-xs-3">
+		<h4>&nbsp;</h4>
+			<img class="img-materials-sm" src="{{data.restoration.photoFour}}" data-toggle="modal" data-target="#restoration-modal-photoFour">
+		</div>
+          <!-- modal - photoFour -->
+	      <div class="modal fade" id="restoration-modal-photoFour" role="dialog">
+	        <div class="modal-dialog">
+	          <div class="modal-content modal-div">
+	            <div class="modal-header">
+	              <h4 class="modal-title">
+	        		{{basic.title}}
+	        		<button type="button" class="close" data-dismiss="modal">&times;</button>
+	      	 	  </h4>
+	            </div>
+	            <div class="modal-body align-center">
+	              <img class="img-modal" src="{{data.restoration.photoFour}}">
+	            </div>
+	          </div>
+	        </div>
+	      </div>
+		{{/if}}
+		
+		{{#if materials.restoration.notes.figureCaption}}
+		<div class="col-md-12">
+		  <div class="figureCaption">
+		    <div class="individual-property-display">Figure captions<br/> 
+		      <div class="individual-value-display">{{materials.restoration.notes.figureCaption}}</div>
+		    </div>
+		  </div>
+		</div>
+		{{/if}}
+	</div>
+	{{/if}}
+</template>

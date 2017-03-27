@@ -1,0 +1,124 @@
+<template name="interventions_sculpture">
+<div class="row">
+  
+  <div class="col-xs-12 col-md-6 individual-property primingGround">
+    PRIMING
+  </div>
+  <div class="col-xs-12 col-md-6">
+    <input type="text" class="individual-value individual-form" id="primingGround2" placeholder="(e.g. chalk, gypsum, etc.)" value="{{materials.interventions.primingGround}}">
+  </div>
+
+  <div class="col-xs-12 col-md-6 individual-property pigmentsDyes">
+    PIGMENTS/DYES IDENTIFIED
+  </div>
+  <div class="col-xs-12 col-md-6"> 
+    <input type="text" class="individual-value individual-form" id="pigmentsDyes2" placeholder="(e.g. cobalt blue, red ochre, indigo, etc.)" value="{{materials.interventions.pigmentsDyes}}">
+  </div>
+
+  <div class="col-xs-12 col-md-6 individual-property bendingMedium">
+    BINDING MEDIUM IDENTIFIED
+  </div>
+  <div class="col-xs-12 col-md-6"> 
+    <input type="text" class="individual-value individual-form" id="bindingMedium2" placeholder="(e.g. egg, linseed oil, glue, etc.)" value="{{materials.interventions.bindingMedium}}">
+  </div>
+
+  <div class="col-xs-12 col-md-6 individual-property filler2">
+    FILLERS
+  </div>
+  <div class="col-xs-12 col-md-6">
+    <input type="text" class="individual-value individual-form" id="filler2" placeholder="" value="{{materials.interventions.filler}}">
+  </div>
+
+  <div class="col-xs-12 col-md-6 individual-property additives">
+    ADDITIVES
+  </div>
+  <div class="col-xs-12 col-md-6">
+    <input type="text" class="individual-value individual-form" id="additives2" placeholder="(e.g. turpentine, white spirit, etc.)" value="{{materials.interventions.additives}}">
+  </div>
+
+  <div class="col-xs-12 col-md-6 individual-property layerVarnish">
+    FINISHING LAYER/VARNISH
+  </div>
+  <div class="col-xs-12 col-md-6"> 
+    <input type="text" class="individual-value individual-form" id="layerVarnish2" placeholder="(e.g. dammar, mastic, etc.)" value="{{materials.interventions.layerVarnish}}">
+  </div>
+
+  <div class="col-xs-12 col-md-6 individual-property leafs">
+    METAL LEAFS
+  </div>
+  <div class="col-xs-12 col-md-6">
+    <input type="text" class="individual-value individual-form" id="leafs2" placeholder="(e.g. gold, silver, aluminum, brass)" value="{{materials.interventions.leafs}}">
+  </div>
+
+  <div class="col-xs-12 col-md-6 individual-property leafsApplication">
+    METAL LEAFS APPLICATION TECHNIQUE
+  </div>
+  <div class="col-xs-12 col-md-6">
+    <input type="text" class="individual-value individual-form" id="leafsApplication2" placeholder="(e.g. poliment gilding, oil gilding, etc.)" value="{{materials.interventions.leafsApplication}}">
+  </div>
+
+  <div class="col-xs-12 col-md-6 individual-property periodStyle">
+    PERIOD/STYLE
+  </div>
+  <div class="col-xs-12 col-md-6">
+    <input type="text" class="individual-value individual-form" id="periodStyle2" placeholder="(e.g. baroque, romanticism, contemporary art, etc.)" value="{{materials.interventions.periodStyle}}">
+  </div>
+
+  <div class="col-xs-12">
+    &nbsp;
+  </div>
+</div>
+<!--
+notes
+-->
+<div class="row align-center">
+  <div class="col-xs-12 notes">
+    Samples investigated
+  </div>
+  <div class="col-sm-8 col-sm-offset-2">
+      <textarea class="" id="samples2" name="samples2" rows="4" value="{{materials.interventions.samples}}"></textarea>
+  </div>
+  <br/>
+
+  <div class="col-xs-12 notes">
+    Interventions
+  </div>
+  <div class="col-sm-8 col-sm-offset-2">
+      <textarea class="" id="interventionsNotes" name="interventionsNotes" rows="4" value="{{materials.interventions.notes.interventions}}"></textarea>
+  </div>
+  <br/>
+
+  <div class="col-xs-12 notes">
+    Sources
+  </div>
+  <div class="col-sm-8 col-sm-offset-2">
+      <textarea class="" id="sources2" name="sources2" rows="4" placeholder="(literature)" value="{{materials.interventions.notes.sources}}"></textarea>
+  </div>
+  <br/>
+
+  <div class="col-xs-12 notes">
+    Comments (additional info)
+  </div>
+  <div class="col-sm-8 col-sm-offset-2">
+      <textarea class="" id="comments2" name="comments2" rows="4" value="{{materials.interventions.notes.comments}}"></textarea>
+  </div>
+
+  <div class="col-xs-12">
+    &nbsp;
+  </div>
+</div>
+
+{{> item_files_details_2}}
+
+<div class="row align-center">
+  <div class="col-xs-12 notes">
+    Figure captions
+  </div>
+  <div class="col-sm-8 col-sm-offset-2">
+      <textarea class="" id="figureCaption2" name="history" rows="4" value="{{materials.interventions.figureCaption}}"></textarea>
+  </div>
+  <br/>
+</div>
+
+
+</template>

@@ -1,0 +1,103 @@
+<template name="files_methods_scanning">
+<div class="row align-center">
+<div class="col-xs-12">
+  <h3>upload VIS/GL/UVF/IRP/RTG/SEM/spectrum photo</h3>
+</div>
+</div>
+<div class="row">
+  <div class="col-xs-12 col-sm-2 individual-property">PHOTO ONE
+  </div>
+  <div class="col-xs-12 col-sm-4">
+    <label for="scanningFiles1_label" class="upload_label" id="upload_scanningFiles1">(.jpg or .tiff, max size 5 mb)</label>
+    <input class="individual-data-value" type="file" id="scanningFiles1_label">
+  </div>
+  <div class="col-xs-12 col-sm-2 individual-property"> PHOTO TWO
+  </div>
+  <div class="col-xs-12 col-sm-4">
+    <label for="scanningFiles2_label" class="upload_label" id="upload_scanningFiles2">(.jpg or .tiff, max size 5 mb)</label>
+    <input class="individual-data-value" type="file" id="scanningFiles2_label">
+  </div>
+  <div class="col-xs-12 col-sm-2 individual-property"> PHOTO THREE
+  </div>
+  <div class="col-xs-12 col-sm-4">
+    <label for="scanningFiles3_label" class="upload_label" id="upload_scanningFiles3">(.jpg or .tiff, max size 5 mb)</label>
+    <input class="individual-data-value" type="file" id="scanningFiles3_label">
+  </div>
+  <div class="col-xs-12 col-sm-2 individual-property"> PHOTO FOUR
+  </div>
+  <div class="col-xs-12 col-sm-4">
+    <label for="scanningFiles4_label" class="upload_label" id="upload_scanningFiles4">(.jpg or .tiff, max size 5 mb)</label>
+    <input class="individual-data-value" type="file" id="scanningFiles4_label">
+  </div>
+  <div class="col-xs-12 col-sm-8 individual-property"> UPLOAD RELEVANT FILES (e.g. treatment documentation, conservation report, etc.)
+  </div>
+  <div class="col-xs-12 col-sm-4">
+    <label for="scanningFiles5_label" class="upload_label" id="upload_scanningFiles5">(.zip)</label>
+    <input class="individual-data-value" type="file" id="scanningFiles5_label">
+  </div>
+  <div class="col-xs-12">
+    &nbsp;
+  </div>
+</div>
+
+<!-- hidden part1 -->
+<div class="scanningFiles1 hidden">
+  <div class="individual-property">URL
+    <input type="text" class="individual-value individual-form" id="scanningFiles1" placeholder="" value="{{details.methods.scanning.files.scanningFiles1}}">
+  </div>
+</div>
+<div class="scanningFiles1_id hidden">
+  <div class="individual-property">ID
+    <input type="text" class="individual-value individual-form" id="scanningFiles1_id" placeholder="" value="{{details.methods.scanning.files.scanningFiles1_id}}">
+  </div>
+</div>
+<!-- /hidden part1 -->
+<!-- hidden part 2-->
+<div class="scanningFiles2 hidden">
+  <div class="individual-property">URL
+    <input type="text" class="individual-value individual-form" id="scanningFiles2" placeholder="" value="{{details.methods.scanning.files.scanningFiles2}}">
+  </div>
+</div>
+<div class="scanningFiles2_id hidden">
+  <div class="individual-property">ID
+    <input type="text" class="individual-value individual-form" id="scanningFiles2_id" placeholder="" value="{{details.methods.scanning.files.scanningFiles2_id}}">
+  </div>
+</div>
+<!-- /hidden part 2-->
+<!-- hidden part 3-->
+<div class="scanningFiles3 hidden">
+  <div class="individual-property">URL
+    <input type="text" class="individual-value individual-form" id="scanningFiles3" placeholder="" value="{{details.methods.scanning.files.scanningFiles3}}">
+  </div>
+</div>
+<div class="scanningFiles3_id hidden">
+  <div class="individual-property">ID
+    <input type="text" class="individual-value individual-form" id="scanningFiles3_id" placeholder="" value="{{details.methods.scanning.files.scanningFiles3_id}}">
+  </div>
+</div>
+<!-- / hidden part 3-->
+<!-- hidden part4 -->
+<div class="scanningFiles4 hidden">
+  <div class="individual-property">URL
+    <input type="text" class="individual-value individual-form" id="scanningFiles4" placeholder="" value="{{details.methods.scanning.files.scanningFiles4}}">
+  </div>
+</div>
+<div class="scanningFiles4_id hidden">
+  <div class="individual-property">ID
+    <input type="text" class="individual-value individual-form" id="scanningFiles4_id" placeholder="" value="{{details.methods.scanning.files.scanningFiles4_id}}">
+  </div>
+</div>
+<!-- / hidden part4 -->
+<!-- hidden part 5-->
+<div class="scanningFiles5 hidden">
+  <div class="individual-property">URL
+    <input type="text" class="individual-value individual-form" id="scanningFiles5" placeholder="" value="{{details.methods.scanning.files.scanningFiles5}}">
+  </div>
+</div>
+<div class="scanningFiles5_id hidden">
+  <div class="individual-property">ID
+    <input type="text" class="individual-value individual-form" id="scanningFiles5_id" placeholder="" value="{{details.methods.scanning.files.scanningFiles5_id}}">
+  </div>
+</div>
+<!-- /hidden part 5-->
+</template>

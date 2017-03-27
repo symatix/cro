@@ -1,0 +1,107 @@
+<template name="images_interventions">
+	{{#if interventionsDisplay}}
+    <div class="row img-box align-center">
+		{{#if data.interventions.photoOne}}
+		<div class="col-xs-6">
+		<h4>&nbsp;</h4>
+			<img class="img-materials-sm" src="{{data.interventions.photoOne}}" data-toggle="modal" data-target="#interventions-modal-photoOne">
+		</div>
+          <!-- modal - photoOne -->
+	      <div class="modal fade" id="interventions-modal-photoOne" role="dialog">
+	        <div class="modal-dialog">
+	          <div class="modal-content modal-div">
+	            <div class="modal-header">
+	              <h4 class="modal-title">
+	        		{{basic.title}}
+	        		<button type="button" class="close" data-dismiss="modal">&times;</button>
+	      	 	  </h4>
+	            </div>
+	            <div class="modal-body align-center">
+	              <img class="img-modal" src="{{data.interventions.photoOne}}">
+	            </div>
+	          </div>
+	        </div>
+	      </div>
+		{{/if}}
+
+		{{#if data.interventions.photoTwo}}
+		<div class="col-xs-6">
+		<h4>&nbsp;</h4>
+			<img class="img-materials-sm" src="{{data.interventions.photoTwo}}" data-toggle="modal" data-target="#interventions-modal-photoTwo">
+		</div>
+          <!-- modal - photoTwo -->
+	      <div class="modal fade" id="interventions-modal-photoTwo" role="dialog">
+	        <div class="modal-dialog">
+	          <div class="modal-content modal-div">
+	            <div class="modal-header">
+	              <h4 class="modal-title">
+	        		{{basic.title}}
+	        		<button type="button" class="close" data-dismiss="modal">&times;</button>
+	      	 	  </h4>
+	            </div>
+	            <div class="modal-body align-center">
+	              <img class="img-modal" src="{{data.interventions.photoTwo}}">
+	            </div>
+	          </div>
+	        </div>
+	      </div>
+		{{/if}}
+
+		{{#if data.interventions.photoThree}}
+		<div class="col-xs-6">
+		<h4>&nbsp;</h4>
+			<img class="img-materials-sm" src="{{data.interventions.photoThree}}" data-toggle="modal" data-target="#interventions-modal-photoThree">
+		</div>
+          <!-- modal - photoThree -->
+	      <div class="modal fade" id="interventions-modal-photoThree" role="dialog">
+	        <div class="modal-dialog">
+	          <div class="modal-content modal-div">
+	            <div class="modal-header">
+	              <h4 class="modal-title">
+	        		{{basic.title}}
+	        		<button type="button" class="close" data-dismiss="modal">&times;</button>
+	      	 	  </h4>
+	            </div>
+	            <div class="modal-body align-center">
+	              <img class="img-modal" src="{{data.interventions.photoThree}}">
+	            </div>
+	          </div>
+	        </div>
+	      </div>
+		{{/if}}
+
+		{{#if data.interventions.photoFour}}
+		<div class="col-xs-6">
+		<h4>&nbsp;</h4>
+			<img class="img-materials-sm" src="{{data.interventions.photoFour}}" data-toggle="modal" data-target="#interventions-modal-photoFour">
+		</div>
+          <!-- modal - photoFour -->
+	      <div class="modal fade" id="interventions-modal-photoFour" role="dialog">
+	        <div class="modal-dialog">
+	          <div class="modal-content modal-div">
+	            <div class="modal-header">
+	              <h4 class="modal-title">
+	        		{{basic.title}}
+	        		<button type="button" class="close" data-dismiss="modal">&times;</button>
+	      	 	  </h4>
+	            </div>
+	            <div class="modal-body align-center">
+	              <img class="img-modal" src="{{data.interventions.photoFour}}">
+	            </div>
+	          </div>
+	        </div>
+	      </div>
+		{{/if}}
+		
+		{{#if materials.interventions.notes.figureCaption}}
+		<div class="col-md-12">
+		  <div class="figureCaption">
+		    <div class="individual-property-display">Figure captions<br/> 
+		      <div class="individual-value-display">{{materials.interventions.notes.figureCaption}}</div>
+		    </div>
+		  </div>
+		</div>
+		{{/if}}
+	</div>
+	{{/if}}
+</template>

@@ -1,0 +1,88 @@
+<template name="method_techniques_om">
+<div class="toggle" id="object_toggle-om">
+  <div class="row align-center">
+    <div class="uderline-method">
+      <h4>om</h4>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 col-md-6 individual-property omExperimental">EXPERIMENTAL PARAMETERS
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_omExperimental" placeholder="(e.g. X-ray tube voltage, laser wavelength, air/vacuum, etc.)" value="{{details.methods.om.experimentalParameters}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property omElements">ELEMENTS DETERMINED
+    </div>
+    <div class="col-xs-12 col-md-6"> 
+      <input type="text" class="individual-value individual-form" id="object_omElements" placeholder="(e.g. cobalt blue, red ochre, indigo, etc.)" value="{{details.methods.om.elements}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property omFormulae">CHEMICAL FORMULAE DETERMINED
+    </div>
+    <div class="col-xs-12 col-md-6"> 
+      <input type="text" class="individual-value individual-form" id="object_omFormulae" placeholder="" value="{{details.methods.om.formulae}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property omPigmentsDyes">PIGMENTS/DYES IDENTIFIED
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_omPigmentsDyes" placeholder="" value="{{details.methods.om.pigmentsDyes}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property omPriming">PRIMING IDENTIFIED
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_omPriming" placeholder="" value="{{details.methods.om.priming}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property omBindingMedia">BINDING MEDIA IDENTIFIED
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_omBindingMedia" placeholder="" value="{{details.methods.om.bindingMedia}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property omVarnish">VARNISH IDENTIFIED
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_omVarnish" placeholder="" value="{{details.methods.om.varnish}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property omStretcherSupportStrainer">STRETCHER/SUPPORT/STRAINER IDENTIFIED
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_omStretcherSupportStrainer" placeholder="" value="{{details.methods.om.stretcherSupportStrainer}}">
+    </div>
+    <div class="col-xs-12">
+      &nbsp;
+    </div>
+  </div>
+  <div class="row align-center">
+    <div class="col-xs-12 notes">Brief info about possible multilayers/underpaintings/retouches
+    </div>
+    <div class="col-sm-8 col-sm-offset-2">
+        <textarea class="" id="object_omBrief" name="sources" rows="4" placeholder="(e.g. secondary effects from underlying signal sources)" value="{{details.methods.om.notes.brief}}"></textarea>
+    </div>
+    <div class="col-xs-12 notes">Comments
+    </div>
+    <div class="col-sm-8 col-sm-offset-2">
+        <textarea class="" id="object_omComments" name="sources" rows="4" placeholder="(e.g. additional info not covered by the points above)" value="{{details.methods.om.notes.comments}}"></textarea>
+    </div>
+    <div class="col-xs-12 notes">Sources
+    </div>
+    <div class="col-sm-8 col-sm-offset-2">
+        <textarea class="" id="object_omSources" name="sources" rows="4" placeholder="(literature)" value="{{details.methods.om.notes.sources}}"></textarea>
+    </div>
+    <div class="col-xs-12">
+      &nbsp;
+    </div>
+  </div>
+
+
+
+  {{> files_methods_om}}
+
+
+  <div class="row align-center">
+    <div class="col-xs-12 notes">Figure captions
+    </div>
+    <div class="col-sm-8 col-sm-offset-2">
+        <textarea class="" id="object_omCaption" name="history" rows="4" placeholder="(e.g. additional info not covered by the points above)" value="{{details.methods.om.notes.caption}}"></textarea>
+    </div>
+    <br/>
+  </div>
+</div>
+</template>

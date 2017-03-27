@@ -1,0 +1,233 @@
+<template name="methods_checkbox">
+	<div class="row methods-checkbox">
+		  <div class="col-xs-6 col-sm-3">
+		    <ul>        
+		      <li>
+		      <div class="row relative">
+		          <label for="scanning" class="method-checkbox"> 3D scanning</label>
+		          <input class="checkbox-input" type="checkbox" value="3D scanning" name="methodCheck" id="scanning" checked="{{#if details.methods.scanning}}checked{{/if}}">
+		      </div>
+		      </li>
+		      <li>
+		      <div class="row relative">
+		          <label for="aas" class="method-checkbox"> AAS</label>
+		          <input class="checkbox-input" type="checkbox" value="AAS" name="methodCheck" id="aas" checked="{{#if details.methods.aas}}checked{{/if}}">
+		      </div>
+		      </li>
+		      <li>
+		      <div class="row relative">
+		          <label for="aes" class="method-checkbox"> AES</label>
+		          <input class="checkbox-input" type="checkbox" value="AES" name="methodCheck" id="aes" checked="{{#if details.methods.aes}}checked{{/if}}">
+		      </div>
+		      </li>
+		      <li>
+		      <div class="row relative">
+		          <label for="afm"  class="method-checkbox"> AFM</label>
+		          <input class="checkbox-input" type="checkbox" value="AFM" name="methodCheck" id="afm" checked="{{#if details.methods.afm}}checked{{/if}}">
+		      </div>
+		      </li>
+		      <li>
+		      <div class="row relative">
+		          <label for="analysis" class="method-checkbox"> Analysis of salts</label>
+		          <input class="checkbox-input" type="checkbox" value="Analysis of salts" name="methodCheck" id="analysis" checked="{{#if details.methods.analysis}}checked{{/if}}">
+		      </div>
+		      </li>
+		      <li>
+		      <div class="row relative">
+		          <label for="binderFiller" class="method-checkbox"> Binder/filler ratio</label>
+		          <input class="checkbox-input" type="checkbox" value="Binder/filler ratio" name="methodCheck" id="binderFiller" checked="{{#if details.methods.binderFiller}}checked{{/if}}">
+		      </div>
+		      </li>
+		      <li>
+		      <div class="row relative">
+		          <label for="c_14" class="method-checkbox"> C-14</label>
+		          <input class="checkbox-input" type="checkbox" value="C-14" name="methodCheck" id="c_14" checked="{{#if details.methods.c_14}}checked{{/if}}">
+		      </div>
+		      </li>
+		      <li>
+		      <div class="row relative">
+		          <label for="colorimetry" class="method-checkbox"> Colorimetry</label>
+		          <input class="checkbox-input" type="checkbox" value="COLORIMETRY" name="methodCheck" id="colorimetry" checked="{{#if details.methods.colorimetry}}checked{{/if}}">
+		      </div>
+		      </li>
+		      <li>
+		      <div class="row relative">
+		          <label for="drms" class="method-checkbox"> DRMS</label>
+		          <input class="checkbox-input" type="checkbox" value="DRMS" name="methodCheck" id="drms" checked="{{#if details.methods.drms}}checked{{/if}}">
+		      </div>
+		      </li>
+		    </ul>
+		  </div>
+		  <div class="col-xs-6 col-sm-3">
+		    <ul>        
+		      <li>
+		      <div class="row relative">
+		          <label for="fors" class="method-checkbox"> FORS</label>
+		          <input class="checkbox-input" type="checkbox" value="FORS" name="methodCheck" id="fors" checked="{{#if details.methods.fors}}checked{{/if}}">
+		      </div>
+		      </li>
+		      <li>
+		      <div class="row relative">
+		          <label for="ft_ir" class="method-checkbox"> FT-IR</label>
+		          <input class="checkbox-input" type="checkbox" value="FT-IR" name="methodCheck" id="ft_ir" checked="{{#if details.methods.ft_ir}}checked{{/if}}">
+		      </div>
+		      </li>
+		      <li>
+		      <div class="row relative">
+		          <label for="gc_ms" class="method-checkbox"> GC-MS</label>
+		          <input class="checkbox-input" type="checkbox" value="GC-MS" name="methodCheck" id="gc_ms" checked="{{#if details.methods.gc_ms}}checked{{/if}}">
+		      </div>
+		      </li>
+		      <li>
+		      <div class="row relative">
+		          <label for="gl" class="method-checkbox"> GL</label>
+		          <input class="checkbox-input" type="checkbox" value="GL" name="methodCheck" id="gl" checked="{{#if details.methods.gl}}checked{{/if}}">
+		      </div>
+		      </li>   
+		      <li>
+		      <div class="row relative">
+		          <label for="granulometry" class="method-checkbox"> Granulometry</label>
+		          <input class="checkbox-input" type="checkbox" value="Granulometry" name="methodCheck" id="granulometry" checked="{{#if details.methods.granulometry}}checked{{/if}}">
+		      </div>
+		      </li>   
+		      <li>
+		      <div class="row relative">
+		          <label for="hygroscopic" class="method-checkbox"> Hygroscopic measurements</label>
+		          <input class="checkbox-input" type="checkbox" value="Hygroscopic measurements" name="methodCheck" id="hygroscopic" checked="{{#if details.methods.hygroscopic}}checked{{/if}}">
+		      </div>
+		      </li>
+		      <li>
+		      <div class="row relative">
+		          <label for="irpIrrIrfc" class="method-checkbox"> IRP/IRR/IRFC</label>
+		          <input class="checkbox-input" type="checkbox" value="IRP/IRR/IRFC" name="methodCheck" id="irpIrrIrfc" checked="{{#if details.methods.irpIrrIrfc}}checked{{/if}}">
+		      </div>
+		      </li> 
+		      <li>
+		      <div class="row relative">
+		          <label for="libs" class="method-checkbox"> LIBS</label>
+		          <input class="checkbox-input" type="checkbox" value="LIBS" name="methodCheck" id="libs" checked="{{#if details.methods.libs}}checked{{/if}}">
+		      </div>
+		      </li>
+		      <li>
+		      <div class="row relative">
+		          <label for="ol" class="method-checkbox"> OL</label>
+		          <input class="checkbox-input" type="checkbox" value="OL" name="methodCheck" id="ol" checked="{{#if details.methods.ol}}checked{{/if}}">
+		      </div>
+		      </li>
+		    </ul>
+		  </div>
+		  <div class="col-xs-6 col-sm-3">
+		    <ul>        
+		      <li>
+		      <div class="row relative">
+		          <label for="om" class="method-checkbox"> OM</label>
+		          <input class="checkbox-input" type="checkbox" value="OM" name="methodCheck" id="om" checked="{{#if details.methods.om}}checked{{/if}}">
+		      </div>
+		      </li>
+		      <li>
+		      <div class="row relative">
+		          <label for="pige" class="method-checkbox"> PIGE</label>
+		          <input class="checkbox-input" type="checkbox" value="PIGE" name="methodCheck" id="pige" checked="{{#if details.methods.pige}}checked{{/if}}">
+		      </div>
+		      </li>
+		      <li>
+		      <div class="row relative">
+		          <label for="pixe" class="method-checkbox"> PIXE</label>
+		          <input class="checkbox-input" type="checkbox" value="PIXE" name="methodCheck" id="pixe" checked="{{#if details.methods.pixe}}checked{{/if}}">
+		      </div>
+		      </li>
+		      <li>
+		      <div class="row relative">
+		          <label for="plm" class="method-checkbox"> PLM</label>
+		          <input class="checkbox-input" type="checkbox" value="PLM" name="methodCheck" id="plm" checked="{{#if details.methods.plm}}checked{{/if}}">
+		      </div>
+		      </li>
+		      <li>
+		      <div class="row relative">
+		          <label for="rbs" class="method-checkbox"> RBS</label>
+		          <input class="checkbox-input" type="checkbox" value="RBS" name="methodCheck" id="rbs" checked="{{#if details.methods.rbs}}checked{{/if}}">
+		      </div>
+		      </li>
+		      <li>
+		      <div class="row relative">
+		          <label for="rs" class="method-checkbox"> RS</label>
+		          <input class="checkbox-input" type="checkbox" value="RS" name="methodCheck" id="rs" checked="{{#if details.methods.rs}}checked{{/if}}">
+		      </div>
+		      </li>
+		      <li>
+		      <div class="row relative">
+		          <label for="semSemEdx" class="method-checkbox"> SEM and/or SEM/EDX</label>
+		          <input class="checkbox-input" type="checkbox" value="SEM and/or SEM/EDX" name="methodCheck" id="semSemEdx" checked="{{#if details.methods.semSemEdx}}checked{{/if}}">
+		      </div>
+		      </li>
+		      <li>
+		      <div class="row relative">
+		          <label for="synchrotron" class="method-checkbox"> Synchrotron techniques</label>
+		          <input class="checkbox-input" type="checkbox" value="Synchrotron techniques" name="methodCheck" id="synchrotron" checked="{{#if details.methods.synchrotron}}checked{{/if}}">
+		      </div>
+		      </li>
+		      <li>
+		      <div class="row relative">
+		          <label for="tem" class="method-checkbox"> TEM</label>
+		          <input class="checkbox-input" type="checkbox" value="TEM" name="methodCheck" id="tem" checked="{{#if details.methods.tem}}checked{{/if}}">
+		      </div>
+		      </li>
+		    </ul>
+		  </div>
+		  <div class="col-xs-6 col-sm-3">
+		    <ul>        
+		      <li>
+		      <div class="row relative">
+		          <label for="tl" class="method-checkbox"> TL</label>
+		          <input class="checkbox-input" type="checkbox" value="TL" name="methodCheck" id="tl" checked="{{#if details.methods.tl}}checked{{/if}}">
+		      </div>
+		      </li>
+		      <li>
+		      <div class="row relative">
+		          <label for="tlc" class="method-checkbox"> TLC</label>
+		          <input class="checkbox-input" type="checkbox" value="TLC" name="methodCheck" id="tlc" checked="{{#if details.methods.tlc}}checked{{/if}}">
+		      </div>
+		      </li>
+		      <li>
+		      <div class="row relative">
+		          <label for="uv_vis" class="method-checkbox"> UV-Vis</label>
+		          <input class="checkbox-input" type="checkbox" value="UV-Vis" name="methodCheck" id="uv_vis" checked="{{#if details.methods.uv_vis}}checked{{/if}}">
+		      </div>
+		      </li>
+		      <li>
+		      <div class="row relative">
+		          <label for="uvf" class="method-checkbox"> UVF</label>
+		          <input class="checkbox-input" type="checkbox" value="UVF" name="methodCheck" id="uvf" checked="{{#if details.methods.uvf}}checked{{/if}}">
+		      </div>
+		      </li>
+		      <li>
+		      <div class="row relative">
+		          <label for="vis" class="method-checkbox"> VIS</label>
+		          <input class="checkbox-input" type="checkbox" value="VIS" name="methodCheck" id="vis" checked="{{#if details.methods.vis}}checked{{/if}}">
+		      </div>
+		      </li>  
+		      <li>
+		      <div class="row relative">
+		          <label for="xrd" class="method-checkbox"> XRD</label>
+		          <input class="checkbox-input" type="checkbox" value="XRD" name="methodCheck" id="xrd" checked="{{#if details.methods.xrd}}checked{{/if}}">
+		      </div>
+		      </li>  
+		      <li>
+		      <div class="row relative">
+		          <label for="xrf" class="method-checkbox"> XRF</label>
+		          <input class="checkbox-input" type="checkbox" value="XRF" name="methodCheck" id="xrf" checked="{{#if details.methods.xrf}}checked{{/if}}">
+		      </div>
+		      </li>
+		      <li>
+		      <div class="row relative">
+		          <label for="xrr" class="method-checkbox"> XRR</label>
+		          <input class="checkbox-input" type="checkbox" value="XRR" name="methodCheck" id="xrr" checked="{{#if details.methods.xrr}}checked{{/if}}">
+		      </div>
+		      </li>
+		    </ul>
+		  </div>
+		  <div class="col-xs-12">
+		 	&nbsp;
+		  </div>
+		</div>
+</template>

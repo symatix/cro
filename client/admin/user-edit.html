@@ -1,0 +1,56 @@
+<template name="edit_user">
+  <!-- container -->
+    <div class="container">
+      <h1 class="breadcrumbs">admin } 
+      <a class="a-heading" href="/admin/users">usersDB</a> \
+      <span class="post-heading"> edit user<br/>
+      {{profile.full_name}}</span></h1>
+    <form class="js-add-user">
+      <!-- first row -->
+      <div class="row">
+        <!-- first col -->
+        <div class="col-md-6 col-sm-12 form-box">
+          <div class="username">
+            <div class="individual-property">USERNAME
+              <input type="text" name="username" class="individual-value individual-form" id="username" placeholder="" value="{{username}}">
+            </div>
+          </div>
+          <div class="password">
+            <div class="individual-property">PASSWORD
+              <input type="text" name="password" class="individual-value individual-form" id="password" placeholder="" value="{{profile.password}}">
+            </div>
+          </div>
+          <div class="email">
+            <div class="individual-property">E-MAIL
+              <input type="text" name="email" class="individual-value individual-form" id="email" placeholder="" value="{{profile.email}}">
+            </div>
+          </div>
+          <div class="full_name">
+            <div class="individual-property">FULL NAME
+              <input type="text" name="full_name" class="individual-value individual-form" id="full_name" placeholder="" value="{{profile.full_name}}">
+            </div>
+          </div>
+          <div class="institution">
+            <div class="individual-property">INSTITUTION
+              <input type="text" name="institution" class="individual-value individual-form" id="institution" placeholder="" value="{{profile.institution}}">
+            </div>
+          </div>
+          <div class="telephone">
+            <div class="individual-property">TELEPHONE
+              <input type="text" name="telephone" class="individual-value individual-form" id="telephone" placeholder="" value="{{profile.telephone}}"></div>
+          </div>
+        </div><!-- /first col -->
+        <div class="row">
+        <div class="col-xs-12">
+      <button type="submit" class="btn btn-default btn-submit js-edit-user">EDIT USER</button>
+        <button  type="button" class="btn btn-danger btn-list js-delete">DELETE</button>
+        <label>
+          <i style="font-family:Helvetica;font-size:15px;color:gray;">check box to delete&emsp;</i>
+          <input id="safe-delete-{{_id}}" type="checkbox" value="">
+        </label>
+        </div>
+        </div>
+      </div><!-- first row -->
+    </form>
+    </div>
+</template>

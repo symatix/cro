@@ -1,0 +1,88 @@
+<template name="method_techniques_ol">
+<div class="toggle" id="object_toggle-ol">
+  <div class="row align-center">
+    <div class="uderline-method">
+      <h4>ol</h4>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 col-md-6 individual-property olExperimental">EXPERIMENTAL PARAMETERS
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_olExperimental" placeholder="(e.g. X-ray tube voltage, laser wavelength, air/vacuum, etc.)" value="{{details.methods.ol.experimentalParameters}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property olElements">ELEMENTS DETERMINED
+    </div>
+    <div class="col-xs-12 col-md-6"> 
+      <input type="text" class="individual-value individual-form" id="object_olElements" placeholder="(e.g. cobalt blue, red ochre, indigo, etc.)" value="{{details.methods.ol.elements}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property olFormulae">CHEMICAL FORMULAE DETERMINED
+    </div>
+    <div class="col-xs-12 col-md-6"> 
+      <input type="text" class="individual-value individual-form" id="object_olFormulae" placeholder="" value="{{details.methods.ol.formulae}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property olPigmentsDyes">PIGMENTS/DYES IDENTIFIED
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_olPigmentsDyes" placeholder="" value="{{details.methods.ol.pigmentsDyes}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property olPriming">PRIMING IDENTIFIED
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_olPriming" placeholder="" value="{{details.methods.ol.priming}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property olBindingMedia">BINDING MEDIA IDENTIFIED
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_olBindingMedia" placeholder="" value="{{details.methods.ol.bindingMedia}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property olVarnish">VARNISH IDENTIFIED
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_olVarnish" placeholder="" value="{{details.methods.ol.varnish}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property olStretcherSupportStrainer">STRETCHER/SUPPORT/STRAINER IDENTIFIED
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_olStretcherSupportStrainer" placeholder="" value="{{details.methods.ol.stretcherSupportStrainer}}">
+    </div>
+    <div class="col-xs-12">
+      &nbsp;
+    </div>
+  </div>
+  <div class="row align-center">
+    <div class="col-xs-12 notes">Brief info about possible multilayers/underpaintings/retouches
+    </div>
+    <div class="col-sm-8 col-sm-offset-2">
+        <textarea class="" id="object_olBrief" name="sources" rows="4" placeholder="(e.g. secondary effects from underlying signal sources)" value="{{details.methods.ol.notes.brief}}"></textarea>
+    </div>
+    <div class="col-xs-12 notes">Comments
+    </div>
+    <div class="col-sm-8 col-sm-offset-2">
+        <textarea class="" id="object_olComments" name="sources" rows="4" placeholder="(e.g. additional info not covered by the points above)" value="{{details.methods.ol.notes.comments}}"></textarea>
+    </div>
+    <div class="col-xs-12 notes">Sources
+    </div>
+    <div class="col-sm-8 col-sm-offset-2">
+        <textarea class="" id="object_olSources" name="sources" rows="4" placeholder="(literature)" value="{{details.methods.ol.notes.sources}}"></textarea>
+    </div>
+    <div class="col-xs-12">
+      &nbsp;
+    </div>
+  </div>
+
+
+
+  {{> files_methods_ol}}
+
+
+  <div class="row align-center">
+    <div class="col-xs-12 notes">Figure captions
+    </div>
+    <div class="col-sm-8 col-sm-offset-2">
+        <textarea class="" id="object_olCaption" name="history" rows="4" placeholder="(e.g. additional info not covered by the points above)" value="{{details.methods.ol.notes.caption}}"></textarea>
+    </div>
+    <br/>
+  </div>
+</div>
+</template>

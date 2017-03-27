@@ -1,0 +1,178 @@
+<template name="basic_pigment">
+  <div class="row relative basic-fix">
+    <button class="btn btn-default btn-toggle btn_toggleBasic float-right">Colapse</button>
+    <h3 id="basic_href" >basic information</h3>
+  </div>
+  <div class="toggleBasic">
+  <div class="row">
+
+    <div class="col-xs-12 col-md-6 individual-property name">
+      PIGMENT/DYE/BINDER/VARNISH/REFERENCE NAME
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="name" placeholder="(e.g. red lead, mastic, SS3186, etc.)" value="{{basic.name}}">
+    </div>
+
+    <div class="col-xs-12 col-md-6 individual-property manufacturer">
+      APPEARENCE
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="appearence" placeholder="(e.g. blue pigment, clear, opaque, etc.)" value="{{basic.appearence}}">
+    </div>
+
+    <div class="col-xs-12 col-md-6 individual-property altName">
+      ALTERNATIVE NAMES AND NON-ENGLISH NAMES
+    </div>
+    <div class="col-xs-12 col-md-6"> 
+      <input type="text" class="individual-value individual-form" id="altName" placeholder="(e.g. minium, Mennige (German), minio (Italian), etc.)" value="{{basic.altName}}">
+    </div>
+
+    <div class="col-xs-12 col-md-6 individual-property manufacturer">
+      COMMERCIAL NAME AND MANUFACTURER
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="manufacturer" placeholder="(e.g. Kremer Pigmente Germany, unknown, etc.)" value="{{basic.manufacturer}}">
+    </div>
+
+    <div class="col-xs-12 col-md-6 individual-property manufacturer">
+      COMMON COMMERCIAL NAMES
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="commonName" placeholder="" value="{{basic.commonName}}">
+    </div>
+
+    <div class="col-xs-12 col-md-6 individual-property chemicalName">
+      CHEMICAL NAME
+    </div>
+    <div class="col-xs-12 col-md-6"> 
+      <input type="text" class="individual-value individual-form" id="chemicalName" placeholder="(e.g. Lead(II,IV)-oxide)" value="{{basic.chemicalName}}">
+    </div>
+
+    <div class="col-xs-12 col-md-6 individual-property chemicalFormula">
+      CHEMICAL FORMULA
+    </div>
+    <div class="col-xs-12 col-md-6"> 
+      <input type="text" class="individual-value individual-form" id="chemicalFormula" placeholder="(e.g. 2CuCO3, SiO2(65%) + K20 (15%) + Al2O3 (5%) + CoO (10%),  etc.)" value="{{basic.chemicalFormula}}">
+    </div>
+
+    <div class="col-xs-12 col-md-6 individual-property refractiveIndex">
+      PURITY
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="purity" placeholder="(e.g. red lead with gum arabic)" value="{{basic.purity}}">
+    </div>
+
+    <div class="col-xs-12 col-md-6 individual-property colorIndex">
+      COLOR INDEX
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="colorIndex" placeholder="" value="{{basic.colorIndex}}">
+    </div>
+
+    <div class="col-xs-12 col-md-6 individual-property stateForm">
+      STATE/FORM
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="stateForm" placeholder="(e.g. powder, deposited mixed with gum arabic, liquid, pressed pellet, etc.)" value="{{basic.stateForm}}">
+    </div>
+
+    <div class="col-xs-12 col-md-6 individual-property grainSize">
+      GRAIN SIZE
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="grainSize" placeholder="(e.g. 50-100 μm)" value="{{basic.grainSize}}">
+    </div>
+
+    <div class="col-xs-12 col-md-6 individual-property colorValues">
+      COLOR SPACE VALUES
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="colorValues" placeholder="(e.g. CIE Lab, LCh, CIE XYZ, etc.)" value="{{basic.colorValues}}">
+    </div>
+
+    <div class="col-xs-12 col-md-6 individual-property colorIndex">
+      COLOR INDEX
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="colorIndex" placeholder="" value="{{basic.colorIndex}}">
+    </div>
+
+    <div class="col-xs-12 col-md-6 individual-property refractiveIndex">
+      REFRACTIVE INDEX
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="refractiveIndex" placeholder="" value="{{basic.refractiveIndex}}">
+    </div>
+
+    <div class="col-xs-12 col-md-6 individual-property methodsTechniques">
+      INVESTIGATED BY THE FOLLOWING METHODS/TECHNIQUES
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="methodsTechniques" placeholder="" value="{{basic.investigated}}">
+    </div>
+
+    <div class="col-xs-12 col-md-6 individual-property periodFrom">
+      PERIOD OF USE / FROM
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="periodFrom" placeholder="(YYYY)" value="{{basic.periodFrom}}">
+    </div>
+
+    <div class="col-xs-12 col-md-6 individual-property periodTo">
+      PERIOD OF USE / TO
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="periodTo" placeholder="(YYYY)" value="{{basic.periodTo}}">
+    </div>
+
+    <div class="col-xs-12 col-md-6 individual-property relief">
+      TYPE
+    </div>
+    <div class="col-xs-12 col-md-6 material_basic_type">
+      <input type="radio" name="material_basic_type" id="natural" value="natural"> natural<br/>
+      <input type="radio" name="material_basic_type" id="synthetic" value="synthetic"> synthetic<br/>
+      <input type="radio" name="material_basic_type" id="naturalSyntetic" value="naturalSyntetic"> natural and syntetic<br/>
+    </div>
+
+<!--
+notes fileds
+-->
+    <div class="row align-center">
+      <div class="col-xs-12">
+        &nbsp;
+      </div>
+
+      <div class="col-xs-12 notes">
+        Possible methods of identification
+      </div>
+      <div class="col-sm-8 col-sm-offset-2">
+          <textarea class="" id="identificationNotes" name="notesBasic" rows="4" placeholder="(e.g. which elements for XRF, optical properties/grain size/shape for PLM, band positions and relative intensities for Raman spectroscopy, etc.)" value="{{basic.notes.methodsOfIdentification}}"></textarea>
+      </div>
+      <div class="col-xs-12 notes">
+        Degradation processes
+      </div>
+      <div class="col-sm-8 col-sm-offset-2">
+          <textarea class="" id="degradationNotes" name="notesBasic" rows="4" placeholder="(e.g. darkening of lead white pigment (into PbS) when exposed to H2S, oxidation of blue azurite to form green malachite, etc.)" value="{{basic.notes.degradation}}"></textarea>
+      </div>
+      <div class="col-xs-12 notes">
+        Brief description of pigment/dye/binder/varnish and history of use 
+      </div>
+      <div class="col-sm-8 col-sm-offset-2">
+          <textarea class="" id="briefDescriptionBasic" name="notesBasic" rows="4" placeholder="(e.g. darkening of lead white pigment (into PbS) when exposed to H2S, oxidation of blue azurite to form green malachite, etc.)" value="{{basic.notes.briefDescription}}"></textarea>
+      </div>
+      <div class="col-xs-12 notes">
+        Sources
+      </div>
+      <div class="col-sm-8 col-sm-offset-2">
+          <textarea class="" id="sourcesBasic" name="notesBasic" rows="4" placeholder="(literature)" value="{{basic.notes.sources}}"></textarea>
+      </div>
+      <div class="col-xs-12">
+        &nbsp;
+      </div>
+    </div>
+  </div>
+
+    {{> form_files_basic}}
+
+  </div>
+</template>

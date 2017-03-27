@@ -1,0 +1,152 @@
+<template name="basic_painting">
+  <div class="row relative basic-fix">
+    <button class="btn btn-default btn-toggle btn_toggleBasic float-right">Colapse</button>
+    <h3 id="basic_href" >basic information</h3>
+  </div>
+  <div class="toggleBasic">
+  <div class="row">
+
+    <div class="col-xs-12 col-md-6 individual-property author">
+      AUTHOR
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="author" placeholder="" value="{{basic.author}}">
+    </div>
+
+    <div class="col-xs-12 col-md-6 individual-property title">
+      TITLE
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="title" placeholder="" value="{{basic.title}}">
+    </div>
+
+    <div class="col-xs-12 col-md-6 individual-property date">
+      DATE
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="date" placeholder="(YYYY)" value="{{basic.date}}">
+    </div>
+
+    <div class="col-xs-12 col-md-6 individual-property painting-technique">
+      TECHNIQUE
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="technique" placeholder="(e.g. fresco, gouache, oil painting, tempera, etc.)" value="{{basic.technique}}">
+    </div>
+
+    <div class="col-xs-12 col-md-6 individual-property dimensions_noFrame">
+      DIMENSIONS WITHOUT FRAME
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="dimensions_noFrame" placeholder="(hight (cm), width (cm))" value="{{basic.dimensions_noFrame}}">
+    </div>
+
+    <div class="col-xs-12 col-md-6 individual-property dimensions_frame">
+      DIMENSIONS WITH FRAME
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="dimensions_frame" placeholder="(hight (cm), width (cm))" value="{{basic.dimensions_frame}}">
+    </div>
+
+    <div class="col-xs-12 col-md-6 individual-property originalOwner">
+      ORIGINAL OWNER
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="originalOwner" placeholder="(e.g. privat, museum name, gallery name)" value="{{basic.originalOwner}}">
+    </div>
+
+    <div class="col-xs-12 col-md-6 individual-property currentOwner">
+      CURRENT OWNER
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="currentOwner" placeholder="(e.g. privat, museum name, gallery name)" value="{{basic.currentOwner}}">
+    </div>
+
+    <div class="col-xs-12 col-md-6 individual-property originalLocation">
+      ORIGINAL LOCATION
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="originalLocation" placeholder="(e.g. privat, museum name, gallery name)" value="{{basic.originalLocation}}">
+    </div>
+
+    <div class="col-xs-12 col-md-6 individual-property currentLocation">
+      CURRENT LOCATION
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="currentLocation" placeholder="(e.g. privat, museum name, gallery name)" value="{{basic.currentLocation}}">
+    </div>
+
+    <div class="col-xs-12 col-md-6 individual-property inventoryNumber">
+      INVENTORY NUMBER(s)
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="inventoryNumber" placeholder="" value="{{basic.inventoryNumber}}">
+    </div>
+
+    <div class="col-xs-12 col-md-6 individual-property authority">
+      RESPONSIBLE CONSERVATION AUTHORITY
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="authority" placeholder="(e.g. Conservation department of Ministry of Culture Zagreb)" value="{{basic.authority}}">
+    </div>
+
+    <div class="col-xs-12 col-md-6 individual-property legalStatus">
+      LEGAL STATUS OF CONSERVATION PROTECTION
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="legalStatus" placeholder="(e.g. protected cultural heritage)" value="{{basic.legalStatus}}">
+    </div>
+
+    <div class="col-xs-12 col-md-6 individual-property location">
+      INVESTIGATED BY THE FOLLOWING METHODS/TECHNIQUES
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="methodsTechniques" placeholder="" value="{{basic.investigated}}">
+    </div>
+
+<!--
+notes fileds
+-->
+    <div class="row align-center">
+      <div class="col-xs-12">
+        &nbsp;
+      </div>
+
+      <div class="col-xs-12 notes">
+        Short overview of provenance
+      </div>
+      <div class="col-sm-8 col-sm-offset-2">
+          <textarea class="" id="provenanceBasic" name="notesBasic" rows="4" value="{{basic.notes.provenance}}"></textarea>
+      </div>
+      <br/>
+
+      <div class="col-xs-12 notes">
+        Related conservation/restoration/investigation project name
+      </div>
+      <div class="col-sm-8 col-sm-offset-2">
+          <textarea class="" id="projectName" name="notesBasic" rows="4" placeholder="(e.g. Diploma thesis: Conservation works on painting The Satyr and the Peasant by Miroslav Kraljević)" value="{{basic.notes.projectName}}"></textarea>
+      </div>
+      <br/>    
+
+      <div class="col-xs-12 notes">
+        Summary of project/conservation/restoration and investigation works
+      </div>
+      <div class="col-sm-8 col-sm-offset-2">
+          <textarea class="" id="summaryProjects" name="notesBasic" rows="4" placeholder="(e.g. summary of related diploma thesis or treatment report)" value="{{basic.notes.summaryProjects}}"></textarea>
+      </div>
+      <br/>
+
+      <div class="col-xs-12 notes">
+        Comments (additional info)
+      </div>
+      <div class="col-sm-8 col-sm-offset-2">
+          <textarea class="" id="commentsBasic" name="notesBasic" rows="4" placeholder="(e.g. additional info not covered by the points above)" value="{{basic.notes.comments}}"></textarea>
+      </div>
+    </div><!-- /notes row-->
+  </div><!-- /row global -->
+
+    {{> form_files_basic}}
+    
+
+  </div>
+</template>

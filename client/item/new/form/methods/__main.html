@@ -1,0 +1,90 @@
+<template name="methods">
+	<div class="row relative">
+   		<button class="btn btn-default btn-toggle btn_toggleMethods float-right">Colapse</button>
+	  	<h3>methods used</h3>
+	</div>
+	<div class="toggleMethods">
+		<div class="methodsForm">
+		</div>
+		{{form}}
+	 	{{> methods_checkbox}}
+
+	 	{{#if pigmentForm}}
+			{{> method_techniques_pigment_scanning}}
+		 	{{> method_techniques_pigment_aas}}
+		 	{{> method_techniques_pigment_aes}}
+		 	{{> method_techniques_pigment_afm}}
+		 	{{> method_techniques_pigment_analysis}}
+		 	{{> method_techniques_pigment_binderFiller}}
+		 	{{> method_techniques_pigment_c_14}}
+		 	{{> method_techniques_pigment_colorimetry}}
+		 	{{> method_techniques_pigment_drms}}
+		 	{{> method_techniques_pigment_fors}}
+		 	{{> method_techniques_pigment_ft_ir}}
+		 	{{> method_techniques_pigment_gc_ms}}
+		 	{{> method_techniques_pigment_gl}}
+		 	{{> method_techniques_pigment_granulometry}}
+		 	{{> method_techniques_pigment_hygroscopic}}
+		 	{{> method_techniques_pigment_irpIrrIrfc}}
+		 	{{> method_techniques_pigment_libs}}
+		 	{{> method_techniques_pigment_ol}}
+		 	{{> method_techniques_pigment_om}}
+		 	{{> method_techniques_pigment_pige}}
+		 	{{> method_techniques_pigment_pixe}}
+		 	{{> method_techniques_pigment_plm}}
+		 	{{> method_techniques_pigment_rbs}}
+		 	{{> method_techniques_pigment_rs}}
+		 	{{> method_techniques_pigment_semSemEdx}}
+		 	{{> method_techniques_pigment_synchrotron}}
+		 	{{> method_techniques_pigment_tem}}
+		 	{{> method_techniques_pigment_tl}}
+		 	{{> method_techniques_pigment_tlc}}
+		 	{{> method_techniques_pigment_uv_vis}}
+		 	{{> method_techniques_pigment_uvf}}
+		 	{{> method_techniques_pigment_vis}}
+		 	{{> method_techniques_pigment_xrd}}
+		 	{{> method_techniques_pigment_xrf}}
+		 	{{> method_techniques_pigment_xrr}}
+		{{else}}
+			{{> method_techniques_scanning}}
+		 	{{> method_techniques_aas}}
+		 	{{> method_techniques_aes}}
+		 	{{> method_techniques_afm}}
+		 	{{> method_techniques_analysis}}
+		 	{{> method_techniques_binderFiller}}
+		 	{{> method_techniques_c_14}}
+		 	{{> method_techniques_colorimetry}}
+		 	{{> method_techniques_drms}}
+		 	{{> method_techniques_fors}}
+		 	{{> method_techniques_ft_ir}}
+		 	{{> method_techniques_gc_ms}}
+		 	{{> method_techniques_gl}}
+		 	{{> method_techniques_granulometry}}
+		 	{{> method_techniques_hygroscopic}}
+		 	{{> method_techniques_irpIrrIrfc}}
+		 	{{> method_techniques_libs}}
+		 	{{> method_techniques_ol}}
+		 	{{> method_techniques_om}}
+		 	{{> method_techniques_pige}}
+		 	{{> method_techniques_pixe}}
+		 	{{> method_techniques_plm}}
+		 	{{> method_techniques_rbs}}
+		 	{{> method_techniques_rs}}
+		 	{{> method_techniques_semSemEdx}}
+		 	{{> method_techniques_synchrotron}}
+		 	{{> method_techniques_tem}}
+		 	{{> method_techniques_tl}}
+		 	{{> method_techniques_tlc}}
+		 	{{> method_techniques_uv_vis}}
+		 	{{> method_techniques_uvf}}
+		 	{{> method_techniques_vis}}
+		 	{{> method_techniques_xrd}}
+		 	{{> method_techniques_xrf}}
+		 	{{> method_techniques_xrr}}
+		{{/if}}
+
+	</div>
+	<div class="col-xs-12">
+		<hr/>
+	</div>
+</template>

@@ -1,0 +1,88 @@
+<template name="method_techniques_pigment_afm">
+<div class="toggle" id="object_toggle-afm">
+  <div class="row align-center">
+    <div class="uderline-method">
+      <h4>afm</h4>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 col-md-6 individual-property afmExperimental">
+      EXPERIMENTAL PARAMETERS
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_afmExperimental" placeholder="(e.g. X-ray tube voltage, laser wavelength, air/vacuum, etc.)" value="{{details.methods.afm.experimentalParameters}}">
+    </div>
+
+    <div class="col-xs-12 col-md-6 individual-property afmElements">
+      ELEMENTS DETERMINED
+    </div>
+    <div class="col-xs-12 col-md-6"> 
+      <input type="text" class="individual-value individual-form" id="object_afmElements" placeholder="(e.g. cobalt blue, red ochre, indigo, etc.)" value="{{details.methods.afm.elements}}">
+    </div>
+
+    <div class="col-xs-12 col-md-6 individual-property afmQuantification">
+      QUANTIFICATION RESULTS
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_afmQuantification" placeholder="(e.g. 92% Cu, 7,2% Sn, 0,8% Pb)" value="{{details.methods.afm.quantification}}">
+    </div>
+
+    <div class="col-xs-12 col-md-6 individual-property afmFormulae">
+      CHEMICAL FORMULAE DETERMINED
+    </div>
+    <div class="col-xs-12 col-md-6"> 
+      <input type="text" class="individual-value individual-form" id="object_afmFormulae" placeholder="" value="{{details.methods.afm.formulae}}">
+    </div>
+
+    <div class="col-xs-12 col-md-6 individual-property afmInfluence">
+      SAMPLE HOLDER/PURITY INFLUENCE
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_afmInfluence" placeholder="(e.g. elements from pigment powder holder, binding media effects, etc.)" value="{{details.methods.afm.influence}}">
+    </div>
+
+    <div class="col-xs-12 col-md-6 individual-property afmColorValues">
+      COLOR SPACE VALUES
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_afmColorValues" placeholder="(e.g. CIE Lab, LCh, CIE XYZ, etc.)" value="{{details.methods.afm.colorValues}}">
+    </div>
+
+    <div class="col-xs-12 col-md-6 individual-property afmBands">
+      MAIN ROTATIONAL/VIBRATIONAL BANDS AND THEIR RELATIVE INTENSITIES
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_afmBands" placeholder="(e.g. Raman band wavenumbers (cm-1) for cerulean blue: 495m(sh), 534s, 674vs)" value="{{details.methods.afm.bands}}">
+    </div>
+
+    <div class="col-xs-12">
+      &nbsp;
+    </div>
+  </div>
+
+
+  <div class="row align-center">
+
+    <div class="col-xs-12 notes">Comments
+    </div>
+    <div class="col-sm-8 col-sm-offset-2">
+        <textarea class="" id="object_afmComments" name="sources" rows="4" placeholder="(e.g. additional info not covered by the points above)" value="{{details.methods.afm.notes.comments}}"></textarea>
+    </div>
+
+    <div class="col-xs-12">
+      &nbsp;
+    </div>
+  </div>
+
+  {{> files_methods_afm}}
+
+  <div class="row align-center">
+    <div class="col-xs-12 notes">Figure captions
+    </div>
+    <div class="col-sm-8 col-sm-offset-2">
+        <textarea class="" id="object_afmCaption" name="history" rows="4" placeholder="(e.g. additional info not covered by the points above)" value="{{details.methods.afm.notes.caption}}"></textarea>
+    </div>
+    <br/>
+  </div>
+</div>
+</template>

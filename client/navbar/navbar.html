@@ -1,0 +1,139 @@
+<template name="navbar">
+<div id="documentTop">
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand active" href="/"><span class="hoverGlow text-shadow">
+          croARTia art&research database</span></a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav">
+
+        {{#if currentUser}}
+          {{#if admin}}
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Admin panel <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a class="newItem-href" href="/new">New entry</a></li>
+                <li class="disabled"><a href="/admin/prosperoDB">Manage database</a></li>
+                <li role="separator" class="divider"></li>
+                <li class="disabled"><a href="/admin/users/add">Add user</a></li>
+                <li class="disabled"><a href="/admin/users">Manage users</a></li>
+                <li role="separator" class="divider"></li>
+                <li class="disabled"><a href="#">Advanced search</a></li>
+              </ul>
+            </li>
+           {{else}}
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Database <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="/new">New entry</a></li>
+                <li class="disabled"><a href="/database/myitems">My entries</a></li>
+                <li role="separator" class="divider"></li>
+                <li class="disabled"><a href="#">List all entries</a></li>
+              </ul>
+            </li>
+            {{/if}}
+            {{/if}}
+
+        </ul>
+        <ul class="nav navbar-nav">
+          <li class="dropdown disabled"><a href="/search">Advanced search</a></li>
+        </ul>
+        <!-- remove this after finished -->
+        <ul class="nav navbar-nav">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">[dev] <span class="caret"></span></a>
+              <ul class="dropdown-menu dev">
+                {{> dev}}
+              </ul>
+            </li>
+        </ul>
+        <!-- -->
+        <form class="navbar-form navbar-left">
+          <div class="form-group">
+            {{#if paintingInput}}
+              {{> EasySearch.Input index=paintingIndex attributes=searchAttributes}}
+              <span class="glyphicon glyphicon-search"></span>
+                &emsp;Sort by: 
+                <select class="sorting-paintings form-control">
+                  <option value="last_entry">last entry</option>
+                  <option value="first_entry">first entry</option>
+                  <option value="title_a">title a - z</option>
+                  <option value="title_z">title z - a</option>
+                  <option value="author_a">author a - z</option>
+                  <option value="author_z">author z - a</option>
+                </select>
+            {{/if}}
+            {{#if sculptureInput}}
+              {{> EasySearch.Input index=sculptureIndex attributes=searchAttributes}}
+              <span class="glyphicon glyphicon-search"></span>
+                &emsp;Sort by: 
+                <select class="sorting-paintings form-control">
+                  <option value="last_entry">last entry</option>
+                  <option value="first_entry">first entry</option>
+                  <option value="title_a">title a - z</option>
+                  <option value="title_z">title z - a</option>
+                  <option value="author_a">author a - z</option>
+                  <option value="author_z">author z - a</option>
+                </select>
+            {{/if}}
+            {{#if adminInput}}
+              {{> EasySearch.Input index=adminIndex attributes=searchAttributes}}
+              <span class="glyphicon glyphicon-search"></span>
+                &emsp;Sort by: 
+                <select class="sorting-admin form-control">
+                  <option value="last_entry">last entry</option>
+                  <option value="first_entry">first entry</option>
+                  <option value="last_edit">last edit</option>
+                  <option value="addedBy">added by</option>
+                  <option value="title_a">title a - z</option>
+                  <option value="title_z">title z - a</option>
+                  <option value="author_a">author a - z</option>
+                  <option value="author_z">author z - a</option>
+                </select>
+            {{/if}}
+            {{#if editorInput}}
+              {{> EasySearch.Input index=editorIndex attributes=searchAttributes}}
+            <span class="glyphicon glyphicon-search"></span>
+                &emsp;Sort by: 
+                <select class="sorting-editor form-control">
+                  <option value="last_entry">last entry</option>
+                  <option value="first_entry">first entry</option>
+                  <option value="last_edit">last edit</option>
+                  <option value="title_a">title a - z</option>
+                  <option value="title_z">title z - a</option>
+                  <option value="author_a">author a - z</option>
+                  <option value="author_z">author z - a</option>
+                </select>
+            {{/if}}
+          </div>
+        </form>
+        {{#if currentUser}}
+        <ul class="nav navbar-nav float-right">
+          <li class="dropdown logout"><a href="#">Log out</a></li>
+        </ul>
+        <ul class="nav navbar-nav float-right">
+          <p class="navbar-text">
+            <b>{{currentUser.profile.full_name}}</b>
+          </p>
+        </ul>
+          {{else}}
+          <ul class="nav navbar-nav float-right">
+            <li class ="dropdown"><a href="/login">Log in</a></li>
+          </ul>
+          {{/if}}
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+</div>
+</template>

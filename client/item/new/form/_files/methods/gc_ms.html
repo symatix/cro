@@ -1,0 +1,103 @@
+<template name="files_methods_gc_ms">
+<div class="row align-center">
+<div class="col-xs-12">
+  <h3>upload VIS/GL/UVF/IRP/RTG/SEM/spectrum photo</h3>
+</div>
+</div>
+<div class="row">
+  <div class="col-xs-12 col-sm-2 individual-property">PHOTO ONE
+  </div>
+  <div class="col-xs-12 col-sm-4">
+    <label for="gc_msFiles1_label" class="upload_label" id="upload_gc_msFiles1">(.jpg or .tiff, max size 5 mb)</label>
+    <input class="individual-data-value" type="file" id="gc_msFiles1_label">
+  </div>
+  <div class="col-xs-12 col-sm-2 individual-property"> PHOTO TWO
+  </div>
+  <div class="col-xs-12 col-sm-4">
+    <label for="gc_msFiles2_label" class="upload_label" id="upload_gc_msFiles2">(.jpg or .tiff, max size 5 mb)</label>
+    <input class="individual-data-value" type="file" id="gc_msFiles2_label">
+  </div>
+  <div class="col-xs-12 col-sm-2 individual-property"> PHOTO THREE
+  </div>
+  <div class="col-xs-12 col-sm-4">
+    <label for="gc_msFiles3_label" class="upload_label" id="upload_gc_msFiles3">(.jpg or .tiff, max size 5 mb)</label>
+    <input class="individual-data-value" type="file" id="gc_msFiles3_label">
+  </div>
+  <div class="col-xs-12 col-sm-2 individual-property"> PHOTO FOUR
+  </div>
+  <div class="col-xs-12 col-sm-4">
+    <label for="gc_msFiles4_label" class="upload_label" id="upload_gc_msFiles4">(.jpg or .tiff, max size 5 mb)</label>
+    <input class="individual-data-value" type="file" id="gc_msFiles4_label">
+  </div>
+  <div class="col-xs-12 col-sm-8 individual-property"> UPLOAD RELEVANT FILES (e.g. treatment documentation, conservation report, etc.)
+  </div>
+  <div class="col-xs-12 col-sm-4">
+    <label for="gc_msFiles5_label" class="upload_label" id="upload_gc_msFiles5">(.zip)</label>
+    <input class="individual-data-value" type="file" id="gc_msFiles5_label">
+  </div>
+  <div class="col-xs-12">
+    &nbsp;
+  </div>
+</div>
+
+<!-- hidden part1 -->
+<div class="gc_msFiles1 hidden">
+  <div class="individual-property">URL
+    <input type="text" class="individual-value individual-form" id="gc_msFiles1" placeholder="" value="{{details.methods.gc_ms.files.gc_msFiles1}}">
+  </div>
+</div>
+<div class="gc_msFiles1_id hidden">
+  <div class="individual-property">ID
+    <input type="text" class="individual-value individual-form" id="gc_msFiles1_id" placeholder="" value="{{details.methods.gc_ms.files.gc_msFiles1_id}}">
+  </div>
+</div>
+<!-- /hidden part1 -->
+<!-- hidden part 2-->
+<div class="gc_msFiles2 hidden">
+  <div class="individual-property">URL
+    <input type="text" class="individual-value individual-form" id="gc_msFiles2" placeholder="" value="{{details.methods.gc_ms.files.gc_msFiles2}}">
+  </div>
+</div>
+<div class="gc_msFiles2_id hidden">
+  <div class="individual-property">ID
+    <input type="text" class="individual-value individual-form" id="gc_msFiles2_id" placeholder="" value="{{details.methods.gc_ms.files.gc_msFiles2_id}}">
+  </div>
+</div>
+<!-- /hidden part 2-->
+<!-- hidden part 3-->
+<div class="gc_msFiles3 hidden">
+  <div class="individual-property">URL
+    <input type="text" class="individual-value individual-form" id="gc_msFiles3" placeholder="" value="{{details.methods.gc_ms.files.gc_msFiles3}}">
+  </div>
+</div>
+<div class="gc_msFiles3_id hidden">
+  <div class="individual-property">ID
+    <input type="text" class="individual-value individual-form" id="gc_msFiles3_id" placeholder="" value="{{details.methods.gc_ms.files.gc_msFiles3_id}}">
+  </div>
+</div>
+<!-- / hidden part 3-->
+<!-- hidden part4 -->
+<div class="gc_msFiles4 hidden">
+  <div class="individual-property">URL
+    <input type="text" class="individual-value individual-form" id="gc_msFiles4" placeholder="" value="{{details.methods.gc_ms.files.gc_msFiles4}}">
+  </div>
+</div>
+<div class="gc_msFiles4_id hidden">
+  <div class="individual-property">ID
+    <input type="text" class="individual-value individual-form" id="gc_msFiles4_id" placeholder="" value="{{details.methods.gc_ms.files.gc_msFiles4_id}}">
+  </div>
+</div>
+<!-- / hidden part4 -->
+<!-- hidden part 5-->
+<div class="gc_msFiles5 hidden">
+  <div class="individual-property">URL
+    <input type="text" class="individual-value individual-form" id="gc_msFiles5" placeholder="" value="{{details.methods.gc_ms.files.gc_msFiles5}}">
+  </div>
+</div>
+<div class="gc_msFiles5_id hidden">
+  <div class="individual-property">ID
+    <input type="text" class="individual-value individual-form" id="gc_msFiles5_id" placeholder="" value="{{details.methods.gc_ms.files.gc_msFiles5_id}}">
+  </div>
+</div>
+<!-- /hidden part 5-->
+</template>

@@ -1,0 +1,88 @@
+<template name="method_techniques_synchrotron">
+<div class="toggle" id="object_toggle-synchrotron">
+  <div class="row align-center">
+    <div class="uderline-method">
+      <h4>synchrotron</h4>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 col-md-6 individual-property synchrotronExperimental">EXPERIMENTAL PARAMETERS
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_synchrotronExperimental" placeholder="(e.g. X-ray tube voltage, laser wavelength, air/vacuum, etc.)" value="{{details.methods.synchrotron.experimentalParameters}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property synchrotronElements">ELEMENTS DETERMINED
+    </div>
+    <div class="col-xs-12 col-md-6"> 
+      <input type="text" class="individual-value individual-form" id="object_synchrotronElements" placeholder="(e.g. cobalt blue, red ochre, indigo, etc.)" value="{{details.methods.synchrotron.elements}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property synchrotronFormulae">CHEMICAL FORMULAE DETERMINED
+    </div>
+    <div class="col-xs-12 col-md-6"> 
+      <input type="text" class="individual-value individual-form" id="object_synchrotronFormulae" placeholder="" value="{{details.methods.synchrotron.formulae}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property synchrotronPigmentsDyes">PIGMENTS/DYES IDENTIFIED
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_synchrotronPigmentsDyes" placeholder="" value="{{details.methods.synchrotron.pigmentsDyes}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property synchrotronPriming">PRIMING IDENTIFIED
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_synchrotronPriming" placeholder="" value="{{details.methods.synchrotron.priming}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property synchrotronBindingMedia">BINDING MEDIA IDENTIFIED
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_synchrotronBindingMedia" placeholder="" value="{{details.methods.synchrotron.bindingMedia}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property synchrotronVarnish">VARNISH IDENTIFIED
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_synchrotronVarnish" placeholder="" value="{{details.methods.synchrotron.varnish}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property synchrotronStretcherSupportStrainer">STRETCHER/SUPPORT/STRAINER IDENTIFIED
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_synchrotronStretcherSupportStrainer" placeholder="" value="{{details.methods.synchrotron.stretcherSupportStrainer}}">
+    </div>
+    <div class="col-xs-12">
+      &nbsp;
+    </div>
+  </div>
+  <div class="row align-center">
+    <div class="col-xs-12 notes">Brief info about possible multilayers/underpaintings/retouches
+    </div>
+    <div class="col-sm-8 col-sm-offset-2">
+        <textarea class="" id="object_synchrotronBrief" name="sources" rows="4" placeholder="(e.g. secondary effects from underlying signal sources)" value="{{details.methods.synchrotron.notes.brief}}"></textarea>
+    </div>
+    <div class="col-xs-12 notes">Comments
+    </div>
+    <div class="col-sm-8 col-sm-offset-2">
+        <textarea class="" id="object_synchrotronComments" name="sources" rows="4" placeholder="(e.g. additional info not covered by the points above)" value="{{details.methods.synchrotron.notes.comments}}"></textarea>
+    </div>
+    <div class="col-xs-12 notes">Sources
+    </div>
+    <div class="col-sm-8 col-sm-offset-2">
+        <textarea class="" id="object_synchrotronSources" name="sources" rows="4" placeholder="(literature)" value="{{details.methods.synchrotron.notes.sources}}"></textarea>
+    </div>
+    <div class="col-xs-12">
+      &nbsp;
+    </div>
+  </div>
+
+
+
+  {{> files_methods_synchrotron}}
+
+
+  <div class="row align-center">
+    <div class="col-xs-12 notes">Figure captions
+    </div>
+    <div class="col-sm-8 col-sm-offset-2">
+        <textarea class="" id="object_synchrotronCaption" name="history" rows="4" placeholder="(e.g. additional info not covered by the points above)" value="{{details.methods.synchrotron.notes.caption}}"></textarea>
+    </div>
+    <br/>
+  </div>
+</div>
+</template>

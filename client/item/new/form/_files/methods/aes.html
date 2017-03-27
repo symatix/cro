@@ -1,0 +1,103 @@
+<template name="files_methods_aes">
+<div class="row align-center">
+<div class="col-xs-12">
+  <h3>upload VIS/GL/UVF/IRP/RTG/SEM/spectrum photo</h3>
+</div>
+</div>
+<div class="row">
+  <div class="col-xs-12 col-sm-2 individual-property">PHOTO ONE
+  </div>
+  <div class="col-xs-12 col-sm-4">
+    <label for="aesFiles1_label" class="upload_label" id="upload_aesFiles1">(.jpg or .tiff, max size 5 mb)</label>
+    <input class="individual-data-value" type="file" id="aesFiles1_label">
+  </div>
+  <div class="col-xs-12 col-sm-2 individual-property"> PHOTO TWO
+  </div>
+  <div class="col-xs-12 col-sm-4">
+    <label for="aesFiles2_label" class="upload_label" id="upload_aesFiles2">(.jpg or .tiff, max size 5 mb)</label>
+    <input class="individual-data-value" type="file" id="aesFiles2_label">
+  </div>
+  <div class="col-xs-12 col-sm-2 individual-property"> PHOTO THREE
+  </div>
+  <div class="col-xs-12 col-sm-4">
+    <label for="aesFiles3_label" class="upload_label" id="upload_aesFiles3">(.jpg or .tiff, max size 5 mb)</label>
+    <input class="individual-data-value" type="file" id="aesFiles3_label">
+  </div>
+  <div class="col-xs-12 col-sm-2 individual-property"> PHOTO FOUR
+  </div>
+  <div class="col-xs-12 col-sm-4">
+    <label for="aesFiles4_label" class="upload_label" id="upload_aesFiles4">(.jpg or .tiff, max size 5 mb)</label>
+    <input class="individual-data-value" type="file" id="aesFiles4_label">
+  </div>
+  <div class="col-xs-12 col-sm-8 individual-property"> UPLOAD RELEVANT FILES (e.g. treatment documentation, conservation report, etc.)
+  </div>
+  <div class="col-xs-12 col-sm-4">
+    <label for="aesFiles5_label" class="upload_label" id="upload_aesFiles5">(.zip)</label>
+    <input class="individual-data-value" type="file" id="aesFiles5_label">
+  </div>
+  <div class="col-xs-12">
+    &nbsp;
+  </div>
+</div>
+
+<!-- hidden part1 -->
+<div class="aesFiles1 hidden">
+  <div class="individual-property">URL
+    <input type="text" class="individual-value individual-form" id="aesFiles1" placeholder="" value="{{details.methods.aes.files.aesFiles1}}">
+  </div>
+</div>
+<div class="aesFiles1_id hidden">
+  <div class="individual-property">ID
+    <input type="text" class="individual-value individual-form" id="aesFiles1_id" placeholder="" value="{{details.methods.aes.files.aesFiles1_id}}">
+  </div>
+</div>
+<!-- /hidden part1 -->
+<!-- hidden part 2-->
+<div class="aesFiles2 hidden">
+  <div class="individual-property">URL
+    <input type="text" class="individual-value individual-form" id="aesFiles2" placeholder="" value="{{details.methods.aes.files.aesFiles2}}">
+  </div>
+</div>
+<div class="aesFiles2_id hidden">
+  <div class="individual-property">ID
+    <input type="text" class="individual-value individual-form" id="aesFiles2_id" placeholder="" value="{{details.methods.aes.files.aesFiles2_id}}">
+  </div>
+</div>
+<!-- /hidden part 2-->
+<!-- hidden part 3-->
+<div class="aesFiles3 hidden">
+  <div class="individual-property">URL
+    <input type="text" class="individual-value individual-form" id="aesFiles3" placeholder="" value="{{details.methods.aes.files.aesFiles3}}">
+  </div>
+</div>
+<div class="aesFiles3_id hidden">
+  <div class="individual-property">ID
+    <input type="text" class="individual-value individual-form" id="aesFiles3_id" placeholder="" value="{{details.methods.aes.files.aesFiles3_id}}">
+  </div>
+</div>
+<!-- / hidden part 3-->
+<!-- hidden part4 -->
+<div class="aesFiles4 hidden">
+  <div class="individual-property">URL
+    <input type="text" class="individual-value individual-form" id="aesFiles4" placeholder="" value="{{details.methods.aes.files.aesFiles4}}">
+  </div>
+</div>
+<div class="aesFiles4_id hidden">
+  <div class="individual-property">ID
+    <input type="text" class="individual-value individual-form" id="aesFiles4_id" placeholder="" value="{{details.methods.aes.files.aesFiles4_id}}">
+  </div>
+</div>
+<!-- / hidden part4 -->
+<!-- hidden part 5-->
+<div class="aesFiles5 hidden">
+  <div class="individual-property">URL
+    <input type="text" class="individual-value individual-form" id="aesFiles5" placeholder="" value="{{details.methods.aesFiles5}}">
+  </div>
+</div>
+<div class="aesFiles5_id hidden">
+  <div class="individual-property">ID
+    <input type="text" class="individual-value individual-form" id="aesFiles5_id" placeholder="" value="{{details.methods.aesFiles5_id}}">
+  </div>
+</div>
+<!-- /hidden part 5-->
+</template>

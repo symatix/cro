@@ -1,0 +1,336 @@
+<template name="original_painting">
+<div class="row">
+  <div class="col-xs-12 col-md-6 individual-property primingGround">
+    PRIMING/GROUND
+  </div>
+  <div class="col-xs-12 col-md-6">
+    <input type="text" class="individual-value individual-form" id="primingGround1" placeholder="(e.g. chalk, gypsum, etc.)" value="{{materials.original.primingGround}}">
+  </div>
+
+  <div class="col-xs-12 col-md-6 individual-property pigmentsDyes">
+    PIGMENTS/DYES IDENTIFIED
+  </div>
+  <div class="col-xs-12 col-md-6"> 
+    <input type="text" class="individual-value individual-form" id="pigmentsDyes1" placeholder="(e.g. cobalt blue, red ochre, indigo, etc.)" value="{{materials.original.pigmentsDyes}}">
+  </div>
+
+  <div class="col-xs-12 col-md-6 individual-property bendingMedium">
+    BINDING MEDIUM IDENTIFIED
+  </div>
+  <div class="col-xs-12 col-md-6"> 
+    <input type="text" class="individual-value individual-form" id="bindingMedium1" placeholder="(e.g. egg, linseed oil, glue, etc.)" value="{{materials.original.bindingMedium}}">
+  </div>
+
+  <div class="col-xs-12 col-md-6 individual-property additives">
+    ADDITIVES
+  </div>
+  <div class="col-xs-12 col-md-6">
+    <input type="text" class="individual-value individual-form" id="additives1" placeholder="(e.g. turpentine, white spirit, etc.)" value="{{materials.original.additives}}">
+  </div>
+
+  <div class="col-xs-12 col-md-6 individual-property filler">
+    FILLER
+  </div>
+  <div class="col-xs-12 col-md-6">
+    <input type="text" class="individual-value individual-form" id="filler1" placeholder="" value="{{materials.original.filler}}">
+  </div>
+
+  <div class="col-xs-12 col-md-6 individual-property layerVarnish">
+    FINISHING LAYER/VARNISH
+  </div>
+  <div class="col-xs-12 col-md-6"> 
+    <input type="text" class="individual-value individual-form" id="layerVarnish1" placeholder="(e.g. dammar, mastic, etc.)" value="{{materials.original.layerVarnish}}">
+  </div>
+
+  <div class="col-xs-12 col-md-6 individual-property underdrawingPentimento">
+    UNDERDRAWING/PENTIMENTO
+  </div>
+  <div class="col-xs-12 col-md-6">
+    <input type="text" class="individual-value individual-form" id="underdrawingPentimento1" placeholder="" value="{{materials.original.underdrawingPentimento}}">
+  </div>
+
+  <div class="col-xs-12 col-md-6 individual-property leafs">
+    METAL LEAFS
+  </div>
+  <div class="col-xs-12 col-md-6">
+    <input type="text" class="individual-value individual-form" id="leafs1" placeholder="(e.g. gold, silver, aluminum, brass)" value="{{materials.original.leafs}}">
+  </div>
+
+  <div class="col-xs-12 col-md-6 individual-property leafsApplication">
+    METAL LEAFS APPLICATION TECHNIQUE
+  </div>
+  <div class="col-xs-12 col-md-6">
+    <input type="text" class="individual-value individual-form" id="leafsApplication1" placeholder="(e.g. poliment gilding, oil gilding, etc.)" value="{{materials.original.leafsApplication}}">
+  </div>
+
+  <div class="col-xs-12 col-md-6 individual-property periodStyle">
+    PERIOD/STYLE
+  </div>
+  <div class="col-xs-12 col-md-6">
+    <input type="text" class="individual-value individual-form" id="periodStyle1" placeholder="(e.g. renaissance, baroque, romanticism, modern art, contemporary art, etc.)" value="{{materials.original.periodStyle}}">
+  </div>
+
+  <div class="col-xs-12 col-md-6 individual-property stretcher">
+    STRETCHER
+  </div>
+  <div class="col-xs-12 col-md-6">
+    <input type="text" class="individual-value individual-form" id="stretcher1" placeholder="" value="{{materials.original.stretcher}}">
+  </div>
+
+  <div class="col-xs-12 col-md-6 individual-property supportStrainer">
+    SUPPORT/STRAINER
+  </div>
+  <div class="col-xs-12 col-md-6">
+    <input type="text" class="individual-value individual-form" id="supportStrainer1" placeholder="(e.g. canvas, wooden panel, metal plate, etc.)" value="{{materials.original.supportStrainer}}">
+  </div>
+
+  <div class="col-xs-12 col-md-6 individual-property support">
+    TYPE OF SUPPORT
+  </div>
+  <div class="col-xs-12 col-md-6">
+    <input type="text" class="individual-value individual-form" id="support1" placeholder="(e.g. linen,  oak panels, brass plate, etc.)" value="{{materials.original.support}}">
+  </div>
+
+  <div class="col-xs-12 col-md-6 individual-property thickness">
+    THICKNESS
+  </div>
+  <div class="col-xs-12 col-md-6">
+    <input type="text" class="individual-value individual-form" id="thickness1" placeholder="(in mm)" value="{{materials.original.thickness}}">
+  </div>
+
+  <div class="col-xs-12 col-md-6 individual-property piecesJoints">
+    PIECES/CUT ORIENTATION/JOINTS (for wood)
+  </div>
+  <div class="col-xs-12 col-md-6">
+    <input type="text" class="individual-value individual-form" id="piecesJoints1" placeholder="(e.g. 2 panels, radial cut, etc.)" value="{{materials.original.piecesJoints}}">
+  </div>
+
+  <div class="col-xs-12 col-md-6 individual-property texture">
+    TEXTURE (for canvas)
+  </div>
+  <div class="col-xs-12 col-md-6">
+    <input type="text" class="individual-value individual-form" id="texture1" placeholder="(e.g. fine, very fine, coarse, etc.)" value="{{materials.original.texture}}">
+  </div>
+
+  <div class="col-xs-12 col-md-6 individual-property color">
+    COLOR
+  </div>
+  <div class="col-xs-12 col-md-6">
+    <input type="text" class="individual-value individual-form" id="color1" placeholder="" value="{{materials.original.color}}">
+  </div>
+
+  <div class="col-xs-12 col-md-6 individual-property manufacturer">
+    MANUFACTURER
+  </div>
+  <div class="col-xs-12 col-md-6">
+    <input type="text" class="individual-value individual-form" id="manufacturer1" placeholder="" value="{{materials.original.manufacturer}}">
+  </div>
+
+  <div class="col-xs-12 col-md-6 individual-property wave">
+    TYPE OF WEAVE
+  </div>
+  <div class="col-xs-12 col-md-6">
+    <input type="text" class="individual-value individual-form" id="wave1" placeholder="(e.g. plain, twill, fishbone, etc.)" value="{{materials.original.wave}}">
+  </div>
+
+  <div class="col-xs-12 col-md-6 individual-property constructionAids">
+    CONSTRUCTION AIDS (for wall painting)
+  </div>
+  <div class="col-xs-12 col-md-6"> 
+    <input type="text" class="individual-value individual-form" id="constructionAids1" placeholder="(e.g. sinopia, snapped line, grid, etc.)" value="{{materials.original.constructionAids}}">
+  </div>
+
+  <div class="col-xs-12 col-md-6 individual-property decorativeApplications">
+    DECORATIVE APPLICATIONS (for wall painting)
+  </div>
+  <div class="col-xs-12 col-md-6"> 
+    <input type="text" class="individual-value individual-form" id="decorativeApplications1" placeholder="(e.g. gilding, glass fragments, stones, etc.)" value="{{materials.original.decorativeApplications}}">
+  </div>
+
+  <div class="col-xs-12">
+    &nbsp;
+  </div>
+  <div class="col-xs-12">
+    &nbsp;
+  </div>
+<!-- groups -->
+  <div class="col-xs-12 col-sm-12 individual-property align-center plaster">
+    PLASTER INFORMATION (for wall painting)
+  </div>
+  <div class="col-xs-12 col-sm-6 individual-property p-layers">
+    No. of layers
+  </div>
+  <div class="col-xs-12 col-md-6">
+    <input type="text" class="individual-value individual-form" id="p_layers1" placeholder="" value="{{materials.original.plaster.layers}}">
+  </div>
+  <div class="col-xs-12 col-sm-6 individual-property p-composition">
+    Composition
+  </div>
+  <div class="col-xs-12 col-md-6">
+    <input type="text" class="individual-value individual-form" id="p_composition1" placeholder="(e.g. binding medium, filler, additives)" value="{{materials.original.plaster.composition}}">
+  </div>
+  <div class="col-xs-12 col-sm-6 individual-property p_binderFiller">
+    Binder/filler ratio
+  </div>
+  <div class="col-xs-12 col-md-6">
+    <input type="text" class="individual-value individual-form" id="p_binderFiller1" placeholder="" value="{{materials.original.plaster.binderFiller}}">
+  </div>
+
+  <div class="col-xs-12">
+    &nbsp;
+  </div>
+
+  <div class="col-xs-12 col-sm-12 individual-property individual-property align-center">
+    DENSITY PER CM²
+  </div>
+  <div class="col-xs-12 col-sm-6 individual-property density-weft">
+    Weft
+  </div>
+  <div class="col-xs-12 col-md-6">
+    <input type="text" class="individual-value individual-form" id="densityWeft1" placeholder="(no. of horizontal threads):" value="{{materials.original.density.weft}}">
+  </div>
+  <div class="col-xs-12 col-sm-6 individual-property density-warp">
+    Warp
+  </div>
+  <div class="col-xs-12 col-md-6">
+    <input type="text" class="individual-value individual-form" id="densityWarp1" placeholder="(no. of vertical threads):" value="{{materials.original.density.warp}}">
+  </div>
+
+  <div class="col-xs-12">
+    &nbsp;
+  </div>
+
+  <div class="col-xs-12 col-sm-12 individual-property thickness align-center">
+    THICKNESS OF THREADS
+  </div>
+  <div class="col-xs-12 col-sm-6 individual-property thickness-weft">
+    Weft
+  </div>
+  <div class="col-xs-12 col-md-6">
+    <input type="text" class="individual-value individual-form" id="thicknessWeft1" placeholder="(in mm, e.g. 0,2 mm)" value="{{materials.original.thicknessOfThread.weft}}">
+  </div>
+  <div class="col-xs-12 col-sm-6 individual-property thickness-warp">
+    Warp
+  </div>
+  <div class="col-xs-12 col-md-6">
+    <input type="text" class="individual-value individual-form" id="thicknessWarp1" placeholder="(in mm, e.g. 0,18 mm)" value="{{materials.original.thicknessOfThread.warp}}">
+  </div>
+
+  <div class="col-xs-12">
+    &nbsp;
+  </div>
+
+  <div class="col-xs-12 col-sm-12 individual-property decorativeFrame align-center">
+    DECORATIVE FRAME
+  </div>
+  <div class="col-xs-12 col-sm-6 individual-property df-periodStyle">
+    Period/Style
+  </div>
+  <div class="col-xs-12 col-md-6">
+    <input type="text" class="individual-value individual-form" id="df_periodStyle1" placeholder="" value="{{materials.original.decorativeFrame.periodStyle}}">
+  </div>
+  <div class="col-xs-12 col-sm-6 individual-property df-support">
+    Support
+  </div>
+  <div class="col-xs-12 col-md-6">
+    <input type="text" class="individual-value individual-form" id="df_support1" placeholder="" value="{{materials.original.decorativeFrame.support}}">
+  </div>
+  <div class="col-xs-12 col-sm-6 individual-property df-priming">
+    Priming
+  </div>
+  <div class="col-xs-12 col-md-6">
+    <input type="text" class="individual-value individual-form" id="df_priming1" placeholder="" value="{{materials.original.decorativeFrame.priming}}">
+  </div>
+  <div class="col-xs-12 col-sm-6 individual-property df-decorativeLayer">
+    Decorative layer
+  </div>
+  <div class="col-xs-12 col-md-6">
+    <input type="text" class="individual-value individual-form" id="df_decorativeLayer1" placeholder="(e.g. pigments, dyes, gilding, etc.)" value="{{materials.original.decorativeFrame.decorativeLayer}}">
+  </div>
+  <div class="col-xs-12 col-sm-6 individual-property df-varnish">
+    Varnish
+  </div>
+  <div class="col-xs-12 col-md-6">
+    <input type="text" class="individual-value individual-form" id="df-varnish1" placeholder="" value="{{materials.original.decorativeFrame.varnish}}">
+  </div>
+
+  <div class="col-xs-12">
+    &nbsp;
+  </div>
+
+  <div class="col-xs-12 col-md-6 individual-property potataGiornata">
+    PONTATA/GIORNATA (for wall painting)
+  </div>
+  <div class="col-xs-12 col-md-6 yesNo">
+    <select class="form-select" id="potataGiornata1" value="{{materials.original.potataGiornata}}">
+      <option value="" disabled selected style='display:none;'>Select...</option>
+      <option value="Yes">Yes</option>
+      <option value="No">No</option>
+    </select>
+  </div>
+  <div class="col-xs-12 col-md-6 individual-property relief">RELIEF (for wall painting)
+  </div>
+  <div class="col-xs-12 col-md-6 yesNo">
+    <select class="form-select" id="relief1" value="{{materials.original.relief}}">
+      <option value="" disabled selected style='display:none;'>Select...</option>
+      <option value="Yes">Yes</option>
+      <option value="No">No</option>
+    </select>
+  </div>
+
+  <div class="col-xs-12">
+    &nbsp;
+  </div>
+</div>
+
+<!--
+notes fileds
+-->
+  <div class="row align-center">
+    <div class="col-xs-12 notes">
+      Samples investigated
+    </div>
+    <div class="col-sm-8 col-sm-offset-2">
+        <textarea class="" id="samples1" name="samples1" rows="4" placeholder="(e.g. number of samples, short explanation, name of the responsible person etc.)" value="{{materials.original.notes.samples}}"></textarea>
+    </div>
+    <br/>
+
+    <div class="col-xs-12 notes">
+      Short overview of art history
+    </div>
+    <div class="col-sm-8 col-sm-offset-2">
+        <textarea class="" id="artHistory1" name="artHistory1" rows="4" placeholder="" value="{{materials.original.notes.artHistory}}"></textarea>
+    </div>
+    <br/>
+
+    <div class="col-xs-12 notes">
+      Sources
+    </div>
+    <div class="col-sm-8 col-sm-offset-2">
+        <textarea class="" id="sources1" name="sources1" rows="4" placeholder="(literature)" value="{{materials.original.notes.sources}}"></textarea>
+    </div>
+    <br/>
+
+    <div class="col-xs-12 notes">
+      Comments (additional info)
+    </div>
+    <div class="col-sm-8 col-sm-offset-2">
+        <textarea class="" id="comments1" name="comments1" rows="4" placeholder="(e.g. additional info not covered by the points above)" value="{{materials.original.notes.comments}}"></textarea>
+    </div>
+
+    <div class="col-xs-12">
+      &nbsp;
+    </div>
+  </div>
+
+  {{> item_files_details_1}}
+
+  <div class="row align-center">
+    <div class="col-xs-12 notes">Figure captions
+    </div>
+    <div class="col-sm-8 col-sm-offset-2">
+        <textarea class="" id="figureCaption1" name="history" rows="4" placeholder="(e.g. additional info not covered by the points above)" value="{{materials.original.notes.figureCaption}}"></textarea>
+    </div>
+    <br/>
+  </div>
+</template>

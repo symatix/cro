@@ -1,0 +1,55 @@
+<template name="users">
+  <div class="container-fluid">
+    <h1 class="breadcrumbs">admin } <span class="post-heading"> manage users</span></h1>
+    <div class="row margin-top">
+      <div class="col-md-12">
+        <a href="/admin/users/add">
+          <button class="btn btn-default btn-submit col-md-12" id="btn-edit">ADD USER</button>
+        </a>    
+        <br/>
+        <br/>
+      </div>
+    </div>
+      <ul class="list-font">
+      {{#each users}}
+    <div class="row dashed-border" id="{{_id}}">
+        <li>
+            <div class="col-md-2 user-list">
+              <span class="item-property">{{profile.full_name}}</span><br/>
+              <i>{{profile.institution}}</i>
+            </div>
+            <div class="col-md-2 user-details">
+              <span class="item-property">&emsp;username</span><br/>
+              <br/>
+              <i>{{username}}</i>
+            </div>
+            <div class="col-md-2 user-details">
+              <span class="item-property">&emsp;password</span><br/>
+              <br/>
+              <i>{{profile.password}}</i>
+            </div>
+            <div class="col-md-2 user-details">
+              <span class="item-property">&emsp;telephone</span><br/>
+              <br/>
+              <i>{{profile.telephone}}</i>
+            </div>
+            <div class="col-md-2 user-details">
+              <span class="item-property">&emsp;e-mail</span><br/><br/>
+              <i>{{profile.email}}</i>
+            </div>
+            <div class="margin-left">
+              <a href="/admin/users/edit/{{_id}}">
+                <button class="btn btn-default btn-submit">EDIT</button>
+              </a>
+              <button class="btn btn-danger btn-list js-delete">DELETE</button>
+              <label>
+                <i style="font-family:Helvetica;font-size:15px;color:gray;">check box to delete&emsp;</i>
+                <input id="safe-delete-{{_id}}" type="checkbox" value="">
+              </label>
+            </div>
+        </li>
+    </div>
+        {{/each}}
+      </ul>
+  </div>
+</template>

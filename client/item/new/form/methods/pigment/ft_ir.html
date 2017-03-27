@@ -1,0 +1,88 @@
+<template name="method_techniques_pigment_ft_ir">
+<div class="toggle" id="object_toggle-ft_ir">
+  <div class="row align-center">
+    <div class="uderline-method">
+      <h4>ft_ir</h4>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 col-md-6 individual-property ft_irExperimental">
+      EXPERIMENTAL PARAMETERS
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_ft_irExperimental" placeholder="(e.g. X-ray tube voltage, laser wavelength, air/vacuum, etc.)" value="{{details.methods.ft_ir.experimentalParameters}}">
+    </div>
+
+    <div class="col-xs-12 col-md-6 individual-property ft_irElements">
+      ELEMENTS DETERMINED
+    </div>
+    <div class="col-xs-12 col-md-6"> 
+      <input type="text" class="individual-value individual-form" id="object_ft_irElements" placeholder="(e.g. cobalt blue, red ochre, indigo, etc.)" value="{{details.methods.ft_ir.elements}}">
+    </div>
+
+    <div class="col-xs-12 col-md-6 individual-property ft_irQuantification">
+      QUANTIFICATION RESULTS
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_ft_irQuantification" placeholder="(e.g. 92% Cu, 7,2% Sn, 0,8% Pb)" value="{{details.methods.ft_ir.quantification}}">
+    </div>
+
+    <div class="col-xs-12 col-md-6 individual-property ft_irFormulae">
+      CHEMICAL FORMULAE DETERMINED
+    </div>
+    <div class="col-xs-12 col-md-6"> 
+      <input type="text" class="individual-value individual-form" id="object_ft_irFormulae" placeholder="" value="{{details.methods.ft_ir.formulae}}">
+    </div>
+
+    <div class="col-xs-12 col-md-6 individual-property ft_irInfluence">
+      SAMPLE HOLDER/PURITY INFLUENCE
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_ft_irInfluence" placeholder="(e.g. elements from pigment powder holder, binding media effects, etc.)" value="{{details.methods.ft_ir.influence}}">
+    </div>
+
+    <div class="col-xs-12 col-md-6 individual-property ft_irColorValues">
+      COLOR SPACE VALUES
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_ft_irColorValues" placeholder="(e.g. CIE Lab, LCh, CIE XYZ, etc.)" value="{{details.methods.ft_ir.colorValues}}">
+    </div>
+
+    <div class="col-xs-12 col-md-6 individual-property ft_irBands">
+      MAIN ROTATIONAL/VIBRATIONAL BANDS AND THEIR RELATIVE INTENSITIES
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_ft_irBands" placeholder="(e.g. Raman band wavenumbers (cm-1) for cerulean blue: 495m(sh), 534s, 674vs)" value="{{details.methods.ft_ir.bands}}">
+    </div>
+
+    <div class="col-xs-12">
+      &nbsp;
+    </div>
+  </div>
+
+
+  <div class="row align-center">
+
+    <div class="col-xs-12 notes">Comments
+    </div>
+    <div class="col-sm-8 col-sm-offset-2">
+        <textarea class="" id="object_ft_irComments" name="sources" rows="4" placeholder="(e.g. additional info not covered by the points above)" value="{{details.methods.ft_ir.notes.comments}}"></textarea>
+    </div>
+
+    <div class="col-xs-12">
+      &nbsp;
+    </div>
+  </div>
+
+  {{> files_methods_ft_ir}}
+
+  <div class="row align-center">
+    <div class="col-xs-12 notes">Figure captions
+    </div>
+    <div class="col-sm-8 col-sm-offset-2">
+        <textarea class="" id="object_ft_irCaption" name="history" rows="4" placeholder="(e.g. additional info not covered by the points above)" value="{{details.methods.ft_ir.notes.caption}}"></textarea>
+    </div>
+    <br/>
+  </div>
+</div>
+</template>

@@ -1,0 +1,103 @@
+<template name="files_methods_afm">
+<div class="row align-center">
+<div class="col-xs-12">
+  <h3>upload VIS/GL/UVF/IRP/RTG/SEM/spectrum photo</h3>
+</div>
+</div>
+<div class="row">
+  <div class="col-xs-12 col-sm-2 individual-property">PHOTO ONE
+  </div>
+  <div class="col-xs-12 col-sm-4">
+    <label for="afmFiles1_label" class="upload_label" id="upload_afmFiles1">(.jpg or .tiff, max size 5 mb)</label>
+    <input class="individual-data-value" type="file" id="afmFiles1_label">
+  </div>
+  <div class="col-xs-12 col-sm-2 individual-property"> PHOTO TWO
+  </div>
+  <div class="col-xs-12 col-sm-4">
+    <label for="afmFiles2_label" class="upload_label" id="upload_afmFiles2">(.jpg or .tiff, max size 5 mb)</label>
+    <input class="individual-data-value" type="file" id="afmFiles2_label">
+  </div>
+  <div class="col-xs-12 col-sm-2 individual-property"> PHOTO THREE
+  </div>
+  <div class="col-xs-12 col-sm-4">
+    <label for="afmFiles3_label" class="upload_label" id="upload_afmFiles3">(.jpg or .tiff, max size 5 mb)</label>
+    <input class="individual-data-value" type="file" id="afmFiles3_label">
+  </div>
+  <div class="col-xs-12 col-sm-2 individual-property"> PHOTO FOUR
+  </div>
+  <div class="col-xs-12 col-sm-4">
+    <label for="afmFiles4_label" class="upload_label" id="upload_afmFiles4">(.jpg or .tiff, max size 5 mb)</label>
+    <input class="individual-data-value" type="file" id="afmFiles4_label">
+  </div>
+  <div class="col-xs-12 col-sm-8 individual-property"> UPLOAD RELEVANT FILES (e.g. treatment documentation, conservation report, etc.)
+  </div>
+  <div class="col-xs-12 col-sm-4">
+    <label for="afmFiles5_label" class="upload_label" id="upload_afmFiles5">(.zip)</label>
+    <input class="individual-data-value" type="file" id="afmFiles5_label">
+  </div>
+  <div class="col-xs-12">
+    &nbsp;
+  </div>
+</div>
+
+<!-- hidden part1 -->
+<div class="afmFiles1 hidden">
+  <div class="individual-property">URL
+    <input type="text" class="individual-value individual-form" id="afmFiles1" placeholder="" value="{{details.methods.afm.files.afmFiles1}}">
+  </div>
+</div>
+<div class="afmFiles1_id hidden">
+  <div class="individual-property">ID
+    <input type="text" class="individual-value individual-form" id="afmFiles1_id" placeholder="" value="{{details.methods.afm.files.afmFiles1_id}}">
+  </div>
+</div>
+<!-- /hidden part1 -->
+<!-- hidden part 2-->
+<div class="afmFiles2 hidden">
+  <div class="individual-property">URL
+    <input type="text" class="individual-value individual-form" id="afmFiles2" placeholder="" value="{{details.methods.afm.files.afmFiles2}}">
+  </div>
+</div>
+<div class="afmFiles2_id hidden">
+  <div class="individual-property">ID
+    <input type="text" class="individual-value individual-form" id="afmFiles2_id" placeholder="" value="{{details.methods.afm.files.afmFiles2_id}}">
+  </div>
+</div>
+<!-- /hidden part 2-->
+<!-- hidden part 3-->
+<div class="afmFiles3 hidden">
+  <div class="individual-property">URL
+    <input type="text" class="individual-value individual-form" id="afmFiles3" placeholder="" value="{{details.methods.afm.files.afmFiles3}}">
+  </div>
+</div>
+<div class="afmFiles3_id hidden">
+  <div class="individual-property">ID
+    <input type="text" class="individual-value individual-form" id="afmFiles3_id" placeholder="" value="{{details.methods.afm.files.afmFiles3_id}}">
+  </div>
+</div>
+<!-- / hidden part 3-->
+<!-- hidden part4 -->
+<div class="afmFiles4 hidden">
+  <div class="individual-property">URL
+    <input type="text" class="individual-value individual-form" id="afmFiles4" placeholder="" value="{{details.methods.afm.files.afmFiles4}}">
+  </div>
+</div>
+<div class="afmFiles4_id hidden">
+  <div class="individual-property">ID
+    <input type="text" class="individual-value individual-form" id="afmFiles4_id" placeholder="" value="{{details.methods.afm.files.afmFiles4_id}}">
+  </div>
+</div>
+<!-- / hidden part4 -->
+<!-- hidden part 5-->
+<div class="afmFiles5 hidden">
+  <div class="individual-property">URL
+    <input type="text" class="individual-value individual-form" id="afmFiles5" placeholder="" value="{{details.methods.afm.files.afmFiles5}}">
+  </div>
+</div>
+<div class="afmFiles5_id hidden">
+  <div class="individual-property">ID
+    <input type="text" class="individual-value individual-form" id="afmFiles5_id" placeholder="" value="{{details.methods.afm.files.afmFiles5_id}}">
+  </div>
+</div>
+<!-- /hidden part 5-->
+</template>

@@ -1,0 +1,103 @@
+<template name="files_methods_synchrotron">
+<div class="row align-center">
+<div class="col-xs-12">
+  <h3>upload VIS/GL/UVF/IRP/RTG/SEM/spectrum photo</h3>
+</div>
+</div>
+<div class="row">
+  <div class="col-xs-12 col-sm-2 individual-property">PHOTO ONE
+  </div>
+  <div class="col-xs-12 col-sm-4">
+    <label for="synchrotronFiles1_label" class="upload_label" id="upload_synchrotronFiles1">(.jpg or .tiff, max size 5 mb)</label>
+    <input class="individual-data-value" type="file" id="synchrotronFiles1_label">
+  </div>
+  <div class="col-xs-12 col-sm-2 individual-property"> PHOTO TWO
+  </div>
+  <div class="col-xs-12 col-sm-4">
+    <label for="synchrotronFiles2_label" class="upload_label" id="upload_synchrotronFiles2">(.jpg or .tiff, max size 5 mb)</label>
+    <input class="individual-data-value" type="file" id="synchrotronFiles2_label">
+  </div>
+  <div class="col-xs-12 col-sm-2 individual-property"> PHOTO THREE
+  </div>
+  <div class="col-xs-12 col-sm-4">
+    <label for="synchrotronFiles3_label" class="upload_label" id="upload_synchrotronFiles3">(.jpg or .tiff, max size 5 mb)</label>
+    <input class="individual-data-value" type="file" id="synchrotronFiles3_label">
+  </div>
+  <div class="col-xs-12 col-sm-2 individual-property"> PHOTO FOUR
+  </div>
+  <div class="col-xs-12 col-sm-4">
+    <label for="synchrotronFiles4_label" class="upload_label" id="upload_synchrotronFiles4">(.jpg or .tiff, max size 5 mb)</label>
+    <input class="individual-data-value" type="file" id="synchrotronFiles4_label">
+  </div>
+  <div class="col-xs-12 col-sm-8 individual-property"> UPLOAD RELEVANT FILES (e.g. treatment documentation, conservation report, etc.)
+  </div>
+  <div class="col-xs-12 col-sm-4">
+    <label for="synchrotronFiles5_label" class="upload_label" id="upload_synchrotronFiles5">(.zip)</label>
+    <input class="individual-data-value" type="file" id="synchrotronFiles5_label">
+  </div>
+  <div class="col-xs-12">
+    &nbsp;
+  </div>
+</div>
+
+<!-- hidden part1 -->
+<div class="synchrotronFiles1 hidden">
+  <div class="individual-property">URL
+    <input type="text" class="individual-value individual-form" id="synchrotronFiles1" placeholder="" value="{{details.methods.synchrotron.files.synchrotronFiles1}}">
+  </div>
+</div>
+<div class="synchrotronFiles1_id hidden">
+  <div class="individual-property">ID
+    <input type="text" class="individual-value individual-form" id="synchrotronFiles1_id" placeholder="" value="{{details.methods.synchrotron.files.synchrotronFiles1_id}}">
+  </div>
+</div>
+<!-- /hidden part1 -->
+<!-- hidden part 2-->
+<div class="synchrotronFiles2 hidden">
+  <div class="individual-property">URL
+    <input type="text" class="individual-value individual-form" id="synchrotronFiles2" placeholder="" value="{{details.methods.synchrotron.files.synchrotronFiles2}}">
+  </div>
+</div>
+<div class="synchrotronFiles2_id hidden">
+  <div class="individual-property">ID
+    <input type="text" class="individual-value individual-form" id="synchrotronFiles2_id" placeholder="" value="{{details.methods.synchrotron.files.synchrotronFiles2_id}}">
+  </div>
+</div>
+<!-- /hidden part 2-->
+<!-- hidden part 3-->
+<div class="synchrotronFiles3 hidden">
+  <div class="individual-property">URL
+    <input type="text" class="individual-value individual-form" id="synchrotronFiles3" placeholder="" value="{{details.methods.synchrotron.files.synchrotronFiles3}}">
+  </div>
+</div>
+<div class="synchrotronFiles3_id hidden">
+  <div class="individual-property">ID
+    <input type="text" class="individual-value individual-form" id="synchrotronFiles3_id" placeholder="" value="{{details.methods.synchrotron.files.synchrotronFiles3_id}}">
+  </div>
+</div>
+<!-- / hidden part 3-->
+<!-- hidden part4 -->
+<div class="synchrotronFiles4 hidden">
+  <div class="individual-property">URL
+    <input type="text" class="individual-value individual-form" id="synchrotronFiles4" placeholder="" value="{{details.methods.synchrotron.files.synchrotronFiles4}}">
+  </div>
+</div>
+<div class="synchrotronFiles4_id hidden">
+  <div class="individual-property">ID
+    <input type="text" class="individual-value individual-form" id="synchrotronFiles4_id" placeholder="" value="{{details.methods.synchrotron.files.synchrotronFiles4_id}}">
+  </div>
+</div>
+<!-- / hidden part4 -->
+<!-- hidden part 5-->
+<div class="synchrotronFiles5 hidden">
+  <div class="individual-property">URL
+    <input type="text" class="individual-value individual-form" id="synchrotronFiles5" placeholder="" value="{{details.methods.synchrotron.files.synchrotronFiles5}}">
+  </div>
+</div>
+<div class="synchrotronFiles5_id hidden">
+  <div class="individual-property">ID
+    <input type="text" class="individual-value individual-form" id="synchrotronFiles5_id" placeholder="" value="{{details.methods.synchrotron.files.synchrotronFiles5_id}}">
+  </div>
+</div>
+<!-- /hidden part 5-->
+</template>

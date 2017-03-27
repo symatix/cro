@@ -1,0 +1,88 @@
+<template name="method_techniques_pige">
+<div class="toggle" id="object_toggle-pige">
+  <div class="row align-center">
+    <div class="uderline-method">
+      <h4>pige</h4>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 col-md-6 individual-property pigeExperimental">EXPERIMENTAL PARAMETERS
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_pigeExperimental" placeholder="(e.g. X-ray tube voltage, laser wavelength, air/vacuum, etc.)" value="{{details.methods.pige.experimentalParameters}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property pigeElements">ELEMENTS DETERMINED
+    </div>
+    <div class="col-xs-12 col-md-6"> 
+      <input type="text" class="individual-value individual-form" id="object_pigeElements" placeholder="(e.g. cobalt blue, red ochre, indigo, etc.)" value="{{details.methods.pige.elements}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property pigeFormulae">CHEMICAL FORMULAE DETERMINED
+    </div>
+    <div class="col-xs-12 col-md-6"> 
+      <input type="text" class="individual-value individual-form" id="object_pigeFormulae" placeholder="" value="{{details.methods.pige.formulae}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property pigePigmentsDyes">PIGMENTS/DYES IDENTIFIED
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_pigePigmentsDyes" placeholder="" value="{{details.methods.pige.pigmentsDyes}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property pigePriming">PRIMING IDENTIFIED
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_pigePriming" placeholder="" value="{{details.methods.pige.priming}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property pigeBindingMedia">BINDING MEDIA IDENTIFIED
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_pigeBindingMedia" placeholder="" value="{{details.methods.pige.bindingMedia}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property pigeVarnish">VARNISH IDENTIFIED
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_pigeVarnish" placeholder="" value="{{details.methods.pige.varnish}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property pigeStretcherSupportStrainer">STRETCHER/SUPPORT/STRAINER IDENTIFIED
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_pigeStretcherSupportStrainer" placeholder="" value="{{details.methods.pige.stretcherSupportStrainer}}">
+    </div>
+    <div class="col-xs-12">
+      &nbsp;
+    </div>
+  </div>
+  <div class="row align-center">
+    <div class="col-xs-12 notes">Brief info about possible multilayers/underpaintings/retouches
+    </div>
+    <div class="col-sm-8 col-sm-offset-2">
+        <textarea class="" id="object_pigeBrief" name="sources" rows="4" placeholder="(e.g. secondary effects from underlying signal sources)" value="{{details.methods.pige.notes.brief}}"></textarea>
+    </div>
+    <div class="col-xs-12 notes">Comments
+    </div>
+    <div class="col-sm-8 col-sm-offset-2">
+        <textarea class="" id="object_pigeComments" name="sources" rows="4" placeholder="(e.g. additional info not covered by the points above)" value="{{details.methods.pige.notes.comments}}"></textarea>
+    </div>
+    <div class="col-xs-12 notes">Sources
+    </div>
+    <div class="col-sm-8 col-sm-offset-2">
+        <textarea class="" id="object_pigeSources" name="sources" rows="4" placeholder="(literature)" value="{{details.methods.pige.notes.sources}}"></textarea>
+    </div>
+    <div class="col-xs-12">
+      &nbsp;
+    </div>
+  </div>
+
+
+
+  {{> files_methods_pige}}
+
+
+  <div class="row align-center">
+    <div class="col-xs-12 notes">Figure captions
+    </div>
+    <div class="col-sm-8 col-sm-offset-2">
+        <textarea class="" id="object_pigeCaption" name="history" rows="4" placeholder="(e.g. additional info not covered by the points above)" value="{{details.methods.pige.notes.caption}}"></textarea>
+    </div>
+    <br/>
+  </div>
+</div>
+</template>

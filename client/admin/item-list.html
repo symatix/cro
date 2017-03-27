@@ -1,0 +1,115 @@
+
+
+<!-- admin database list -->
+<template name="adm_prospero_db">
+  <div class="container-fluid">
+    <h1 class="breadcrumbs">admin }
+      <span class="post-heading"> manage croARTia</span>
+    </h1>
+      {{> db_count}}
+      {{#EasySearch.Each index=adminIndex }}
+      <div id="{{__originalId}}">
+    <div class="row item-list">
+      <ul class="list-font">
+        <li>
+            <div class="col-md-2 user-item-list-heading">
+              <span class="item-property-author">{{basic.author}}
+              </span><br/>
+              <i>{{basic.title}}
+              </i>
+            </div>
+            <div class="col-md-2 list-font">
+              <span class="item-property-table">Image</span><br/>
+              <img class="img-list-xs img-front-xs" id="img-front-{{__originalId}}" src="{{data.imgs.img_front}}" data-toggle="modal" data-target="#thumb-modal">
+              <img class="img-list-xs img-back-xs" id="img-back-{{__originalId}}" src="{{data.imgs.img_back}}" data-toggle="modal" data-target="#thumb-modal">
+            </div>
+            <div class="col-md-1 list-font">
+              <span class="item-property-table">added&nbsp;by
+              </span><br/>
+              <i>{{addedBy}}</i>
+            </div>
+            <div class="col-md-1 list-font">
+              <span class="item-property-table js-sort-created">date&nbsp;added
+              </span><br/>
+              <i>{{createdAt}}</i>
+            </div>
+            <div class="col-md-1 list-font">
+              <span class="item-property-table">date&nbsp;modified
+              </span><br/>
+              <i>{{last_edit}}</i>
+            </div>
+            <div class="col-md-2 list-font">
+              <span class="item-property-table">item&nbsp;status</span><br/>
+              <i>
+              {{> property_check}}
+              </i>
+            </div>
+            <div class="col-md-3">
+            <button class="btn btn-top-fix btn-default btn-list js-visibility {{#if visibilityTrue}}{{else}}color-gray{{/if}}">
+              {{#if visibilityTrue}}PUBLIC&nbsp;{{else}}HIDDEN{{/if}}
+            </button>
+            <a href="/admin/details/{{__originalId}}">
+              <button class="btn btn-top-fix btn-default btn-list js-edit-added" id="btn-edit">DETAILS</button></a>
+            <a href="/admin/edit/{{__originalId}}">
+              <button class="btn btn-top-fix btn-default btn-list js-edit-added" id="btn-edit">EDIT</button></a>
+            <button class="btn btn-top-fix btn-danger btn-list js-delete">DELETE</button>
+            <label>
+              &nbsp;
+              <i style="font-family:Helvetica;font-size:15px;color:gray;">check box to delete&emsp;</i>
+              <input id="safe-delete-{{__originalId}}" type="checkbox" value="">
+            </label>
+          </div>
+        </li>
+      </ul>
+      </div>
+      </div>
+      {{/EasySearch.Each}}
+      {{> EasySearch.LoadMore attributes=loadBtn index=adminIndex content="LOAD MORE CONTENT"}}
+
+
+      <!-- modal -->
+      <div class="modal fade" id="thumb-modal" role="dialog">
+        <div class="modal-dialog">
+          <div class="modal-content modal-div">
+
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title"></h4>
+            </div>
+            <div class="modal-body align-center">
+              <img class="img-modal">
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+  </div>
+</template>
+
+
+<template name="db_count">
+    <div class="row">
+            <div class="col-md-2">
+              &nbsp;
+            </div>
+            <div class="col-md-3">
+              &nbsp;
+            </div>
+            <div class="col-md-2 align-center form-box-counter add-bottom-space">
+              <span class="db-counter">
+                &emsp;Items
+              <span class="db-counter-number">{{prosperoCount}}</span>
+                &emsp;|
+                &emsp;Files
+              <span class="db-counter-number">{{dataCount}}</span>
+              </span>
+            </div>
+            <div class="col-md-3">
+              &nbsp;
+            </div>
+            <div class="col-md-2">
+              &nbsp;
+            </div>
+    </div>
+</template>

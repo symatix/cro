@@ -1,0 +1,103 @@
+<template name="files_methods_gl">
+<div class="row align-center">
+<div class="col-xs-12">
+  <h3>upload VIS/GL/UVF/IRP/RTG/SEM/spectrum photo</h3>
+</div>
+</div>
+<div class="row">
+  <div class="col-xs-12 col-sm-2 individual-property">PHOTO ONE
+  </div>
+  <div class="col-xs-12 col-sm-4">
+    <label for="glFiles1_label" class="upload_label" id="upload_glFiles1">(.jpg or .tiff, max size 5 mb)</label>
+    <input class="individual-data-value" type="file" id="glFiles1_label">
+  </div>
+  <div class="col-xs-12 col-sm-2 individual-property"> PHOTO TWO
+  </div>
+  <div class="col-xs-12 col-sm-4">
+    <label for="glFiles2_label" class="upload_label" id="upload_glFiles2">(.jpg or .tiff, max size 5 mb)</label>
+    <input class="individual-data-value" type="file" id="glFiles2_label">
+  </div>
+  <div class="col-xs-12 col-sm-2 individual-property"> PHOTO THREE
+  </div>
+  <div class="col-xs-12 col-sm-4">
+    <label for="glFiles3_label" class="upload_label" id="upload_glFiles3">(.jpg or .tiff, max size 5 mb)</label>
+    <input class="individual-data-value" type="file" id="glFiles3_label">
+  </div>
+  <div class="col-xs-12 col-sm-2 individual-property"> PHOTO FOUR
+  </div>
+  <div class="col-xs-12 col-sm-4">
+    <label for="glFiles4_label" class="upload_label" id="upload_glFiles4">(.jpg or .tiff, max size 5 mb)</label>
+    <input class="individual-data-value" type="file" id="glFiles4_label">
+  </div>
+  <div class="col-xs-12 col-sm-8 individual-property"> UPLOAD RELEVANT FILES (e.g. treatment documentation, conservation report, etc.)
+  </div>
+  <div class="col-xs-12 col-sm-4">
+    <label for="glFiles5_label" class="upload_label" id="upload_glFiles5">(.zip)</label>
+    <input class="individual-data-value" type="file" id="glFiles5_label">
+  </div>
+  <div class="col-xs-12">
+    &nbsp;
+  </div>
+</div>
+
+<!-- hidden part1 -->
+<div class="glFiles1 hidden">
+  <div class="individual-property">URL
+    <input type="text" class="individual-value individual-form" id="glFiles1" placeholder="" value="{{details.methods.gl.files.glFiles1}}">
+  </div>
+</div>
+<div class="glFiles1_id hidden">
+  <div class="individual-property">ID
+    <input type="text" class="individual-value individual-form" id="glFiles1_id" placeholder="" value="{{details.methods.gl.files.glFiles1_id}}">
+  </div>
+</div>
+<!-- /hidden part1 -->
+<!-- hidden part 2-->
+<div class="glFiles2 hidden">
+  <div class="individual-property">URL
+    <input type="text" class="individual-value individual-form" id="glFiles2" placeholder="" value="{{details.methods.gl.files.glFiles2}}">
+  </div>
+</div>
+<div class="glFiles2_id hidden">
+  <div class="individual-property">ID
+    <input type="text" class="individual-value individual-form" id="glFiles2_id" placeholder="" value="{{details.methods.gl.files.glFiles2_id}}">
+  </div>
+</div>
+<!-- /hidden part 2-->
+<!-- hidden part 3-->
+<div class="glFiles3 hidden">
+  <div class="individual-property">URL
+    <input type="text" class="individual-value individual-form" id="glFiles3" placeholder="" value="{{details.methods.gl.files.glFiles3}}">
+  </div>
+</div>
+<div class="glFiles3_id hidden">
+  <div class="individual-property">ID
+    <input type="text" class="individual-value individual-form" id="glFiles3_id" placeholder="" value="{{details.methods.gl.files.glFiles3_id}}">
+  </div>
+</div>
+<!-- / hidden part 3-->
+<!-- hidden part4 -->
+<div class="glFiles4 hidden">
+  <div class="individual-property">URL
+    <input type="text" class="individual-value individual-form" id="glFiles4" placeholder="" value="{{details.methods.gl.files.glFiles4}}">
+  </div>
+</div>
+<div class="glFiles4_id hidden">
+  <div class="individual-property">ID
+    <input type="text" class="individual-value individual-form" id="glFiles4_id" placeholder="" value="{{details.methods.gl.files.glFiles4_id}}">
+  </div>
+</div>
+<!-- / hidden part4 -->
+<!-- hidden part 5-->
+<div class="glFiles5 hidden">
+  <div class="individual-property">URL
+    <input type="text" class="individual-value individual-form" id="glFiles5" placeholder="" value="{{details.methods.gl.files.glFiles5}}">
+  </div>
+</div>
+<div class="glFiles5_id hidden">
+  <div class="individual-property">ID
+    <input type="text" class="individual-value individual-form" id="glFiles5_id" placeholder="" value="{{details.methods.gl.files.glFiles5_id}}">
+  </div>
+</div>
+<!-- /hidden part 5-->
+</template>

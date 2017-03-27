@@ -1,0 +1,88 @@
+<template name="method_techniques_aas">
+<div class="toggle" id="object_toggle-aas">
+  <div class="row align-center">
+    <div class="uderline-method">
+      <h4>AAS</h4>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 col-md-6 individual-property aasExperimental">EXPERIMENTAL PARAMETERS
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_aasExperimental" placeholder="(e.g. X-ray tube voltage, laser wavelength, air/vacuum, etc.)" value="{{details.methods.aas.experimentalParameters}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property aasElements">ELEMENTS DETERMINED
+    </div>
+    <div class="col-xs-12 col-md-6"> 
+      <input type="text" class="individual-value individual-form" id="object_aasElements" placeholder="(e.g. cobalt blue, red ochre, indigo, etc.)" value="{{details.methods.aas.elements}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property aasFormulae">CHEMICAL FORMULAE DETERMINED
+    </div>
+    <div class="col-xs-12 col-md-6"> 
+      <input type="text" class="individual-value individual-form" id="object_aasFormulae" placeholder="" value="{{details.methods.aas.formulae}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property aasPigmentsDyes">PIGMENTS/DYES IDENTIFIED
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_aasPigmentsDyes" placeholder="" value="{{details.methods.aas.pigmentsDyes}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property aasPriming">PRIMING IDENTIFIED
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_aasPriming" placeholder="" value="{{details.methods.aas.priming}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property aasBindingMedia">BINDING MEDIA IDENTIFIED
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_aasBindingMedia" placeholder="" value="{{details.methods.aas.bindingMedia}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property aasVarnish">VARNISH IDENTIFIED
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_aasVarnish" placeholder="" value="{{details.methods.aas.varnish}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property aasStretcherSupportStrainer">STRETCHER/SUPPORT/STRAINER IDENTIFIED
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_aasStretcherSupportStrainer" placeholder="" value="{{details.methods.aas.stretcherSupportStrainer}}">
+    </div>
+    <div class="col-xs-12">
+      &nbsp;
+    </div>
+  </div>
+  <div class="row align-center">
+    <div class="col-xs-12 notes">Brief info about possible multilayers/underpaintings/retouches
+    </div>
+    <div class="col-sm-8 col-sm-offset-2">
+        <textarea class="" id="object_aasBrief" name="sources" rows="4" placeholder="(e.g. secondary effects from underlying signal sources)" value="{{details.methods.aas.notes.brief}}"></textarea>
+    </div>
+    <div class="col-xs-12 notes">Comments
+    </div>
+    <div class="col-sm-8 col-sm-offset-2">
+        <textarea class="" id="object_aasComments" name="sources" rows="4" placeholder="(e.g. additional info not covered by the points above)" value="{{details.methods.aas.notes.comments}}"></textarea>
+    </div>
+    <div class="col-xs-12 notes">Sources
+    </div>
+    <div class="col-sm-8 col-sm-offset-2">
+        <textarea class="" id="object_aasSources" name="sources" rows="4" placeholder="(literature)" value="{{details.methods.aas.notes.sources}}"></textarea>
+    </div>
+    <div class="col-xs-12">
+      &nbsp;
+    </div>
+  </div>
+
+
+
+  {{> files_methods_aas}}
+
+
+  <div class="row align-center">
+    <div class="col-xs-12 notes">Figure captions
+    </div>
+    <div class="col-sm-8 col-sm-offset-2">
+        <textarea class="" id="object_aasCaption" name="history" rows="4" placeholder="(e.g. additional info not covered by the points above)" value="{{details.methods.aas.notes.caption}}"></textarea>
+    </div>
+    <br/>
+  </div>
+</div>
+</template>

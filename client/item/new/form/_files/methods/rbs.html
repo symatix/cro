@@ -1,0 +1,103 @@
+<template name="files_methods_rbs">
+<div class="row align-center">
+<div class="col-xs-12">
+  <h3>upload VIS/GL/UVF/IRP/RTG/SEM/spectrum photo</h3>
+</div>
+</div>
+<div class="row">
+  <div class="col-xs-12 col-sm-2 individual-property">PHOTO ONE
+  </div>
+  <div class="col-xs-12 col-sm-4">
+    <label for="rbsFiles1_label" class="upload_label" id="upload_rbsFiles1">(.jpg or .tiff, max size 5 mb)</label>
+    <input class="individual-data-value" type="file" id="rbsFiles1_label">
+  </div>
+  <div class="col-xs-12 col-sm-2 individual-property"> PHOTO TWO
+  </div>
+  <div class="col-xs-12 col-sm-4">
+    <label for="rbsFiles2_label" class="upload_label" id="upload_rbsFiles2">(.jpg or .tiff, max size 5 mb)</label>
+    <input class="individual-data-value" type="file" id="rbsFiles2_label">
+  </div>
+  <div class="col-xs-12 col-sm-2 individual-property"> PHOTO THREE
+  </div>
+  <div class="col-xs-12 col-sm-4">
+    <label for="rbsFiles3_label" class="upload_label" id="upload_rbsFiles3">(.jpg or .tiff, max size 5 mb)</label>
+    <input class="individual-data-value" type="file" id="rbsFiles3_label">
+  </div>
+  <div class="col-xs-12 col-sm-2 individual-property"> PHOTO FOUR
+  </div>
+  <div class="col-xs-12 col-sm-4">
+    <label for="rbsFiles4_label" class="upload_label" id="upload_rbsFiles4">(.jpg or .tiff, max size 5 mb)</label>
+    <input class="individual-data-value" type="file" id="rbsFiles4_label">
+  </div>
+  <div class="col-xs-12 col-sm-8 individual-property"> UPLOAD RELEVANT FILES (e.g. treatment documentation, conservation report, etc.)
+  </div>
+  <div class="col-xs-12 col-sm-4">
+    <label for="rbsFiles5_label" class="upload_label" id="upload_rbsFiles5">(.zip)</label>
+    <input class="individual-data-value" type="file" id="rbsFiles5_label">
+  </div>
+  <div class="col-xs-12">
+    &nbsp;
+  </div>
+</div>
+
+<!-- hidden part1 -->
+<div class="rbsFiles1 hidden">
+  <div class="individual-property">URL
+    <input type="text" class="individual-value individual-form" id="rbsFiles1" placeholder="" value="{{details.methods.rbs.files.rbsFiles1}}">
+  </div>
+</div>
+<div class="rbsFiles1_id hidden">
+  <div class="individual-property">ID
+    <input type="text" class="individual-value individual-form" id="rbsFiles1_id" placeholder="" value="{{details.methods.rbs.files.rbsFiles1_id}}">
+  </div>
+</div>
+<!-- /hidden part1 -->
+<!-- hidden part 2-->
+<div class="rbsFiles2 hidden">
+  <div class="individual-property">URL
+    <input type="text" class="individual-value individual-form" id="rbsFiles2" placeholder="" value="{{details.methods.rbs.files.rbsFiles2}}">
+  </div>
+</div>
+<div class="rbsFiles2_id hidden">
+  <div class="individual-property">ID
+    <input type="text" class="individual-value individual-form" id="rbsFiles2_id" placeholder="" value="{{details.methods.rbs.files.rbsFiles2_id}}">
+  </div>
+</div>
+<!-- /hidden part 2-->
+<!-- hidden part 3-->
+<div class="rbsFiles3 hidden">
+  <div class="individual-property">URL
+    <input type="text" class="individual-value individual-form" id="rbsFiles3" placeholder="" value="{{details.methods.rbs.files.rbsFiles3}}">
+  </div>
+</div>
+<div class="rbsFiles3_id hidden">
+  <div class="individual-property">ID
+    <input type="text" class="individual-value individual-form" id="rbsFiles3_id" placeholder="" value="{{details.methods.rbs.files.rbsFiles3_id}}">
+  </div>
+</div>
+<!-- / hidden part 3-->
+<!-- hidden part4 -->
+<div class="rbsFiles4 hidden">
+  <div class="individual-property">URL
+    <input type="text" class="individual-value individual-form" id="rbsFiles4" placeholder="" value="{{details.methods.rbs.files.rbsFiles4}}">
+  </div>
+</div>
+<div class="rbsFiles4_id hidden">
+  <div class="individual-property">ID
+    <input type="text" class="individual-value individual-form" id="rbsFiles4_id" placeholder="" value="{{details.methods.rbs.files.rbsFiles4_id}}">
+  </div>
+</div>
+<!-- / hidden part4 -->
+<!-- hidden part 5-->
+<div class="rbsFiles5 hidden">
+  <div class="individual-property">URL
+    <input type="text" class="individual-value individual-form" id="rbsFiles5" placeholder="" value="{{details.methods.rbs.files.rbsFiles5}}">
+  </div>
+</div>
+<div class="rbsFiles5_id hidden">
+  <div class="individual-property">ID
+    <input type="text" class="individual-value individual-form" id="rbsFiles5_id" placeholder="" value="{{details.methods.rbs.files.rbsFiles5_id}}">
+  </div>
+</div>
+<!-- /hidden part 5-->
+</template>

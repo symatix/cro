@@ -1,0 +1,187 @@
+<template name="method_techniques_view_scanning">
+<div class="toggle" id="object_toggle-scanning">
+  <div class="row">
+    <div class="uderline-method">
+      <h4>scanning</h4>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 col-sm-7">
+        {{#if details.methods.scanning.experimentalParameters}}
+          <div class="author">
+            <div class="individual-property-display">Experimental parameters:<br/>
+              <div class="individual-value-display">{{details.methods.scanning.experimentalParameters}}</div>
+            </div>
+          </div>
+          {{/if}}
+        {{#if details.methods.scanning.elements}}
+          <div class="author">
+            <div class="individual-property-display">Elements determined:<br/>
+              <div class="individual-value-display">{{details.methods.scanning.elements}}</div>
+            </div>
+          </div>
+          {{/if}}
+        {{#if details.methods.scanning.formulae}}
+          <div class="author">
+            <div class="individual-property-display">Chemical formulae determined:<br/>
+              <div class="individual-value-display">{{details.methods.scanning.formulae}}</div>
+            </div>
+          </div>
+          {{/if}}
+        {{#if details.methods.scanning.quantification}}
+          <div class="author">
+            <div class="individual-property-display">Quantification results:<br/>
+              <div class="individual-value-display">{{details.methods.scanning.quantification}}</div>
+            </div>
+          </div>
+          {{/if}}
+        {{#if details.methods.scanning.influence}}
+          <div class="author">
+            <div class="individual-property-display">Sample holder/purity influence:<br/>
+              <div class="individual-value-display">{{details.methods.scanning.influence}}</div>
+            </div>
+          </div>
+          {{/if}}
+        {{#if details.methods.scanning.colorValues}}
+          <div class="author">
+            <div class="individual-property-display">Color space values:<br/>
+              <div class="individual-value-display">{{details.methods.scanning.colorValues}}</div>
+            </div>
+          </div>
+          {{/if}}
+        {{#if details.methods.scanning.bands}}
+          <div class="author">
+            <div class="individual-property-display">Main rotational/vibrational bands and their relative intensities:<br/>
+              <div class="individual-value-display">{{details.methods.scanning.bands}}</div>
+            </div>
+          </div>
+          {{/if}}
+        {{#if details.methods.scanning.pigmentsDyes}}
+          <div class="author">
+            <div class="individual-property-display">Pigments/dyes identified:<br/>
+              <div class="individual-value-display">{{details.methods.scanning.pigmentsDyes}}</div>
+            </div>
+          </div>
+          {{/if}}
+        {{#if details.methods.scanning.priming}}
+          <div class="author">
+            <div class="individual-property-display">Priming identified:<br/>
+              <div class="individual-value-display">{{details.methods.scanning.priming}}</div>
+            </div>
+          </div>
+          {{/if}}
+        {{#if details.methods.scanning.bindingMedia}}
+          <div class="author">
+            <div class="individual-property-display">Binding media identified:<br/>
+              <div class="individual-value-display">{{details.methods.scanning.bindingMedia}}</div>
+            </div>
+          </div>
+          {{/if}}
+        {{#if details.methods.scanning.varnish}}
+          <div class="author">
+            <div class="individual-property-display">Varnish identified:<br/>
+              <div class="individual-value-display">{{details.methods.scanning.varnish}}</div>
+            </div>
+          </div>
+          {{/if}}
+        {{#if details.methods.scanning.stretcherSupportStrainer}}
+          <div class="author">
+            <div class="individual-property-display">Stretcher/support/strainer identified:<br/>
+              <div class="individual-value-display">{{details.methods.scanning.stretcherSupportStrainer}}</div>
+            </div>
+          </div>
+          {{/if}}
+        {{#if details.methods.scanning.stretcherSupportStrainer}}
+          <div class="author">
+            <div class="individual-property-display">Stretcher/support/strainer identified:<br/>
+              <div class="individual-value-display">{{details.methods.scanning.stretcherSupportStrainer}}</div>
+            </div>
+          </div>
+          {{/if}}
+        </div>
+
+
+<!-- images -->
+      {{#if originalObj}}
+        <div class="col-xs-12 col-sm-5 add-bottom-space">
+          <div class="row img-box align-center">
+            {{#if details.methods.scanning.files.scanningFiles1}}
+            <div class="col-xs-6">
+            <h4>&nbsp;</h4>
+              <img class="img-materials-sm" src="{{details.methods.scanning.files.scanningFiles1}}" data-toggle="modal" data-target="#thumb-modal-front">
+            </div>
+            {{/if}}
+            {{#if details.methods.scanning.files.scanningFiles2}}
+            <div class="col-xs-6">
+            <h4>&nbsp;</h4>
+              <img class="img-materials-sm" src="{{details.methods.scanning.files.scanningFiles2}}" data-toggle="modal" data-target="#thumb-modal-back">
+            </div>
+            {{/if}}
+            {{#if details.methods.scanning.files.scanningFiles3}}
+            <div class="col-xs-6">
+            <h4>&nbsp;</h4>
+              <img class="img-materials-sm" src="{{details.methods.scanning.files.scanningFiles3}}" data-toggle="modal" data-target="#thumb-modal-side">
+            </div>
+            {{/if}}
+            {{#if details.methods.scanning.files.scanningFiles4}}
+            <div class="col-xs-6">
+            <h4>&nbsp;</h4>
+              <img class="img-materials-sm" src="{{details.methods.scanning.files.scanningFiles4}}" data-toggle="modal" data-target="#thumb-modal-signature">
+            </div>
+            {{/if}}
+            {{#if details.methods.scanning.notes.caption}}
+            <div class="col-xs-12">
+              <div class="figureCaption">
+                <div class="individual-property-display">Figure captions<br/> 
+                  <div class="individual-value-display">{{details.methods.scanning.notes.caption}}</div>
+                </div>
+              </div>
+            </div>
+            {{/if}}
+          </div>
+        </div>
+      {{/if}}
+<!-- /images -->
+
+
+
+    <div class="col-xs-12">
+      &nbsp;
+    </div>
+
+
+
+  {{#if details.methods.scanning.notes.brief}}
+  <div class="col-md-12 align-center">
+    <div class="samples">
+      <div class="individual-property-display">Brief info about possible multilayers/underpaintings/retouches:<br/>
+        <div class="individual-value-display">{{details.methods.scanning.notes.brief}}</div>
+      </div>
+    </div>
+  </div>
+  {{/if}}
+  {{#if details.methods.scanning.notes.comments}}
+  <div class="col-md-12 align-center">
+    <div class="artHistory">
+      <div class="individual-property-display">Comments:<br/>
+        <div class="individual-value-display">{{details.methods.scanning.notes.comments}}</div>
+      </div>
+    </div>
+  </div>
+  {{/if}}
+  {{#if details.methods.scanning.notes.sources}}
+  <div class="col-md-12 align-center">
+    <div class="artHistory">
+      <div class="individual-property-display">Sources:<br/>
+        <div class="individual-value-display">{{details.methods.scanning.notes.sources}}</div>
+      </div>
+    </div>
+  </div>
+  {{/if}}
+  <div class="col-xs-12">
+    &nbsp;
+  </div>
+  </div>
+</div>
+
+</template>

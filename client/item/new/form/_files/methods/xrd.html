@@ -1,0 +1,103 @@
+<template name="files_methods_xrd">
+<div class="row align-center">
+<div class="col-xs-12">
+  <h3>upload VIS/GL/UVF/IRP/RTG/SEM/spectrum photo</h3>
+</div>
+</div>
+<div class="row">
+  <div class="col-xs-12 col-sm-2 individual-property">PHOTO ONE
+  </div>
+  <div class="col-xs-12 col-sm-4">
+    <label for="xrdFiles1_label" class="upload_label" id="upload_xrdFiles1">(.jpg or .tiff, max size 5 mb)</label>
+    <input class="individual-data-value" type="file" id="xrdFiles1_label">
+  </div>
+  <div class="col-xs-12 col-sm-2 individual-property"> PHOTO TWO
+  </div>
+  <div class="col-xs-12 col-sm-4">
+    <label for="xrdFiles2_label" class="upload_label" id="upload_xrdFiles2">(.jpg or .tiff, max size 5 mb)</label>
+    <input class="individual-data-value" type="file" id="xrdFiles2_label">
+  </div>
+  <div class="col-xs-12 col-sm-2 individual-property"> PHOTO THREE
+  </div>
+  <div class="col-xs-12 col-sm-4">
+    <label for="xrdFiles3_label" class="upload_label" id="upload_xrdFiles3">(.jpg or .tiff, max size 5 mb)</label>
+    <input class="individual-data-value" type="file" id="xrdFiles3_label">
+  </div>
+  <div class="col-xs-12 col-sm-2 individual-property"> PHOTO FOUR
+  </div>
+  <div class="col-xs-12 col-sm-4">
+    <label for="xrdFiles4_label" class="upload_label" id="upload_xrdFiles4">(.jpg or .tiff, max size 5 mb)</label>
+    <input class="individual-data-value" type="file" id="xrdFiles4_label">
+  </div>
+  <div class="col-xs-12 col-sm-8 individual-property"> UPLOAD RELEVANT FILES (e.g. treatment documentation, conservation report, etc.)
+  </div>
+  <div class="col-xs-12 col-sm-4">
+    <label for="xrdFiles5_label" class="upload_label" id="upload_xrdFiles5">(.zip)</label>
+    <input class="individual-data-value" type="file" id="xrdFiles5_label">
+  </div>
+  <div class="col-xs-12">
+    &nbsp;
+  </div>
+</div>
+
+<!-- hidden part1 -->
+<div class="xrdFiles1 hidden">
+  <div class="individual-property">URL
+    <input type="text" class="individual-value individual-form" id="xrdFiles1" placeholder="" value="{{details.methods.xrd.files.xrdFiles1}}">
+  </div>
+</div>
+<div class="xrdFiles1_id hidden">
+  <div class="individual-property">ID
+    <input type="text" class="individual-value individual-form" id="xrdFiles1_id" placeholder="" value="{{details.methods.xrd.files.xrdFiles1_id}}">
+  </div>
+</div>
+<!-- /hidden part1 -->
+<!-- hidden part 2-->
+<div class="xrdFiles2 hidden">
+  <div class="individual-property">URL
+    <input type="text" class="individual-value individual-form" id="xrdFiles2" placeholder="" value="{{details.methods.xrd.files.xrdFiles2}}">
+  </div>
+</div>
+<div class="xrdFiles2_id hidden">
+  <div class="individual-property">ID
+    <input type="text" class="individual-value individual-form" id="xrdFiles2_id" placeholder="" value="{{details.methods.xrd.files.xrdFiles2_id}}">
+  </div>
+</div>
+<!-- /hidden part 2-->
+<!-- hidden part 3-->
+<div class="xrdFiles3 hidden">
+  <div class="individual-property">URL
+    <input type="text" class="individual-value individual-form" id="xrdFiles3" placeholder="" value="{{details.methods.xrd.files.xrdFiles3}}">
+  </div>
+</div>
+<div class="xrdFiles3_id hidden">
+  <div class="individual-property">ID
+    <input type="text" class="individual-value individual-form" id="xrdFiles3_id" placeholder="" value="{{details.methods.xrd.files.xrdFiles3_id}}">
+  </div>
+</div>
+<!-- / hidden part 3-->
+<!-- hidden part4 -->
+<div class="xrdFiles4 hidden">
+  <div class="individual-property">URL
+    <input type="text" class="individual-value individual-form" id="xrdFiles4" placeholder="" value="{{details.methods.xrd.files.xrdFiles4}}">
+  </div>
+</div>
+<div class="xrdFiles4_id hidden">
+  <div class="individual-property">ID
+    <input type="text" class="individual-value individual-form" id="xrdFiles4_id" placeholder="" value="{{details.methods.xrd.files.xrdFiles4_id}}">
+  </div>
+</div>
+<!-- / hidden part4 -->
+<!-- hidden part 5-->
+<div class="xrdFiles5 hidden">
+  <div class="individual-property">URL
+    <input type="text" class="individual-value individual-form" id="xrdFiles5" placeholder="" value="{{details.methods.xrd.files.xrdFiles5}}">
+  </div>
+</div>
+<div class="xrdFiles5_id hidden">
+  <div class="individual-property">ID
+    <input type="text" class="individual-value individual-form" id="xrdFiles5_id" placeholder="" value="{{details.methods.xrd.files.xrdFiles5_id}}">
+  </div>
+</div>
+<!-- /hidden part 5-->
+</template>

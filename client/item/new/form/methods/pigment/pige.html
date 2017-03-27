@@ -1,0 +1,88 @@
+<template name="method_techniques_pigment_pige">
+<div class="toggle" id="object_toggle-pige">
+  <div class="row align-center">
+    <div class="uderline-method">
+      <h4>pige</h4>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 col-md-6 individual-property pigeExperimental">
+      EXPERIMENTAL PARAMETERS
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_pigeExperimental" placeholder="(e.g. X-ray tube voltage, laser wavelength, air/vacuum, etc.)" value="{{details.methods.pige.experimentalParameters}}">
+    </div>
+
+    <div class="col-xs-12 col-md-6 individual-property pigeElements">
+      ELEMENTS DETERMINED
+    </div>
+    <div class="col-xs-12 col-md-6"> 
+      <input type="text" class="individual-value individual-form" id="object_pigeElements" placeholder="(e.g. cobalt blue, red ochre, indigo, etc.)" value="{{details.methods.pige.elements}}">
+    </div>
+
+    <div class="col-xs-12 col-md-6 individual-property pigeQuantification">
+      QUANTIFICATION RESULTS
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_pigeQuantification" placeholder="(e.g. 92% Cu, 7,2% Sn, 0,8% Pb)" value="{{details.methods.pige.quantification}}">
+    </div>
+
+    <div class="col-xs-12 col-md-6 individual-property pigeFormulae">
+      CHEMICAL FORMULAE DETERMINED
+    </div>
+    <div class="col-xs-12 col-md-6"> 
+      <input type="text" class="individual-value individual-form" id="object_pigeFormulae" placeholder="" value="{{details.methods.pige.formulae}}">
+    </div>
+
+    <div class="col-xs-12 col-md-6 individual-property pigeInfluence">
+      SAMPLE HOLDER/PURITY INFLUENCE
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_pigeInfluence" placeholder="(e.g. elements from pigment powder holder, binding media effects, etc.)" value="{{details.methods.pige.influence}}">
+    </div>
+
+    <div class="col-xs-12 col-md-6 individual-property pigeColorValues">
+      COLOR SPACE VALUES
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_pigeColorValues" placeholder="(e.g. CIE Lab, LCh, CIE XYZ, etc.)" value="{{details.methods.pige.colorValues}}">
+    </div>
+
+    <div class="col-xs-12 col-md-6 individual-property pigeBands">
+      MAIN ROTATIONAL/VIBRATIONAL BANDS AND THEIR RELATIVE INTENSITIES
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_pigeBands" placeholder="(e.g. Raman band wavenumbers (cm-1) for cerulean blue: 495m(sh), 534s, 674vs)" value="{{details.methods.pige.bands}}">
+    </div>
+
+    <div class="col-xs-12">
+      &nbsp;
+    </div>
+  </div>
+
+
+  <div class="row align-center">
+
+    <div class="col-xs-12 notes">Comments
+    </div>
+    <div class="col-sm-8 col-sm-offset-2">
+        <textarea class="" id="object_pigeComments" name="sources" rows="4" placeholder="(e.g. additional info not covered by the points above)" value="{{details.methods.pige.notes.comments}}"></textarea>
+    </div>
+
+    <div class="col-xs-12">
+      &nbsp;
+    </div>
+  </div>
+
+  {{> files_methods_pige}}
+
+  <div class="row align-center">
+    <div class="col-xs-12 notes">Figure captions
+    </div>
+    <div class="col-sm-8 col-sm-offset-2">
+        <textarea class="" id="object_pigeCaption" name="history" rows="4" placeholder="(e.g. additional info not covered by the points above)" value="{{details.methods.pige.notes.caption}}"></textarea>
+    </div>
+    <br/>
+  </div>
+</div>
+</template>

@@ -1,0 +1,2 @@
+
+"vis", "gl", "uvf", "irpIrrIrfc", "xrr", "xrf", "rs", "ft_ir", "fors", "colorimetry", "semSemEdx", "om", "plm", "pixe", "pige", "rbs", "synchrotron", "aas", "aes", "uv_vis", "tlc", "gc_ms", "tl", "ol", "c_14", "xrd", "libs", "tem", "afm", "hygroscopic", "granulometry", "binderFiller", "drms", "3d scanning", "analysis"

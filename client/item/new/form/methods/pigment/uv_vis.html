@@ -1,0 +1,88 @@
+<template name="method_techniques_pigment_uv_vis">
+<div class="toggle" id="object_toggle-uv_vis">
+  <div class="row align-center">
+    <div class="uderline-method">
+      <h4>uv_vis</h4>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 col-md-6 individual-property uv_visExperimental">
+      EXPERIMENTAL PARAMETERS
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_uv_visExperimental" placeholder="(e.g. X-ray tube voltage, laser wavelength, air/vacuum, etc.)" value="{{details.methods.uv_vis.experimentalParameters}}">
+    </div>
+
+    <div class="col-xs-12 col-md-6 individual-property uv_visElements">
+      ELEMENTS DETERMINED
+    </div>
+    <div class="col-xs-12 col-md-6"> 
+      <input type="text" class="individual-value individual-form" id="object_uv_visElements" placeholder="(e.g. cobalt blue, red ochre, indigo, etc.)" value="{{details.methods.uv_vis.elements}}">
+    </div>
+
+    <div class="col-xs-12 col-md-6 individual-property uv_visQuantification">
+      QUANTIFICATION RESULTS
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_uv_visQuantification" placeholder="(e.g. 92% Cu, 7,2% Sn, 0,8% Pb)" value="{{details.methods.uv_vis.quantification}}">
+    </div>
+
+    <div class="col-xs-12 col-md-6 individual-property uv_visFormulae">
+      CHEMICAL FORMULAE DETERMINED
+    </div>
+    <div class="col-xs-12 col-md-6"> 
+      <input type="text" class="individual-value individual-form" id="object_uv_visFormulae" placeholder="" value="{{details.methods.uv_vis.formulae}}">
+    </div>
+
+    <div class="col-xs-12 col-md-6 individual-property uv_visInfluence">
+      SAMPLE HOLDER/PURITY INFLUENCE
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_uv_visInfluence" placeholder="(e.g. elements from pigment powder holder, binding media effects, etc.)" value="{{details.methods.uv_vis.influence}}">
+    </div>
+
+    <div class="col-xs-12 col-md-6 individual-property uv_visColorValues">
+      COLOR SPACE VALUES
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_uv_visColorValues" placeholder="(e.g. CIE Lab, LCh, CIE XYZ, etc.)" value="{{details.methods.uv_vis.colorValues}}">
+    </div>
+
+    <div class="col-xs-12 col-md-6 individual-property uv_visBands">
+      MAIN ROTATIONAL/VIBRATIONAL BANDS AND THEIR RELATIVE INTENSITIES
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_uv_visBands" placeholder="(e.g. Raman band wavenumbers (cm-1) for cerulean blue: 495m(sh), 534s, 674vs)" value="{{details.methods.uv_vis.bands}}">
+    </div>
+
+    <div class="col-xs-12">
+      &nbsp;
+    </div>
+  </div>
+
+
+  <div class="row align-center">
+
+    <div class="col-xs-12 notes">Comments
+    </div>
+    <div class="col-sm-8 col-sm-offset-2">
+        <textarea class="" id="object_uv_visComments" name="sources" rows="4" placeholder="(e.g. additional info not covered by the points above)" value="{{details.methods.uv_vis.notes.comments}}"></textarea>
+    </div>
+
+    <div class="col-xs-12">
+      &nbsp;
+    </div>
+  </div>
+
+  {{> files_methods_uv_vis}}
+
+  <div class="row align-center">
+    <div class="col-xs-12 notes">Figure captions
+    </div>
+    <div class="col-sm-8 col-sm-offset-2">
+        <textarea class="" id="object_uv_visCaption" name="history" rows="4" placeholder="(e.g. additional info not covered by the points above)" value="{{details.methods.uv_vis.notes.caption}}"></textarea>
+    </div>
+    <br/>
+  </div>
+</div>
+</template>

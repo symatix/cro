@@ -1,0 +1,88 @@
+<template name="method_techniques_plm">
+<div class="toggle" id="object_toggle-plm">
+  <div class="row align-center">
+    <div class="uderline-method">
+      <h4>plm</h4>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 col-md-6 individual-property plmExperimental">EXPERIMENTAL PARAMETERS
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_plmExperimental" placeholder="(e.g. X-ray tube voltage, laser wavelength, air/vacuum, etc.)" value="{{details.methods.plm.experimentalParameters}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property plmElements">ELEMENTS DETERMINED
+    </div>
+    <div class="col-xs-12 col-md-6"> 
+      <input type="text" class="individual-value individual-form" id="object_plmElements" placeholder="(e.g. cobalt blue, red ochre, indigo, etc.)" value="{{details.methods.plm.elements}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property plmFormulae">CHEMICAL FORMULAE DETERMINED
+    </div>
+    <div class="col-xs-12 col-md-6"> 
+      <input type="text" class="individual-value individual-form" id="object_plmFormulae" placeholder="" value="{{details.methods.plm.formulae}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property plmPigmentsDyes">PIGMENTS/DYES IDENTIFIED
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_plmPigmentsDyes" placeholder="" value="{{details.methods.plm.pigmentsDyes}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property plmPriming">PRIMING IDENTIFIED
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_plmPriming" placeholder="" value="{{details.methods.plm.priming}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property plmBindingMedia">BINDING MEDIA IDENTIFIED
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_plmBindingMedia" placeholder="" value="{{details.methods.plm.bindingMedia}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property plmVarnish">VARNISH IDENTIFIED
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_plmVarnish" placeholder="" value="{{details.methods.plm.varnish}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property plmStretcherSupportStrainer">STRETCHER/SUPPORT/STRAINER IDENTIFIED
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_plmStretcherSupportStrainer" placeholder="" value="{{details.methods.plm.stretcherSupportStrainer}}">
+    </div>
+    <div class="col-xs-12">
+      &nbsp;
+    </div>
+  </div>
+  <div class="row align-center">
+    <div class="col-xs-12 notes">Brief info about possible multilayers/underpaintings/retouches
+    </div>
+    <div class="col-sm-8 col-sm-offset-2">
+        <textarea class="" id="object_plmBrief" name="sources" rows="4" placeholder="(e.g. secondary effects from underlying signal sources)" value="{{details.methods.plm.notes.brief}}"></textarea>
+    </div>
+    <div class="col-xs-12 notes">Comments
+    </div>
+    <div class="col-sm-8 col-sm-offset-2">
+        <textarea class="" id="object_plmComments" name="sources" rows="4" placeholder="(e.g. additional info not covered by the points above)" value="{{details.methods.plm.notes.comments}}"></textarea>
+    </div>
+    <div class="col-xs-12 notes">Sources
+    </div>
+    <div class="col-sm-8 col-sm-offset-2">
+        <textarea class="" id="object_plmSources" name="sources" rows="4" placeholder="(literature)" value="{{details.methods.plm.notes.sources}}"></textarea>
+    </div>
+    <div class="col-xs-12">
+      &nbsp;
+    </div>
+  </div>
+
+
+
+  {{> files_methods_plm}}
+
+
+  <div class="row align-center">
+    <div class="col-xs-12 notes">Figure captions
+    </div>
+    <div class="col-sm-8 col-sm-offset-2">
+        <textarea class="" id="object_plmCaption" name="history" rows="4" placeholder="(e.g. additional info not covered by the points above)" value="{{details.methods.plm.notes.caption}}"></textarea>
+    </div>
+    <br/>
+  </div>
+</div>
+</template>

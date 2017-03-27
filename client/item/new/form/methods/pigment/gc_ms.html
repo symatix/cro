@@ -1,0 +1,88 @@
+<template name="method_techniques_pigment_gc_ms">
+<div class="toggle" id="object_toggle-gc_ms">
+  <div class="row align-center">
+    <div class="uderline-method">
+      <h4>gc_ms</h4>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 col-md-6 individual-property gc_msExperimental">
+      EXPERIMENTAL PARAMETERS
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_gc_msExperimental" placeholder="(e.g. X-ray tube voltage, laser wavelength, air/vacuum, etc.)" value="{{details.methods.gc_ms.experimentalParameters}}">
+    </div>
+
+    <div class="col-xs-12 col-md-6 individual-property gc_msElements">
+      ELEMENTS DETERMINED
+    </div>
+    <div class="col-xs-12 col-md-6"> 
+      <input type="text" class="individual-value individual-form" id="object_gc_msElements" placeholder="(e.g. cobalt blue, red ochre, indigo, etc.)" value="{{details.methods.gc_ms.elements}}">
+    </div>
+
+    <div class="col-xs-12 col-md-6 individual-property gc_msQuantification">
+      QUANTIFICATION RESULTS
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_gc_msQuantification" placeholder="(e.g. 92% Cu, 7,2% Sn, 0,8% Pb)" value="{{details.methods.gc_ms.quantification}}">
+    </div>
+
+    <div class="col-xs-12 col-md-6 individual-property gc_msFormulae">
+      CHEMICAL FORMULAE DETERMINED
+    </div>
+    <div class="col-xs-12 col-md-6"> 
+      <input type="text" class="individual-value individual-form" id="object_gc_msFormulae" placeholder="" value="{{details.methods.gc_ms.formulae}}">
+    </div>
+
+    <div class="col-xs-12 col-md-6 individual-property gc_msInfluence">
+      SAMPLE HOLDER/PURITY INFLUENCE
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_gc_msInfluence" placeholder="(e.g. elements from pigment powder holder, binding media effects, etc.)" value="{{details.methods.gc_ms.influence}}">
+    </div>
+
+    <div class="col-xs-12 col-md-6 individual-property gc_msColorValues">
+      COLOR SPACE VALUES
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_gc_msColorValues" placeholder="(e.g. CIE Lab, LCh, CIE XYZ, etc.)" value="{{details.methods.gc_ms.colorValues}}">
+    </div>
+
+    <div class="col-xs-12 col-md-6 individual-property gc_msBands">
+      MAIN ROTATIONAL/VIBRATIONAL BANDS AND THEIR RELATIVE INTENSITIES
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_gc_msBands" placeholder="(e.g. Raman band wavenumbers (cm-1) for cerulean blue: 495m(sh), 534s, 674vs)" value="{{details.methods.gc_ms.bands}}">
+    </div>
+
+    <div class="col-xs-12">
+      &nbsp;
+    </div>
+  </div>
+
+
+  <div class="row align-center">
+
+    <div class="col-xs-12 notes">Comments
+    </div>
+    <div class="col-sm-8 col-sm-offset-2">
+        <textarea class="" id="object_gc_msComments" name="sources" rows="4" placeholder="(e.g. additional info not covered by the points above)" value="{{details.methods.gc_ms.notes.comments}}"></textarea>
+    </div>
+
+    <div class="col-xs-12">
+      &nbsp;
+    </div>
+  </div>
+
+  {{> files_methods_gc_ms}}
+
+  <div class="row align-center">
+    <div class="col-xs-12 notes">Figure captions
+    </div>
+    <div class="col-sm-8 col-sm-offset-2">
+        <textarea class="" id="object_gc_msCaption" name="history" rows="4" placeholder="(e.g. additional info not covered by the points above)" value="{{details.methods.gc_ms.notes.caption}}"></textarea>
+    </div>
+    <br/>
+  </div>
+</div>
+</template>

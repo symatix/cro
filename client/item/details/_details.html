@@ -1,0 +1,125 @@
+<template name="item_details">
+  <!-- container -->
+    <div class="container">
+    <h1 class="breadcrumbs">{{#if currentUser}}{{currentUser.username}} } {{/if}}
+      <a class="a-heading" href="/">croARTia </a>/
+      <a class="a-heading" href="/{{type}}">{{type}} </a>/
+      <span class="post-heading"> details<br/>
+        {{basic.author}} {{#if basic.author}}-{{/if}} {{basic.title}}
+      </span>
+    </h1>
+
+    <ul class="nav nav-tabs nav-justified form-box-font" role="tablist" id="form-basic-select">
+      <li role="presentation" class="active">
+        <a class="a-heading-tab" href="#basic_view" aria-controls="basic_view" role="tab" data-toggle="tab">Basic details</a>
+      </li>
+
+      {{#if pigmentView}}
+      <li role="presentation">
+        <a class="a-heading-tab" href="#materials_view" aria-controls="materials_view" role="tab" data-toggle="tab">Materials and techniques</a>
+      </li>
+      {{/if}}
+      <li role="presentation">
+        <a class="a-heading-tab" href="#methods_view" aria-controls="methods_view" role="tab" data-toggle="tab">Methods</a>
+      </li>
+      <li role="presentation">
+        <a class="a-heading-tab" href="#downloads_view" aria-controls="downloads_view" role="tab" data-toggle="tab">Downloads</a>
+      </li>
+    </ul>
+
+    <div class="tab-content">
+
+      <div role="tabpanel" class="tab-pane fade in active" id="basic_view">
+        <div class="row">
+            {{> item_details_basic}}
+        </div>
+      </div>
+
+      <div role="tabpanel" class="tab-pane fade in" id="materials_view">
+        <div class="row">    
+          <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+
+              <ul class="nav nav-pills materials-details-box" role="tablist">
+                  <li role="presentation" class="active">
+                      <a class="details-material" href="#materials1" aria-controls="materials1" role="tab" data-toggle="tab">Original artist's materials/techniques</a>
+                  </li>
+                  <li role="presentation">
+                      <a class="details-material" href="#materials2" aria-controls="materials2" role="tab" data-toggle="tab">Later interventions/retouches</a>
+                  </li>
+                  <li role="presentation">
+                      <a class="details-material" href="#materials3" aria-controls="materials3" role="tab" data-toggle="tab">Conservation and restoration works</a>
+                  </li>
+              </ul>
+
+          </div>
+          <div class="col-xs-12">
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane fade in active" id="materials1">
+                  <div class="row form-box">
+                    {{> materials_original}}
+                    </div>
+                </div>
+                <div role="tabpanel" class="tab-pane fade in" id="materials2">
+                  <div class="row">
+                    <div class="col-xs-12 form-box">
+                  {{> materials_interventions}}
+                    </div>
+                  </div>  
+                </div>
+                <div role="tabpanel" class="tab-pane fade in" id="materials3">
+                  <div class="row">
+                    <div class="col-xs-12 form-box">
+                  {{> materials_restoration}}
+                    </div>
+                  </div>  
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div role="tabpanel" class="tab-pane fade in" id="methods_view">
+        <div class="row">
+          <div class="col-xs-12">
+            {{> methods_view}}
+          </div>
+        </div>
+      </div>
+
+      <div role="tabpanel" class="tab-pane fade in" id="downloads_view">
+        <div class="row">
+          <div class="col-xs-12">
+            {{> item_details_download}}
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <div class="buttons">
+            <div class="float-right">
+              {{> edit_button}}
+            </div>
+          </div>
+          <br/>
+        </div>
+      </div>
+    </div><!-- /container -->
+
+   
+
+      <script>
+      $('#form-basic-select li').click(function (e) {
+          e.preventDefault();
+          $(this).find('a').tab('show');
+        });
+      $('#materials-details-box li').click(function (e) {
+          e.preventDefault();
+          $(this).find('a').tab('show');
+        });
+      </script>
+
+</template>

@@ -1,0 +1,88 @@
+<template name="method_techniques_pigment_om">
+<div class="toggle" id="object_toggle-om">
+  <div class="row align-center">
+    <div class="uderline-method">
+      <h4>om</h4>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 col-md-6 individual-property omExperimental">
+      EXPERIMENTAL PARAMETERS
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_omExperimental" placeholder="(e.g. X-ray tube voltage, laser wavelength, air/vacuum, etc.)" value="{{details.methods.om.experimentalParameters}}">
+    </div>
+
+    <div class="col-xs-12 col-md-6 individual-property omElements">
+      ELEMENTS DETERMINED
+    </div>
+    <div class="col-xs-12 col-md-6"> 
+      <input type="text" class="individual-value individual-form" id="object_omElements" placeholder="(e.g. cobalt blue, red ochre, indigo, etc.)" value="{{details.methods.om.elements}}">
+    </div>
+
+    <div class="col-xs-12 col-md-6 individual-property omQuantification">
+      QUANTIFICATION RESULTS
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_omQuantification" placeholder="(e.g. 92% Cu, 7,2% Sn, 0,8% Pb)" value="{{details.methods.om.quantification}}">
+    </div>
+
+    <div class="col-xs-12 col-md-6 individual-property omFormulae">
+      CHEMICAL FORMULAE DETERMINED
+    </div>
+    <div class="col-xs-12 col-md-6"> 
+      <input type="text" class="individual-value individual-form" id="object_omFormulae" placeholder="" value="{{details.methods.om.formulae}}">
+    </div>
+
+    <div class="col-xs-12 col-md-6 individual-property omInfluence">
+      SAMPLE HOLDER/PURITY INFLUENCE
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_omInfluence" placeholder="(e.g. elements from pigment powder holder, binding media effects, etc.)" value="{{details.methods.om.influence}}">
+    </div>
+
+    <div class="col-xs-12 col-md-6 individual-property omColorValues">
+      COLOR SPACE VALUES
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_omColorValues" placeholder="(e.g. CIE Lab, LCh, CIE XYZ, etc.)" value="{{details.methods.om.colorValues}}">
+    </div>
+
+    <div class="col-xs-12 col-md-6 individual-property omBands">
+      MAIN ROTATIONAL/VIBRATIONAL BANDS AND THEIR RELATIVE INTENSITIES
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_omBands" placeholder="(e.g. Raman band wavenumbers (cm-1) for cerulean blue: 495m(sh), 534s, 674vs)" value="{{details.methods.om.bands}}">
+    </div>
+
+    <div class="col-xs-12">
+      &nbsp;
+    </div>
+  </div>
+
+
+  <div class="row align-center">
+
+    <div class="col-xs-12 notes">Comments
+    </div>
+    <div class="col-sm-8 col-sm-offset-2">
+        <textarea class="" id="object_omComments" name="sources" rows="4" placeholder="(e.g. additional info not covered by the points above)" value="{{details.methods.om.notes.comments}}"></textarea>
+    </div>
+
+    <div class="col-xs-12">
+      &nbsp;
+    </div>
+  </div>
+
+  {{> files_methods_om}}
+
+  <div class="row align-center">
+    <div class="col-xs-12 notes">Figure captions
+    </div>
+    <div class="col-sm-8 col-sm-offset-2">
+        <textarea class="" id="object_omCaption" name="history" rows="4" placeholder="(e.g. additional info not covered by the points above)" value="{{details.methods.om.notes.caption}}"></textarea>
+    </div>
+    <br/>
+  </div>
+</div>
+</template>

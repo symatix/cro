@@ -1,0 +1,88 @@
+<template name="method_techniques_analysis">
+<div class="toggle" id="object_toggle-analysis">
+  <div class="row align-center">
+    <div class="uderline-method">
+      <h4>analysis</h4>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 col-md-6 individual-property analysisExperimental">EXPERIMENTAL PARAMETERS
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_analysisExperimental" placeholder="(e.g. X-ray tube voltage, laser wavelength, air/vacuum, etc.)" value="{{details.methods.analysis.experimentalParameters}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property analysisElements">ELEMENTS DETERMINED
+    </div>
+    <div class="col-xs-12 col-md-6"> 
+      <input type="text" class="individual-value individual-form" id="object_analysisElements" placeholder="(e.g. cobalt blue, red ochre, indigo, etc.)" value="{{details.methods.analysis.elements}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property analysisFormulae">CHEMICAL FORMULAE DETERMINED
+    </div>
+    <div class="col-xs-12 col-md-6"> 
+      <input type="text" class="individual-value individual-form" id="object_analysisFormulae" placeholder="" value="{{details.methods.analysis.formulae}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property analysisPigmentsDyes">PIGMENTS/DYES IDENTIFIED
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_analysisPigmentsDyes" placeholder="" value="{{details.methods.analysis.pigmentsDyes}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property analysisPriming">PRIMING IDENTIFIED
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_analysisPriming" placeholder="" value="{{details.methods.analysis.priming}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property analysisBindingMedia">BINDING MEDIA IDENTIFIED
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_analysisBindingMedia" placeholder="" value="{{details.methods.analysis.bindingMedia}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property analysisVarnish">VARNISH IDENTIFIED
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_analysisVarnish" placeholder="" value="{{details.methods.analysis.varnish}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property analysisStretcherSupportStrainer">STRETCHER/SUPPORT/STRAINER IDENTIFIED
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_analysisStretcherSupportStrainer" placeholder="" value="{{details.methods.analysis.stretcherSupportStrainer}}">
+    </div>
+    <div class="col-xs-12">
+      &nbsp;
+    </div>
+  </div>
+  <div class="row align-center">
+    <div class="col-xs-12 notes">Brief info about possible multilayers/underpaintings/retouches
+    </div>
+    <div class="col-sm-8 col-sm-offset-2">
+        <textarea class="" id="object_analysisBrief" name="sources" rows="4" placeholder="(e.g. secondary effects from underlying signal sources)" value="{{details.methods.analysis.notes.brief}}"></textarea>
+    </div>
+    <div class="col-xs-12 notes">Comments
+    </div>
+    <div class="col-sm-8 col-sm-offset-2">
+        <textarea class="" id="object_analysisComments" name="sources" rows="4" placeholder="(e.g. additional info not covered by the points above)" value="{{details.methods.analysis.notes.comments}}"></textarea>
+    </div>
+    <div class="col-xs-12 notes">Sources
+    </div>
+    <div class="col-sm-8 col-sm-offset-2">
+        <textarea class="" id="object_analysisSources" name="sources" rows="4" placeholder="(literature)" value="{{details.methods.analysis.notes.sources}}"></textarea>
+    </div>
+    <div class="col-xs-12">
+      &nbsp;
+    </div>
+  </div>
+
+
+
+  {{> files_methods_analysis}}
+
+
+  <div class="row align-center">
+    <div class="col-xs-12 notes">Figure captions
+    </div>
+    <div class="col-sm-8 col-sm-offset-2">
+        <textarea class="" id="object_analysisCaption" name="history" rows="4" placeholder="(e.g. additional info not covered by the points above)" value="{{details.methods.analysis.notes.caption}}"></textarea>
+    </div>
+    <br/>
+  </div>
+</div>
+</template>

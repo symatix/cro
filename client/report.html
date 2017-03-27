@@ -1,0 +1,201 @@
+<template name="dev">
+<pre>
+
+*** DOING ***
+#!clear leftovers
+style for admin/editor UI
+
+
+*** TO DO ***
+----------------
+place {public} selector on index
+----------------
+change name - CROARTIA (admin/editor)
+----------------
+item form input verification (required fields)
+----------------
+advanced search template
+----------------
+change alerts to something nicer - setTimeout before route
+----------------
+collection shema
+----------------
+test multiple user case
+----------------
+
+*** BUGS ****
+
+unknown
+
+*** CHANGES ***
+ * v0.31
+  form split into sections
+  new and edit
+    - same form
+    - different verification
+    - all objects input except samples
+  display style and verification if input present
+    - all objects except samples
+  affix fixed on url selection display
+  added public/private
+  
+
+ * v0.30
+  split methods from object > faster render
+  file verification on download page > show only present files
+  breadcrumbs on branching
+  basic search on pictureIndex
+  bugfix on editDocument - correct input
+  minor design flaws fixed
+
+ * v0.29
+  edit done - upload progress
+  function branch > new > edit
+  display details
+    - basic
+    - materials
+    - methods
+    - downloads
+
+ * v0.28
+  input form objectType 
+    - all fields + files + notes input
+  edit form objectType
+
+ * v0.25
+  new input form layout
+    - to do functions
+
+ * v0.22
+  renamed db > prospero
+  fixed db.name function dependancies
+  added basic structure to prosperoDb
+  added image change on edit > if no input img stays
+  added research upload
+  fixed force-download imgs
+    - added name tag to files on d/l
+  added css change to input
+  fixed updateItem function > img._id
+  broke down item forms to templates
+  changed item-details to show additional details
+    - split everything to templates
+    - added download links for files
+  added details form on input/edit/display
+    - not linked to prosperoDb (possible name/property change)
+  fixed button displacement when resizing
+  added db counter
+  style on details
+
+
+ * v0.21
+  added dateFormat 
+    - same format across all inputs/edits
+    - does not depend on client/server sys.settings
+  added upward/downward sorting
+  added "search by user" on admin pannel
+
+
+ * v0.20
+  added simple search by author/title > navbar
+    - sorting functionality on admin DB
+  added selector on mainGallery > public
+  added sorting functionality > branches on user type
+  added prototype file upload
+    - local storage /data/
+    - front and back img > true delete
+    - on change
+      - upload form > name
+      - itemDb > url+_id
+
+ * v0.19
+ fixed visual glitch on item remove
+ fixed branching on main > item details depending on user
+       - single template
+ fixes breadcrumb classes > color
+ fixed userDB layout on window.width
+
+ * v0.18
+ added sorting within list
+       - title / author / added /edited
+       - downscale
+ added limiting to 15 entries per initial load - faster load time
+ breadcrumbs style > glow
+ minor adjustments of style across the app
+
+ * v0.17
+ fixed edit button bug - now branches depending on user
+ added login verification
+ added thumbnails
+ changed layout of item lists (main / user / admin)
+ added last_edit entry on remove/hidden
+ date format toLocaleString
+ version 2(this) > dark mode
+
+ * v0.16
+ breadcrumbs class added
+ button position on item edit forms
+ optimized form layout (shades and positioning of extra properties)
+ changed navbar positions
+ added style and color
+ changed list layout
+ fixed bug > admin db list > hidden state does not change :ok:
+
+ * v0.15
+ all code cleaned
+ added - event functions.js
+       - global security 
+       - subscriptions
+
+ * v0.14
+  users filtered by username, 
+  minor adjustments of code
+
+ * v0.13
+  fixed edit/delete on item edit pages
+  added status report to user
+
+ * v0.12
+  fixed admin item detail - img not showing
+  added propery chack if everything is added
+    - if not adds :no input data: and checks to see if property is ok
+  added :no data: on main gallery
+
+ * v0.11
+  date input changed to UTC string
+  added createdBy handles in manage db
+  corrected login alignment
+  global - details - edit is user based
+  fixed navigation and breadcrumbs for user/admin
+  item details - img added
+  item new - url input added (not to db)
+  adeed img url links
+
+ * v0.10
+  full user functionality
+    - add edit remove / user
+
+ * v0.09
+  navbar fix 
+    - added username
+    - rules for db / admin
+    - added logut
+  user accounts
+    - removed edit button on all items - only owner or admin can change
+
+ * v0.08
+  added users / new user form / manage users (no btns)
+  changed query display fields on public and user db
+
+ * v0.07
+  improved styling
+  corrected few bugs on window scaling
+  added breadcrumbs
+
+ * v0.06
+  changed font
+  fixed new-item form button input
+  fixed history.back
+  fixed "hidden/public" bug > visible:0 instead of boolean
+
+  </pre>
+  </template>

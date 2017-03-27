@@ -1,0 +1,103 @@
+<template name="files_methods_pige">
+<div class="row align-center">
+<div class="col-xs-12">
+  <h3>upload VIS/GL/UVF/IRP/RTG/SEM/spectrum photo</h3>
+</div>
+</div>
+<div class="row">
+  <div class="col-xs-12 col-sm-2 individual-property">PHOTO ONE
+  </div>
+  <div class="col-xs-12 col-sm-4">
+    <label for="pigeFiles1_label" class="upload_label" id="upload_pigeFiles1">(.jpg or .tiff, max size 5 mb)</label>
+    <input class="individual-data-value" type="file" id="pigeFiles1_label">
+  </div>
+  <div class="col-xs-12 col-sm-2 individual-property"> PHOTO TWO
+  </div>
+  <div class="col-xs-12 col-sm-4">
+    <label for="pigeFiles2_label" class="upload_label" id="upload_pigeFiles2">(.jpg or .tiff, max size 5 mb)</label>
+    <input class="individual-data-value" type="file" id="pigeFiles2_label">
+  </div>
+  <div class="col-xs-12 col-sm-2 individual-property"> PHOTO THREE
+  </div>
+  <div class="col-xs-12 col-sm-4">
+    <label for="pigeFiles3_label" class="upload_label" id="upload_pigeFiles3">(.jpg or .tiff, max size 5 mb)</label>
+    <input class="individual-data-value" type="file" id="pigeFiles3_label">
+  </div>
+  <div class="col-xs-12 col-sm-2 individual-property"> PHOTO FOUR
+  </div>
+  <div class="col-xs-12 col-sm-4">
+    <label for="pigeFiles4_label" class="upload_label" id="upload_pigeFiles4">(.jpg or .tiff, max size 5 mb)</label>
+    <input class="individual-data-value" type="file" id="pigeFiles4_label">
+  </div>
+  <div class="col-xs-12 col-sm-8 individual-property"> UPLOAD RELEVANT FILES (e.g. treatment documentation, conservation report, etc.)
+  </div>
+  <div class="col-xs-12 col-sm-4">
+    <label for="pigeFiles5_label" class="upload_label" id="upload_pigeFiles5">(.zip)</label>
+    <input class="individual-data-value" type="file" id="pigeFiles5_label">
+  </div>
+  <div class="col-xs-12">
+    &nbsp;
+  </div>
+</div>
+
+<!-- hidden part1 -->
+<div class="pigeFiles1 hidden">
+  <div class="individual-property">URL
+    <input type="text" class="individual-value individual-form" id="pigeFiles1" placeholder="" value="{{details.methods.pige.files.pigeFiles1}}">
+  </div>
+</div>
+<div class="pigeFiles1_id hidden">
+  <div class="individual-property">ID
+    <input type="text" class="individual-value individual-form" id="pigeFiles1_id" placeholder="" value="{{details.methods.pige.files.pigeFiles1_id}}">
+  </div>
+</div>
+<!-- /hidden part1 -->
+<!-- hidden part 2-->
+<div class="pigeFiles2 hidden">
+  <div class="individual-property">URL
+    <input type="text" class="individual-value individual-form" id="pigeFiles2" placeholder="" value="{{details.methods.pige.files.pigeFiles2}}">
+  </div>
+</div>
+<div class="pigeFiles2_id hidden">
+  <div class="individual-property">ID
+    <input type="text" class="individual-value individual-form" id="pigeFiles2_id" placeholder="" value="{{details.methods.pige.files.pigeFiles2_id}}">
+  </div>
+</div>
+<!-- /hidden part 2-->
+<!-- hidden part 3-->
+<div class="pigeFiles3 hidden">
+  <div class="individual-property">URL
+    <input type="text" class="individual-value individual-form" id="pigeFiles3" placeholder="" value="{{details.methods.pige.files.pigeFiles3}}">
+  </div>
+</div>
+<div class="pigeFiles3_id hidden">
+  <div class="individual-property">ID
+    <input type="text" class="individual-value individual-form" id="pigeFiles3_id" placeholder="" value="{{details.methods.pige.files.pigeFiles3_id}}">
+  </div>
+</div>
+<!-- / hidden part 3-->
+<!-- hidden part4 -->
+<div class="pigeFiles4 hidden">
+  <div class="individual-property">URL
+    <input type="text" class="individual-value individual-form" id="pigeFiles4" placeholder="" value="{{details.methods.pige.files.pigeFiles4}}">
+  </div>
+</div>
+<div class="pigeFiles4_id hidden">
+  <div class="individual-property">ID
+    <input type="text" class="individual-value individual-form" id="pigeFiles4_id" placeholder="" value="{{details.methods.pige.files.pigeFiles4_id}}">
+  </div>
+</div>
+<!-- / hidden part4 -->
+<!-- hidden part 5-->
+<div class="pigeFiles5 hidden">
+  <div class="individual-property">URL
+    <input type="text" class="individual-value individual-form" id="pigeFiles5" placeholder="" value="{{details.methods.pige.files.pigeFiles5}}">
+  </div>
+</div>
+<div class="pigeFiles5_id hidden">
+  <div class="individual-property">ID
+    <input type="text" class="individual-value individual-form" id="pigeFiles5_id" placeholder="" value="{{details.methods.pige.files.pigeFiles5_id}}">
+  </div>
+</div>
+<!-- /hidden part 5-->
+</template>

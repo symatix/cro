@@ -1,0 +1,88 @@
+<template name="method_techniques_xrr">
+<div class="toggle" id="object_toggle-xrr">
+  <div class="row align-center">
+    <div class="uderline-method">
+      <h4>xrr</h4>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 col-md-6 individual-property xrrExperimental">EXPERIMENTAL PARAMETERS
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_xrrExperimental" placeholder="(e.g. X-ray tube voltage, laser wavelength, air/vacuum, etc.)" value="{{details.methods.xrr.experimentalParameters}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property xrrElements">ELEMENTS DETERMINED
+    </div>
+    <div class="col-xs-12 col-md-6"> 
+      <input type="text" class="individual-value individual-form" id="object_xrrElements" placeholder="(e.g. cobalt blue, red ochre, indigo, etc.)" value="{{details.methods.xrr.elements}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property xrrFormulae">CHEMICAL FORMULAE DETERMINED
+    </div>
+    <div class="col-xs-12 col-md-6"> 
+      <input type="text" class="individual-value individual-form" id="object_xrrFormulae" placeholder="" value="{{details.methods.xrr.formulae}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property xrrPigmentsDyes">PIGMENTS/DYES IDENTIFIED
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_xrrPigmentsDyes" placeholder="" value="{{details.methods.xrr.pigmentsDyes}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property xrrPriming">PRIMING IDENTIFIED
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_xrrPriming" placeholder="" value="{{details.methods.xrr.priming}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property xrrBindingMedia">BINDING MEDIA IDENTIFIED
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_xrrBindingMedia" placeholder="" value="{{details.methods.xrr.bindingMedia}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property xrrVarnish">VARNISH IDENTIFIED
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_xrrVarnish" placeholder="" value="{{details.methods.xrr.varnish}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property xrrStretcherSupportStrainer">STRETCHER/SUPPORT/STRAINER IDENTIFIED
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_xrrStretcherSupportStrainer" placeholder="" value="{{details.methods.xrr.stretcherSupportStrainer}}">
+    </div>
+    <div class="col-xs-12">
+      &nbsp;
+    </div>
+  </div>
+  <div class="row align-center">
+    <div class="col-xs-12 notes">Brief info about possible multilayers/underpaintings/retouches
+    </div>
+    <div class="col-sm-8 col-sm-offset-2">
+        <textarea class="" id="object_xrrBrief" name="sources" rows="4" placeholder="(e.g. secondary effects from underlying signal sources)" value="{{details.methods.xrr.notes.brief}}"></textarea>
+    </div>
+    <div class="col-xs-12 notes">Comments
+    </div>
+    <div class="col-sm-8 col-sm-offset-2">
+        <textarea class="" id="object_xrrComments" name="sources" rows="4" placeholder="(e.g. additional info not covered by the points above)" value="{{details.methods.xrr.notes.comments}}"></textarea>
+    </div>
+    <div class="col-xs-12 notes">Sources
+    </div>
+    <div class="col-sm-8 col-sm-offset-2">
+        <textarea class="" id="object_xrrSources" name="sources" rows="4" placeholder="(literature)" value="{{details.methods.xrr.notes.sources}}"></textarea>
+    </div>
+    <div class="col-xs-12">
+      &nbsp;
+    </div>
+  </div>
+
+
+
+  {{> files_methods_xrr}}
+
+
+  <div class="row align-center">
+    <div class="col-xs-12 notes">Figure captions
+    </div>
+    <div class="col-sm-8 col-sm-offset-2">
+        <textarea class="" id="object_xrrCaption" name="history" rows="4" placeholder="(e.g. additional info not covered by the points above)" value="{{details.methods.xrr.notes.caption}}"></textarea>
+    </div>
+    <br/>
+  </div>
+</div>
+</template>

@@ -1,0 +1,88 @@
+<template name="method_techniques_tlc">
+<div class="toggle" id="object_toggle-tlc">
+  <div class="row align-center">
+    <div class="uderline-method">
+      <h4>tlc</h4>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 col-md-6 individual-property tlcExperimental">EXPERIMENTAL PARAMETERS
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_tlcExperimental" placeholder="(e.g. X-ray tube voltage, laser wavelength, air/vacuum, etc.)" value="{{details.methods.tlc.experimentalParameters}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property tlcElements">ELEMENTS DETERMINED
+    </div>
+    <div class="col-xs-12 col-md-6"> 
+      <input type="text" class="individual-value individual-form" id="object_tlcElements" placeholder="(e.g. cobalt blue, red ochre, indigo, etc.)" value="{{details.methods.tlc.elements}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property tlcFormulae">CHEMICAL FORMULAE DETERMINED
+    </div>
+    <div class="col-xs-12 col-md-6"> 
+      <input type="text" class="individual-value individual-form" id="object_tlcFormulae" placeholder="" value="{{details.methods.tlc.formulae}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property tlcPigmentsDyes">PIGMENTS/DYES IDENTIFIED
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_tlcPigmentsDyes" placeholder="" value="{{details.methods.tlc.pigmentsDyes}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property tlcPriming">PRIMING IDENTIFIED
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_tlcPriming" placeholder="" value="{{details.methods.tlc.priming}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property tlcBindingMedia">BINDING MEDIA IDENTIFIED
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_tlcBindingMedia" placeholder="" value="{{details.methods.tlc.bindingMedia}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property tlcVarnish">VARNISH IDENTIFIED
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_tlcVarnish" placeholder="" value="{{details.methods.tlc.varnish}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property tlcStretcherSupportStrainer">STRETCHER/SUPPORT/STRAINER IDENTIFIED
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_tlcStretcherSupportStrainer" placeholder="" value="{{details.methods.tlc.stretcherSupportStrainer}}">
+    </div>
+    <div class="col-xs-12">
+      &nbsp;
+    </div>
+  </div>
+  <div class="row align-center">
+    <div class="col-xs-12 notes">Brief info about possible multilayers/underpaintings/retouches
+    </div>
+    <div class="col-sm-8 col-sm-offset-2">
+        <textarea class="" id="object_tlcBrief" name="sources" rows="4" placeholder="(e.g. secondary effects from underlying signal sources)" value="{{details.methods.tlc.notes.brief}}"></textarea>
+    </div>
+    <div class="col-xs-12 notes">Comments
+    </div>
+    <div class="col-sm-8 col-sm-offset-2">
+        <textarea class="" id="object_tlcComments" name="sources" rows="4" placeholder="(e.g. additional info not covered by the points above)" value="{{details.methods.tlc.notes.comments}}"></textarea>
+    </div>
+    <div class="col-xs-12 notes">Sources
+    </div>
+    <div class="col-sm-8 col-sm-offset-2">
+        <textarea class="" id="object_tlcSources" name="sources" rows="4" placeholder="(literature)" value="{{details.methods.tlc.notes.sources}}"></textarea>
+    </div>
+    <div class="col-xs-12">
+      &nbsp;
+    </div>
+  </div>
+
+
+
+  {{> files_methods_tlc}}
+
+
+  <div class="row align-center">
+    <div class="col-xs-12 notes">Figure captions
+    </div>
+    <div class="col-sm-8 col-sm-offset-2">
+        <textarea class="" id="object_tlcCaption" name="history" rows="4" placeholder="(e.g. additional info not covered by the points above)" value="{{details.methods.tlc.notes.caption}}"></textarea>
+    </div>
+    <br/>
+  </div>
+</div>
+</template>

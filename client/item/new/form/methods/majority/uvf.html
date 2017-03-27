@@ -1,0 +1,88 @@
+<template name="method_techniques_uvf">
+<div class="toggle" id="object_toggle-uvf">
+  <div class="row align-center">
+    <div class="uderline-method">
+      <h4>uvf</h4>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 col-md-6 individual-property uvfExperimental">EXPERIMENTAL PARAMETERS
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_uvfExperimental" placeholder="(e.g. X-ray tube voltage, laser wavelength, air/vacuum, etc.)" value="{{details.methods.uvf.experimentalParameters}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property uvfElements">ELEMENTS DETERMINED
+    </div>
+    <div class="col-xs-12 col-md-6"> 
+      <input type="text" class="individual-value individual-form" id="object_uvfElements" placeholder="(e.g. cobalt blue, red ochre, indigo, etc.)" value="{{details.methods.uvf.elements}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property uvfFormulae">CHEMICAL FORMULAE DETERMINED
+    </div>
+    <div class="col-xs-12 col-md-6"> 
+      <input type="text" class="individual-value individual-form" id="object_uvfFormulae" placeholder="" value="{{details.methods.uvf.formulae}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property uvfPigmentsDyes">PIGMENTS/DYES IDENTIFIED
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_uvfPigmentsDyes" placeholder="" value="{{details.methods.uvf.pigmentsDyes}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property uvfPriming">PRIMING IDENTIFIED
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_uvfPriming" placeholder="" value="{{details.methods.uvf.priming}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property uvfBindingMedia">BINDING MEDIA IDENTIFIED
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_uvfBindingMedia" placeholder="" value="{{details.methods.uvf.bindingMedia}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property uvfVarnish">VARNISH IDENTIFIED
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_uvfVarnish" placeholder="" value="{{details.methods.uvf.varnish}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property uvfStretcherSupportStrainer">STRETCHER/SUPPORT/STRAINER IDENTIFIED
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_uvfStretcherSupportStrainer" placeholder="" value="{{details.methods.uvf.stretcherSupportStrainer}}">
+    </div>
+    <div class="col-xs-12">
+      &nbsp;
+    </div>
+  </div>
+  <div class="row align-center">
+    <div class="col-xs-12 notes">Brief info about possible multilayers/underpaintings/retouches
+    </div>
+    <div class="col-sm-8 col-sm-offset-2">
+        <textarea class="" id="object_uvfBrief" name="sources" rows="4" placeholder="(e.g. secondary effects from underlying signal sources)" value="{{details.methods.uvf.notes.brief}}"></textarea>
+    </div>
+    <div class="col-xs-12 notes">Comments
+    </div>
+    <div class="col-sm-8 col-sm-offset-2">
+        <textarea class="" id="object_uvfComments" name="sources" rows="4" placeholder="(e.g. additional info not covered by the points above)" value="{{details.methods.uvf.notes.comments}}"></textarea>
+    </div>
+    <div class="col-xs-12 notes">Sources
+    </div>
+    <div class="col-sm-8 col-sm-offset-2">
+        <textarea class="" id="object_uvfSources" name="sources" rows="4" placeholder="(literature)" value="{{details.methods.uvf.notes.sources}}"></textarea>
+    </div>
+    <div class="col-xs-12">
+      &nbsp;
+    </div>
+  </div>
+
+
+
+  {{> files_methods_uvf}}
+
+
+  <div class="row align-center">
+    <div class="col-xs-12 notes">Figure captions
+    </div>
+    <div class="col-sm-8 col-sm-offset-2">
+        <textarea class="" id="object_uvfCaption" name="history" rows="4" placeholder="(e.g. additional info not covered by the points above)" value="{{details.methods.uvf.notes.caption}}"></textarea>
+    </div>
+    <br/>
+  </div>
+</div>
+</template>

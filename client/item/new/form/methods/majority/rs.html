@@ -1,0 +1,88 @@
+<template name="method_techniques_rs">
+<div class="toggle" id="object_toggle-rs">
+  <div class="row align-center">
+    <div class="uderline-method">
+      <h4>rs</h4>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 col-md-6 individual-property rsExperimental">EXPERIMENTAL PARAMETERS
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_rsExperimental" placeholder="(e.g. X-ray tube voltage, laser wavelength, air/vacuum, etc.)" value="{{details.methods.rs.experimentalParameters}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property rsElements">ELEMENTS DETERMINED
+    </div>
+    <div class="col-xs-12 col-md-6"> 
+      <input type="text" class="individual-value individual-form" id="object_rsElements" placeholder="(e.g. cobalt blue, red ochre, indigo, etc.)" value="{{details.methods.rs.elements}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property rsFormulae">CHEMICAL FORMULAE DETERMINED
+    </div>
+    <div class="col-xs-12 col-md-6"> 
+      <input type="text" class="individual-value individual-form" id="object_rsFormulae" placeholder="" value="{{details.methods.rs.formulae}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property rsPigmentsDyes">PIGMENTS/DYES IDENTIFIED
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_rsPigmentsDyes" placeholder="" value="{{details.methods.rs.pigmentsDyes}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property rsPriming">PRIMING IDENTIFIED
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_rsPriming" placeholder="" value="{{details.methods.rs.priming}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property rsBindingMedia">BINDING MEDIA IDENTIFIED
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_rsBindingMedia" placeholder="" value="{{details.methods.rs.bindingMedia}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property rsVarnish">VARNISH IDENTIFIED
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_rsVarnish" placeholder="" value="{{details.methods.rs.varnish}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property rsStretcherSupportStrainer">STRETCHER/SUPPORT/STRAINER IDENTIFIED
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_rsStretcherSupportStrainer" placeholder="" value="{{details.methods.rs.stretcherSupportStrainer}}">
+    </div>
+    <div class="col-xs-12">
+      &nbsp;
+    </div>
+  </div>
+  <div class="row align-center">
+    <div class="col-xs-12 notes">Brief info about possible multilayers/underpaintings/retouches
+    </div>
+    <div class="col-sm-8 col-sm-offset-2">
+        <textarea class="" id="object_rsBrief" name="sources" rows="4" placeholder="(e.g. secondary effects from underlying signal sources)" value="{{details.methods.rs.notes.brief}}"></textarea>
+    </div>
+    <div class="col-xs-12 notes">Comments
+    </div>
+    <div class="col-sm-8 col-sm-offset-2">
+        <textarea class="" id="object_rsComments" name="sources" rows="4" placeholder="(e.g. additional info not covered by the points above)" value="{{details.methods.rs.notes.comments}}"></textarea>
+    </div>
+    <div class="col-xs-12 notes">Sources
+    </div>
+    <div class="col-sm-8 col-sm-offset-2">
+        <textarea class="" id="object_rsSources" name="sources" rows="4" placeholder="(literature)" value="{{details.methods.rs.notes.sources}}"></textarea>
+    </div>
+    <div class="col-xs-12">
+      &nbsp;
+    </div>
+  </div>
+
+
+
+  {{> files_methods_rs}}
+
+
+  <div class="row align-center">
+    <div class="col-xs-12 notes">Figure captions
+    </div>
+    <div class="col-sm-8 col-sm-offset-2">
+        <textarea class="" id="object_rsCaption" name="history" rows="4" placeholder="(e.g. additional info not covered by the points above)" value="{{details.methods.rs.notes.caption}}"></textarea>
+    </div>
+    <br/>
+  </div>
+</div>
+</template>

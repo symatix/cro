@@ -1,0 +1,11 @@
+<template name="ProsperoLayout">
+	<head>
+		<title>prospero</title>
+	  	<meta charset="utf-8">
+	  	<meta name="viewport" content="width=device-width, initial-scale=1">
+	</head>
+    	{{> yield "header"}}
+	<body data-spy="scroll" data-target="#spy" data-offset="150">
+    	{{> yield "main"}}
+    </body>
+</template>

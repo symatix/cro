@@ -1,0 +1,69 @@
+<template name="item_new">
+  <!-- container -->
+    <div class="container">
+      <div class="row">
+      <h1 class="breadcrumbs">
+      {{#if admin}}
+        <a class="a-heading" href="/admin/prosperoDB">croARTia </a>
+      {{else}}
+        <a class="a-heading" href="/database/myitems">croARTia </a>
+      {{/if}}\
+      {{#if type}}<a class="a-heading" href="/{{type}}">{{type}}</a> \ {{/if}}
+      <span class="post-heading"> database entry</span>
+      </h1>
+
+      <form class="js-input-painting-data">
+        <div class="container">
+          <div class="row form-box">
+            <div class="col-sm-12">
+              <div class="row">
+
+              {{#if editObject}}
+
+                {{> basic_nav}}
+                <div class="tab-content">
+                  <div role="tabpanel" class="tab-pane fade in" id="objectTypeForm">
+                  {{> form}}
+
+                  <div class="col-xs-12 col-md-6 individual-property relief">
+                    THIS ENTRY IS 
+                  </div>
+                  <div class="col-xs-12 col-md-6 material_basic_type">
+                    <input type="radio" name="available" id="natural" value="public" checked="checked"> public&emsp;
+                    <input type="radio" name="available" id="synthetic" value="private"> private<br/>
+                  </div>
+
+                  {{> upload_progress}}
+                  </div>
+                </div>
+
+              {{else}}<!-- end of /new -->
+
+                  {{> objectType_hidden_fields}}
+                  <h3 class="align-center">{{basic.author}} - {{basic.title}}</h3>
+                  {{> form}}
+
+                  <div class="col-xs-12 col-md-6 individual-property relief">
+                    THIS ENTRY IS 
+                  </div>
+                  <div class="col-xs-12 col-md-6 material_basic_type">
+                    <input type="radio" name="available" id="natural" value="public" checked="checked"> public&emsp;
+                    <input type="radio" name="available" id="synthetic" value="private"> private<br/>
+                  </div>
+
+                  {{> upload_progress}}
+
+              {{/if}} <!-- end of /edit -->
+
+              </div>
+            </div>
+            <hr/>
+            </div> 
+          </div>
+        </form>
+
+        {{> nav_scrollspy_affix}}
+
+      </div>
+    </div><!-- /container -->
+</template>

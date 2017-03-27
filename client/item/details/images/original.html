@@ -1,0 +1,107 @@
+<template name="images_original">
+	{{#if originalDisplay}}
+    <div class="row img-box align-center">
+		{{#if data.original.photoOne}}
+		<div class="col-xs-6">
+		<h4>&nbsp;</h4>
+			<img class="img-materials-sm" src="{{data.original.photoOne}}" data-toggle="modal" data-target="#original-modal-photoOne">
+		</div>
+          <!-- modal - photoOne -->
+	      <div class="modal fade" id="original-modal-photoOne" role="dialog">
+	        <div class="modal-dialog">
+	          <div class="modal-content modal-div">
+	            <div class="modal-header">
+	              <h4 class="modal-title">
+	        		{{basic.title}}
+	        		<button type="button" class="close" data-dismiss="modal">&times;</button>
+	      	 	  </h4>
+	            </div>
+	            <div class="modal-body align-center">
+	              <img class="img-modal" src="{{data.original.photoOne}}">
+	            </div>
+	          </div>
+	        </div>
+	      </div>
+		{{/if}}
+
+		{{#if data.original.photoTwo}}
+		<div class="col-xs-6">
+		<h4>&nbsp;</h4>
+			<img class="img-materials-sm" src="{{data.original.photoTwo}}" data-toggle="modal" data-target="#original-modal-photoTwo">
+		</div>
+          <!-- modal - photoTwo -->
+	      <div class="modal fade" id="original-modal-photoTwo" role="dialog">
+	        <div class="modal-dialog">
+	          <div class="modal-content modal-div">
+	            <div class="modal-header">
+	              <h4 class="modal-title">
+	        		{{basic.title}}
+	        		<button type="button" class="close" data-dismiss="modal">&times;</button>
+	      	 	  </h4>
+	            </div>
+	            <div class="modal-body align-center">
+	              <img class="img-modal" src="{{data.original.photoTwo}}">
+	            </div>
+	          </div>
+	        </div>
+	      </div>
+		{{/if}}
+
+		{{#if data.original.photoThree}}
+		<div class="col-xs-6">
+		<h4>&nbsp;</h4>
+			<img class="img-materials-sm" src="{{data.original.photoThree}}" data-toggle="modal" data-target="#original-modal-photoThree">
+		</div>
+          <!-- modal - photoThree -->
+	      <div class="modal fade" id="original-modal-photoThree" role="dialog">
+	        <div class="modal-dialog">
+	          <div class="modal-content modal-div">
+	            <div class="modal-header">
+	              <h4 class="modal-title">
+	        		{{basic.title}}
+	        		<button type="button" class="close" data-dismiss="modal">&times;</button>
+	      	 	  </h4>
+	            </div>
+	            <div class="modal-body align-center">
+	              <img class="img-modal" src="{{data.original.photoThree}}">
+	            </div>
+	          </div>
+	        </div>
+	      </div>
+		{{/if}}
+
+		{{#if data.original.photoFour}}
+		<div class="col-xs-6">
+		<h4>&nbsp;</h4>
+			<img class="img-materials-sm" src="{{data.original.photoFour}}" data-toggle="modal" data-target="#original-modal-photoFour">
+		</div>
+          <!-- modal - photoFour -->
+	      <div class="modal fade" id="original-modal-photoFour" role="dialog">
+	        <div class="modal-dialog">
+	          <div class="modal-content modal-div">
+	            <div class="modal-header">
+	              <h4 class="modal-title">
+	        		{{basic.title}}
+	        		<button type="button" class="close" data-dismiss="modal">&times;</button>
+	      	 	  </h4>
+	            </div>
+	            <div class="modal-body align-center">
+	              <img class="img-modal" src="{{data.original.photoFour}}">
+	            </div>
+	          </div>
+	        </div>
+	      </div>
+		{{/if}}
+		
+		{{#if materials.original.notes.figureCaption}}
+		<div class="col-md-12">
+		  <div class="figureCaption">
+		    <div class="individual-property-display">Figure captions<br/> 
+		      <div class="individual-value-display">{{materials.original.notes.figureCaption}}</div>
+		    </div>
+		  </div>
+		</div>
+		{{/if}}
+	</div>
+	{{/if}}
+</template>

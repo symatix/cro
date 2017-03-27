@@ -1,0 +1,88 @@
+<template name="method_techniques_aes">
+<div class="toggle" id="object_toggle-aes">
+  <div class="row align-center">
+    <div class="uderline-method">
+      <h4>AES</h4>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 col-md-6 individual-property aesExperimental">EXPERIMENTAL PARAMETERS
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_aesExperimental" placeholder="(e.g. X-ray tube voltage, laser wavelength, air/vacuum, etc.)" value="{{details.methods.aes.experimentalParameters}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property aesElements">ELEMENTS DETERMINED
+    </div>
+    <div class="col-xs-12 col-md-6"> 
+      <input type="text" class="individual-value individual-form" id="object_aesElements" placeholder="(e.g. cobalt blue, red ochre, indigo, etc.)" value="{{details.methods.aes.elements}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property aesFormulae">CHEMICAL FORMULAE DETERMINED
+    </div>
+    <div class="col-xs-12 col-md-6"> 
+      <input type="text" class="individual-value individual-form" id="object_aesFormulae" placeholder="" value="{{details.methods.aes.formulae}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property aesPigmentsDyes">PIGMENTS/DYES IDENTIFIED
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_aesPigmentsDyes" placeholder="" value="{{details.methods.aes.pigmentsDyes}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property aesPriming">PRIMING IDENTIFIED
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_aesPriming" placeholder="" value="{{details.methods.aes.priming}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property aesBindingMedia">BINDING MEDIA IDENTIFIED
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_aesBindingMedia" placeholder="" value="{{details.methods.aes.bindingMedia}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property aesVarnish">VARNISH IDENTIFIED
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_aesVarnish" placeholder="" value="{{details.methods.aes.varnish}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property aesStretcherSupportStrainer">STRETCHER/SUPPORT/STRAINER IDENTIFIED
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_aesStretcherSupportStrainer" placeholder="" value="{{details.methods.aes.stretcherSupportStrainer}}">
+    </div>
+    <div class="col-xs-12">
+      &nbsp;
+    </div>
+  </div>
+  <div class="row align-center">
+    <div class="col-xs-12 notes">Brief info about possible multilayers/underpaintings/retouches
+    </div>
+    <div class="col-sm-8 col-sm-offset-2">
+        <textarea class="" id="object_aesBrief" name="sources" rows="4" placeholder="(e.g. secondary effects from underlying signal sources)" value="{{details.methods.aes.notes.brief}}"></textarea>
+    </div>
+    <div class="col-xs-12 notes">Comments
+    </div>
+    <div class="col-sm-8 col-sm-offset-2">
+        <textarea class="" id="object_aesComments" name="sources" rows="4" placeholder="(e.g. additional info not covered by the points above)" value="{{details.methods.aes.notes.comments}}"></textarea>
+    </div>
+    <div class="col-xs-12 notes">Sources
+    </div>
+    <div class="col-sm-8 col-sm-offset-2">
+        <textarea class="" id="object_aesSources" name="sources" rows="4" placeholder="(literature)" value="{{details.methods.aes.notes.sources}}"></textarea>
+    </div>
+    <div class="col-xs-12">
+      &nbsp;
+    </div>
+  </div>
+
+
+
+  {{> files_methods_aes}}
+
+
+  <div class="row align-center">
+    <div class="col-xs-12 notes">Figure captions
+    </div>
+    <div class="col-sm-8 col-sm-offset-2">
+        <textarea class="" id="object_aesCaption" name="history" rows="4" placeholder="(e.g. additional info not covered by the points above)" value="{{details.methods.aes.notes.caption}}"></textarea>
+    </div>
+    <br/>
+  </div>
+</div>
+</template>

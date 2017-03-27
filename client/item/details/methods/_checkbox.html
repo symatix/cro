@@ -1,0 +1,253 @@
+<template name="methods_checkbox_view">
+	<div class="row methods-checkbox">
+		    <ul>   
+		      {{#if details.methods.scanning}}     
+		      <li>
+		      <div class="col-xs-6 col-sm-3">
+		          <label for="scanning" class="method-checkbox"> 3D scanning</label>
+		          <input class="checkbox-input-view" type="checkbox" value="3D scanning" name="methodCheck" id="scanning">
+		      </div>
+		      </li>
+		      {{/if}}
+		      {{#if details.methods.aas}} 
+		      <li>
+		      <div class="col-xs-6 col-sm-3">
+		          <label for="aas" class="method-checkbox"> AAS</label>
+		          <input class="checkbox-input-view" type="checkbox" value="AAS" name="methodCheck" id="aas">
+		      </div>
+		      </li>
+		      {{/if}}
+		      {{#if details.methods.aes}} 
+		      <li>
+		      <div class="col-xs-6 col-sm-3">
+		          <label for="aes" class="method-checkbox"> AES</label><input class="checkbox-input-view" type="checkbox" value="AES" name="methodCheck" id="aes">
+		      </div>
+		      </li>
+		      {{/if}}
+		      {{#if details.methods.afm}} 
+		      <li>
+		      <div class="col-xs-6 col-sm-3">
+		          <label for="afm"  class="method-checkbox"> AFM</label><input class="checkbox-input-view" type="checkbox" value="AFM" name="methodCheck" id="afm">
+		      </div>
+		      </li>
+		      {{/if}}
+		      {{#if details.methods.analysis}} 
+		      <li>
+		      <div class="col-xs-6 col-sm-3">
+		          <label for="analysis" class="method-checkbox"> Analysis of salts</label><input class="checkbox-input-view" type="checkbox" value="Analysis of salts" name="methodCheck" id="analysis">
+		      </div>
+		      </li>
+		      {{/if}}
+		      {{#if details.methods.binderFiller}} 
+		      <li>
+		      <div class="col-xs-6 col-sm-3">
+		          <label for="binderFiller" class="method-checkbox"> Binder/filler ratio</label><input class="checkbox-input-view" type="checkbox" value="Binder/filler ratio" name="methodCheck" id="binderFiller">
+		      </div>
+		      </li>
+		      {{/if}}
+		      {{#if details.methods.c_14}} 
+		      <li>
+		      <div class="col-xs-6 col-sm-3">
+		          <label for="c_14" class="method-checkbox"> C-14</label><input class="checkbox-input-view" type="checkbox" value="C-14" name="methodCheck" id="c_14">
+		      </div>
+		      </li>
+		      {{/if}}
+		      {{#if details.methods.colorimetry}} 
+		      <li>
+		      <div class="col-xs-6 col-sm-3">
+		          <label for="colorimetry" class="method-checkbox"> Colorimetry</label><input class="checkbox-input-view" type="checkbox" value="COLORIMETRY" name="methodCheck" id="colorimetry">
+		      </div>
+		      </li>
+		      {{/if}}
+		      {{#if details.methods.drms}} 
+		      <li>
+		      <div class="col-xs-6 col-sm-3">
+		          <label for="drms" class="method-checkbox"> DRMS</label><input class="checkbox-input-view" type="checkbox" value="DRMS" name="methodCheck" id="drms">
+		      </div>
+		      </li> 
+		      {{/if}}
+		      {{#if details.methods.fors}}     
+		      <li>
+		      <div class="col-xs-6 col-sm-3">
+		          <label for="fors" class="method-checkbox"> FORS</label><input class="checkbox-input-view" type="checkbox" value="FORS" name="methodCheck" id="fors">
+		      </div>
+		      </li>
+		      {{/if}}
+		      {{#if details.methods.ft_ir}} 
+		      <li>
+		      <div class="col-xs-6 col-sm-3">
+		          <label for="ft_ir" class="method-checkbox"> FT-IR</label><input class="checkbox-input-view" type="checkbox" value="FT-IR" name="methodCheck" id="ft_ir">
+		      </div>
+		      </li>
+		      {{/if}}
+		      {{#if details.methods.gc_ms}} 
+		      <li>
+		      <div class="col-xs-6 col-sm-3">
+		          <label for="gc_ms" class="method-checkbox"> GC-MS</label><input class="checkbox-input-view" type="checkbox" value="GC-MS" name="methodCheck" id="gc_ms">
+		      </div>
+		      </li>
+		      {{/if}}
+		      {{#if details.methods.gl}} 
+		      <li>
+		      <div class="col-xs-6 col-sm-3">
+		          <label for="gl" class="method-checkbox"> GL</label><input class="checkbox-input-view" type="checkbox" value="GL" name="methodCheck" id="gl">
+		      </div>
+		      </li> 
+		      {{/if}} 
+		      {{#if details.methods.granulometry}}  
+		      <li>
+		      <div class="col-xs-6 col-sm-3">
+		          <label for="granulometry" class="method-checkbox"> Granulometry</label><input class="checkbox-input-view" type="checkbox" value="Granulometry" name="methodCheck" id="granulometry">
+		      </div>
+		      </li>   
+		      {{/if}}
+		      {{#if details.methods.hygroscopic}} 
+		      <li>
+		      <div class="col-xs-6 col-sm-3">
+		          <label for="hygroscopic" class="method-checkbox"> Hygroscopic measurements</label><input class="checkbox-input-view" type="checkbox" value="Hygroscopic measurements" name="methodCheck" id="hygroscopic">
+		      </div>
+		      </li>
+		      {{/if}}
+		      {{#if details.methods.irpIrrIrfc}} 
+		      <li>
+		      <div class="col-xs-6 col-sm-3">
+		          <label for="irpIrrIrfc" class="method-checkbox"> IRP/IRR/IRFC</label><input class="checkbox-input-view" type="checkbox" value="IRP/IRR/IRFC" name="methodCheck" id="irpIrrIrfc">
+		      </div>
+		      </li> 
+		      {{/if}}
+		      {{#if details.methods.libs}} 
+		      <li>
+		      <div class="col-xs-6 col-sm-3">
+		          <label for="libs" class="method-checkbox"> LIBS</label><input class="checkbox-input-view" type="checkbox" value="LIBS" name="methodCheck" id="libs">
+		      </div>
+		      </li>
+		      {{/if}}
+		      {{#if details.methods.ol}} 
+		      <li>
+		      <div class="col-xs-6 col-sm-3">
+		          <label for="ol" class="method-checkbox"> OL</label><input class="checkbox-input-view" type="checkbox" value="OL" name="methodCheck" id="ol">
+		      </div>
+		      </li>  
+		      {{/if}}
+		      {{#if details.methods.om}}      
+		      <li>
+		      <div class="col-xs-6 col-sm-3">
+		          <label for="om" class="method-checkbox"> OM</label><input class="checkbox-input-view" type="checkbox" value="OM" name="methodCheck" id="om">
+		      </div>
+		      </li>
+		      {{/if}}
+		      {{#if details.methods.pige}} 
+		      <li>
+		      <div class="col-xs-6 col-sm-3">
+		          <label for="pige" class="method-checkbox"> PIGE</label><input class="checkbox-input-view" type="checkbox" value="PIGE" name="methodCheck" id="pige">
+		      </div>
+		      </li>
+		      {{/if}}
+		      {{#if details.methods.pixe}} 
+		      <li>
+		      <div class="col-xs-6 col-sm-3">
+		          <label for="pixe" class="method-checkbox"> PIXE</label><input class="checkbox-input-view" type="checkbox" value="PIXE" name="methodCheck" id="pixe">
+		      </div>
+		      </li>
+		      {{/if}}
+		      {{#if details.methods.plm}} 
+		      <li>
+		      <div class="col-xs-6 col-sm-3">
+		          <label for="plm" class="method-checkbox"> PLM</label><input class="checkbox-input-view" type="checkbox" value="PLM" name="methodCheck" id="plm">
+		      </div>
+		      </li>
+		      {{/if}}
+		      {{#if details.methods.rbs}} 
+		      <li>
+		      <div class="col-xs-6 col-sm-3">
+		          <label for="rbs" class="method-checkbox"> RBS</label><input class="checkbox-input-view" type="checkbox" value="RBS" name="methodCheck" id="rbs">
+		      </div>
+		      </li>
+		      {{/if}}
+		      {{#if details.methods.rs}} 
+		      <li>
+		      <div class="col-xs-6 col-sm-3">
+		          <label for="rs" class="method-checkbox"> RS</label><input class="checkbox-input-view" type="checkbox" value="RS" name="methodCheck" id="rs">
+		      </div>
+		      </li>
+		      {{/if}}
+		      {{#if details.methods.semSemEdx}} 
+		      <li>
+		      <div class="col-xs-6 col-sm-3">
+		          <label for="semSemEdx" class="method-checkbox"> SEM and/or SEM/EDX</label><input class="checkbox-input-view" type="checkbox" value="SEM and/or SEM/EDX" name="methodCheck" id="semSemEdx">
+		      </div>
+		      </li>
+		      {{/if}}
+		      {{#if details.methods.synchrotron}} 
+		      <li>
+		      <div class="col-xs-6 col-sm-3">
+		          <label for="synchrotron" class="method-checkbox"> Synchrotron techniques</label><input class="checkbox-input-view" type="checkbox" value="Synchrotron techniques" name="methodCheck" id="synchrotron">
+		      </div>
+		      </li>
+		      {{/if}}
+		      {{#if details.methods.tem}} 
+		      <li>
+		      <div class="col-xs-6 col-sm-3">
+		          <label for="tem" class="method-checkbox"> TEM</label><input class="checkbox-input-view" type="checkbox" value="TEM" name="methodCheck" id="tem">
+		      </div>
+		      </li> 
+		      {{/if}}
+		      {{#if details.methods.tl}}       
+		      <li>
+		      <div class="col-xs-6 col-sm-3">
+		          <label for="tl" class="method-checkbox"> TL</label><input class="checkbox-input-view" type="checkbox" value="TL" name="methodCheck" id="tl">
+		      </div>
+		      </li>
+		      {{/if}}
+		      {{#if details.methods.tlc}} 
+		      <li>
+		      <div class="col-xs-6 col-sm-3">
+		          <label for="tlc" class="method-checkbox"> TLC</label><input class="checkbox-input-view" type="checkbox" value="TLC" name="methodCheck" id="tlc">
+		      </div>
+		      </li>
+		      {{/if}}
+		      {{#if details.methods.uv_vis}} 
+		      <li>
+		      <div class="col-xs-6 col-sm-3">
+		          <label for="uv_vis" class="method-checkbox"> UV-Vis</label><input class="checkbox-input-view" type="checkbox" value="UV-Vis" name="methodCheck" id="uv_vis">
+		      </div>
+		      </li>
+		      {{/if}}
+		      {{#if details.methods.uvf}} 
+		      <li>
+		      <div class="col-xs-6 col-sm-3">
+		          <label for="uvf" class="method-checkbox"> UVF</label><input class="checkbox-input-view" type="checkbox" value="UVF" name="methodCheck" id="uvf">
+		      </div>
+		      </li>
+		      {{/if}}
+		      {{#if details.methods.vis}} 
+		      <li>
+		      <div class="col-xs-6 col-sm-3">
+		          <label for="vis" class="method-checkbox"> VIS</label><input class="checkbox-input-view" type="checkbox" value="VIS" name="methodCheck" id="vis">
+		      </div>
+		      </li> 
+		      {{/if}}
+		      {{#if details.methods.xrd}}  
+		      <li>
+		      <div class="col-xs-6 col-sm-3">
+		          <label for="xrd" class="method-checkbox"> XRD</label><input class="checkbox-input-view" type="checkbox" value="XRD" name="methodCheck" id="xrd">
+		      </div>
+		      </li> 
+		      {{/if}}
+		      {{#if details.methods.xrf}}  
+		      <li>
+		      <div class="col-xs-6 col-sm-3">
+		          <label for="xrf" class="method-checkbox"> XRF</label><input class="checkbox-input-view" type="checkbox" value="XRF" name="methodCheck" id="xrf">
+		      </div>
+		      </li>
+		      {{/if}}
+		      {{#if details.methods.xrr}} 
+		      <li>
+		      <div class="col-xs-6 col-sm-3">
+		          <label for="xrr" class="method-checkbox"> XRR</label><input class="checkbox-input-view" type="checkbox" value="XRR" name="methodCheck" id="xrr">
+		      </div>
+		      </li>
+		      {{/if}}
+		    </ul>
+		</div>
+</template>

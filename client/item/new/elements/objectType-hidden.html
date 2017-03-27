@@ -1,0 +1,31 @@
+<template name="objectType_hidden_fields">
+<div class="hidden">
+        <input type="checkbox" name="type" value="Painting" class="objectType" id="item_painting" checked="{{#if painting}}checked{{/if}}">
+        painting
+        <br/>
+        <input type="checkbox" name="type" value="Sculpture" class="objectType" id="item-sculpture" checked="{{#if sculpture}}checked{{/if}}">
+        sculpture
+        <br/>
+        <input type="checkbox" name="type" value="Architectural heritage" class="objectType" id="item-architectural-heritage" checked="{{#if arhitectual}}checked{{/if}}">
+        architectural
+        <br/>
+        <input type="checkbox" name="type" value="Archival object" class="objectType" id="item-archival-object" checked="{{#if archival}}checked{{/if}}">
+        archival
+        <br/>
+        <input type="checkbox" name="type" value="Archaeological object" class="objectType" id="item-archaeological" checked="{{#if archaeological}}checked{{/if}}">
+        archaeological
+        <br/>
+        <input type="checkbox" name="type" value="Sample/cross-section" class="objectType" id="item-sample-crosssection" checked="{{#if sample}}checked{{/if}}">
+        sample
+        <br/>
+        <input type="checkbox" name="type" value="Pigment/dye/binder/varnish/reference materials" class="objectType" id="item-pigment-dye-binder" checked="{{#if pigment}}checked{{/if}}">
+        pigment
+        <br/>
+        <input type="checkbox" name="type" value="other" class="objectType" id="item-other" checked="{{#if other}}checked{{/if}}">
+        other
+        <br/>
+        <input type="text" name="type" value="{{type}}" class="objectType" id="objectType">
+        type
+        <br/>
+</div>
+</template>

@@ -1,0 +1,88 @@
+<template name="method_techniques_pigment_granulometry">
+<div class="toggle" id="object_toggle-granulometry">
+  <div class="row align-center">
+    <div class="uderline-method">
+      <h4>granulometry</h4>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 col-md-6 individual-property granulometryExperimental">
+      EXPERIMENTAL PARAMETERS
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_granulometryExperimental" placeholder="(e.g. X-ray tube voltage, laser wavelength, air/vacuum, etc.)" value="{{details.methods.granulometry.experimentalParameters}}">
+    </div>
+
+    <div class="col-xs-12 col-md-6 individual-property granulometryElements">
+      ELEMENTS DETERMINED
+    </div>
+    <div class="col-xs-12 col-md-6"> 
+      <input type="text" class="individual-value individual-form" id="object_granulometryElements" placeholder="(e.g. cobalt blue, red ochre, indigo, etc.)" value="{{details.methods.granulometry.elements}}">
+    </div>
+
+    <div class="col-xs-12 col-md-6 individual-property granulometryQuantification">
+      QUANTIFICATION RESULTS
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_granulometryQuantification" placeholder="(e.g. 92% Cu, 7,2% Sn, 0,8% Pb)" value="{{details.methods.granulometry.quantification}}">
+    </div>
+
+    <div class="col-xs-12 col-md-6 individual-property granulometryFormulae">
+      CHEMICAL FORMULAE DETERMINED
+    </div>
+    <div class="col-xs-12 col-md-6"> 
+      <input type="text" class="individual-value individual-form" id="object_granulometryFormulae" placeholder="" value="{{details.methods.granulometry.formulae}}">
+    </div>
+
+    <div class="col-xs-12 col-md-6 individual-property granulometryInfluence">
+      SAMPLE HOLDER/PURITY INFLUENCE
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_granulometryInfluence" placeholder="(e.g. elements from pigment powder holder, binding media effects, etc.)" value="{{details.methods.granulometry.influence}}">
+    </div>
+
+    <div class="col-xs-12 col-md-6 individual-property granulometryColorValues">
+      COLOR SPACE VALUES
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_granulometryColorValues" placeholder="(e.g. CIE Lab, LCh, CIE XYZ, etc.)" value="{{details.methods.granulometry.colorValues}}">
+    </div>
+
+    <div class="col-xs-12 col-md-6 individual-property granulometryBands">
+      MAIN ROTATIONAL/VIBRATIONAL BANDS AND THEIR RELATIVE INTENSITIES
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_granulometryBands" placeholder="(e.g. Raman band wavenumbers (cm-1) for cerulean blue: 495m(sh), 534s, 674vs)" value="{{details.methods.granulometry.bands}}">
+    </div>
+
+    <div class="col-xs-12">
+      &nbsp;
+    </div>
+  </div>
+
+
+  <div class="row align-center">
+
+    <div class="col-xs-12 notes">Comments
+    </div>
+    <div class="col-sm-8 col-sm-offset-2">
+        <textarea class="" id="object_granulometryComments" name="sources" rows="4" placeholder="(e.g. additional info not covered by the points above)" value="{{details.methods.granulometry.notes.comments}}"></textarea>
+    </div>
+
+    <div class="col-xs-12">
+      &nbsp;
+    </div>
+  </div>
+
+  {{> files_methods_granulometry}}
+
+  <div class="row align-center">
+    <div class="col-xs-12 notes">Figure captions
+    </div>
+    <div class="col-sm-8 col-sm-offset-2">
+        <textarea class="" id="object_granulometryCaption" name="history" rows="4" placeholder="(e.g. additional info not covered by the points above)" value="{{details.methods.granulometry.notes.caption}}"></textarea>
+    </div>
+    <br/>
+  </div>
+</div>
+</template>

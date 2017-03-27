@@ -1,0 +1,88 @@
+<template name="method_techniques_colorimetry">
+<div class="toggle" id="object_toggle-colorimetry">
+  <div class="row align-center">
+    <div class="uderline-method">
+      <h4>colorimetry</h4>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 col-md-6 individual-property colorimetryExperimental">EXPERIMENTAL PARAMETERS
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_colorimetryExperimental" placeholder="(e.g. X-ray tube voltage, laser wavelength, air/vacuum, etc.)" value="{{details.methods.colorimetry.experimentalParameters}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property colorimetryElements">ELEMENTS DETERMINED
+    </div>
+    <div class="col-xs-12 col-md-6"> 
+      <input type="text" class="individual-value individual-form" id="object_colorimetryElements" placeholder="(e.g. cobalt blue, red ochre, indigo, etc.)" value="{{details.methods.colorimetry.elements}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property colorimetryFormulae">CHEMICAL FORMULAE DETERMINED
+    </div>
+    <div class="col-xs-12 col-md-6"> 
+      <input type="text" class="individual-value individual-form" id="object_colorimetryFormulae" placeholder="" value="{{details.methods.colorimetry.formulae}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property colorimetryPigmentsDyes">PIGMENTS/DYES IDENTIFIED
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_colorimetryPigmentsDyes" placeholder="" value="{{details.methods.colorimetry.pigmentsDyes}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property colorimetryPriming">PRIMING IDENTIFIED
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_colorimetryPriming" placeholder="" value="{{details.methods.colorimetry.priming}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property colorimetryBindingMedia">BINDING MEDIA IDENTIFIED
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_colorimetryBindingMedia" placeholder="" value="{{details.methods.colorimetry.bindingMedia}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property colorimetryVarnish">VARNISH IDENTIFIED
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_colorimetryVarnish" placeholder="" value="{{details.methods.colorimetry.varnish}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property colorimetryStretcherSupportStrainer">STRETCHER/SUPPORT/STRAINER IDENTIFIED
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_colorimetryStretcherSupportStrainer" placeholder="" value="{{details.methods.colorimetry.stretcherSupportStrainer}}">
+    </div>
+    <div class="col-xs-12">
+      &nbsp;
+    </div>
+  </div>
+  <div class="row align-center">
+    <div class="col-xs-12 notes">Brief info about possible multilayers/underpaintings/retouches
+    </div>
+    <div class="col-sm-8 col-sm-offset-2">
+        <textarea class="" id="object_colorimetryBrief" name="sources" rows="4" placeholder="(e.g. secondary effects from underlying signal sources)" value="{{details.methods.colorimetry.notes.brief}}"></textarea>
+    </div>
+    <div class="col-xs-12 notes">Comments
+    </div>
+    <div class="col-sm-8 col-sm-offset-2">
+        <textarea class="" id="object_colorimetryComments" name="sources" rows="4" placeholder="(e.g. additional info not covered by the points above)" value="{{details.methods.colorimetry.notes.comments}}"></textarea>
+    </div>
+    <div class="col-xs-12 notes">Sources
+    </div>
+    <div class="col-sm-8 col-sm-offset-2">
+        <textarea class="" id="object_colorimetrySources" name="sources" rows="4" placeholder="(literature)" value="{{details.methods.colorimetry.notes.sources}}"></textarea>
+    </div>
+    <div class="col-xs-12">
+      &nbsp;
+    </div>
+  </div>
+
+
+
+  {{> files_methods_colorimetry}}
+
+
+  <div class="row align-center">
+    <div class="col-xs-12 notes">Figure captions
+    </div>
+    <div class="col-sm-8 col-sm-offset-2">
+        <textarea class="" id="object_colorimetryCaption" name="history" rows="4" placeholder="(e.g. additional info not covered by the points above)" value="{{details.methods.colorimetry.notes.caption}}"></textarea>
+    </div>
+    <br/>
+  </div>
+</div>
+</template>

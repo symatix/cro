@@ -1,0 +1,88 @@
+<template name="method_techniques_vis">
+<div class="toggle" id="object_toggle-vis">
+  <div class="row align-center">
+    <div class="uderline-method">
+      <h4>vis</h4>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 col-md-6 individual-property visExperimental">EXPERIMENTAL PARAMETERS
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_visExperimental" placeholder="(e.g. X-ray tube voltage, laser wavelength, air/vacuum, etc.)" value="{{details.methods.vis.experimentalParameters}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property visElements">ELEMENTS DETERMINED
+    </div>
+    <div class="col-xs-12 col-md-6"> 
+      <input type="text" class="individual-value individual-form" id="object_visElements" placeholder="(e.g. cobalt blue, red ochre, indigo, etc.)" value="{{details.methods.vis.elements}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property visFormulae">CHEMICAL FORMULAE DETERMINED
+    </div>
+    <div class="col-xs-12 col-md-6"> 
+      <input type="text" class="individual-value individual-form" id="object_visFormulae" placeholder="" value="{{details.methods.vis.formulae}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property visPigmentsDyes">PIGMENTS/DYES IDENTIFIED
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_visPigmentsDyes" placeholder="" value="{{details.methods.vis.pigmentsDyes}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property visPriming">PRIMING IDENTIFIED
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_visPriming" placeholder="" value="{{details.methods.vis.priming}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property visBindingMedia">BINDING MEDIA IDENTIFIED
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_visBindingMedia" placeholder="" value="{{details.methods.vis.bindingMedia}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property visVarnish">VARNISH IDENTIFIED
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_visVarnish" placeholder="" value="{{details.methods.vis.varnish}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property visStretcherSupportStrainer">STRETCHER/SUPPORT/STRAINER IDENTIFIED
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_visStretcherSupportStrainer" placeholder="" value="{{details.methods.vis.stretcherSupportStrainer}}">
+    </div>
+    <div class="col-xs-12">
+      &nbsp;
+    </div>
+  </div>
+  <div class="row align-center">
+    <div class="col-xs-12 notes">Brief info about possible multilayers/underpaintings/retouches
+    </div>
+    <div class="col-sm-8 col-sm-offset-2">
+        <textarea class="" id="object_visBrief" name="sources" rows="4" placeholder="(e.g. secondary effects from underlying signal sources)" value="{{details.methods.vis.notes.brief}}"></textarea>
+    </div>
+    <div class="col-xs-12 notes">Comments
+    </div>
+    <div class="col-sm-8 col-sm-offset-2">
+        <textarea class="" id="object_visComments" name="sources" rows="4" placeholder="(e.g. additional info not covered by the points above)" value="{{details.methods.vis.notes.comments}}"></textarea>
+    </div>
+    <div class="col-xs-12 notes">Sources
+    </div>
+    <div class="col-sm-8 col-sm-offset-2">
+        <textarea class="" id="object_visSources" name="sources" rows="4" placeholder="(literature)" value="{{details.methods.vis.notes.sources}}"></textarea>
+    </div>
+    <div class="col-xs-12">
+      &nbsp;
+    </div>
+  </div>
+
+
+
+  {{> files_methods_vis}}
+
+
+  <div class="row align-center">
+    <div class="col-xs-12 notes">Figure captions
+    </div>
+    <div class="col-sm-8 col-sm-offset-2">
+        <textarea class="" id="object_visCaption" name="history" rows="4" placeholder="(e.g. additional info not covered by the points above)" value="{{details.methods.vis.notes.caption}}"></textarea>
+    </div>
+    <br/>
+  </div>
+</div>
+</template>

@@ -1,0 +1,103 @@
+<template name="files_methods_semSemEdx">
+<div class="row align-center">
+<div class="col-xs-12">
+  <h3>upload VIS/GL/UVF/IRP/RTG/SEM/spectrum photo</h3>
+</div>
+</div>
+<div class="row">
+  <div class="col-xs-12 col-sm-2 individual-property">PHOTO ONE
+  </div>
+  <div class="col-xs-12 col-sm-4">
+    <label for="semSemEdxFiles1_label" class="upload_label" id="upload_semSemEdxFiles1">(.jpg or .tiff, max size 5 mb)</label>
+    <input class="individual-data-value" type="file" id="semSemEdxFiles1_label">
+  </div>
+  <div class="col-xs-12 col-sm-2 individual-property"> PHOTO TWO
+  </div>
+  <div class="col-xs-12 col-sm-4">
+    <label for="semSemEdxFiles2_label" class="upload_label" id="upload_semSemEdxFiles2">(.jpg or .tiff, max size 5 mb)</label>
+    <input class="individual-data-value" type="file" id="semSemEdxFiles2_label">
+  </div>
+  <div class="col-xs-12 col-sm-2 individual-property"> PHOTO THREE
+  </div>
+  <div class="col-xs-12 col-sm-4">
+    <label for="semSemEdxFiles3_label" class="upload_label" id="upload_semSemEdxFiles3">(.jpg or .tiff, max size 5 mb)</label>
+    <input class="individual-data-value" type="file" id="semSemEdxFiles3_label">
+  </div>
+  <div class="col-xs-12 col-sm-2 individual-property"> PHOTO FOUR
+  </div>
+  <div class="col-xs-12 col-sm-4">
+    <label for="semSemEdxFiles4_label" class="upload_label" id="upload_semSemEdxFiles4">(.jpg or .tiff, max size 5 mb)</label>
+    <input class="individual-data-value" type="file" id="semSemEdxFiles4_label">
+  </div>
+  <div class="col-xs-12 col-sm-8 individual-property"> UPLOAD RELEVANT FILES (e.g. treatment documentation, conservation report, etc.)
+  </div>
+  <div class="col-xs-12 col-sm-4">
+    <label for="semSemEdxFiles5_label" class="upload_label" id="upload_semSemEdxFiles5">(.zip)</label>
+    <input class="individual-data-value" type="file" id="semSemEdxFiles5_label">
+  </div>
+  <div class="col-xs-12">
+    &nbsp;
+  </div>
+</div>
+
+<!-- hidden part1 -->
+<div class="semSemEdxFiles1 hidden">
+  <div class="individual-property">URL
+    <input type="text" class="individual-value individual-form" id="semSemEdxFiles1" placeholder="" value="{{details.methods.semSemEdx.files.semSemEdxFiles1}}">
+  </div>
+</div>
+<div class="semSemEdxFiles1_id hidden">
+  <div class="individual-property">ID
+    <input type="text" class="individual-value individual-form" id="semSemEdxFiles1_id" placeholder="" value="{{details.methods.semSemEdx.files.semSemEdxFiles1_id}}">
+  </div>
+</div>
+<!-- /hidden part1 -->
+<!-- hidden part 2-->
+<div class="semSemEdxFiles2 hidden">
+  <div class="individual-property">URL
+    <input type="text" class="individual-value individual-form" id="semSemEdxFiles2" placeholder="" value="{{details.methods.semSemEdx.files.semSemEdxFiles2}}">
+  </div>
+</div>
+<div class="semSemEdxFiles2_id hidden">
+  <div class="individual-property">ID
+    <input type="text" class="individual-value individual-form" id="semSemEdxFiles2_id" placeholder="" value="{{details.methods.semSemEdx.files.semSemEdxFiles2_id}}">
+  </div>
+</div>
+<!-- /hidden part 2-->
+<!-- hidden part 3-->
+<div class="semSemEdxFiles3 hidden">
+  <div class="individual-property">URL
+    <input type="text" class="individual-value individual-form" id="semSemEdxFiles3" placeholder="" value="{{details.methods.semSemEdx.files.semSemEdxFiles3}}">
+  </div>
+</div>
+<div class="semSemEdxFiles3_id hidden">
+  <div class="individual-property">ID
+    <input type="text" class="individual-value individual-form" id="semSemEdxFiles3_id" placeholder="" value="{{details.methods.semSemEdx.files.semSemEdxFiles3_id}}">
+  </div>
+</div>
+<!-- / hidden part 3-->
+<!-- hidden part4 -->
+<div class="semSemEdxFiles4 hidden">
+  <div class="individual-property">URL
+    <input type="text" class="individual-value individual-form" id="semSemEdxFiles4" placeholder="" value="{{details.methods.semSemEdx.files.semSemEdxFiles4}}">
+  </div>
+</div>
+<div class="semSemEdxFiles4_id hidden">
+  <div class="individual-property">ID
+    <input type="text" class="individual-value individual-form" id="semSemEdxFiles4_id" placeholder="" value="{{details.methods.semSemEdx.files.semSemEdxFiles4_id}}">
+  </div>
+</div>
+<!-- / hidden part4 -->
+<!-- hidden part 5-->
+<div class="semSemEdxFiles5 hidden">
+  <div class="individual-property">URL
+    <input type="text" class="individual-value individual-form" id="semSemEdxFiles5" placeholder="" value="{{details.methods.semSemEdx.files.semSemEdxFiles5}}">
+  </div>
+</div>
+<div class="semSemEdxFiles5_id hidden">
+  <div class="individual-property">ID
+    <input type="text" class="individual-value individual-form" id="semSemEdxFiles5_id" placeholder="" value="{{details.methods.semSemEdx.files.semSemEdxFiles5_id}}">
+  </div>
+</div>
+<!-- /hidden part 5-->
+</template>

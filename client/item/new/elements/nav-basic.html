@@ -1,0 +1,71 @@
+<template name="basic_nav">
+    <ul class="nav nav-tabs nav-justified" role="tablist" id="form-basic-select">
+        <li role="presentation">
+            <a class="a-heading-tab" href="#objectTypeForm" aria-controls="objectTypeForm" role="tab" data-toggle="tab">
+                Painting<br/>&nbsp;
+            </a>
+            <input type="checkbox" name="type" value="Painting" class="objectType hidden" id="item_painting">
+        </li>
+
+        <li role="presentation">
+            <a class="a-heading-tab" href="#objectTypeForm" aria-controls="objectTypeForm" role="tab" data-toggle="tab">
+                Sculpture<br/>&nbsp;
+            </a>
+            <input type="checkbox" name="type" value="Sculpture" class="objectType hidden" id="item-sculpture">
+        </li>
+
+        <li role="presentation">
+            <a class="a-heading-tab" href="#objectTypeForm" aria-controls="objectTypeForm" role="tab" data-toggle="tab">
+                Architectural heritage
+            </a>
+            <input type="checkbox" name="type" value="Architectural heritage" class="objectType hidden" id="item-architectural-heritage">
+        </li>
+
+        <li role="presentation">
+            <a class="a-heading-tab" href="#objectTypeForm" aria-controls="objectTypeForm" role="tab" data-toggle="tab">
+                Archival object
+            </a>
+            <input type="checkbox" name="type" value="Archival object" class="objectType hidden" id="item-archival-object">
+        </li>
+
+        <li role="presentation">
+            <a class="a-heading-tab" href="#objectTypeForm" aria-controls="objectTypeForm" role="tab" data-toggle="tab">
+                Archaeological object
+            </a>
+            <input type="checkbox" name="type" value="Archaeological object" class="objectType hidden" id="item-archaeological">
+        </li>
+
+        <li role="presentation">
+            <a class="a-heading-tab" href="#objectTypeForm" aria-controls="objectTypeForm" role="tab" data-toggle="tab">
+                Sample/cross-section
+            </a>
+            <input type="checkbox" name="type" value="Sample/cross-section" class="objectType hidden" id="item-sample-crosssection">
+        </li>
+
+        <li role="presentation">
+            <a class="a-heading-tab" href="#objectTypeForm" aria-controls="objectTypeForm" role="tab" data-toggle="tab">
+                Pigment/dye/binder/varnish/<br/>reference materials
+            </a>
+            <input type="checkbox" name="type" value="Pigment/dye/binder/varnish/reference materials" class="objectType hidden" id="item-pigment-dye-binder">
+        </li>
+
+        <li role="presentation">
+            <a class="a-heading-tab" href="#objectTypeForm" aria-controls="objectTypeForm" role="tab" data-toggle="tab">
+                Other<br/>&nbsp;
+            </a>
+            <input type="checkbox" name="type" value="other" class="objectType hidden" id="item-other">
+        </li>
+    </ul>
+    
+        <!-- does not work on template events - drity hack, but works oooooohhhhh yeaaa -->
+    <script>
+    $('#form-basic-select li').click(function (e) {
+        e.preventDefault();
+        $(this).find('a').tab('show');
+     // $(this).tab('show');
+         $(this).closest('ul').find('input[type="checkbox"]').prop('checked','');
+         $(this).closest('li').find('input[type="checkbox"]').prop('checked','checked');
+       
+    });
+    </script>
+</template>

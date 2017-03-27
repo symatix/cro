@@ -1,0 +1,103 @@
+<template name="files_methods_uvf">
+<div class="row align-center">
+<div class="col-xs-12">
+  <h3>upload VIS/GL/UVF/IRP/RTG/SEM/spectrum photo</h3>
+</div>
+</div>
+<div class="row">
+  <div class="col-xs-12 col-sm-2 individual-property">PHOTO ONE
+  </div>
+  <div class="col-xs-12 col-sm-4">
+    <label for="uvfFiles1_label" class="upload_label" id="upload_uvfFiles1">(.jpg or .tiff, max size 5 mb)</label>
+    <input class="individual-data-value" type="file" id="uvfFiles1_label">
+  </div>
+  <div class="col-xs-12 col-sm-2 individual-property"> PHOTO TWO
+  </div>
+  <div class="col-xs-12 col-sm-4">
+    <label for="uvfFiles2_label" class="upload_label" id="upload_uvfFiles2">(.jpg or .tiff, max size 5 mb)</label>
+    <input class="individual-data-value" type="file" id="uvfFiles2_label">
+  </div>
+  <div class="col-xs-12 col-sm-2 individual-property"> PHOTO THREE
+  </div>
+  <div class="col-xs-12 col-sm-4">
+    <label for="uvfFiles3_label" class="upload_label" id="upload_uvfFiles3">(.jpg or .tiff, max size 5 mb)</label>
+    <input class="individual-data-value" type="file" id="uvfFiles3_label">
+  </div>
+  <div class="col-xs-12 col-sm-2 individual-property"> PHOTO FOUR
+  </div>
+  <div class="col-xs-12 col-sm-4">
+    <label for="uvfFiles4_label" class="upload_label" id="upload_uvfFiles4">(.jpg or .tiff, max size 5 mb)</label>
+    <input class="individual-data-value" type="file" id="uvfFiles4_label">
+  </div>
+  <div class="col-xs-12 col-sm-8 individual-property"> UPLOAD RELEVANT FILES (e.g. treatment documentation, conservation report, etc.)
+  </div>
+  <div class="col-xs-12 col-sm-4">
+    <label for="uvfFiles5_label" class="upload_label" id="upload_uvfFiles5">(.zip)</label>
+    <input class="individual-data-value" type="file" id="uvfFiles5_label">
+  </div>
+  <div class="col-xs-12">
+    &nbsp;
+  </div>
+</div>
+
+<!-- hidden part1 -->
+<div class="uvfFiles1 hidden">
+  <div class="individual-property">URL
+    <input type="text" class="individual-value individual-form" id="uvfFiles1" placeholder="" value="{{details.methods.uvf.files.uvfFiles1}}">
+  </div>
+</div>
+<div class="uvfFiles1_id hidden">
+  <div class="individual-property">ID
+    <input type="text" class="individual-value individual-form" id="uvfFiles1_id" placeholder="" value="{{details.methods.uvf.files.uvfFiles1_id}}">
+  </div>
+</div>
+<!-- /hidden part1 -->
+<!-- hidden part 2-->
+<div class="uvfFiles2 hidden">
+  <div class="individual-property">URL
+    <input type="text" class="individual-value individual-form" id="uvfFiles2" placeholder="" value="{{details.methods.uvf.files.uvfFiles2}}">
+  </div>
+</div>
+<div class="uvfFiles2_id hidden">
+  <div class="individual-property">ID
+    <input type="text" class="individual-value individual-form" id="uvfFiles2_id" placeholder="" value="{{details.methods.uvf.files.uvfFiles2_id}}">
+  </div>
+</div>
+<!-- /hidden part 2-->
+<!-- hidden part 3-->
+<div class="uvfFiles3 hidden">
+  <div class="individual-property">URL
+    <input type="text" class="individual-value individual-form" id="uvfFiles3" placeholder="" value="{{details.methods.uvf.files.uvfFiles3}}">
+  </div>
+</div>
+<div class="uvfFiles3_id hidden">
+  <div class="individual-property">ID
+    <input type="text" class="individual-value individual-form" id="uvfFiles3_id" placeholder="" value="{{details.methods.uvf.files.uvfFiles3_id}}">
+  </div>
+</div>
+<!-- / hidden part 3-->
+<!-- hidden part4 -->
+<div class="uvfFiles4 hidden">
+  <div class="individual-property">URL
+    <input type="text" class="individual-value individual-form" id="uvfFiles4" placeholder="" value="{{details.methods.uvf.files.uvfFiles4}}">
+  </div>
+</div>
+<div class="uvfFiles4_id hidden">
+  <div class="individual-property">ID
+    <input type="text" class="individual-value individual-form" id="uvfFiles4_id" placeholder="" value="{{details.methods.uvf.files.uvfFiles4_id}}">
+  </div>
+</div>
+<!-- / hidden part4 -->
+<!-- hidden part 5-->
+<div class="uvfFiles5 hidden">
+  <div class="individual-property">URL
+    <input type="text" class="individual-value individual-form" id="uvfFiles5" placeholder="" value="{{details.methods.uvf.files.uvfFiles5}}">
+  </div>
+</div>
+<div class="uvfFiles5_id hidden">
+  <div class="individual-property">ID
+    <input type="text" class="individual-value individual-form" id="uvfFiles5_id" placeholder="" value="{{details.methods.uvf.files.uvfFiles5_id}}">
+  </div>
+</div>
+<!-- /hidden part 5-->
+</template>

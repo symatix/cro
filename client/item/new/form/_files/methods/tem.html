@@ -1,0 +1,103 @@
+<template name="files_methods_tem">
+<div class="row align-center">
+<div class="col-xs-12">
+  <h3>upload VIS/GL/UVF/IRP/RTG/SEM/spectrum photo</h3>
+</div>
+</div>
+<div class="row">
+  <div class="col-xs-12 col-sm-2 individual-property">PHOTO ONE
+  </div>
+  <div class="col-xs-12 col-sm-4">
+    <label for="temFiles1_label" class="upload_label" id="upload_temFiles1">(.jpg or .tiff, max size 5 mb)</label>
+    <input class="individual-data-value" type="file" id="temFiles1_label">
+  </div>
+  <div class="col-xs-12 col-sm-2 individual-property"> PHOTO TWO
+  </div>
+  <div class="col-xs-12 col-sm-4">
+    <label for="temFiles2_label" class="upload_label" id="upload_temFiles2">(.jpg or .tiff, max size 5 mb)</label>
+    <input class="individual-data-value" type="file" id="temFiles2_label">
+  </div>
+  <div class="col-xs-12 col-sm-2 individual-property"> PHOTO THREE
+  </div>
+  <div class="col-xs-12 col-sm-4">
+    <label for="temFiles3_label" class="upload_label" id="upload_temFiles3">(.jpg or .tiff, max size 5 mb)</label>
+    <input class="individual-data-value" type="file" id="temFiles3_label">
+  </div>
+  <div class="col-xs-12 col-sm-2 individual-property"> PHOTO FOUR
+  </div>
+  <div class="col-xs-12 col-sm-4">
+    <label for="temFiles4_label" class="upload_label" id="upload_temFiles4">(.jpg or .tiff, max size 5 mb)</label>
+    <input class="individual-data-value" type="file" id="temFiles4_label">
+  </div>
+  <div class="col-xs-12 col-sm-8 individual-property"> UPLOAD RELEVANT FILES (e.g. treatment documentation, conservation report, etc.)
+  </div>
+  <div class="col-xs-12 col-sm-4">
+    <label for="temFiles5_label" class="upload_label" id="upload_temFiles5">(.zip)</label>
+    <input class="individual-data-value" type="file" id="temFiles5_label">
+  </div>
+  <div class="col-xs-12">
+    &nbsp;
+  </div>
+</div>
+
+<!-- hidden part1 -->
+<div class="temFiles1 hidden">
+  <div class="individual-property">URL
+    <input type="text" class="individual-value individual-form" id="temFiles1" placeholder="" value="{{details.methods.tem.files.temFiles1}}">
+  </div>
+</div>
+<div class="temFiles1_id hidden">
+  <div class="individual-property">ID
+    <input type="text" class="individual-value individual-form" id="temFiles1_id" placeholder="" value="{{details.methods.tem.files.temFiles1_id}}">
+  </div>
+</div>
+<!-- /hidden part1 -->
+<!-- hidden part 2-->
+<div class="temFiles2 hidden">
+  <div class="individual-property">URL
+    <input type="text" class="individual-value individual-form" id="temFiles2" placeholder="" value="{{details.methods.tem.files.temFiles2}}">
+  </div>
+</div>
+<div class="temFiles2_id hidden">
+  <div class="individual-property">ID
+    <input type="text" class="individual-value individual-form" id="temFiles2_id" placeholder="" value="{{details.methods.tem.files.temFiles2_id}}">
+  </div>
+</div>
+<!-- /hidden part 2-->
+<!-- hidden part 3-->
+<div class="temFiles3 hidden">
+  <div class="individual-property">URL
+    <input type="text" class="individual-value individual-form" id="temFiles3" placeholder="" value="{{details.methods.tem.files.temFiles3}}">
+  </div>
+</div>
+<div class="temFiles3_id hidden">
+  <div class="individual-property">ID
+    <input type="text" class="individual-value individual-form" id="temFiles3_id" placeholder="" value="{{details.methods.tem.files.temFiles3_id}}">
+  </div>
+</div>
+<!-- / hidden part 3-->
+<!-- hidden part4 -->
+<div class="temFiles4 hidden">
+  <div class="individual-property">URL
+    <input type="text" class="individual-value individual-form" id="temFiles4" placeholder="" value="{{details.methods.tem.files.temFiles4}}">
+  </div>
+</div>
+<div class="temFiles4_id hidden">
+  <div class="individual-property">ID
+    <input type="text" class="individual-value individual-form" id="temFiles4_id" placeholder="" value="{{details.methods.tem.files.temFiles4_id}}">
+  </div>
+</div>
+<!-- / hidden part4 -->
+<!-- hidden part 5-->
+<div class="temFiles5 hidden">
+  <div class="individual-property">URL
+    <input type="text" class="individual-value individual-form" id="temFiles5" placeholder="" value="{{details.methods.tem.files.temFiles5}}">
+  </div>
+</div>
+<div class="temFiles5_id hidden">
+  <div class="individual-property">ID
+    <input type="text" class="individual-value individual-form" id="temFiles5_id" placeholder="" value="{{details.methods.tem.files.temFiles5_id}}">
+  </div>
+</div>
+<!-- /hidden part 5-->
+</template>

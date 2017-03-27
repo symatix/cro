@@ -1,0 +1,188 @@
+<template name="method_techniques_view_aas">
+<div class="toggle" id="object_toggle-aas">
+  <div class="row">
+    <div class="uderline-method">
+      <h4>aas</h4>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 col-sm-7">
+        {{#if details.methods.aas.experimentalParameters}}
+          <div class="author">
+            <div class="individual-property-display">Experimental parameters:<br/>
+              <div class="individual-value-display">{{details.methods.aas.experimentalParameters}}</div>
+            </div>
+          </div>
+          {{/if}}
+        {{#if details.methods.aas.elements}}
+          <div class="author">
+            <div class="individual-property-display">Elements determined:<br/>
+              <div class="individual-value-display">{{details.methods.aas.elements}}</div>
+            </div>
+          </div>
+          {{/if}}
+        {{#if details.methods.aas.formulae}}
+          <div class="author">
+            <div class="individual-property-display">Chemical formulae determined:<br/>
+              <div class="individual-value-display">{{details.methods.aas.formulae}}</div>
+            </div>
+          </div>
+          {{/if}}
+        {{#if details.methods.aas.quantification}}
+          <div class="author">
+            <div class="individual-property-display">Quantification results:<br/>
+              <div class="individual-value-display">{{details.methods.aas.quantification}}</div>
+            </div>
+          </div>
+          {{/if}}
+        {{#if details.methods.aas.influence}}
+          <div class="author">
+            <div class="individual-property-display">Sample holder/purity influence:<br/>
+              <div class="individual-value-display">{{details.methods.aas.influence}}</div>
+            </div>
+          </div>
+          {{/if}}
+        {{#if details.methods.aas.colorValues}}
+          <div class="author">
+            <div class="individual-property-display">Color space values:<br/>
+              <div class="individual-value-display">{{details.methods.aas.colorValues}}</div>
+            </div>
+          </div>
+          {{/if}}
+        {{#if details.methods.aas.bands}}
+          <div class="author">
+            <div class="individual-property-display">Main rotational/vibrational bands and their relative intensities:<br/>
+              <div class="individual-value-display">{{details.methods.aas.bands}}</div>
+            </div>
+          </div>
+          {{/if}}
+        {{#if details.methods.aas.pigmentsDyes}}
+          <div class="author">
+            <div class="individual-property-display">Pigments/dyes identified:<br/>
+              <div class="individual-value-display">{{details.methods.aas.pigmentsDyes}}</div>
+            </div>
+          </div>
+          {{/if}}
+        {{#if details.methods.aas.priming}}
+          <div class="author">
+            <div class="individual-property-display">Priming identified:<br/>
+              <div class="individual-value-display">{{details.methods.aas.priming}}</div>
+            </div>
+          </div>
+          {{/if}}
+        {{#if details.methods.aas.bindingMedia}}
+          <div class="author">
+            <div class="individual-property-display">Binding media identified:<br/>
+              <div class="individual-value-display">{{details.methods.aas.bindingMedia}}</div>
+            </div>
+          </div>
+          {{/if}}
+        {{#if details.methods.aas.varnish}}
+          <div class="author">
+            <div class="individual-property-display">Varnish identified:<br/>
+              <div class="individual-value-display">{{details.methods.aas.varnish}}</div>
+            </div>
+          </div>
+          {{/if}}
+        {{#if details.methods.aas.stretcherSupportStrainer}}
+          <div class="author">
+            <div class="individual-property-display">Stretcher/support/strainer identified:<br/>
+              <div class="individual-value-display">{{details.methods.aas.stretcherSupportStrainer}}</div>
+            </div>
+          </div>
+          {{/if}}
+        {{#if details.methods.aas.stretcherSupportStrainer}}
+          <div class="author">
+            <div class="individual-property-display">Stretcher/support/strainer identified:<br/>
+              <div class="individual-value-display">{{details.methods.aas.stretcherSupportStrainer}}</div>
+            </div>
+          </div>
+          {{/if}}
+        </div>
+
+
+<!-- images -->
+      {{#if originalObj}}
+        <div class="col-xs-12 col-sm-5 add-bottom-space">    
+          <div class="row img-box align-center">
+            {{#if details.methods.aas.files.aasFiles1}}
+            <div class="col-xs-6">
+            <h4>&nbsp;</h4>
+              <img class="img-materials-sm" src="{{details.methods.aas.files.aasFiles1}}" data-toggle="modal" data-target="#thumb-modal-front">
+            </div>
+            {{/if}}
+            {{#if details.methods.aas.files.aasFiles2}}
+            <div class="col-xs-6">
+            <h4>&nbsp;</h4>
+              <img class="img-materials-sm" src="{{details.methods.aas.files.aasFiles2}}" data-toggle="modal" data-target="#thumb-modal-back">
+            </div>
+            {{/if}}
+            {{#if details.methods.aas.files.aasFiles3}}
+            <div class="col-xs-6">
+            <h4>&nbsp;</h4>
+              <img class="img-materials-sm" src="{{details.methods.aas.files.aasFiles3}}" data-toggle="modal" data-target="#thumb-modal-side">
+            </div>
+            {{/if}}
+            {{#if details.methods.aas.files.aasFiles4}}
+            <div class="col-xs-6">
+            <h4>&nbsp;</h4>
+              <img class="img-materials-sm" src="{{details.methods.aas.files.aasFiles4}}" data-toggle="modal" data-target="#thumb-modal-signature">
+            </div>
+            {{/if}}
+            {{#if details.methods.aas.notes.caption}}
+            <div class="col-xs-12">
+              <div class="figureCaption">
+                <div class="individual-property-display">Figure captions<br/> 
+                  <div class="individual-value-display">{{details.methods.aas.notes.caption}}</div>
+                </div>
+              </div>
+            </div>
+            {{/if}}
+          </div>
+        </div>
+      {{/if}}
+<!-- /images -->
+
+
+
+    <div class="col-xs-12">
+      &nbsp;
+    </div>
+
+  {{#if details.methods.aas.notes.brief}}
+  <div class="col-md-12 align-center">
+    <div class="samples">
+      <div class="individual-property-display">Brief info about possible multilayers/underpaintings/retouches:<br/>
+        <div class="individual-value-display">{{details.methods.aas.notes.brief}}</div>
+      </div>
+    </div>
+  </div>
+  {{/if}}
+  {{#if details.methods.aas.notes.comments}}
+  <div class="col-md-12 align-center">
+    <div class="artHistory">
+      <div class="individual-property-display">Comments:<br/>
+        <div class="individual-value-display">{{details.methods.aas.notes.comments}}</div>
+      </div>
+    </div>
+  </div>
+  {{/if}}
+  {{#if details.methods.aas.notes.sources}}
+  <div class="col-md-12 align-center">
+    <div class="artHistory">
+      <div class="individual-property-display">Sources:<br/>
+        <div class="individual-value-display">{{details.methods.aas.notes.sources}}</div>
+      </div>
+    </div>
+  </div>
+  {{/if}}
+  <div class="col-xs-12">
+    &nbsp;
+  </div>
+
+
+  </div>
+
+</div>
+
+</template>

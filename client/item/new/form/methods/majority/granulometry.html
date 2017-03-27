@@ -1,0 +1,88 @@
+<template name="method_techniques_granulometry">
+<div class="toggle" id="object_toggle-granulometry">
+  <div class="row align-center">
+    <div class="uderline-method">
+      <h4>granulometry</h4>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 col-md-6 individual-property granulometryExperimental">EXPERIMENTAL PARAMETERS
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_granulometryExperimental" placeholder="(e.g. X-ray tube voltage, laser wavelength, air/vacuum, etc.)" value="{{details.methods.granulometry.experimentalParameters}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property granulometryElements">ELEMENTS DETERMINED
+    </div>
+    <div class="col-xs-12 col-md-6"> 
+      <input type="text" class="individual-value individual-form" id="object_granulometryElements" placeholder="(e.g. cobalt blue, red ochre, indigo, etc.)" value="{{details.methods.granulometry.elements}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property granulometryFormulae">CHEMICAL FORMULAE DETERMINED
+    </div>
+    <div class="col-xs-12 col-md-6"> 
+      <input type="text" class="individual-value individual-form" id="object_granulometryFormulae" placeholder="" value="{{details.methods.granulometry.formulae}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property granulometryPigmentsDyes">PIGMENTS/DYES IDENTIFIED
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_granulometryPigmentsDyes" placeholder="" value="{{details.methods.granulometry.pigmentsDyes}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property granulometryPriming">PRIMING IDENTIFIED
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_granulometryPriming" placeholder="" value="{{details.methods.granulometry.priming}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property granulometryBindingMedia">BINDING MEDIA IDENTIFIED
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_granulometryBindingMedia" placeholder="" value="{{details.methods.granulometry.bindingMedia}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property granulometryVarnish">VARNISH IDENTIFIED
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_granulometryVarnish" placeholder="" value="{{details.methods.granulometry.varnish}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property granulometryStretcherSupportStrainer">STRETCHER/SUPPORT/STRAINER IDENTIFIED
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_granulometryStretcherSupportStrainer" placeholder="" value="{{details.methods.granulometry.stretcherSupportStrainer}}">
+    </div>
+    <div class="col-xs-12">
+      &nbsp;
+    </div>
+  </div>
+  <div class="row align-center">
+    <div class="col-xs-12 notes">Brief info about possible multilayers/underpaintings/retouches
+    </div>
+    <div class="col-sm-8 col-sm-offset-2">
+        <textarea class="" id="object_granulometryBrief" name="sources" rows="4" placeholder="(e.g. secondary effects from underlying signal sources)" value="{{details.methods.granulometry.notes.brief}}"></textarea>
+    </div>
+    <div class="col-xs-12 notes">Comments
+    </div>
+    <div class="col-sm-8 col-sm-offset-2">
+        <textarea class="" id="object_granulometryComments" name="sources" rows="4" placeholder="(e.g. additional info not covered by the points above)" value="{{details.methods.granulometry.notes.comments}}"></textarea>
+    </div>
+    <div class="col-xs-12 notes">Sources
+    </div>
+    <div class="col-sm-8 col-sm-offset-2">
+        <textarea class="" id="object_granulometrySources" name="sources" rows="4" placeholder="(literature)" value="{{details.methods.granulometry.notes.sources}}"></textarea>
+    </div>
+    <div class="col-xs-12">
+      &nbsp;
+    </div>
+  </div>
+
+
+
+  {{> files_methods_granulometry}}
+
+
+  <div class="row align-center">
+    <div class="col-xs-12 notes">Figure captions
+    </div>
+    <div class="col-sm-8 col-sm-offset-2">
+        <textarea class="" id="object_granulometryCaption" name="history" rows="4" placeholder="(e.g. additional info not covered by the points above)" value="{{details.methods.granulometry.notes.caption}}"></textarea>
+    </div>
+    <br/>
+  </div>
+</div>
+</template>

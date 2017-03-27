@@ -1,0 +1,76 @@
+<template name="matherials_techniques_3">
+<div class="row">
+
+  <div class="col-xs-12 col-md-6 individual-property primingGround">
+    EXECUTOR OF TREATMENT
+  </div>
+  <div class="col-xs-12 col-md-6">
+    <input type="text" class="individual-value individual-form" id="executor" placeholder="" value="{{materials.restoration.executor}}">
+  </div>
+
+  <div class="col-xs-12 col-md-6 individual-property pigmentsDyes">
+    RESPONSIBLE PERSON/LEADER OF WORKS
+  </div>
+  <div class="col-xs-12 col-md-6"> 
+    <input type="text" class="individual-value individual-form" id="responsiblePerson" placeholder="" value="{{materials.restoration.responsiblePerson}}">
+  </div>
+
+  <div class="col-xs-12 col-md-6 individual-property additives">
+    INVESTOR
+  </div>
+  <div class="col-xs-12 col-md-6">
+    <input type="text" class="individual-value individual-form" id="investor" placeholder="" value="{{materials.restoration.investor}}">
+  </div>
+
+  <div class="col-xs-12 col-md-6 individual-property layerVarnish">
+    PEOPLE INVOLVED IN TREATMENT
+  </div>
+  <div class="col-xs-12 col-md-6"> 
+    <input type="text" class="individual-value individual-form" id="people" placeholder="" value="{{materials.restoration.people}}">
+  </div>
+
+  <div class="col-xs-12 col-md-6 individual-property periodStyle">
+    DATE/DURATION OF THE TREATMENT
+  </div>
+  <div class="col-xs-12 col-md-6">
+    <input type="text" class="individual-value individual-form" id="duration" placeholder="(mm/yyyy - mm/yyy)" value="{{materials.restoration.duration}}">
+  </div>
+
+  <div class="col-xs-12">
+    &nbsp;
+  </div>
+</div>
+
+<div class="row align-center">
+  <div class="col-xs-12 notes">
+    Processes in a chronological order
+  </div>
+  <div class="col-sm-8 col-sm-offset-2"> 
+    <textarea class="" name="chronologicalProcess" id="chronologicalProcess" rows="4" placeholder="" value="{{materials.restoration.chronologicalProcess}}"></textarea>
+  </div>
+
+  <div class="col-xs-12 notes">
+    Comments (additional info)
+  </div>
+  <div class="col-sm-8 col-sm-offset-2">
+      <textarea class="" id="comments3" name="comments3" rows="4" placeholder="(e.g. additional detailed info not covered by the points above)" value="{{materials.restoration.comments}}"></textarea>
+  </div>
+
+  <div class="col-xs-12">
+    &nbsp;
+  </div>
+</div>
+
+  {{> item_files_details_3}}
+
+  <div class="row align-center">
+    <div class="col-xs-12 notes">Figure captions
+    </div>
+    <div class="col-sm-8 col-sm-offset-2">
+        <textarea class="" id="figureCaption3" name="history" rows="4" placeholder="(explanation of the uploaded photos)" value="{{materials.restoration.figureCaption}}"></textarea>
+    </div>
+    <br/>
+  </div>
+
+
+</template>

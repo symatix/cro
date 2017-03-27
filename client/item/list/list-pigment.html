@@ -1,0 +1,102 @@
+<template name="pigment_list">
+  <div class="container-fluid">
+
+
+    <h1 class="breadcrumbs">{{#if currentUser}}{{currentUser.username}} } {{/if}}
+      <a class="a-heading" href="/">croARTia </a>
+    </h1>
+
+    <div class="container margin-top">
+      <div class="row">
+        <ul>
+      {{#EasySearch.Each index=pigmentIndex }}    
+
+              <li>
+      <div class="col-xs-12 col-sm-6" id="{{__originalId}}">
+      <div class="item-list">
+<!-- title of item list -->
+                  <div class="align-center item-list-heading item-heading">
+                      <span class="item-property">{{basic.title}}</span><br/>
+                  </div>
+                  <div class="row">
+                    <div class="col-xs-12 col-sm-6">
+                      <img class="img-list" id="img-front-{{__originalId}}" src="{{data.basic.front}}" data-toggle="modal" data-target="#thumb-modal">
+                    </div>
+                    <div class="col-xs-12 col-sm-6 list-font">
+                      <br/>
+                      <table>
+                        <tr>
+                          <td><i>Name:</i></td>
+                          <td>{{basic.title}}</td>
+                        </tr>
+                        <tr>
+                          <td><i>Appearence:</i></td>
+                          <td>{{basic.appearence}}</td>
+                        </tr>
+                        <!--
+                        {{#if basic.manufacturer}}
+                        <tr>
+                          <td><i>Common<br/>&emsp;name:</i></td>
+                          <td>{{basic.manufacturer}}</td>
+                        </tr>
+                        {{/if}}
+                        -->
+                        {{#if basic.pigmentType}}
+                        <tr>
+                          <td><i>Type:</i></td>
+                          <td>{{basic.pigmentType}}</td>
+                        </tr>
+                        {{/if}}
+                        {{#if basic.chemicalName}}
+                        <tr>
+                          <td><i>Chemical<br/>&emsp;name:</i></td>
+                          <td>{{basic.chemicalName}}</td>
+                        </tr>
+                        {{/if}}
+                        {{#if basic.purity}}
+                        <tr>
+                          <td><i>Purity:</i></td>
+                          <td>{{basic.purity}}</td>
+                        </tr>
+                        {{/if}}
+                      </table>
+                    </div>
+                    <div class="align-center col-xs-12">
+                      <a href="/gallery/details/{{__originalId}}">
+                        <button class="btn btn-submit js-public-details">DETAILS</button>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+            </div>
+              </li>
+      {{/EasySearch.Each}}
+            </ul>
+          </div>
+      {{> EasySearch.LoadMore attributes=loadBtn index=pigmentIndex content="Load more content"}}
+                      {{#EasySearch.IfNoResults index=pigmentIndex}}
+                        <div class="no-search">No results found!</div>
+                      {{/EasySearch.IfNoResults}}
+    </div>
+  </div>
+
+
+
+      <!-- modal -->
+      <div class="modal fade" id="thumb-modal" role="dialog">
+        <div class="modal-dialog">
+          <div class="modal-content modal-div">
+
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title"></h4>
+            </div>
+            <div class="modal-body align-center">
+              <img class="img-modal">
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+</template>

@@ -1,0 +1,103 @@
+<template name="files_methods_xrf">
+<div class="row align-center">
+<div class="col-xs-12">
+  <h3>upload VIS/GL/UVF/IRP/RTG/SEM/spectrum photo</h3>
+</div>
+</div>
+<div class="row">
+  <div class="col-xs-12 col-sm-2 individual-property">PHOTO ONE
+  </div>
+  <div class="col-xs-12 col-sm-4">
+    <label for="xrfFiles1_label" class="upload_label" id="upload_xrfFiles1">(.jpg or .tiff, max size 5 mb)</label>
+    <input class="individual-data-value" type="file" id="xrfFiles1_label">
+  </div>
+  <div class="col-xs-12 col-sm-2 individual-property"> PHOTO TWO
+  </div>
+  <div class="col-xs-12 col-sm-4">
+    <label for="xrfFiles2_label" class="upload_label" id="upload_xrfFiles2">(.jpg or .tiff, max size 5 mb)</label>
+    <input class="individual-data-value" type="file" id="xrfFiles2_label">
+  </div>
+  <div class="col-xs-12 col-sm-2 individual-property"> PHOTO THREE
+  </div>
+  <div class="col-xs-12 col-sm-4">
+    <label for="xrfFiles3_label" class="upload_label" id="upload_xrfFiles3">(.jpg or .tiff, max size 5 mb)</label>
+    <input class="individual-data-value" type="file" id="xrfFiles3_label">
+  </div>
+  <div class="col-xs-12 col-sm-2 individual-property"> PHOTO FOUR
+  </div>
+  <div class="col-xs-12 col-sm-4">
+    <label for="xrfFiles4_label" class="upload_label" id="upload_xrfFiles4">(.jpg or .tiff, max size 5 mb)</label>
+    <input class="individual-data-value" type="file" id="xrfFiles4_label">
+  </div>
+  <div class="col-xs-12 col-sm-8 individual-property"> UPLOAD RELEVANT FILES (e.g. treatment documentation, conservation report, etc.)
+  </div>
+  <div class="col-xs-12 col-sm-4">
+    <label for="xrfFiles5_label" class="upload_label" id="upload_xrfFiles5">(.zip)</label>
+    <input class="individual-data-value" type="file" id="xrfFiles5_label">
+  </div>
+  <div class="col-xs-12">
+    &nbsp;
+  </div>
+</div>
+
+<!-- hidden part1 -->
+<div class="xrfFiles1 hidden">
+  <div class="individual-property">URL
+    <input type="text" class="individual-value individual-form" id="xrfFiles1" placeholder="" value="{{details.methods.xrf.files.xrfFiles1}}">
+  </div>
+</div>
+<div class="xrfFiles1_id hidden">
+  <div class="individual-property">ID
+    <input type="text" class="individual-value individual-form" id="xrfFiles1_id" placeholder="" value="{{details.methods.xrf.files.xrfFiles1_id}}">
+  </div>
+</div>
+<!-- /hidden part1 -->
+<!-- hidden part 2-->
+<div class="xrfFiles2 hidden">
+  <div class="individual-property">URL
+    <input type="text" class="individual-value individual-form" id="xrfFiles2" placeholder="" value="{{details.methods.xrf.files.xrfFiles2}}">
+  </div>
+</div>
+<div class="xrfFiles2_id hidden">
+  <div class="individual-property">ID
+    <input type="text" class="individual-value individual-form" id="xrfFiles2_id" placeholder="" value="{{details.methods.xrf.files.xrfFiles2_id}}">
+  </div>
+</div>
+<!-- /hidden part 2-->
+<!-- hidden part 3-->
+<div class="xrfFiles3 hidden">
+  <div class="individual-property">URL
+    <input type="text" class="individual-value individual-form" id="xrfFiles3" placeholder="" value="{{details.methods.xrf.files.xrfFiles3}}">
+  </div>
+</div>
+<div class="xrfFiles3_id hidden">
+  <div class="individual-property">ID
+    <input type="text" class="individual-value individual-form" id="xrfFiles3_id" placeholder="" value="{{details.methods.xrf.files.xrfFiles3_id}}">
+  </div>
+</div>
+<!-- / hidden part 3-->
+<!-- hidden part4 -->
+<div class="xrfFiles4 hidden">
+  <div class="individual-property">URL
+    <input type="text" class="individual-value individual-form" id="xrfFiles4" placeholder="" value="{{details.methods.xrf.files.xrfFiles4}}">
+  </div>
+</div>
+<div class="xrfFiles4_id hidden">
+  <div class="individual-property">ID
+    <input type="text" class="individual-value individual-form" id="xrfFiles4_id" placeholder="" value="{{details.methods.xrf.files.xrfFiles4_id}}">
+  </div>
+</div>
+<!-- / hidden part4 -->
+<!-- hidden part 5-->
+<div class="xrfFiles5 hidden">
+  <div class="individual-property">URL
+    <input type="text" class="individual-value individual-form" id="xrfFiles5" placeholder="" value="{{details.methods.xrf.files.xrfFiles5}}">
+  </div>
+</div>
+<div class="xrfFiles5_id hidden">
+  <div class="individual-property">ID
+    <input type="text" class="individual-value individual-form" id="xrfFiles5_id" placeholder="" value="{{details.methods.xrf.files.xrfFiles5_id}}">
+  </div>
+</div>
+<!-- /hidden part 5-->
+</template>

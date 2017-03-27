@@ -1,0 +1,103 @@
+<template name="files_methods_analysis">
+<div class="row align-center">
+<div class="col-xs-12">
+  <h3>upload VIS/GL/UVF/IRP/RTG/SEM/spectrum photo</h3>
+</div>
+</div>
+<div class="row">
+  <div class="col-xs-12 col-sm-2 individual-property">PHOTO ONE
+  </div>
+  <div class="col-xs-12 col-sm-4">
+    <label for="analysisFiles1_label" class="upload_label" id="upload_analysisFiles1">(.jpg or .tiff, max size 5 mb)</label>
+    <input class="individual-data-value" type="file" id="analysisFiles1_label">
+  </div>
+  <div class="col-xs-12 col-sm-2 individual-property"> PHOTO TWO
+  </div>
+  <div class="col-xs-12 col-sm-4">
+    <label for="analysisFiles2_label" class="upload_label" id="upload_analysisFiles2">(.jpg or .tiff, max size 5 mb)</label>
+    <input class="individual-data-value" type="file" id="analysisFiles2_label">
+  </div>
+  <div class="col-xs-12 col-sm-2 individual-property"> PHOTO THREE
+  </div>
+  <div class="col-xs-12 col-sm-4">
+    <label for="analysisFiles3_label" class="upload_label" id="upload_analysisFiles3">(.jpg or .tiff, max size 5 mb)</label>
+    <input class="individual-data-value" type="file" id="analysisFiles3_label">
+  </div>
+  <div class="col-xs-12 col-sm-2 individual-property"> PHOTO FOUR
+  </div>
+  <div class="col-xs-12 col-sm-4">
+    <label for="analysisFiles4_label" class="upload_label" id="upload_analysisFiles4">(.jpg or .tiff, max size 5 mb)</label>
+    <input class="individual-data-value" type="file" id="analysisFiles4_label">
+  </div>
+  <div class="col-xs-12 col-sm-8 individual-property"> UPLOAD RELEVANT FILES (e.g. treatment documentation, conservation report, etc.)
+  </div>
+  <div class="col-xs-12 col-sm-4">
+    <label for="analysisFiles5_label" class="upload_label" id="upload_analysisFiles5">(.zip)</label>
+    <input class="individual-data-value" type="file" id="analysisFiles5_label">
+  </div>
+  <div class="col-xs-12">
+    &nbsp;
+  </div>
+</div>
+
+<!-- hidden part1 -->
+<div class="analysisFiles1 hidden">
+  <div class="individual-property">URL
+    <input type="text" class="individual-value individual-form" id="analysisFiles1" placeholder="" value="{{details.methods.analysis.files.analysisFiles1}}">
+  </div>
+</div>
+<div class="analysisFiles1_id hidden">
+  <div class="individual-property">ID
+    <input type="text" class="individual-value individual-form" id="analysisFiles1_id" placeholder="" value="{{details.methods.analysis.files.analysisFiles1_id}}">
+  </div>
+</div>
+<!-- /hidden part1 -->
+<!-- hidden part 2-->
+<div class="analysisFiles2 hidden">
+  <div class="individual-property">URL
+    <input type="text" class="individual-value individual-form" id="analysisFiles2" placeholder="" value="{{details.methods.analysis.files.analysisFiles2}}">
+  </div>
+</div>
+<div class="analysisFiles2_id hidden">
+  <div class="individual-property">ID
+    <input type="text" class="individual-value individual-form" id="analysisFiles2_id" placeholder="" value="{{details.methods.analysis.files.analysisFiles2_id}}">
+  </div>
+</div>
+<!-- /hidden part 2-->
+<!-- hidden part 3-->
+<div class="analysisFiles3 hidden">
+  <div class="individual-property">URL
+    <input type="text" class="individual-value individual-form" id="analysisFiles3" placeholder="" value="{{details.methods.analysis.files.analysisFiles3}}">
+  </div>
+</div>
+<div class="analysisFiles3_id hidden">
+  <div class="individual-property">ID
+    <input type="text" class="individual-value individual-form" id="analysisFiles3_id" placeholder="" value="{{details.methods.analysis.files.analysisFiles3_id}}">
+  </div>
+</div>
+<!-- / hidden part 3-->
+<!-- hidden part4 -->
+<div class="analysisFiles4 hidden">
+  <div class="individual-property">URL
+    <input type="text" class="individual-value individual-form" id="analysisFiles4" placeholder="" value="{{details.methods.analysis.files.analysisFiles4}}">
+  </div>
+</div>
+<div class="analysisFiles4_id hidden">
+  <div class="individual-property">ID
+    <input type="text" class="individual-value individual-form" id="analysisFiles4_id" placeholder="" value="{{details.methods.analysis.files.analysisFiles4_id}}">
+  </div>
+</div>
+<!-- / hidden part4 -->
+<!-- hidden part 5-->
+<div class="analysisFiles5 hidden">
+  <div class="individual-property">URL
+    <input type="text" class="individual-value individual-form" id="analysisFiles5" placeholder="" value="{{details.methods.analysis.files.analysisFiles5}}">
+  </div>
+</div>
+<div class="analysisFiles5_id hidden">
+  <div class="individual-property">ID
+    <input type="text" class="individual-value individual-form" id="analysisFiles5_id" placeholder="" value="{{details.methods.analysis.files.analysisFiles5_id}}">
+  </div>
+</div>
+<!-- /hidden part 5-->
+</template>

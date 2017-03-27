@@ -1,0 +1,103 @@
+<template name="item_files_details_3">
+<div class="row align-center">
+<div class="col-xs-12">
+  <h3>files</h3>
+</div>
+</div>
+<div class="row">
+  <div class="col-xs-12 col-sm-2 individual-property">PHOTO ONE
+  </div>
+  <div class="col-xs-12 col-sm-4">
+    <label for="photoOne_label3" class="upload_label" id="upload_photoOne3">(.jpg or .tiff, max size 5 mb)</label>
+    <input class="individual-data-value" type="file" id="photoOne_label3">
+  </div>
+  <div class="col-xs-12 col-sm-2 individual-property"> PHOTO TWO
+  </div>
+  <div class="col-xs-12 col-sm-4">
+    <label for="photoTwo_label3" class="upload_label" id="upload_photoTwo3">(.jpg or .tiff, max size 5 mb)</label>
+    <input class="individual-data-value" type="file" id="photoTwo_label3">
+  </div>
+  <div class="col-xs-12 col-sm-2 individual-property"> PHOTO THREE
+  </div>
+  <div class="col-xs-12 col-sm-4">
+    <label for="photoThree_label3" class="upload_label" id="upload_photoThree3">(.jpg or .tiff, max size 5 mb)</label>
+    <input class="individual-data-value" type="file" id="photoThree_label3">
+  </div>
+  <div class="col-xs-12 col-sm-2 individual-property"> PHOTO FOUR
+  </div>
+  <div class="col-xs-12 col-sm-4">
+    <label for="photoFour_label3" class="upload_label" id="upload_photoFour3">(.jpg or .tiff, max size 5 mb)</label>
+    <input class="individual-data-value" type="file" id="photoFour_label3">
+  </div>
+  <div class="col-xs-12 col-sm-8 individual-property"> UPLOAD RELEVANT FILES (e.g. treatment documentation, conservation report, etc.)
+  </div>
+  <div class="col-xs-12 col-sm-4">
+    <label for="files_label3" class="upload_label" id="upload_files3">(.zip)</label>
+    <input class="individual-data-value" type="file" id="files_label3">
+  </div>
+  <div class="col-xs-12">
+    &nbsp;
+  </div>
+</div>
+
+<!-- hidden part1 -->
+<div class="photoOne hidden">
+  <div class="individual-property">URL
+    <input type="text" class="individual-value individual-form" id="photoOne3" placeholder="" value="{{data.restoration.photoOne}}">
+  </div>
+</div>
+<div class="photoOne_id hidden">
+  <div class="individual-property">ID
+    <input type="text" class="individual-value individual-form" id="photoOne3_id" placeholder="" value="{{data.restoration.photoOne_id}}">
+  </div>
+</div>
+<!-- /hidden part1 -->
+<!-- hidden part 2-->
+<div class="photoTwo hidden">
+  <div class="individual-property">URL
+    <input type="text" class="individual-value individual-form" id="photoTwo3" placeholder="" value="{{data.restoration.photoTwo}}">
+  </div>
+</div>
+<div class="photoTwo_id hidden">
+  <div class="individual-property">ID
+    <input type="text" class="individual-value individual-form" id="photoTwo3_id" placeholder="" value="{{data.restoration.photoTwo_id}}">
+  </div>
+</div>
+<!-- /hidden part 2-->
+<!-- hidden part 3-->
+<div class="photoThree hidden">
+  <div class="individual-property">URL
+    <input type="text" class="individual-value individual-form" id="photoThree3" placeholder="" value="{{data.restoration.photoThree}}">
+  </div>
+</div>
+<div class="photoThree_id hidden">
+  <div class="individual-property">ID
+    <input type="text" class="individual-value individual-form" id="photoThree3_id" placeholder="" value="{{data.restoration.photoThree_id}}">
+  </div>
+</div>
+<!-- / hidden part 3-->
+<!-- hidden part4 -->
+<div class="photoFour hidden">
+  <div class="individual-property">URL
+    <input type="text" class="individual-value individual-form" id="photoFour3" placeholder="" value="{{data.restoration.photoFour}}">
+  </div>
+</div>
+<div class="research_id hidden">
+  <div class="individual-property">ID
+    <input type="text" class="individual-value individual-form" id="photoFour3_id" placeholder="" value="{{data.restoration.photoFour_id}}">
+  </div>
+</div>
+<!-- / hidden part4 -->
+<!-- hidden part 5-->
+<div class="detailsFiles hidden">
+  <div class="individual-property">URL
+    <input type="text" class="individual-value individual-form" id="files3" placeholder="" value="{{data.restoration.files}}">
+  </div>
+</div>
+<div class="research_id hidden">
+  <div class="individual-property">ID
+    <input type="text" class="individual-value individual-form" id="files3_id" placeholder="" value="{{data.restoration.files_id}}">
+  </div>
+</div>
+<!-- /hidden part 5-->
+</template>

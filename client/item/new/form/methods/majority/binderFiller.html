@@ -1,0 +1,88 @@
+<template name="method_techniques_binderFiller">
+<div class="toggle" id="object_toggle-binderFiller">
+  <div class="row align-center">
+    <div class="uderline-method">
+      <h4>binderFiller</h4>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 col-md-6 individual-property binderFillerExperimental">EXPERIMENTAL PARAMETERS
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_binderFillerExperimental" placeholder="(e.g. X-ray tube voltage, laser wavelength, air/vacuum, etc.)" value="{{details.methods.binderFiller.experimentalParameters}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property binderFillerElements">ELEMENTS DETERMINED
+    </div>
+    <div class="col-xs-12 col-md-6"> 
+      <input type="text" class="individual-value individual-form" id="object_binderFillerElements" placeholder="(e.g. cobalt blue, red ochre, indigo, etc.)" value="{{details.methods.binderFiller.elements}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property binderFillerFormulae">CHEMICAL FORMULAE DETERMINED
+    </div>
+    <div class="col-xs-12 col-md-6"> 
+      <input type="text" class="individual-value individual-form" id="object_binderFillerFormulae" placeholder="" value="{{details.methods.binderFiller.formulae}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property binderFillerPigmentsDyes">PIGMENTS/DYES IDENTIFIED
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_binderFillerPigmentsDyes" placeholder="" value="{{details.methods.binderFiller.pigmentsDyes}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property binderFillerPriming">PRIMING IDENTIFIED
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_binderFillerPriming" placeholder="" value="{{details.methods.binderFiller.priming}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property binderFillerBindingMedia">BINDING MEDIA IDENTIFIED
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_binderFillerBindingMedia" placeholder="" value="{{details.methods.binderFiller.bindingMedia}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property binderFillerVarnish">VARNISH IDENTIFIED
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_binderFillerVarnish" placeholder="" value="{{details.methods.binderFiller.varnish}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property binderFillerStretcherSupportStrainer">STRETCHER/SUPPORT/STRAINER IDENTIFIED
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_binderFillerStretcherSupportStrainer" placeholder="" value="{{details.methods.binderFiller.stretcherSupportStrainer}}">
+    </div>
+    <div class="col-xs-12">
+      &nbsp;
+    </div>
+  </div>
+  <div class="row align-center">
+    <div class="col-xs-12 notes">Brief info about possible multilayers/underpaintings/retouches
+    </div>
+    <div class="col-sm-8 col-sm-offset-2">
+        <textarea class="" id="object_binderFillerBrief" name="sources" rows="4" placeholder="(e.g. secondary effects from underlying signal sources)" value="{{details.methods.binderFiller.notes.brief}}"></textarea>
+    </div>
+    <div class="col-xs-12 notes">Comments
+    </div>
+    <div class="col-sm-8 col-sm-offset-2">
+        <textarea class="" id="object_binderFillerComments" name="sources" rows="4" placeholder="(e.g. additional info not covered by the points above)" value="{{details.methods.binderFiller.notes.comments}}"></textarea>
+    </div>
+    <div class="col-xs-12 notes">Sources
+    </div>
+    <div class="col-sm-8 col-sm-offset-2">
+        <textarea class="" id="object_binderFillerSources" name="sources" rows="4" placeholder="(literature)" value="{{details.methods.binderFiller.notes.sources}}"></textarea>
+    </div>
+    <div class="col-xs-12">
+      &nbsp;
+    </div>
+  </div>
+
+
+
+  {{> files_methods_binderFiller}}
+
+
+  <div class="row align-center">
+    <div class="col-xs-12 notes">Figure captions
+    </div>
+    <div class="col-sm-8 col-sm-offset-2">
+        <textarea class="" id="object_binderFillerCaption" name="history" rows="4" placeholder="(e.g. additional info not covered by the points above)" value="{{details.methods.binderFiller.notes.caption}}"></textarea>
+    </div>
+    <br/>
+  </div>
+</div>
+</template>

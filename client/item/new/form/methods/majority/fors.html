@@ -1,0 +1,88 @@
+<template name="method_techniques_fors">
+<div class="toggle" id="object_toggle-fors">
+  <div class="row align-center">
+    <div class="uderline-method">
+      <h4>fors</h4>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 col-md-6 individual-property forsExperimental">EXPERIMENTAL PARAMETERS
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_forsExperimental" placeholder="(e.g. X-ray tube voltage, laser wavelength, air/vacuum, etc.)" value="{{details.methods.fors.experimentalParameters}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property forsElements">ELEMENTS DETERMINED
+    </div>
+    <div class="col-xs-12 col-md-6"> 
+      <input type="text" class="individual-value individual-form" id="object_forsElements" placeholder="(e.g. cobalt blue, red ochre, indigo, etc.)" value="{{details.methods.fors.elements}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property forsFormulae">CHEMICAL FORMULAE DETERMINED
+    </div>
+    <div class="col-xs-12 col-md-6"> 
+      <input type="text" class="individual-value individual-form" id="object_forsFormulae" placeholder="" value="{{details.methods.fors.formulae}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property forsPigmentsDyes">PIGMENTS/DYES IDENTIFIED
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_forsPigmentsDyes" placeholder="" value="{{details.methods.fors.pigmentsDyes}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property forsPriming">PRIMING IDENTIFIED
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_forsPriming" placeholder="" value="{{details.methods.fors.priming}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property forsBindingMedia">BINDING MEDIA IDENTIFIED
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_forsBindingMedia" placeholder="" value="{{details.methods.fors.bindingMedia}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property forsVarnish">VARNISH IDENTIFIED
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_forsVarnish" placeholder="" value="{{details.methods.fors.varnish}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property forsStretcherSupportStrainer">STRETCHER/SUPPORT/STRAINER IDENTIFIED
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_forsStretcherSupportStrainer" placeholder="" value="{{details.methods.fors.stretcherSupportStrainer}}">
+    </div>
+    <div class="col-xs-12">
+      &nbsp;
+    </div>
+  </div>
+  <div class="row align-center">
+    <div class="col-xs-12 notes">Brief info about possible multilayers/underpaintings/retouches
+    </div>
+    <div class="col-sm-8 col-sm-offset-2">
+        <textarea class="" id="object_forsBrief" name="sources" rows="4" placeholder="(e.g. secondary effects from underlying signal sources)" value="{{details.methods.fors.notes.brief}}"></textarea>
+    </div>
+    <div class="col-xs-12 notes">Comments
+    </div>
+    <div class="col-sm-8 col-sm-offset-2">
+        <textarea class="" id="object_forsComments" name="sources" rows="4" placeholder="(e.g. additional info not covered by the points above)" value="{{details.methods.fors.notes.comments}}"></textarea>
+    </div>
+    <div class="col-xs-12 notes">Sources
+    </div>
+    <div class="col-sm-8 col-sm-offset-2">
+        <textarea class="" id="object_forsSources" name="sources" rows="4" placeholder="(literature)" value="{{details.methods.fors.notes.sources}}"></textarea>
+    </div>
+    <div class="col-xs-12">
+      &nbsp;
+    </div>
+  </div>
+
+
+
+  {{> files_methods_fors}}
+
+
+  <div class="row align-center">
+    <div class="col-xs-12 notes">Figure captions
+    </div>
+    <div class="col-sm-8 col-sm-offset-2">
+        <textarea class="" id="object_forsCaption" name="history" rows="4" placeholder="(e.g. additional info not covered by the points above)" value="{{details.methods.fors.notes.caption}}"></textarea>
+    </div>
+    <br/>
+  </div>
+</div>
+</template>

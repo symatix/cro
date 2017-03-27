@@ -1,0 +1,134 @@
+<template name="original_other">
+<div class="row">
+
+  <div class="col-xs-12 col-md-6 individual-property primingGround">
+    MATERIALS INVOLVED
+  </div>
+  <div class="col-xs-12 col-md-6">
+    <input type="text" class="individual-value individual-form" id="materialsInvolved1" placeholder="(e.g. chalk, gypsum, etc.)" value="{{materials.original.materials}}">
+  </div>
+
+  <div class="col-xs-12 col-md-6 individual-property primingGround">
+    PRIMING/GROUND
+  </div>
+  <div class="col-xs-12 col-md-6">
+    <input type="text" class="individual-value individual-form" id="primingGround1" placeholder="(e.g. chalk, gypsum, etc.)" value="{{materials.original.primingGround}}">
+  </div>
+
+  <div class="col-xs-12 col-md-6 individual-property pigmentsDyes">
+    PIGMENTS/DYES IDENTIFIED
+  </div>
+  <div class="col-xs-12 col-md-6"> 
+    <input type="text" class="individual-value individual-form" id="pigmentsDyes1" placeholder="(e.g. cobalt blue, red ochre, indigo, etc.)" value="{{materials.original.pigmentsDyes}}">
+  </div>
+
+  <div class="col-xs-12 col-md-6 individual-property bendingMedium">
+    BINDING MEDIUM IDENTIFIED
+  </div>
+  <div class="col-xs-12 col-md-6"> 
+    <input type="text" class="individual-value individual-form" id="bindingMedium1" placeholder="(e.g. egg, linseed oil, glue, etc.)" value="{{materials.original.bindingMedium}}">
+  </div>
+
+  <div class="col-xs-12 col-md-6 individual-property additives">
+    ADDITIVES
+  </div>
+  <div class="col-xs-12 col-md-6">
+    <input type="text" class="individual-value individual-form" id="additives1" placeholder="(e.g. turpentine, white spirit, etc.)" value="{{materials.original.additives}}">
+  </div>
+
+  <div class="col-xs-12 col-md-6 individual-property filler">
+    FILLER
+  </div>
+  <div class="col-xs-12 col-md-6">
+    <input type="text" class="individual-value individual-form" id="filler1" placeholder="" value="{{materials.original.filler}}">
+  </div>
+
+  <div class="col-xs-12 col-md-6 individual-property layerVarnish">
+    FINISHING LAYER/VARNISH
+  </div>
+  <div class="col-xs-12 col-md-6"> 
+    <input type="text" class="individual-value individual-form" id="layerVarnish1" placeholder="(e.g. dammar, mastic, etc.)" value="{{materials.original.layerVarnish}}">
+  </div>
+
+  <div class="col-xs-12 col-md-6 individual-property underdrawingPentimento">
+    UNDERDRAWING/PENTIMENTO
+  </div>
+  <div class="col-xs-12 col-md-6">
+    <input type="text" class="individual-value individual-form" id="underdrawingPentimento1" placeholder="" value="{{materials.original.underdrawingPentimento}}">
+  </div>
+
+
+  <div class="col-xs-12 col-md-6 individual-property leafs">
+    METAL LEAFS
+  </div>
+  <div class="col-xs-12 col-md-6">
+    <input type="text" class="individual-value individual-form" id="leafs1" placeholder="(e.g. gold, silver, aluminum, brass)" value="{{materials.original.leafs}}">
+  </div>
+
+  <div class="col-xs-12 col-md-6 individual-property leafsApplication">
+    METAL LEAFS APPLICATION TECHNIQUE
+  </div>
+  <div class="col-xs-12 col-md-6">
+    <input type="text" class="individual-value individual-form" id="leafsApplication1" placeholder="(e.g. poliment gilding, oil gilding, etc.)" value="{{materials.original.leafsApplication}}">
+  </div>
+
+  <div class="col-xs-12 col-md-6 individual-property periodStyle">
+    PERIOD/STYLE
+  </div>
+  <div class="col-xs-12 col-md-6">
+    <input type="text" class="individual-value individual-form" id="periodStyle1" placeholder="(e.g. renaissance, baroque, romanticism, modern art, contemporary art, etc.)" value="{{materials.original.periodStyle}}">
+  </div>
+</div>
+
+
+<!--
+notes fileds
+-->
+  <div class="row align-center">
+    <div class="col-xs-12 notes">
+      Samples investigated
+    </div>
+    <div class="col-sm-8 col-sm-offset-2">
+        <textarea class="" id="samples1" name="samples1" rows="4" placeholder="(e.g. number of samples, short explanation, name of the responsible person etc.)" value="{{materials.original.notes.samples}}"></textarea>
+    </div>
+    <br/>
+
+    <div class="col-xs-12 notes">
+      Short overview of art history
+    </div>
+    <div class="col-sm-8 col-sm-offset-2">
+        <textarea class="" id="artHistory1" name="artHistory1" rows="4" placeholder="" value="{{materials.original.notes.artHistory}}"></textarea>
+    </div>
+    <br/>
+
+    <div class="col-xs-12 notes">
+      Sources
+    </div>
+    <div class="col-sm-8 col-sm-offset-2">
+        <textarea class="" id="sources1" name="sources1" rows="4" placeholder="(literature)" value="{{materials.original.notes.sources}}"></textarea>
+    </div>
+    <br/>
+
+    <div class="col-xs-12 notes">
+      Comments (additional info)
+    </div>
+    <div class="col-sm-8 col-sm-offset-2">
+        <textarea class="" id="comments1" name="comments1" rows="4" placeholder="(e.g. additional info not covered by the points above)" value="{{materials.original.notes.comments}}"></textarea>
+    </div>
+
+    <div class="col-xs-12">
+      &nbsp;
+    </div>
+  </div>
+
+  {{> item_files_details_1}}
+
+  <div class="row align-center">
+    <div class="col-xs-12 notes">Figure captions
+    </div>
+    <div class="col-sm-8 col-sm-offset-2">
+        <textarea class="" id="figureCaption1" name="history" rows="4" placeholder="(e.g. additional info not covered by the points above)" value="{{materials.original.notes.figureCaption}}"></textarea>
+    </div>
+    <br/>
+  </div>
+</template>

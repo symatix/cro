@@ -1,0 +1,103 @@
+<template name="files_methods_hygroscopic">
+<div class="row align-center">
+<div class="col-xs-12">
+  <h3>upload VIS/GL/UVF/IRP/RTG/SEM/spectrum photo</h3>
+</div>
+</div>
+<div class="row">
+  <div class="col-xs-12 col-sm-2 individual-property">PHOTO ONE
+  </div>
+  <div class="col-xs-12 col-sm-4">
+    <label for="hygroscopicFiles1_label" class="upload_label" id="upload_hygroscopicFiles1">(.jpg or .tiff, max size 5 mb)</label>
+    <input class="individual-data-value" type="file" id="hygroscopicFiles1_label">
+  </div>
+  <div class="col-xs-12 col-sm-2 individual-property"> PHOTO TWO
+  </div>
+  <div class="col-xs-12 col-sm-4">
+    <label for="hygroscopicFiles2_label" class="upload_label" id="upload_hygroscopicFiles2">(.jpg or .tiff, max size 5 mb)</label>
+    <input class="individual-data-value" type="file" id="hygroscopicFiles2_label">
+  </div>
+  <div class="col-xs-12 col-sm-2 individual-property"> PHOTO THREE
+  </div>
+  <div class="col-xs-12 col-sm-4">
+    <label for="hygroscopicFiles3_label" class="upload_label" id="upload_hygroscopicFiles3">(.jpg or .tiff, max size 5 mb)</label>
+    <input class="individual-data-value" type="file" id="hygroscopicFiles3_label">
+  </div>
+  <div class="col-xs-12 col-sm-2 individual-property"> PHOTO FOUR
+  </div>
+  <div class="col-xs-12 col-sm-4">
+    <label for="hygroscopicFiles4_label" class="upload_label" id="upload_hygroscopicFiles4">(.jpg or .tiff, max size 5 mb)</label>
+    <input class="individual-data-value" type="file" id="hygroscopicFiles4_label">
+  </div>
+  <div class="col-xs-12 col-sm-8 individual-property"> UPLOAD RELEVANT FILES (e.g. treatment documentation, conservation report, etc.)
+  </div>
+  <div class="col-xs-12 col-sm-4">
+    <label for="hygroscopicFiles5_label" class="upload_label" id="upload_hygroscopicFiles5">(.zip)</label>
+    <input class="individual-data-value" type="file" id="hygroscopicFiles5_label">
+  </div>
+  <div class="col-xs-12">
+    &nbsp;
+  </div>
+</div>
+
+<!-- hidden part1 -->
+<div class="hygroscopicFiles1 hidden">
+  <div class="individual-property">URL
+    <input type="text" class="individual-value individual-form" id="hygroscopicFiles1" placeholder="" value="{{details.methods.hygroscopic.files.hygroscopicFiles1}}">
+  </div>
+</div>
+<div class="hygroscopicFiles1_id hidden">
+  <div class="individual-property">ID
+    <input type="text" class="individual-value individual-form" id="hygroscopicFiles1_id" placeholder="" value="{{details.methods.hygroscopic.files.hygroscopicFiles1_id}}">
+  </div>
+</div>
+<!-- /hidden part1 -->
+<!-- hidden part 2-->
+<div class="hygroscopicFiles2 hidden">
+  <div class="individual-property">URL
+    <input type="text" class="individual-value individual-form" id="hygroscopicFiles2" placeholder="" value="{{details.methods.hygroscopic.files.hygroscopicFiles2}}">
+  </div>
+</div>
+<div class="hygroscopicFiles2_id hidden">
+  <div class="individual-property">ID
+    <input type="text" class="individual-value individual-form" id="hygroscopicFiles2_id" placeholder="" value="{{details.methods.hygroscopic.files.hygroscopicFiles2_id}}">
+  </div>
+</div>
+<!-- /hidden part 2-->
+<!-- hidden part 3-->
+<div class="hygroscopicFiles3 hidden">
+  <div class="individual-property">URL
+    <input type="text" class="individual-value individual-form" id="hygroscopicFiles3" placeholder="" value="{{details.methods.hygroscopic.files.hygroscopicFiles3}}">
+  </div>
+</div>
+<div class="hygroscopicFiles3_id hidden">
+  <div class="individual-property">ID
+    <input type="text" class="individual-value individual-form" id="hygroscopicFiles3_id" placeholder="" value="{{details.methods.hygroscopic.files.hygroscopicFiles3_id}}">
+  </div>
+</div>
+<!-- / hidden part 3-->
+<!-- hidden part4 -->
+<div class="hygroscopicFiles4 hidden">
+  <div class="individual-property">URL
+    <input type="text" class="individual-value individual-form" id="hygroscopicFiles4" placeholder="" value="{{details.methods.hygroscopic.files.hygroscopicFiles4}}">
+  </div>
+</div>
+<div class="hygroscopicFiles4_id hidden">
+  <div class="individual-property">ID
+    <input type="text" class="individual-value individual-form" id="hygroscopicFiles4_id" placeholder="" value="{{details.methods.hygroscopic.files.hygroscopicFiles4_id}}">
+  </div>
+</div>
+<!-- / hidden part4 -->
+<!-- hidden part 5-->
+<div class="hygroscopicFiles5 hidden">
+  <div class="individual-property">URL
+    <input type="text" class="individual-value individual-form" id="hygroscopicFiles5" placeholder="" value="{{details.methods.hygroscopic.files.hygroscopicFiles5}}">
+  </div>
+</div>
+<div class="hygroscopicFiles5_id hidden">
+  <div class="individual-property">ID
+    <input type="text" class="individual-value individual-form" id="hygroscopicFiles5_id" placeholder="" value="{{details.methods.hygroscopic.files.hygroscopicFiles5_id}}">
+  </div>
+</div>
+<!-- /hidden part 5-->
+</template>

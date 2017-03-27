@@ -1,0 +1,88 @@
+<template name="method_techniques_gl">
+<div class="toggle" id="object_toggle-gl">
+  <div class="row align-center">
+    <div class="uderline-method">
+      <h4>gl</h4>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 col-md-6 individual-property glExperimental">EXPERIMENTAL PARAMETERS
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_glExperimental" placeholder="(e.g. X-ray tube voltage, laser wavelength, air/vacuum, etc.)" value="{{details.methods.gl.experimentalParameters}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property glElements">ELEMENTS DETERMINED
+    </div>
+    <div class="col-xs-12 col-md-6"> 
+      <input type="text" class="individual-value individual-form" id="object_glElements" placeholder="(e.g. cobalt blue, red ochre, indigo, etc.)" value="{{details.methods.gl.elements}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property glFormulae">CHEMICAL FORMULAE DETERMINED
+    </div>
+    <div class="col-xs-12 col-md-6"> 
+      <input type="text" class="individual-value individual-form" id="object_glFormulae" placeholder="" value="{{details.methods.gl.formulae}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property glPigmentsDyes">PIGMENTS/DYES IDENTIFIED
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_glPigmentsDyes" placeholder="" value="{{details.methods.gl.pigmentsDyes}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property glPriming">PRIMING IDENTIFIED
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_glPriming" placeholder="" value="{{details.methods.gl.priming}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property glBindingMedia">BINDING MEDIA IDENTIFIED
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_glBindingMedia" placeholder="" value="{{details.methods.gl.bindingMedia}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property glVarnish">VARNISH IDENTIFIED
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_glVarnish" placeholder="" value="{{details.methods.gl.varnish}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property glStretcherSupportStrainer">STRETCHER/SUPPORT/STRAINER IDENTIFIED
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="object_glStretcherSupportStrainer" placeholder="" value="{{details.methods.gl.stretcherSupportStrainer}}">
+    </div>
+    <div class="col-xs-12">
+      &nbsp;
+    </div>
+  </div>
+  <div class="row align-center">
+    <div class="col-xs-12 notes">Brief info about possible multilayers/underpaintings/retouches
+    </div>
+    <div class="col-sm-8 col-sm-offset-2">
+        <textarea class="" id="object_glBrief" name="sources" rows="4" placeholder="(e.g. secondary effects from underlying signal sources)" value="{{details.methods.gl.notes.brief}}"></textarea>
+    </div>
+    <div class="col-xs-12 notes">Comments
+    </div>
+    <div class="col-sm-8 col-sm-offset-2">
+        <textarea class="" id="object_glComments" name="sources" rows="4" placeholder="(e.g. additional info not covered by the points above)" value="{{details.methods.gl.notes.comments}}"></textarea>
+    </div>
+    <div class="col-xs-12 notes">Sources
+    </div>
+    <div class="col-sm-8 col-sm-offset-2">
+        <textarea class="" id="object_glSources" name="sources" rows="4" placeholder="(literature)" value="{{details.methods.gl.notes.sources}}"></textarea>
+    </div>
+    <div class="col-xs-12">
+      &nbsp;
+    </div>
+  </div>
+
+
+
+  {{> files_methods_gl}}
+
+
+  <div class="row align-center">
+    <div class="col-xs-12 notes">Figure captions
+    </div>
+    <div class="col-sm-8 col-sm-offset-2">
+        <textarea class="" id="object_glCaption" name="history" rows="4" placeholder="(e.g. additional info not covered by the points above)" value="{{details.methods.gl.notes.caption}}"></textarea>
+    </div>
+    <br/>
+  </div>
+</div>
+</template>

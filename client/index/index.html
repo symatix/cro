@@ -1,0 +1,135 @@
+<template name="mainGallery">
+  <div class="container-fluid">
+    <h1>cro<span class="prospero">ART</span>ia</h1>
+    <h2 class="subhead"> ART & RESEARCH DATABASE</h2>
+    {{#if currentUser}}
+      <h3 class="welcome-msg">welcome <span class="post-heading underline">{{username}}</span></h3>
+    {{/if}}
+      <div class="container margin-top">
+        <div class="row">
+        <!-- pictures -->
+        <a href="/Painting">
+        <div class="col-xs-12 col-sm-6 col-md-4">
+          <div class="row align-center form-box objectBranch">
+            <h3>Paintings</h3>
+            {{#each painting}}
+            <div class="col-xs-12">
+              <img class="img-edit" src="{{data.basic.front}}"/>
+            </div>
+            {{/each}}
+          </div>
+        </div>
+        </a> <!-- /end pictures -->
+        <!-- sculptures -->
+        <a href="/Sculpture">
+        <div class="col-xs-12 col-sm-6 col-md-4">
+          <div class="row align-center form-box objectBranch">
+            <h3>Sculptures</h3>
+            {{#each sculptures}}
+            <div class="col-xs-12">
+              <img class="img-edit" src="{{data.basic.front}}"/>
+            </div>
+            {{/each}}
+          </div>
+        </div>
+        </a> <!-- /end sculptures -->
+        <!-- Architectural heritage -->
+        <a href="/Architectural%20heritage">
+        <div class="col-xs-12 col-sm-6 col-md-4">
+          <div class="row align-center form-box objectBranch">
+            <h3>Architectural heritage</h3>
+            {{#each heritage}}
+            <div class="col-xs-12">
+              <img class="img-edit" src="{{data.basic.front}}"/>
+            </div>
+            {{/each}}
+          </div>
+        </div>
+        </a> <!-- /end Architectural heritage -->
+        <!-- Archival object -->
+        <a href="/Archival%20object">
+        <div class="col-xs-12 col-sm-6 col-md-4">
+          <div class="row align-center form-box objectBranch">
+            <h3>Archival object</h3>
+            {{#each archival}}
+            <div class="col-xs-12">
+              <img class="img-edit" src="{{data.basic.front}}"/>
+            </div>
+            {{/each}}
+          </div>
+        </div>
+        </a> <!-- /end Archival object -->
+        <!-- Archaeological object -->
+        <a href="/Archaeological%20object">
+        <div class="col-xs-12 col-sm-6 col-md-4">
+          <div class="row align-center form-box objectBranch">
+            <h3>Archaeological object</h3>
+            {{#each archaeological}}
+            <div class="col-xs-12">
+              <img class="img-edit" src="{{data.basic.front}}"/>
+            </div>
+            {{/each}}
+          </div>
+        </div>
+        </a> <!-- /end Archaeological object -->
+        <!-- Samples -->
+        <a href="#" onclick="alert('sačekuša')">
+        <div class="col-xs-12 col-sm-6 col-md-4">
+          <div class="row align-center form-box objectBranch">
+            <h3>Samples/cross-section</h3>
+            {{#each sample}}
+            <div class="col-xs-12">
+              <img class="img-edit" src="{{data.basic.front}}"/>
+            </div>
+            {{/each}}
+          </div>
+        </div>
+        </a> <!-- /end Samples -->
+        <!-- Pigment -->
+        <a href="/Pigment/dye/binder/varnish/reference%20materials">
+        <div class="col-xs-12 col-sm-6 col-md-4">
+          <div class="row align-center form-box objectBranch">
+            <h3>Pigments and reference material</h3>
+            {{#each pigment}}
+            <div class="col-xs-12">
+              <img class="img-edit" src="{{data.basic.front}}"/>
+            </div>
+            {{/each}}
+          </div>
+        </div>
+        </a> <!-- /end Pigment -->
+        <!-- other -->
+        <a href="/other">
+        <div class="col-xs-12 col-sm-6 col-md-4">
+          <div class="row align-center form-box objectBranch">
+            <h3>Other</h3>
+            {{#each other}}
+            <div class="col-xs-12">
+              <img class="img-edit" src="{{data.basic.front}}"/>
+            </div>
+            {{/each}}
+          </div>
+        </div>
+        </a> <!-- /end other -->
+      </div>
+    </div>
+  </div>
+  <!-- modal -->
+  <div class="modal fade" id="thumb-modal" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content modal-div">
+
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title"></h4>
+        </div>
+        <div class="modal-body align-center">
+          <img class="img-modal">
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</template>
+

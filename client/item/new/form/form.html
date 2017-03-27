@@ -1,0 +1,35 @@
+<template name="form">
+<!-- templates in /type -->
+
+      <div id="basic_href">
+
+        {{#if painting}}
+          {{> basic_painting}}
+        {{/if}}
+
+        {{#if sculpture}}
+          {{> basic_sculpture}}
+        {{/if}}
+
+        {{#if other}}
+          {{> basic_other}}
+        {{/if}}
+
+        {{#if pigment}}
+          {{> basic_pigment}}
+        {{/if}}
+        <hr/>
+      </div>
+
+      {{#if notIntruder}}
+        <div id="material_href">
+          {{> materials_techniques}}
+          <hr/>
+        </div>
+      {{/if}}
+
+      <div id="methods_href" style="display:block">
+          {{> methods}}
+      </div>
+
+</template>

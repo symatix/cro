@@ -1,0 +1,187 @@
+<template name="method_techniques_view_pige">
+<div class="toggle" id="object_toggle-pige">
+  <div class="row">
+    <div class="uderline-method">
+      <h4>pige</h4>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 col-sm-7">
+        {{#if details.methods.pige.experimentalParameters}}
+          <div class="author">
+            <div class="individual-property-display">Experimental parameters:<br/>
+              <div class="individual-value-display">{{details.methods.pige.experimentalParameters}}</div>
+            </div>
+          </div>
+          {{/if}}
+        {{#if details.methods.pige.elements}}
+          <div class="author">
+            <div class="individual-property-display">Elements determined:<br/>
+              <div class="individual-value-display">{{details.methods.pige.elements}}</div>
+            </div>
+          </div>
+          {{/if}}
+        {{#if details.methods.pige.formulae}}
+          <div class="author">
+            <div class="individual-property-display">Chemical formulae determined:<br/>
+              <div class="individual-value-display">{{details.methods.pige.formulae}}</div>
+            </div>
+          </div>
+          {{/if}}
+        {{#if details.methods.pige.quantification}}
+          <div class="author">
+            <div class="individual-property-display">Quantification results:<br/>
+              <div class="individual-value-display">{{details.methods.pige.quantification}}</div>
+            </div>
+          </div>
+          {{/if}}
+        {{#if details.methods.pige.influence}}
+          <div class="author">
+            <div class="individual-property-display">Sample holder/purity influence:<br/>
+              <div class="individual-value-display">{{details.methods.pige.influence}}</div>
+            </div>
+          </div>
+          {{/if}}
+        {{#if details.methods.pige.colorValues}}
+          <div class="author">
+            <div class="individual-property-display">Color space values:<br/>
+              <div class="individual-value-display">{{details.methods.pige.colorValues}}</div>
+            </div>
+          </div>
+          {{/if}}
+        {{#if details.methods.pige.bands}}
+          <div class="author">
+            <div class="individual-property-display">Main rotational/vibrational bands and their relative intensities:<br/>
+              <div class="individual-value-display">{{details.methods.pige.bands}}</div>
+            </div>
+          </div>
+          {{/if}}
+        {{#if details.methods.pige.pigmentsDyes}}
+          <div class="author">
+            <div class="individual-property-display">Pigments/dyes identified:<br/>
+              <div class="individual-value-display">{{details.methods.pige.pigmentsDyes}}</div>
+            </div>
+          </div>
+          {{/if}}
+        {{#if details.methods.pige.priming}}
+          <div class="author">
+            <div class="individual-property-display">Priming identified:<br/>
+              <div class="individual-value-display">{{details.methods.pige.priming}}</div>
+            </div>
+          </div>
+          {{/if}}
+        {{#if details.methods.pige.bindingMedia}}
+          <div class="author">
+            <div class="individual-property-display">Binding media identified:<br/>
+              <div class="individual-value-display">{{details.methods.pige.bindingMedia}}</div>
+            </div>
+          </div>
+          {{/if}}
+        {{#if details.methods.pige.varnish}}
+          <div class="author">
+            <div class="individual-property-display">Varnish identified:<br/>
+              <div class="individual-value-display">{{details.methods.pige.varnish}}</div>
+            </div>
+          </div>
+          {{/if}}
+        {{#if details.methods.pige.stretcherSupportStrainer}}
+          <div class="author">
+            <div class="individual-property-display">Stretcher/support/strainer identified:<br/>
+              <div class="individual-value-display">{{details.methods.pige.stretcherSupportStrainer}}</div>
+            </div>
+          </div>
+          {{/if}}
+        {{#if details.methods.pige.stretcherSupportStrainer}}
+          <div class="author">
+            <div class="individual-property-display">Stretcher/support/strainer identified:<br/>
+              <div class="individual-value-display">{{details.methods.pige.stretcherSupportStrainer}}</div>
+            </div>
+          </div>
+          {{/if}}
+        </div>
+
+
+<!-- images -->
+      {{#if originalObj}}
+        <div class="col-xs-12 col-sm-5 add-bottom-space">   
+          <div class="row img-box align-center">
+            {{#if details.methods.pige.files.pigeFiles1}}
+            <div class="col-xs-6">
+            <h4>&nbsp;</h4>
+              <img class="img-materials-sm" src="{{details.methods.pige.files.pigeFiles1}}" data-toggle="modal" data-target="#thumb-modal-front">
+            </div>
+            {{/if}}
+            {{#if details.methods.pige.files.pigeFiles2}}
+            <div class="col-xs-6">
+            <h4>&nbsp;</h4>
+              <img class="img-materials-sm" src="{{details.methods.pige.files.pigeFiles2}}" data-toggle="modal" data-target="#thumb-modal-back">
+            </div>
+            {{/if}}
+            {{#if details.methods.pige.files.pigeFiles3}}
+            <div class="col-xs-6">
+            <h4>&nbsp;</h4>
+              <img class="img-materials-sm" src="{{details.methods.pige.files.pigeFiles3}}" data-toggle="modal" data-target="#thumb-modal-side">
+            </div>
+            {{/if}}
+            {{#if details.methods.pige.files.pigeFiles4}}
+            <div class="col-xs-6">
+            <h4>&nbsp;</h4>
+              <img class="img-materials-sm" src="{{details.methods.pige.files.pigeFiles4}}" data-toggle="modal" data-target="#thumb-modal-signature">
+            </div>
+            {{/if}}
+            {{#if details.methods.pige.notes.caption}}
+            <div class="col-xs-12">
+              <div class="figureCaption">
+                <div class="individual-property-display">Figure captions<br/> 
+                  <div class="individual-value-display">{{details.methods.pige.notes.caption}}</div>
+                </div>
+              </div>
+            </div>
+            {{/if}}
+          </div>
+        </div>
+      {{/if}}
+<!-- /images -->
+
+
+
+    <div class="col-xs-12">
+      &nbsp;
+    </div>
+
+
+
+  {{#if details.methods.pige.notes.brief}}
+  <div class="col-md-12 align-center">
+    <div class="samples">
+      <div class="individual-property-display">Brief info about possible multilayers/underpaintings/retouches:<br/>
+        <div class="individual-value-display">{{details.methods.pige.notes.brief}}</div>
+      </div>
+    </div>
+  </div>
+  {{/if}}
+  {{#if details.methods.pige.notes.comments}}
+  <div class="col-md-12 align-center">
+    <div class="artHistory">
+      <div class="individual-property-display">Comments:<br/>
+        <div class="individual-value-display">{{details.methods.pige.notes.comments}}</div>
+      </div>
+    </div>
+  </div>
+  {{/if}}
+  {{#if details.methods.pige.notes.sources}}
+  <div class="col-md-12 align-center">
+    <div class="artHistory">
+      <div class="individual-property-display">Sources:<br/>
+        <div class="individual-value-display">{{details.methods.pige.notes.sources}}</div>
+      </div>
+    </div>
+  </div>
+  {{/if}}
+  <div class="col-xs-12">
+    &nbsp;
+  </div>
+  </div>
+</div>
+
+</template>

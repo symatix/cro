@@ -1,0 +1,101 @@
+<template name="item_files_details_2">
+<div class="row align-center">
+  <h3>files</h3>
+</div>
+<div class="row">
+  <div class="col-xs-12 col-sm-2 individual-property">PHOTO ONE
+  </div>
+  <div class="col-xs-12 col-sm-4">
+    <label for="photoOne_label2" class="upload_label" id="upload_photoOne2">(.jpg or .tiff, max size 5 mb)</label>
+    <input class="individual-data-value" type="file" id="photoOne_label2">
+  </div>
+  <div class="col-xs-12 col-sm-2 individual-property"> PHOTO TWO
+  </div>
+  <div class="col-xs-12 col-sm-4">
+    <label for="photoTwo_label2" class="upload_label" id="upload_photoTwo2">(.jpg or .tiff, max size 5 mb)</label>
+    <input class="individual-data-value" type="file" id="photoTwo_label2">
+  </div>
+  <div class="col-xs-12 col-sm-2 individual-property"> PHOTO THREE
+  </div>
+  <div class="col-xs-12 col-sm-4">
+    <label for="photoThree_label2" class="upload_label" id="upload_photoThree2">(.jpg or .tiff, max size 5 mb)</label>
+    <input class="individual-data-value" type="file" id="photoThree_label2">
+  </div>
+  <div class="col-xs-12 col-sm-2 individual-property"> PHOTO FOUR
+  </div>
+  <div class="col-xs-12 col-sm-4">
+    <label for="photoFour_label2" class="upload_label" id="upload_photoFour2">(.jpg or .tiff, max size 5 mb)</label>
+    <input class="individual-data-value" type="file" id="photoFour_label2">
+  </div>
+  <div class="col-xs-12 col-sm-8 individual-property"> UPLOAD RELEVANT FILES (e.g. treatment documentation, conservation report, etc.)
+  </div>
+  <div class="col-xs-12 col-sm-4">
+    <label for="files_label2" class="upload_label" id="upload_files2">(.zip)</label>
+    <input class="individual-data-value" type="file" id="files_label2">
+  </div>
+  <div class="col-xs-12">
+    &nbsp;
+  </div>
+</div>
+
+<!-- hidden part1 -->
+<div class="photoOne hidden">
+  <div class="individual-property">URL
+    <input type="text" class="individual-value individual-form" id="photoOne2" placeholder="" value="{{data.interventions.photoOne}}">
+  </div>
+</div>
+<div class="photoOne_id hidden">
+  <div class="individual-property">ID
+    <input type="text" class="individual-value individual-form" id="photoOne2_id" placeholder="" value="{{data.interventions.photoOne_id}}">
+  </div>
+</div>
+<!-- /hidden part1 -->
+<!-- hidden part 2-->
+<div class="photoTwo hidden">
+  <div class="individual-property">URL
+    <input type="text" class="individual-value individual-form" id="photoTwo2" placeholder="" value="{{data.interventions.photoTwo}}">
+  </div>
+</div>
+<div class="photoTwo_id hidden">
+  <div class="individual-property">ID
+    <input type="text" class="individual-value individual-form" id="photoTwo2_id" placeholder="" value="{{data.interventions.photoTwo_id}}">
+  </div>
+</div>
+<!-- /hidden part 2-->
+<!-- hidden part 3-->
+<div class="photoThree hidden">
+  <div class="individual-property">URL
+    <input type="text" class="individual-value individual-form" id="photoThree2" placeholder="" value="{{data.interventions.photoThree}}">
+  </div>
+</div>
+<div class="photoThree_id hidden">
+  <div class="individual-property">ID
+    <input type="text" class="individual-value individual-form" id="photoThree2_id" placeholder="" value="{{data.interventions.photoThree_id}}">
+  </div>
+</div>
+<!-- / hidden part 3-->
+<!-- hidden part4 -->
+<div class="photoFour hidden">
+  <div class="individual-property">URL
+    <input type="text" class="individual-value individual-form" id="photoFour2" placeholder="" value="{{data.interventions.photoFour}}">
+  </div>
+</div>
+<div class="research_id hidden">
+  <div class="individual-property">ID
+    <input type="text" class="individual-value individual-form" id="photoFour2_id" placeholder="" value="{{data.interventions.photoFour_id}}">
+  </div>
+</div>
+<!-- / hidden part4 -->
+<!-- hidden part 5-->
+<div class="detailsFiles hidden">
+  <div class="individual-property">URL
+    <input type="text" class="individual-value individual-form" id="files2" placeholder="" value="{{data.interventions.files}}">
+  </div>
+</div>
+<div class="research_id hidden">
+  <div class="individual-property">ID
+    <input type="text" class="individual-value individual-form" id="files2_id" placeholder="" value="{{data.interventions.files_id}}">
+  </div>
+</div>
+<!-- /hidden part 5-->
+</template>
