@@ -103,43 +103,7 @@
 
 <!-- images -->
       {{#if originalObj}}
-        <div class="col-xs-12 col-sm-5 add-bottom-space">
-          <div class="row img-box align-center">
-            {{#if details.methods.scanning.files.scanningFiles1}}
-            <div class="col-xs-6">
-            <h4>&nbsp;</h4>
-              <img class="img-materials-sm" src="{{details.methods.scanning.files.scanningFiles1}}" data-toggle="modal" data-target="#thumb-modal-front">
-            </div>
-            {{/if}}
-            {{#if details.methods.scanning.files.scanningFiles2}}
-            <div class="col-xs-6">
-            <h4>&nbsp;</h4>
-              <img class="img-materials-sm" src="{{details.methods.scanning.files.scanningFiles2}}" data-toggle="modal" data-target="#thumb-modal-back">
-            </div>
-            {{/if}}
-            {{#if details.methods.scanning.files.scanningFiles3}}
-            <div class="col-xs-6">
-            <h4>&nbsp;</h4>
-              <img class="img-materials-sm" src="{{details.methods.scanning.files.scanningFiles3}}" data-toggle="modal" data-target="#thumb-modal-side">
-            </div>
-            {{/if}}
-            {{#if details.methods.scanning.files.scanningFiles4}}
-            <div class="col-xs-6">
-            <h4>&nbsp;</h4>
-              <img class="img-materials-sm" src="{{details.methods.scanning.files.scanningFiles4}}" data-toggle="modal" data-target="#thumb-modal-signature">
-            </div>
-            {{/if}}
-            {{#if details.methods.scanning.notes.caption}}
-            <div class="col-xs-12">
-              <div class="figureCaption">
-                <div class="individual-property-display">Figure captions<br/> 
-                  <div class="individual-value-display">{{details.methods.scanning.notes.caption}}</div>
-                </div>
-              </div>
-            </div>
-            {{/if}}
-          </div>
-        </div>
+            {{> imgs_scanning}}
       {{/if}}
 <!-- /images -->
 

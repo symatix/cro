@@ -103,43 +103,7 @@
 
 <!-- images -->
       {{#if originalObj}}
-        <div class="col-xs-12 col-sm-5 add-bottom-space">   
-          <div class="row img-box align-center">
-            {{#if details.methods.plm.files.plmFiles1}}
-            <div class="col-xs-6">
-            <h4>&nbsp;</h4>
-              <img class="img-materials-sm" src="{{details.methods.plm.files.plmFiles1}}" data-toggle="modal" data-target="#thumb-modal-front">
-            </div>
-            {{/if}}
-            {{#if details.methods.plm.files.plmFiles2}}
-            <div class="col-xs-6">
-            <h4>&nbsp;</h4>
-              <img class="img-materials-sm" src="{{details.methods.plm.files.plmFiles2}}" data-toggle="modal" data-target="#thumb-modal-back">
-            </div>
-            {{/if}}
-            {{#if details.methods.plm.files.plmFiles3}}
-            <div class="col-xs-6">
-            <h4>&nbsp;</h4>
-              <img class="img-materials-sm" src="{{details.methods.plm.files.plmFiles3}}" data-toggle="modal" data-target="#thumb-modal-side">
-            </div>
-            {{/if}}
-            {{#if details.methods.plm.files.plmFiles4}}
-            <div class="col-xs-6">
-            <h4>&nbsp;</h4>
-              <img class="img-materials-sm" src="{{details.methods.plm.files.plmFiles4}}" data-toggle="modal" data-target="#thumb-modal-signature">
-            </div>
-            {{/if}}
-            {{#if details.methods.plm.notes.caption}}
-            <div class="col-xs-12">
-              <div class="figureCaption">
-                <div class="individual-property-display">Figure captions<br/> 
-                  <div class="individual-value-display">{{details.methods.plm.notes.caption}}</div>
-                </div>
-              </div>
-            </div>
-            {{/if}}
-          </div>
-        </div>
+            {{> imgs_plm}}
       {{/if}}
 <!-- /images -->
 

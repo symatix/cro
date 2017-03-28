@@ -3,7 +3,7 @@
 		{{#if data.basic.front}}
 		<div class="col-xs-6">
 		<h4>&nbsp;</h4>
-			<img class="img-materials-sm" src="{{data.basic.front}}" data-toggle="modal" data-target="#thumb-modal-front">
+			<img class="img-modal-sm" src="{{data.basic.front}}" data-toggle="modal" data-target="#thumb-modal-front">
 		</div>
           <!-- modal - front -->
 	      <div class="modal fade" id="thumb-modal-front" role="dialog">
@@ -26,7 +26,7 @@
 		{{#if data.basic.back}}
 		<div class="col-xs-6">
 		<h4>&nbsp;</h4>
-			<img class="img-materials-sm" src="{{data.basic.back}}" data-toggle="modal" data-target="#thumb-modal-back">
+			<img class="img-modal-sm" src="{{data.basic.back}}" data-toggle="modal" data-target="#thumb-modal-back">
 		</div>
           <!-- modal - back -->
 	      <div class="modal fade" id="thumb-modal-back" role="dialog">
@@ -49,7 +49,7 @@
 		{{#if data.basic.side}}
 		<div class="col-xs-6">
 		<h4>&nbsp;</h4>
-			<img class="img-materials-sm" src="{{data.basic.side}}" data-toggle="modal" data-target="#thumb-modal-side">
+			<img class="img-modal-sm" src="{{data.basic.side}}" data-toggle="modal" data-target="#thumb-modal-side">
 		</div>
           <!-- modal - side -->
 	      <div class="modal fade" id="thumb-modal-side" role="dialog">
@@ -72,7 +72,7 @@
 		{{#if data.basic.signature}}
 		<div class="col-xs-6">
 		<h4>&nbsp;</h4>
-			<img class="img-materials-sm" src="{{data.basic.signature}}" data-toggle="modal" data-target="#thumb-modal-signature">
+			<img class="img-modal-sm" src="{{data.basic.signature}}" data-toggle="modal" data-target="#thumb-modal-signature">
 		</div>
           <!-- modal - signature -->
 	      <div class="modal fade" id="thumb-modal-signature" role="dialog">
@@ -92,11 +92,11 @@
 	      </div>
 		{{/if}}
 
-		{{#if materials.original.notes.figureCaption}}
+		{{#if modal.original.notes.figureCaption}}
 		<div class="col-md-12">
 		  <div class="figureCaption">
 		    <div class="individual-property-display">Figure captions<br/> 
-		      <div class="individual-value-display">{{materials.original.notes.figureCaption}}</div>
+		      <div class="individual-value-display">{{modal.original.notes.figureCaption}}</div>
 		    </div>
 		  </div>
 		</div>
