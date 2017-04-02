@@ -32,22 +32,60 @@
                           <td><i>Type:</i></td>
                           <td>{{typeOfObject}}</td>
                         </tr>
+                        {{#if basic.author}}
                         <tr>
                           <td><i>Author:</i></td>
                           <td>{{basic.author}}</td>
                         </tr>
+                        {{/if}}
+                        {{#if basic.purity}}
+                        <tr>
+                          <td><i>Purity:</i></td>
+                          <td>{{basic.purity}}</td>
+                        </tr>
+                        {{/if}}
+                        {{#if basic.appearence}}
+                        <tr>
+                          <td><i>Appearance:</i></td>
+                          <td>{{basic.appearence}}</td>
+                        </tr>
+                        {{/if}}
+                        {{#if basic.manufacturer}}
+                        <tr>
+                          <td><i>Commercial<br/>name and<br/> manufacturer:</i></td>
+                          <td>{{basic.manufacturer}}</td>
+                        </tr>
+                        {{/if}}
+                        {{#if basic.grainSize}}
+                        <tr>
+                          <td><i>Grain size:</i></td>
+                          <td>{{basic.grainSize}}</td>
+                        </tr>
+                        {{/if}}
+                        {{#if basic.date}}
+                        <tr>
+                          <td><i>Date:</i></td>
+                          <td>{{basic.date}}</td>
+                        </tr>
+                        {{/if}}
+                        {{#if basic.currentOwner}}
                         <tr>
                           <td><i>Current owner:</i></td>
                           <td>{{basic.currentOwner}}</td>
                         </tr>
+                        {{/if}}
+                        {{#if basic.currentLocation}}
                         <tr>
                           <td><i>Current location:</i></td>
                           <td>{{basic.currentLocation}}</td>
                         </tr>
+                        {{/if}}
+                        {{#if basic.authority}}
                         <tr>
-                          <td><i>Responsible conservation authority:</i></td>
+                          <td><i>Responsible<br/>conservation<br/> authority:</i></td>
                           <td>{{basic.authority}}</td>
                         </tr>
+                        {{/if}}
                       </table>
                     </div>
 
@@ -96,10 +134,6 @@
                           </td>
                         </tr>
                         <tr>
-                          <td><i>Added by:</i></td>
-                          <td>{{info.addedBy}}</td>
-                        </tr>
-                        <tr>
                           <td><i>Created at:</i></td>
                           <td>{{info.createdAt}}</td>
                         </tr>
@@ -111,6 +145,16 @@
                           <td><i>Edited at:</i></td>
                           <td>{{info.last_edit}}</td>
                         </tr>
+                        <tr>
+                          <td><i>Added by:</i></td>
+                          <td>{{info.addedBy}}</td>
+                        </tr>
+                        {{#if telephone}}
+                        <tr>
+                          <td><i>Telephone:</i></td>
+                          <td>{{telephone}}</td>
+                        </tr>
+                        {{/if}}
                       </table>
                     </div>
 

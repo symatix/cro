@@ -637,7 +637,7 @@ button, .btn-submit:focus{
   box-shadow: 0 0 8px #ffffff;
   padding:10px;
   margin-bottom:6%;
-  min-height:350px;
+  min-height:310px;
 }
 .item-list-heading{
   background-color:#404040;

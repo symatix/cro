@@ -7,7 +7,7 @@ Template.adm_db.helpers({
   typeOfObject:function(){
     var pigment = "Pigment/dye/binder/varnish/reference materials";
     if (Prospero.findOne({_id:this.__originalId}).type === pigment){
-      return "Pigment/dye/binder/ varnish/reference materials";
+      return "Reference materials";
     } else {
       return Prospero.findOne({_id:this.__originalId}).type;
     }
@@ -165,6 +165,11 @@ Template.adm_db.helpers({
       }
     }
     return x;
+  },
+  telephone:function(){
+    var ownerId = Prospero.findOne(this.__originalId).info.userId;
+    var userPhone = Meteor.users.findOne(ownerId).profile.telephone;
+    return userPhone;
   },
 })
 
