@@ -58,4 +58,44 @@ Template.navbar.helpers({
       return "selected";
     }
   },
+  first_entry:function(){
+    if(Session.get("first_entry")){
+      return "selected";
+    }
+  },
+  last_entry:function(){
+    if(Session.get("last_entry")){
+      return "selected";
+    }
+  },
+  last_edit:function(){
+    if(Session.get("last_edit")){
+      return "selected";
+    }
+  },
+  addedBy:function(){
+    if(Session.get("addedBy")){
+      return "selected";
+    }
+  },
+  title_a:function(){
+    if(Session.get("title_a")){
+      return "selected";
+    }
+  },
+  title_z:function(){
+    if(Session.get("title_z")){
+      return "selected";
+    }
+  },
+  author_a:function(){
+    if(Session.get("author_a")){
+      return "selected";
+    }
+  },
+  author_z:function(){
+    if(Session.get("author_z")){
+      return "selected";
+    }
+  },
 })

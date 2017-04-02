@@ -53,4 +53,40 @@ Template.navbar.events({
   'click .newUser-href':function(){
     delete Session.keys.userId;
   },
+  'change .sorting-filter':function(){
+      Session.set("first_entry",false);
+      Session.set("last_entry",false);
+      Session.set("last_edit",false);
+      Session.set("addedBy",false);
+      Session.set("title_a",false);
+      Session.set("title_z",false);
+      Session.set("author_a",false);
+      Session.set("author_z",false);
+      var value = $(".sorting-filter").val();
+
+      if (value==="first_entry"){
+        Session.set("first_entry",true);
+      } 
+      if (value==="last_entry"){
+        Session.set("last_entry",true);
+      } 
+      if (value==="last_edit"){
+        Session.set("last_edit",true);
+      } 
+      if (value==="addedBy"){
+        Session.set("addedBy",true);
+      } 
+      if (value==="title_a"){
+        Session.set("title_a",true);
+      } 
+      if (value==="title_z"){
+        Session.set("title_z",true);
+      } 
+      if (value==="author_a"){
+        Session.set("author_a",true);
+      } 
+      if (value==="author_z"){
+        Session.set("author_z",true);
+      } 
+  },
 })
