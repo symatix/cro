@@ -6,11 +6,11 @@
   <div class="toggleBasic">
   <div class="row">
 
-    <div class="col-xs-12 col-md-6 individual-property name">
+    <div class="col-xs-12 col-md-6 individual-property title">
       PIGMENT/DYE/BINDER/VARNISH/REFERENCE NAME
     </div>
     <div class="col-xs-12 col-md-6">
-      <input type="text" class="individual-value individual-form" id="name" placeholder="(e.g. red lead, mastic, SS3186, etc.)" value="{{basic.name}}">
+      <input type="text" class="individual-value individual-form" id="title" placeholder="(e.g. red lead, mastic, SS3186, etc.)" value="{{basic.title}}">
     </div>
 
     <div class="col-xs-12 col-md-6 individual-property manufacturer">
@@ -129,9 +129,12 @@
       TYPE
     </div>
     <div class="col-xs-12 col-md-6 material_basic_type">
-      <input type="radio" name="material_basic_type" id="natural" value="natural"> natural<br/>
-      <input type="radio" name="material_basic_type" id="synthetic" value="synthetic"> synthetic<br/>
-      <input type="radio" name="material_basic_type" id="naturalSyntetic" value="naturalSyntetic"> natural and syntetic<br/>
+    <select class="form-select" id="pigmentType">
+      <option value="" disabled selected style='display:none;'>Select...</option>
+      <option id="natural" value="natural" selected="{{#if natural}}selected{{/if}}"> natural</option>
+      <option id="synthetic" value="synthetic" selected="{{#if synthetic}}selected{{/if}}"> synthetic</option>
+      <option id="naturalSyntetic" value="naturalSyntetic" selected="{{#if naturalSyntetic}}selected{{/if}}"> natural and syntetic</option>
+    </select>
     </div>
 
 <!--

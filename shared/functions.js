@@ -25,32 +25,10 @@ Meteor.myFunctions = {
       }
     }
     var date = new Date();
-    var dateFormat = (date.getMonth() + 1) + '.' + date.getDate() + '.' +  date.getFullYear() + '. '+date.getHoursCustom() + ':' + date.getMinutesCustom() + ':' + date.getSecondsTwoCustom();
+    var dateFormat = (date.getMonth() + 1) + '.' + date.getDate() + '.' +  date.getFullYear() + '  '+date.getHoursCustom() + ':' + date.getMinutesCustom() + ':' + date.getSecondsTwoCustom();
     return dateFormat;
   },
-clearIndividualValues: function(){
-    event.target.author.value = '';
-    event.target.title.value = '';
-    event.target.date.value = '';
-    event.target.period_style.value = '';
-    event.target.collection_owner.value = '';
-    event.target.museum_gallery.value = '';
-    event.target.painting_technique.value = '';
-    event.target.stretcher.value = '';
-    event.target.support.value = '';
-    event.target.priming.value = '';
-    event.target.paint_layer.value = '';
-    event.target.varnish.value = '';
-    event.target.img_front.value ='',
-    event.target.img_back.value =''
-  },
   insertData: function(){
-// clear all placeholders before input
-//    $('form').submit(function() {
-//            $(this).find('.individual-value').each(function() {
-//                $(this).val('');
-//            });
-//    });
 
 ////////////////////////////////////////////////////////////////////////////////////////
     $(':input').removeAttr('placeholder');
@@ -2623,16 +2601,29 @@ clearIndividualValues: function(){
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////      USER INFO / DATA INFO
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    
+    if (!Prospero.findOne(Session.get("itemId"))){
+      var owner = Meteor.user()._id;
+      var infoObject = {
+        userId:Meteor.user()._id,
+        createdAt: Meteor.myFunctions.dateFormat(),
+        addedBy:Meteor.user().username,
+        last_edit: Meteor.myFunctions.dateFormat(),
+        editedBy:Meteor.user().username,
+        editorId:Meteor.user()._id,
+      }
+    } else {
+      var oldObj = Prospero.findOne(Session.get("itemId"));
+      var owner = oldObj.info.userId;
+      var infoObject = {
+        userId:oldObj.info.userId,
+        createdAt:oldObj.info.createdAt,
+        addedBy:oldObj.info.addedBy,
+        last_edit: Meteor.myFunctions.dateFormat(),
+        editedBy:Meteor.user().username,
+        editorId:Meteor.user()._id,
 
-
-    var infoObject = {
-      userId:Meteor.user()._id,
-      createdAt: Meteor.myFunctions.dateFormat(),
-      addedBy:Meteor.user().profile.full_name,
-      last_edit: Meteor.myFunctions.dateFormat(),
-      editedBy:Meteor.user().profile.full_name,
-      editorId:Meteor.user()._id,
-      visible:function(){return $('input[name="material_basic_type"]:checked').val();},
+      }
     }
 
     // normal data object
@@ -2904,6 +2895,9 @@ clearIndividualValues: function(){
 
     // MAIN OBJECT //
     var itemDetails = {
+    owner:owner,
+    isDeleted:document.getElementById("isDeleted").value,
+    visible:document.getElementById("visible").value,
     type:itemType,
     info:infoObject,
     data:dataObject,
@@ -3015,6 +3009,9 @@ clearIndividualValues: function(){
 
     // MAIN OBJECT //
     var itemDetails = {
+    owner:owner,
+    isDeleted:document.getElementById("isDeleted").value,
+    visible:document.getElementById("visible").value,
     type:itemType,
     info:infoObject,
     data:dataObject,
@@ -3124,6 +3121,9 @@ clearIndividualValues: function(){
 
     // MAIN OBJECT //
     var itemDetails = {
+    owner:owner,
+    isDeleted:document.getElementById("isDeleted").value,
+    visible:document.getElementById("visible").value,
     type:itemType,
     info:infoObject,
     data:dataObject,
@@ -3156,12 +3156,12 @@ clearIndividualValues: function(){
     var itemType = $("input[name='type']:checked").val();
 
     var basicObject = {
-      title:document.getElementById("name").value,
+      title:document.getElementById("title").value,
       appearence:document.getElementById("appearence").value,
       altName:document.getElementById("altName").value,
       manufacturer:document.getElementById("manufacturer").value,
       commonName:document.getElementById("commonName").value,
-      pigmentType:function(){return $('input[name="material_basic_type"]:checked').val();},
+      pigmentType:document.getElementById("pigmentType").value,
       chemicalFormula:document.getElementById("chemicalFormula").value,
       chemicalName:document.getElementById("chemicalName").value,
       purity:document.getElementById("purity").value,
@@ -3183,6 +3183,9 @@ clearIndividualValues: function(){
 
     // MAIN OBJECT //
     var itemDetails = {
+    owner:owner,
+    visible:document.getElementById("visible").value,
+    isDeleted:document.getElementById("isDeleted").value,
     type:itemType,
     info:infoObject,
     data:dataObject,
@@ -3226,6 +3229,9 @@ clearIndividualValues: function(){
       username:username,
       password: password,
       profile: {
+        username:username,
+        visible:1,
+        isAdmin:false,
         full_name: full_name,
         email: email,
         institution: institution,
@@ -3247,7 +3253,10 @@ clearIndividualValues: function(){
     var userDetails = {
       username:username,
       password: password,
-      profile: {
+      profile: { 
+        username:username,
+        visible:1,
+        isAdmin:false,
         full_name: full_name,
         email: email,
         institution: institution,
@@ -3256,5 +3265,9 @@ clearIndividualValues: function(){
       }
     }
     Meteor.call("editUsers", userId, userDetails)
+  },
+  deleteUser:function(){
+    var userId = Session.get("userId");
+    Meteor.call("removeUser", userId);
   }
 }

@@ -25,9 +25,9 @@ Template.item_new.events({
     // now goes a long way of individual checking...
     //painting form
     if (document.getElementById('item_painting').checked){
-      Session.set("showPicture", true);
+      Session.set("showPainting", true);
     } else {
-      Session.set("showPicture", false);
+      Session.set("showPainting", false);
     }
     // sculpture form
     if (document.getElementById('item-sculpture').checked){

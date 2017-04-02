@@ -6,6 +6,7 @@ Meteor.startup(() => {
 		    	username:"admin",
 		        password: "admin",
 		        profile:{
+		        	isAdmin:true,
 					visible:0,
 		        	full_name: "admin",
 		        	email: "admin@prospero.com",
@@ -20,8 +21,18 @@ Meteor.startup(() => {
 		console.log("no data found > generating dummy input");
 		//pictures
 		Prospero.insert({
+		    owner:"adminXxX",
 			visible:"public",
+		    isDeleted:"available",
 		    type:"Painting",
+		    info:{
+		    	userId:"adminXxX",
+		    	editorId:"adminXxX",
+		    	addedBy:"generated",
+		    	editedBy:"admin",
+		    	createdAt:"1.1.2017  00:00:00",
+		    	last_edit:"1.1.2017  01:07:00",
+		    },
 		    data:{
 		      basic:{
 		        front:"/1front.jpg",
@@ -112,8 +123,18 @@ Meteor.startup(() => {
 		});
 		//sculptures
 		Prospero.insert({
+		    	owner:"adminXxX",
 				visible:"public",
+		    	isDeleted:"available",
 			    type:"Sculpture",
+			    info:{
+			    	userId:"adminXxX",
+			    	editorId:"adminXxX",
+			    	addedBy:"generated",
+			    	editedBy:"admin",
+			    	createdAt:"1.1.2017  00:01:00",
+			    	last_edit:"1.1.2017  01:06:00",
+			    },
 			    data:{
 			      basic:{
 			        front:"/dummy/sculpture2.jpg",
@@ -127,8 +148,18 @@ Meteor.startup(() => {
 		});
 		//Architectural heritage 
 		Prospero.insert({
+		   		owner:"adminXxX",
 				visible:"public",
+		    	isDeleted:"available",
 			    type:"Architectural heritage",
+		    	userId:"adminXxX",
+		    	editorId:"adminXxX",
+			    info:{
+			    	addedBy:"generated",
+			    	editedBy:"admin",
+			    	createdAt:"1.1.2017  00:02:00",
+			    	last_edit:"1.1.2017  01:05:00",
+			    },
 			    data:{
 			      basic:{
 			        front:"/dummy/arch3.jpg",
@@ -142,8 +173,18 @@ Meteor.startup(() => {
 		});
 		//Archival object 
 		Prospero.insert({
+		    	owner:"adminXxX",
 				visible:"public",
+		    	isDeleted:"available",
 			    type:"Archival object",
+			    info:{
+		    	userId:"adminXxX",
+		    	editorId:"adminXxX",
+			    	addedBy:"generated",
+			    	editedBy:"admin",
+			    	createdAt:"1.1.2017  00:03:00",
+			    	last_edit:"1.1.2017  01:04:00",
+			    },
 			    data:{
 			      basic:{
 			        front:"/dummy/script4.jpeg",
@@ -157,8 +198,18 @@ Meteor.startup(() => {
 		});
 		//Archaeological object 
 		Prospero.insert({
+		    	owner:"adminXxX",
 				visible:"public",
+		    	isDeleted:"available",
 			    type:"Archaeological object",
+			    info:{
+			    	userId:"adminXxX",
+			    	editorId:"adminXxX",
+			    	addedBy:"generated",
+			    	editedBy:"admin",
+			    	createdAt:"1.1.2017  00:04:00",
+			    	last_edit:"1.1.2017  01:03:00",
+			    },
 			    data:{
 			      basic:{
 			        front:"/dummy/object4.jpg",
@@ -172,8 +223,18 @@ Meteor.startup(() => {
 		});
 		//Pigment 
 		Prospero.insert({
+		    owner:"adminXxX",
 			visible:"public",
+	    	isDeleted:"available",
 		    type:"Pigment/dye/binder/varnish/reference materials",
+		    info:{
+		    	userId:"adminXxX",
+		    	editorId:"adminXxX",
+		    	addedBy:"generated",
+		    	editedBy:"admin",
+		    	createdAt:"1.1.2017  00:05:00",
+		    	last_edit:"1.1.2017  01:02:00",
+		    },
 		    data:{
 		      basic:{
 		        front:"/pigment.jpg",
@@ -230,8 +291,18 @@ Meteor.startup(() => {
 		});
 		//Samples 
 		Prospero.insert({
+		    	owner:"adminXxX",
 				visible:"public",
+		    	isDeleted:"available",
 			    type:"Sample/cross-section",
+			    info:{
+			    	userId:"adminXxX",
+			    	editorId:"adminXxX",
+			    	addedBy:"generated",
+			    	editedBy:"admin",
+			    	createdAt:"1.1.2017  00:06:00",
+			    	last_edit:"1.1.2017  01:01:00",
+			    },
 			    data:{
 			      basic:{
 			        front:"/dummy/cross1.jpeg",
@@ -245,8 +316,18 @@ Meteor.startup(() => {
 		});
 		//Other 
 		Prospero.insert({
+		    	owner:"adminXxX",
 				visible:"public",
+		    	isDeleted:"available",
 			    type:"other",
+			    info:{
+			    	userId:"adminXxX",
+			    	editorId:"adminXxX",
+			    	addedBy:"generated",
+			    	editedBy:"admin",
+			    	createdAt:"1.1.2017  00:07:00",
+			    	last_edit:"1.1.2017  01:00:00",
+			    },
 			    data:{
 			      basic:{
 			        front:"/dummy/other3.jpeg",

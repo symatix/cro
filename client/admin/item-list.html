@@ -1,115 +1,187 @@
 
 
 <!-- admin database list -->
-<template name="adm_prospero_db">
+<template name="adm_db">
   <div class="container-fluid">
-    <h1 class="breadcrumbs">admin }
-      <span class="post-heading"> manage croARTia</span>
+
+
+    <h1 class="breadcrumbs">{{#if currentUser}}{{currentUser.username}} } {{/if}}
+      <a class="a-heading" href="/">croARTia </a>/ db
     </h1>
-      {{> db_count}}
-      {{#EasySearch.Each index=adminIndex }}
-      <div id="{{__originalId}}">
-    <div class="row item-list">
-      <ul class="list-font">
-        <li>
-            <div class="col-md-2 user-item-list-heading">
-              <span class="item-property-author">{{basic.author}}
-              </span><br/>
-              <i>{{basic.title}}
-              </i>
-            </div>
-            <div class="col-md-2 list-font">
-              <span class="item-property-table">Image</span><br/>
-              <img class="img-list-xs img-front-xs" id="img-front-{{__originalId}}" src="{{data.imgs.img_front}}" data-toggle="modal" data-target="#thumb-modal">
-              <img class="img-list-xs img-back-xs" id="img-back-{{__originalId}}" src="{{data.imgs.img_back}}" data-toggle="modal" data-target="#thumb-modal">
-            </div>
-            <div class="col-md-1 list-font">
-              <span class="item-property-table">added&nbsp;by
-              </span><br/>
-              <i>{{addedBy}}</i>
-            </div>
-            <div class="col-md-1 list-font">
-              <span class="item-property-table js-sort-created">date&nbsp;added
-              </span><br/>
-              <i>{{createdAt}}</i>
-            </div>
-            <div class="col-md-1 list-font">
-              <span class="item-property-table">date&nbsp;modified
-              </span><br/>
-              <i>{{last_edit}}</i>
-            </div>
-            <div class="col-md-2 list-font">
-              <span class="item-property-table">item&nbsp;status</span><br/>
-              <i>
-              {{> property_check}}
-              </i>
-            </div>
-            <div class="col-md-3">
-            <button class="btn btn-top-fix btn-default btn-list js-visibility {{#if visibilityTrue}}{{else}}color-gray{{/if}}">
-              {{#if visibilityTrue}}PUBLIC&nbsp;{{else}}HIDDEN{{/if}}
-            </button>
-            <a href="/admin/details/{{__originalId}}">
-              <button class="btn btn-top-fix btn-default btn-list js-edit-added" id="btn-edit">DETAILS</button></a>
-            <a href="/admin/edit/{{__originalId}}">
-              <button class="btn btn-top-fix btn-default btn-list js-edit-added" id="btn-edit">EDIT</button></a>
-            <button class="btn btn-top-fix btn-danger btn-list js-delete">DELETE</button>
-            <label>
-              &nbsp;
-              <i style="font-family:Helvetica;font-size:15px;color:gray;">check box to delete&emsp;</i>
-              <input id="safe-delete-{{__originalId}}" type="checkbox" value="">
-            </label>
-          </div>
-        </li>
-      </ul>
-      </div>
-      </div>
-      {{/EasySearch.Each}}
-      {{> EasySearch.LoadMore attributes=loadBtn index=adminIndex content="LOAD MORE CONTENT"}}
+
+    <div class="container margin-top">
+      <div class="row item-list">
+        <ul>
+          {{#EasySearch.Each index=adminIndex }}    
+
+            <li>
+              <div class="col-xs-12 admin-list" id="{{__originalId}}">
+                <div class="">
+<!-- title of item list -->
+                  <div class="align-center item-list-heading item-heading">
+                      <span class="item-property">{{basic.title}}</span><br/>
+                  </div>
+                  <div class="row">
+                    <div class="col-xs-12 col-sm-3">
+                      <img class="img-list" id="img-front-{{__originalId}}" src="{{data.basic.front}}" data-toggle="modal" data-target="#thumb-modal-{{__originalId}}">
+                    </div>
+
+                    <div class="col-xs-12 col-sm-3 list-font">
+                      <table>
+                        <tr>
+                          <td><i>Type:</i></td>
+                          <td>{{typeOfObject}}</td>
+                        </tr>
+                        <tr>
+                          <td><i>Author:</i></td>
+                          <td>{{basic.author}}</td>
+                        </tr>
+                        <tr>
+                          <td><i>Current owner:</i></td>
+                          <td>{{basic.currentOwner}}</td>
+                        </tr>
+                        <tr>
+                          <td><i>Current location:</i></td>
+                          <td>{{basic.currentLocation}}</td>
+                        </tr>
+                        <tr>
+                          <td><i>Responsible conservation authority:</i></td>
+                          <td>{{basic.authority}}</td>
+                        </tr>
+                      </table>
+                    </div>
+
+                    <div class="col-xs-12 col-sm-3 list-font">
+                      <table>
+                        <tr>
+                          <td><i>Basic data:</i></td>
+                          <td>{{basicLength}} entries</td>
+                        </tr>
+                        <tr>
+                          <td><i>Original work:</i></td>
+                          <td>{{originalLength}} entries</td>
+                        </tr>
+                        <tr>
+                          <td><i>Interventions:</i></td>
+                          <td>{{interventionsLength}} entries</td>
+                        </tr>
+                        <tr>
+                          <td><i>Restoration work:</i></td>
+                          <td>{{restorationLength}} entries</td>
+                        </tr>
+                        <tr>
+                          <td><i>No. of methods:</i></td>
+                          <td>{{methodsLength}} entries</td>
+                        </tr>
+                      </table>
+                    </div>
 
 
-      <!-- modal -->
-      <div class="modal fade" id="thumb-modal" role="dialog">
-        <div class="modal-dialog">
-          <div class="modal-content modal-div">
+                    <div class="col-xs-12 col-sm-3 list-font">
+                      <table>
+                        <tr>
+                          <td><i>Visible:</i></td>
+                          <td>{{visible}}
+                          {{#if private}}
+                            <span class="glyphicon glyphicon-eye-open glyph-private"></span>
+                          {{/if}}
+                          </td>
+                        </tr>
+                        <tr>
+                          <td><i>Status:</i></td>
+                          <td>{{isDeleted}}
+                          {{#if deleted}}
+                            <span class="glyphicon glyphicon-alert"></span>
+                          {{/if}}
+                          </td>
+                        </tr>
+                        <tr>
+                          <td><i>Added by:</i></td>
+                          <td>{{info.addedBy}}</td>
+                        </tr>
+                        <tr>
+                          <td><i>Created at:</i></td>
+                          <td>{{info.createdAt}}</td>
+                        </tr>
+                        <tr>
+                          <td><i>Edited by:</i></td>
+                          <td>{{info.editedBy}}</td>
+                        </tr>
+                        <tr>
+                          <td><i>Edited at:</i></td>
+                          <td>{{info.last_edit}}</td>
+                        </tr>
+                      </table>
+                    </div>
 
-            <div class="modal-header">
+                    <div class="col-xs-12 action-buttons">
+                      <div class="row">
+
+                        <div class="col-xs-12 col-sm-3">
+                          <a href="/gallery/details/{{__originalId}}">
+                            <button class="btn btn-submit js-public-details">DETAILS</button>
+                          </a>
+                        </div>
+
+                        <div class="col-xs-12 col-sm-3">
+                          <a class="btn-setSession" href="/edit/{{__originalId}}">
+                            <button class="btn btn-submit" id="btn-edit">EDIT</button>
+                          </a>
+                        </div>
+
+                        <div class="col-xs-12 col-sm-3">
+                          <button class="btn btn-submit btn-danger js-delete">DELETE</button>
+                        </div>
+
+                        <div class="col-xs-12 col-sm-3 delete-label">
+                          <label>
+                            &nbsp;
+                            <i style="font-family:Helvetica;font-size:15px;color:gray;">check box to delete&emsp;</i>
+                            <input id="safe-delete-{{__originalId}}" type="checkbox" value="">
+                          </label>
+                        </div>
+
+                      </div>
+                    </div>
+<!--
+                    <div class="align-center col-xs-12">
+                      <a href="/gallery/details/{{__originalId}}">
+                        <button class="btn btn-submit js-public-details">DETAILS</button>
+                      </a>
+                    </div>
+-->
+                  </div>
+                </div>
+            </div>
+          </li>
+
+
+          <!-- modal - side -->
+        <div class="modal fade" id="thumb-modal-{{__originalId}}" role="dialog">
+          <div class="modal-dialog">
+            <div class="modal-content modal-div">
+              <div class="modal-header">
+                <h4 class="modal-title">
+              {{basic.title}} • side image
               <button type="button" class="close" data-dismiss="modal">&times;</button>
-              <h4 class="modal-title"></h4>
-            </div>
-            <div class="modal-body align-center">
-              <img class="img-modal">
+              </h4>
+              </div>
+              <div class="modal-body align-center">
+                <img class="img-modal" src="{{data.basic.front}}">
+              </div>
             </div>
           </div>
-
         </div>
-      </div>
 
-  </div>
-</template>
-
-
-<template name="db_count">
-    <div class="row">
-            <div class="col-md-2">
-              &nbsp;
-            </div>
-            <div class="col-md-3">
-              &nbsp;
-            </div>
-            <div class="col-md-2 align-center form-box-counter add-bottom-space">
-              <span class="db-counter">
-                &emsp;Items
-              <span class="db-counter-number">{{prosperoCount}}</span>
-                &emsp;|
-                &emsp;Files
-              <span class="db-counter-number">{{dataCount}}</span>
-              </span>
-            </div>
-            <div class="col-md-3">
-              &nbsp;
-            </div>
-            <div class="col-md-2">
-              &nbsp;
-            </div>
+      {{/EasySearch.Each}}
+      
+      {{> EasySearch.LoadMore attributes=loadBtn index=adminIndex content="Load more content"}}
+      {{#EasySearch.IfNoResults index=adminIndex}}
+        <div class="no-search">No results found!</div>
+      {{/EasySearch.IfNoResults}}
+      </ul>
     </div>
+    </div>
+  </div>
+
 </template>

@@ -2,15 +2,35 @@
 Template.mainGallery.helpers({
   galleryIndex: () => GalleryIndex,
 
-  gallery:function(){
-    return Prospero.find({}, {sort:Session.get("sortIndex"), limit:Session.get("siteLimit")});
+  croartia:function(){
+    return Prospero.find({}, {sort:{type:1}, limit:8});
   },
-  loadBtn:function(){
-    return {class:"btn btn-default btn-submit float-right"}
+  typeOfObject:function(){
+    var object = Prospero.findOne(this.__originalId).type;
+    var pigment = "Pigment/dye/binder/varnish/reference materials";
+    var other = "other";
+    if (object===pigment){
+      object = "Reference material";
+      return object;
+    } else if (object===other){
+      object = "Other";
+      return object;
+    } else {
+    return object;
+    }
+
   },
-  username:function(){
-    return Meteor.user().profile.full_name;
+  viewLarge:function(){
+    if (Session.get("large")){
+      return true;
+    }
   },
+  viewDetails:function(){
+    if (Session.get("details")){
+      return true;
+    }
+  },
+  /*
   painting:function(){
     return Prospero.find({"type":"Painting"}, {limit:1});
   },
@@ -35,4 +55,5 @@ Template.mainGallery.helpers({
   other:function(){
     return Prospero.find({"type":"other"}, {limit:1});
   }
+  */
 })

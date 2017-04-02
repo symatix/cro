@@ -2,41 +2,11 @@ Router.configure({
   layoutTemplate:'ProsperoLayout'
 });
 
+
 Router.route("/", function(){
   this.render('navbar', {to:"header"});
   this.render('mainGallery', {to:"main"});
 });
-// list branching urls
-Router.route("/Painting", function(){
-  this.render('navbar', {to:"header"});
-  this.render('painting_list', {to:"main"});
-});
-Router.route("/Sculpture", function(){
-  this.render('navbar', {to:"header"});
-  this.render('sculpture_list', {to:"main"});
-});
-Router.route("/Architectural%20heritage", function(){
-  this.render('navbar', {to:"header"});
-  this.render('architectural_list', {to:"main"});
-});
-Router.route("/Archival%20object", function(){
-  this.render('navbar', {to:"header"});
-  this.render('archival_list', {to:"main"});
-});
-Router.route("/Archaeological%20object", function(){
-  this.render('navbar', {to:"header"});
-  this.render('archaeological_list', {to:"main"});
-});
-Router.route("/Pigment/dye/binder/varnish/reference%20materials", function(){
-  this.render('navbar', {to:"header"});
-  this.render('pigment_list', {to:"main"});
-});
-Router.route("/other", function(){
-  this.render('navbar', {to:"header"});
-  this.render('other_list', {to:"main"});
-});
-
-
 
 
 
@@ -56,10 +26,10 @@ Router.route("/up", function(){
   this.render('upload_form', {to:"main"});
 });
 
-Router.route("/database/myitems", function(){
+Router.route("/moderator/collection", function(){
   Session.set("sortList", {author: 1});
   this.render('navbar', {to:"header"});
-  this.render('editorItems', {to:"main"}); // change to limited session - 20 display
+  this.render('moderator_db', {to:"main"}); // change to limited session - 20 display
 });
 
 Router.route("/new", function(){
@@ -147,23 +117,28 @@ Router.route("/admin/users", function(){
   this.render('navbar', {to:"header"});
   this.render('users', {to:"main"});
 });
-Router.route("/admin/users/edit/:_id", function(){
+Router.route("/admin/users/entry/:_id", function(){
   Session.set("userId", this.params._id);
   this.render('navbar', {to:"header"});
-  this.render('edit_user', {to:"main",
+  this.render('new_user', {to:"main",
     data: function(){
       return Meteor.users.findOne({_id:this.params._id});
 }});
 });
 
 
-Router.route("/admin/prosperoDB/", function(){
+Router.route("/admin/db/", function(){
   Session.set("sortList", {author: 1})
   this.render('navbar', {to:"header"});
-  this.render('adm_prospero_db', {to:"main"});
+  this.render('adm_db', {to:"main"});
+});
+Router.route("/admin/db/stats", function(){
+  Session.set("sortList", {author: 1})
+  this.render('navbar', {to:"header"});
+  this.render('admin_db_stats', {to:"main"});
 });
 
-Router.route("/admin/users/add", function(){
+Router.route("/admin/users/entry", function(){
   this.render('navbar', {to:"header"});
   this.render('new_user', {to:"main"});
 });

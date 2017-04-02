@@ -1,10 +1,17 @@
 <template name="item_details">
   <!-- container -->
     <div class="container">
-    <h1 class="breadcrumbs">{{#if currentUser}}{{currentUser.username}} } {{/if}}
-      <a class="a-heading" href="/">croARTia </a>/
-      <a class="a-heading" href="/{{type}}">{{type}} </a>/
-      <span class="post-heading"> details<br/>
+    <h1 class="breadcrumbs">{{#if currentUser}}{{currentUser.username}} 
+              {{> edit_button}}} {{/if}}
+      <a class="a-heading" href="/">croARTia </a>\
+      {{#if currentUser.profile.isAdmin}}
+        <a class="a-heading" href="/admin/db/">manageDB </a> 
+      {{else}}
+        {{#if currentUser}}
+          <a class="a-heading" href="/moderator/collection/">myCollection </a>
+         {{/if}}
+      {{/if}}
+      <span class="post-heading">\ details<br/>
         {{basic.author}} {{#if basic.author}}-{{/if}} {{basic.title}}
       </span>
     </h1>
@@ -97,21 +104,14 @@
 
     </div>
 
-      <div class="row">
-        <div class="col-md-12">
-          <div class="buttons">
-            <div class="float-right">
-              {{> edit_button}}
-            </div>
-          </div>
-          <br/>
-        </div>
-      </div>
     </div><!-- /container -->
 
    
 
       <script>
+      $(document).ready(function(){
+        $(window).scrollTop(0);
+      });
       $('#form-basic-select li').click(function (e) {
           e.preventDefault();
           $(this).find('a').tab('show');
@@ -121,5 +121,4 @@
           $(this).find('a').tab('show');
         });
       </script>
-
 </template>

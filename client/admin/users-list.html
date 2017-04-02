@@ -3,53 +3,143 @@
     <h1 class="breadcrumbs">admin } <span class="post-heading"> manage users</span></h1>
     <div class="row margin-top">
       <div class="col-md-12">
-        <a href="/admin/users/add">
+        <a class="addUser-href" href="/admin/users/entry">
           <button class="btn btn-default btn-submit col-md-12" id="btn-edit">ADD USER</button>
         </a>    
         <br/>
         <br/>
       </div>
     </div>
-      <ul class="list-font">
-      {{#each users}}
-    <div class="row dashed-border" id="{{_id}}">
-        <li>
-            <div class="col-md-2 user-list">
-              <span class="item-property">{{profile.full_name}}</span><br/>
-              <i>{{profile.institution}}</i>
-            </div>
-            <div class="col-md-2 user-details">
-              <span class="item-property">&emsp;username</span><br/>
+    <div class="form-box">
+
+          {{#EasySearch.Each index=usersIndex }}  
+    <div class="row dashed-border list-font" id="{{__originalId}}">
+        <div class="col-xs-12 col-sm-2 personal-data">
+          <h4>{{username}} }</h4>
+            <table class="user-details">
+              <tr>
+                <td><i>Full name:</i></td>
+                <td>{{profile.full_name}}</td>
+              </tr>
+              <tr>
+                <td><i>Telephone:</i></td>
+                <td>{{profile.telephone}}</td>
+              </tr>
+              <tr>
+                <td><i>E-Mail:</i></td>
+                <td>{{profile.email}}</td>
+              </tr>
+              <tr>
+                <td><i>Institution:</i></td>
+                <td>{{profile.institution}}</td>
+              </tr>
+              <tr>
+                <td><i>Password:</i></td>
+                <td>{{profile.password}}</td>
+              </tr>
+            </table>
               <br/>
-              <i>{{username}}</i>
-            </div>
-            <div class="col-md-2 user-details">
-              <span class="item-property">&emsp;password</span><br/>
-              <br/>
-              <i>{{profile.password}}</i>
-            </div>
-            <div class="col-md-2 user-details">
-              <span class="item-property">&emsp;telephone</span><br/>
-              <br/>
-              <i>{{profile.telephone}}</i>
-            </div>
-            <div class="col-md-2 user-details">
-              <span class="item-property">&emsp;e-mail</span><br/><br/>
-              <i>{{profile.email}}</i>
-            </div>
-            <div class="margin-left">
-              <a href="/admin/users/edit/{{_id}}">
-                <button class="btn btn-default btn-submit">EDIT</button>
-              </a>
-              <button class="btn btn-danger btn-list js-delete">DELETE</button>
-              <label>
-                <i style="font-family:Helvetica;font-size:15px;color:gray;">check box to delete&emsp;</i>
-                <input id="safe-delete-{{_id}}" type="checkbox" value="">
-              </label>
-            </div>
-        </li>
-    </div>
-        {{/each}}
-      </ul>
-  </div>
+
+              {{#unless profile.isAdmin}}
+                <a href="/admin/users/entry/{{__originalId}}">
+                  <button class="btn btn-default btn-user-list">EDIT</button>
+                </a>
+                <button class="btn btn-danger btn-user-list js-delete">DELETE</button>
+                <label class="fix-top">
+                  <i style="font-family:Helvetica;font-size:15px;color:gray;">check box to delete&emsp;</i>
+                  <input id="safe-delete-{{__originalId}}" type="checkbox" value="">
+                </label>
+              {{/unless}}
+        </div>
+
+
+          <div class="col-xs-12 col-sm-2 personal-data">
+            <h4>entries.{{total}}</h4>
+            <table class="user-details">
+              <tr>
+                <td><i>Paintings:</i></td>
+                <td>{{painting}}</td>
+              </tr>
+              <tr>
+                <td><i>Sculpture:</i></td>
+                <td>{{sculpture}}</td>
+              </tr>
+              <tr>
+                <td><i>Sample:</i></td>
+                <td>{{sample}}</td>
+              </tr>
+              <tr>
+                <td><i>Reference materials:</i></td>
+                <td>{{reference}}</td>
+              </tr>
+            </table>
+          </div>
+
+          <div class="col-xs-12 col-sm-2">
+            <h4>&nbsp;</h4>
+            <table class="user-details">
+              <tr>
+                <td><i>Architectural heritage:</i></td>
+                <td>{{architectural}}</td>
+              </tr>
+              <tr>
+                <td><i>Archival object:</i></td>
+                <td>{{archival}}</td>
+              </tr>
+              <tr>
+                <td><i>Archaeological object:</i></td>
+                <td>{{archaeological}}</td>
+              </tr>
+              <tr>
+                <td><i>Other:</i></td>
+                <td>{{other}}</td>
+              </tr>
+            </table>
+        </div>
+          <div class="col-xs-12 col-sm-6 personal-data">
+            <h4>last activity.{{lastEdit}}</h4>
+            <table class="user-details-entries">
+              <tr style="font-size:18px">
+                <td><b>status</b></td>
+                <td><b>type</b></td>
+                <td><b>object</b></td>
+                <td><b>author</b></td>
+                <td><b>title</b></td>
+                <td><b>last edit</b></td>
+                <td><b>view</b></td>
+                <td><b>edit</b></td>
+              </tr>
+            {{#each entry}}
+              <tr>
+                  <td>{{isDeleted}}</td>
+                  <td>{{visible}}</td>
+                  <td>{{typeOfObject}}</td>
+                  <td>
+                    {{#if basic.author}}
+                      {{basic.author}}
+                    {{else}}
+                      {{basic.manufacturer}}
+                    {{/if}}
+                  </td>
+                  <td>{{basic.title}}</td>
+                  <td>{{info.last_edit}}</td>
+                  <td class="align-center">
+                    <a href="/gallery/details/{{_id}}">
+                      <span class="glyphicon glyphicon-eye-open glyph"></span>
+                    </a>
+                  </td>
+                  <td class="align-center">
+                    <a class="btn-setSession" href="/edit/{{_id}}">
+                      <span class="glyphicon glyphicon-edit glyph"></span>
+                    </a>
+                  </td>
+              </tr>
+            {{/each}}
+            </table>
+        </div>
+
+          </div>
+          {{/EasySearch.Each}} 
+        </div>
+      </div>
 </template>

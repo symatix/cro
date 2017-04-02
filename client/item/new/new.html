@@ -3,13 +3,14 @@
     <div class="container">
       <div class="row">
       <h1 class="breadcrumbs">
+        <a class="a-heading" href="/">croARTia </a> \ 
       {{#if admin}}
-        <a class="a-heading" href="/admin/prosperoDB">croARTia </a>
-      {{else}}
-        <a class="a-heading" href="/database/myitems">croARTia </a>
-      {{/if}}\
-      {{#if type}}<a class="a-heading" href="/{{type}}">{{type}}</a> \ {{/if}}
-      <span class="post-heading"> database entry</span>
+        <a class="a-heading" href="/admin/db/">manageDB</a>
+      {{/if}}
+      {{#unless editObject}}
+        \ <a class="a-heading" href="/gallery/details/{{_id}}">details</a>
+      {{/unless}}
+      <span class="post-heading">\ database entry</span>
       </h1>
 
       <form class="js-input-painting-data">
@@ -28,10 +29,15 @@
                   <div class="col-xs-12 col-md-6 individual-property relief">
                     THIS ENTRY IS 
                   </div>
-                  <div class="col-xs-12 col-md-6 material_basic_type">
-                    <input type="radio" name="available" id="natural" value="public" checked="checked"> public&emsp;
-                    <input type="radio" name="available" id="synthetic" value="private"> private<br/>
+                  <div class="col-xs-12 col-md-6 visible">
+                  <select class="form-select" id="visible" value="{{visible}}">
+                    <option value="public" selected>Public</option>
+                    <option value="private">Private</option>
+                  </select>
                   </div>
+                    <select class="form-select hidden" id="isDeleted" value="{{isDeleted}}">
+                      <option value="available" selected="selected">Available</option>
+                    </select>
 
                   {{> upload_progress}}
                   </div>
@@ -40,16 +46,35 @@
               {{else}}<!-- end of /new -->
 
                   {{> objectType_hidden_fields}}
-                  <h3 class="align-center">{{basic.author}} - {{basic.title}}</h3>
+                  <h3 class="align-center">{{basic.author}} {{#if basic.authot}}-{{/if}} {{basic.title}}</h3>
                   {{> form}}
 
-                  <div class="col-xs-12 col-md-6 individual-property relief">
-                    THIS ENTRY IS 
+                  <div class="col-xs-6 col-md-3 individual-property relief">
+                    Make this entry 
                   </div>
-                  <div class="col-xs-12 col-md-6 material_basic_type">
-                    <input type="radio" name="available" id="natural" value="public" checked="checked"> public&emsp;
-                    <input type="radio" name="available" id="synthetic" value="private"> private<br/>
+                  <div class="col-xs-6 col-md-3 visible">
+                    <select class="form-select" id="visible" value="{{visible}}">
+                      <option value="public" selected="{{public}}">Public</option>
+                      <option value="private" selected="{{private}}">Private</option>
+                    </select>
                   </div>
+                  {{#if currentUser.profile.isAdmin}}
+                  <br/>
+                  <div class="col-xs-6 col-md-3 individual-property relief">
+                    Status  
+                  </div>
+                  <div class="col-xs-6 col-md-3 isDeleted">
+                    <select class="form-select" id="isDeleted" value="{{isDeleted}}">
+                      <option value="available" selected="{{available}}">Available</option>
+                      <option value="deleted" selected="{{deleted}}">Deleted</option>
+                    </select>
+                  </div>
+                  {{else}}
+                    <select class="form-select hidden" id="isDeleted" value="{{isDeleted}}">
+                      <option value="available" selected="{{available}}">Available</option>
+                      <option value="deleted" selected="{{deleted}}">Deleted</option>
+                    </select>
+                  {{/if}}
 
                   {{> upload_progress}}
 
@@ -66,4 +91,9 @@
 
       </div>
     </div><!-- /container -->
+    <script>
+    $(document).ready(function(){
+      $(window).scrollTop(0);
+    });
+    </script>
 </template>

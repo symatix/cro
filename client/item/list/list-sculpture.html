@@ -4,6 +4,13 @@
 
     <h1 class="breadcrumbs">{{#if currentUser}}{{currentUser.username}} } {{/if}}
       <a class="a-heading" href="/">croARTia </a>
+      {{#if currentUser.profile.isAdmin}}
+         \ <a class="a-heading" href="/admin/db/">manageDB </a>
+      {{else}}
+        {{#if currentUser}}
+         \ <a class="a-heading" href="/moderator/collection/">myCollection </a>
+         {{/if}}
+      {{/if}}
     </h1>
 
     <div class="container margin-top">

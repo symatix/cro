@@ -16,84 +16,104 @@
 
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-              <ul class="nav navbar-nav">
 
+        <ul class="nav navbar-nav">
         {{#if currentUser}}
-          {{#if admin}}
+
+          {{#if currentUser.profile.isAdmin}}
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Admin panel <span class="caret"></span></a>
               <ul class="dropdown-menu">
                 <li><a class="newItem-href" href="/new">New entry</a></li>
-                <li class="disabled"><a href="/admin/prosperoDB">Manage database</a></li>
+                <li class=""><a href="/admin/db">Manage database</a></li>
+                <li class=""><a href="/admin/db/stats">Database statistics</a></li>
                 <li role="separator" class="divider"></li>
-                <li class="disabled"><a href="/admin/users/add">Add user</a></li>
-                <li class="disabled"><a href="/admin/users">Manage users</a></li>
+                <li class=""><a class="newUser-href" href="/admin/users/entry">Add user</a></li>
+                <li class=""><a href="/admin/users">Manage users</a></li>
                 <li role="separator" class="divider"></li>
-                <li class="disabled"><a href="#">Advanced search</a></li>
+                <li class="disabled"><a href="/search">Advanced search</a></li>
               </ul>
             </li>
+
            {{else}}
+
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Database <span class="caret"></span></a>
               <ul class="dropdown-menu">
-                <li><a href="/new">New entry</a></li>
-                <li class="disabled"><a href="/database/myitems">My entries</a></li>
+                <li><a class="newItem-href" href="/new">New entry</a></li>
+                <li><a href="/moderator/collection">My collection</a></li>
                 <li role="separator" class="divider"></li>
-                <li class="disabled"><a href="#">List all entries</a></li>
+                <li class="disabled"><a href="/search">Advanced search</a></li>
               </ul>
             </li>
-            {{/if}}
+
             {{/if}}
 
-        </ul>
-        <ul class="nav navbar-nav">
-          <li class="dropdown disabled"><a href="/search">Advanced search</a></li>
-        </ul>
-        <!-- remove this after finished -->
-        <ul class="nav navbar-nav">
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">[dev] <span class="caret"></span></a>
-              <ul class="dropdown-menu dev">
-                {{> dev}}
+            {{else}}
+              <ul class="nav navbar-nav">
+                <li class="dropdown disabled"><a href="/search">Advanced search</a></li>
               </ul>
-            </li>
+            {{/if}}
         </ul>
+
+
+
+        <!-- search for users -->
+        {{#if currentUser.profile.isAdmin}}
+          {{#if moderatorDbView}}
+          <form class="navbar-form navbar-left">
+            <div class="form-group">
+            {{> EasySearch.Input index=usersIndex attributes=searchAttributesUsers}}
+              <span class="glyphicon glyphicon-search"></span>
+                &emsp;
+                <select class="sorting-users form-control">
+                  <option value="" disabled selected style='display:none;'>Select...</option>
+                  <option value="username_a">username a - z</option>
+                  <option value="username_z">username z - a</option>
+                  <option value="name_a">name a - z</option>
+                  <option value="name_z">name z - a</option>
+                  <option value="email_a">email a - z</option>
+                  <option value="email_z">email z - a</option>
+                  <option value="institution_a">institution a - z</option>
+                  <option value="institution_z">institution z - a</option>
+                </select>
+                <span class="glyphicon glyphicon-sort"></span>
+                &emsp;
+              </div>
+            </form>
+          {{/if}}
+        {{/if}}
+
         <!-- -->
+        {{#if userDbView}}
         <form class="navbar-form navbar-left">
           <div class="form-group">
-            {{#if paintingInput}}
-              {{> EasySearch.Input index=paintingIndex attributes=searchAttributes}}
+
+            {{#if currentUser.profile.isAdmin}}
+              {{> EasySearch.Input index=adminIndex attributes=searchAttributesAdmin}}
               <span class="glyphicon glyphicon-search"></span>
-                &emsp;Sort by: 
-                <select class="sorting-paintings form-control">
-                  <option value="last_entry">last entry</option>
-                  <option value="first_entry">first entry</option>
-                  <option value="title_a">title a - z</option>
-                  <option value="title_z">title z - a</option>
-                  <option value="author_a">author a - z</option>
-                  <option value="author_z">author z - a</option>
+                &emsp;
+                <select name="typeFilter" class="sorting-admin-category form-control" id="categoryFilter">
+                  <option value="" disabled selected style='display:none;'>Select...</option>
+                  <option value="">All</option>
+                  <option value="Painting">Painting</option>
+                  <option value="Sculpture">Sculpture</option>
+                  <option value="Architectural heritage">Architectural heritage</option>
+                  <option value="Archival object">Archival object</option>
+                  <option value="Archaeological object">Archaeological object</option>
+                  <option value="Sample/cross-section">Sample</option>
+                  <option value="Pigment/dye/binder/varnish/reference materials">Pigment</option>
+                  <option value="other">Other</option>
+                  <option disabled>--------</option>
+                  <option value="private">Private</option>
+                  <option value="deleted">Deleted</option>
                 </select>
-            {{/if}}
-            {{#if sculptureInput}}
-              {{> EasySearch.Input index=sculptureIndex attributes=searchAttributes}}
-              <span class="glyphicon glyphicon-search"></span>
-                &emsp;Sort by: 
-                <select class="sorting-paintings form-control">
-                  <option value="last_entry">last entry</option>
-                  <option value="first_entry">first entry</option>
-                  <option value="title_a">title a - z</option>
-                  <option value="title_z">title z - a</option>
-                  <option value="author_a">author a - z</option>
-                  <option value="author_z">author z - a</option>
-                </select>
-            {{/if}}
-            {{#if adminInput}}
-              {{> EasySearch.Input index=adminIndex attributes=searchAttributes}}
-              <span class="glyphicon glyphicon-search"></span>
-                &emsp;Sort by: 
+                <span class="glyphicon glyphicon-align-justify"></span>
+                &emsp; 
                 <select class="sorting-admin form-control">
-                  <option value="last_entry">last entry</option>
+                  <option value="" disabled selected style='display:none;'>Select...</option>
                   <option value="first_entry">first entry</option>
+                  <option value="last_entry">last entry</option>
                   <option value="last_edit">last edit</option>
                   <option value="addedBy">added by</option>
                   <option value="title_a">title a - z</option>
@@ -101,23 +121,96 @@
                   <option value="author_a">author a - z</option>
                   <option value="author_z">author z - a</option>
                 </select>
-            {{/if}}
-            {{#if editorInput}}
-              {{> EasySearch.Input index=editorIndex attributes=searchAttributes}}
-            <span class="glyphicon glyphicon-search"></span>
-                &emsp;Sort by: 
-                <select class="sorting-editor form-control">
-                  <option value="last_entry">last entry</option>
-                  <option value="first_entry">first entry</option>
-                  <option value="last_edit">last edit</option>
-                  <option value="title_a">title a - z</option>
-                  <option value="title_z">title z - a</option>
-                  <option value="author_a">author a - z</option>
-                  <option value="author_z">author z - a</option>
-                </select>
-            {{/if}}
+                <span class="glyphicon glyphicon-sort"></span>
+                &emsp;
+               {{else}}
+
+               {{#if currentUser}}
+                  {{> EasySearch.Input index=moderatorIndex attributes=searchAttributesModerator}}
+                  <span class="glyphicon glyphicon-search"></span>
+                    &emsp;
+                    <select name="typeFilter" class="sorting-moderator form-control" id="categoryFilter">
+                      <option value="" disabled selected style='display:none;'>Select...</option>
+                      <option value="">All</option>
+                      <option value="Painting">Painting</option>
+                      <option value="Sculpture">Sculpture</option>
+                      <option value="Architectural heritage">Architectural heritage</option>
+                      <option value="Archival object">Archival object</option>
+                      <option value="Archaeological object">Archaeological object</option>
+                      <option value="Sample/cross-section">Sample</option>
+                      <option value="Pigment/dye/binder/varnish/reference materials">Pigment</option>
+                      <option value="other">Other</option>
+                      <option disabled>--------</option>
+                      <option value="private">Private</option>
+                    </select>
+                    <span class="glyphicon glyphicon-align-justify"></span>
+                    &emsp; 
+                    <select class="sorting-editor form-control">
+                      <option value="" disabled selected style='display:none;'>Select...</option>
+                      <option value="last_entry">last entry</option>
+                      <option value="first_entry">first entry</option>
+                      <option value="last_edit">last edit</option>
+                      <option value="title_a">title a - z</option>
+                      <option value="title_z">title z - a</option>
+                      <option value="author_a">author a - z</option>
+                      <option value="author_z">author z - a</option>
+                    </select>
+                    <span class="glyphicon glyphicon-sort"></span>
+                    &emsp;
+                {{/if}} <!-- /if currentUser -->
+            {{/if}} <!-- /if isAdmin -->
           </div>
         </form>
+        {{else}} <!-- /if dbView / start of guestSearch-->
+
+          {{#if homeUrl}}
+            <form class="navbar-form navbar-left">
+              <div class="form-group"> 
+                {{> EasySearch.Input index=galleryIndex attributes=searchAttributesModerator}}
+                  <span class="glyphicon glyphicon-search"></span>
+                  &emsp; 
+
+                  <select name="" class="sorting-category-guest form-control">
+                    <option value="" disabled selected style='display:none;'>Select...</option>
+                    <option value="">All</option>
+                    <option value="Painting">Painting</option>
+                    <option value="Sculpture">Sculpture</option>
+                    <option value="Architectural heritage">Architectural heritage</option>
+                    <option value="Archival object">Archival object</option>
+                    <option value="Archaeological object">Archaeological object</option>
+                    <option value="Sample/cross-section">Sample</option>
+                    <option value="Pigment/dye/binder/varnish/reference materials">Pigment</option>
+                    <option value="other">Other</option>
+                  </select>
+                  <span class="glyphicon glyphicon-align-justify"></span>
+                  &emsp; 
+                  <select class="sorting-guest form-control">
+                    <option value="" disabled selected style='display:none;'>Select...</option>
+                    <option value="last_entry">last entry</option>
+                    <option value="first_entry">first entry</option>
+                    <option value="title_a">title a - z</option>
+                    <option value="title_z">title z - a</option>
+                    <option value="author_a">author a - z</option>
+                    <option value="author_z">author z - a</option>
+                  </select>
+                  <span class="glyphicon glyphicon-sort"></span>
+                  &emsp; 
+                    <select name="" class="sorting-view form-control">
+                      <option value="large" selected="{{large}}">
+                        Large
+                      </option>
+                      <option value="details" selected="{{details}}">
+                        Details
+                      </option>
+                    </select>
+                    <span class="glyphicon glyphicon-eye-open"></span>
+              </div>
+            </form>
+          {{/if}}
+        {{/if}}<!-- /if guestSearch-->
+
+
+
         {{#if currentUser}}
         <ul class="nav navbar-nav float-right">
           <li class="dropdown logout"><a href="#">Log out</a></li>
@@ -127,10 +220,34 @@
             <b>{{currentUser.profile.full_name}}</b>
           </p>
         </ul>
+
+        <!-- remove this after finished -->
+        <ul class="nav navbar-nav float-right">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">[dev] <span class="caret"></span></a>
+              <ul class="dropdown-menu pull-right dev">
+                {{> dev}}
+              </ul>
+            </li>
+        </ul><!-- remove dev report -->
+
           {{else}}
+
+
+
           <ul class="nav navbar-nav float-right">
             <li class ="dropdown"><a href="/login">Log in</a></li>
           </ul>
+
+        <!-- remove this after finished -->
+        <ul class="nav navbar-nav float-right">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">[dev] <span class="caret"></span></a>
+              <ul class="dropdown-menu dev">
+                {{> dev}}
+              </ul>
+            </li>
+        </ul><!-- remove dev report -->
           {{/if}}
       </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->

@@ -1,14 +1,44 @@
 // web ("/new") > local ("/client/admin/item-list")
-Template.adm_prospero_db.events({
+Template.adm_db.events({
   "click .js-delete":function(event){
     var itemId = this.__originalId;
     var safeDelete = $('#safe-delete-'+itemId).is(':checked');
+    var obj = Prospero.findOne(itemId);
     if (safeDelete == false){
-      alert("FAIL > delete not allowed - check box to delete");
+      alert("Denied: check box to delete");
     } else {
         $("#"+itemId).animate({opacity:0},200,function(){
-        setTimeout(Meteor.call("deleteItem", itemId),5000);
+        setTimeout(Meteor.call("deleteItem", obj, itemId),5000);
         });
+    }
+  },
+  'click .btn-setSession':function(event){
+    var itemId = this.__originalId;
+    var type = Prospero.findOne(itemId).type;
+    delete Session.keys.showPainting;
+    delete Session.keys.showSculpture;
+    delete Session.keys.showOther;
+    delete Session.keys.showPigment;
+
+    Session.set("showPainting", false);
+    Session.set("showSculpture", false);
+    Session.set("showOther", false);
+    Session.set("showPigment", false);
+
+
+    Session.set("itemId", itemId);
+
+    if(type==="Painting"){
+    Session.set("showPainting", true);
+    }
+    if(type==="Sculpture"){
+        Session.set("showSculpture", true);
+    }
+    if(type==="Pigment/dye/binder/varnish/reference materials"){
+        Session.set("showPigment", true);
+    }
+    if(type!=="Painting" && type!=="Sculpture" && type!=="Pigment/dye/binder/varnish/reference materials"){
+        Session.set("showOther", true);
     }
   },
   'change .sorting': (e) => {
@@ -39,6 +69,10 @@ Template.adm_prospero_db.events({
   }
 })
 
+
+////////////////////////////////////
+      //CHECK IF BELOW NEEDED//
+///////////////////////////////////
 // web ("/admin/edit/:_id") > local ("client/admin/item-edit")
 Template.adminEdit.events({
   'submit .js-edit-painting-data':function(event){
@@ -53,7 +87,7 @@ Template.adminEdit.events({
         Meteor.call("deleteItem", itemId);
         Router.go("/admin/prosperoDB");
       } else {
-        alert("FAIL > delete not allowed - check box to delete");
+        alert("Denied: check box to delete");
       }
     }
 })

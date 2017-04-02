@@ -1,0 +1,153 @@
+
+
+
+<template name="admin_db_stats">
+  <div class="container">
+
+
+    <h1 class="breadcrumbs">{{#if currentUser}}{{currentUser.username}} } {{/if}}
+      <a class="a-heading" href="/">croARTia </a>/ 
+      <a class="a-heading" href="/admin/db">db </a>/
+      statistics
+    </h1>
+
+        <div class="row form-box">
+        <div class="row list-font">
+          <div class="col-xs-6">
+            <h4>croARTia.entries.{{total}}.files.{{files}}.
+            </h4>
+            <table class="admin-stats">
+              <tr>
+                <td><b>type</b></td>
+                <td><b>total</b></td>
+                <td><b>public</b></td>
+                <td><b>private</b></td>
+                <td><b>deleted</b></td>
+              </tr>
+              <tr>
+                <td><i>Paintings:</i></td>
+                <td>{{painting}}</td>
+                <td>{{paintingPublic}}</td>
+                <td>{{paintingPrivate}}</td>
+                <td>{{paintingDeleted}}</td>
+              </tr>
+              <tr>
+                <td><i>Sculpture:</i></td>
+                <td>{{sculpture}}</td>
+                <td>{{sculpturePublic}}</td>
+                <td>{{sculpturePrivate}}</td>
+                <td>{{sculptureDeleted}}</td>
+              </tr>
+              <tr>
+                <td><i>Sample:</i></td>
+                <td>{{sample}}</td>
+                <td>{{samplePublic}}</td>
+                <td>{{samplePrivate}}</td>
+                <td>{{sampleDeleted}}</td>
+              </tr>
+              <tr>
+                <td><i>Reference materials:</i></td>
+                <td>{{reference}}</td>
+                <td>{{referencePublic}}</td>
+                <td>{{referencePrivate}}</td>
+                <td>{{referenceDeleted}}</td>
+              </tr>
+            </table>
+          </div>
+
+          <div class="col-xs-6 personal-data">
+            <h4>available.{{totalPublic}}.private.{{totalPrivate}}.deleted.{{totalDeleted}}.
+            </h4>
+            <table class="admin-stats">
+              <tr>
+                <td><b>type</b></td>
+                <td><b>total</b></td>
+                <td><b>public</b></td>
+                <td><b>private</b></td>
+                <td><b>deleted</b></td>
+              </tr>
+              <tr>
+                <td><i>Architectural heritage:</i></td>
+                <td>{{architectural}}</td>
+                <td>{{architecturalPublic}}</td>
+                <td>{{architecturalPrivate}}</td>
+                <td>{{architecturalDeleted}}</td>
+              </tr>
+              <tr>
+                <td><i>Archival object:</i></td>
+                <td>{{archival}}</td>
+                <td>{{archivalPublic}}</td>
+                <td>{{archivalPrivate}}</td>
+                <td>{{archivalDeleted}}</td>
+              </tr>
+              <tr>
+                <td><i>Archaeological object:</i></td>
+                <td>{{archaeological}}</td>
+                <td>{{archaeologicalPublic}}</td>
+                <td>{{archaeologicalPrivate}}</td>
+                <td>{{archaeologicalDeleted}}</td>
+              </tr>
+              <tr>
+                <td><i>Other:</i></td>
+                <td>{{other}}</td>
+                <td>{{otherPublic}}</td>
+                <td>{{otherPrivate}}</td>
+                <td>{{otherDeleted}}</td>
+              </tr>
+            </table>
+        </div>
+
+
+        <div class="col-xs-12 align-center">
+        <hr/>
+            <h4>last entries</h4>
+            <table>
+              <tr style="font-size:18px">
+                <td><b>status</b></td>
+                <td><b>type</b></td>
+                <td><b>object</b></td>
+                <td><b>author</b></td>
+                <td><b>title</b></td>
+                <td><b>created at</b></td>
+                <td><b>last edit</b></td>
+                <td><b>owner</b></td>
+                <td><b>edited by</b></td>
+                <td><b>view</b></td>
+                <td><b>edit</b></td>
+              </tr>
+            {{#each entry}}
+              <tr>
+                  <td>{{isDeleted}}</td>
+                  <td>{{visible}}</td>
+                  <td>{{typeOfObject}}</td>
+                  <td>
+                    {{#if basic.author}}
+                      {{basic.author}}
+                    {{else}}
+                      {{basic.manufacturer}}
+                    {{/if}}
+                  </td>
+                  <td>{{basic.title}}</td>
+                  <td>{{info.createdAt}}</td>
+                  <td>{{info.last_edit}}</td>
+                  <td>{{info.addedBy}}</td>
+                  <td>{{info.editedBy}}</td>
+                  <td class="align-center">
+                    <a href="/gallery/details/{{_id}}">
+                      <span class="glyphicon glyphicon-eye-open glyph"></span>
+                    </a>
+                  </td>
+                  <td class="align-center">
+                    <a class="btn-setSession" href="/edit/{{_id}}">
+                      <span class="glyphicon glyphicon-edit glyph"></span>
+                    </a>
+                  </td>
+              </tr>
+            {{/each}}
+            </table>
+        </div>
+
+        </div>
+    </div>
+  </div>
+</template>

@@ -17,7 +17,7 @@ Template.property_check.helpers({
 Template.edit_button.helpers({
   owner:function(){
     var user = Meteor.user()._id;
-    var owner = Prospero.findOne({_id:this._id}).userId;
+    var owner = Prospero.findOne({_id:this._id}).info.userId;
     if (user){
       if (user == owner){
         return true;

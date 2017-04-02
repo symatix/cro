@@ -17,4 +17,39 @@ Template.item_new.helpers({
       return true;
     }
   },
+  available:function(){
+    if (this._id){
+      var isAvailable = Prospero.findOne(this._id).isDeleted;
+      if (isAvailable === "available"){
+        return "selected";
+      }
+    }
+  },
+  deleted:function(){
+    if (this._id){
+      var isDeleted = Prospero.findOne(this._id).isDeleted;
+      if (isDeleted === "deleted"){
+        return "selected";
+      }
+    }
+  },
+  public:function(){
+    if (this._id){
+      var isPublic = Prospero.findOne(this._id).visible;
+      if (isPublic === "public"){
+        return "selected";
+      }
+    } else if (!this._id){
+      return "selected";
+    }
+  },
+  private:function(){
+    if (this._id){
+      var isPrivate = Prospero.findOne(this._id).visible;
+      if (isPrivate === "private"){
+        return "selected";
+      }
+    }
+  },
+
 })

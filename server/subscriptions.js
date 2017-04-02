@@ -23,7 +23,7 @@ Meteor.publish("theProspero", function(){
 			return Prospero.find({}, {sort:{"createdAt":-1}});
 		}
 	} else {
-		return Prospero.find({"visible":"public"}, {sort: {"createdAt":-1}});
+		return Prospero.find({"isDeleted":"available"}, {sort: {"createdAt":-1}});
 	}
 })
 

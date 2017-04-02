@@ -1,4 +1,18 @@
 
+Template.images_basic.helpers({
+	images:function(){
+		var url = Prospero.findOne(this._id).data.basic;
+		var front = url.front;
+		var back = url.back;
+		var side = url.side;
+		var signature = url.signature;
+		if (front || back || side || signature){
+			return true;
+		}
+
+	}
+})
+
 Template.images_original.helpers({
 	originalDisplay:function(){
 		var itemId = this._id;

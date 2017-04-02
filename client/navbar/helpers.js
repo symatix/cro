@@ -7,48 +7,55 @@ Template.navbar.helpers({
       return true;
     }
   },
-  paintingIndex: () => PaintingIndex,
+  galleryIndex: () => GalleryIndex,
   adminIndex: () => AdminIndex,
-  editorIndex: () => EditorIndex,
+  moderatorIndex: () => ModeratorIndex,
+  usersIndex: () => UsersIndex,
 
-  searchAttributes:function(){
-    return {placeholder: ' Search by author or title',
+  searchAttributesModerator:function(){
+    return {placeholder: ' Search by author, title or type',
             id:'input-basic-search'}
   },
-  paintingInput:function(){
+  searchAttributesAdmin:function(){
+    return {placeholder: ' Search by author, title, user or type',
+            id:'input-basic-search'}
+  },
+  searchAttributesUsers:function(){
+    return {placeholder: ' Search by username, name, email or inst...',
+            id:'input-basic-search'}
+  },
+  userDbView:function(){
     var routeName = Router.current().route.path();
-    var index = "/Painting";
-    if(routeName == index){
+    var admin = "/admin/db";
+    var moderator = "/moderator/collection";
+    if(routeName == admin || routeName == moderator){
+      return true;
+    } 
+  },
+  moderatorDbView:function(){
+    var routeName = Router.current().route.path();
+    var moderatorDb = "/admin/users";
+    if(routeName == moderatorDb){
+      return true;
+    } 
+  },
+  homeUrl:function(){
+    var routeName = Router.current().route.path();
+    var home = "/";
+    if(routeName == home){
       return true;
     } else {
       return false;
     }
   },
-  sculptureInput:function(){
-    var routeName = Router.current().route.path();
-    var index = "/Sculpture";
-    if(routeName == index){
-      return true;
-    } else {
-      return false;
+  large:function(){
+    if(Session.get("large")){
+      return "selected";
     }
   },
-  editorInput:function(){
-    var routeName = Router.current().route.path();
-    var index = "/database/myitems";
-    if(routeName == index){
-      return true;
-    } else {
-      return false;
+  details:function(){
+    if(Session.get("details")){
+      return "selected";
     }
   },
-  adminInput:function(){
-    var routeName = Router.current().route.path();
-    var index = "/admin/prosperoDB";
-    if(routeName == index){
-      return true;
-    } else {
-      return false;
-    }
-  }
 })

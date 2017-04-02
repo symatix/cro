@@ -3,115 +3,106 @@
     <h1>cro<span class="prospero">ART</span>ia</h1>
     <h2 class="subhead"> ART & RESEARCH DATABASE</h2>
     {{#if currentUser}}
-      <h3 class="welcome-msg">welcome <span class="post-heading underline">{{username}}</span></h3>
+      <h3 class="welcome-msg">welcome <span class="post-heading underline">{{currentUser.username}}</span></h3>
     {{/if}}
       <div class="container margin-top">
         <div class="row">
+
         <!-- pictures -->
-        <a href="/Painting">
+      {{#EasySearch.Each index=galleryIndex}} 
+
+      {{#if viewDetails}}  
+      <div class="col-xs-12 col-sm-6" id="{{__originalId}}">
+      <div class="item-list">
+<!-- title of item list -->
+                  <div class="align-center item-list-heading item-heading">
+                      <span class="item-property">{{basic.title}}</span><br/>
+                  </div>
+                  <div class="row">
+                    <div class="col-xs-12 col-sm-6">
+                      <img class="img-list" id="img-front-{{__originalId}}" src="{{data.basic.front}}" data-toggle="modal" data-target="#thumb-modal">
+                    </div>
+                    <div class="col-xs-12 col-sm-6 list-font">
+                      <br/>
+                      <table>
+                        <tr>
+                          <td><i>Author:</i></td>
+                          <td>{{basic.author}}</td>
+                        </tr>
+                        <tr>
+                          <td><i>Date:</i></td>
+                          <td>{{basic.date}}</td>
+                        </tr>
+                        {{#if basic.currentLocation}}
+                        <tr>
+                          <td><i>Current<br/>&emsp;location:</i></td>
+                          <td>{{basic.currentLocation}}</td>
+                        </tr>
+                        {{/if}}
+                        {{#if basic.currentOwner}}
+                        <tr>
+                          <td><i>Current<br/>&emsp;owner:</i></td>
+                          <td>{{basic.currentOwner}}</td>
+                        </tr>
+                        {{/if}}
+                        {{#if basic.originalLocation}}
+                        <tr>
+                          <td><i>Original<br/>&emsp;location:</i></td>
+                          <td>{{basic.originalLocation}}</td>
+                        </tr>
+                        {{/if}}
+                        {{#if basic.originalOwner}}
+                        <tr>
+                          <td><i>Original<br/>&emsp;owner:</i></td>
+                          <td>{{basic.originalOwner}}</td>
+                        </tr>
+                        {{/if}}
+                      </table>
+                    </div>
+                    <div class="align-center col-xs-12 itemBox-lg">
+                      <a href="/gallery/details/{{__originalId}}">
+                        <button class="btn btn-submit btn-list-details">DETAILS</button>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+            </div>
+
+
+
+
+
+      {{else}}
+      <a class="object-href" href="/gallery/details/{{__originalId}}">
         <div class="col-xs-12 col-sm-6 col-md-4">
           <div class="row align-center form-box objectBranch">
-            <h3>Paintings</h3>
-            {{#each painting}}
+            <h3 class="object-class-href">{{typeOfObject}}</h3>
             <div class="col-xs-12">
               <img class="img-edit" src="{{data.basic.front}}"/>
             </div>
-            {{/each}}
+              <div class="col-xs-12 itemBox-lg">
+                <h4 class="itemBox-basicInfo">
+                  {{basic.title}}<br/>
+                  {{#if basic.author}}by{{/if}} {{basic.author}}
+                </h4>
+              </div>
           </div>
-        </div>
-        </a> <!-- /end pictures -->
-        <!-- sculptures -->
-        <a href="/Sculpture">
-        <div class="col-xs-12 col-sm-6 col-md-4">
-          <div class="row align-center form-box objectBranch">
-            <h3>Sculptures</h3>
-            {{#each sculptures}}
-            <div class="col-xs-12">
-              <img class="img-edit" src="{{data.basic.front}}"/>
-            </div>
-            {{/each}}
-          </div>
-        </div>
-        </a> <!-- /end sculptures -->
-        <!-- Architectural heritage -->
-        <a href="/Architectural%20heritage">
-        <div class="col-xs-12 col-sm-6 col-md-4">
-          <div class="row align-center form-box objectBranch">
-            <h3>Architectural heritage</h3>
-            {{#each heritage}}
-            <div class="col-xs-12">
-              <img class="img-edit" src="{{data.basic.front}}"/>
-            </div>
-            {{/each}}
-          </div>
-        </div>
-        </a> <!-- /end Architectural heritage -->
-        <!-- Archival object -->
-        <a href="/Archival%20object">
-        <div class="col-xs-12 col-sm-6 col-md-4">
-          <div class="row align-center form-box objectBranch">
-            <h3>Archival object</h3>
-            {{#each archival}}
-            <div class="col-xs-12">
-              <img class="img-edit" src="{{data.basic.front}}"/>
-            </div>
-            {{/each}}
-          </div>
-        </div>
-        </a> <!-- /end Archival object -->
-        <!-- Archaeological object -->
-        <a href="/Archaeological%20object">
-        <div class="col-xs-12 col-sm-6 col-md-4">
-          <div class="row align-center form-box objectBranch">
-            <h3>Archaeological object</h3>
-            {{#each archaeological}}
-            <div class="col-xs-12">
-              <img class="img-edit" src="{{data.basic.front}}"/>
-            </div>
-            {{/each}}
-          </div>
-        </div>
-        </a> <!-- /end Archaeological object -->
-        <!-- Samples -->
-        <a href="#" onclick="alert('sačekuša')">
-        <div class="col-xs-12 col-sm-6 col-md-4">
-          <div class="row align-center form-box objectBranch">
-            <h3>Samples/cross-section</h3>
-            {{#each sample}}
-            <div class="col-xs-12">
-              <img class="img-edit" src="{{data.basic.front}}"/>
-            </div>
-            {{/each}}
-          </div>
-        </div>
-        </a> <!-- /end Samples -->
-        <!-- Pigment -->
-        <a href="/Pigment/dye/binder/varnish/reference%20materials">
-        <div class="col-xs-12 col-sm-6 col-md-4">
-          <div class="row align-center form-box objectBranch">
-            <h3>Pigments and reference material</h3>
-            {{#each pigment}}
-            <div class="col-xs-12">
-              <img class="img-edit" src="{{data.basic.front}}"/>
-            </div>
-            {{/each}}
-          </div>
-        </div>
-        </a> <!-- /end Pigment -->
-        <!-- other -->
-        <a href="/other">
-        <div class="col-xs-12 col-sm-6 col-md-4">
-          <div class="row align-center form-box objectBranch">
-            <h3>Other</h3>
-            {{#each other}}
-            <div class="col-xs-12">
-              <img class="img-edit" src="{{data.basic.front}}"/>
-            </div>
-            {{/each}}
-          </div>
-        </div>
-        </a> <!-- /end other -->
+        </div> <!-- /end pictures -->
+      </a>
+      {{/if}}
+
+      {{/EasySearch.Each}}
+
+
+
+      
+      {{> EasySearch.LoadMore attributes=loadBtn index=galleryIndex content="Load more content"}}
+      {{#EasySearch.IfNoResults index=galleryIndex}}
+        <div class="no-search">No results found!</div>
+      {{/EasySearch.IfNoResults}}
+
       </div>
+
     </div>
   </div>
   <!-- modal -->

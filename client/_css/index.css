@@ -1,3 +1,7 @@
+.report{
+  color:black;
+  font-family:monospace;
+}
 .dev{
   min-width:450px !important;
   padding:3px;
@@ -97,19 +101,19 @@ input[type="text"], input[type="password"], input[type="file"]{
   margin-left:25px;
 }
 input::-webkit-input-placeholder {
-color: #333333 !important;
+color: #666666 !important;
 }
  
 input:-moz-placeholder { /* Firefox 18- */
-color: #333333 !important;  
+color: #666666 !important;  
 }
  
 input::-moz-placeholder {  /* Firefox 19+ */
-color: #333333 !important;  
+color: #666666 !important;  
 }
  
 input:-ms-input-placeholder {  
-color: #333333 !important;  
+color: #666666 !important;  
 }
 td{
   padding-right:10px;
@@ -281,7 +285,7 @@ h1{
   background-color:rgba(0,0,0,0.6);
   border-radius:5px;
   box-shadow: 0 0 8px #ffffff;
-  margin:10px 0px 0px 0px;
+  margin:5px 0px 5px 0px;
   padding:10px;
 }
 .form-box-font{
@@ -336,6 +340,15 @@ h1{
 .btn-list{
 	width:80px;
 }
+.btn-list-details{
+  width:95% !important;
+}
+.btn-user-list{
+  width:40%;
+}
+.itemBox-basicInfo{
+  color:#808080 !important;
+}
 .btn-default{
   background-color:#f2f2f2;
   border:none;
@@ -352,6 +365,7 @@ h1{
   box-shadow:0 0 6px #806000;
 }
 .btn-danger{
+  color:white !important;
   border-color:#4d1300;
   box-shadow:0 0 10px #cc3300;
   background-color:#000000;
@@ -459,6 +473,7 @@ h1{
   width:45%;
 }
 .list-font{
+  word-wrap: break-word;
   padding-top:5px;
   font-family:logoThin;
   font-size:14px;
@@ -489,8 +504,18 @@ h1{
   border:3px dashed lightgrey;
   padding:2px 0px 5px 5px;
 }
+.admin-list{/*
+  border-top:1px dashed #333333;
+  border-left:2px dashed #333333;
+  border-right:2px dashed #333333;*/
+  border-top:1px dashed #333333;
+  margin-bottom:-20px;
+}
 .btn-default, .btn-danger{
   font-family:logoBold;
+}
+.action-buttons{
+  margin-bottom:13px;
 }
 .hoverGlow{
   font-family:logoBold !important;
@@ -520,6 +545,9 @@ button, .btn-submit:focus{
   margin:25px auto;
 }
 /* end buttons */
+.delete-label{
+  margin:25px auto;
+}
 .error{
   color:darkred;
 }
@@ -655,6 +683,24 @@ button, .btn-submit:focus{
   border-radius:5px;
   max-width:220px;
 }
+.admin-stats{
+  margin-left:15px;
+  padding-top:8px;
+  color:#ffffff !important;
+  background:rgba(0,0,0,0.5);
+  min-height:75px;
+  border-radius:5px;
+  max-width:100%;
+}
+.moderator-collection{
+  margin-left:15px;
+  padding-top:8px;
+  color:#ffffff !important;
+  background:rgba(0,0,0,0.5);
+  min-height:75px;
+  border-radius:5px;
+  max-width:400px;
+}
 .db-count{
   margin-left:15px;
   padding-top:8px;
@@ -789,8 +835,16 @@ button, .btn-submit:focus{
   margin-left:5%;
 }
 .dashed-border{
+  width:95%;
+  margin:10px auto;
   border-bottom:2px dashed lightgray;
   padding:5px 0 5px 0;
+}
+.personal-data{
+  border-left:1px dashed #666666;
+}
+.admin-user-item-href{
+  all:none;
 }
 .individual-value, .bottom-shadow{
 	border-bottom:1px solid #333333;
@@ -990,12 +1044,15 @@ input.checkbox-input{
   display:none;
 }
 .objectBranch{
-  height:380px;
+  height:430px;
   margin-bottom:5%;
 }
 .objectBranch:hover{
   background-color:#f2f2f2 !important;
   color:#333333 !important;
+}
+.object-href:hover{
+  opacity:0.8;
 }
 .materials-details-box {
   margin-top:20px;
@@ -1011,4 +1068,17 @@ input.checkbox-input-view{
 }
 .toggle{
   display:none;
+}
+.glyphicon-alert{
+  color:#990000;
+  font-size:smaller;
+}
+.glyph-private{
+  color:#cccc00;
+  font-size:smaller;
+}
+.itemBox-lg{
+  position:absolute;
+  bottom:20px;
+  right:0px;
 }

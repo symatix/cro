@@ -1,31 +1,44 @@
 <template name="dev">
-<pre>
+<pre class="report">
 
 *** DOING ***
-#!clear leftovers
-style for admin/editor UI
-
+on edit form
+  - delete button for files
+  - show images on upload
 
 *** TO DO ***
 ----------------
-place {public} selector on index
-----------------
-change name - CROARTIA (admin/editor)
-----------------
-item form input verification (required fields)
+item form input verification (required fields + numbers)
 ----------------
 advanced search template
 ----------------
-change alerts to something nicer - setTimeout before route
-----------------
-collection shema
-----------------
-test multiple user case
-----------------
 
 *** BUGS ****
+category filter not reset on managedb admin/moderator
 
-unknown
+********************
+*** VERSION LOGS ***
+********************
+
+ * v0.32
+  added admin UI
+    - basic db search and stats
+  added moderator UI
+  fixed
+    - data + entry delete - TRUE delete
+    - select tag on return value
+    - edit button on branch/manage/user
+      - all forms display according to session.get
+    - new render forces scrollTop(0)
+    - if no picture on basic in db > do not render
+  added sorting by chategory
+    - on admin and moderator
+      - sorting on private /deleted
+    - if no user > chategory + public+available
+  added search and sorting on usersDb
+  added statistics on db
+  style for admin UI and moderator
+  added isDeleted / visible > status
 
 *** CHANGES ***
  * v0.31
