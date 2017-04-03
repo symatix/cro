@@ -88,5 +88,53 @@ Template.navbar.events({
       if (value==="author_z"){
         Session.set("author_z",true);
       } 
-  },
+  },/*
+  'change .sorting-category':function(event){
+      Session.set("paintingFilter",false);
+      Session.set("sculptureFilter",false);
+      Session.set("architecturalFilter",false);
+      Session.set("archivalFilter",false);
+      Session.set("archaeologicalFilter",false);
+      Session.set("sampleFilter",false);
+      Session.set("pigmentFilter",false);
+      Session.set("otherFilter",false);
+      Session.set("privateFilter",false);
+      Session.set("deletedFilter",false);
+      var value = $(".sorting-category").val();
+
+      if (value===""){
+        Session.set("allFilter",true)
+      }
+      if (value==="Painting"){
+        Session.set("paintingFilter",true);
+      } 
+      if (value==="Sculpture"){
+        Session.set("sculptureFilter",true);
+      } 
+      if (value==="Architectural heritage"){
+        Session.set("architecturalFilter",true);
+      } 
+      if (value==="Archival object"){
+        Session.set("archivalFilter",true);
+      } 
+      if (value==="Archaeological object"){
+        Session.set("archaeologicalFilter",true);
+      } 
+      if (value==="Sample/cross-section"){
+        Session.set("sampleFilter",true);
+      } 
+      if (value==="Pigment/dye/binder/varnish/reference materials"){
+        Session.set("pigmentFilter",true);
+      } 
+      if (value==="other"){
+        Session.set("otherFilter",true);
+      } 
+      if (value==="private"){
+        Session.set("privateFilter",true);
+      } 
+      if (value==="deleted"){
+        Session.set("deletedFilter",true);
+      } 
+      //alert("/painting "+Session.get("paintingFilter")+"/sculpture "+Session.get("sculptureFilter")+"/architectural "+Session.get("architecturalFilter")+"/archival "+Session.get("archivalFilter")+"/archaeological "+Session.get("archaeologicalFilter")+"/sample "+Session.get("sampleFilter")+"/pigment "+Session.get("pigmentFilter")+"/other "+Session.get("otherFilter")+"/private "+Session.get("privateFilter")+"deleted "+Session.get("deletedFilter"))
+    }*/
 })

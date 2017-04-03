@@ -3,7 +3,8 @@ Router.configure({
 });
 
 
-Router.route("/", function(){
+Router.route("/", function(){ 
+
   this.render('navbar', {to:"header"});
   this.render('mainGallery', {to:"main"});
 });

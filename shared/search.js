@@ -17,18 +17,16 @@ GalleryIndex = new EasySearch.Index({
     selector: function(searchObject, options, aggregation) {
       const selector = this.defaultConfiguration().selector(searchObject, options, aggregation);
 
+
       selector.isDeleted = "available";
       selector.visible = "public";
+
       // filter for the category if set
       
       if (options.search.props.guestCategory) {
         var option = options.search.props.guestCategory;
-        if (option==="private"){
-          selector.visible = options.search.props.guestCategory;
-        } else {
-          selector.type = options.search.props.guestCategory;
-        }
-      }
+        selector.type = options.search.props.guestCategory;
+      } 
 
       //selector = {"type":"other"};
       console.log(selector);
@@ -66,7 +64,7 @@ GalleryIndex = new EasySearch.Index({
             return {
               "basic.author": -1
             }
-          }
+          } 
     },
   }),
 })
