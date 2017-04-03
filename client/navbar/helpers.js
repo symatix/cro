@@ -42,11 +42,40 @@ Template.navbar.helpers({
   homeUrl:function(){
     var routeName = Router.current().route.path();
     var home = "/";
+    if(Session.get("noFilter")){
+      $(".sorting-category").val('').trigger("change");
+      setTimeout(function(){
+        Session.set("noFilter", false);
+      },100);
+    }
     if(routeName == home){
       return true;
     } else {
       return false;
     }
+  },
+  moderatorUrl:function(){
+    var routeName = Router.current().route.path();
+    var moderator = "/moderator/collection";
+    if(Session.get("noFilter") && routeName == moderator){
+      $(".sorting-category").val('').trigger("change");
+      $(".sorting-filter").val('').trigger("change");
+      setTimeout(function(){
+        Session.set("noFilter", false);
+      },100);
+    }
+      return true;
+  },
+  adminUrl:function(){
+    var routeName = Router.current().route.path();
+    var admin = "/admin/db";
+    if(Session.get("noFilter") && routeName == admin){
+      $(".sorting-category").val('').trigger("change");
+      setTimeout(function(){
+        Session.set("noFilter", false);
+      },100);
+    }
+      return true;
   },
   large:function(){
     if(Session.get("large")){
@@ -99,62 +128,4 @@ Template.navbar.helpers({
       return "selected";
     }
   },
-/*
-
-  painting:function(){
-    if(Session.get("paintingFilter")){
-      return "selected";
-    }
-  },
-  sculpture:function(){
-    if(Session.get("sculptureFilter")){
-      return "selected";
-    }
-  },
-  architectural:function(){
-    if(Session.get("architecturalFilter")){
-      return "selected";
-    }
-  },
-  archival:function(){
-    if(Session.get("archivalFilter")){
-      return "selected";
-    }
-  },
-  archaeological:function(){
-    if(Session.get("archaeologicalFilter")){
-      return "selected";
-    }
-  },
-  sample:function(){
-    if(Session.get("sampleFilter")){
-      return "selected";
-    }
-  },
-  pigment:function(){
-    if(Session.get("pigmentFilter")){
-      return "selected";
-    }
-  },
-  other:function(){
-    if(Session.get("otherFilter")){
-      return "selected";
-    }
-  },
-  private:function(){
-    if(Session.get("privateFilter")){
-      return "selected";
-    }
-  },
-  deleted:function(){
-    if(Session.get("deletedFilter")){
-      return "selected";
-    }
-  },
-  all:function(){
-    if(Session.get("allFilter")){
-      return "selected";
-    }
-  },
-  */
 })

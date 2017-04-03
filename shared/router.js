@@ -4,7 +4,7 @@ Router.configure({
 
 
 Router.route("/", function(){ 
-
+  Session.set("noFilter", true);
   this.render('navbar', {to:"header"});
   this.render('mainGallery', {to:"main"});
 });
@@ -29,6 +29,7 @@ Router.route("/up", function(){
 
 Router.route("/moderator/collection", function(){
   Session.set("sortList", {author: 1});
+  Session.set("noFilter", true);
   this.render('navbar', {to:"header"});
   this.render('moderator_db', {to:"main"}); // change to limited session - 20 display
 });
@@ -129,7 +130,8 @@ Router.route("/admin/users/entry/:_id", function(){
 
 
 Router.route("/admin/db/", function(){
-  Session.set("sortList", {author: 1})
+  Session.set("sortList", {author: 1});
+  Session.set("noFilter", true);
   this.render('navbar', {to:"header"});
   this.render('adm_db', {to:"main"});
 });

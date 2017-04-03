@@ -66,7 +66,7 @@
             {{> EasySearch.Input index=usersIndex attributes=searchAttributesUsers}}
               <span class="glyphicon glyphicon-search"></span>
                 &emsp;
-                <select class="sorting-users form-control">
+                <select class="sorting-users sorting-filter form-control">
                   <option value="" disabled selected style='display:none;'>Select...</option>
                   <option value="username_a">username a - z</option>
                   <option value="username_z">username z - a</option>
@@ -91,6 +91,7 @@
 
             {{#if currentUser.profile.isAdmin}}
               {{> EasySearch.Input index=adminIndex attributes=searchAttributesAdmin}}
+              {{#if adminUrl}}
               <span class="glyphicon glyphicon-search"></span>
                 &emsp;
                 <select name="typeFilter" class="sorting-admin-category sorting-category form-control" id="categoryFilter">
@@ -123,9 +124,11 @@
                 </select>
                 <span class="glyphicon glyphicon-sort"></span>
                 &emsp;
+                {{/if}} <!-- /adminUrl -->
                {{else}}
 
                {{#if currentUser}}
+                {{#if moderatorUrl}}
                   {{> EasySearch.Input index=moderatorIndex attributes=searchAttributesModerator}}
                   <span class="glyphicon glyphicon-search"></span>
                     &emsp;
@@ -157,6 +160,7 @@
                     </select>
                     <span class="glyphicon glyphicon-sort"></span>
                     &emsp;
+                    {{/if}}
                 {{/if}} <!-- /if currentUser -->
             {{/if}} <!-- /if isAdmin -->
           </div>
