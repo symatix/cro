@@ -1,0 +1,102 @@
+<template name="form_files_basic_visual">
+    <div class="row visual-data">
+
+
+
+    <div class="col-xs-12 align-center">
+
+      <table border="0" cellspacing="0" cellpadding="0" class="table table-condensed list-font">
+
+      <tr class="noBorder">
+        <td class="upload-table-cell" id="newFront_title">
+            {{#if data.basic.front_id}}
+              Front image
+            {{/if}}
+        </td>
+        <td class="upload-table-cell" id="backNew_title">
+            {{#if data.basic.back_id}}
+              Back image
+            {{/if}}
+        </td>
+        <td class="upload-table-cell" id="sideNew_title">
+            {{#if data.basic.side_id}}
+              Side image
+            {{/if}}
+        </td>
+        <td class="upload-table-cell" id="signatureNew_title">
+            {{#if data.basic.signature_id}}
+              Signature image
+            {{/if}}
+        </td>
+      </tr>
+
+
+      <tr class="noBorder new-file">
+        <td class="upload-table-cell" id="newFront_name">
+        </td>
+        <td class="upload-table-cell" id="backNew_name">
+        </td>
+        <td class="upload-table-cell" id="sideNew_name">
+        </td>
+        <td class="upload-table-cell" id="signatureNew_name">
+        </td>
+      </tr>
+
+
+      <tr class="noBorder">
+        <td class="upload-table-cell">
+          <img class="img-upload-sm" src="{{#if data.basic.front}}{{data.basic.front}}{{/if}}" id="front_uploaded">
+        </td>
+        <td class="upload-table-cell">
+          <img class="img-upload-sm" src="{{#if data.basic.back}}{{data.basic.back}}{{/if}}" id="back_uploaded">
+        </td>
+        <td class="upload-table-cell">
+          <img class="img-upload-sm" src="{{#if data.basic.side}}{{data.basic.side}}{{/if}}" id="side_uploaded">
+        </td>
+        <td class="upload-table-cell">
+          <img class="img-upload-sm" src="{{#if data.basic.signature}}{{data.basic.signature}}{{/if}}" id="signature_uploaded">
+        </td>
+      </tr>
+
+
+      <tr class="noBorder">
+        <td class="upload-table-cell" id="delete-front-container">
+          {{#if data.basic.front_id}}
+            <a href="#" class="list-font btn btn-danger" id="delete-front">DELETE</a>
+          {{/if}}
+        </td>
+        <td class="upload-table-cell" id="delete-back-container">
+          {{#if data.basic.back_id}}
+            <a href="#" class="list-font btn btn-danger" id="delete-back">DELETE</a>
+          {{/if}}
+        </td>
+        <td class="upload-table-cell" id="delete-side-container">
+          {{#if data.basic.side_id}}
+            <a href="#" class="list-font btn btn-danger" id="delete-side">DELETE</a>
+          {{/if}}
+        </td>
+        <td class="upload-table-cell" id="delete-signature-container">
+          {{#if data.basic.signature_id}}
+            <a href="#" class="list-font btn btn-danger" id="delete-signature">DELETE</a>
+          {{/if}}
+        </td>
+      </tr>
+
+
+    </table>
+  </div>
+
+      <div class="col-xs-12 col-sm-12 list-font align-center">
+        <br/>
+        <span id="delete-files-container">
+          {{#if data.basic.basic_files_id}}
+            <a href="#" class="list-font btn btn-danger" id="delete-files">DELETE ADDITIONAL FILES</a>
+          {{/if}}
+        </span>
+        <br/>
+        <br/>
+        <span class="list-font new-file" id="filesNew_name"></span>
+      </div>
+
+    </div>
+</template>

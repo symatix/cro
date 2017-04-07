@@ -3241,8 +3241,7 @@ Meteor.myFunctions = {
     }
     Meteor.call("createUsers", userDetails);
   },
-  editUser: function(){
-    var userId = Session.get("userId");
+  editUser: function(userId){
     var username = $('[name=username]').val();
     var password = $('[name=password]').val();
     var email = $('[name=email]').val();
@@ -3264,7 +3263,7 @@ Meteor.myFunctions = {
         password:password // this is insecure, only admin should see this field
       }
     }
-    Meteor.call("editUsers", userId, userDetails)
+    Meteor.call("editUsers", userId, password, userDetails);
   },
   deleteUser:function(){
     var userId = Session.get("userId");

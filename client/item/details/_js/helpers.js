@@ -20,6 +20,7 @@ Template.item_details.helpers({
   	}
   }
 })
+
 Template.item_details_basic.helpers({
 	pigmentObject:function(){
 		var object = Prospero.findOne(this._id).type;
@@ -29,6 +30,87 @@ Template.item_details_basic.helpers({
 		}
 	}
 })
+
+Template.materials_original.helpers({
+	density:function(){
+		var itemId = this._id;
+		var weft = Prospero.findOne(this._id).materials.original.density.weft;
+		var warp = Prospero.findOne(this._id).materials.original.density.warp;
+		if (weft || warp){
+			return true;
+		}
+	},
+	thicknessOfThread:function(){
+		var itemId = this._id;
+		var weft = Prospero.findOne(this._id).materials.original.thicknessOfThread.weft;
+		var warp = Prospero.findOne(this._id).materials.original.thicknessOfThread.warp;
+		if (weft || warp){
+			return true;
+		}
+	},
+	decorativeFrame:function(){
+		var itemId = this._id;
+		var periodStyle = Prospero.findOne(this._id).materials.original.decorativeFrame.periodStyle;
+		var support = Prospero.findOne(this._id).materials.original.decorativeFrame.support;
+		var priming = Prospero.findOne(this._id).materials.original.decorativeFrame.priming;
+		var decorativeLayer = Prospero.findOne(this._id).materials.original.decorativeFrame.decorativeLayer;
+		var varnish = Prospero.findOne(this._id).materials.original.decorativeFrame.varnish;
+		if (periodStyle || support || priming || decorativeLayer || varnish){
+			return true;
+		}
+	},
+	plaster:function(){
+		var itemId = this._id;
+		var layers = Prospero.findOne(this._id).materials.original.plaster.layers;
+		var composition = Prospero.findOne(this._id).materials.original.plaster.composition;
+		var binderFiller = Prospero.findOne(this._id).materials.original.plaster.binderFiller;
+		if (layers || composition || binderFiller){
+			return true;
+		}
+	},
+})
+
+
+
+Template.materials_interventions.helpers({
+	density:function(){
+		var itemId = this._id;
+		var weft = Prospero.findOne(this._id).materials.interventions.density.weft;
+		var warp = Prospero.findOne(this._id).materials.interventions.density.warp;
+		if (weft || warp){
+			return true;
+		}
+	},
+	thicknessOfThread:function(){
+		var itemId = this._id;
+		var weft = Prospero.findOne(this._id).materials.interventions.thicknessOfThread.weft;
+		var warp = Prospero.findOne(this._id).materials.interventions.thicknessOfThread.warp;
+		if (weft || warp){
+			return true;
+		}
+	},
+	decorativeFrame:function(){
+		var itemId = this._id;
+		var periodStyle = Prospero.findOne(this._id).materials.interventions.decorativeFrame.periodStyle;
+		var support = Prospero.findOne(this._id).materials.interventions.decorativeFrame.support;
+		var priming = Prospero.findOne(this._id).materials.interventions.decorativeFrame.priming;
+		var decorativeLayer = Prospero.findOne(this._id).materials.interventions.decorativeFrame.decorativeLayer;
+		var varnish = Prospero.findOne(this._id).materials.interventions.decorativeFrame.varnish;
+		if (periodStyle || support || priming || decorativeLayer || varnish){
+			return true;
+		}
+	},
+	plaster:function(){
+		var itemId = this._id;
+		var layers = Prospero.findOne(this._id).materials.interventions.plaster.layers;
+		var composition = Prospero.findOne(this._id).materials.interventions.plaster.composition;
+		var binderFiller = Prospero.findOne(this._id).materials.interventions.plaster.binderFiller;
+		if (layers || composition || binderFiller){
+			return true;
+		}
+	},
+})
+
 Template.item_details_download.helpers({
 	basic:function(){
 		var itemId = this._id;

@@ -218,6 +218,11 @@ img{
 .img-upload{
   max-width:600px;
 }
+.img-form-upload{
+  max-width:150px;
+  max-height:150px;
+  margin:10px 20px;
+}
 .img-form{
   max-width:150px;
   max-height:150px;
@@ -796,7 +801,14 @@ button, .btn-submit:focus{
   margin-top:-10px;
   margin-bottom:10px;
   box-shadow: 0 0 4px #ffffff;
-
+}
+.img-upload-sm{
+  max-width:100%;
+  border-radius:5px;
+  max-height:130px;
+  margin-top:10px;
+  margin-bottom:10px;
+  box-shadow: 0 0 4px #ffffff;
 }
 .img-materials-sm{
   max-width:100%;
@@ -842,6 +854,9 @@ button, .btn-submit:focus{
 }
 .personal-data{
   border-left:1px dashed #666666;
+}
+.add-top-border{
+  border-top:1px dashed #666666;
 }
 .admin-user-item-href{
   all:none;
@@ -1081,4 +1096,21 @@ input.checkbox-input-view{
   position:absolute;
   bottom:20px;
   right:0px;
+}
+.visual-data{
+  margin:20px 10px 10px 10px;
+}
+td.upload-table-cell{
+  width:25%;
+  height:35px;
+  border:none;
+  border-collapse: collapse;
+}
+tr.noBorder{
+  margin-top:5px !important;
+  margin-bottom:5px !important;
+  border:none !important;
+}
+.new-file{
+  font-style: italic;
 }

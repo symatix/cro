@@ -27,10 +27,10 @@
         </div>
 
         
-        <div class="col-xs-12 col-md-2 individual-property {{#if edit}}hidden{{/if}}">
+        <div class="col-xs-12 col-md-2 individual-property {{#if edit}}{{/if}}">
           PASSWORD
         </div>
-        <div class="col-xs-12 col-md-4 {{#if edit}}hidden{{/if}}">
+        <div class="col-xs-12 col-md-4 {{#if edit}}{{/if}}">
           <input type="text" name="password" class="individual-value individual-form" id="password" placeholder="" value="{{profile.password}}">
         </div>
         
@@ -66,5 +66,11 @@
       </div><!-- first row -->
       <button type="submit" class="btn btn-default btn-submit">SUBMIT ENTRY</button>
     </form>
+      <div class="row">
+        <div class="col-xs-12 align-center">
+          <div class="login-error" id="err">
+          </div>
+        </div>
+      </div>
     </div>
 </template>

@@ -2,6 +2,8 @@
   <div class="row align-center">
     <h3>files</h3>
   </div>
+
+  
   <div class="row">
     <div class="col-xs-12 col-sm-2 individual-property">FRONT IMAGE
     </div>
@@ -27,74 +29,85 @@
     <div class="col-xs-12 col-sm-2 individual-property"> SIGNATURE
     </div>
     <div class="col-xs-12 col-sm-4">
-    <label for="data_img_sig" class="upload_label" id="upload_signature">(.jpg or .tiff, max size 5 mb)</label>
-      <input class="individual-data-value" type="file" id="data_img_sig">
+    <label for="data_img_signature" class="upload_label" id="upload_signature">(.jpg or .tiff, max size 5 mb)</label>
+      <input class="individual-data-value" type="file" id="data_img_signature">
     </div>
 
-    <div class="col-xs-12 col-sm-8 individual-property"> RELEVANT FILES (e.g. related diploma thesis, treatment documentation, conservation reports, photos, etc.)
+    <div class="col-xs-12 col-sm-2 individual-property"> ADDITIONAL FILES
     </div>
     <div class="col-xs-12 col-sm-4">
-    <label for="data_basic_files" class="upload_label" id="upload_basic_files">(.zip)</label>
+    <label for="data_basic_files" class="upload_label" id="upload_signature">(.zip)</label>
       <input class="individual-data-value" type="file" id="data_basic_files">
     </div>
 
+
+
+
+
+
+
+<div class="hidden">
+
     <!-- hidden part 1-->
-    <div class="img_front hidden">
+    <div class="img_front ">
       <div class="individual-property">IMAGE: FRONT
         <input type="text" class="individual-value individual-form" id="img_front" placeholder="" value="{{data.basic.front}}">
       </div>
     </div>
-    <div class="img_front_id hidden">
+    <div class="img_front_id ">
       <div class="individual-property">IMAGE: FRONT ID
         <input type="text" class="individual-value individual-form" id="img_front_id" placeholder="" value="{{data.basic.front_id}}">
       </div>
     </div>
     <!-- hidden part 2-->
-    <div class="img_back hidden">
+    <div class="img_back ">
       <div class="individual-property">IMAGE: BACK
         <input type="text" class="individual-value individual-form" id="img_back" placeholder="" value="{{data.basic.back}}">
       </div>
     </div>
-    <div class="img_back_id hidden">
+    <div class="img_back_id ">
       <div class="individual-property">IMAGE: BACK ID
         <input type="text" class="individual-value individual-form" id="img_back_id" placeholder="" value="{{data.basic.back_id}}">
       </div>
     </div>
     <!-- hidden part 3-->
-    <div class="research hidden">
+    <div class="research ">
       <div class="individual-property">SIDE IMAGE URL
         <input type="text" class="individual-value individual-form" id="img_side" placeholder="" value="{{data.basic.side}}">
       </div>
     </div>
-    <div class="research_id hidden">
+    <div class="research_id ">
       <div class="individual-property">SIDE IMAGE ID
         <input type="text" class="individual-value individual-form" id="img_side_id" placeholder="" value="{{data.basic.side_id}}">
       </div>
     </div>
     <!-- hidden part 4-->
-    <div class="research hidden">
+    <div class="research ">
       <div class="individual-property">SIGNATURE URL
         <input type="text" class="individual-value individual-form" id="img_signature" placeholder="" value="{{data.basic.signature}}">
       </div>
     </div>
-    <div class="research_id hidden">
+    <div class="research_id ">
       <div class="individual-property">SIGNATURE ID
         <input type="text" class="individual-value individual-form" id="img_signature_id" placeholder="" value="{{data.basic.signature_id}}">
       </div>
     </div>
-    <!-- hidden part 5-->
-    <div class="research hidden">
-      <div class="individual-property">BASIC FILES URL
+    <!-- hidden part 4-->
+    <div class="research ">
+      <div class="individual-property">ADDITIONAL URL
         <input type="text" class="individual-value individual-form" id="basic_files" placeholder="" value="{{data.basic.basic_files}}">
       </div>
     </div>
-    <div class="research_id hidden">
-      <div class="individual-property">BASIC FILES ID
+    <div class="research_id ">
+      <div class="individual-property">ADDITIONAL ID
         <input type="text" class="individual-value individual-form" id="basic_files_id" placeholder="" value="{{data.basic.basic_files_id}}">
       </div>
     </div>
     <!-- /hidden part -->
+    </div>
   </div>
+  {{> form_files_basic_visual}}
+
 </template>
 
 

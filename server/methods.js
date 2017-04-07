@@ -1,4 +1,4 @@
-
+import { Accounts } from 'meteor/accounts-base'
 
 Meteor.methods({
 	insertItem:function(itemDetails){
@@ -31,7 +31,7 @@ Meteor.methods({
 				      	} else {
 				      		// delete data entry
 	                    	Data.remove(child);
-				      		console.log("data id: "+child);
+				      		console.log("deleted data with id: "+child);
 				      	}
 	                }
 	            }
@@ -55,7 +55,7 @@ Meteor.methods({
 	                    		} else {
 	                    			//delete data entry
 	                    			Data.remove(result);
-	                    			console.log("result is: "+result);
+	                    			console.log("deleted data with id: "+result);
 	                    		}
 	                    	}
 	                    }
@@ -77,8 +77,9 @@ Meteor.methods({
 	    Accounts.createUser(userDetails);
 	    console.log("user created");
 	},
-	editUsers: function(userId, userDetails) {
-	 	Meteor.users.update({_id:userId}, {$set: userDetails})
+	editUsers: function(userId, password, userDetails) {
+		console.log("updating user: "+userId);
+		Meteor.users.update({_id:userId}, {$set: userDetails})
 	},
 	removeUser:function(userId){
 	    Meteor.users.remove(userId);

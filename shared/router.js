@@ -2,15 +2,12 @@ Router.configure({
   layoutTemplate:'ProsperoLayout'
 });
 
-
+// GENERAL ROUTES
 Router.route("/", function(){ 
   Session.set("noFilter", true);
   this.render('navbar', {to:"header"});
   this.render('mainGallery', {to:"main"});
 });
-
-
-
 
 Router.route("/login", function(){
   this.render('navbar', {to:"header"});
@@ -22,44 +19,16 @@ Router.route("/search", function(){
   this.render('advanced_search', {to:"main"});
 });
 
-Router.route("/up", function(){
-  this.render('navbar', {to:"header"});
-  this.render('upload_form', {to:"main"});
-});
-
-Router.route("/moderator/collection", function(){
-  Session.set("sortList", {author: 1});
-  Session.set("noFilter", true);
-  this.render('navbar', {to:"header"});
-  this.render('moderator_db', {to:"main"}); // change to limited session - 20 display
-});
-
 Router.route("/new", function(){
+  Session.set("noFilter", true);
   this.render('navbar', {to:"header"});
   this.render('item_new', {to:"main"});
 });
 
-Router.route("/gallery/details/:_id", function(){
-  Session.set("itemId", this.params._id);
-  this.render('navbar', {to:"header"});
-  this.render('item_details', {to:"main",
-    data: function(){
-        return Prospero.findOne({_id:this.params._id});
-      }
-    });
-});
-
-Router.route("/gallery/edit/:_id", function(){
-  Session.set("itemId", this.params._id);
-  this.render('navbar', {to:"header"});
-  this.render('item_new', {to:"main",
-    data: function(){
-        return Prospero.findOne({_id:this.params._id});
-      }
-    });
-});
 Router.route("/edit/:_id", function(){
+  Session.set("noFilter", true);
   Session.set("itemId", this.params._id);
+
   var id = Session.get("itemId");
 
    
@@ -95,7 +64,8 @@ Router.route("/edit/:_id", function(){
     });
 });
 
-Router.route("/admin/details/:_id", function(){
+Router.route("/gallery/details/:_id", function(){
+  Session.set("noFilter", true);
   Session.set("itemId", this.params._id);
   this.render('navbar', {to:"header"});
   this.render('item_details', {to:"main",
@@ -105,8 +75,22 @@ Router.route("/admin/details/:_id", function(){
     });
 });
 
-Router.route("/admin/edit/:_id", function(){
+
+
+// MODERATOR ROUTES
+Router.route("/moderator/collection", function(){
+  Session.set("sortList", {author: 1});
+  Session.set("noFilter", true);
+
+  this.render('navbar', {to:"header"});
+  this.render('moderator_db', {to:"main"}); // change to limited session - 20 display
+});
+
+
+Router.route("/gallery/edit/:_id", function(){
+  Session.set("noFilter", true);
   Session.set("itemId", this.params._id);
+
   this.render('navbar', {to:"header"});
   this.render('item_new', {to:"main",
     data: function(){
@@ -115,19 +99,13 @@ Router.route("/admin/edit/:_id", function(){
     });
 });
 
+
 Router.route("/admin/users", function(){
+  Session.set("noFilter", true);
+
   this.render('navbar', {to:"header"});
   this.render('users', {to:"main"});
 });
-Router.route("/admin/users/entry/:_id", function(){
-  Session.set("userId", this.params._id);
-  this.render('navbar', {to:"header"});
-  this.render('new_user', {to:"main",
-    data: function(){
-      return Meteor.users.findOne({_id:this.params._id});
-}});
-});
-
 
 Router.route("/admin/db/", function(){
   Session.set("sortList", {author: 1});
@@ -136,12 +114,26 @@ Router.route("/admin/db/", function(){
   this.render('adm_db', {to:"main"});
 });
 Router.route("/admin/db/stats", function(){
-  Session.set("sortList", {author: 1})
+  Session.set("sortList", {author: 1});
+  Session.set("noFilter", true);
+
   this.render('navbar', {to:"header"});
   this.render('admin_db_stats', {to:"main"});
 });
 
 Router.route("/admin/users/entry", function(){
+  Session.set("noFilter", true);
+
   this.render('navbar', {to:"header"});
   this.render('new_user', {to:"main"});
+});
+Router.route("/admin/users/entry/:_id", function(){
+  Session.set("userId", this.params._id);
+  Session.set("noFilter", true);
+
+  this.render('navbar', {to:"header"});
+  this.render('new_user', {to:"main",
+    data: function(){
+      return Meteor.users.findOne({_id:this.params._id});
+}});
 });

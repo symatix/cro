@@ -1,11 +1,26 @@
 Template.new_user.events({
 	'submit .js-add-user':function(){
-		var userId = Session.get("userId");
-
-		if(userId){
-    		Meteor.myFunctions.editUser();
+		if (!this._id){
+			alert("addin user");
+			Meteor.myFunctions.addUser();
 		} else {
-    		Meteor.myFunctions.addUser();
+			var userId = this._id;
+			var user = Meteor.users.findOne(userId);
+			var oldPassword = Meteor.users.findOne(userId).profile.password;
+    		var newPassword = $('[name=password]').val();
+    		console.log("old password in bcrypt is: "+oldPassword);
+/*
+			Accounts.changePassword(oldPassword, newPassword, function(err){
+				if(err){
+					alert(err);
+				} else {
+					alert("password changed to: "+newPassword);
+				}
+			});
+*/
+
+			Accounts.setPassword(userId, newPassword, {logout: false})
+			Meteor.myFunctions.editUser(userId);
 		}
 	}
 })

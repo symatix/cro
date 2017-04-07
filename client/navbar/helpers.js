@@ -44,9 +44,7 @@ Template.navbar.helpers({
     var home = "/";
     if(Session.get("noFilter")){
       $(".sorting-category").val('').trigger("change");
-      setTimeout(function(){
-        Session.set("noFilter", false);
-      },100);
+      Session.set("noFilter", false);
     }
     if(routeName == home){
       return true;
@@ -60,9 +58,7 @@ Template.navbar.helpers({
     if(Session.get("noFilter") && routeName == moderator){
       $(".sorting-category").val('').trigger("change");
       $(".sorting-filter").val('').trigger("change");
-      setTimeout(function(){
         Session.set("noFilter", false);
-      },100);
     }
       return true;
   },
@@ -71,9 +67,7 @@ Template.navbar.helpers({
     var admin = "/admin/db";
     if(Session.get("noFilter") && routeName == admin){
       $(".sorting-category").val('').trigger("change");
-      setTimeout(function(){
         Session.set("noFilter", false);
-      },100);
     }
       return true;
   },

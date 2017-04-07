@@ -146,23 +146,23 @@
 	  </div>
 	</div>
 	{{/if}}
-	{{#if materials.interventions.density.weft}}
+	{{#if density}}
 	<div class="col-md-12">
 	  <div class="density">
 	    <div class="individual-property-display">Density per cm²:<br/>
 	      <div class="individual-value-display">
 	      {{#if materials.interventions.density.weft}}
-	      	Weft: {{materials.originterventionsinal.density.weft}}<br/>
+	      	Weft: {{materials.interventions.density.weft}}<br/>
 	      {{/if}}
-	      {{#if materials.interventions.density.weft}}
-	      	Warp: {{materials.interventions.density.weft}}
+	      {{#if materials.interventions.density.warp}}
+	      	Warp: {{materials.interventions.density.warp}}
 	      {{/if}}
 	      </div>
 	    </div>
 	  </div>
 	</div>
 	{{/if}}
-	{{#if materials.interventions.thicknessOfThread.weft}}
+	{{#if thicknessOfThread}}
 	<div class="col-md-12">
 	  <div class="density">
 	    <div class="individual-property-display">Thickness of threads:<br/>
@@ -178,7 +178,7 @@
 	  </div>
 	</div>
 	{{/if}}
-	{{#if materials.interventions.decorativeFrame.periodStyle}}
+	{{#if decorativeFrame}}
 	<div class="col-md-12">
 	  <div class="density">
 	    <div class="individual-property-display">Decorative frame:<br/>
@@ -203,7 +203,7 @@
 	  </div>
 	</div>
 	{{/if}}
-	{{#if materials.interventions.plaster.layers}}
+	{{#if plaster}}
 	<div class="col-md-12">
 	  <div class="plaster">
 	    <div class="individual-property-display">Plaster information (for wall painting):<br/>

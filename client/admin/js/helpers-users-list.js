@@ -9,12 +9,10 @@ Template.users.helpers({
 	},
 	lastEdit:function(){
 		var lastEdit = Prospero.findOne({"info.userId":this.__originalId},{sort:{"info.last_edit": -1}}).info.last_edit;
-		console.log(lastEdit);
 		return lastEdit;
 	},
 	typeOfObject:function(){
 		var object = Prospero.findOne({"_id":this._id}).type;
-		console.log(object);
 		var type = "Pigment/dye/binder/varnish/reference materials";
 
 		if(object===type){
@@ -31,31 +29,24 @@ Template.users.helpers({
 		return Prospero.find({"info.userId":this.__originalId, "type":"Painting"}).count();
 	},
 	sculpture:function(){
-		console.log(Prospero.find({"info.userId":this.__originalId}).fetch());
 		return Prospero.find({"info.userId":this.__originalId, "type":"Sculpture"}).count();
 	},
 	sample:function(){
-		console.log(Prospero.find({"info.userId":this.__originalId}).fetch());
 		return Prospero.find({"info.userId":this.__originalId, "type":"Sample/cross-section"}).count();
 	},
 	reference:function(){
-		console.log(Prospero.find({"info.userId":this.__originalId}).fetch());
 		return Prospero.find({"info.userId":this.__originalId, "type":"Pigment/dye/binder/varnish/reference materials"}).count();
 	},
 	architectural:function(){
-		console.log(Prospero.find({"info.userId":this.__originalId}).fetch());
 		return Prospero.find({"info.userId":this.__originalId, "type":"Architectural heritage"}).count();
 	},
 	archival:function(){
-		console.log(Prospero.find({"info.userId":this.__originalId}).fetch());
 		return Prospero.find({"info.userId":this.__originalId, "type":"Archival object"}).count();
 	},
 	archaeological:function(){
-		console.log(Prospero.find({"info.userId":this.__originalId}).fetch());
 		return Prospero.find({"info.userId":this.__originalId, "type":"Archaeological object"}).count();
 	},
 	other:function(){
-		console.log(Prospero.find({"info.userId":this.__originalId}).fetch());
 		return Prospero.find({"info.userId":this.__originalId, "type":"other"}).count();
 	},
 })
