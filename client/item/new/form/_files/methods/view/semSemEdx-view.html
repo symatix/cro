@@ -1,0 +1,102 @@
+<template name="form_files_semSemEdx_visual">
+    <div class="row visual-data">
+
+
+
+    <div class="col-xs-12 align-center">
+
+      <table border="0" cellspacing="0" cellpadding="0" class="table table-condensed list-font">
+
+      <tr class="noBorder">
+        <td class="upload-table-cell" id="semSemEdxOne_title">
+            {{#if details.methods.semSemEdx.files.semSemEdxFiles1_id}}
+              Picture one
+            {{/if}}
+        </td>
+        <td class="upload-table-cell" id="semSemEdxTwo_title">
+            {{#if details.methods.semSemEdx.files.semSemEdxFiles2_id}}
+              Picture two
+            {{/if}}
+        </td>
+        <td class="upload-table-cell" id="semSemEdxThree_title">
+            {{#if details.methods.semSemEdx.files.semSemEdxFiles3_id}}
+              Picture three
+            {{/if}}
+        </td>
+        <td class="upload-table-cell" id="semSemEdxFour_title">
+            {{#if details.methods.semSemEdx.files.semSemEdxFiles4_id}}
+              Picture four
+            {{/if}}
+        </td>
+      </tr>
+
+
+      <tr class="noBorder new-file">
+        <td class="upload-table-cell" id="semSemEdxOne_name">
+        </td>
+        <td class="upload-table-cell" id="semSemEdxTwo_name">
+        </td>
+        <td class="upload-table-cell" id="semSemEdxThree_name">
+        </td>
+        <td class="upload-table-cell" id="semSemEdxFour_name">
+        </td>
+      </tr>
+
+
+      <tr class="noBorder">
+        <td class="upload-table-cell">
+          <img class="img-upload-sm" src="{{#if details.methods.semSemEdx.files.semSemEdxFiles1}}{{details.methods.semSemEdx.files.semSemEdxFiles1}}{{/if}}" id="semSemEdxOne_uploaded">
+        </td>
+        <td class="upload-table-cell">
+          <img class="img-upload-sm" src="{{#if details.methods.semSemEdx.files.semSemEdxFiles2}}{{details.methods.semSemEdx.files.semSemEdxFiles2}}{{/if}}" id="semSemEdxTwo_uploaded">
+        </td>
+        <td class="upload-table-cell">
+          <img class="img-upload-sm" src="{{#if details.methods.semSemEdx.files.semSemEdxFiles3}}{{details.methods.semSemEdx.files.semSemEdxFiles3}}{{/if}}" id="semSemEdxThree_uploaded">
+        </td>
+        <td class="upload-table-cell">
+          <img class="img-upload-sm" src="{{#if details.methods.semSemEdx.files.semSemEdxFiles4}}{{details.methods.semSemEdx.files.semSemEdxFiles4}}{{/if}}" id="semSemEdxFour_uploaded">
+        </td>
+      </tr>
+
+
+      <tr class="noBorder">
+        <td class="upload-table-cell" id="semSemEdxOne-delete-container">
+          {{#if details.methods.semSemEdx.files.semSemEdxFiles1_id}}
+            <a href="#" class="list-font btn btn-danger" id="semSemEdxOne_delete">DELETE</a>
+          {{/if}}
+        </td>
+        <td class="upload-table-cell" id="semSemEdxTwo-delete-container">
+          {{#if details.methods.semSemEdx.files.semSemEdxFiles2_id}}
+            <a href="#" class="list-font btn btn-danger" id="semSemEdxTwo_delete">DELETE</a>
+          {{/if}}
+        </td>
+        <td class="upload-table-cell" id="semSemEdxThree-delete-container">
+          {{#if details.methods.semSemEdx.files.semSemEdxFiles3_id}}
+            <a href="#" class="list-font btn btn-danger" id="semSemEdxThree_delete">DELETE</a>
+          {{/if}}
+        </td>
+        <td class="upload-table-cell" id="semSemEdxFour-delete-container">
+          {{#if details.methods.semSemEdx.files.semSemEdxFiles4_id}}
+            <a href="#" class="list-font btn btn-danger" id="semSemEdxFour_delete">DELETE</a>
+          {{/if}}
+        </td>
+      </tr>
+
+
+    </table>
+  </div>
+
+      <div class="col-xs-12 col-sm-12 list-font align-center">
+        <br/>
+        <span id="semSemEdxFiles-delete-container">
+          {{#if details.methods.semSemEdx.files.semSemEdxFiles5_id}}
+            <a href="#" class="list-font btn btn-danger" id="semSemEdxFile_delete">DELETE ADDITIONAL FILES</a>
+          {{/if}}
+        </span>
+        <br/>
+        <br/>
+        <span class="list-font new-file" id="semSemEdxFiles_name"></span>
+      </div>
+
+    </div>
+</template>

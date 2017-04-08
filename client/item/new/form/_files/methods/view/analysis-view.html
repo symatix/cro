@@ -1,0 +1,102 @@
+<template name="form_files_analysis_visual">
+    <div class="row visual-data">
+
+
+
+    <div class="col-xs-12 align-center">
+
+      <table border="0" cellspacing="0" cellpadding="0" class="table table-condensed list-font">
+
+      <tr class="noBorder">
+        <td class="upload-table-cell" id="analysisOne_title">
+            {{#if details.methods.analysis.files.analysisFiles1_id}}
+              Picture one
+            {{/if}}
+        </td>
+        <td class="upload-table-cell" id="analysisTwo_title">
+            {{#if details.methods.analysis.files.analysisFiles2_id}}
+              Picture two
+            {{/if}}
+        </td>
+        <td class="upload-table-cell" id="analysisThree_title">
+            {{#if details.methods.analysis.files.analysisFiles3_id}}
+              Picture three
+            {{/if}}
+        </td>
+        <td class="upload-table-cell" id="analysisFour_title">
+            {{#if details.methods.analysis.files.analysisFiles4_id}}
+              Picture four
+            {{/if}}
+        </td>
+      </tr>
+
+
+      <tr class="noBorder new-file">
+        <td class="upload-table-cell" id="analysisOne_name">
+        </td>
+        <td class="upload-table-cell" id="analysisTwo_name">
+        </td>
+        <td class="upload-table-cell" id="analysisThree_name">
+        </td>
+        <td class="upload-table-cell" id="analysisFour_name">
+        </td>
+      </tr>
+
+
+      <tr class="noBorder">
+        <td class="upload-table-cell">
+          <img class="img-upload-sm" src="{{#if details.methods.analysis.files.analysisFiles1}}{{details.methods.analysis.files.analysisFiles1}}{{/if}}" id="analysisOne_uploaded">
+        </td>
+        <td class="upload-table-cell">
+          <img class="img-upload-sm" src="{{#if details.methods.analysis.files.analysisFiles2}}{{details.methods.analysis.files.analysisFiles2}}{{/if}}" id="analysisTwo_uploaded">
+        </td>
+        <td class="upload-table-cell">
+          <img class="img-upload-sm" src="{{#if details.methods.analysis.files.analysisFiles3}}{{details.methods.analysis.files.analysisFiles3}}{{/if}}" id="analysisThree_uploaded">
+        </td>
+        <td class="upload-table-cell">
+          <img class="img-upload-sm" src="{{#if details.methods.analysis.files.analysisFiles4}}{{details.methods.analysis.files.analysisFiles4}}{{/if}}" id="analysisFour_uploaded">
+        </td>
+      </tr>
+
+
+      <tr class="noBorder">
+        <td class="upload-table-cell" id="analysisOne-delete-container">
+          {{#if details.methods.analysis.files.analysisFiles1_id}}
+            <a href="#" class="list-font btn btn-danger" id="analysisOne_delete">DELETE</a>
+          {{/if}}
+        </td>
+        <td class="upload-table-cell" id="analysisTwo-delete-container">
+          {{#if details.methods.analysis.files.analysisFiles2_id}}
+            <a href="#" class="list-font btn btn-danger" id="analysisTwo_delete">DELETE</a>
+          {{/if}}
+        </td>
+        <td class="upload-table-cell" id="analysisThree-delete-container">
+          {{#if details.methods.analysis.files.analysisFiles3_id}}
+            <a href="#" class="list-font btn btn-danger" id="analysisThree_delete">DELETE</a>
+          {{/if}}
+        </td>
+        <td class="upload-table-cell" id="analysisFour-delete-container">
+          {{#if details.methods.analysis.files.analysisFiles4_id}}
+            <a href="#" class="list-font btn btn-danger" id="analysisFour_delete">DELETE</a>
+          {{/if}}
+        </td>
+      </tr>
+
+
+    </table>
+  </div>
+
+      <div class="col-xs-12 col-sm-12 list-font align-center">
+        <br/>
+        <span id="analysisFiles-delete-container">
+          {{#if details.methods.analysis.files.analysisFiles5_id}}
+            <a href="#" class="list-font btn btn-danger" id="analysisFile_delete">DELETE ADDITIONAL FILES</a>
+          {{/if}}
+        </span>
+        <br/>
+        <br/>
+        <span class="list-font new-file" id="analysisFiles_name"></span>
+      </div>
+
+    </div>
+</template>

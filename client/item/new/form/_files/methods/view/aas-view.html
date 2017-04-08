@@ -1,0 +1,102 @@
+<template name="form_files_aas_visual">
+    <div class="row visual-data">
+
+
+
+    <div class="col-xs-12 align-center">
+
+      <table border="0" cellspacing="0" cellpadding="0" class="table table-condensed list-font">
+
+      <tr class="noBorder">
+        <td class="upload-table-cell" id="aasOne_title">
+            {{#if details.methods.aas.files.aasFiles1_id}}
+              Picture one
+            {{/if}}
+        </td>
+        <td class="upload-table-cell" id="aasTwo_title">
+            {{#if details.methods.aas.files.aasFiles2_id}}
+              Picture two
+            {{/if}}
+        </td>
+        <td class="upload-table-cell" id="aasThree_title">
+            {{#if details.methods.aas.files.aasFiles3_id}}
+              Picture three
+            {{/if}}
+        </td>
+        <td class="upload-table-cell" id="aasFour_title">
+            {{#if details.methods.aas.files.aasFiles4_id}}
+              Picture four
+            {{/if}}
+        </td>
+      </tr>
+
+
+      <tr class="noBorder new-file">
+        <td class="upload-table-cell" id="aasOne_name">
+        </td>
+        <td class="upload-table-cell" id="aasTwo_name">
+        </td>
+        <td class="upload-table-cell" id="aasThree_name">
+        </td>
+        <td class="upload-table-cell" id="aasFour_name">
+        </td>
+      </tr>
+
+
+      <tr class="noBorder">
+        <td class="upload-table-cell">
+          <img class="img-upload-sm" src="{{#if details.methods.aas.files.aasFiles1}}{{details.methods.aas.files.aasFiles1}}{{/if}}" id="aasOne_uploaded">
+        </td>
+        <td class="upload-table-cell">
+          <img class="img-upload-sm" src="{{#if details.methods.aas.files.aasFiles2}}{{details.methods.aas.files.aasFiles2}}{{/if}}" id="aasTwo_uploaded">
+        </td>
+        <td class="upload-table-cell">
+          <img class="img-upload-sm" src="{{#if details.methods.aas.files.aasFiles3}}{{details.methods.aas.files.aasFiles3}}{{/if}}" id="aasThree_uploaded">
+        </td>
+        <td class="upload-table-cell">
+          <img class="img-upload-sm" src="{{#if details.methods.aas.files.aasFiles4}}{{details.methods.aas.files.aasFiles4}}{{/if}}" id="aasFour_uploaded">
+        </td>
+      </tr>
+
+
+      <tr class="noBorder">
+        <td class="upload-table-cell" id="aasOne-delete-container">
+          {{#if details.methods.aas.files.aasFiles1_id}}
+            <a href="#" class="list-font btn btn-danger" id="aasOne_delete">DELETE</a>
+          {{/if}}
+        </td>
+        <td class="upload-table-cell" id="aasTwo-delete-container">
+          {{#if details.methods.aas.files.aasFiles2_id}}
+            <a href="#" class="list-font btn btn-danger" id="aasTwo_delete">DELETE</a>
+          {{/if}}
+        </td>
+        <td class="upload-table-cell" id="aasThree-delete-container">
+          {{#if details.methods.aas.files.aasFiles3_id}}
+            <a href="#" class="list-font btn btn-danger" id="aasThree_delete">DELETE</a>
+          {{/if}}
+        </td>
+        <td class="upload-table-cell" id="aasFour-delete-container">
+          {{#if details.methods.aas.files.aasFiles4_id}}
+            <a href="#" class="list-font btn btn-danger" id="aasFour_delete">DELETE</a>
+          {{/if}}
+        </td>
+      </tr>
+
+
+    </table>
+  </div>
+
+      <div class="col-xs-12 col-sm-12 list-font align-center">
+        <br/>
+        <span id="aasFiles-delete-container">
+          {{#if details.methods.aas.files.aasFiles5_id}}
+            <a href="#" class="list-font btn btn-danger" id="aasFile_delete">DELETE ADDITIONAL FILES</a>
+          {{/if}}
+        </span>
+        <br/>
+        <br/>
+        <span class="list-font new-file" id="aasFiles_name"></span>
+      </div>
+
+    </div>
+</template>

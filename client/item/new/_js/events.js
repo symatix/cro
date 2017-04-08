@@ -2,6 +2,15 @@ Template.item_new.events({
   'click .upload_label':function(event){
     $(".upload-progress").css({"display":"block"});
   },
+  'mouseover .upload_label':function(event){
+    var originalText = $(event.target).html();
+    Session.set("labelOriginal", originalText);
+    $(event.target).html("click to select and upload a file");
+  },
+  'mouseout .upload_label':function(event){
+    $(event.target).html(Session.get("labelOriginal"));
+    Session.set("labelOriginal", false);
+  },
   'click .a-heading-tab':function(event){
     $("#methods_href").css({"display":"block"});
     $("#submit_href").css({"display":"block"});

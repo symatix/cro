@@ -1,0 +1,102 @@
+<template name="form_files_ol_visual">
+    <div class="row visual-data">
+
+
+
+    <div class="col-xs-12 align-center">
+
+      <table border="0" cellspacing="0" cellpadding="0" class="table table-condensed list-font">
+
+      <tr class="noBorder">
+        <td class="upload-table-cell" id="olOne_title">
+            {{#if details.methods.ol.files.olFiles1_id}}
+              Picture one
+            {{/if}}
+        </td>
+        <td class="upload-table-cell" id="olTwo_title">
+            {{#if details.methods.ol.files.olFiles2_id}}
+              Picture two
+            {{/if}}
+        </td>
+        <td class="upload-table-cell" id="olThree_title">
+            {{#if details.methods.ol.files.olFiles3_id}}
+              Picture three
+            {{/if}}
+        </td>
+        <td class="upload-table-cell" id="olFour_title">
+            {{#if details.methods.ol.files.olFiles4_id}}
+              Picture four
+            {{/if}}
+        </td>
+      </tr>
+
+
+      <tr class="noBorder new-file">
+        <td class="upload-table-cell" id="olOne_name">
+        </td>
+        <td class="upload-table-cell" id="olTwo_name">
+        </td>
+        <td class="upload-table-cell" id="olThree_name">
+        </td>
+        <td class="upload-table-cell" id="olFour_name">
+        </td>
+      </tr>
+
+
+      <tr class="noBorder">
+        <td class="upload-table-cell">
+          <img class="img-upload-sm" src="{{#if details.methods.ol.files.olFiles1}}{{details.methods.ol.files.olFiles1}}{{/if}}" id="olOne_uploaded">
+        </td>
+        <td class="upload-table-cell">
+          <img class="img-upload-sm" src="{{#if details.methods.ol.files.olFiles2}}{{details.methods.ol.files.olFiles2}}{{/if}}" id="olTwo_uploaded">
+        </td>
+        <td class="upload-table-cell">
+          <img class="img-upload-sm" src="{{#if details.methods.ol.files.olFiles3}}{{details.methods.ol.files.olFiles3}}{{/if}}" id="olThree_uploaded">
+        </td>
+        <td class="upload-table-cell">
+          <img class="img-upload-sm" src="{{#if details.methods.ol.files.olFiles4}}{{details.methods.ol.files.olFiles4}}{{/if}}" id="olFour_uploaded">
+        </td>
+      </tr>
+
+
+      <tr class="noBorder">
+        <td class="upload-table-cell" id="olOne-delete-container">
+          {{#if details.methods.ol.files.olFiles1_id}}
+            <a href="#" class="list-font btn btn-danger" id="olOne_delete">DELETE</a>
+          {{/if}}
+        </td>
+        <td class="upload-table-cell" id="olTwo-delete-container">
+          {{#if details.methods.ol.files.olFiles2_id}}
+            <a href="#" class="list-font btn btn-danger" id="olTwo_delete">DELETE</a>
+          {{/if}}
+        </td>
+        <td class="upload-table-cell" id="olThree-delete-container">
+          {{#if details.methods.ol.files.olFiles3_id}}
+            <a href="#" class="list-font btn btn-danger" id="olThree_delete">DELETE</a>
+          {{/if}}
+        </td>
+        <td class="upload-table-cell" id="olFour-delete-container">
+          {{#if details.methods.ol.files.olFiles4_id}}
+            <a href="#" class="list-font btn btn-danger" id="olFour_delete">DELETE</a>
+          {{/if}}
+        </td>
+      </tr>
+
+
+    </table>
+  </div>
+
+      <div class="col-xs-12 col-sm-12 list-font align-center">
+        <br/>
+        <span id="olFiles-delete-container">
+          {{#if details.methods.ol.files.olFiles5_id}}
+            <a href="#" class="list-font btn btn-danger" id="olFile_delete">DELETE ADDITIONAL FILES</a>
+          {{/if}}
+        </span>
+        <br/>
+        <br/>
+        <span class="list-font new-file" id="olFiles_name"></span>
+      </div>
+
+    </div>
+</template>

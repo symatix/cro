@@ -1,0 +1,102 @@
+<template name="form_files_tlc_visual">
+    <div class="row visual-data">
+
+
+
+    <div class="col-xs-12 align-center">
+
+      <table border="0" cellspacing="0" cellpadding="0" class="table table-condensed list-font">
+
+      <tr class="noBorder">
+        <td class="upload-table-cell" id="tlcOne_title">
+            {{#if details.methods.tlc.files.tlcFiles1_id}}
+              Picture one
+            {{/if}}
+        </td>
+        <td class="upload-table-cell" id="tlcTwo_title">
+            {{#if details.methods.tlc.files.tlcFiles2_id}}
+              Picture two
+            {{/if}}
+        </td>
+        <td class="upload-table-cell" id="tlcThree_title">
+            {{#if details.methods.tlc.files.tlcFiles3_id}}
+              Picture three
+            {{/if}}
+        </td>
+        <td class="upload-table-cell" id="tlcFour_title">
+            {{#if details.methods.tlc.files.tlcFiles4_id}}
+              Picture four
+            {{/if}}
+        </td>
+      </tr>
+
+
+      <tr class="noBorder new-file">
+        <td class="upload-table-cell" id="tlcOne_name">
+        </td>
+        <td class="upload-table-cell" id="tlcTwo_name">
+        </td>
+        <td class="upload-table-cell" id="tlcThree_name">
+        </td>
+        <td class="upload-table-cell" id="tlcFour_name">
+        </td>
+      </tr>
+
+
+      <tr class="noBorder">
+        <td class="upload-table-cell">
+          <img class="img-upload-sm" src="{{#if details.methods.tlc.files.tlcFiles1}}{{details.methods.tlc.files.tlcFiles1}}{{/if}}" id="tlcOne_uploaded">
+        </td>
+        <td class="upload-table-cell">
+          <img class="img-upload-sm" src="{{#if details.methods.tlc.files.tlcFiles2}}{{details.methods.tlc.files.tlcFiles2}}{{/if}}" id="tlcTwo_uploaded">
+        </td>
+        <td class="upload-table-cell">
+          <img class="img-upload-sm" src="{{#if details.methods.tlc.files.tlcFiles3}}{{details.methods.tlc.files.tlcFiles3}}{{/if}}" id="tlcThree_uploaded">
+        </td>
+        <td class="upload-table-cell">
+          <img class="img-upload-sm" src="{{#if details.methods.tlc.files.tlcFiles4}}{{details.methods.tlc.files.tlcFiles4}}{{/if}}" id="tlcFour_uploaded">
+        </td>
+      </tr>
+
+
+      <tr class="noBorder">
+        <td class="upload-table-cell" id="tlcOne-delete-container">
+          {{#if details.methods.tlc.files.tlcFiles1_id}}
+            <a href="#" class="list-font btn btn-danger" id="tlcOne_delete">DELETE</a>
+          {{/if}}
+        </td>
+        <td class="upload-table-cell" id="tlcTwo-delete-container">
+          {{#if details.methods.tlc.files.tlcFiles2_id}}
+            <a href="#" class="list-font btn btn-danger" id="tlcTwo_delete">DELETE</a>
+          {{/if}}
+        </td>
+        <td class="upload-table-cell" id="tlcThree-delete-container">
+          {{#if details.methods.tlc.files.tlcFiles3_id}}
+            <a href="#" class="list-font btn btn-danger" id="tlcThree_delete">DELETE</a>
+          {{/if}}
+        </td>
+        <td class="upload-table-cell" id="tlcFour-delete-container">
+          {{#if details.methods.tlc.files.tlcFiles4_id}}
+            <a href="#" class="list-font btn btn-danger" id="tlcFour_delete">DELETE</a>
+          {{/if}}
+        </td>
+      </tr>
+
+
+    </table>
+  </div>
+
+      <div class="col-xs-12 col-sm-12 list-font align-center">
+        <br/>
+        <span id="tlcFiles-delete-container">
+          {{#if details.methods.tlc.files.tlcFiles5_id}}
+            <a href="#" class="list-font btn btn-danger" id="tlcFile_delete">DELETE ADDITIONAL FILES</a>
+          {{/if}}
+        </span>
+        <br/>
+        <br/>
+        <span class="list-font new-file" id="tlcFiles_name"></span>
+      </div>
+
+    </div>
+</template>

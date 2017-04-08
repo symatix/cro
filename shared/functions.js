@@ -3228,6 +3228,7 @@ Meteor.myFunctions = {
     var userDetails = {
       username:username,
       password: password,
+      email: email,
       profile: {
         username:username,
         visible:1,
@@ -3252,6 +3253,7 @@ Meteor.myFunctions = {
     var userDetails = {
       username:username,
       password: password,
+      email: email,
       profile: { 
         username:username,
         visible:1,

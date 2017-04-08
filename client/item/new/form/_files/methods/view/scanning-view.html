@@ -1,0 +1,102 @@
+<template name="form_files_scanning_visual">
+    <div class="row visual-data">
+
+
+
+    <div class="col-xs-12 align-center">
+
+      <table border="0" cellspacing="0" cellpadding="0" class="table table-condensed list-font">
+
+      <tr class="noBorder">
+        <td class="upload-table-cell" id="scanningOne_title">
+            {{#if details.methods.scanning.files.scanningFiles1_id}}
+              Picture one
+            {{/if}}
+        </td>
+        <td class="upload-table-cell" id="scanningTwo_title">
+            {{#if details.methods.scanning.files.scanningFiles2_id}}
+              Picture two
+            {{/if}}
+        </td>
+        <td class="upload-table-cell" id="scanningThree_title">
+            {{#if details.methods.scanning.files.scanningFiles3_id}}
+              Picture three
+            {{/if}}
+        </td>
+        <td class="upload-table-cell" id="scanningFour_title">
+            {{#if details.methods.scanning.files.scanningFiles4_id}}
+              Picture four
+            {{/if}}
+        </td>
+      </tr>
+
+
+      <tr class="noBorder new-file">
+        <td class="upload-table-cell" id="scanningOne_name">
+        </td>
+        <td class="upload-table-cell" id="scanningTwo_name">
+        </td>
+        <td class="upload-table-cell" id="scanningThree_name">
+        </td>
+        <td class="upload-table-cell" id="scanningFour_name">
+        </td>
+      </tr>
+
+
+      <tr class="noBorder">
+        <td class="upload-table-cell">
+          <img class="img-upload-sm" src="{{#if details.methods.scanning.files.scanningFiles1}}{{details.methods.scanning.files.scanningFiles1}}{{/if}}" id="scanningOne_uploaded">
+        </td>
+        <td class="upload-table-cell">
+          <img class="img-upload-sm" src="{{#if details.methods.scanning.files.scanningFiles2}}{{details.methods.scanning.files.scanningFiles2}}{{/if}}" id="scanningTwo_uploaded">
+        </td>
+        <td class="upload-table-cell">
+          <img class="img-upload-sm" src="{{#if details.methods.scanning.files.scanningFiles3}}{{details.methods.scanning.files.scanningFiles3}}{{/if}}" id="scanningThree_uploaded">
+        </td>
+        <td class="upload-table-cell">
+          <img class="img-upload-sm" src="{{#if details.methods.scanning.files.scanningFiles4}}{{details.methods.scanning.files.scanningFiles4}}{{/if}}" id="scanningFour_uploaded">
+        </td>
+      </tr>
+
+
+      <tr class="noBorder">
+        <td class="upload-table-cell" id="scanningOne-delete-container">
+          {{#if details.methods.scanning.files.scanningFiles1_id}}
+            <a href="#" class="list-font btn btn-danger" id="scanningOne_delete">DELETE</a>
+          {{/if}}
+        </td>
+        <td class="upload-table-cell" id="scanningTwo-delete-container">
+          {{#if details.methods.scanning.files.scanningFiles2_id}}
+            <a href="#" class="list-font btn btn-danger" id="scanningTwo_delete">DELETE</a>
+          {{/if}}
+        </td>
+        <td class="upload-table-cell" id="scanningThree-delete-container">
+          {{#if details.methods.scanning.files.scanningFiles3_id}}
+            <a href="#" class="list-font btn btn-danger" id="scanningThree_delete">DELETE</a>
+          {{/if}}
+        </td>
+        <td class="upload-table-cell" id="scanningFour-delete-container">
+          {{#if details.methods.scanning.files.scanningFiles4_id}}
+            <a href="#" class="list-font btn btn-danger" id="scanningFour_delete">DELETE</a>
+          {{/if}}
+        </td>
+      </tr>
+
+
+    </table>
+  </div>
+
+      <div class="col-xs-12 col-sm-12 list-font align-center">
+        <br/>
+        <span id="scanningFiles-delete-container">
+          {{#if details.methods.scanning.files.scanningFiles5_id}}
+            <a href="#" class="list-font btn btn-danger" id="scanningFile_delete">DELETE ADDITIONAL FILES</a>
+          {{/if}}
+        </span>
+        <br/>
+        <br/>
+        <span class="list-font new-file" id="scanningFiles_name"></span>
+      </div>
+
+    </div>
+</template>

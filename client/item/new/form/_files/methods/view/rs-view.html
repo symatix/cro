@@ -1,0 +1,102 @@
+<template name="form_files_rs_visual">
+    <div class="row visual-data">
+
+
+
+    <div class="col-xs-12 align-center">
+
+      <table border="0" cellspacing="0" cellpadding="0" class="table table-condensed list-font">
+
+      <tr class="noBorder">
+        <td class="upload-table-cell" id="rsOne_title">
+            {{#if details.methods.rs.files.rsFiles1_id}}
+              Picture one
+            {{/if}}
+        </td>
+        <td class="upload-table-cell" id="rsTwo_title">
+            {{#if details.methods.rs.files.rsFiles2_id}}
+              Picture two
+            {{/if}}
+        </td>
+        <td class="upload-table-cell" id="rsThree_title">
+            {{#if details.methods.rs.files.rsFiles3_id}}
+              Picture three
+            {{/if}}
+        </td>
+        <td class="upload-table-cell" id="rsFour_title">
+            {{#if details.methods.rs.files.rsFiles4_id}}
+              Picture four
+            {{/if}}
+        </td>
+      </tr>
+
+
+      <tr class="noBorder new-file">
+        <td class="upload-table-cell" id="rsOne_name">
+        </td>
+        <td class="upload-table-cell" id="rsTwo_name">
+        </td>
+        <td class="upload-table-cell" id="rsThree_name">
+        </td>
+        <td class="upload-table-cell" id="rsFour_name">
+        </td>
+      </tr>
+
+
+      <tr class="noBorder">
+        <td class="upload-table-cell">
+          <img class="img-upload-sm" src="{{#if details.methods.rs.files.rsFiles1}}{{details.methods.rs.files.rsFiles1}}{{/if}}" id="rsOne_uploaded">
+        </td>
+        <td class="upload-table-cell">
+          <img class="img-upload-sm" src="{{#if details.methods.rs.files.rsFiles2}}{{details.methods.rs.files.rsFiles2}}{{/if}}" id="rsTwo_uploaded">
+        </td>
+        <td class="upload-table-cell">
+          <img class="img-upload-sm" src="{{#if details.methods.rs.files.rsFiles3}}{{details.methods.rs.files.rsFiles3}}{{/if}}" id="rsThree_uploaded">
+        </td>
+        <td class="upload-table-cell">
+          <img class="img-upload-sm" src="{{#if details.methods.rs.files.rsFiles4}}{{details.methods.rs.files.rsFiles4}}{{/if}}" id="rsFour_uploaded">
+        </td>
+      </tr>
+
+
+      <tr class="noBorder">
+        <td class="upload-table-cell" id="rsOne-delete-container">
+          {{#if details.methods.rs.files.rsFiles1_id}}
+            <a href="#" class="list-font btn btn-danger" id="rsOne_delete">DELETE</a>
+          {{/if}}
+        </td>
+        <td class="upload-table-cell" id="rsTwo-delete-container">
+          {{#if details.methods.rs.files.rsFiles2_id}}
+            <a href="#" class="list-font btn btn-danger" id="rsTwo_delete">DELETE</a>
+          {{/if}}
+        </td>
+        <td class="upload-table-cell" id="rsThree-delete-container">
+          {{#if details.methods.rs.files.rsFiles3_id}}
+            <a href="#" class="list-font btn btn-danger" id="rsThree_delete">DELETE</a>
+          {{/if}}
+        </td>
+        <td class="upload-table-cell" id="rsFour-delete-container">
+          {{#if details.methods.rs.files.rsFiles4_id}}
+            <a href="#" class="list-font btn btn-danger" id="rsFour_delete">DELETE</a>
+          {{/if}}
+        </td>
+      </tr>
+
+
+    </table>
+  </div>
+
+      <div class="col-xs-12 col-sm-12 list-font align-center">
+        <br/>
+        <span id="rsFiles-delete-container">
+          {{#if details.methods.rs.files.rsFiles5_id}}
+            <a href="#" class="list-font btn btn-danger" id="rsFile_delete">DELETE ADDITIONAL FILES</a>
+          {{/if}}
+        </span>
+        <br/>
+        <br/>
+        <span class="list-font new-file" id="rsFiles_name"></span>
+      </div>
+
+    </div>
+</template>

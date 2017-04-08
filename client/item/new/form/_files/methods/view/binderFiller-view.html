@@ -1,0 +1,102 @@
+<template name="form_files_binderFiller_visual">
+    <div class="row visual-data">
+
+
+
+    <div class="col-xs-12 align-center">
+
+      <table border="0" cellspacing="0" cellpadding="0" class="table table-condensed list-font">
+
+      <tr class="noBorder">
+        <td class="upload-table-cell" id="binderFillerOne_title">
+            {{#if details.methods.binderFiller.files.binderFillerFiles1_id}}
+              Picture one
+            {{/if}}
+        </td>
+        <td class="upload-table-cell" id="binderFillerTwo_title">
+            {{#if details.methods.binderFiller.files.binderFillerFiles2_id}}
+              Picture two
+            {{/if}}
+        </td>
+        <td class="upload-table-cell" id="binderFillerThree_title">
+            {{#if details.methods.binderFiller.files.binderFillerFiles3_id}}
+              Picture three
+            {{/if}}
+        </td>
+        <td class="upload-table-cell" id="binderFillerFour_title">
+            {{#if details.methods.binderFiller.files.binderFillerFiles4_id}}
+              Picture four
+            {{/if}}
+        </td>
+      </tr>
+
+
+      <tr class="noBorder new-file">
+        <td class="upload-table-cell" id="binderFillerOne_name">
+        </td>
+        <td class="upload-table-cell" id="binderFillerTwo_name">
+        </td>
+        <td class="upload-table-cell" id="binderFillerThree_name">
+        </td>
+        <td class="upload-table-cell" id="binderFillerFour_name">
+        </td>
+      </tr>
+
+
+      <tr class="noBorder">
+        <td class="upload-table-cell">
+          <img class="img-upload-sm" src="{{#if details.methods.binderFiller.files.binderFillerFiles1}}{{details.methods.binderFiller.files.binderFillerFiles1}}{{/if}}" id="binderFillerOne_uploaded">
+        </td>
+        <td class="upload-table-cell">
+          <img class="img-upload-sm" src="{{#if details.methods.binderFiller.files.binderFillerFiles2}}{{details.methods.binderFiller.files.binderFillerFiles2}}{{/if}}" id="binderFillerTwo_uploaded">
+        </td>
+        <td class="upload-table-cell">
+          <img class="img-upload-sm" src="{{#if details.methods.binderFiller.files.binderFillerFiles3}}{{details.methods.binderFiller.files.binderFillerFiles3}}{{/if}}" id="binderFillerThree_uploaded">
+        </td>
+        <td class="upload-table-cell">
+          <img class="img-upload-sm" src="{{#if details.methods.binderFiller.files.binderFillerFiles4}}{{details.methods.binderFiller.files.binderFillerFiles4}}{{/if}}" id="binderFillerFour_uploaded">
+        </td>
+      </tr>
+
+
+      <tr class="noBorder">
+        <td class="upload-table-cell" id="binderFillerOne-delete-container">
+          {{#if details.methods.binderFiller.files.binderFillerFiles1_id}}
+            <a href="#" class="list-font btn btn-danger" id="binderFillerOne_delete">DELETE</a>
+          {{/if}}
+        </td>
+        <td class="upload-table-cell" id="binderFillerTwo-delete-container">
+          {{#if details.methods.binderFiller.files.binderFillerFiles2_id}}
+            <a href="#" class="list-font btn btn-danger" id="binderFillerTwo_delete">DELETE</a>
+          {{/if}}
+        </td>
+        <td class="upload-table-cell" id="binderFillerThree-delete-container">
+          {{#if details.methods.binderFiller.files.binderFillerFiles3_id}}
+            <a href="#" class="list-font btn btn-danger" id="binderFillerThree_delete">DELETE</a>
+          {{/if}}
+        </td>
+        <td class="upload-table-cell" id="binderFillerFour-delete-container">
+          {{#if details.methods.binderFiller.files.binderFillerFiles4_id}}
+            <a href="#" class="list-font btn btn-danger" id="binderFillerFour_delete">DELETE</a>
+          {{/if}}
+        </td>
+      </tr>
+
+
+    </table>
+  </div>
+
+      <div class="col-xs-12 col-sm-12 list-font align-center">
+        <br/>
+        <span id="binderFillerFiles-delete-container">
+          {{#if details.methods.binderFiller.files.binderFillerFiles5_id}}
+            <a href="#" class="list-font btn btn-danger" id="binderFillerFile_delete">DELETE ADDITIONAL FILES</a>
+          {{/if}}
+        </span>
+        <br/>
+        <br/>
+        <span class="list-font new-file" id="binderFillerFiles_name"></span>
+      </div>
+
+    </div>
+</template>

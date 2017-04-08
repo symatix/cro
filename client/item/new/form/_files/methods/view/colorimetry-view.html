@@ -1,0 +1,102 @@
+<template name="form_files_colorimetry_visual">
+    <div class="row visual-data">
+
+
+
+    <div class="col-xs-12 align-center">
+
+      <table border="0" cellspacing="0" cellpadding="0" class="table table-condensed list-font">
+
+      <tr class="noBorder">
+        <td class="upload-table-cell" id="colorimetryOne_title">
+            {{#if details.methods.colorimetry.files.colorimetryFiles1_id}}
+              Picture one
+            {{/if}}
+        </td>
+        <td class="upload-table-cell" id="colorimetryTwo_title">
+            {{#if details.methods.colorimetry.files.colorimetryFiles2_id}}
+              Picture two
+            {{/if}}
+        </td>
+        <td class="upload-table-cell" id="colorimetryThree_title">
+            {{#if details.methods.colorimetry.files.colorimetryFiles3_id}}
+              Picture three
+            {{/if}}
+        </td>
+        <td class="upload-table-cell" id="colorimetryFour_title">
+            {{#if details.methods.colorimetry.files.colorimetryFiles4_id}}
+              Picture four
+            {{/if}}
+        </td>
+      </tr>
+
+
+      <tr class="noBorder new-file">
+        <td class="upload-table-cell" id="colorimetryOne_name">
+        </td>
+        <td class="upload-table-cell" id="colorimetryTwo_name">
+        </td>
+        <td class="upload-table-cell" id="colorimetryThree_name">
+        </td>
+        <td class="upload-table-cell" id="colorimetryFour_name">
+        </td>
+      </tr>
+
+
+      <tr class="noBorder">
+        <td class="upload-table-cell">
+          <img class="img-upload-sm" src="{{#if details.methods.colorimetry.files.colorimetryFiles1}}{{details.methods.colorimetry.files.colorimetryFiles1}}{{/if}}" id="colorimetryOne_uploaded">
+        </td>
+        <td class="upload-table-cell">
+          <img class="img-upload-sm" src="{{#if details.methods.colorimetry.files.colorimetryFiles2}}{{details.methods.colorimetry.files.colorimetryFiles2}}{{/if}}" id="colorimetryTwo_uploaded">
+        </td>
+        <td class="upload-table-cell">
+          <img class="img-upload-sm" src="{{#if details.methods.colorimetry.files.colorimetryFiles3}}{{details.methods.colorimetry.files.colorimetryFiles3}}{{/if}}" id="colorimetryThree_uploaded">
+        </td>
+        <td class="upload-table-cell">
+          <img class="img-upload-sm" src="{{#if details.methods.colorimetry.files.colorimetryFiles4}}{{details.methods.colorimetry.files.colorimetryFiles4}}{{/if}}" id="colorimetryFour_uploaded">
+        </td>
+      </tr>
+
+
+      <tr class="noBorder">
+        <td class="upload-table-cell" id="colorimetryOne-delete-container">
+          {{#if details.methods.colorimetry.files.colorimetryFiles1_id}}
+            <a href="#" class="list-font btn btn-danger" id="colorimetryOne_delete">DELETE</a>
+          {{/if}}
+        </td>
+        <td class="upload-table-cell" id="colorimetryTwo-delete-container">
+          {{#if details.methods.colorimetry.files.colorimetryFiles2_id}}
+            <a href="#" class="list-font btn btn-danger" id="colorimetryTwo_delete">DELETE</a>
+          {{/if}}
+        </td>
+        <td class="upload-table-cell" id="colorimetryThree-delete-container">
+          {{#if details.methods.colorimetry.files.colorimetryFiles3_id}}
+            <a href="#" class="list-font btn btn-danger" id="colorimetryThree_delete">DELETE</a>
+          {{/if}}
+        </td>
+        <td class="upload-table-cell" id="colorimetryFour-delete-container">
+          {{#if details.methods.colorimetry.files.colorimetryFiles4_id}}
+            <a href="#" class="list-font btn btn-danger" id="colorimetryFour_delete">DELETE</a>
+          {{/if}}
+        </td>
+      </tr>
+
+
+    </table>
+  </div>
+
+      <div class="col-xs-12 col-sm-12 list-font align-center">
+        <br/>
+        <span id="colorimetryFiles-delete-container">
+          {{#if details.methods.colorimetry.files.colorimetryFiles5_id}}
+            <a href="#" class="list-font btn btn-danger" id="colorimetryFile_delete">DELETE ADDITIONAL FILES</a>
+          {{/if}}
+        </span>
+        <br/>
+        <br/>
+        <span class="list-font new-file" id="colorimetryFiles_name"></span>
+      </div>
+
+    </div>
+</template>

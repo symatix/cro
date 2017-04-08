@@ -1,0 +1,102 @@
+<template name="form_files_libs_visual">
+    <div class="row visual-data">
+
+
+
+    <div class="col-xs-12 align-center">
+
+      <table border="0" cellspacing="0" cellpadding="0" class="table table-condensed list-font">
+
+      <tr class="noBorder">
+        <td class="upload-table-cell" id="libsOne_title">
+            {{#if details.methods.libs.files.libsFiles1_id}}
+              Picture one
+            {{/if}}
+        </td>
+        <td class="upload-table-cell" id="libsTwo_title">
+            {{#if details.methods.libs.files.libsFiles2_id}}
+              Picture two
+            {{/if}}
+        </td>
+        <td class="upload-table-cell" id="libsThree_title">
+            {{#if details.methods.libs.files.libsFiles3_id}}
+              Picture three
+            {{/if}}
+        </td>
+        <td class="upload-table-cell" id="libsFour_title">
+            {{#if details.methods.libs.files.libsFiles4_id}}
+              Picture four
+            {{/if}}
+        </td>
+      </tr>
+
+
+      <tr class="noBorder new-file">
+        <td class="upload-table-cell" id="libsOne_name">
+        </td>
+        <td class="upload-table-cell" id="libsTwo_name">
+        </td>
+        <td class="upload-table-cell" id="libsThree_name">
+        </td>
+        <td class="upload-table-cell" id="libsFour_name">
+        </td>
+      </tr>
+
+
+      <tr class="noBorder">
+        <td class="upload-table-cell">
+          <img class="img-upload-sm" src="{{#if details.methods.libs.files.libsFiles1}}{{details.methods.libs.files.libsFiles1}}{{/if}}" id="libsOne_uploaded">
+        </td>
+        <td class="upload-table-cell">
+          <img class="img-upload-sm" src="{{#if details.methods.libs.files.libsFiles2}}{{details.methods.libs.files.libsFiles2}}{{/if}}" id="libsTwo_uploaded">
+        </td>
+        <td class="upload-table-cell">
+          <img class="img-upload-sm" src="{{#if details.methods.libs.files.libsFiles3}}{{details.methods.libs.files.libsFiles3}}{{/if}}" id="libsThree_uploaded">
+        </td>
+        <td class="upload-table-cell">
+          <img class="img-upload-sm" src="{{#if details.methods.libs.files.libsFiles4}}{{details.methods.libs.files.libsFiles4}}{{/if}}" id="libsFour_uploaded">
+        </td>
+      </tr>
+
+
+      <tr class="noBorder">
+        <td class="upload-table-cell" id="libsOne-delete-container">
+          {{#if details.methods.libs.files.libsFiles1_id}}
+            <a href="#" class="list-font btn btn-danger" id="libsOne_delete">DELETE</a>
+          {{/if}}
+        </td>
+        <td class="upload-table-cell" id="libsTwo-delete-container">
+          {{#if details.methods.libs.files.libsFiles2_id}}
+            <a href="#" class="list-font btn btn-danger" id="libsTwo_delete">DELETE</a>
+          {{/if}}
+        </td>
+        <td class="upload-table-cell" id="libsThree-delete-container">
+          {{#if details.methods.libs.files.libsFiles3_id}}
+            <a href="#" class="list-font btn btn-danger" id="libsThree_delete">DELETE</a>
+          {{/if}}
+        </td>
+        <td class="upload-table-cell" id="libsFour-delete-container">
+          {{#if details.methods.libs.files.libsFiles4_id}}
+            <a href="#" class="list-font btn btn-danger" id="libsFour_delete">DELETE</a>
+          {{/if}}
+        </td>
+      </tr>
+
+
+    </table>
+  </div>
+
+      <div class="col-xs-12 col-sm-12 list-font align-center">
+        <br/>
+        <span id="libsFiles-delete-container">
+          {{#if details.methods.libs.files.libsFiles5_id}}
+            <a href="#" class="list-font btn btn-danger" id="libsFile_delete">DELETE ADDITIONAL FILES</a>
+          {{/if}}
+        </span>
+        <br/>
+        <br/>
+        <span class="list-font new-file" id="libsFiles_name"></span>
+      </div>
+
+    </div>
+</template>

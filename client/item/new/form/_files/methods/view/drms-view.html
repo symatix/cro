@@ -1,0 +1,102 @@
+<template name="form_files_drms_visual">
+    <div class="row visual-data">
+
+
+
+    <div class="col-xs-12 align-center">
+
+      <table border="0" cellspacing="0" cellpadding="0" class="table table-condensed list-font">
+
+      <tr class="noBorder">
+        <td class="upload-table-cell" id="drmsOne_title">
+            {{#if details.methods.drms.files.drmsFiles1_id}}
+              Picture one
+            {{/if}}
+        </td>
+        <td class="upload-table-cell" id="drmsTwo_title">
+            {{#if details.methods.drms.files.drmsFiles2_id}}
+              Picture two
+            {{/if}}
+        </td>
+        <td class="upload-table-cell" id="drmsThree_title">
+            {{#if details.methods.drms.files.drmsFiles3_id}}
+              Picture three
+            {{/if}}
+        </td>
+        <td class="upload-table-cell" id="drmsFour_title">
+            {{#if details.methods.drms.files.drmsFiles4_id}}
+              Picture four
+            {{/if}}
+        </td>
+      </tr>
+
+
+      <tr class="noBorder new-file">
+        <td class="upload-table-cell" id="drmsOne_name">
+        </td>
+        <td class="upload-table-cell" id="drmsTwo_name">
+        </td>
+        <td class="upload-table-cell" id="drmsThree_name">
+        </td>
+        <td class="upload-table-cell" id="drmsFour_name">
+        </td>
+      </tr>
+
+
+      <tr class="noBorder">
+        <td class="upload-table-cell">
+          <img class="img-upload-sm" src="{{#if details.methods.drms.files.drmsFiles1}}{{details.methods.drms.files.drmsFiles1}}{{/if}}" id="drmsOne_uploaded">
+        </td>
+        <td class="upload-table-cell">
+          <img class="img-upload-sm" src="{{#if details.methods.drms.files.drmsFiles2}}{{details.methods.drms.files.drmsFiles2}}{{/if}}" id="drmsTwo_uploaded">
+        </td>
+        <td class="upload-table-cell">
+          <img class="img-upload-sm" src="{{#if details.methods.drms.files.drmsFiles3}}{{details.methods.drms.files.drmsFiles3}}{{/if}}" id="drmsThree_uploaded">
+        </td>
+        <td class="upload-table-cell">
+          <img class="img-upload-sm" src="{{#if details.methods.drms.files.drmsFiles4}}{{details.methods.drms.files.drmsFiles4}}{{/if}}" id="drmsFour_uploaded">
+        </td>
+      </tr>
+
+
+      <tr class="noBorder">
+        <td class="upload-table-cell" id="drmsOne-delete-container">
+          {{#if details.methods.drms.files.drmsFiles1_id}}
+            <a href="#" class="list-font btn btn-danger" id="drmsOne_delete">DELETE</a>
+          {{/if}}
+        </td>
+        <td class="upload-table-cell" id="drmsTwo-delete-container">
+          {{#if details.methods.drms.files.drmsFiles2_id}}
+            <a href="#" class="list-font btn btn-danger" id="drmsTwo_delete">DELETE</a>
+          {{/if}}
+        </td>
+        <td class="upload-table-cell" id="drmsThree-delete-container">
+          {{#if details.methods.drms.files.drmsFiles3_id}}
+            <a href="#" class="list-font btn btn-danger" id="drmsThree_delete">DELETE</a>
+          {{/if}}
+        </td>
+        <td class="upload-table-cell" id="drmsFour-delete-container">
+          {{#if details.methods.drms.files.drmsFiles4_id}}
+            <a href="#" class="list-font btn btn-danger" id="drmsFour_delete">DELETE</a>
+          {{/if}}
+        </td>
+      </tr>
+
+
+    </table>
+  </div>
+
+      <div class="col-xs-12 col-sm-12 list-font align-center">
+        <br/>
+        <span id="drmsFiles-delete-container">
+          {{#if details.methods.drms.files.drmsFiles5_id}}
+            <a href="#" class="list-font btn btn-danger" id="drmsFile_delete">DELETE ADDITIONAL FILES</a>
+          {{/if}}
+        </span>
+        <br/>
+        <br/>
+        <span class="list-font new-file" id="drmsFiles_name"></span>
+      </div>
+
+    </div>
+</template>

@@ -1,0 +1,102 @@
+<template name="form_files_aes_visual">
+    <div class="row visual-data">
+
+
+
+    <div class="col-xs-12 align-center">
+
+      <table border="0" cellspacing="0" cellpadding="0" class="table table-condensed list-font">
+
+      <tr class="noBorder">
+        <td class="upload-table-cell" id="aesOne_title">
+            {{#if details.methods.aes.files.aesFiles1_id}}
+              Picture one
+            {{/if}}
+        </td>
+        <td class="upload-table-cell" id="aesTwo_title">
+            {{#if details.methods.aes.files.aesFiles2_id}}
+              Picture two
+            {{/if}}
+        </td>
+        <td class="upload-table-cell" id="aesThree_title">
+            {{#if details.methods.aes.files.aesFiles3_id}}
+              Picture three
+            {{/if}}
+        </td>
+        <td class="upload-table-cell" id="aesFour_title">
+            {{#if details.methods.aes.files.aesFiles4_id}}
+              Picture four
+            {{/if}}
+        </td>
+      </tr>
+
+
+      <tr class="noBorder new-file">
+        <td class="upload-table-cell" id="aesOne_name">
+        </td>
+        <td class="upload-table-cell" id="aesTwo_name">
+        </td>
+        <td class="upload-table-cell" id="aesThree_name">
+        </td>
+        <td class="upload-table-cell" id="aesFour_name">
+        </td>
+      </tr>
+
+
+      <tr class="noBorder">
+        <td class="upload-table-cell">
+          <img class="img-upload-sm" src="{{#if details.methods.aes.files.aesFiles1}}{{details.methods.aes.files.aesFiles1}}{{/if}}" id="aesOne_uploaded">
+        </td>
+        <td class="upload-table-cell">
+          <img class="img-upload-sm" src="{{#if details.methods.aes.files.aesFiles2}}{{details.methods.aes.files.aesFiles2}}{{/if}}" id="aesTwo_uploaded">
+        </td>
+        <td class="upload-table-cell">
+          <img class="img-upload-sm" src="{{#if details.methods.aes.files.aesFiles3}}{{details.methods.aes.files.aesFiles3}}{{/if}}" id="aesThree_uploaded">
+        </td>
+        <td class="upload-table-cell">
+          <img class="img-upload-sm" src="{{#if details.methods.aes.files.aesFiles4}}{{details.methods.aes.files.aesFiles4}}{{/if}}" id="aesFour_uploaded">
+        </td>
+      </tr>
+
+
+      <tr class="noBorder">
+        <td class="upload-table-cell" id="aesOne-delete-container">
+          {{#if details.methods.aes.files.aesFiles1_id}}
+            <a href="#" class="list-font btn btn-danger" id="aesOne_delete">DELETE</a>
+          {{/if}}
+        </td>
+        <td class="upload-table-cell" id="aesTwo-delete-container">
+          {{#if details.methods.aes.files.aesFiles2_id}}
+            <a href="#" class="list-font btn btn-danger" id="aesTwo_delete">DELETE</a>
+          {{/if}}
+        </td>
+        <td class="upload-table-cell" id="aesThree-delete-container">
+          {{#if details.methods.aes.files.aesFiles3_id}}
+            <a href="#" class="list-font btn btn-danger" id="aesThree_delete">DELETE</a>
+          {{/if}}
+        </td>
+        <td class="upload-table-cell" id="aesFour-delete-container">
+          {{#if details.methods.aes.files.aesFiles4_id}}
+            <a href="#" class="list-font btn btn-danger" id="aesFour_delete">DELETE</a>
+          {{/if}}
+        </td>
+      </tr>
+
+
+    </table>
+  </div>
+
+      <div class="col-xs-12 col-sm-12 list-font align-center">
+        <br/>
+        <span id="aesFiles-delete-container">
+          {{#if details.methods.aes.files.aesFiles5_id}}
+            <a href="#" class="list-font btn btn-danger" id="aesFile_delete">DELETE ADDITIONAL FILES</a>
+          {{/if}}
+        </span>
+        <br/>
+        <br/>
+        <span class="list-font new-file" id="aesFiles_name"></span>
+      </div>
+
+    </div>
+</template>

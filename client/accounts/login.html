@@ -5,23 +5,29 @@
 			     <h1 class="prospero-login">{login : cro<span class="prospero" style="font-size:40px">ART</span>ia}</h1>
 			     <br/>
 			     <br/>
-			     <div class="login-form form-box">
-			    <form class="login" style="text-align:center">
-			        <p class="login-propery">username<br/>
-			        	<input class="align-center remove-margin bottom-shadow form-transparent" type="text" name="username">
-			        </p>
-			        <p class="login-propery">password<br/>
-			        	<input class="align-center remove-margin bottom-shadow form-transparent" type="password" name="password">
-			        </p>
-			        <br/>
-			        <br/>
-			        <div class="align-center">
-			         <button class="btn btn-default btn-submit btn-login" type="submit">LOGIN</button>
-			        </div>
-			    </form>
+			     <div class="row">
+				     <div class="col-xs-12 col-sm-push-3 col-sm-6 login-form form-box">
+					    <form class="login" style="text-align:center">
+					        <p class="login-propery">username<br/>
+					        	<input class="align-center remove-margin bottom-shadow form-transparent" type="text" name="username">
+					        </p>
+					        <p class="login-propery">password<br/>
+					        	<input class="align-center remove-margin bottom-shadow form-transparent" type="password" name="password">
+					        </p>
+					        <br/>
+					        <br/>
+					        <div class="align-center">
+					         <button class="btn btn-default btn-submit btn-login" type="submit">LOGIN</button>
+					        </div>
+					    </form>
+				        <div class="align-center">
+							<a class="a-heading" data-toggle="modal" data-target="#login-modal">Forgot password?</a>
+				        </div>
+				    </div>
 			    </div>
 		    </div>
 	    </div>
+
 	    <div class="row align-center">
 	    	<div class="col-md-12">
 	    		<div class="login-error">
@@ -30,4 +36,23 @@
 	    	</div>
 	    </div>
     </div>
+
+
+
+<!-- Modal -->
+      <div class="modal fade" id="login-modal" role="dialog">
+        <div class="modal-dialog">
+          <div class="modal-content modal-div">
+              <h4 class="modal-title"></h4>
+	            <div class="modal-body align-center">
+			        Enter email
+			        <input type="text" name="userEmail" class="userEmail" id="userEmail" placeholder="" value="">
+	              	<button type="button" class="btn btn-submit" id="sendUserData" data-dismiss="modal">SEND</button>
+			    </div>
+            </div>
+          </div>
+
+        </div>
+
+
 </template>

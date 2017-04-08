@@ -73,13 +73,67 @@ Meteor.methods({
 	    	Prospero.update({_id:itemId}, {$set:{"visible":"public", "last_edit": dateFormat}});
 	    }
 	},
+	resendUserDetails:function(userDetails){
+	    Email.send({
+			  to: userDetails.profile.email,
+			  from: "croartia.db@gmail.com",
+			  subject: "Login details request for "+userDetails.profile.username+"@croARTia",
+			  text: "Hello, "+userDetails.profile.full_name+"!\n Here are your user details for croARTia:\n\n Username: "+userDetails.profile.username+"\n Password: "+userDetails.profile.password+"\n\n croARTia team",
+			});
+	    Email.send({
+			  to: "croartia.db@gmail.com",
+			  from: "croartia.db.userForm",
+			  subject: "Details request for user: "+userDetails.profile.username+"@croARTia",
+			  text: "Hello, admin!\n\nUser requested details:\n\nUsername: "+userDetails.profile.username+"\nPassword: "+userDetails.profile.password+"\n\nFull name: "+userDetails.profile.full_name+"\nInstitution: "+userDetails.profile.institution+"\nTelephone: "+userDetails.profile.telephone+"\nEmail: "+userDetails.profile.email+"\n\n croARTia automated system"
+			});
+	},
+	forgotPasswordRequest:function(email){
+		var userDetails = Meteor.users.findOne({"profile.email":email});
+		if (userDetails){
+		    Email.send({
+				  to: userDetails.profile.email,
+				  from: "croartia.db@gmail.com",
+				  subject: "Login details request for "+userDetails.profile.username+"@croARTia",
+				  text: "Hello, "+userDetails.profile.full_name+"!\n Here are your user details for croARTia:\n\n Username: "+userDetails.profile.username+"\n Password: "+userDetails.profile.password+"\n\n croARTia team",
+				});
+		    Email.send({
+				  to: "croartia.db@gmail.com",
+				  from: "croartia.db.userForm",
+				  subject: "Details request for user: "+userDetails.profile.username+"@croARTia",
+				  text: "Hello, admin!\n\nUser requested details:\n\nUsername: "+userDetails.profile.username+"\nPassword: "+userDetails.profile.password+"\n\nFull name: "+userDetails.profile.full_name+"\nInstitution: "+userDetails.profile.institution+"\nTelephone: "+userDetails.profile.telephone+"\nEmail: "+userDetails.profile.email+"\n\n croARTia automated system"
+				});
+				return true;
+		} 
+	},
 	createUsers: function(userDetails) {
 	    Accounts.createUser(userDetails);
-	    console.log("user created");
+	    Email.send({
+			  to: userDetails.email,
+			  from: "croartia.db@gmail.com",
+			  subject: "Welcome to croARTia db",
+			  text: "Hello, "+userDetails.profile.full_name+"!\n And welcome to croARTia!\n\nTo start using croARTia database, go to #DOMAIN and use these credentials to log in:\n\n Username: "+userDetails.profile.username+"\n Password: "+userDetails.profile.password+"\n\n croARTia team",
+			});
+	    Email.send({
+			  to: "croartia.db@gmail.com",
+			  from: "croartia.db.userForm",
+			  subject: "New user: "+userDetails.profile.username+"@croARTia",
+			  text: "Hello, admin!\n\nNew user created with user details:\n\nUsername: "+userDetails.profile.username+"\nPassword: "+userDetails.profile.password+"\n\nFull name: "+userDetails.profile.full_name+"\nInstitution: "+userDetails.profile.institution+"\nTelephone: "+userDetails.profile.telephone+"\nEmail: "+userDetails.profile.email+"\n\n croARTia automated system"
+			});
 	},
 	editUsers: function(userId, password, userDetails) {
-		console.log("updating user: "+userId);
 		Meteor.users.update({_id:userId}, {$set: userDetails})
+	    Email.send({
+			  to: userDetails.email,
+			  from: "croartia.db@gmail.com",
+			  subject: "croARTia db user details changed",
+			  text: "Hello, "+userDetails.profile.full_name+"!\n Your login credentials have been changed!\n\nTo use croARTia database, go to #DOMAIN and use these credentials to log in:\n\n Username: "+userDetails.profile.username+"\n Password: "+userDetails.profile.password+"\n\n croARTia team",
+			});
+	    Email.send({
+			  to: "croartia.db@gmail.com",
+			  from: "croartia.db.userForm",
+			  subject: "Updated user: "+userDetails.profile.username+"@croARTia",
+			  text: "Hello, admin!\n\nUser "+userDetails.profile.username+" was updated with new details:\n\nUsername: "+userDetails.profile.username+"\nPassword: "+userDetails.profile.password+"\n\nFull name: "+userDetails.profile.full_name+"\nInstitution: "+userDetails.profile.institution+"\nTelephone: "+userDetails.profile.telephone+"\nEmail: "+userDetails.profile.email+"\n\n croARTia automated system"
+			});
 	},
 	removeUser:function(userId){
 	    Meteor.users.remove(userId);

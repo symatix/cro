@@ -1,0 +1,102 @@
+<template name="form_files_restoration_visual">
+    <div class="row visual-data">
+
+
+
+    <div class="col-xs-12 align-center">
+
+      <table border="0" cellspacing="0" cellpadding="0" class="table table-condensed list-font">
+
+      <tr class="noBorder">
+        <td class="upload-table-cell" id="restorationOne_title">
+            {{#if data.restoration.photoOne_id}}
+              Picture one
+            {{/if}}
+        </td>
+        <td class="upload-table-cell" id="restorationTwo_title">
+            {{#if data.restoration.photoTwo_id}}
+              Picture two
+            {{/if}}
+        </td>
+        <td class="upload-table-cell" id="restorationThree_title">
+            {{#if data.restoration.photoThree_id}}
+              Picture three
+            {{/if}}
+        </td>
+        <td class="upload-table-cell" id="restorationFour_title">
+            {{#if data.restoration.photoFour_id}}
+              Picture four
+            {{/if}}
+        </td>
+      </tr>
+
+
+      <tr class="noBorder new-file">
+        <td class="upload-table-cell" id="restorationOne_name">
+        </td>
+        <td class="upload-table-cell" id="restorationTwo_name">
+        </td>
+        <td class="upload-table-cell" id="restorationThree_name">
+        </td>
+        <td class="upload-table-cell" id="restorationFour_name">
+        </td>
+      </tr>
+
+
+      <tr class="noBorder">
+        <td class="upload-table-cell">
+          <img class="img-upload-sm" src="{{#if data.restoration.photoOne}}{{data.restoration.photoOne}}{{/if}}" id="restorationOne_uploaded">
+        </td>
+        <td class="upload-table-cell">
+          <img class="img-upload-sm" src="{{#if data.restoration.photoTwo}}{{data.restoration.photoTwo}}{{/if}}" id="restorationTwo_uploaded">
+        </td>
+        <td class="upload-table-cell">
+          <img class="img-upload-sm" src="{{#if data.restoration.photoThree}}{{data.restoration.photoThree}}{{/if}}" id="restorationThree_uploaded">
+        </td>
+        <td class="upload-table-cell">
+          <img class="img-upload-sm" src="{{#if data.restoration.photoFour}}{{data.restoration.photoFour}}{{/if}}" id="restorationFour_uploaded">
+        </td>
+      </tr>
+
+
+      <tr class="noBorder">
+        <td class="upload-table-cell" id="restorationOne-delete-container">
+          {{#if data.restoration.photoOne_id}}
+            <a href="#" class="list-font btn btn-danger" id="restorationOne_delete">DELETE</a>
+          {{/if}}
+        </td>
+        <td class="upload-table-cell" id="restorationTwo-delete-container">
+          {{#if data.restoration.photoTwo_id}}
+            <a href="#" class="list-font btn btn-danger" id="restorationTwo_delete">DELETE</a>
+          {{/if}}
+        </td>
+        <td class="upload-table-cell" id="restorationThree-delete-container">
+          {{#if data.restoration.photoThree_id}}
+            <a href="#" class="list-font btn btn-danger" id="restorationThree_delete">DELETE</a>
+          {{/if}}
+        </td>
+        <td class="upload-table-cell" id="restorationFour-delete-container">
+          {{#if data.restoration.photoFour_id}}
+            <a href="#" class="list-font btn btn-danger" id="restorationFour_delete">DELETE</a>
+          {{/if}}
+        </td>
+      </tr>
+
+
+    </table>
+  </div>
+
+      <div class="col-xs-12 col-sm-12 list-font align-center">
+        <br/>
+        <span id="restorationFiles-delete-container">
+          {{#if data.restoration.files_id}}
+            <a href="#" class="list-font btn btn-danger" id="restorationFile_delete">DELETE ADDITIONAL FILES</a>
+          {{/if}}
+        </span>
+        <br/>
+        <br/>
+        <span class="list-font new-file" id="restorationFiles_name"></span>
+      </div>
+
+    </div>
+</template>

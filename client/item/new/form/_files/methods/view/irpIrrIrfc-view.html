@@ -1,0 +1,102 @@
+<template name="form_files_irpIrrIrfc_visual">
+    <div class="row visual-data">
+
+
+
+    <div class="col-xs-12 align-center">
+
+      <table border="0" cellspacing="0" cellpadding="0" class="table table-condensed list-font">
+
+      <tr class="noBorder">
+        <td class="upload-table-cell" id="irpIrrIrfcOne_title">
+            {{#if details.methods.irpIrrIrfc.files.irpIrrIrfcFiles1_id}}
+              Picture one
+            {{/if}}
+        </td>
+        <td class="upload-table-cell" id="irpIrrIrfcTwo_title">
+            {{#if details.methods.irpIrrIrfc.files.irpIrrIrfcFiles2_id}}
+              Picture two
+            {{/if}}
+        </td>
+        <td class="upload-table-cell" id="irpIrrIrfcThree_title">
+            {{#if details.methods.irpIrrIrfc.files.irpIrrIrfcFiles3_id}}
+              Picture three
+            {{/if}}
+        </td>
+        <td class="upload-table-cell" id="irpIrrIrfcFour_title">
+            {{#if details.methods.irpIrrIrfc.files.irpIrrIrfcFiles4_id}}
+              Picture four
+            {{/if}}
+        </td>
+      </tr>
+
+
+      <tr class="noBorder new-file">
+        <td class="upload-table-cell" id="irpIrrIrfcOne_name">
+        </td>
+        <td class="upload-table-cell" id="irpIrrIrfcTwo_name">
+        </td>
+        <td class="upload-table-cell" id="irpIrrIrfcThree_name">
+        </td>
+        <td class="upload-table-cell" id="irpIrrIrfcFour_name">
+        </td>
+      </tr>
+
+
+      <tr class="noBorder">
+        <td class="upload-table-cell">
+          <img class="img-upload-sm" src="{{#if details.methods.irpIrrIrfc.files.irpIrrIrfcFiles1}}{{details.methods.irpIrrIrfc.files.irpIrrIrfcFiles1}}{{/if}}" id="irpIrrIrfcOne_uploaded">
+        </td>
+        <td class="upload-table-cell">
+          <img class="img-upload-sm" src="{{#if details.methods.irpIrrIrfc.files.irpIrrIrfcFiles2}}{{details.methods.irpIrrIrfc.files.irpIrrIrfcFiles2}}{{/if}}" id="irpIrrIrfcTwo_uploaded">
+        </td>
+        <td class="upload-table-cell">
+          <img class="img-upload-sm" src="{{#if details.methods.irpIrrIrfc.files.irpIrrIrfcFiles3}}{{details.methods.irpIrrIrfc.files.irpIrrIrfcFiles3}}{{/if}}" id="irpIrrIrfcThree_uploaded">
+        </td>
+        <td class="upload-table-cell">
+          <img class="img-upload-sm" src="{{#if details.methods.irpIrrIrfc.files.irpIrrIrfcFiles4}}{{details.methods.irpIrrIrfc.files.irpIrrIrfcFiles4}}{{/if}}" id="irpIrrIrfcFour_uploaded">
+        </td>
+      </tr>
+
+
+      <tr class="noBorder">
+        <td class="upload-table-cell" id="irpIrrIrfcOne-delete-container">
+          {{#if details.methods.irpIrrIrfc.files.irpIrrIrfcFiles1_id}}
+            <a href="#" class="list-font btn btn-danger" id="irpIrrIrfcOne_delete">DELETE</a>
+          {{/if}}
+        </td>
+        <td class="upload-table-cell" id="irpIrrIrfcTwo-delete-container">
+          {{#if details.methods.irpIrrIrfc.files.irpIrrIrfcFiles2_id}}
+            <a href="#" class="list-font btn btn-danger" id="irpIrrIrfcTwo_delete">DELETE</a>
+          {{/if}}
+        </td>
+        <td class="upload-table-cell" id="irpIrrIrfcThree-delete-container">
+          {{#if details.methods.irpIrrIrfc.files.irpIrrIrfcFiles3_id}}
+            <a href="#" class="list-font btn btn-danger" id="irpIrrIrfcThree_delete">DELETE</a>
+          {{/if}}
+        </td>
+        <td class="upload-table-cell" id="irpIrrIrfcFour-delete-container">
+          {{#if details.methods.irpIrrIrfc.files.irpIrrIrfcFiles4_id}}
+            <a href="#" class="list-font btn btn-danger" id="irpIrrIrfcFour_delete">DELETE</a>
+          {{/if}}
+        </td>
+      </tr>
+
+
+    </table>
+  </div>
+
+      <div class="col-xs-12 col-sm-12 list-font align-center">
+        <br/>
+        <span id="irpIrrIrfcFiles-delete-container">
+          {{#if details.methods.irpIrrIrfc.files.irpIrrIrfcFiles5_id}}
+            <a href="#" class="list-font btn btn-danger" id="irpIrrIrfcFile_delete">DELETE ADDITIONAL FILES</a>
+          {{/if}}
+        </span>
+        <br/>
+        <br/>
+        <span class="list-font new-file" id="irpIrrIrfcFiles_name"></span>
+      </div>
+
+    </div>
+</template>

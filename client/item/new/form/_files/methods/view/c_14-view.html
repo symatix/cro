@@ -1,0 +1,102 @@
+<template name="form_files_c_14_visual">
+    <div class="row visual-data">
+
+
+
+    <div class="col-xs-12 align-center">
+
+      <table border="0" cellspacing="0" cellpadding="0" class="table table-condensed list-font">
+
+      <tr class="noBorder">
+        <td class="upload-table-cell" id="c_14One_title">
+            {{#if details.methods.c_14.files.c_14Files1_id}}
+              Picture one
+            {{/if}}
+        </td>
+        <td class="upload-table-cell" id="c_14Two_title">
+            {{#if details.methods.c_14.files.c_14Files2_id}}
+              Picture two
+            {{/if}}
+        </td>
+        <td class="upload-table-cell" id="c_14Three_title">
+            {{#if details.methods.c_14.files.c_14Files3_id}}
+              Picture three
+            {{/if}}
+        </td>
+        <td class="upload-table-cell" id="c_14Four_title">
+            {{#if details.methods.c_14.files.c_14Files4_id}}
+              Picture four
+            {{/if}}
+        </td>
+      </tr>
+
+
+      <tr class="noBorder new-file">
+        <td class="upload-table-cell" id="c_14One_name">
+        </td>
+        <td class="upload-table-cell" id="c_14Two_name">
+        </td>
+        <td class="upload-table-cell" id="c_14Three_name">
+        </td>
+        <td class="upload-table-cell" id="c_14Four_name">
+        </td>
+      </tr>
+
+
+      <tr class="noBorder">
+        <td class="upload-table-cell">
+          <img class="img-upload-sm" src="{{#if details.methods.c_14.files.c_14Files1}}{{details.methods.c_14.files.c_14Files1}}{{/if}}" id="c_14One_uploaded">
+        </td>
+        <td class="upload-table-cell">
+          <img class="img-upload-sm" src="{{#if details.methods.c_14.files.c_14Files2}}{{details.methods.c_14.files.c_14Files2}}{{/if}}" id="c_14Two_uploaded">
+        </td>
+        <td class="upload-table-cell">
+          <img class="img-upload-sm" src="{{#if details.methods.c_14.files.c_14Files3}}{{details.methods.c_14.files.c_14Files3}}{{/if}}" id="c_14Three_uploaded">
+        </td>
+        <td class="upload-table-cell">
+          <img class="img-upload-sm" src="{{#if details.methods.c_14.files.c_14Files4}}{{details.methods.c_14.files.c_14Files4}}{{/if}}" id="c_14Four_uploaded">
+        </td>
+      </tr>
+
+
+      <tr class="noBorder">
+        <td class="upload-table-cell" id="c_14One-delete-container">
+          {{#if details.methods.c_14.files.c_14Files1_id}}
+            <a href="#" class="list-font btn btn-danger" id="c_14One_delete">DELETE</a>
+          {{/if}}
+        </td>
+        <td class="upload-table-cell" id="c_14Two-delete-container">
+          {{#if details.methods.c_14.files.c_14Files2_id}}
+            <a href="#" class="list-font btn btn-danger" id="c_14Two_delete">DELETE</a>
+          {{/if}}
+        </td>
+        <td class="upload-table-cell" id="c_14Three-delete-container">
+          {{#if details.methods.c_14.files.c_14Files3_id}}
+            <a href="#" class="list-font btn btn-danger" id="c_14Three_delete">DELETE</a>
+          {{/if}}
+        </td>
+        <td class="upload-table-cell" id="c_14Four-delete-container">
+          {{#if details.methods.c_14.files.c_14Files4_id}}
+            <a href="#" class="list-font btn btn-danger" id="c_14Four_delete">DELETE</a>
+          {{/if}}
+        </td>
+      </tr>
+
+
+    </table>
+  </div>
+
+      <div class="col-xs-12 col-sm-12 list-font align-center">
+        <br/>
+        <span id="c_14Files-delete-container">
+          {{#if details.methods.c_14.files.c_14Files5_id}}
+            <a href="#" class="list-font btn btn-danger" id="c_14File_delete">DELETE ADDITIONAL FILES</a>
+          {{/if}}
+        </span>
+        <br/>
+        <br/>
+        <span class="list-font new-file" id="c_14Files_name"></span>
+      </div>
+
+    </div>
+</template>

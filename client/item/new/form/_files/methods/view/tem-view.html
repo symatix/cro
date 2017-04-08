@@ -1,0 +1,102 @@
+<template name="form_files_tem_visual">
+    <div class="row visual-data">
+
+
+
+    <div class="col-xs-12 align-center">
+
+      <table border="0" cellspacing="0" cellpadding="0" class="table table-condensed list-font">
+
+      <tr class="noBorder">
+        <td class="upload-table-cell" id="temOne_title">
+            {{#if details.methods.tem.files.temFiles1_id}}
+              Picture one
+            {{/if}}
+        </td>
+        <td class="upload-table-cell" id="temTwo_title">
+            {{#if details.methods.tem.files.temFiles2_id}}
+              Picture two
+            {{/if}}
+        </td>
+        <td class="upload-table-cell" id="temThree_title">
+            {{#if details.methods.tem.files.temFiles3_id}}
+              Picture three
+            {{/if}}
+        </td>
+        <td class="upload-table-cell" id="temFour_title">
+            {{#if details.methods.tem.files.temFiles4_id}}
+              Picture four
+            {{/if}}
+        </td>
+      </tr>
+
+
+      <tr class="noBorder new-file">
+        <td class="upload-table-cell" id="temOne_name">
+        </td>
+        <td class="upload-table-cell" id="temTwo_name">
+        </td>
+        <td class="upload-table-cell" id="temThree_name">
+        </td>
+        <td class="upload-table-cell" id="temFour_name">
+        </td>
+      </tr>
+
+
+      <tr class="noBorder">
+        <td class="upload-table-cell">
+          <img class="img-upload-sm" src="{{#if details.methods.tem.files.temFiles1}}{{details.methods.tem.files.temFiles1}}{{/if}}" id="temOne_uploaded">
+        </td>
+        <td class="upload-table-cell">
+          <img class="img-upload-sm" src="{{#if details.methods.tem.files.temFiles2}}{{details.methods.tem.files.temFiles2}}{{/if}}" id="temTwo_uploaded">
+        </td>
+        <td class="upload-table-cell">
+          <img class="img-upload-sm" src="{{#if details.methods.tem.files.temFiles3}}{{details.methods.tem.files.temFiles3}}{{/if}}" id="temThree_uploaded">
+        </td>
+        <td class="upload-table-cell">
+          <img class="img-upload-sm" src="{{#if details.methods.tem.files.temFiles4}}{{details.methods.tem.files.temFiles4}}{{/if}}" id="temFour_uploaded">
+        </td>
+      </tr>
+
+
+      <tr class="noBorder">
+        <td class="upload-table-cell" id="temOne-delete-container">
+          {{#if details.methods.tem.files.temFiles1_id}}
+            <a href="#" class="list-font btn btn-danger" id="temOne_delete">DELETE</a>
+          {{/if}}
+        </td>
+        <td class="upload-table-cell" id="temTwo-delete-container">
+          {{#if details.methods.tem.files.temFiles2_id}}
+            <a href="#" class="list-font btn btn-danger" id="temTwo_delete">DELETE</a>
+          {{/if}}
+        </td>
+        <td class="upload-table-cell" id="temThree-delete-container">
+          {{#if details.methods.tem.files.temFiles3_id}}
+            <a href="#" class="list-font btn btn-danger" id="temThree_delete">DELETE</a>
+          {{/if}}
+        </td>
+        <td class="upload-table-cell" id="temFour-delete-container">
+          {{#if details.methods.tem.files.temFiles4_id}}
+            <a href="#" class="list-font btn btn-danger" id="temFour_delete">DELETE</a>
+          {{/if}}
+        </td>
+      </tr>
+
+
+    </table>
+  </div>
+
+      <div class="col-xs-12 col-sm-12 list-font align-center">
+        <br/>
+        <span id="temFiles-delete-container">
+          {{#if details.methods.tem.files.temFiles5_id}}
+            <a href="#" class="list-font btn btn-danger" id="temFile_delete">DELETE ADDITIONAL FILES</a>
+          {{/if}}
+        </span>
+        <br/>
+        <br/>
+        <span class="list-font new-file" id="temFiles_name"></span>
+      </div>
+
+    </div>
+</template>

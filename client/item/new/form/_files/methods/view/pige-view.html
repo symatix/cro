@@ -1,0 +1,102 @@
+<template name="form_files_pige_visual">
+    <div class="row visual-data">
+
+
+
+    <div class="col-xs-12 align-center">
+
+      <table border="0" cellspacing="0" cellpadding="0" class="table table-condensed list-font">
+
+      <tr class="noBorder">
+        <td class="upload-table-cell" id="pigeOne_title">
+            {{#if details.methods.pige.files.pigeFiles1_id}}
+              Picture one
+            {{/if}}
+        </td>
+        <td class="upload-table-cell" id="pigeTwo_title">
+            {{#if details.methods.pige.files.pigeFiles2_id}}
+              Picture two
+            {{/if}}
+        </td>
+        <td class="upload-table-cell" id="pigeThree_title">
+            {{#if details.methods.pige.files.pigeFiles3_id}}
+              Picture three
+            {{/if}}
+        </td>
+        <td class="upload-table-cell" id="pigeFour_title">
+            {{#if details.methods.pige.files.pigeFiles4_id}}
+              Picture four
+            {{/if}}
+        </td>
+      </tr>
+
+
+      <tr class="noBorder new-file">
+        <td class="upload-table-cell" id="pigeOne_name">
+        </td>
+        <td class="upload-table-cell" id="pigeTwo_name">
+        </td>
+        <td class="upload-table-cell" id="pigeThree_name">
+        </td>
+        <td class="upload-table-cell" id="pigeFour_name">
+        </td>
+      </tr>
+
+
+      <tr class="noBorder">
+        <td class="upload-table-cell">
+          <img class="img-upload-sm" src="{{#if details.methods.pige.files.pigeFiles1}}{{details.methods.pige.files.pigeFiles1}}{{/if}}" id="pigeOne_uploaded">
+        </td>
+        <td class="upload-table-cell">
+          <img class="img-upload-sm" src="{{#if details.methods.pige.files.pigeFiles2}}{{details.methods.pige.files.pigeFiles2}}{{/if}}" id="pigeTwo_uploaded">
+        </td>
+        <td class="upload-table-cell">
+          <img class="img-upload-sm" src="{{#if details.methods.pige.files.pigeFiles3}}{{details.methods.pige.files.pigeFiles3}}{{/if}}" id="pigeThree_uploaded">
+        </td>
+        <td class="upload-table-cell">
+          <img class="img-upload-sm" src="{{#if details.methods.pige.files.pigeFiles4}}{{details.methods.pige.files.pigeFiles4}}{{/if}}" id="pigeFour_uploaded">
+        </td>
+      </tr>
+
+
+      <tr class="noBorder">
+        <td class="upload-table-cell" id="pigeOne-delete-container">
+          {{#if details.methods.pige.files.pigeFiles1_id}}
+            <a href="#" class="list-font btn btn-danger" id="pigeOne_delete">DELETE</a>
+          {{/if}}
+        </td>
+        <td class="upload-table-cell" id="pigeTwo-delete-container">
+          {{#if details.methods.pige.files.pigeFiles2_id}}
+            <a href="#" class="list-font btn btn-danger" id="pigeTwo_delete">DELETE</a>
+          {{/if}}
+        </td>
+        <td class="upload-table-cell" id="pigeThree-delete-container">
+          {{#if details.methods.pige.files.pigeFiles3_id}}
+            <a href="#" class="list-font btn btn-danger" id="pigeThree_delete">DELETE</a>
+          {{/if}}
+        </td>
+        <td class="upload-table-cell" id="pigeFour-delete-container">
+          {{#if details.methods.pige.files.pigeFiles4_id}}
+            <a href="#" class="list-font btn btn-danger" id="pigeFour_delete">DELETE</a>
+          {{/if}}
+        </td>
+      </tr>
+
+
+    </table>
+  </div>
+
+      <div class="col-xs-12 col-sm-12 list-font align-center">
+        <br/>
+        <span id="pigeFiles-delete-container">
+          {{#if details.methods.pige.files.pigeFiles5_id}}
+            <a href="#" class="list-font btn btn-danger" id="pigeFile_delete">DELETE ADDITIONAL FILES</a>
+          {{/if}}
+        </span>
+        <br/>
+        <br/>
+        <span class="list-font new-file" id="pigeFiles_name"></span>
+      </div>
+
+    </div>
+</template>

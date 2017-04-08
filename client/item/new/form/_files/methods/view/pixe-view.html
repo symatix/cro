@@ -1,0 +1,102 @@
+<template name="form_files_pixe_visual">
+    <div class="row visual-data">
+
+
+
+    <div class="col-xs-12 align-center">
+
+      <table border="0" cellspacing="0" cellpadding="0" class="table table-condensed list-font">
+
+      <tr class="noBorder">
+        <td class="upload-table-cell" id="pixeOne_title">
+            {{#if details.methods.pixe.files.pixeFiles1_id}}
+              Picture one
+            {{/if}}
+        </td>
+        <td class="upload-table-cell" id="pixeTwo_title">
+            {{#if details.methods.pixe.files.pixeFiles2_id}}
+              Picture two
+            {{/if}}
+        </td>
+        <td class="upload-table-cell" id="pixeThree_title">
+            {{#if details.methods.pixe.files.pixeFiles3_id}}
+              Picture three
+            {{/if}}
+        </td>
+        <td class="upload-table-cell" id="pixeFour_title">
+            {{#if details.methods.pixe.files.pixeFiles4_id}}
+              Picture four
+            {{/if}}
+        </td>
+      </tr>
+
+
+      <tr class="noBorder new-file">
+        <td class="upload-table-cell" id="pixeOne_name">
+        </td>
+        <td class="upload-table-cell" id="pixeTwo_name">
+        </td>
+        <td class="upload-table-cell" id="pixeThree_name">
+        </td>
+        <td class="upload-table-cell" id="pixeFour_name">
+        </td>
+      </tr>
+
+
+      <tr class="noBorder">
+        <td class="upload-table-cell">
+          <img class="img-upload-sm" src="{{#if details.methods.pixe.files.pixeFiles1}}{{details.methods.pixe.files.pixeFiles1}}{{/if}}" id="pixeOne_uploaded">
+        </td>
+        <td class="upload-table-cell">
+          <img class="img-upload-sm" src="{{#if details.methods.pixe.files.pixeFiles2}}{{details.methods.pixe.files.pixeFiles2}}{{/if}}" id="pixeTwo_uploaded">
+        </td>
+        <td class="upload-table-cell">
+          <img class="img-upload-sm" src="{{#if details.methods.pixe.files.pixeFiles3}}{{details.methods.pixe.files.pixeFiles3}}{{/if}}" id="pixeThree_uploaded">
+        </td>
+        <td class="upload-table-cell">
+          <img class="img-upload-sm" src="{{#if details.methods.pixe.files.pixeFiles4}}{{details.methods.pixe.files.pixeFiles4}}{{/if}}" id="pixeFour_uploaded">
+        </td>
+      </tr>
+
+
+      <tr class="noBorder">
+        <td class="upload-table-cell" id="pixeOne-delete-container">
+          {{#if details.methods.pixe.files.pixeFiles1_id}}
+            <a href="#" class="list-font btn btn-danger" id="pixeOne_delete">DELETE</a>
+          {{/if}}
+        </td>
+        <td class="upload-table-cell" id="pixeTwo-delete-container">
+          {{#if details.methods.pixe.files.pixeFiles2_id}}
+            <a href="#" class="list-font btn btn-danger" id="pixeTwo_delete">DELETE</a>
+          {{/if}}
+        </td>
+        <td class="upload-table-cell" id="pixeThree-delete-container">
+          {{#if details.methods.pixe.files.pixeFiles3_id}}
+            <a href="#" class="list-font btn btn-danger" id="pixeThree_delete">DELETE</a>
+          {{/if}}
+        </td>
+        <td class="upload-table-cell" id="pixeFour-delete-container">
+          {{#if details.methods.pixe.files.pixeFiles4_id}}
+            <a href="#" class="list-font btn btn-danger" id="pixeFour_delete">DELETE</a>
+          {{/if}}
+        </td>
+      </tr>
+
+
+    </table>
+  </div>
+
+      <div class="col-xs-12 col-sm-12 list-font align-center">
+        <br/>
+        <span id="pixeFiles-delete-container">
+          {{#if details.methods.pixe.files.pixeFiles5_id}}
+            <a href="#" class="list-font btn btn-danger" id="pixeFile_delete">DELETE ADDITIONAL FILES</a>
+          {{/if}}
+        </span>
+        <br/>
+        <br/>
+        <span class="list-font new-file" id="pixeFiles_name"></span>
+      </div>
+
+    </div>
+</template>

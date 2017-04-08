@@ -1,0 +1,102 @@
+<template name="form_files_uv_vis_visual">
+    <div class="row visual-data">
+
+
+
+    <div class="col-xs-12 align-center">
+
+      <table border="0" cellspacing="0" cellpadding="0" class="table table-condensed list-font">
+
+      <tr class="noBorder">
+        <td class="upload-table-cell" id="uv_visOne_title">
+            {{#if details.methods.uv_vis.files.uv_visFiles1_id}}
+              Picture one
+            {{/if}}
+        </td>
+        <td class="upload-table-cell" id="uv_visTwo_title">
+            {{#if details.methods.uv_vis.files.uv_visFiles2_id}}
+              Picture two
+            {{/if}}
+        </td>
+        <td class="upload-table-cell" id="uv_visThree_title">
+            {{#if details.methods.uv_vis.files.uv_visFiles3_id}}
+              Picture three
+            {{/if}}
+        </td>
+        <td class="upload-table-cell" id="uv_visFour_title">
+            {{#if details.methods.uv_vis.files.uv_visFiles4_id}}
+              Picture four
+            {{/if}}
+        </td>
+      </tr>
+
+
+      <tr class="noBorder new-file">
+        <td class="upload-table-cell" id="uv_visOne_name">
+        </td>
+        <td class="upload-table-cell" id="uv_visTwo_name">
+        </td>
+        <td class="upload-table-cell" id="uv_visThree_name">
+        </td>
+        <td class="upload-table-cell" id="uv_visFour_name">
+        </td>
+      </tr>
+
+
+      <tr class="noBorder">
+        <td class="upload-table-cell">
+          <img class="img-upload-sm" src="{{#if details.methods.uv_vis.files.uv_visFiles1}}{{details.methods.uv_vis.files.uv_visFiles1}}{{/if}}" id="uv_visOne_uploaded">
+        </td>
+        <td class="upload-table-cell">
+          <img class="img-upload-sm" src="{{#if details.methods.uv_vis.files.uv_visFiles2}}{{details.methods.uv_vis.files.uv_visFiles2}}{{/if}}" id="uv_visTwo_uploaded">
+        </td>
+        <td class="upload-table-cell">
+          <img class="img-upload-sm" src="{{#if details.methods.uv_vis.files.uv_visFiles3}}{{details.methods.uv_vis.files.uv_visFiles3}}{{/if}}" id="uv_visThree_uploaded">
+        </td>
+        <td class="upload-table-cell">
+          <img class="img-upload-sm" src="{{#if details.methods.uv_vis.files.uv_visFiles4}}{{details.methods.uv_vis.files.uv_visFiles4}}{{/if}}" id="uv_visFour_uploaded">
+        </td>
+      </tr>
+
+
+      <tr class="noBorder">
+        <td class="upload-table-cell" id="uv_visOne-delete-container">
+          {{#if details.methods.uv_vis.files.uv_visFiles1_id}}
+            <a href="#" class="list-font btn btn-danger" id="uv_visOne_delete">DELETE</a>
+          {{/if}}
+        </td>
+        <td class="upload-table-cell" id="uv_visTwo-delete-container">
+          {{#if details.methods.uv_vis.files.uv_visFiles2_id}}
+            <a href="#" class="list-font btn btn-danger" id="uv_visTwo_delete">DELETE</a>
+          {{/if}}
+        </td>
+        <td class="upload-table-cell" id="uv_visThree-delete-container">
+          {{#if details.methods.uv_vis.files.uv_visFiles3_id}}
+            <a href="#" class="list-font btn btn-danger" id="uv_visThree_delete">DELETE</a>
+          {{/if}}
+        </td>
+        <td class="upload-table-cell" id="uv_visFour-delete-container">
+          {{#if details.methods.uv_vis.files.uv_visFiles4_id}}
+            <a href="#" class="list-font btn btn-danger" id="uv_visFour_delete">DELETE</a>
+          {{/if}}
+        </td>
+      </tr>
+
+
+    </table>
+  </div>
+
+      <div class="col-xs-12 col-sm-12 list-font align-center">
+        <br/>
+        <span id="uv_visFiles-delete-container">
+          {{#if details.methods.uv_vis.files.uv_visFiles5_id}}
+            <a href="#" class="list-font btn btn-danger" id="uv_visFile_delete">DELETE ADDITIONAL FILES</a>
+          {{/if}}
+        </span>
+        <br/>
+        <br/>
+        <span class="list-font new-file" id="uv_visFiles_name"></span>
+      </div>
+
+    </div>
+</template>

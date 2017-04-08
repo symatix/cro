@@ -1,6 +1,6 @@
 Template.nav_scrollspy_affix.helpers({
   notPigment:function(){
-    if (Session.get("showPicture") || Session.get("showSculpture") || Session.get("showSample") || Session.get("showOther")){
+    if (Session.get("showPainting") || Session.get("showSculpture") || Session.get("showSample") || Session.get("showOther")){
       return true;
     } else {
       return false;

@@ -1,0 +1,102 @@
+<template name="form_files_original_visual">
+    <div class="row visual-data">
+
+
+
+    <div class="col-xs-12 align-center">
+
+      <table border="0" cellspacing="0" cellpadding="0" class="table table-condensed list-font">
+
+      <tr class="noBorder">
+        <td class="upload-table-cell" id="originalOne_title">
+            {{#if data.original.photoOne_id}}
+              Picture one
+            {{/if}}
+        </td>
+        <td class="upload-table-cell" id="originalTwo_title">
+            {{#if data.original.photoTwo_id}}
+              Picture two
+            {{/if}}
+        </td>
+        <td class="upload-table-cell" id="originalThree_title">
+            {{#if data.original.photoThree_id}}
+              Picture three
+            {{/if}}
+        </td>
+        <td class="upload-table-cell" id="originalFour_title">
+            {{#if data.original.photoFour_id}}
+              Picture four
+            {{/if}}
+        </td>
+      </tr>
+
+
+      <tr class="noBorder new-file">
+        <td class="upload-table-cell" id="originalOne_name">
+        </td>
+        <td class="upload-table-cell" id="originalTwo_name">
+        </td>
+        <td class="upload-table-cell" id="originalThree_name">
+        </td>
+        <td class="upload-table-cell" id="originalFour_name">
+        </td>
+      </tr>
+
+
+      <tr class="noBorder">
+        <td class="upload-table-cell">
+          <img class="img-upload-sm" src="{{#if data.original.photoOne}}{{data.original.photoOne}}{{/if}}" id="originalOne_uploaded">
+        </td>
+        <td class="upload-table-cell">
+          <img class="img-upload-sm" src="{{#if data.original.photoTwo}}{{data.original.photoTwo}}{{/if}}" id="originalTwo_uploaded">
+        </td>
+        <td class="upload-table-cell">
+          <img class="img-upload-sm" src="{{#if data.original.photoThree}}{{data.original.photoThree}}{{/if}}" id="originalThree_uploaded">
+        </td>
+        <td class="upload-table-cell">
+          <img class="img-upload-sm" src="{{#if data.original.photoFour}}{{data.original.photoFour}}{{/if}}" id="originalFour_uploaded">
+        </td>
+      </tr>
+
+
+      <tr class="noBorder">
+        <td class="upload-table-cell" id="originalOne-delete-container">
+          {{#if data.original.photoOne_id}}
+            <a href="#" class="list-font btn btn-danger" id="originalOne_delete">DELETE</a>
+          {{/if}}
+        </td>
+        <td class="upload-table-cell" id="originalTwo-delete-container">
+          {{#if data.original.photoTwo_id}}
+            <a href="#" class="list-font btn btn-danger" id="originalTwo_delete">DELETE</a>
+          {{/if}}
+        </td>
+        <td class="upload-table-cell" id="originalThree-delete-container">
+          {{#if data.original.photoThree_id}}
+            <a href="#" class="list-font btn btn-danger" id="originalThree_delete">DELETE</a>
+          {{/if}}
+        </td>
+        <td class="upload-table-cell" id="originalFour-delete-container">
+          {{#if data.original.photoFour_id}}
+            <a href="#" class="list-font btn btn-danger" id="originalFour_delete">DELETE</a>
+          {{/if}}
+        </td>
+      </tr>
+
+
+    </table>
+  </div>
+
+      <div class="col-xs-12 col-sm-12 list-font align-center">
+        <br/>
+        <span id="originalFiles-delete-container">
+          {{#if data.original.files_id}}
+            <a href="#" class="list-font btn btn-danger" id="originalFile_delete">DELETE ADDITIONAL FILES</a>
+          {{/if}}
+        </span>
+        <br/>
+        <br/>
+        <span class="list-font new-file" id="originalFiles_name"></span>
+      </div>
+
+    </div>
+</template>

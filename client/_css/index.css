@@ -688,6 +688,14 @@ button, .btn-submit:focus{
   border-radius:5px;
   max-width:220px;
 }
+.user-full-details{
+  margin-left:15px;
+  padding-top:8px;
+  color:#ffffff !important;
+  background:rgba(0,0,0,0.5);
+  min-height:75px;
+  border-radius:5px;
+}
 .admin-stats{
   margin-left:15px;
   padding-top:8px;
@@ -1022,6 +1030,9 @@ textarea #sources1{
 .btn-login{
   width:300px !important;
 }
+.btn-forgotPassword{
+  width:200px !important;
+}
 .affix-size{
   min-width:105px;
   display:block;
@@ -1041,6 +1052,9 @@ input.checkbox-input{
   top:2px;
   left:-15px;
   display:inline-block;
+}
+input.userEmail{
+  width:65%;
 }
 .form-select{
   background-color:rgba(0,0,0,0.8);

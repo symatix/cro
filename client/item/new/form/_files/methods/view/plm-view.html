@@ -1,0 +1,102 @@
+<template name="form_files_plm_visual">
+    <div class="row visual-data">
+
+
+
+    <div class="col-xs-12 align-center">
+
+      <table border="0" cellspacing="0" cellpadding="0" class="table table-condensed list-font">
+
+      <tr class="noBorder">
+        <td class="upload-table-cell" id="plmOne_title">
+            {{#if details.methods.plm.files.plmFiles1_id}}
+              Picture one
+            {{/if}}
+        </td>
+        <td class="upload-table-cell" id="plmTwo_title">
+            {{#if details.methods.plm.files.plmFiles2_id}}
+              Picture two
+            {{/if}}
+        </td>
+        <td class="upload-table-cell" id="plmThree_title">
+            {{#if details.methods.plm.files.plmFiles3_id}}
+              Picture three
+            {{/if}}
+        </td>
+        <td class="upload-table-cell" id="plmFour_title">
+            {{#if details.methods.plm.files.plmFiles4_id}}
+              Picture four
+            {{/if}}
+        </td>
+      </tr>
+
+
+      <tr class="noBorder new-file">
+        <td class="upload-table-cell" id="plmOne_name">
+        </td>
+        <td class="upload-table-cell" id="plmTwo_name">
+        </td>
+        <td class="upload-table-cell" id="plmThree_name">
+        </td>
+        <td class="upload-table-cell" id="plmFour_name">
+        </td>
+      </tr>
+
+
+      <tr class="noBorder">
+        <td class="upload-table-cell">
+          <img class="img-upload-sm" src="{{#if details.methods.plm.files.plmFiles1}}{{details.methods.plm.files.plmFiles1}}{{/if}}" id="plmOne_uploaded">
+        </td>
+        <td class="upload-table-cell">
+          <img class="img-upload-sm" src="{{#if details.methods.plm.files.plmFiles2}}{{details.methods.plm.files.plmFiles2}}{{/if}}" id="plmTwo_uploaded">
+        </td>
+        <td class="upload-table-cell">
+          <img class="img-upload-sm" src="{{#if details.methods.plm.files.plmFiles3}}{{details.methods.plm.files.plmFiles3}}{{/if}}" id="plmThree_uploaded">
+        </td>
+        <td class="upload-table-cell">
+          <img class="img-upload-sm" src="{{#if details.methods.plm.files.plmFiles4}}{{details.methods.plm.files.plmFiles4}}{{/if}}" id="plmFour_uploaded">
+        </td>
+      </tr>
+
+
+      <tr class="noBorder">
+        <td class="upload-table-cell" id="plmOne-delete-container">
+          {{#if details.methods.plm.files.plmFiles1_id}}
+            <a href="#" class="list-font btn btn-danger" id="plmOne_delete">DELETE</a>
+          {{/if}}
+        </td>
+        <td class="upload-table-cell" id="plmTwo-delete-container">
+          {{#if details.methods.plm.files.plmFiles2_id}}
+            <a href="#" class="list-font btn btn-danger" id="plmTwo_delete">DELETE</a>
+          {{/if}}
+        </td>
+        <td class="upload-table-cell" id="plmThree-delete-container">
+          {{#if details.methods.plm.files.plmFiles3_id}}
+            <a href="#" class="list-font btn btn-danger" id="plmThree_delete">DELETE</a>
+          {{/if}}
+        </td>
+        <td class="upload-table-cell" id="plmFour-delete-container">
+          {{#if details.methods.plm.files.plmFiles4_id}}
+            <a href="#" class="list-font btn btn-danger" id="plmFour_delete">DELETE</a>
+          {{/if}}
+        </td>
+      </tr>
+
+
+    </table>
+  </div>
+
+      <div class="col-xs-12 col-sm-12 list-font align-center">
+        <br/>
+        <span id="plmFiles-delete-container">
+          {{#if details.methods.plm.files.plmFiles5_id}}
+            <a href="#" class="list-font btn btn-danger" id="plmFile_delete">DELETE ADDITIONAL FILES</a>
+          {{/if}}
+        </span>
+        <br/>
+        <br/>
+        <span class="list-font new-file" id="plmFiles_name"></span>
+      </div>
+
+    </div>
+</template>

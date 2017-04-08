@@ -1,0 +1,102 @@
+<template name="form_files_xrf_visual">
+    <div class="row visual-data">
+
+
+
+    <div class="col-xs-12 align-center">
+
+      <table border="0" cellspacing="0" cellpadding="0" class="table table-condensed list-font">
+
+      <tr class="noBorder">
+        <td class="upload-table-cell" id="xrfOne_title">
+            {{#if details.methods.xrf.files.xrfFiles1_id}}
+              Picture one
+            {{/if}}
+        </td>
+        <td class="upload-table-cell" id="xrfTwo_title">
+            {{#if details.methods.xrf.files.xrfFiles2_id}}
+              Picture two
+            {{/if}}
+        </td>
+        <td class="upload-table-cell" id="xrfThree_title">
+            {{#if details.methods.xrf.files.xrfFiles3_id}}
+              Picture three
+            {{/if}}
+        </td>
+        <td class="upload-table-cell" id="xrfFour_title">
+            {{#if details.methods.xrf.files.xrfFiles4_id}}
+              Picture four
+            {{/if}}
+        </td>
+      </tr>
+
+
+      <tr class="noBorder new-file">
+        <td class="upload-table-cell" id="xrfOne_name">
+        </td>
+        <td class="upload-table-cell" id="xrfTwo_name">
+        </td>
+        <td class="upload-table-cell" id="xrfThree_name">
+        </td>
+        <td class="upload-table-cell" id="xrfFour_name">
+        </td>
+      </tr>
+
+
+      <tr class="noBorder">
+        <td class="upload-table-cell">
+          <img class="img-upload-sm" src="{{#if details.methods.xrf.files.xrfFiles1}}{{details.methods.xrf.files.xrfFiles1}}{{/if}}" id="xrfOne_uploaded">
+        </td>
+        <td class="upload-table-cell">
+          <img class="img-upload-sm" src="{{#if details.methods.xrf.files.xrfFiles2}}{{details.methods.xrf.files.xrfFiles2}}{{/if}}" id="xrfTwo_uploaded">
+        </td>
+        <td class="upload-table-cell">
+          <img class="img-upload-sm" src="{{#if details.methods.xrf.files.xrfFiles3}}{{details.methods.xrf.files.xrfFiles3}}{{/if}}" id="xrfThree_uploaded">
+        </td>
+        <td class="upload-table-cell">
+          <img class="img-upload-sm" src="{{#if details.methods.xrf.files.xrfFiles4}}{{details.methods.xrf.files.xrfFiles4}}{{/if}}" id="xrfFour_uploaded">
+        </td>
+      </tr>
+
+
+      <tr class="noBorder">
+        <td class="upload-table-cell" id="xrfOne-delete-container">
+          {{#if details.methods.xrf.files.xrfFiles1_id}}
+            <a href="#" class="list-font btn btn-danger" id="xrfOne_delete">DELETE</a>
+          {{/if}}
+        </td>
+        <td class="upload-table-cell" id="xrfTwo-delete-container">
+          {{#if details.methods.xrf.files.xrfFiles2_id}}
+            <a href="#" class="list-font btn btn-danger" id="xrfTwo_delete">DELETE</a>
+          {{/if}}
+        </td>
+        <td class="upload-table-cell" id="xrfThree-delete-container">
+          {{#if details.methods.xrf.files.xrfFiles3_id}}
+            <a href="#" class="list-font btn btn-danger" id="xrfThree_delete">DELETE</a>
+          {{/if}}
+        </td>
+        <td class="upload-table-cell" id="xrfFour-delete-container">
+          {{#if details.methods.xrf.files.xrfFiles4_id}}
+            <a href="#" class="list-font btn btn-danger" id="xrfFour_delete">DELETE</a>
+          {{/if}}
+        </td>
+      </tr>
+
+
+    </table>
+  </div>
+
+      <div class="col-xs-12 col-sm-12 list-font align-center">
+        <br/>
+        <span id="xrfFiles-delete-container">
+          {{#if details.methods.xrf.files.xrfFiles5_id}}
+            <a href="#" class="list-font btn btn-danger" id="xrfFile_delete">DELETE ADDITIONAL FILES</a>
+          {{/if}}
+        </span>
+        <br/>
+        <br/>
+        <span class="list-font new-file" id="xrfFiles_name"></span>
+      </div>
+
+    </div>
+</template>

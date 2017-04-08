@@ -20,6 +20,17 @@ Template.login.events({
           Router.go("/");
           }
         });
+    },
+    'click #sendUserData':function(event){
+      event.preventDefault();
+      var email = $('[name=userEmail]').val();
+      Meteor.call("forgotPasswordRequest",email, function(error, result){
+        if (!result){
+          alert("No user with "+email+" email found!");
+        } else {
+          alert("Email with login details sent to "+email);S
+        }
+      });
     }
 });
 

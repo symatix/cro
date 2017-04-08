@@ -1,0 +1,102 @@
+<template name="form_files_synchrotron_visual">
+    <div class="row visual-data">
+
+
+
+    <div class="col-xs-12 align-center">
+
+      <table border="0" cellspacing="0" cellpadding="0" class="table table-condensed list-font">
+
+      <tr class="noBorder">
+        <td class="upload-table-cell" id="synchrotronOne_title">
+            {{#if details.methods.synchrotron.files.synchrotronFiles1_id}}
+              Picture one
+            {{/if}}
+        </td>
+        <td class="upload-table-cell" id="synchrotronTwo_title">
+            {{#if details.methods.synchrotron.files.synchrotronFiles2_id}}
+              Picture two
+            {{/if}}
+        </td>
+        <td class="upload-table-cell" id="synchrotronThree_title">
+            {{#if details.methods.synchrotron.files.synchrotronFiles3_id}}
+              Picture three
+            {{/if}}
+        </td>
+        <td class="upload-table-cell" id="synchrotronFour_title">
+            {{#if details.methods.synchrotron.files.synchrotronFiles4_id}}
+              Picture four
+            {{/if}}
+        </td>
+      </tr>
+
+
+      <tr class="noBorder new-file">
+        <td class="upload-table-cell" id="synchrotronOne_name">
+        </td>
+        <td class="upload-table-cell" id="synchrotronTwo_name">
+        </td>
+        <td class="upload-table-cell" id="synchrotronThree_name">
+        </td>
+        <td class="upload-table-cell" id="synchrotronFour_name">
+        </td>
+      </tr>
+
+
+      <tr class="noBorder">
+        <td class="upload-table-cell">
+          <img class="img-upload-sm" src="{{#if details.methods.synchrotron.files.synchrotronFiles1}}{{details.methods.synchrotron.files.synchrotronFiles1}}{{/if}}" id="synchrotronOne_uploaded">
+        </td>
+        <td class="upload-table-cell">
+          <img class="img-upload-sm" src="{{#if details.methods.synchrotron.files.synchrotronFiles2}}{{details.methods.synchrotron.files.synchrotronFiles2}}{{/if}}" id="synchrotronTwo_uploaded">
+        </td>
+        <td class="upload-table-cell">
+          <img class="img-upload-sm" src="{{#if details.methods.synchrotron.files.synchrotronFiles3}}{{details.methods.synchrotron.files.synchrotronFiles3}}{{/if}}" id="synchrotronThree_uploaded">
+        </td>
+        <td class="upload-table-cell">
+          <img class="img-upload-sm" src="{{#if details.methods.synchrotron.files.synchrotronFiles4}}{{details.methods.synchrotron.files.synchrotronFiles4}}{{/if}}" id="synchrotronFour_uploaded">
+        </td>
+      </tr>
+
+
+      <tr class="noBorder">
+        <td class="upload-table-cell" id="synchrotronOne-delete-container">
+          {{#if details.methods.synchrotron.files.synchrotronFiles1_id}}
+            <a href="#" class="list-font btn btn-danger" id="synchrotronOne_delete">DELETE</a>
+          {{/if}}
+        </td>
+        <td class="upload-table-cell" id="synchrotronTwo-delete-container">
+          {{#if details.methods.synchrotron.files.synchrotronFiles2_id}}
+            <a href="#" class="list-font btn btn-danger" id="synchrotronTwo_delete">DELETE</a>
+          {{/if}}
+        </td>
+        <td class="upload-table-cell" id="synchrotronThree-delete-container">
+          {{#if details.methods.synchrotron.files.synchrotronFiles3_id}}
+            <a href="#" class="list-font btn btn-danger" id="synchrotronThree_delete">DELETE</a>
+          {{/if}}
+        </td>
+        <td class="upload-table-cell" id="synchrotronFour-delete-container">
+          {{#if details.methods.synchrotron.files.synchrotronFiles4_id}}
+            <a href="#" class="list-font btn btn-danger" id="synchrotronFour_delete">DELETE</a>
+          {{/if}}
+        </td>
+      </tr>
+
+
+    </table>
+  </div>
+
+      <div class="col-xs-12 col-sm-12 list-font align-center">
+        <br/>
+        <span id="synchrotronFiles-delete-container">
+          {{#if details.methods.synchrotron.files.synchrotronFiles5_id}}
+            <a href="#" class="list-font btn btn-danger" id="synchrotronFile_delete">DELETE ADDITIONAL FILES</a>
+          {{/if}}
+        </span>
+        <br/>
+        <br/>
+        <span class="list-font new-file" id="synchrotronFiles_name"></span>
+      </div>
+
+    </div>
+</template>

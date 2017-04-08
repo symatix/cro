@@ -1,165 +1,374 @@
 Template.files_methods_pige.events({
+  ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+  'click #pigeOne_delete':function(event){
+    event.preventDefault();
+    var id = document.getElementById("pigeFiles1_id").value;
+    Data.remove(id);
+    //reset eeeveryyyythiiiinnnng
+    $("#pigeFiles1").val('');
+    $("#pigeFiles1_id").val('');
+    document.getElementById("pigeOne_name").innerHTML = "";
+    document.getElementById("pigeOne_title").innerHTML = "";
+    $("#pigeOne_uploaded").attr("src","");
+    $("#pigeOne_delete").remove();
+  },
   'change #pigeFiles1_label': function(event, template) {
     event.preventDefault();
+
       FS.Utility.eachFile(event, function(file) {
-        var pigeFiles1 = $("#pigeFiles1").val();
-        var noValue = "";
-        if(pigeFiles1 != noValue){
-          console.log("nema dzabe ni u stare babe")
-          Data.remove(Session.get("pigeFiles1_id"));
+
+        var imgId = document.getElementById("pigeFiles1_id").value;
+        if(imgId){
+          Data.remove(imgId);
+          //reset eeeveryyyythiiiinnnng
+          $("#pigeFiles1").val('');
+          $("#pigeFiles1_id").val('');
+          document.getElementById("pigeOne_name").innerHTML = "";
+          document.getElementById("pigeOne_title").innerHTML = "";
+          $("#pigeOne_uploaded").attr("src","");
+          $("#pigeOne_delete").remove();
         }
+
         Data.insert(file, function (err, fileObj) {
           if (err){
              console.log("hendlam eror - "+err);
           } else {
-             // grabbing url and placing it for gallery img_front value
-            var pigeFiles1 = "/cfs/files/data/" + fileObj._id +"/data?store=data";
-            var pigeFiles1Id = fileObj._id;
 
-            var fullPath = document.getElementById("pigeFiles1_label").value; //jquery a "no go" lol
-            if (fullPath) {
-                var startIndex = (fullPath.indexOf('\\') >= 0 ? fullPath.lastIndexOf('\\') : fullPath.lastIndexOf('/'));
-                var filename = fullPath.substring(startIndex);
-                if (filename.indexOf('\\') === 0 || filename.indexOf('/') === 0) {
-                    filename = filename.substring(1);
+             // grabbing url and placing it for gallery img_front value
+            var photoOne = "/cfs/files/data/" + fileObj._id +"/data?store=data";
+            var photoOneId = fileObj._id;
+            $("#pigeFiles1").val(photoOne);
+            $("#pigeFiles1_id").val(photoOneId);
+            Session.set("pigeFiles1_id", photoOneId);
+            document.getElementById("pigeOne_title").innerHTML = "status: uploading"; 
+
+            // track progress of upload
+            $("#pigeOne_name").append('<div class="progress"><div class="progress-bar progress-bar-custom" id="pigeOne_progress" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width:0%;"></div></div>');
+            var progress = setInterval(function () {
+                            var result = fileObj.uploadProgress();
+                            if( fileObj.uploadProgress() === 100 
+                                && fileObj.hasStored('data') ) {  
+                                clearInterval(progress);
+                                $("#pigeOne_progress").remove();
+                            }
+                            console.log(result);
+                            $("#pigeOne_progress").attr("aria-valuenow",result).css("width",result+"%");
+                        }, 100);
+
+
+            // wait for upload to finish than display img
+            Data.find(fileObj._id).observe({
+              changed: function(file, oldFile) {
+                if (file.url() !== null) { // waiting for unFinished callback
+                  var url = file.url();
+                  var name = file.name();
+
+                  document.getElementById("pigeOne_title").innerHTML = "Picture one";
+                  document.getElementById("pigeOne_name").innerHTML = "new";
+                  $("#pigeOne_uploaded").attr("src",url);
+                  $("#pigeOne-delete-container").append('<a href="#" class="list-font btn btn-danger" id="pigeOne_delete">DELETE</a>');
+
                 }
               }
-            $("#pigeFiles1").val(pigeFiles1);
-            $("#pigeFiles1_id").val(pigeFiles1Id);
-            document.getElementById("upload_pigeFiles1").innerHTML = filename; //no jquery
-            Session.set("pigeFiles1_id", pigeFiles1Id);
+            }); // end of wait
           }
         });
      });
    },
+   ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+  'click #pigeTwo_delete':function(event){
+    event.preventDefault();
+    var id = document.getElementById("pigeFiles2_id").value;
+    Data.remove(id);
+    //reset eeeveryyyythiiiinnnng
+    $("#pigeFiles2").val('');
+    $("#pigeFiles2_id").val('');
+    document.getElementById("pigeTwo_name").innerHTML = "";
+    document.getElementById("pigeTwo_title").innerHTML = "";
+    $("#pigeTwo_uploaded").attr("src","");
+    $("#pigeTwo_delete").remove();
+  },
+
   'change #pigeFiles2_label': function(event, template) {
     event.preventDefault();
+
       FS.Utility.eachFile(event, function(file) {
-        var pigeFiles2 = $("#pigeFiles2").val();
-        var noValue = "";
-        if(pigeFiles2 != noValue){
-          console.log("nema dzabe ni u stare babe")
-          Data.remove(Session.get("pigeFiles2_id"));
+
+        var imgId = document.getElementById("pigeFiles2_id").value;
+        if(imgId){
+          Data.remove(imgId);
+          //reset eeeveryyyythiiiinnnng
+          $("#pigeFiles2").val('');
+          $("#pigeFiles2_id").val('');
+          document.getElementById("pigeTwo_name").innerHTML = "";
+          document.getElementById("pigeTwo_title").innerHTML = "";
+          $("#pigeTwo_uploaded").attr("src","");
+          $("#pigeTwo_delete").remove();
         }
+
         Data.insert(file, function (err, fileObj) {
           if (err){
              console.log("hendlam eror - "+err);
           } else {
-             // grabbing url and placing it for gallery img_front value
-            var pigeFiles2 = "/cfs/files/data/" + fileObj._id +"/data?store=data";
-            var pigeFiles2Id = fileObj._id;
 
-            var fullPath = document.getElementById("pigeFiles2_label").value; //jquery a "no go" lol
-            if (fullPath) {
-                var startIndex = (fullPath.indexOf('\\') >= 0 ? fullPath.lastIndexOf('\\') : fullPath.lastIndexOf('/'));
-                var filename = fullPath.substring(startIndex);
-                if (filename.indexOf('\\') === 0 || filename.indexOf('/') === 0) {
-                    filename = filename.substring(1);
+             // grabbing url and placing it for gallery img_front value
+            var photoTwo = "/cfs/files/data/" + fileObj._id +"/data?store=data";
+            var photoTwoId = fileObj._id;
+            $("#pigeFiles2").val(photoTwo);
+            $("#pigeFiles2_id").val(photoTwoId);
+            Session.set("pigeFiles2_id", photoTwoId);
+            document.getElementById("pigeTwo_title").innerHTML = "status: uploading"; 
+
+            // track progress of upload
+            $("#pigeTwo_name").append('<div class="progress"><div class="progress-bar progress-bar-custom" id="pigeTwo_progress" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width:0%;"></div></div>');
+            var progress = setInterval(function () {
+                            var result = fileObj.uploadProgress();
+                            if( fileObj.uploadProgress() === 100 
+                                && fileObj.hasStored('data') ) {  
+                                clearInterval(progress);
+                                $("#pigeTwo_progress").remove();
+                            }
+                            console.log(result);
+                            $("#pigeTwo_progress").attr("aria-valuenow",result).css("width",result+"%");
+                        }, 100);
+
+            // wait for upload to finish than display img
+            Data.find(fileObj._id).observe({
+              changed: function(file, oldFile) {
+                if (file.url() !== null) { // waiting for unFinished callback
+                  var url = file.url();
+                  var name = file.name();
+
+                  document.getElementById("pigeTwo_title").innerHTML = "Picture two";
+                  document.getElementById("pigeTwo_name").innerHTML = "new"; // set name in label
+                  $("#pigeTwo_uploaded").attr("src",url);
+                  $("#pigeTwo-delete-container").append('<a href="#" class="list-font btn btn-danger" id="pigeTwo_delete">DELETE</a>');
+
                 }
               }
-            $("#pigeFiles2").val(pigeFiles2);
-            $("#pigeFiles2_id").val(pigeFiles2Id);
-            document.getElementById("upload_pigeFiles2").innerHTML = filename; //no jquery
-            Session.set("pigeFiles2_id", pigeFiles2Id);
+            }); // end of wait
           }
         });
      });
    },
+   ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+  'click #pigeThree_delete':function(event){
+    event.preventDefault();
+    var id = document.getElementById("pigeFiles3_id").value;
+    Data.remove(id);
+    //reset eeeveryyyythiiiinnnng
+    $("#pigeFiles3").val('');
+    $("#pigeFiles3_id").val('');
+    document.getElementById("pigeThree_name").innerHTML = "";
+    document.getElementById("pigeThree_title").innerHTML = "";
+    $("#pigeThree_uploaded").attr("src","");
+    $("#pigeThree_delete").remove();
+  },
+
   'change #pigeFiles3_label': function(event, template) {
     event.preventDefault();
+
       FS.Utility.eachFile(event, function(file) {
-        var pigeFiles3 = $("#pigeFiles3").val();
-        var noValue = "";
-        if(pigeFiles3 != noValue){
-          console.log("nema dzabe ni u stare babe")
-          Data.remove(Session.get("pigeFiles3_id"));
+
+
+        var imgId = document.getElementById("pigeFiles3_id").value;
+        if(imgId){
+          Data.remove(imgId);
+          //reset eeeveryyyythiiiinnnng
+          $("#pigeFiles3").val('');
+          $("#pigeFiles3_id").val('');
+          document.getElementById("pigeThree_name").innerHTML = "";
+          document.getElementById("pigeThree_title").innerHTML = "";
+          $("#pigeThree_uploaded").attr("src","");
+          $("#pigeThree_delete").remove();
         }
+
         Data.insert(file, function (err, fileObj) {
           if (err){
              console.log("hendlam eror - "+err);
           } else {
-             // grabbing url and placing it for gallery img_front value
-            var pigeFiles3 = "/cfs/files/data/" + fileObj._id +"/data?store=data";
-            var pigeFiles3Id = fileObj._id;
 
-            var fullPath = document.getElementById("pigeFiles3_label").value; //jquery a "no go" lol
-            if (fullPath) {
-                var startIndex = (fullPath.indexOf('\\') >= 0 ? fullPath.lastIndexOf('\\') : fullPath.lastIndexOf('/'));
-                var filename = fullPath.substring(startIndex);
-                if (filename.indexOf('\\') === 0 || filename.indexOf('/') === 0) {
-                    filename = filename.substring(1);
+             // grabbing url and placing it for gallery img_front value
+            var photoThree = "/cfs/files/data/" + fileObj._id +"/data?store=data";
+            var photoThreeId = fileObj._id;
+            $("#pigeFiles3").val(photoThree);
+            $("#pigeFiles3_id").val(photoThreeId);
+            Session.set("pigeFiles3_id", photoThreeId);
+            document.getElementById("pigeThree_title").innerHTML = "status: uploading"; 
+
+            // track progress of upload
+            $("#pigeThree_name").append('<div class="progress"><div class="progress-bar progress-bar-custom" id="pigeThree_progress" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width:0%;"></div></div>');
+            var progress = setInterval(function () {
+                            var result = fileObj.uploadProgress();
+                            if( fileObj.uploadProgress() === 100 
+                                && fileObj.hasStored('data') ) {  
+                                clearInterval(progress);
+                                $("#pigeThree_progress").remove();
+                            }
+                            console.log(result);
+                            $("#pigeThree_progress").attr("aria-valuenow",result).css("width",result+"%");
+                        }, 100);
+            
+            // wait for upload to finish than display img
+            Data.find(fileObj._id).observe({
+              changed: function(file, oldFile) {
+                if (file.url() !== null) { // waiting for unFinished callback
+                  var url = file.url();
+                  var name = file.name();
+
+                  document.getElementById("pigeThree_title").innerHTML = "Picture three";
+                  document.getElementById("pigeThree_name").innerHTML = "new"; // set name in label
+                  $("#pigeThree_uploaded").attr("src",url);
+                  $("#pigeThree-delete-container").append('<a href="#" class="list-font btn btn-danger" id="pigeThree_delete">DELETE</a>');
+
                 }
               }
-            $("#pigeFiles3").val(pigeFiles3);
-            $("#pigeFiles3_id").val(pigeFiles3Id);
-            document.getElementById("upload_pigeFiles3").innerHTML = filename; //no jquery
-            Session.set("pigeFiles3_id", pigeFiles3Id);
+            }); // end of wait
           }
         });
      });
    },
+   ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+  'click #pigeFour_delete':function(event){
+    event.preventDefault();
+    var id = document.getElementById("pigeFiles4_id").value;
+    Data.remove(id);
+    //reset eeeveryyyythiiiinnnng
+    $("#pigeFiles4").val('');
+    $("#pigeFiles4_id").val('');
+    document.getElementById("pigeFour_name").innerHTML = "";
+    document.getElementById("pigeFour_title").innerHTML = "";
+    $("#pigeFour_uploaded").attr("src","");
+    $("#pigeFour_delete").remove();
+  },
+
   'change #pigeFiles4_label': function(event, template) {
     event.preventDefault();
+
       FS.Utility.eachFile(event, function(file) {
-        var pigeFiles4 = $("#pigeFiles4").val();
-        var noValue = "";
-        if(pigeFiles4 != noValue){
-          console.log("nema dzabe ni u stare babe")
-          Data.remove(Session.get("pigeFiles4_id"));
+
+
+        var imgId = document.getElementById("pigeFiles4_id").value;
+        if(imgId){
+          Data.remove(imgId);
+          //reset eeeveryyyythiiiinnnng
+          $("#pigeFiles4").val('');
+          $("#pigeFiles4_id").val('');
+          document.getElementById("pigeFour_name").innerHTML = "";
+          document.getElementById("pigeFour_title").innerHTML = "";
+          $("#pigeFour_uploaded").attr("src","");
+          $("#pigeFour_delete").remove();
         }
+
         Data.insert(file, function (err, fileObj) {
           if (err){
              console.log("hendlam eror - "+err);
           } else {
-             // grabbing url and placing it for gallery img_front value
-            var pigeFiles4 = "/cfs/files/data/" + fileObj._id +"/data?store=data";
-            var pigeFiles4Id = fileObj._id;
 
-            var fullPath = document.getElementById("pigeFiles4_label").value; //jquery a "no go" lol
-            if (fullPath) {
-                var startIndex = (fullPath.indexOf('\\') >= 0 ? fullPath.lastIndexOf('\\') : fullPath.lastIndexOf('/'));
-                var filename = fullPath.substring(startIndex);
-                if (filename.indexOf('\\') === 0 || filename.indexOf('/') === 0) {
-                    filename = filename.substring(1);
+             // grabbing url and placing it for gallery img_front value
+            var photoFour = "/cfs/files/data/" + fileObj._id +"/data?store=data";
+            var photoFourId = fileObj._id;
+            $("#pigeFiles4").val(photoFour);
+            $("#pigeFiles4_id").val(photoFourId);
+            Session.set("pigeFiles4_id", photoFourId);
+            document.getElementById("pigeFour_title").innerHTML = "status: uploading"; 
+
+            // track progress of upload
+            $("#pigeFour_name").append('<div class="progress"><div class="progress-bar progress-bar-custom" id="pigeFour_progress" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width:0%;"></div></div>');
+            var progress = setInterval(function () {
+                            var result = fileObj.uploadProgress();
+                            if( fileObj.uploadProgress() === 100 
+                                && fileObj.hasStored('data') ) {  
+                                clearInterval(progress);
+                                $("#pigeFour_progress").remove();
+                            }
+                            console.log(result);
+                            $("#pigeFour_progress").attr("aria-valuenow",result).css("width",result+"%");
+                        }, 100);
+            
+            // wait for upload to finish than display img
+            Data.find(fileObj._id).observe({
+              changed: function(file, oldFile) {
+                if (file.url() !== null) { // waiting for unFinished callback
+                  var url = file.url();
+                  var name = file.name();
+
+                  document.getElementById("pigeFour_title").innerHTML = "Picture four";
+                  document.getElementById("pigeFour_name").innerHTML = "new"; // set name in label
+                  $("#pigeFour_uploaded").attr("src",url);
+                  $("#pigeFour-delete-container").append('<a href="#" class="list-font btn btn-danger" id="pigeFour_delete">DELETE</a>');
+
                 }
               }
-            $("#pigeFiles4").val(pigeFiles4);
-            $("#pigeFiles4_id").val(pigeFiles4Id);
-            document.getElementById("upload_pigeFiles4").innerHTML = filename; //no jquery
-            Session.set("pigeFiles4_id", pigeFiles4Id);
+            }); // end of wait
           }
         });
      });
    },
+   ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+  'click #pigeFile_delete':function(event){
+    event.preventDefault();
+    var id = document.getElementById("pigeFiles5_id").value;
+    Data.remove(id);
+    //reset eeeveryyyythiiiinnnng
+    $("#pigeFiles5").val('');
+    $("#pigeFiles5_id").val('');
+    document.getElementById("pigeFiles_name").innerHTML = "";
+    document.getElementById("upload_pigeFiles5").innerHTML = "(.zip)";
+    $("#pigeFile_delete").remove();
+  },
   'change #pigeFiles5_label': function(event, template) {
     event.preventDefault();
+
       FS.Utility.eachFile(event, function(file) {
-        var pigeFiles5 = $("#pigeFiles5").val();
-        var noValue = "";
-        if(pigeFiles5 != noValue){
-          console.log("nema dzabe ni u stare babe")
-          Data.remove(Session.get("pigeFiles5_id"));
+
+        var imgId = document.getElementById("pigeFiles5_id").value;
+        if(imgId){
+          Data.remove(imgId);
+          //reset eeeveryyyythiiiinnnng
+          $("#pigeFiles5").val('');
+          $("#pigeFiles5_id").val('');
+          document.getElementById("pigeFiles_name").innerHTML = "";
+          document.getElementById("upload_pigeFiles5").innerHTML = "(.zip)";
+          $("#pigeFile_delete").remove();
         }
+
         Data.insert(file, function (err, fileObj) {
           if (err){
              console.log("hendlam eror - "+err);
           } else {
-             // grabbing url and placing it for gallery img_front value
-            var pigeFiles5 = "/cfs/files/data/" + fileObj._id +"/data?store=data";
-            var pigeFiles5Id = fileObj._id;
+            // grabbing url and placing it for gallery img_front value
+            var files = "/cfs/files/data/" + fileObj._id +"/data?store=data";
+            var filesId = fileObj._id;
+            $("#pigeFiles5").val(files);
+            $("#pigeFiles5_id").val(filesId);
+            Session.set("pigeFiles5_id", filesId);
 
-            var fullPath = document.getElementById("pigeFiles5_label").value; //jquery a "no go" lol
-            if (fullPath) {
-                var startIndex = (fullPath.indexOf('\\') >= 0 ? fullPath.lastIndexOf('\\') : fullPath.lastIndexOf('/'));
-                var filename = fullPath.substring(startIndex);
-                if (filename.indexOf('\\') === 0 || filename.indexOf('/') === 0) {
-                    filename = filename.substring(1);
+            // track progress of upload
+            $("#pigeFiles_name").append('<div class="progress"><div class="progress-bar progress-bar-custom" id="pigeFive_progress" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width:0%;"></div></div>');
+            var progress = setInterval(function () {
+                            var result = fileObj.uploadProgress();
+                            if( fileObj.uploadProgress() === 100 
+                                && fileObj.hasStored('data') ) {  
+                                clearInterval(progress);
+                                $("#pigeFive_progress").remove();
+                            }
+                            console.log(result);
+                            $("#pigeFive_progress").attr("aria-valuenow",result).css("width",result+"%");
+                        }, 100);
+            
+            // wait for upload to finish than display img
+            Data.find(fileObj._id).observe({
+              changed: function(file, oldFile) {
+                if (file.url() !== null) { // waiting for unFinished callfiles
+                  var url = file.url();
+                  var name = file.name();
+                  document.getElementById("pigeFiles_name").innerHTML = "new"; 
+                  $("#pigeFiles-delete-container").append('<a href="#" class="list-font btn btn-danger" id="pigeFile_delete">DELETE ADDITIONAL FILES</a>');
+
                 }
               }
-            $("#pigeFiles5").val(pigeFiles5);
-            $("#pigeFiles5_id").val(pigeFiles5Id);
-            document.getElementById("upload_pigeFiles5").innerHTML = filename; //no jquery
-            Session.set("pigeFiles5_id", pigeFiles5Id);
+            }); // end of wait
           }
         });
      });

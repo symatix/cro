@@ -54,6 +54,19 @@ Template.users.events({
     'click .addUser-href':function(){
        	delete Session.keys.userId;
     },
+    'click .sendUserDetails':function(event){
+    	event.preventDefault();
+    	userDetails = Meteor.users.findOne(this.__originalId);
+    	console.log(userDetails.profile.email);
+		Meteor.call("resendUserDetails", userDetails, function(error, result){
+		   if(error){
+		      alert('Error: '+error);
+		   }else{
+		      return alert("Email to "+userDetails.profile.email+" sent!");
+		   }
+		})
+		
+    },
   'click .btn-setSession':function(event){
     var itemId = this._id;
     var type = Prospero.findOne(this._id).type;

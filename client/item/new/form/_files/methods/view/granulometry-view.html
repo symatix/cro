@@ -1,0 +1,102 @@
+<template name="form_files_granulometry_visual">
+    <div class="row visual-data">
+
+
+
+    <div class="col-xs-12 align-center">
+
+      <table border="0" cellspacing="0" cellpadding="0" class="table table-condensed list-font">
+
+      <tr class="noBorder">
+        <td class="upload-table-cell" id="granulometryOne_title">
+            {{#if details.methods.granulometry.files.granulometryFiles1_id}}
+              Picture one
+            {{/if}}
+        </td>
+        <td class="upload-table-cell" id="granulometryTwo_title">
+            {{#if details.methods.granulometry.files.granulometryFiles2_id}}
+              Picture two
+            {{/if}}
+        </td>
+        <td class="upload-table-cell" id="granulometryThree_title">
+            {{#if details.methods.granulometry.files.granulometryFiles3_id}}
+              Picture three
+            {{/if}}
+        </td>
+        <td class="upload-table-cell" id="granulometryFour_title">
+            {{#if details.methods.granulometry.files.granulometryFiles4_id}}
+              Picture four
+            {{/if}}
+        </td>
+      </tr>
+
+
+      <tr class="noBorder new-file">
+        <td class="upload-table-cell" id="granulometryOne_name">
+        </td>
+        <td class="upload-table-cell" id="granulometryTwo_name">
+        </td>
+        <td class="upload-table-cell" id="granulometryThree_name">
+        </td>
+        <td class="upload-table-cell" id="granulometryFour_name">
+        </td>
+      </tr>
+
+
+      <tr class="noBorder">
+        <td class="upload-table-cell">
+          <img class="img-upload-sm" src="{{#if details.methods.granulometry.files.granulometryFiles1}}{{details.methods.granulometry.files.granulometryFiles1}}{{/if}}" id="granulometryOne_uploaded">
+        </td>
+        <td class="upload-table-cell">
+          <img class="img-upload-sm" src="{{#if details.methods.granulometry.files.granulometryFiles2}}{{details.methods.granulometry.files.granulometryFiles2}}{{/if}}" id="granulometryTwo_uploaded">
+        </td>
+        <td class="upload-table-cell">
+          <img class="img-upload-sm" src="{{#if details.methods.granulometry.files.granulometryFiles3}}{{details.methods.granulometry.files.granulometryFiles3}}{{/if}}" id="granulometryThree_uploaded">
+        </td>
+        <td class="upload-table-cell">
+          <img class="img-upload-sm" src="{{#if details.methods.granulometry.files.granulometryFiles4}}{{details.methods.granulometry.files.granulometryFiles4}}{{/if}}" id="granulometryFour_uploaded">
+        </td>
+      </tr>
+
+
+      <tr class="noBorder">
+        <td class="upload-table-cell" id="granulometryOne-delete-container">
+          {{#if details.methods.granulometry.files.granulometryFiles1_id}}
+            <a href="#" class="list-font btn btn-danger" id="granulometryOne_delete">DELETE</a>
+          {{/if}}
+        </td>
+        <td class="upload-table-cell" id="granulometryTwo-delete-container">
+          {{#if details.methods.granulometry.files.granulometryFiles2_id}}
+            <a href="#" class="list-font btn btn-danger" id="granulometryTwo_delete">DELETE</a>
+          {{/if}}
+        </td>
+        <td class="upload-table-cell" id="granulometryThree-delete-container">
+          {{#if details.methods.granulometry.files.granulometryFiles3_id}}
+            <a href="#" class="list-font btn btn-danger" id="granulometryThree_delete">DELETE</a>
+          {{/if}}
+        </td>
+        <td class="upload-table-cell" id="granulometryFour-delete-container">
+          {{#if details.methods.granulometry.files.granulometryFiles4_id}}
+            <a href="#" class="list-font btn btn-danger" id="granulometryFour_delete">DELETE</a>
+          {{/if}}
+        </td>
+      </tr>
+
+
+    </table>
+  </div>
+
+      <div class="col-xs-12 col-sm-12 list-font align-center">
+        <br/>
+        <span id="granulometryFiles-delete-container">
+          {{#if details.methods.granulometry.files.granulometryFiles5_id}}
+            <a href="#" class="list-font btn btn-danger" id="granulometryFile_delete">DELETE ADDITIONAL FILES</a>
+          {{/if}}
+        </span>
+        <br/>
+        <br/>
+        <span class="list-font new-file" id="granulometryFiles_name"></span>
+      </div>
+
+    </div>
+</template>

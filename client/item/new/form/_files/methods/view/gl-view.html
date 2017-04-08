@@ -1,0 +1,102 @@
+<template name="form_files_gl_visual">
+    <div class="row visual-data">
+
+
+
+    <div class="col-xs-12 align-center">
+
+      <table border="0" cellspacing="0" cellpadding="0" class="table table-condensed list-font">
+
+      <tr class="noBorder">
+        <td class="upload-table-cell" id="glOne_title">
+            {{#if details.methods.gl.files.glFiles1_id}}
+              Picture one
+            {{/if}}
+        </td>
+        <td class="upload-table-cell" id="glTwo_title">
+            {{#if details.methods.gl.files.glFiles2_id}}
+              Picture two
+            {{/if}}
+        </td>
+        <td class="upload-table-cell" id="glThree_title">
+            {{#if details.methods.gl.files.glFiles3_id}}
+              Picture three
+            {{/if}}
+        </td>
+        <td class="upload-table-cell" id="glFour_title">
+            {{#if details.methods.gl.files.glFiles4_id}}
+              Picture four
+            {{/if}}
+        </td>
+      </tr>
+
+
+      <tr class="noBorder new-file">
+        <td class="upload-table-cell" id="glOne_name">
+        </td>
+        <td class="upload-table-cell" id="glTwo_name">
+        </td>
+        <td class="upload-table-cell" id="glThree_name">
+        </td>
+        <td class="upload-table-cell" id="glFour_name">
+        </td>
+      </tr>
+
+
+      <tr class="noBorder">
+        <td class="upload-table-cell">
+          <img class="img-upload-sm" src="{{#if details.methods.gl.files.glFiles1}}{{details.methods.gl.files.glFiles1}}{{/if}}" id="glOne_uploaded">
+        </td>
+        <td class="upload-table-cell">
+          <img class="img-upload-sm" src="{{#if details.methods.gl.files.glFiles2}}{{details.methods.gl.files.glFiles2}}{{/if}}" id="glTwo_uploaded">
+        </td>
+        <td class="upload-table-cell">
+          <img class="img-upload-sm" src="{{#if details.methods.gl.files.glFiles3}}{{details.methods.gl.files.glFiles3}}{{/if}}" id="glThree_uploaded">
+        </td>
+        <td class="upload-table-cell">
+          <img class="img-upload-sm" src="{{#if details.methods.gl.files.glFiles4}}{{details.methods.gl.files.glFiles4}}{{/if}}" id="glFour_uploaded">
+        </td>
+      </tr>
+
+
+      <tr class="noBorder">
+        <td class="upload-table-cell" id="glOne-delete-container">
+          {{#if details.methods.gl.files.glFiles1_id}}
+            <a href="#" class="list-font btn btn-danger" id="glOne_delete">DELETE</a>
+          {{/if}}
+        </td>
+        <td class="upload-table-cell" id="glTwo-delete-container">
+          {{#if details.methods.gl.files.glFiles2_id}}
+            <a href="#" class="list-font btn btn-danger" id="glTwo_delete">DELETE</a>
+          {{/if}}
+        </td>
+        <td class="upload-table-cell" id="glThree-delete-container">
+          {{#if details.methods.gl.files.glFiles3_id}}
+            <a href="#" class="list-font btn btn-danger" id="glThree_delete">DELETE</a>
+          {{/if}}
+        </td>
+        <td class="upload-table-cell" id="glFour-delete-container">
+          {{#if details.methods.gl.files.glFiles4_id}}
+            <a href="#" class="list-font btn btn-danger" id="glFour_delete">DELETE</a>
+          {{/if}}
+        </td>
+      </tr>
+
+
+    </table>
+  </div>
+
+      <div class="col-xs-12 col-sm-12 list-font align-center">
+        <br/>
+        <span id="glFiles-delete-container">
+          {{#if details.methods.gl.files.glFiles5_id}}
+            <a href="#" class="list-font btn btn-danger" id="glFile_delete">DELETE ADDITIONAL FILES</a>
+          {{/if}}
+        </span>
+        <br/>
+        <br/>
+        <span class="list-font new-file" id="glFiles_name"></span>
+      </div>
+
+    </div>
+</template>

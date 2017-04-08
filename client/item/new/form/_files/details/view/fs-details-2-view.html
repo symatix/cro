@@ -1,0 +1,102 @@
+<template name="form_files_interventions_visual">
+    <div class="row visual-data">
+
+
+
+    <div class="col-xs-12 align-center">
+
+      <table border="0" cellspacing="0" cellpadding="0" class="table table-condensed list-font">
+
+      <tr class="noBorder">
+        <td class="upload-table-cell" id="interventionsOne_title">
+            {{#if data.interventions.photoOne_id}}
+              Picture one
+            {{/if}}
+        </td>
+        <td class="upload-table-cell" id="interventionsTwo_title">
+            {{#if data.interventions.photoTwo_id}}
+              Picture two
+            {{/if}}
+        </td>
+        <td class="upload-table-cell" id="interventionsThree_title">
+            {{#if data.interventions.photoThree_id}}
+              Picture three
+            {{/if}}
+        </td>
+        <td class="upload-table-cell" id="interventionsFour_title">
+            {{#if data.interventions.photoFour_id}}
+              Picture four
+            {{/if}}
+        </td>
+      </tr>
+
+
+      <tr class="noBorder new-file">
+        <td class="upload-table-cell" id="interventionsOne_name">
+        </td>
+        <td class="upload-table-cell" id="interventionsTwo_name">
+        </td>
+        <td class="upload-table-cell" id="interventionsThree_name">
+        </td>
+        <td class="upload-table-cell" id="interventionsFour_name">
+        </td>
+      </tr>
+
+
+      <tr class="noBorder">
+        <td class="upload-table-cell">
+          <img class="img-upload-sm" src="{{#if data.interventions.photoOne}}{{data.interventions.photoOne}}{{/if}}" id="interventionsOne_uploaded">
+        </td>
+        <td class="upload-table-cell">
+          <img class="img-upload-sm" src="{{#if data.interventions.photoTwo}}{{data.interventions.photoTwo}}{{/if}}" id="interventionsTwo_uploaded">
+        </td>
+        <td class="upload-table-cell">
+          <img class="img-upload-sm" src="{{#if data.interventions.photoThree}}{{data.interventions.photoThree}}{{/if}}" id="interventionsThree_uploaded">
+        </td>
+        <td class="upload-table-cell">
+          <img class="img-upload-sm" src="{{#if data.interventions.photoFour}}{{data.interventions.photoFour}}{{/if}}" id="interventionsFour_uploaded">
+        </td>
+      </tr>
+
+
+      <tr class="noBorder">
+        <td class="upload-table-cell" id="interventionsOne-delete-container">
+          {{#if data.interventions.photoOne_id}}
+            <a href="#" class="list-font btn btn-danger" id="interventionsOne_delete">DELETE</a>
+          {{/if}}
+        </td>
+        <td class="upload-table-cell" id="interventionsTwo-delete-container">
+          {{#if data.interventions.photoTwo_id}}
+            <a href="#" class="list-font btn btn-danger" id="interventionsTwo_delete">DELETE</a>
+          {{/if}}
+        </td>
+        <td class="upload-table-cell" id="interventionsThree-delete-container">
+          {{#if data.interventions.photoThree_id}}
+            <a href="#" class="list-font btn btn-danger" id="interventionsThree_delete">DELETE</a>
+          {{/if}}
+        </td>
+        <td class="upload-table-cell" id="interventionsFour-delete-container">
+          {{#if data.interventions.photoFour_id}}
+            <a href="#" class="list-font btn btn-danger" id="interventionsFour_delete">DELETE</a>
+          {{/if}}
+        </td>
+      </tr>
+
+
+    </table>
+  </div>
+
+      <div class="col-xs-12 col-sm-12 list-font align-center">
+        <br/>
+        <span id="interventionsFiles-delete-container">
+          {{#if data.interventions.files_id}}
+            <a href="#" class="list-font btn btn-danger" id="interventionsFile_delete">DELETE ADDITIONAL FILES</a>
+          {{/if}}
+        </span>
+        <br/>
+        <br/>
+        <span class="list-font new-file" id="interventionsFiles_name"></span>
+      </div>
+
+    </div>
+</template>

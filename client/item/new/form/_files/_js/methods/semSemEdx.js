@@ -1,165 +1,374 @@
 Template.files_methods_semSemEdx.events({
+  ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+  'click #semSemEdxOne_delete':function(event){
+    event.preventDefault();
+    var id = document.getElementById("semSemEdxFiles1_id").value;
+    Data.remove(id);
+    //reset eeeveryyyythiiiinnnng
+    $("#semSemEdxFiles1").val('');
+    $("#semSemEdxFiles1_id").val('');
+    document.getElementById("semSemEdxOne_name").innerHTML = "";
+    document.getElementById("semSemEdxOne_title").innerHTML = "";
+    $("#semSemEdxOne_uploaded").attr("src","");
+    $("#semSemEdxOne_delete").remove();
+  },
   'change #semSemEdxFiles1_label': function(event, template) {
     event.preventDefault();
+
       FS.Utility.eachFile(event, function(file) {
-        var semSemEdxFiles1 = $("#semSemEdxFiles1").val();
-        var noValue = "";
-        if(semSemEdxFiles1 != noValue){
-          console.log("nema dzabe ni u stare babe")
-          Data.remove(Session.get("semSemEdxFiles1_id"));
+
+        var imgId = document.getElementById("semSemEdxFiles1_id").value;
+        if(imgId){
+          Data.remove(imgId);
+          //reset eeeveryyyythiiiinnnng
+          $("#semSemEdxFiles1").val('');
+          $("#semSemEdxFiles1_id").val('');
+          document.getElementById("semSemEdxOne_name").innerHTML = "";
+          document.getElementById("semSemEdxOne_title").innerHTML = "";
+          $("#semSemEdxOne_uploaded").attr("src","");
+          $("#semSemEdxOne_delete").remove();
         }
+
         Data.insert(file, function (err, fileObj) {
           if (err){
              console.log("hendlam eror - "+err);
           } else {
-             // grabbing url and placing it for gallery img_front value
-            var semSemEdxFiles1 = "/cfs/files/data/" + fileObj._id +"/data?store=data";
-            var semSemEdxFiles1Id = fileObj._id;
 
-            var fullPath = document.getElementById("semSemEdxFiles1_label").value; //jquery a "no go" lol
-            if (fullPath) {
-                var startIndex = (fullPath.indexOf('\\') >= 0 ? fullPath.lastIndexOf('\\') : fullPath.lastIndexOf('/'));
-                var filename = fullPath.substring(startIndex);
-                if (filename.indexOf('\\') === 0 || filename.indexOf('/') === 0) {
-                    filename = filename.substring(1);
+             // grabbing url and placing it for gallery img_front value
+            var photoOne = "/cfs/files/data/" + fileObj._id +"/data?store=data";
+            var photoOneId = fileObj._id;
+            $("#semSemEdxFiles1").val(photoOne);
+            $("#semSemEdxFiles1_id").val(photoOneId);
+            Session.set("semSemEdxFiles1_id", photoOneId);
+            document.getElementById("semSemEdxOne_title").innerHTML = "status: uploading"; 
+
+            // track progress of upload
+            $("#semSemEdxOne_name").append('<div class="progress"><div class="progress-bar progress-bar-custom" id="semSemEdxOne_progress" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width:0%;"></div></div>');
+            var progress = setInterval(function () {
+                            var result = fileObj.uploadProgress();
+                            if( fileObj.uploadProgress() === 100 
+                                && fileObj.hasStored('data') ) {  
+                                clearInterval(progress);
+                                $("#semSemEdxOne_progress").remove();
+                            }
+                            console.log(result);
+                            $("#semSemEdxOne_progress").attr("aria-valuenow",result).css("width",result+"%");
+                        }, 100);
+
+
+            // wait for upload to finish than display img
+            Data.find(fileObj._id).observe({
+              changed: function(file, oldFile) {
+                if (file.url() !== null) { // waiting for unFinished callback
+                  var url = file.url();
+                  var name = file.name();
+
+                  document.getElementById("semSemEdxOne_title").innerHTML = "Picture one";
+                  document.getElementById("semSemEdxOne_name").innerHTML = "new";
+                  $("#semSemEdxOne_uploaded").attr("src",url);
+                  $("#semSemEdxOne-delete-container").append('<a href="#" class="list-font btn btn-danger" id="semSemEdxOne_delete">DELETE</a>');
+
                 }
               }
-            $("#semSemEdxFiles1").val(semSemEdxFiles1);
-            $("#semSemEdxFiles1_id").val(semSemEdxFiles1Id);
-            document.getElementById("upload_semSemEdxFiles1").innerHTML = filename; //no jquery
-            Session.set("semSemEdxFiles1_id", semSemEdxFiles1Id);
+            }); // end of wait
           }
         });
      });
    },
+   ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+  'click #semSemEdxTwo_delete':function(event){
+    event.preventDefault();
+    var id = document.getElementById("semSemEdxFiles2_id").value;
+    Data.remove(id);
+    //reset eeeveryyyythiiiinnnng
+    $("#semSemEdxFiles2").val('');
+    $("#semSemEdxFiles2_id").val('');
+    document.getElementById("semSemEdxTwo_name").innerHTML = "";
+    document.getElementById("semSemEdxTwo_title").innerHTML = "";
+    $("#semSemEdxTwo_uploaded").attr("src","");
+    $("#semSemEdxTwo_delete").remove();
+  },
+
   'change #semSemEdxFiles2_label': function(event, template) {
     event.preventDefault();
+
       FS.Utility.eachFile(event, function(file) {
-        var semSemEdxFiles2 = $("#semSemEdxFiles2").val();
-        var noValue = "";
-        if(semSemEdxFiles2 != noValue){
-          console.log("nema dzabe ni u stare babe")
-          Data.remove(Session.get("semSemEdxFiles2_id"));
+
+        var imgId = document.getElementById("semSemEdxFiles2_id").value;
+        if(imgId){
+          Data.remove(imgId);
+          //reset eeeveryyyythiiiinnnng
+          $("#semSemEdxFiles2").val('');
+          $("#semSemEdxFiles2_id").val('');
+          document.getElementById("semSemEdxTwo_name").innerHTML = "";
+          document.getElementById("semSemEdxTwo_title").innerHTML = "";
+          $("#semSemEdxTwo_uploaded").attr("src","");
+          $("#semSemEdxTwo_delete").remove();
         }
+
         Data.insert(file, function (err, fileObj) {
           if (err){
              console.log("hendlam eror - "+err);
           } else {
-             // grabbing url and placing it for gallery img_front value
-            var semSemEdxFiles2 = "/cfs/files/data/" + fileObj._id +"/data?store=data";
-            var semSemEdxFiles2Id = fileObj._id;
 
-            var fullPath = document.getElementById("semSemEdxFiles2_label").value; //jquery a "no go" lol
-            if (fullPath) {
-                var startIndex = (fullPath.indexOf('\\') >= 0 ? fullPath.lastIndexOf('\\') : fullPath.lastIndexOf('/'));
-                var filename = fullPath.substring(startIndex);
-                if (filename.indexOf('\\') === 0 || filename.indexOf('/') === 0) {
-                    filename = filename.substring(1);
+             // grabbing url and placing it for gallery img_front value
+            var photoTwo = "/cfs/files/data/" + fileObj._id +"/data?store=data";
+            var photoTwoId = fileObj._id;
+            $("#semSemEdxFiles2").val(photoTwo);
+            $("#semSemEdxFiles2_id").val(photoTwoId);
+            Session.set("semSemEdxFiles2_id", photoTwoId);
+            document.getElementById("semSemEdxTwo_title").innerHTML = "status: uploading"; 
+
+            // track progress of upload
+            $("#semSemEdxTwo_name").append('<div class="progress"><div class="progress-bar progress-bar-custom" id="semSemEdxTwo_progress" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width:0%;"></div></div>');
+            var progress = setInterval(function () {
+                            var result = fileObj.uploadProgress();
+                            if( fileObj.uploadProgress() === 100 
+                                && fileObj.hasStored('data') ) {  
+                                clearInterval(progress);
+                                $("#semSemEdxTwo_progress").remove();
+                            }
+                            console.log(result);
+                            $("#semSemEdxTwo_progress").attr("aria-valuenow",result).css("width",result+"%");
+                        }, 100);
+
+            // wait for upload to finish than display img
+            Data.find(fileObj._id).observe({
+              changed: function(file, oldFile) {
+                if (file.url() !== null) { // waiting for unFinished callback
+                  var url = file.url();
+                  var name = file.name();
+
+                  document.getElementById("semSemEdxTwo_title").innerHTML = "Picture two";
+                  document.getElementById("semSemEdxTwo_name").innerHTML = "new"; // set name in label
+                  $("#semSemEdxTwo_uploaded").attr("src",url);
+                  $("#semSemEdxTwo-delete-container").append('<a href="#" class="list-font btn btn-danger" id="semSemEdxTwo_delete">DELETE</a>');
+
                 }
               }
-            $("#semSemEdxFiles2").val(semSemEdxFiles2);
-            $("#semSemEdxFiles2_id").val(semSemEdxFiles2Id);
-            document.getElementById("upload_semSemEdxFiles2").innerHTML = filename; //no jquery
-            Session.set("semSemEdxFiles2_id", semSemEdxFiles2Id);
+            }); // end of wait
           }
         });
      });
    },
+   ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+  'click #semSemEdxThree_delete':function(event){
+    event.preventDefault();
+    var id = document.getElementById("semSemEdxFiles3_id").value;
+    Data.remove(id);
+    //reset eeeveryyyythiiiinnnng
+    $("#semSemEdxFiles3").val('');
+    $("#semSemEdxFiles3_id").val('');
+    document.getElementById("semSemEdxThree_name").innerHTML = "";
+    document.getElementById("semSemEdxThree_title").innerHTML = "";
+    $("#semSemEdxThree_uploaded").attr("src","");
+    $("#semSemEdxThree_delete").remove();
+  },
+
   'change #semSemEdxFiles3_label': function(event, template) {
     event.preventDefault();
+
       FS.Utility.eachFile(event, function(file) {
-        var semSemEdxFiles3 = $("#semSemEdxFiles3").val();
-        var noValue = "";
-        if(semSemEdxFiles3 != noValue){
-          console.log("nema dzabe ni u stare babe")
-          Data.remove(Session.get("semSemEdxFiles3_id"));
+
+
+        var imgId = document.getElementById("semSemEdxFiles3_id").value;
+        if(imgId){
+          Data.remove(imgId);
+          //reset eeeveryyyythiiiinnnng
+          $("#semSemEdxFiles3").val('');
+          $("#semSemEdxFiles3_id").val('');
+          document.getElementById("semSemEdxThree_name").innerHTML = "";
+          document.getElementById("semSemEdxThree_title").innerHTML = "";
+          $("#semSemEdxThree_uploaded").attr("src","");
+          $("#semSemEdxThree_delete").remove();
         }
+
         Data.insert(file, function (err, fileObj) {
           if (err){
              console.log("hendlam eror - "+err);
           } else {
-             // grabbing url and placing it for gallery img_front value
-            var semSemEdxFiles3 = "/cfs/files/data/" + fileObj._id +"/data?store=data";
-            var semSemEdxFiles3Id = fileObj._id;
 
-            var fullPath = document.getElementById("semSemEdxFiles3_label").value; //jquery a "no go" lol
-            if (fullPath) {
-                var startIndex = (fullPath.indexOf('\\') >= 0 ? fullPath.lastIndexOf('\\') : fullPath.lastIndexOf('/'));
-                var filename = fullPath.substring(startIndex);
-                if (filename.indexOf('\\') === 0 || filename.indexOf('/') === 0) {
-                    filename = filename.substring(1);
+             // grabbing url and placing it for gallery img_front value
+            var photoThree = "/cfs/files/data/" + fileObj._id +"/data?store=data";
+            var photoThreeId = fileObj._id;
+            $("#semSemEdxFiles3").val(photoThree);
+            $("#semSemEdxFiles3_id").val(photoThreeId);
+            Session.set("semSemEdxFiles3_id", photoThreeId);
+            document.getElementById("semSemEdxThree_title").innerHTML = "status: uploading"; 
+
+            // track progress of upload
+            $("#semSemEdxThree_name").append('<div class="progress"><div class="progress-bar progress-bar-custom" id="semSemEdxThree_progress" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width:0%;"></div></div>');
+            var progress = setInterval(function () {
+                            var result = fileObj.uploadProgress();
+                            if( fileObj.uploadProgress() === 100 
+                                && fileObj.hasStored('data') ) {  
+                                clearInterval(progress);
+                                $("#semSemEdxThree_progress").remove();
+                            }
+                            console.log(result);
+                            $("#semSemEdxThree_progress").attr("aria-valuenow",result).css("width",result+"%");
+                        }, 100);
+            
+            // wait for upload to finish than display img
+            Data.find(fileObj._id).observe({
+              changed: function(file, oldFile) {
+                if (file.url() !== null) { // waiting for unFinished callback
+                  var url = file.url();
+                  var name = file.name();
+
+                  document.getElementById("semSemEdxThree_title").innerHTML = "Picture three";
+                  document.getElementById("semSemEdxThree_name").innerHTML = "new"; // set name in label
+                  $("#semSemEdxThree_uploaded").attr("src",url);
+                  $("#semSemEdxThree-delete-container").append('<a href="#" class="list-font btn btn-danger" id="semSemEdxThree_delete">DELETE</a>');
+
                 }
               }
-            $("#semSemEdxFiles3").val(semSemEdxFiles3);
-            $("#semSemEdxFiles3_id").val(semSemEdxFiles3Id);
-            document.getElementById("upload_semSemEdxFiles3").innerHTML = filename; //no jquery
-            Session.set("semSemEdxFiles3_id", semSemEdxFiles3Id);
+            }); // end of wait
           }
         });
      });
    },
+   ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+  'click #semSemEdxFour_delete':function(event){
+    event.preventDefault();
+    var id = document.getElementById("semSemEdxFiles4_id").value;
+    Data.remove(id);
+    //reset eeeveryyyythiiiinnnng
+    $("#semSemEdxFiles4").val('');
+    $("#semSemEdxFiles4_id").val('');
+    document.getElementById("semSemEdxFour_name").innerHTML = "";
+    document.getElementById("semSemEdxFour_title").innerHTML = "";
+    $("#semSemEdxFour_uploaded").attr("src","");
+    $("#semSemEdxFour_delete").remove();
+  },
+
   'change #semSemEdxFiles4_label': function(event, template) {
     event.preventDefault();
+
       FS.Utility.eachFile(event, function(file) {
-        var semSemEdxFiles4 = $("#semSemEdxFiles4").val();
-        var noValue = "";
-        if(semSemEdxFiles4 != noValue){
-          console.log("nema dzabe ni u stare babe")
-          Data.remove(Session.get("semSemEdxFiles4_id"));
+
+
+        var imgId = document.getElementById("semSemEdxFiles4_id").value;
+        if(imgId){
+          Data.remove(imgId);
+          //reset eeeveryyyythiiiinnnng
+          $("#semSemEdxFiles4").val('');
+          $("#semSemEdxFiles4_id").val('');
+          document.getElementById("semSemEdxFour_name").innerHTML = "";
+          document.getElementById("semSemEdxFour_title").innerHTML = "";
+          $("#semSemEdxFour_uploaded").attr("src","");
+          $("#semSemEdxFour_delete").remove();
         }
+
         Data.insert(file, function (err, fileObj) {
           if (err){
              console.log("hendlam eror - "+err);
           } else {
-             // grabbing url and placing it for gallery img_front value
-            var semSemEdxFiles4 = "/cfs/files/data/" + fileObj._id +"/data?store=data";
-            var semSemEdxFiles4Id = fileObj._id;
 
-            var fullPath = document.getElementById("semSemEdxFiles4_label").value; //jquery a "no go" lol
-            if (fullPath) {
-                var startIndex = (fullPath.indexOf('\\') >= 0 ? fullPath.lastIndexOf('\\') : fullPath.lastIndexOf('/'));
-                var filename = fullPath.substring(startIndex);
-                if (filename.indexOf('\\') === 0 || filename.indexOf('/') === 0) {
-                    filename = filename.substring(1);
+             // grabbing url and placing it for gallery img_front value
+            var photoFour = "/cfs/files/data/" + fileObj._id +"/data?store=data";
+            var photoFourId = fileObj._id;
+            $("#semSemEdxFiles4").val(photoFour);
+            $("#semSemEdxFiles4_id").val(photoFourId);
+            Session.set("semSemEdxFiles4_id", photoFourId);
+            document.getElementById("semSemEdxFour_title").innerHTML = "status: uploading"; 
+
+            // track progress of upload
+            $("#semSemEdxFour_name").append('<div class="progress"><div class="progress-bar progress-bar-custom" id="semSemEdxFour_progress" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width:0%;"></div></div>');
+            var progress = setInterval(function () {
+                            var result = fileObj.uploadProgress();
+                            if( fileObj.uploadProgress() === 100 
+                                && fileObj.hasStored('data') ) {  
+                                clearInterval(progress);
+                                $("#semSemEdxFour_progress").remove();
+                            }
+                            console.log(result);
+                            $("#semSemEdxFour_progress").attr("aria-valuenow",result).css("width",result+"%");
+                        }, 100);
+            
+            // wait for upload to finish than display img
+            Data.find(fileObj._id).observe({
+              changed: function(file, oldFile) {
+                if (file.url() !== null) { // waiting for unFinished callback
+                  var url = file.url();
+                  var name = file.name();
+
+                  document.getElementById("semSemEdxFour_title").innerHTML = "Picture four";
+                  document.getElementById("semSemEdxFour_name").innerHTML = "new"; // set name in label
+                  $("#semSemEdxFour_uploaded").attr("src",url);
+                  $("#semSemEdxFour-delete-container").append('<a href="#" class="list-font btn btn-danger" id="semSemEdxFour_delete">DELETE</a>');
+
                 }
               }
-            $("#semSemEdxFiles4").val(semSemEdxFiles4);
-            $("#semSemEdxFiles4_id").val(semSemEdxFiles4Id);
-            document.getElementById("upload_semSemEdxFiles4").innerHTML = filename; //no jquery
-            Session.set("semSemEdxFiles4_id", semSemEdxFiles4Id);
+            }); // end of wait
           }
         });
      });
    },
+   ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+  'click #semSemEdxFile_delete':function(event){
+    event.preventDefault();
+    var id = document.getElementById("semSemEdxFiles5_id").value;
+    Data.remove(id);
+    //reset eeeveryyyythiiiinnnng
+    $("#semSemEdxFiles5").val('');
+    $("#semSemEdxFiles5_id").val('');
+    document.getElementById("semSemEdxFiles_name").innerHTML = "";
+    document.getElementById("upload_semSemEdxFiles5").innerHTML = "(.zip)";
+    $("#semSemEdxFile_delete").remove();
+  },
   'change #semSemEdxFiles5_label': function(event, template) {
     event.preventDefault();
+
       FS.Utility.eachFile(event, function(file) {
-        var semSemEdxFiles5 = $("#semSemEdxFiles5").val();
-        var noValue = "";
-        if(semSemEdxFiles5 != noValue){
-          console.log("nema dzabe ni u stare babe")
-          Data.remove(Session.get("semSemEdxFiles5_id"));
+
+        var imgId = document.getElementById("semSemEdxFiles5_id").value;
+        if(imgId){
+          Data.remove(imgId);
+          //reset eeeveryyyythiiiinnnng
+          $("#semSemEdxFiles5").val('');
+          $("#semSemEdxFiles5_id").val('');
+          document.getElementById("semSemEdxFiles_name").innerHTML = "";
+          document.getElementById("upload_semSemEdxFiles5").innerHTML = "(.zip)";
+          $("#semSemEdxFile_delete").remove();
         }
+
         Data.insert(file, function (err, fileObj) {
           if (err){
              console.log("hendlam eror - "+err);
           } else {
-             // grabbing url and placing it for gallery img_front value
-            var semSemEdxFiles5 = "/cfs/files/data/" + fileObj._id +"/data?store=data";
-            var semSemEdxFiles5Id = fileObj._id;
+            // grabbing url and placing it for gallery img_front value
+            var files = "/cfs/files/data/" + fileObj._id +"/data?store=data";
+            var filesId = fileObj._id;
+            $("#semSemEdxFiles5").val(files);
+            $("#semSemEdxFiles5_id").val(filesId);
+            Session.set("semSemEdxFiles5_id", filesId);
 
-            var fullPath = document.getElementById("semSemEdxFiles5_label").value; //jquery a "no go" lol
-            if (fullPath) {
-                var startIndex = (fullPath.indexOf('\\') >= 0 ? fullPath.lastIndexOf('\\') : fullPath.lastIndexOf('/'));
-                var filename = fullPath.substring(startIndex);
-                if (filename.indexOf('\\') === 0 || filename.indexOf('/') === 0) {
-                    filename = filename.substring(1);
+            // track progress of upload
+            $("#semSemEdxFiles_name").append('<div class="progress"><div class="progress-bar progress-bar-custom" id="semSemEdxFive_progress" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width:0%;"></div></div>');
+            var progress = setInterval(function () {
+                            var result = fileObj.uploadProgress();
+                            if( fileObj.uploadProgress() === 100 
+                                && fileObj.hasStored('data') ) {  
+                                clearInterval(progress);
+                                $("#semSemEdxFive_progress").remove();
+                            }
+                            console.log(result);
+                            $("#semSemEdxFive_progress").attr("aria-valuenow",result).css("width",result+"%");
+                        }, 100);
+            
+            // wait for upload to finish than display img
+            Data.find(fileObj._id).observe({
+              changed: function(file, oldFile) {
+                if (file.url() !== null) { // waiting for unFinished callfiles
+                  var url = file.url();
+                  var name = file.name();
+                  document.getElementById("semSemEdxFiles_name").innerHTML = "new"; 
+                  $("#semSemEdxFiles-delete-container").append('<a href="#" class="list-font btn btn-danger" id="semSemEdxFile_delete">DELETE ADDITIONAL FILES</a>');
+
                 }
               }
-            $("#semSemEdxFiles5").val(semSemEdxFiles5);
-            $("#semSemEdxFiles5_id").val(semSemEdxFiles5Id);
-            document.getElementById("upload_semSemEdxFiles5").innerHTML = filename; //no jquery
-            Session.set("semSemEdxFiles5_id", semSemEdxFiles5Id);
+            }); // end of wait
           }
         });
      });

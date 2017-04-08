@@ -29,7 +29,7 @@ GalleryIndex = new EasySearch.Index({
       } 
 
       //selector = {"type":"other"};
-      console.log(selector);
+      //console.log(selector);
       return selector;
     },
     sort: function (searchObject, options) {
@@ -73,7 +73,7 @@ UsersIndex = new EasySearch.Index({
   collection: Meteor.users,
   use: 'mongo-db',
   name:'usersDatabase',
-  fields: ['profile.full_name', 'profile.institution', 'username','profile.email'],
+  fields: ['profile.full_name', 'profile.institution', 'username','profile.email','emails'],
   engine: new EasySearch.MongoDB({
     selector: function(searchObject, options, aggregation) {
       const selector = this.defaultConfiguration().selector(searchObject, options, aggregation);
@@ -144,7 +144,7 @@ ModeratorIndex = new EasySearch.Index({
       }
 
       //selector = {"type":"other"};
-      console.log(selector);
+      //console.log(selector);
       return selector;
     },
     sort: function (searchObject, options) {

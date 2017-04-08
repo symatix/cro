@@ -1,165 +1,374 @@
 Template.files_methods_irpIrrIrfc.events({
+  ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+  'click #irpIrrIrfcOne_delete':function(event){
+    event.preventDefault();
+    var id = document.getElementById("irpIrrIrfcFiles1_id").value;
+    Data.remove(id);
+    //reset eeeveryyyythiiiinnnng
+    $("#irpIrrIrfcFiles1").val('');
+    $("#irpIrrIrfcFiles1_id").val('');
+    document.getElementById("irpIrrIrfcOne_name").innerHTML = "";
+    document.getElementById("irpIrrIrfcOne_title").innerHTML = "";
+    $("#irpIrrIrfcOne_uploaded").attr("src","");
+    $("#irpIrrIrfcOne_delete").remove();
+  },
   'change #irpIrrIrfcFiles1_label': function(event, template) {
     event.preventDefault();
+
       FS.Utility.eachFile(event, function(file) {
-        var irpIrrIrfcFiles1 = $("#irpIrrIrfcFiles1").val();
-        var noValue = "";
-        if(irpIrrIrfcFiles1 != noValue){
-          console.log("nema dzabe ni u stare babe")
-          Data.remove(Session.get("irpIrrIrfcFiles1_id"));
+
+        var imgId = document.getElementById("irpIrrIrfcFiles1_id").value;
+        if(imgId){
+          Data.remove(imgId);
+          //reset eeeveryyyythiiiinnnng
+          $("#irpIrrIrfcFiles1").val('');
+          $("#irpIrrIrfcFiles1_id").val('');
+          document.getElementById("irpIrrIrfcOne_name").innerHTML = "";
+          document.getElementById("irpIrrIrfcOne_title").innerHTML = "";
+          $("#irpIrrIrfcOne_uploaded").attr("src","");
+          $("#irpIrrIrfcOne_delete").remove();
         }
+
         Data.insert(file, function (err, fileObj) {
           if (err){
              console.log("hendlam eror - "+err);
           } else {
-             // grabbing url and placing it for gallery img_front value
-            var irpIrrIrfcFiles1 = "/cfs/files/data/" + fileObj._id +"/data?store=data";
-            var irpIrrIrfcFiles1Id = fileObj._id;
 
-            var fullPath = document.getElementById("irpIrrIrfcFiles1_label").value; //jquery a "no go" lol
-            if (fullPath) {
-                var startIndex = (fullPath.indexOf('\\') >= 0 ? fullPath.lastIndexOf('\\') : fullPath.lastIndexOf('/'));
-                var filename = fullPath.substring(startIndex);
-                if (filename.indexOf('\\') === 0 || filename.indexOf('/') === 0) {
-                    filename = filename.substring(1);
+             // grabbing url and placing it for gallery img_front value
+            var photoOne = "/cfs/files/data/" + fileObj._id +"/data?store=data";
+            var photoOneId = fileObj._id;
+            $("#irpIrrIrfcFiles1").val(photoOne);
+            $("#irpIrrIrfcFiles1_id").val(photoOneId);
+            Session.set("irpIrrIrfcFiles1_id", photoOneId);
+            document.getElementById("irpIrrIrfcOne_title").innerHTML = "status: uploading"; 
+
+            // track progress of upload
+            $("#irpIrrIrfcOne_name").append('<div class="progress"><div class="progress-bar progress-bar-custom" id="irpIrrIrfcOne_progress" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width:0%;"></div></div>');
+            var progress = setInterval(function () {
+                            var result = fileObj.uploadProgress();
+                            if( fileObj.uploadProgress() === 100 
+                                && fileObj.hasStored('data') ) {  
+                                clearInterval(progress);
+                                $("#irpIrrIrfcOne_progress").remove();
+                            }
+                            console.log(result);
+                            $("#irpIrrIrfcOne_progress").attr("aria-valuenow",result).css("width",result+"%");
+                        }, 100);
+
+
+            // wait for upload to finish than display img
+            Data.find(fileObj._id).observe({
+              changed: function(file, oldFile) {
+                if (file.url() !== null) { // waiting for unFinished callback
+                  var url = file.url();
+                  var name = file.name();
+
+                  document.getElementById("irpIrrIrfcOne_title").innerHTML = "Picture one";
+                  document.getElementById("irpIrrIrfcOne_name").innerHTML = "new";
+                  $("#irpIrrIrfcOne_uploaded").attr("src",url);
+                  $("#irpIrrIrfcOne-delete-container").append('<a href="#" class="list-font btn btn-danger" id="irpIrrIrfcOne_delete">DELETE</a>');
+
                 }
               }
-            $("#irpIrrIrfcFiles1").val(irpIrrIrfcFiles1);
-            $("#irpIrrIrfcFiles1_id").val(irpIrrIrfcFiles1Id);
-            document.getElementById("upload_irpIrrIrfcFiles1").innerHTML = filename; //no jquery
-            Session.set("irpIrrIrfcFiles1_id", irpIrrIrfcFiles1Id);
+            }); // end of wait
           }
         });
      });
    },
+   ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+  'click #irpIrrIrfcTwo_delete':function(event){
+    event.preventDefault();
+    var id = document.getElementById("irpIrrIrfcFiles2_id").value;
+    Data.remove(id);
+    //reset eeeveryyyythiiiinnnng
+    $("#irpIrrIrfcFiles2").val('');
+    $("#irpIrrIrfcFiles2_id").val('');
+    document.getElementById("irpIrrIrfcTwo_name").innerHTML = "";
+    document.getElementById("irpIrrIrfcTwo_title").innerHTML = "";
+    $("#irpIrrIrfcTwo_uploaded").attr("src","");
+    $("#irpIrrIrfcTwo_delete").remove();
+  },
+
   'change #irpIrrIrfcFiles2_label': function(event, template) {
     event.preventDefault();
+
       FS.Utility.eachFile(event, function(file) {
-        var irpIrrIrfcFiles2 = $("#irpIrrIrfcFiles2").val();
-        var noValue = "";
-        if(irpIrrIrfcFiles2 != noValue){
-          console.log("nema dzabe ni u stare babe")
-          Data.remove(Session.get("irpIrrIrfcFiles2_id"));
+
+        var imgId = document.getElementById("irpIrrIrfcFiles2_id").value;
+        if(imgId){
+          Data.remove(imgId);
+          //reset eeeveryyyythiiiinnnng
+          $("#irpIrrIrfcFiles2").val('');
+          $("#irpIrrIrfcFiles2_id").val('');
+          document.getElementById("irpIrrIrfcTwo_name").innerHTML = "";
+          document.getElementById("irpIrrIrfcTwo_title").innerHTML = "";
+          $("#irpIrrIrfcTwo_uploaded").attr("src","");
+          $("#irpIrrIrfcTwo_delete").remove();
         }
+
         Data.insert(file, function (err, fileObj) {
           if (err){
              console.log("hendlam eror - "+err);
           } else {
-             // grabbing url and placing it for gallery img_front value
-            var irpIrrIrfcFiles2 = "/cfs/files/data/" + fileObj._id +"/data?store=data";
-            var irpIrrIrfcFiles2Id = fileObj._id;
 
-            var fullPath = document.getElementById("irpIrrIrfcFiles2_label").value; //jquery a "no go" lol
-            if (fullPath) {
-                var startIndex = (fullPath.indexOf('\\') >= 0 ? fullPath.lastIndexOf('\\') : fullPath.lastIndexOf('/'));
-                var filename = fullPath.substring(startIndex);
-                if (filename.indexOf('\\') === 0 || filename.indexOf('/') === 0) {
-                    filename = filename.substring(1);
+             // grabbing url and placing it for gallery img_front value
+            var photoTwo = "/cfs/files/data/" + fileObj._id +"/data?store=data";
+            var photoTwoId = fileObj._id;
+            $("#irpIrrIrfcFiles2").val(photoTwo);
+            $("#irpIrrIrfcFiles2_id").val(photoTwoId);
+            Session.set("irpIrrIrfcFiles2_id", photoTwoId);
+            document.getElementById("irpIrrIrfcTwo_title").innerHTML = "status: uploading"; 
+
+            // track progress of upload
+            $("#irpIrrIrfcTwo_name").append('<div class="progress"><div class="progress-bar progress-bar-custom" id="irpIrrIrfcTwo_progress" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width:0%;"></div></div>');
+            var progress = setInterval(function () {
+                            var result = fileObj.uploadProgress();
+                            if( fileObj.uploadProgress() === 100 
+                                && fileObj.hasStored('data') ) {  
+                                clearInterval(progress);
+                                $("#irpIrrIrfcTwo_progress").remove();
+                            }
+                            console.log(result);
+                            $("#irpIrrIrfcTwo_progress").attr("aria-valuenow",result).css("width",result+"%");
+                        }, 100);
+
+            // wait for upload to finish than display img
+            Data.find(fileObj._id).observe({
+              changed: function(file, oldFile) {
+                if (file.url() !== null) { // waiting for unFinished callback
+                  var url = file.url();
+                  var name = file.name();
+
+                  document.getElementById("irpIrrIrfcTwo_title").innerHTML = "Picture two";
+                  document.getElementById("irpIrrIrfcTwo_name").innerHTML = "new"; // set name in label
+                  $("#irpIrrIrfcTwo_uploaded").attr("src",url);
+                  $("#irpIrrIrfcTwo-delete-container").append('<a href="#" class="list-font btn btn-danger" id="irpIrrIrfcTwo_delete">DELETE</a>');
+
                 }
               }
-            $("#irpIrrIrfcFiles2").val(irpIrrIrfcFiles2);
-            $("#irpIrrIrfcFiles2_id").val(irpIrrIrfcFiles2Id);
-            document.getElementById("upload_irpIrrIrfcFiles2").innerHTML = filename; //no jquery
-            Session.set("irpIrrIrfcFiles2_id", irpIrrIrfcFiles2Id);
+            }); // end of wait
           }
         });
      });
    },
+   ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+  'click #irpIrrIrfcThree_delete':function(event){
+    event.preventDefault();
+    var id = document.getElementById("irpIrrIrfcFiles3_id").value;
+    Data.remove(id);
+    //reset eeeveryyyythiiiinnnng
+    $("#irpIrrIrfcFiles3").val('');
+    $("#irpIrrIrfcFiles3_id").val('');
+    document.getElementById("irpIrrIrfcThree_name").innerHTML = "";
+    document.getElementById("irpIrrIrfcThree_title").innerHTML = "";
+    $("#irpIrrIrfcThree_uploaded").attr("src","");
+    $("#irpIrrIrfcThree_delete").remove();
+  },
+
   'change #irpIrrIrfcFiles3_label': function(event, template) {
     event.preventDefault();
+
       FS.Utility.eachFile(event, function(file) {
-        var irpIrrIrfcFiles3 = $("#irpIrrIrfcFiles3").val();
-        var noValue = "";
-        if(irpIrrIrfcFiles3 != noValue){
-          console.log("nema dzabe ni u stare babe")
-          Data.remove(Session.get("irpIrrIrfcFiles3_id"));
+
+
+        var imgId = document.getElementById("irpIrrIrfcFiles3_id").value;
+        if(imgId){
+          Data.remove(imgId);
+          //reset eeeveryyyythiiiinnnng
+          $("#irpIrrIrfcFiles3").val('');
+          $("#irpIrrIrfcFiles3_id").val('');
+          document.getElementById("irpIrrIrfcThree_name").innerHTML = "";
+          document.getElementById("irpIrrIrfcThree_title").innerHTML = "";
+          $("#irpIrrIrfcThree_uploaded").attr("src","");
+          $("#irpIrrIrfcThree_delete").remove();
         }
+
         Data.insert(file, function (err, fileObj) {
           if (err){
              console.log("hendlam eror - "+err);
           } else {
-             // grabbing url and placing it for gallery img_front value
-            var irpIrrIrfcFiles3 = "/cfs/files/data/" + fileObj._id +"/data?store=data";
-            var irpIrrIrfcFiles3Id = fileObj._id;
 
-            var fullPath = document.getElementById("irpIrrIrfcFiles3_label").value; //jquery a "no go" lol
-            if (fullPath) {
-                var startIndex = (fullPath.indexOf('\\') >= 0 ? fullPath.lastIndexOf('\\') : fullPath.lastIndexOf('/'));
-                var filename = fullPath.substring(startIndex);
-                if (filename.indexOf('\\') === 0 || filename.indexOf('/') === 0) {
-                    filename = filename.substring(1);
+             // grabbing url and placing it for gallery img_front value
+            var photoThree = "/cfs/files/data/" + fileObj._id +"/data?store=data";
+            var photoThreeId = fileObj._id;
+            $("#irpIrrIrfcFiles3").val(photoThree);
+            $("#irpIrrIrfcFiles3_id").val(photoThreeId);
+            Session.set("irpIrrIrfcFiles3_id", photoThreeId);
+            document.getElementById("irpIrrIrfcThree_title").innerHTML = "status: uploading"; 
+
+            // track progress of upload
+            $("#irpIrrIrfcThree_name").append('<div class="progress"><div class="progress-bar progress-bar-custom" id="irpIrrIrfcThree_progress" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width:0%;"></div></div>');
+            var progress = setInterval(function () {
+                            var result = fileObj.uploadProgress();
+                            if( fileObj.uploadProgress() === 100 
+                                && fileObj.hasStored('data') ) {  
+                                clearInterval(progress);
+                                $("#irpIrrIrfcThree_progress").remove();
+                            }
+                            console.log(result);
+                            $("#irpIrrIrfcThree_progress").attr("aria-valuenow",result).css("width",result+"%");
+                        }, 100);
+            
+            // wait for upload to finish than display img
+            Data.find(fileObj._id).observe({
+              changed: function(file, oldFile) {
+                if (file.url() !== null) { // waiting for unFinished callback
+                  var url = file.url();
+                  var name = file.name();
+
+                  document.getElementById("irpIrrIrfcThree_title").innerHTML = "Picture three";
+                  document.getElementById("irpIrrIrfcThree_name").innerHTML = "new"; // set name in label
+                  $("#irpIrrIrfcThree_uploaded").attr("src",url);
+                  $("#irpIrrIrfcThree-delete-container").append('<a href="#" class="list-font btn btn-danger" id="irpIrrIrfcThree_delete">DELETE</a>');
+
                 }
               }
-            $("#irpIrrIrfcFiles3").val(irpIrrIrfcFiles3);
-            $("#irpIrrIrfcFiles3_id").val(irpIrrIrfcFiles3Id);
-            document.getElementById("upload_irpIrrIrfcFiles3").innerHTML = filename; //no jquery
-            Session.set("irpIrrIrfcFiles3_id", irpIrrIrfcFiles3Id);
+            }); // end of wait
           }
         });
      });
    },
+   ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+  'click #irpIrrIrfcFour_delete':function(event){
+    event.preventDefault();
+    var id = document.getElementById("irpIrrIrfcFiles4_id").value;
+    Data.remove(id);
+    //reset eeeveryyyythiiiinnnng
+    $("#irpIrrIrfcFiles4").val('');
+    $("#irpIrrIrfcFiles4_id").val('');
+    document.getElementById("irpIrrIrfcFour_name").innerHTML = "";
+    document.getElementById("irpIrrIrfcFour_title").innerHTML = "";
+    $("#irpIrrIrfcFour_uploaded").attr("src","");
+    $("#irpIrrIrfcFour_delete").remove();
+  },
+
   'change #irpIrrIrfcFiles4_label': function(event, template) {
     event.preventDefault();
+
       FS.Utility.eachFile(event, function(file) {
-        var irpIrrIrfcFiles4 = $("#irpIrrIrfcFiles4").val();
-        var noValue = "";
-        if(irpIrrIrfcFiles4 != noValue){
-          console.log("nema dzabe ni u stare babe")
-          Data.remove(Session.get("irpIrrIrfcFiles4_id"));
+
+
+        var imgId = document.getElementById("irpIrrIrfcFiles4_id").value;
+        if(imgId){
+          Data.remove(imgId);
+          //reset eeeveryyyythiiiinnnng
+          $("#irpIrrIrfcFiles4").val('');
+          $("#irpIrrIrfcFiles4_id").val('');
+          document.getElementById("irpIrrIrfcFour_name").innerHTML = "";
+          document.getElementById("irpIrrIrfcFour_title").innerHTML = "";
+          $("#irpIrrIrfcFour_uploaded").attr("src","");
+          $("#irpIrrIrfcFour_delete").remove();
         }
+
         Data.insert(file, function (err, fileObj) {
           if (err){
              console.log("hendlam eror - "+err);
           } else {
-             // grabbing url and placing it for gallery img_front value
-            var irpIrrIrfcFiles4 = "/cfs/files/data/" + fileObj._id +"/data?store=data";
-            var irpIrrIrfcFiles4Id = fileObj._id;
 
-            var fullPath = document.getElementById("irpIrrIrfcFiles4_label").value; //jquery a "no go" lol
-            if (fullPath) {
-                var startIndex = (fullPath.indexOf('\\') >= 0 ? fullPath.lastIndexOf('\\') : fullPath.lastIndexOf('/'));
-                var filename = fullPath.substring(startIndex);
-                if (filename.indexOf('\\') === 0 || filename.indexOf('/') === 0) {
-                    filename = filename.substring(1);
+             // grabbing url and placing it for gallery img_front value
+            var photoFour = "/cfs/files/data/" + fileObj._id +"/data?store=data";
+            var photoFourId = fileObj._id;
+            $("#irpIrrIrfcFiles4").val(photoFour);
+            $("#irpIrrIrfcFiles4_id").val(photoFourId);
+            Session.set("irpIrrIrfcFiles4_id", photoFourId);
+            document.getElementById("irpIrrIrfcFour_title").innerHTML = "status: uploading"; 
+
+            // track progress of upload
+            $("#irpIrrIrfcFour_name").append('<div class="progress"><div class="progress-bar progress-bar-custom" id="irpIrrIrfcFour_progress" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width:0%;"></div></div>');
+            var progress = setInterval(function () {
+                            var result = fileObj.uploadProgress();
+                            if( fileObj.uploadProgress() === 100 
+                                && fileObj.hasStored('data') ) {  
+                                clearInterval(progress);
+                                $("#irpIrrIrfcFour_progress").remove();
+                            }
+                            console.log(result);
+                            $("#irpIrrIrfcFour_progress").attr("aria-valuenow",result).css("width",result+"%");
+                        }, 100);
+            
+            // wait for upload to finish than display img
+            Data.find(fileObj._id).observe({
+              changed: function(file, oldFile) {
+                if (file.url() !== null) { // waiting for unFinished callback
+                  var url = file.url();
+                  var name = file.name();
+
+                  document.getElementById("irpIrrIrfcFour_title").innerHTML = "Picture four";
+                  document.getElementById("irpIrrIrfcFour_name").innerHTML = "new"; // set name in label
+                  $("#irpIrrIrfcFour_uploaded").attr("src",url);
+                  $("#irpIrrIrfcFour-delete-container").append('<a href="#" class="list-font btn btn-danger" id="irpIrrIrfcFour_delete">DELETE</a>');
+
                 }
               }
-            $("#irpIrrIrfcFiles4").val(irpIrrIrfcFiles4);
-            $("#irpIrrIrfcFiles4_id").val(irpIrrIrfcFiles4Id);
-            document.getElementById("upload_irpIrrIrfcFiles4").innerHTML = filename; //no jquery
-            Session.set("irpIrrIrfcFiles4_id", irpIrrIrfcFiles4Id);
+            }); // end of wait
           }
         });
      });
    },
+   ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+  'click #irpIrrIrfcFile_delete':function(event){
+    event.preventDefault();
+    var id = document.getElementById("irpIrrIrfcFiles5_id").value;
+    Data.remove(id);
+    //reset eeeveryyyythiiiinnnng
+    $("#irpIrrIrfcFiles5").val('');
+    $("#irpIrrIrfcFiles5_id").val('');
+    document.getElementById("irpIrrIrfcFiles_name").innerHTML = "";
+    document.getElementById("upload_irpIrrIrfcFiles5").innerHTML = "(.zip)";
+    $("#irpIrrIrfcFile_delete").remove();
+  },
   'change #irpIrrIrfcFiles5_label': function(event, template) {
     event.preventDefault();
+
       FS.Utility.eachFile(event, function(file) {
-        var irpIrrIrfcFiles5 = $("#irpIrrIrfcFiles5").val();
-        var noValue = "";
-        if(irpIrrIrfcFiles5 != noValue){
-          console.log("nema dzabe ni u stare babe")
-          Data.remove(Session.get("irpIrrIrfcFiles5_id"));
+
+        var imgId = document.getElementById("irpIrrIrfcFiles5_id").value;
+        if(imgId){
+          Data.remove(imgId);
+          //reset eeeveryyyythiiiinnnng
+          $("#irpIrrIrfcFiles5").val('');
+          $("#irpIrrIrfcFiles5_id").val('');
+          document.getElementById("irpIrrIrfcFiles_name").innerHTML = "";
+          document.getElementById("upload_irpIrrIrfcFiles5").innerHTML = "(.zip)";
+          $("#irpIrrIrfcFile_delete").remove();
         }
+
         Data.insert(file, function (err, fileObj) {
           if (err){
              console.log("hendlam eror - "+err);
           } else {
-             // grabbing url and placing it for gallery img_front value
-            var irpIrrIrfcFiles5 = "/cfs/files/data/" + fileObj._id +"/data?store=data";
-            var irpIrrIrfcFiles5Id = fileObj._id;
+            // grabbing url and placing it for gallery img_front value
+            var files = "/cfs/files/data/" + fileObj._id +"/data?store=data";
+            var filesId = fileObj._id;
+            $("#irpIrrIrfcFiles5").val(files);
+            $("#irpIrrIrfcFiles5_id").val(filesId);
+            Session.set("irpIrrIrfcFiles5_id", filesId);
 
-            var fullPath = document.getElementById("irpIrrIrfcFiles5_label").value; //jquery a "no go" lol
-            if (fullPath) {
-                var startIndex = (fullPath.indexOf('\\') >= 0 ? fullPath.lastIndexOf('\\') : fullPath.lastIndexOf('/'));
-                var filename = fullPath.substring(startIndex);
-                if (filename.indexOf('\\') === 0 || filename.indexOf('/') === 0) {
-                    filename = filename.substring(1);
+            // track progress of upload
+            $("#irpIrrIrfcFiles_name").append('<div class="progress"><div class="progress-bar progress-bar-custom" id="irpIrrIrfcFive_progress" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width:0%;"></div></div>');
+            var progress = setInterval(function () {
+                            var result = fileObj.uploadProgress();
+                            if( fileObj.uploadProgress() === 100 
+                                && fileObj.hasStored('data') ) {  
+                                clearInterval(progress);
+                                $("#irpIrrIrfcFive_progress").remove();
+                            }
+                            console.log(result);
+                            $("#irpIrrIrfcFive_progress").attr("aria-valuenow",result).css("width",result+"%");
+                        }, 100);
+            
+            // wait for upload to finish than display img
+            Data.find(fileObj._id).observe({
+              changed: function(file, oldFile) {
+                if (file.url() !== null) { // waiting for unFinished callfiles
+                  var url = file.url();
+                  var name = file.name();
+                  document.getElementById("irpIrrIrfcFiles_name").innerHTML = "new"; 
+                  $("#irpIrrIrfcFiles-delete-container").append('<a href="#" class="list-font btn btn-danger" id="irpIrrIrfcFile_delete">DELETE ADDITIONAL FILES</a>');
+
                 }
               }
-            $("#irpIrrIrfcFiles5").val(irpIrrIrfcFiles5);
-            $("#irpIrrIrfcFiles5_id").val(irpIrrIrfcFiles5Id);
-            document.getElementById("upload_irpIrrIrfcFiles5").innerHTML = filename; //no jquery
-            Session.set("irpIrrIrfcFiles5_id", irpIrrIrfcFiles5Id);
+            }); // end of wait
           }
         });
      });

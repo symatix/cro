@@ -1,0 +1,102 @@
+<template name="form_files_gc_ms_visual">
+    <div class="row visual-data">
+
+
+
+    <div class="col-xs-12 align-center">
+
+      <table border="0" cellspacing="0" cellpadding="0" class="table table-condensed list-font">
+
+      <tr class="noBorder">
+        <td class="upload-table-cell" id="gc_msOne_title">
+            {{#if details.methods.gc_ms.files.gc_msFiles1_id}}
+              Picture one
+            {{/if}}
+        </td>
+        <td class="upload-table-cell" id="gc_msTwo_title">
+            {{#if details.methods.gc_ms.files.gc_msFiles2_id}}
+              Picture two
+            {{/if}}
+        </td>
+        <td class="upload-table-cell" id="gc_msThree_title">
+            {{#if details.methods.gc_ms.files.gc_msFiles3_id}}
+              Picture three
+            {{/if}}
+        </td>
+        <td class="upload-table-cell" id="gc_msFour_title">
+            {{#if details.methods.gc_ms.files.gc_msFiles4_id}}
+              Picture four
+            {{/if}}
+        </td>
+      </tr>
+
+
+      <tr class="noBorder new-file">
+        <td class="upload-table-cell" id="gc_msOne_name">
+        </td>
+        <td class="upload-table-cell" id="gc_msTwo_name">
+        </td>
+        <td class="upload-table-cell" id="gc_msThree_name">
+        </td>
+        <td class="upload-table-cell" id="gc_msFour_name">
+        </td>
+      </tr>
+
+
+      <tr class="noBorder">
+        <td class="upload-table-cell">
+          <img class="img-upload-sm" src="{{#if details.methods.gc_ms.files.gc_msFiles1}}{{details.methods.gc_ms.files.gc_msFiles1}}{{/if}}" id="gc_msOne_uploaded">
+        </td>
+        <td class="upload-table-cell">
+          <img class="img-upload-sm" src="{{#if details.methods.gc_ms.files.gc_msFiles2}}{{details.methods.gc_ms.files.gc_msFiles2}}{{/if}}" id="gc_msTwo_uploaded">
+        </td>
+        <td class="upload-table-cell">
+          <img class="img-upload-sm" src="{{#if details.methods.gc_ms.files.gc_msFiles3}}{{details.methods.gc_ms.files.gc_msFiles3}}{{/if}}" id="gc_msThree_uploaded">
+        </td>
+        <td class="upload-table-cell">
+          <img class="img-upload-sm" src="{{#if details.methods.gc_ms.files.gc_msFiles4}}{{details.methods.gc_ms.files.gc_msFiles4}}{{/if}}" id="gc_msFour_uploaded">
+        </td>
+      </tr>
+
+
+      <tr class="noBorder">
+        <td class="upload-table-cell" id="gc_msOne-delete-container">
+          {{#if details.methods.gc_ms.files.gc_msFiles1_id}}
+            <a href="#" class="list-font btn btn-danger" id="gc_msOne_delete">DELETE</a>
+          {{/if}}
+        </td>
+        <td class="upload-table-cell" id="gc_msTwo-delete-container">
+          {{#if details.methods.gc_ms.files.gc_msFiles2_id}}
+            <a href="#" class="list-font btn btn-danger" id="gc_msTwo_delete">DELETE</a>
+          {{/if}}
+        </td>
+        <td class="upload-table-cell" id="gc_msThree-delete-container">
+          {{#if details.methods.gc_ms.files.gc_msFiles3_id}}
+            <a href="#" class="list-font btn btn-danger" id="gc_msThree_delete">DELETE</a>
+          {{/if}}
+        </td>
+        <td class="upload-table-cell" id="gc_msFour-delete-container">
+          {{#if details.methods.gc_ms.files.gc_msFiles4_id}}
+            <a href="#" class="list-font btn btn-danger" id="gc_msFour_delete">DELETE</a>
+          {{/if}}
+        </td>
+      </tr>
+
+
+    </table>
+  </div>
+
+      <div class="col-xs-12 col-sm-12 list-font align-center">
+        <br/>
+        <span id="gc_msFiles-delete-container">
+          {{#if details.methods.gc_ms.files.gc_msFiles5_id}}
+            <a href="#" class="list-font btn btn-danger" id="gc_msFile_delete">DELETE ADDITIONAL FILES</a>
+          {{/if}}
+        </span>
+        <br/>
+        <br/>
+        <span class="list-font new-file" id="gc_msFiles_name"></span>
+      </div>
+
+    </div>
+</template>

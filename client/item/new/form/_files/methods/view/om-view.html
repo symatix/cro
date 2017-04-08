@@ -1,0 +1,102 @@
+<template name="form_files_om_visual">
+    <div class="row visual-data">
+
+
+
+    <div class="col-xs-12 align-center">
+
+      <table border="0" cellspacing="0" cellpadding="0" class="table table-condensed list-font">
+
+      <tr class="noBorder">
+        <td class="upload-table-cell" id="omOne_title">
+            {{#if details.methods.om.files.omFiles1_id}}
+              Picture one
+            {{/if}}
+        </td>
+        <td class="upload-table-cell" id="omTwo_title">
+            {{#if details.methods.om.files.omFiles2_id}}
+              Picture two
+            {{/if}}
+        </td>
+        <td class="upload-table-cell" id="omThree_title">
+            {{#if details.methods.om.files.omFiles3_id}}
+              Picture three
+            {{/if}}
+        </td>
+        <td class="upload-table-cell" id="omFour_title">
+            {{#if details.methods.om.files.omFiles4_id}}
+              Picture four
+            {{/if}}
+        </td>
+      </tr>
+
+
+      <tr class="noBorder new-file">
+        <td class="upload-table-cell" id="omOne_name">
+        </td>
+        <td class="upload-table-cell" id="omTwo_name">
+        </td>
+        <td class="upload-table-cell" id="omThree_name">
+        </td>
+        <td class="upload-table-cell" id="omFour_name">
+        </td>
+      </tr>
+
+
+      <tr class="noBorder">
+        <td class="upload-table-cell">
+          <img class="img-upload-sm" src="{{#if details.methods.om.files.omFiles1}}{{details.methods.om.files.omFiles1}}{{/if}}" id="omOne_uploaded">
+        </td>
+        <td class="upload-table-cell">
+          <img class="img-upload-sm" src="{{#if details.methods.om.files.omFiles2}}{{details.methods.om.files.omFiles2}}{{/if}}" id="omTwo_uploaded">
+        </td>
+        <td class="upload-table-cell">
+          <img class="img-upload-sm" src="{{#if details.methods.om.files.omFiles3}}{{details.methods.om.files.omFiles3}}{{/if}}" id="omThree_uploaded">
+        </td>
+        <td class="upload-table-cell">
+          <img class="img-upload-sm" src="{{#if details.methods.om.files.omFiles4}}{{details.methods.om.files.omFiles4}}{{/if}}" id="omFour_uploaded">
+        </td>
+      </tr>
+
+
+      <tr class="noBorder">
+        <td class="upload-table-cell" id="omOne-delete-container">
+          {{#if details.methods.om.files.omFiles1_id}}
+            <a href="#" class="list-font btn btn-danger" id="omOne_delete">DELETE</a>
+          {{/if}}
+        </td>
+        <td class="upload-table-cell" id="omTwo-delete-container">
+          {{#if details.methods.om.files.omFiles2_id}}
+            <a href="#" class="list-font btn btn-danger" id="omTwo_delete">DELETE</a>
+          {{/if}}
+        </td>
+        <td class="upload-table-cell" id="omThree-delete-container">
+          {{#if details.methods.om.files.omFiles3_id}}
+            <a href="#" class="list-font btn btn-danger" id="omThree_delete">DELETE</a>
+          {{/if}}
+        </td>
+        <td class="upload-table-cell" id="omFour-delete-container">
+          {{#if details.methods.om.files.omFiles4_id}}
+            <a href="#" class="list-font btn btn-danger" id="omFour_delete">DELETE</a>
+          {{/if}}
+        </td>
+      </tr>
+
+
+    </table>
+  </div>
+
+      <div class="col-xs-12 col-sm-12 list-font align-center">
+        <br/>
+        <span id="omFiles-delete-container">
+          {{#if details.methods.om.files.omFiles5_id}}
+            <a href="#" class="list-font btn btn-danger" id="omFile_delete">DELETE ADDITIONAL FILES</a>
+          {{/if}}
+        </span>
+        <br/>
+        <br/>
+        <span class="list-font new-file" id="omFiles_name"></span>
+      </div>
+
+    </div>
+</template>

@@ -1,16 +1,29 @@
 import { Meteor } from 'meteor/meteor';
 
 Meteor.startup(() => {
+
+	// set up email
+	var uMail = encodeURIComponent("croartia.db@gmail.com");
+	var pMail = encodeURIComponent("croartia.123");
+	var server = "smtp.gmail.com";
+	var port = 465;
+
+  	process.env.MAIL_URL = 'smtp://' + uMail + ':' + pMail + '@' + server + ':' + port;
+	Accounts.emailTemplates.siteName = 'croARTia';
+	Accounts.emailTemplates.from = 'croARTia Admin <admin@croartia.org>';
+
 	if(Meteor.users.find().count() === 0){
+
 		Accounts.createUser({
 		    	username:"admin",
 		        password: "admin",
+		        email: "croartia@gmail.com",
 		        profile:{
 		        	isAdmin:true,
 					visible:0,
 		        	full_name: "admin",
-		        	email: "admin@prospero.com",
-		        	institution: "Prospero",
+		        	email: "croartia@gmail.com",
+		        	institution: "croARTia",
 		       		telephone: "091 / 555 - 007"
 		        }
 		});

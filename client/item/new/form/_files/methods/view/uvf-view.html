@@ -1,0 +1,102 @@
+<template name="form_files_uvf_visual">
+    <div class="row visual-data">
+
+
+
+    <div class="col-xs-12 align-center">
+
+      <table border="0" cellspacing="0" cellpadding="0" class="table table-condensed list-font">
+
+      <tr class="noBorder">
+        <td class="upload-table-cell" id="uvfOne_title">
+            {{#if details.methods.uvf.files.uvfFiles1_id}}
+              Picture one
+            {{/if}}
+        </td>
+        <td class="upload-table-cell" id="uvfTwo_title">
+            {{#if details.methods.uvf.files.uvfFiles2_id}}
+              Picture two
+            {{/if}}
+        </td>
+        <td class="upload-table-cell" id="uvfThree_title">
+            {{#if details.methods.uvf.files.uvfFiles3_id}}
+              Picture three
+            {{/if}}
+        </td>
+        <td class="upload-table-cell" id="uvfFour_title">
+            {{#if details.methods.uvf.files.uvfFiles4_id}}
+              Picture four
+            {{/if}}
+        </td>
+      </tr>
+
+
+      <tr class="noBorder new-file">
+        <td class="upload-table-cell" id="uvfOne_name">
+        </td>
+        <td class="upload-table-cell" id="uvfTwo_name">
+        </td>
+        <td class="upload-table-cell" id="uvfThree_name">
+        </td>
+        <td class="upload-table-cell" id="uvfFour_name">
+        </td>
+      </tr>
+
+
+      <tr class="noBorder">
+        <td class="upload-table-cell">
+          <img class="img-upload-sm" src="{{#if details.methods.uvf.files.uvfFiles1}}{{details.methods.uvf.files.uvfFiles1}}{{/if}}" id="uvfOne_uploaded">
+        </td>
+        <td class="upload-table-cell">
+          <img class="img-upload-sm" src="{{#if details.methods.uvf.files.uvfFiles2}}{{details.methods.uvf.files.uvfFiles2}}{{/if}}" id="uvfTwo_uploaded">
+        </td>
+        <td class="upload-table-cell">
+          <img class="img-upload-sm" src="{{#if details.methods.uvf.files.uvfFiles3}}{{details.methods.uvf.files.uvfFiles3}}{{/if}}" id="uvfThree_uploaded">
+        </td>
+        <td class="upload-table-cell">
+          <img class="img-upload-sm" src="{{#if details.methods.uvf.files.uvfFiles4}}{{details.methods.uvf.files.uvfFiles4}}{{/if}}" id="uvfFour_uploaded">
+        </td>
+      </tr>
+
+
+      <tr class="noBorder">
+        <td class="upload-table-cell" id="uvfOne-delete-container">
+          {{#if details.methods.uvf.files.uvfFiles1_id}}
+            <a href="#" class="list-font btn btn-danger" id="uvfOne_delete">DELETE</a>
+          {{/if}}
+        </td>
+        <td class="upload-table-cell" id="uvfTwo-delete-container">
+          {{#if details.methods.uvf.files.uvfFiles2_id}}
+            <a href="#" class="list-font btn btn-danger" id="uvfTwo_delete">DELETE</a>
+          {{/if}}
+        </td>
+        <td class="upload-table-cell" id="uvfThree-delete-container">
+          {{#if details.methods.uvf.files.uvfFiles3_id}}
+            <a href="#" class="list-font btn btn-danger" id="uvfThree_delete">DELETE</a>
+          {{/if}}
+        </td>
+        <td class="upload-table-cell" id="uvfFour-delete-container">
+          {{#if details.methods.uvf.files.uvfFiles4_id}}
+            <a href="#" class="list-font btn btn-danger" id="uvfFour_delete">DELETE</a>
+          {{/if}}
+        </td>
+      </tr>
+
+
+    </table>
+  </div>
+
+      <div class="col-xs-12 col-sm-12 list-font align-center">
+        <br/>
+        <span id="uvfFiles-delete-container">
+          {{#if details.methods.uvf.files.uvfFiles5_id}}
+            <a href="#" class="list-font btn btn-danger" id="uvfFile_delete">DELETE ADDITIONAL FILES</a>
+          {{/if}}
+        </span>
+        <br/>
+        <br/>
+        <span class="list-font new-file" id="uvfFiles_name"></span>
+      </div>
+
+    </div>
+</template>

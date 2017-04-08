@@ -14,9 +14,10 @@
 
           {{#EasySearch.Each index=usersIndex }}  
     <div class="row dashed-border list-font" id="{{__originalId}}">
-        <div class="col-xs-12 col-sm-2 personal-data">
-          <h4>{{username}} }</h4>
-            <table class="user-details">
+        <div class="col-xs-12 col-sm-3 personal-data">
+          <h4>{{username}} }
+          </h4> 
+            <table class="user-full-details">
               <tr>
                 <td><i>Full name:</i></td>
                 <td>{{profile.full_name}}</td>
@@ -44,10 +45,13 @@
                 <a href="/admin/users/entry/{{__originalId}}">
                   <button class="btn btn-default btn-user-list">EDIT</button>
                 </a>
+                <a href="#" class="sendUserDetails">
+                  <button class="btn btn-default btn-user-list">RESEND</button>
+                </a>
                 <button class="btn btn-danger btn-user-list js-delete">DELETE</button>
                 <label class="fix-top">
-                  <i style="font-family:Helvetica;font-size:15px;color:gray;">check box to delete&emsp;</i>
                   <input id="safe-delete-{{__originalId}}" type="checkbox" value="">
+                  <i style="font-family:Helvetica;font-size:15px;color:gray;">confirm</i>
                 </label>
               {{/unless}}
         </div>
@@ -96,9 +100,9 @@
               </tr>
             </table>
         </div>
-          <div class="col-xs-12 col-sm-6 personal-data">
+          <div class="col-xs-12 col-sm-5 personal-data">
             <h4>last activity.{{lastEdit}}</h4>
-            <table class="user-details-entries">
+            <table class="">
               <tr style="font-size:18px">
                 <td><b>status</b></td>
                 <td><b>type</b></td>

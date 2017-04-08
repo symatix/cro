@@ -29,3 +29,4 @@ cfs:filesystem
 ostrio:meteor-root
 cfs:ui
 dburles:spacebars-tohtml
+email

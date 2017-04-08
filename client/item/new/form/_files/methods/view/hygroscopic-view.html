@@ -1,0 +1,102 @@
+<template name="form_files_hygroscopic_visual">
+    <div class="row visual-data">
+
+
+
+    <div class="col-xs-12 align-center">
+
+      <table border="0" cellspacing="0" cellpadding="0" class="table table-condensed list-font">
+
+      <tr class="noBorder">
+        <td class="upload-table-cell" id="hygroscopicOne_title">
+            {{#if details.methods.hygroscopic.files.hygroscopicFiles1_id}}
+              Picture one
+            {{/if}}
+        </td>
+        <td class="upload-table-cell" id="hygroscopicTwo_title">
+            {{#if details.methods.hygroscopic.files.hygroscopicFiles2_id}}
+              Picture two
+            {{/if}}
+        </td>
+        <td class="upload-table-cell" id="hygroscopicThree_title">
+            {{#if details.methods.hygroscopic.files.hygroscopicFiles3_id}}
+              Picture three
+            {{/if}}
+        </td>
+        <td class="upload-table-cell" id="hygroscopicFour_title">
+            {{#if details.methods.hygroscopic.files.hygroscopicFiles4_id}}
+              Picture four
+            {{/if}}
+        </td>
+      </tr>
+
+
+      <tr class="noBorder new-file">
+        <td class="upload-table-cell" id="hygroscopicOne_name">
+        </td>
+        <td class="upload-table-cell" id="hygroscopicTwo_name">
+        </td>
+        <td class="upload-table-cell" id="hygroscopicThree_name">
+        </td>
+        <td class="upload-table-cell" id="hygroscopicFour_name">
+        </td>
+      </tr>
+
+
+      <tr class="noBorder">
+        <td class="upload-table-cell">
+          <img class="img-upload-sm" src="{{#if details.methods.hygroscopic.files.hygroscopicFiles1}}{{details.methods.hygroscopic.files.hygroscopicFiles1}}{{/if}}" id="hygroscopicOne_uploaded">
+        </td>
+        <td class="upload-table-cell">
+          <img class="img-upload-sm" src="{{#if details.methods.hygroscopic.files.hygroscopicFiles2}}{{details.methods.hygroscopic.files.hygroscopicFiles2}}{{/if}}" id="hygroscopicTwo_uploaded">
+        </td>
+        <td class="upload-table-cell">
+          <img class="img-upload-sm" src="{{#if details.methods.hygroscopic.files.hygroscopicFiles3}}{{details.methods.hygroscopic.files.hygroscopicFiles3}}{{/if}}" id="hygroscopicThree_uploaded">
+        </td>
+        <td class="upload-table-cell">
+          <img class="img-upload-sm" src="{{#if details.methods.hygroscopic.files.hygroscopicFiles4}}{{details.methods.hygroscopic.files.hygroscopicFiles4}}{{/if}}" id="hygroscopicFour_uploaded">
+        </td>
+      </tr>
+
+
+      <tr class="noBorder">
+        <td class="upload-table-cell" id="hygroscopicOne-delete-container">
+          {{#if details.methods.hygroscopic.files.hygroscopicFiles1_id}}
+            <a href="#" class="list-font btn btn-danger" id="hygroscopicOne_delete">DELETE</a>
+          {{/if}}
+        </td>
+        <td class="upload-table-cell" id="hygroscopicTwo-delete-container">
+          {{#if details.methods.hygroscopic.files.hygroscopicFiles2_id}}
+            <a href="#" class="list-font btn btn-danger" id="hygroscopicTwo_delete">DELETE</a>
+          {{/if}}
+        </td>
+        <td class="upload-table-cell" id="hygroscopicThree-delete-container">
+          {{#if details.methods.hygroscopic.files.hygroscopicFiles3_id}}
+            <a href="#" class="list-font btn btn-danger" id="hygroscopicThree_delete">DELETE</a>
+          {{/if}}
+        </td>
+        <td class="upload-table-cell" id="hygroscopicFour-delete-container">
+          {{#if details.methods.hygroscopic.files.hygroscopicFiles4_id}}
+            <a href="#" class="list-font btn btn-danger" id="hygroscopicFour_delete">DELETE</a>
+          {{/if}}
+        </td>
+      </tr>
+
+
+    </table>
+  </div>
+
+      <div class="col-xs-12 col-sm-12 list-font align-center">
+        <br/>
+        <span id="hygroscopicFiles-delete-container">
+          {{#if details.methods.hygroscopic.files.hygroscopicFiles5_id}}
+            <a href="#" class="list-font btn btn-danger" id="hygroscopicFile_delete">DELETE ADDITIONAL FILES</a>
+          {{/if}}
+        </span>
+        <br/>
+        <br/>
+        <span class="list-font new-file" id="hygroscopicFiles_name"></span>
+      </div>
+
+    </div>
+</template>

@@ -1,0 +1,102 @@
+<template name="form_files_ft_ir_visual">
+    <div class="row visual-data">
+
+
+
+    <div class="col-xs-12 align-center">
+
+      <table border="0" cellspacing="0" cellpadding="0" class="table table-condensed list-font">
+
+      <tr class="noBorder">
+        <td class="upload-table-cell" id="ft_irOne_title">
+            {{#if details.methods.ft_ir.files.ft_irFiles1_id}}
+              Picture one
+            {{/if}}
+        </td>
+        <td class="upload-table-cell" id="ft_irTwo_title">
+            {{#if details.methods.ft_ir.files.ft_irFiles2_id}}
+              Picture two
+            {{/if}}
+        </td>
+        <td class="upload-table-cell" id="ft_irThree_title">
+            {{#if details.methods.ft_ir.files.ft_irFiles3_id}}
+              Picture three
+            {{/if}}
+        </td>
+        <td class="upload-table-cell" id="ft_irFour_title">
+            {{#if details.methods.ft_ir.files.ft_irFiles4_id}}
+              Picture four
+            {{/if}}
+        </td>
+      </tr>
+
+
+      <tr class="noBorder new-file">
+        <td class="upload-table-cell" id="ft_irOne_name">
+        </td>
+        <td class="upload-table-cell" id="ft_irTwo_name">
+        </td>
+        <td class="upload-table-cell" id="ft_irThree_name">
+        </td>
+        <td class="upload-table-cell" id="ft_irFour_name">
+        </td>
+      </tr>
+
+
+      <tr class="noBorder">
+        <td class="upload-table-cell">
+          <img class="img-upload-sm" src="{{#if details.methods.ft_ir.files.ft_irFiles1}}{{details.methods.ft_ir.files.ft_irFiles1}}{{/if}}" id="ft_irOne_uploaded">
+        </td>
+        <td class="upload-table-cell">
+          <img class="img-upload-sm" src="{{#if details.methods.ft_ir.files.ft_irFiles2}}{{details.methods.ft_ir.files.ft_irFiles2}}{{/if}}" id="ft_irTwo_uploaded">
+        </td>
+        <td class="upload-table-cell">
+          <img class="img-upload-sm" src="{{#if details.methods.ft_ir.files.ft_irFiles3}}{{details.methods.ft_ir.files.ft_irFiles3}}{{/if}}" id="ft_irThree_uploaded">
+        </td>
+        <td class="upload-table-cell">
+          <img class="img-upload-sm" src="{{#if details.methods.ft_ir.files.ft_irFiles4}}{{details.methods.ft_ir.files.ft_irFiles4}}{{/if}}" id="ft_irFour_uploaded">
+        </td>
+      </tr>
+
+
+      <tr class="noBorder">
+        <td class="upload-table-cell" id="ft_irOne-delete-container">
+          {{#if details.methods.ft_ir.files.ft_irFiles1_id}}
+            <a href="#" class="list-font btn btn-danger" id="ft_irOne_delete">DELETE</a>
+          {{/if}}
+        </td>
+        <td class="upload-table-cell" id="ft_irTwo-delete-container">
+          {{#if details.methods.ft_ir.files.ft_irFiles2_id}}
+            <a href="#" class="list-font btn btn-danger" id="ft_irTwo_delete">DELETE</a>
+          {{/if}}
+        </td>
+        <td class="upload-table-cell" id="ft_irThree-delete-container">
+          {{#if details.methods.ft_ir.files.ft_irFiles3_id}}
+            <a href="#" class="list-font btn btn-danger" id="ft_irThree_delete">DELETE</a>
+          {{/if}}
+        </td>
+        <td class="upload-table-cell" id="ft_irFour-delete-container">
+          {{#if details.methods.ft_ir.files.ft_irFiles4_id}}
+            <a href="#" class="list-font btn btn-danger" id="ft_irFour_delete">DELETE</a>
+          {{/if}}
+        </td>
+      </tr>
+
+
+    </table>
+  </div>
+
+      <div class="col-xs-12 col-sm-12 list-font align-center">
+        <br/>
+        <span id="ft_irFiles-delete-container">
+          {{#if details.methods.ft_ir.files.ft_irFiles5_id}}
+            <a href="#" class="list-font btn btn-danger" id="ft_irFile_delete">DELETE ADDITIONAL FILES</a>
+          {{/if}}
+        </span>
+        <br/>
+        <br/>
+        <span class="list-font new-file" id="ft_irFiles_name"></span>
+      </div>
+
+    </div>
+</template>
