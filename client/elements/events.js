@@ -11,7 +11,13 @@ Template.edit_button.events({
     Session.set("showPainting", false);
     Session.set("showSculpture", false);
     Session.set("showOther", false);
+    Session.set("showSample", false);
     Session.set("showPigment", false);
+
+    var painting = "Painting";
+    var sculpture = "Sculpture";
+    var sample = "Sample/cross-section";
+    var pigment = "Pigment/dye/binder/varnish/reference materials";
 
 
     Session.set("itemId", itemId);
@@ -22,10 +28,13 @@ Template.edit_button.events({
     if(type==="Sculpture"){
         Session.set("showSculpture", true);
     }
+    if(type==="Sample/cross-section"){
+        Session.set("showSample", true);
+    }
     if(type==="Pigment/dye/binder/varnish/reference materials"){
         Session.set("showPigment", true);
     }
-    if(type!=="Painting" && type!=="Sculpture" && type!=="Pigment/dye/binder/varnish/reference materials"){
+    if(type!==painting && type!==sculpture && type!==sample && type!==pigment){
         Session.set("showOther", true);
     }
   },

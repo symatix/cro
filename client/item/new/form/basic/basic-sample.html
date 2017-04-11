@@ -1,0 +1,97 @@
+<template name="basic_sample">
+  <div class="row relative basic-fix">
+    <button class="btn btn-default btn-toggle btn_toggleBasic float-right">Colapse</button>
+    <h3 id="basic_href" >basic information</h3>
+  </div>
+  <div class="toggleBasic">
+  <div class="row">
+    <div class="col-xs-12 col-md-6 individual-property name">
+      TYPE OF SAMPLE
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="name" placeholder="(e.g. powder, splinter, embedded cross-section etc.)" value="{{basic.name}}">
+    </div>
+
+    <div class="col-xs-12 col-md-6 individual-property samplingPerson">
+      WHO PERFORMED THE SAMPLING
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="samplingPerson" placeholder="" value="{{basic.samplingPerson}}">
+    </div>
+
+    <div class="col-xs-12 col-md-6 individual-property embedPerson">
+      WHO PERFORMED THE EMBEDDING AND POLISHING
+    </div>
+    <div class="col-xs-12 col-md-6"> 
+      <input type="text" class="individual-value individual-form" id="embedPerson" placeholder="" value="{{basic.embedPerson}}">
+    </div>
+
+    <div class="col-xs-12 col-md-6 individual-property title">
+      NAME/TITLE OF THE ORIGINAL OBJECT
+    </div>
+    <div class="col-xs-12 col-md-6"> 
+      <input type="text" class="individual-value individual-form" id="title" placeholder="" value="{{basic.title}}">
+    </div>
+
+
+
+
+
+    <div class="col-xs-12 col-md-6 individual-property author">
+      AUTHOR OF THE ORIGINAL OBJECT
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="author" placeholder="" value="{{basic.author}}">
+    </div>
+
+
+    <div class="col-xs-12 col-md-6 individual-property date">
+      DATE
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="date" placeholder="(YYYY)" value="{{basic.date}}">
+    </div>
+
+    <div class="col-xs-12 col-md-6 individual-property sampleDimensions">
+      SAMPLE DIMENSIONS
+    </div>
+    <div class="col-xs-12 col-md-6"> 
+      <input type="text" class="individual-value individual-form" id="sampleDimensions" placeholder="(in mm)" value="{{basic.sampleDimensions}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property sampleInvestigated">
+      INVESTIGATED BY
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="sampleInvestigated" placeholder="" value="{{basic.sampleInvestigated}}">
+    </div>
+
+<!--
+notes fileds
+-->
+    <div class="row align-center">
+      <div class="col-xs-12">
+        &nbsp;
+      </div>
+
+      <div class="col-xs-12 notes">
+        Brief description of the area where the sample was taken from
+      </div>
+      <div class="col-sm-8 col-sm-offset-2">
+          <textarea class="" id="briefArea" name="notesBasic" rows="4" placeholder="(e.g. left cheek of the central figure, green patch of grass in the lower left corner, etc.)" value="{{basic.notes.briefArea}}"></textarea>
+      </div>
+      <div class="col-xs-12 notes">
+        Brief description of the sample and interpretation of the results
+      </div>
+      <div class="col-sm-8 col-sm-offset-2">
+          <textarea class="" id="briefResults" name="notesBasic" rows="4" placeholder="(e.g. a cross-section sample showing the chalk and white lead priming and two paint layers: cinnabar with lead white; red lead with lithopone) " value="{{basic.notes.briefResults}}"></textarea>
+      </div>
+      <div class="col-xs-12">
+        &nbsp;
+      </div>
+    </div>
+  </div>
+
+    {{> form_files_basic}}
+
+  </div>
+</template>

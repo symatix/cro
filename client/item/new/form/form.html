@@ -1,8 +1,7 @@
 <template name="form">
 <!-- templates in /type -->
-<!-- 
-this is for dev - session check on form entry
-<div>
+<!--
+<div class="devSessionCheck">
 {{results}}
 </div>
 -->
@@ -19,6 +18,10 @@ this is for dev - session check on form entry
 
         {{#if other}}
           {{> basic_other}}
+        {{/if}}
+
+        {{#if sample}}
+          {{> basic_sample}}
         {{/if}}
 
         {{#if pigment}}

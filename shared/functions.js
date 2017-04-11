@@ -29,6 +29,11 @@ Meteor.myFunctions = {
     return dateFormat;
   },
   insertData: function(){
+    var painting = Session.get("showPainting");
+    var sculpture = Session.get("showSculpture");
+    var sample = Session.get("showSample");
+    var other = Session.get("showOther");
+    var pigment = Session.get("showPigment");
 
 ////////////////////////////////////////////////////////////////////////////////////////
     $(':input').removeAttr('placeholder');
@@ -37,10 +42,10 @@ Meteor.myFunctions = {
       var aasDetails = false;
       
     } else {
-
-      if(!$("#item-pigment-dye-binder").is(":checked")){
+      if(painting || sculpture || other){
 
         var aasMajority = {
+            status:true,
             experimentalParameters:document.getElementById("object_aasExperimental").value,
             elements:document.getElementById("object_aasElements").value,
             formulae:document.getElementById("object_aasFormulae").value,
@@ -74,6 +79,7 @@ Meteor.myFunctions = {
       } else {
 
         var aasPigment = {
+            status:true,
             experimentalParameters:document.getElementById("object_aasExperimental").value,
             elements:document.getElementById("object_aasElements").value,
             quantification:document.getElementById("object_aasQuantification").value,
@@ -84,6 +90,7 @@ Meteor.myFunctions = {
             notes:{
               comments:document.getElementById("object_aasComments").value,
               caption:document.getElementById("object_aasCaption").value,
+              interpretation:document.getElementById("object_aasInterpretation").value, // only added value for sample, not enough to do a new object
             },
             files:{
               aasFiles1:document.getElementById("aasFiles1").value,
@@ -102,8 +109,6 @@ Meteor.myFunctions = {
         var aasDetails = aasPigment;
 
       }
-
-
     }
 ////////////////////////////////////////////////////////////////////////////////////////    
   
@@ -115,9 +120,10 @@ Meteor.myFunctions = {
       
     } else {
 
-      if(!$("#item-pigment-dye-binder").is(":checked")){
+      if(painting || sculpture || other){
 
         var aesMajority = {
+            status:true,
             experimentalParameters:document.getElementById("object_aesExperimental").value,
             elements:document.getElementById("object_aesElements").value,
             formulae:document.getElementById("object_aesFormulae").value,
@@ -151,6 +157,7 @@ Meteor.myFunctions = {
       } else {
 
         var aesPigment = {
+            status:true,
             experimentalParameters:document.getElementById("object_aesExperimental").value,
             elements:document.getElementById("object_aesElements").value,
             quantification:document.getElementById("object_aesQuantification").value,
@@ -161,6 +168,7 @@ Meteor.myFunctions = {
             notes:{
               comments:document.getElementById("object_aesComments").value,
               caption:document.getElementById("object_aesCaption").value,
+              interpretation:document.getElementById("object_aesInterpretation").value,
             },
             files:{
               aesFiles1:document.getElementById("aesFiles1").value,
@@ -188,9 +196,10 @@ Meteor.myFunctions = {
       
     } else {
 
-      if(!$("#item-pigment-dye-binder").is(":checked")){
+      if(painting || sculpture || other){
 
         var afmMajority = {
+            status:true,
             experimentalParameters:document.getElementById("object_afmExperimental").value,
             elements:document.getElementById("object_afmElements").value,
             formulae:document.getElementById("object_afmFormulae").value,
@@ -224,6 +233,7 @@ Meteor.myFunctions = {
       } else {
 
         var afmPigment = {
+            status:true,
             experimentalParameters:document.getElementById("object_afmExperimental").value,
             elements:document.getElementById("object_afmElements").value,
             quantification:document.getElementById("object_afmQuantification").value,
@@ -234,6 +244,7 @@ Meteor.myFunctions = {
             notes:{
               comments:document.getElementById("object_afmComments").value,
               caption:document.getElementById("object_afmCaption").value,
+              interpretation:document.getElementById("object_afmInterpretation").value,
             },
             files:{
               afmFiles1:document.getElementById("afmFiles1").value,
@@ -261,9 +272,10 @@ Meteor.myFunctions = {
       
     } else {
 
-      if(!$("#item-pigment-dye-binder").is(":checked")){
+      if(painting || sculpture || other){
 
         var analysisMajority = {
+            status:true,
             experimentalParameters:document.getElementById("object_analysisExperimental").value,
             elements:document.getElementById("object_analysisElements").value,
             formulae:document.getElementById("object_analysisFormulae").value,
@@ -297,6 +309,7 @@ Meteor.myFunctions = {
       } else {
 
         var analysisPigment = {
+            status:true,
             experimentalParameters:document.getElementById("object_analysisExperimental").value,
             elements:document.getElementById("object_analysisElements").value,
             quantification:document.getElementById("object_analysisQuantification").value,
@@ -307,6 +320,7 @@ Meteor.myFunctions = {
             notes:{
               comments:document.getElementById("object_analysisComments").value,
               caption:document.getElementById("object_analysisCaption").value,
+              interpretation:document.getElementById("object_analysisInterpretation").value,
             },
             files:{
               analysisFiles1:document.getElementById("analysisFiles1").value,
@@ -334,9 +348,10 @@ Meteor.myFunctions = {
       
     } else {
 
-      if(!$("#item-pigment-dye-binder").is(":checked")){
+      if(painting || sculpture || other){
 
         var binderFillerMajority = {
+            status:true,
             experimentalParameters:document.getElementById("object_binderFillerExperimental").value,
             elements:document.getElementById("object_binderFillerElements").value,
             formulae:document.getElementById("object_binderFillerFormulae").value,
@@ -370,6 +385,7 @@ Meteor.myFunctions = {
       } else {
 
         var binderFillerPigment = {
+            status:true,
             experimentalParameters:document.getElementById("object_binderFillerExperimental").value,
             elements:document.getElementById("object_binderFillerElements").value,
             quantification:document.getElementById("object_binderFillerQuantification").value,
@@ -380,6 +396,7 @@ Meteor.myFunctions = {
             notes:{
               comments:document.getElementById("object_binderFillerComments").value,
               caption:document.getElementById("object_binderFillerCaption").value,
+              interpretation:document.getElementById("object_binderFillerInterpretation").value,
             },
             files:{
               binderFillerFiles1:document.getElementById("binderFillerFiles1").value,
@@ -407,9 +424,10 @@ Meteor.myFunctions = {
       
     } else {
 
-      if(!$("#item-pigment-dye-binder").is(":checked")){
+      if(painting || sculpture || other){
 
-        var c_14Majority = {
+        var c_14Majority  = {
+            status:true,
             experimentalParameters:document.getElementById("object_c_14Experimental").value,
             elements:document.getElementById("object_c_14Elements").value,
             formulae:document.getElementById("object_c_14Formulae").value,
@@ -442,7 +460,8 @@ Meteor.myFunctions = {
 
       } else {
 
-        var c_14Pigment = {
+        var c_14Pigment  = {
+            status:true,
             experimentalParameters:document.getElementById("object_c_14Experimental").value,
             elements:document.getElementById("object_c_14Elements").value,
             quantification:document.getElementById("object_c_14Quantification").value,
@@ -453,6 +472,7 @@ Meteor.myFunctions = {
             notes:{
               comments:document.getElementById("object_c_14Comments").value,
               caption:document.getElementById("object_c_14Caption").value,
+              interpretation:document.getElementById("object_c_14Interpretation").value,
             },
             files:{
               c_14Files1:document.getElementById("c_14Files1").value,
@@ -480,9 +500,10 @@ Meteor.myFunctions = {
       
     } else {
 
-      if(!$("#item-pigment-dye-binder").is(":checked")){
+      if(painting || sculpture || other){
 
-        var colorimetryMajority = {
+        var colorimetryMajority  = {
+            status:true,
             experimentalParameters:document.getElementById("object_colorimetryExperimental").value,
             elements:document.getElementById("object_colorimetryElements").value,
             formulae:document.getElementById("object_colorimetryFormulae").value,
@@ -515,7 +536,8 @@ Meteor.myFunctions = {
 
       } else {
 
-        var colorimetryPigment = {
+        var colorimetryPigment  = {
+            status:true,
             experimentalParameters:document.getElementById("object_colorimetryExperimental").value,
             elements:document.getElementById("object_colorimetryElements").value,
             quantification:document.getElementById("object_colorimetryQuantification").value,
@@ -526,6 +548,7 @@ Meteor.myFunctions = {
             notes:{
               comments:document.getElementById("object_colorimetryComments").value,
               caption:document.getElementById("object_colorimetryCaption").value,
+              interpretation:document.getElementById("object_colorimetryInterpretation").value,
             },
             files:{
               colorimetryFiles1:document.getElementById("colorimetryFiles1").value,
@@ -553,9 +576,10 @@ Meteor.myFunctions = {
       
     } else {
 
-      if(!$("#item-pigment-dye-binder").is(":checked")){
+      if(painting || sculpture || other){
 
-        var drmsMajority = {
+        var drmsMajority  = {
+            status:true,
             experimentalParameters:document.getElementById("object_drmsExperimental").value,
             elements:document.getElementById("object_drmsElements").value,
             formulae:document.getElementById("object_drmsFormulae").value,
@@ -588,7 +612,8 @@ Meteor.myFunctions = {
 
       } else {
 
-        var drmsPigment = {
+        var drmsPigment  = {
+            status:true,
             experimentalParameters:document.getElementById("object_drmsExperimental").value,
             elements:document.getElementById("object_drmsElements").value,
             quantification:document.getElementById("object_drmsQuantification").value,
@@ -599,6 +624,7 @@ Meteor.myFunctions = {
             notes:{
               comments:document.getElementById("object_drmsComments").value,
               caption:document.getElementById("object_drmsCaption").value,
+              interpretation:document.getElementById("object_drmsInterpretation").value,
             },
             files:{
               drmsFiles1:document.getElementById("drmsFiles1").value,
@@ -626,9 +652,10 @@ Meteor.myFunctions = {
       
     } else {
 
-      if(!$("#item-pigment-dye-binder").is(":checked")){
+      if(painting || sculpture || other){
 
-        var forsMajority = {
+        var forsMajority  = {
+            status:true,
             experimentalParameters:document.getElementById("object_forsExperimental").value,
             elements:document.getElementById("object_forsElements").value,
             formulae:document.getElementById("object_forsFormulae").value,
@@ -661,7 +688,8 @@ Meteor.myFunctions = {
 
       } else {
 
-        var forsPigment = {
+        var forsPigment  = {
+            status:true,
             experimentalParameters:document.getElementById("object_forsExperimental").value,
             elements:document.getElementById("object_forsElements").value,
             quantification:document.getElementById("object_forsQuantification").value,
@@ -672,6 +700,7 @@ Meteor.myFunctions = {
             notes:{
               comments:document.getElementById("object_forsComments").value,
               caption:document.getElementById("object_forsCaption").value,
+              interpretation:document.getElementById("object_forsInterpretation").value,
             },
             files:{
               forsFiles1:document.getElementById("forsFiles1").value,
@@ -699,9 +728,10 @@ Meteor.myFunctions = {
       
     } else {
 
-      if(!$("#item-pigment-dye-binder").is(":checked")){
+      if(painting || sculpture || other){
 
-        var ft_irMajority = {
+        var ft_irMajority  = {
+            status:true,
             experimentalParameters:document.getElementById("object_ft_irExperimental").value,
             elements:document.getElementById("object_ft_irElements").value,
             formulae:document.getElementById("object_ft_irFormulae").value,
@@ -734,7 +764,8 @@ Meteor.myFunctions = {
 
       } else {
 
-        var ft_irPigment = {
+        var ft_irPigment  = {
+            status:true,
             experimentalParameters:document.getElementById("object_ft_irExperimental").value,
             elements:document.getElementById("object_ft_irElements").value,
             quantification:document.getElementById("object_ft_irQuantification").value,
@@ -745,6 +776,7 @@ Meteor.myFunctions = {
             notes:{
               comments:document.getElementById("object_ft_irComments").value,
               caption:document.getElementById("object_ft_irCaption").value,
+              interpretation:document.getElementById("object_ft_irInterpretation").value,
             },
             files:{
               ft_irFiles1:document.getElementById("ft_irFiles1").value,
@@ -772,9 +804,10 @@ Meteor.myFunctions = {
       
     } else {
 
-      if(!$("#item-pigment-dye-binder").is(":checked")){
+      if(painting || sculpture || other){
 
-        var gc_msMajority = {
+        var gc_msMajority  = {
+            status:true,
             experimentalParameters:document.getElementById("object_gc_msExperimental").value,
             elements:document.getElementById("object_gc_msElements").value,
             formulae:document.getElementById("object_gc_msFormulae").value,
@@ -807,7 +840,8 @@ Meteor.myFunctions = {
 
       } else {
 
-        var gc_msPigment = {
+        var gc_msPigment  = {
+            status:true,
             experimentalParameters:document.getElementById("object_gc_msExperimental").value,
             elements:document.getElementById("object_gc_msElements").value,
             quantification:document.getElementById("object_gc_msQuantification").value,
@@ -818,6 +852,7 @@ Meteor.myFunctions = {
             notes:{
               comments:document.getElementById("object_gc_msComments").value,
               caption:document.getElementById("object_gc_msCaption").value,
+              interpretation:document.getElementById("object_gc_msInterpretation").value,
             },
             files:{
               gc_msFiles1:document.getElementById("gc_msFiles1").value,
@@ -845,9 +880,10 @@ Meteor.myFunctions = {
       
     } else {
 
-      if(!$("#item-pigment-dye-binder").is(":checked")){
+      if(painting || sculpture || other){
 
-        var glMajority = {
+        var glMajority  = {
+            status:true,
             experimentalParameters:document.getElementById("object_glExperimental").value,
             elements:document.getElementById("object_glElements").value,
             formulae:document.getElementById("object_glFormulae").value,
@@ -880,7 +916,8 @@ Meteor.myFunctions = {
 
       } else {
 
-        var glPigment = {
+        var glPigment  = {
+            status:true,
             experimentalParameters:document.getElementById("object_glExperimental").value,
             elements:document.getElementById("object_glElements").value,
             quantification:document.getElementById("object_glQuantification").value,
@@ -891,6 +928,7 @@ Meteor.myFunctions = {
             notes:{
               comments:document.getElementById("object_glComments").value,
               caption:document.getElementById("object_glCaption").value,
+              interpretation:document.getElementById("object_glInterpretation").value,
             },
             files:{
               glFiles1:document.getElementById("glFiles1").value,
@@ -918,9 +956,10 @@ Meteor.myFunctions = {
       
     } else {
 
-      if(!$("#item-pigment-dye-binder").is(":checked")){
+      if(painting || sculpture || other){
 
-        var granulometryMajority = {
+        var granulometryMajority  = {
+            status:true,
             experimentalParameters:document.getElementById("object_granulometryExperimental").value,
             elements:document.getElementById("object_granulometryElements").value,
             formulae:document.getElementById("object_granulometryFormulae").value,
@@ -953,7 +992,8 @@ Meteor.myFunctions = {
 
       } else {
 
-        var granulometryPigment = {
+        var granulometryPigment  = {
+            status:true,
             experimentalParameters:document.getElementById("object_granulometryExperimental").value,
             elements:document.getElementById("object_granulometryElements").value,
             quantification:document.getElementById("object_granulometryQuantification").value,
@@ -964,6 +1004,7 @@ Meteor.myFunctions = {
             notes:{
               comments:document.getElementById("object_granulometryComments").value,
               caption:document.getElementById("object_granulometryCaption").value,
+              interpretation:document.getElementById("object_granulometryInterpretation").value,
             },
             files:{
               granulometryFiles1:document.getElementById("granulometryFiles1").value,
@@ -991,9 +1032,10 @@ Meteor.myFunctions = {
       
     } else {
 
-      if(!$("#item-pigment-dye-binder").is(":checked")){
+      if(painting || sculpture || other){
 
-        var hygroscopicMajority = {
+        var hygroscopicMajority  = {
+            status:true,
             experimentalParameters:document.getElementById("object_hygroscopicExperimental").value,
             elements:document.getElementById("object_hygroscopicElements").value,
             formulae:document.getElementById("object_hygroscopicFormulae").value,
@@ -1026,7 +1068,8 @@ Meteor.myFunctions = {
 
       } else {
 
-        var hygroscopicPigment = {
+        var hygroscopicPigment  = {
+            status:true,
             experimentalParameters:document.getElementById("object_hygroscopicExperimental").value,
             elements:document.getElementById("object_hygroscopicElements").value,
             quantification:document.getElementById("object_hygroscopicQuantification").value,
@@ -1037,6 +1080,7 @@ Meteor.myFunctions = {
             notes:{
               comments:document.getElementById("object_hygroscopicComments").value,
               caption:document.getElementById("object_hygroscopicCaption").value,
+              interpretation:document.getElementById("object_hygroscopicInterpretation").value,
             },
             files:{
               hygroscopicFiles1:document.getElementById("hygroscopicFiles1").value,
@@ -1064,9 +1108,10 @@ Meteor.myFunctions = {
       
     } else {
 
-      if(!$("#item-pigment-dye-binder").is(":checked")){
+      if(painting || sculpture || other){
 
-        var irpIrrIrfcMajority = {
+        var irpIrrIrfcMajority  = {
+            status:true,
             experimentalParameters:document.getElementById("object_irpIrrIrfcExperimental").value,
             elements:document.getElementById("object_irpIrrIrfcElements").value,
             formulae:document.getElementById("object_irpIrrIrfcFormulae").value,
@@ -1099,7 +1144,8 @@ Meteor.myFunctions = {
 
       } else {
 
-        var irpIrrIrfcPigment = {
+        var irpIrrIrfcPigment  = {
+            status:true,
             experimentalParameters:document.getElementById("object_irpIrrIrfcExperimental").value,
             elements:document.getElementById("object_irpIrrIrfcElements").value,
             quantification:document.getElementById("object_irpIrrIrfcQuantification").value,
@@ -1110,6 +1156,7 @@ Meteor.myFunctions = {
             notes:{
               comments:document.getElementById("object_irpIrrIrfcComments").value,
               caption:document.getElementById("object_irpIrrIrfcCaption").value,
+              interpretation:document.getElementById("object_irpIrrIrfcInterpretation").value,
             },
             files:{
               irpIrrIrfcFiles1:document.getElementById("irpIrrIrfcFiles1").value,
@@ -1137,9 +1184,10 @@ Meteor.myFunctions = {
       
     } else {
 
-      if(!$("#item-pigment-dye-binder").is(":checked")){
+      if(painting || sculpture || other){
 
-        var libsMajority = {
+        var libsMajority  = {
+            status:true,
             experimentalParameters:document.getElementById("object_libsExperimental").value,
             elements:document.getElementById("object_libsElements").value,
             formulae:document.getElementById("object_libsFormulae").value,
@@ -1172,7 +1220,8 @@ Meteor.myFunctions = {
 
       } else {
 
-        var libsPigment = {
+        var libsPigment  = {
+            status:true,
             experimentalParameters:document.getElementById("object_libsExperimental").value,
             elements:document.getElementById("object_libsElements").value,
             quantification:document.getElementById("object_libsQuantification").value,
@@ -1183,6 +1232,7 @@ Meteor.myFunctions = {
             notes:{
               comments:document.getElementById("object_libsComments").value,
               caption:document.getElementById("object_libsCaption").value,
+              interpretation:document.getElementById("object_libsInterpretation").value,
             },
             files:{
               libsFiles1:document.getElementById("libsFiles1").value,
@@ -1210,9 +1260,10 @@ Meteor.myFunctions = {
       
     } else {
 
-      if(!$("#item-pigment-dye-binder").is(":checked")){
+      if(painting || sculpture || other){
 
-        var olMajority = {
+        var olMajority  = {
+            status:true,
             experimentalParameters:document.getElementById("object_olExperimental").value,
             elements:document.getElementById("object_olElements").value,
             formulae:document.getElementById("object_olFormulae").value,
@@ -1245,7 +1296,8 @@ Meteor.myFunctions = {
 
       } else {
 
-        var olPigment = {
+        var olPigment  = {
+            status:true,
             experimentalParameters:document.getElementById("object_olExperimental").value,
             elements:document.getElementById("object_olElements").value,
             quantification:document.getElementById("object_olQuantification").value,
@@ -1256,6 +1308,7 @@ Meteor.myFunctions = {
             notes:{
               comments:document.getElementById("object_olComments").value,
               caption:document.getElementById("object_olCaption").value,
+              interpretation:document.getElementById("object_olInterpretation").value,
             },
             files:{
               olFiles1:document.getElementById("olFiles1").value,
@@ -1283,9 +1336,10 @@ Meteor.myFunctions = {
       
     } else {
 
-      if(!$("#item-pigment-dye-binder").is(":checked")){
+      if(painting || sculpture || other){
 
-        var omMajority = {
+        var omMajority  = {
+            status:true,
             experimentalParameters:document.getElementById("object_omExperimental").value,
             elements:document.getElementById("object_omElements").value,
             formulae:document.getElementById("object_omFormulae").value,
@@ -1318,7 +1372,8 @@ Meteor.myFunctions = {
 
       } else {
 
-        var omPigment = {
+        var omPigment  = {
+            status:true,
             experimentalParameters:document.getElementById("object_omExperimental").value,
             elements:document.getElementById("object_omElements").value,
             quantification:document.getElementById("object_omQuantification").value,
@@ -1329,6 +1384,7 @@ Meteor.myFunctions = {
             notes:{
               comments:document.getElementById("object_omComments").value,
               caption:document.getElementById("object_omCaption").value,
+              interpretation:document.getElementById("object_omInterpretation").value,
             },
             files:{
               omFiles1:document.getElementById("omFiles1").value,
@@ -1356,9 +1412,10 @@ Meteor.myFunctions = {
       
     } else {
 
-      if(!$("#item-pigment-dye-binder").is(":checked")){
+      if(painting || sculpture || other){
 
-        var pigeMajority = {
+        var pigeMajority  = {
+            status:true,
             experimentalParameters:document.getElementById("object_pigeExperimental").value,
             elements:document.getElementById("object_pigeElements").value,
             formulae:document.getElementById("object_pigeFormulae").value,
@@ -1391,7 +1448,8 @@ Meteor.myFunctions = {
 
       } else {
 
-        var pigePigment = {
+        var pigePigment  = {
+            status:true,
             experimentalParameters:document.getElementById("object_pigeExperimental").value,
             elements:document.getElementById("object_pigeElements").value,
             quantification:document.getElementById("object_pigeQuantification").value,
@@ -1402,6 +1460,7 @@ Meteor.myFunctions = {
             notes:{
               comments:document.getElementById("object_pigeComments").value,
               caption:document.getElementById("object_pigeCaption").value,
+              interpretation:document.getElementById("object_pigeInterpretation").value,
             },
             files:{
               pigeFiles1:document.getElementById("pigeFiles1").value,
@@ -1429,9 +1488,10 @@ Meteor.myFunctions = {
       
     } else {
 
-      if(!$("#item-pigment-dye-binder").is(":checked")){
+      if(painting || sculpture || other){
 
-        var pixeMajority = {
+        var pixeMajority  = {
+            status:true,
             experimentalParameters:document.getElementById("object_pixeExperimental").value,
             elements:document.getElementById("object_pixeElements").value,
             formulae:document.getElementById("object_pixeFormulae").value,
@@ -1464,7 +1524,8 @@ Meteor.myFunctions = {
 
       } else {
 
-        var pixePigment = {
+        var pixePigment  = {
+            status:true,
             experimentalParameters:document.getElementById("object_pixeExperimental").value,
             elements:document.getElementById("object_pixeElements").value,
             quantification:document.getElementById("object_pixeQuantification").value,
@@ -1475,6 +1536,7 @@ Meteor.myFunctions = {
             notes:{
               comments:document.getElementById("object_pixeComments").value,
               caption:document.getElementById("object_pixeCaption").value,
+              interpretation:document.getElementById("object_pixeInterpretation").value,
             },
             files:{
               pixeFiles1:document.getElementById("pixeFiles1").value,
@@ -1502,9 +1564,10 @@ Meteor.myFunctions = {
       
     } else {
 
-      if(!$("#item-pigment-dye-binder").is(":checked")){
+      if(painting || sculpture || other){
 
-        var plmMajority = {
+        var plmMajority  = {
+            status:true,
             experimentalParameters:document.getElementById("object_plmExperimental").value,
             elements:document.getElementById("object_plmElements").value,
             formulae:document.getElementById("object_plmFormulae").value,
@@ -1537,7 +1600,8 @@ Meteor.myFunctions = {
 
       } else {
 
-        var plmPigment = {
+        var plmPigment  = {
+            status:true,
             experimentalParameters:document.getElementById("object_plmExperimental").value,
             elements:document.getElementById("object_plmElements").value,
             quantification:document.getElementById("object_plmQuantification").value,
@@ -1548,6 +1612,7 @@ Meteor.myFunctions = {
             notes:{
               comments:document.getElementById("object_plmComments").value,
               caption:document.getElementById("object_plmCaption").value,
+              interpretation:document.getElementById("object_plmInterpretation").value,
             },
             files:{
               plmFiles1:document.getElementById("plmFiles1").value,
@@ -1575,9 +1640,10 @@ Meteor.myFunctions = {
       
     } else {
 
-      if(!$("#item-pigment-dye-binder").is(":checked")){
+      if(painting || sculpture || other){
 
-        var rbsMajority = {
+        var rbsMajority  = {
+            status:true,
             experimentalParameters:document.getElementById("object_rbsExperimental").value,
             elements:document.getElementById("object_rbsElements").value,
             formulae:document.getElementById("object_rbsFormulae").value,
@@ -1610,7 +1676,8 @@ Meteor.myFunctions = {
 
       } else {
 
-        var rbsPigment = {
+        var rbsPigment  = {
+            status:true,
             experimentalParameters:document.getElementById("object_rbsExperimental").value,
             elements:document.getElementById("object_rbsElements").value,
             quantification:document.getElementById("object_rbsQuantification").value,
@@ -1621,6 +1688,7 @@ Meteor.myFunctions = {
             notes:{
               comments:document.getElementById("object_rbsComments").value,
               caption:document.getElementById("object_rbsCaption").value,
+              interpretation:document.getElementById("object_rbsInterpretation").value,
             },
             files:{
               rbsFiles1:document.getElementById("rbsFiles1").value,
@@ -1648,9 +1716,10 @@ Meteor.myFunctions = {
       
     } else {
 
-      if(!$("#item-pigment-dye-binder").is(":checked")){
+      if(painting || sculpture || other){
 
-        var rsMajority = {
+        var rsMajority  = {
+            status:true,
             experimentalParameters:document.getElementById("object_rsExperimental").value,
             elements:document.getElementById("object_rsElements").value,
             formulae:document.getElementById("object_rsFormulae").value,
@@ -1683,7 +1752,8 @@ Meteor.myFunctions = {
 
       } else {
 
-        var rsPigment = {
+        var rsPigment  = {
+            status:true,
             experimentalParameters:document.getElementById("object_rsExperimental").value,
             elements:document.getElementById("object_rsElements").value,
             quantification:document.getElementById("object_rsQuantification").value,
@@ -1694,6 +1764,7 @@ Meteor.myFunctions = {
             notes:{
               comments:document.getElementById("object_rsComments").value,
               caption:document.getElementById("object_rsCaption").value,
+              interpretation:document.getElementById("object_rsInterpretation").value,
             },
             files:{
               rsFiles1:document.getElementById("rsFiles1").value,
@@ -1721,9 +1792,10 @@ Meteor.myFunctions = {
       
     } else {
 
-      if(!$("#item-pigment-dye-binder").is(":checked")){
+      if(painting || sculpture || other){
 
-        var scanningMajority = {
+        var scanningMajority  = {
+            status:true,
             experimentalParameters:document.getElementById("object_scanningExperimental").value,
             elements:document.getElementById("object_scanningElements").value,
             formulae:document.getElementById("object_scanningFormulae").value,
@@ -1756,7 +1828,8 @@ Meteor.myFunctions = {
 
       } else {
 
-        var scanningPigment = {
+        var scanningPigment  = {
+            status:true,
             experimentalParameters:document.getElementById("object_scanningExperimental").value,
             elements:document.getElementById("object_scanningElements").value,
             quantification:document.getElementById("object_scanningQuantification").value,
@@ -1767,6 +1840,7 @@ Meteor.myFunctions = {
             notes:{
               comments:document.getElementById("object_scanningComments").value,
               caption:document.getElementById("object_scanningCaption").value,
+              interpretation:document.getElementById("object_scanningInterpretation").value,
             },
             files:{
               scanningFiles1:document.getElementById("scanningFiles1").value,
@@ -1794,9 +1868,10 @@ Meteor.myFunctions = {
       
     } else {
 
-      if(!$("#item-pigment-dye-binder").is(":checked")){
+      if(painting || sculpture || other){
 
-        var semSemEdxMajority = {
+        var semSemEdxMajority  = {
+            status:true,
             experimentalParameters:document.getElementById("object_semSemEdxExperimental").value,
             elements:document.getElementById("object_semSemEdxElements").value,
             formulae:document.getElementById("object_semSemEdxFormulae").value,
@@ -1829,7 +1904,8 @@ Meteor.myFunctions = {
 
       } else {
 
-        var semSemEdxPigment = {
+        var semSemEdxPigment  = {
+            status:true,
             experimentalParameters:document.getElementById("object_semSemEdxExperimental").value,
             elements:document.getElementById("object_semSemEdxElements").value,
             quantification:document.getElementById("object_semSemEdxQuantification").value,
@@ -1840,6 +1916,7 @@ Meteor.myFunctions = {
             notes:{
               comments:document.getElementById("object_semSemEdxComments").value,
               caption:document.getElementById("object_semSemEdxCaption").value,
+              interpretation:document.getElementById("object_semSemEdxInterpretation").value,
             },
             files:{
               semSemEdxFiles1:document.getElementById("semSemEdxFiles1").value,
@@ -1867,9 +1944,10 @@ Meteor.myFunctions = {
       
     } else {
 
-      if(!$("#item-pigment-dye-binder").is(":checked")){
+      if(painting || sculpture || other){
 
-        var synchrotronMajority = {
+        var synchrotronMajority  = {
+            status:true,
             experimentalParameters:document.getElementById("object_synchrotronExperimental").value,
             elements:document.getElementById("object_synchrotronElements").value,
             formulae:document.getElementById("object_synchrotronFormulae").value,
@@ -1902,7 +1980,8 @@ Meteor.myFunctions = {
 
       } else {
 
-        var synchrotronPigment = {
+        var synchrotronPigment  = {
+            status:true,
             experimentalParameters:document.getElementById("object_synchrotronExperimental").value,
             elements:document.getElementById("object_synchrotronElements").value,
             quantification:document.getElementById("object_synchrotronQuantification").value,
@@ -1913,6 +1992,7 @@ Meteor.myFunctions = {
             notes:{
               comments:document.getElementById("object_synchrotronComments").value,
               caption:document.getElementById("object_synchrotronCaption").value,
+              interpretation:document.getElementById("object_synchrotronInterpretation").value,
             },
             files:{
               synchrotronFiles1:document.getElementById("synchrotronFiles1").value,
@@ -1940,9 +2020,10 @@ Meteor.myFunctions = {
       
     } else {
 
-      if(!$("#item-pigment-dye-binder").is(":checked")){
+      if(painting || sculpture || other){
 
-        var temMajority = {
+        var temMajority  = {
+            status:true,
             experimentalParameters:document.getElementById("object_temExperimental").value,
             elements:document.getElementById("object_temElements").value,
             formulae:document.getElementById("object_temFormulae").value,
@@ -1975,7 +2056,8 @@ Meteor.myFunctions = {
 
       } else {
 
-        var temPigment = {
+        var temPigment  = {
+            status:true,
             experimentalParameters:document.getElementById("object_temExperimental").value,
             elements:document.getElementById("object_temElements").value,
             quantification:document.getElementById("object_temQuantification").value,
@@ -1986,6 +2068,7 @@ Meteor.myFunctions = {
             notes:{
               comments:document.getElementById("object_temComments").value,
               caption:document.getElementById("object_temCaption").value,
+              interpretation:document.getElementById("object_temInterpretation").value,
             },
             files:{
               temFiles1:document.getElementById("temFiles1").value,
@@ -2013,9 +2096,10 @@ Meteor.myFunctions = {
       
     } else {
 
-      if(!$("#item-pigment-dye-binder").is(":checked")){
+      if(painting || sculpture || other){
 
-        var tlMajority = {
+        var tlMajority  = {
+            status:true,
             experimentalParameters:document.getElementById("object_tlExperimental").value,
             elements:document.getElementById("object_tlElements").value,
             formulae:document.getElementById("object_tlFormulae").value,
@@ -2048,7 +2132,8 @@ Meteor.myFunctions = {
 
       } else {
 
-        var tlPigment = {
+        var tlPigment  = {
+            status:true,
             experimentalParameters:document.getElementById("object_tlExperimental").value,
             elements:document.getElementById("object_tlElements").value,
             quantification:document.getElementById("object_tlQuantification").value,
@@ -2059,6 +2144,7 @@ Meteor.myFunctions = {
             notes:{
               comments:document.getElementById("object_tlComments").value,
               caption:document.getElementById("object_tlCaption").value,
+              interpretation:document.getElementById("object_tlInterpretation").value,
             },
             files:{
               tlFiles1:document.getElementById("tlFiles1").value,
@@ -2086,9 +2172,10 @@ Meteor.myFunctions = {
       
     } else {
 
-      if(!$("#item-pigment-dye-binder").is(":checked")){
+      if(painting || sculpture || other){
 
-        var tlcMajority = {
+        var tlcMajority  = {
+            status:true,
             experimentalParameters:document.getElementById("object_tlcExperimental").value,
             elements:document.getElementById("object_tlcElements").value,
             formulae:document.getElementById("object_tlcFormulae").value,
@@ -2121,7 +2208,8 @@ Meteor.myFunctions = {
 
       } else {
 
-        var tlcPigment = {
+        var tlcPigment  = {
+            status:true,
             experimentalParameters:document.getElementById("object_tlcExperimental").value,
             elements:document.getElementById("object_tlcElements").value,
             quantification:document.getElementById("object_tlcQuantification").value,
@@ -2132,6 +2220,7 @@ Meteor.myFunctions = {
             notes:{
               comments:document.getElementById("object_tlcComments").value,
               caption:document.getElementById("object_tlcCaption").value,
+              interpretation:document.getElementById("object_tlcInterpretation").value,
             },
             files:{
               tlcFiles1:document.getElementById("tlcFiles1").value,
@@ -2159,9 +2248,10 @@ Meteor.myFunctions = {
       
     } else {
 
-      if(!$("#item-pigment-dye-binder").is(":checked")){
+      if(painting || sculpture || other){
 
-        var uv_visMajority = {
+        var uv_visMajority  = {
+            status:true,
             experimentalParameters:document.getElementById("object_uv_visExperimental").value,
             elements:document.getElementById("object_uv_visElements").value,
             formulae:document.getElementById("object_uv_visFormulae").value,
@@ -2194,7 +2284,8 @@ Meteor.myFunctions = {
 
       } else {
 
-        var uv_visPigment = {
+        var uv_visPigment  = {
+            status:true,
             experimentalParameters:document.getElementById("object_uv_visExperimental").value,
             elements:document.getElementById("object_uv_visElements").value,
             quantification:document.getElementById("object_uv_visQuantification").value,
@@ -2205,6 +2296,7 @@ Meteor.myFunctions = {
             notes:{
               comments:document.getElementById("object_uv_visComments").value,
               caption:document.getElementById("object_uv_visCaption").value,
+              interpretation:document.getElementById("object_uv_visInterpretation").value,
             },
             files:{
               uv_visFiles1:document.getElementById("uv_visFiles1").value,
@@ -2232,9 +2324,10 @@ Meteor.myFunctions = {
       
     } else {
 
-      if(!$("#item-pigment-dye-binder").is(":checked")){
+      if(painting || sculpture || other){
 
-        var uvfMajority = {
+        var uvfMajority  = {
+            status:true,
             experimentalParameters:document.getElementById("object_uvfExperimental").value,
             elements:document.getElementById("object_uvfElements").value,
             formulae:document.getElementById("object_uvfFormulae").value,
@@ -2267,7 +2360,8 @@ Meteor.myFunctions = {
 
       } else {
 
-        var uvfPigment = {
+        var uvfPigment  = {
+            status:true,
             experimentalParameters:document.getElementById("object_uvfExperimental").value,
             elements:document.getElementById("object_uvfElements").value,
             quantification:document.getElementById("object_uvfQuantification").value,
@@ -2278,6 +2372,7 @@ Meteor.myFunctions = {
             notes:{
               comments:document.getElementById("object_uvfComments").value,
               caption:document.getElementById("object_uvfCaption").value,
+              interpretation:document.getElementById("object_uvfInterpretation").value,
             },
             files:{
               uvfFiles1:document.getElementById("uvfFiles1").value,
@@ -2305,9 +2400,10 @@ Meteor.myFunctions = {
       
     } else {
 
-      if(!$("#item-pigment-dye-binder").is(":checked")){
+      if(painting || sculpture || other){
 
-        var visMajority = {
+        var visMajority  = {
+            status:true,
             experimentalParameters:document.getElementById("object_visExperimental").value,
             elements:document.getElementById("object_visElements").value,
             formulae:document.getElementById("object_visFormulae").value,
@@ -2340,7 +2436,8 @@ Meteor.myFunctions = {
 
       } else {
 
-        var visPigment = {
+        var visPigment  = {
+            status:true,
             experimentalParameters:document.getElementById("object_visExperimental").value,
             elements:document.getElementById("object_visElements").value,
             quantification:document.getElementById("object_visQuantification").value,
@@ -2351,6 +2448,7 @@ Meteor.myFunctions = {
             notes:{
               comments:document.getElementById("object_visComments").value,
               caption:document.getElementById("object_visCaption").value,
+              interpretation:document.getElementById("object_visInterpretation").value,
             },
             files:{
               visFiles1:document.getElementById("visFiles1").value,
@@ -2378,9 +2476,10 @@ Meteor.myFunctions = {
       
     } else {
 
-      if(!$("#item-pigment-dye-binder").is(":checked")){
+      if(painting || sculpture || other){
 
-        var xrdMajority = {
+        var xrdMajority  = {
+            status:true,
             experimentalParameters:document.getElementById("object_xrdExperimental").value,
             elements:document.getElementById("object_xrdElements").value,
             formulae:document.getElementById("object_xrdFormulae").value,
@@ -2413,7 +2512,8 @@ Meteor.myFunctions = {
 
       } else {
 
-        var xrdPigment = {
+        var xrdPigment  = {
+            status:true,
             experimentalParameters:document.getElementById("object_xrdExperimental").value,
             elements:document.getElementById("object_xrdElements").value,
             quantification:document.getElementById("object_xrdQuantification").value,
@@ -2424,6 +2524,7 @@ Meteor.myFunctions = {
             notes:{
               comments:document.getElementById("object_xrdComments").value,
               caption:document.getElementById("object_xrdCaption").value,
+              interpretation:document.getElementById("object_xrdInterpretation").value,
             },
             files:{
               xrdFiles1:document.getElementById("xrdFiles1").value,
@@ -2451,9 +2552,10 @@ Meteor.myFunctions = {
       
     } else {
 
-      if(!$("#item-pigment-dye-binder").is(":checked")){
+      if(painting || sculpture || other){
 
-        var xrfMajority = {
+        var xrfMajority  = {
+            status:true,
             experimentalParameters:document.getElementById("object_xrfExperimental").value,
             elements:document.getElementById("object_xrfElements").value,
             formulae:document.getElementById("object_xrfFormulae").value,
@@ -2486,7 +2588,8 @@ Meteor.myFunctions = {
 
       } else {
 
-        var xrfPigment = {
+        var xrfPigment  = {
+            status:true,
             experimentalParameters:document.getElementById("object_xrfExperimental").value,
             elements:document.getElementById("object_xrfElements").value,
             quantification:document.getElementById("object_xrfQuantification").value,
@@ -2497,6 +2600,7 @@ Meteor.myFunctions = {
             notes:{
               comments:document.getElementById("object_xrfComments").value,
               caption:document.getElementById("object_xrfCaption").value,
+              interpretation:document.getElementById("object_xrfInterpretation").value,
             },
             files:{
               xrfFiles1:document.getElementById("xrfFiles1").value,
@@ -2524,9 +2628,10 @@ Meteor.myFunctions = {
       
     } else {
 
-      if(!$("#item-pigment-dye-binder").is(":checked")){
+      if(painting || sculpture || other){
 
-        var xrrMajority = {
+        var xrrMajority  = {
+            status:true,
             experimentalParameters:document.getElementById("object_xrrExperimental").value,
             elements:document.getElementById("object_xrrElements").value,
             formulae:document.getElementById("object_xrrFormulae").value,
@@ -2559,7 +2664,8 @@ Meteor.myFunctions = {
 
       } else {
 
-        var xrrPigment = {
+        var xrrPigment  = {
+            status:true,
             experimentalParameters:document.getElementById("object_xrrExperimental").value,
             elements:document.getElementById("object_xrrElements").value,
             quantification:document.getElementById("object_xrrQuantification").value,
@@ -2570,6 +2676,7 @@ Meteor.myFunctions = {
             notes:{
               comments:document.getElementById("object_xrrComments").value,
               caption:document.getElementById("object_xrrCaption").value,
+              interpretation:document.getElementById("object_xrrInterpretation").value,
             },
             files:{
               xrrFiles1:document.getElementById("xrrFiles1").value,
@@ -2606,6 +2713,7 @@ Meteor.myFunctions = {
       var owner = Meteor.user()._id;
       var infoObject = {
         userId:Meteor.user()._id,
+        fullName:Meteor.user().profile.full_name,
         createdAt: Meteor.myFunctions.dateFormat(),
         addedBy:Meteor.user().username,
         last_edit: Meteor.myFunctions.dateFormat(),
@@ -2617,6 +2725,7 @@ Meteor.myFunctions = {
       var owner = oldObj.info.userId;
       var infoObject = {
         userId:oldObj.info.userId,
+        fullName:oldObj.info.fullName,
         createdAt:oldObj.info.createdAt,
         addedBy:oldObj.info.addedBy,
         last_edit: Meteor.myFunctions.dateFormat(),
@@ -2627,7 +2736,7 @@ Meteor.myFunctions = {
     }
 
     // normal data object
-    if(!$('#item-pigment-dye-binder').is(':checked')){
+    if(painting || sculpture || other){
 
       var dataObject = {
         basic:{
@@ -2751,7 +2860,7 @@ Meteor.myFunctions = {
 //////      PAINTING
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-    if($('#item_painting').is(':checked')){
+    if(painting){
 
     var itemType = $("input[name='type']:checked").val();
     var basicObject = {
@@ -2925,7 +3034,7 @@ Meteor.myFunctions = {
 //////      SCULPTURE
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-      if($('#item-sculpture').is(':checked')){
+      if(sculpture){
 
     var itemType = $("input[name='type']:checked").val();
     var basicObject = {
@@ -3038,7 +3147,7 @@ Meteor.myFunctions = {
 //////      OTHER
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-    if($('#item-architectural-heritage').is(':checked') || $('#item-archival-object').is(':checked') || $('#item-archaeological').is(':checked') || $('#item-other').is(':checked')){
+    if(other){
 
     var itemType = $("input[name='type']:checked").val();
     var basicObject = {
@@ -3151,7 +3260,7 @@ Meteor.myFunctions = {
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////      PIGMENT
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    if($('#item-pigment-dye-binder').is(':checked')){
+    if(pigment){
 
     var itemType = $("input[name='type']:checked").val();
 
@@ -3178,6 +3287,56 @@ Meteor.myFunctions = {
         degradation:document.getElementById("degradationNotes").value,
         methodsOfIdentification:document.getElementById("identificationNotes").value,
         sources:document.getElementById("sourcesBasic").value,
+      }
+    }
+
+    // MAIN OBJECT //
+    var itemDetails = {
+    owner:owner,
+    visible:document.getElementById("visible").value,
+    isDeleted:document.getElementById("isDeleted").value,
+    type:itemType,
+    info:infoObject,
+    data:dataObject,
+    basic:basicObject,
+    details:methodsObject,
+    }
+
+    console.log(itemDetails);
+
+    var itemId = Session.get("itemId");
+    // WHAT TO DO IF NEW OR EDIT //
+    if (!Session.get("itemId")){
+      Meteor.call("insertItem", itemDetails, function(error,result){
+        if(!error){ Router.go("/gallery/details/"+result); }});
+    } else {
+      Meteor.call("updateItem", itemId, itemDetails);
+      delete Session.keys.itemId;
+      Router.go("/gallery/details/"+itemId);
+    }
+
+  }
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////      SAMPLE
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    if(sample){
+
+    var itemType = $("input[name='type']:checked").val();
+
+    var basicObject = {
+      name:document.getElementById("name").value,
+      samplingPerson:document.getElementById("samplingPerson").value,
+      embedPerson:document.getElementById("embedPerson").value,
+      title:document.getElementById("title").value,
+      author:document.getElementById("author").value,
+      date:document.getElementById("date").value,
+      sampleDimensions:document.getElementById("sampleDimensions").value,
+      sampleInvestigated:document.getElementById("sampleInvestigated").value,
+      notes:{
+        briefArea:document.getElementById("briefArea").value,
+        briefResults:document.getElementById("briefResults").value,
       }
     }
 

@@ -1,6 +1,9 @@
 // web ("/database/myitems") > local ("/client/user/item-list")
 Template.moderator_db.helpers({
   moderatorIndex: () => ModeratorIndex,
+  loadBtn:function () {
+    return {class:'btn btn-submit'};
+  }, 
   gallery:function(){
     var userId = Meteor.user()._id;
     return Prospero.find(

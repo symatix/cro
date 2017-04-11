@@ -2,16 +2,19 @@ Template.form.helpers({
   results:function(){
     var painting = Session.get("showPainting");
     var sculpture = Session.get("showSculpture");
+    var sample = Session.get("showSample");
     var other = Session.get("showOther");
     var pigment = Session.get("showPigment");
-    var result = "[dev notes - formType check] - painting: "+painting + " / sculpture: "+sculpture+" / other: "+other+" / pigment: "+pigment;
+    var result = "[dev notes - formType check] - painting: "+painting + " / sculpture: "+sculpture+" / sample: "+sample+" / other: "+other+" / pigment: "+pigment;
     return result
   },
   notIntruder:function(){
-    if (!Session.get("showPigment")){
-      return true;
-    } else {
+    var sample = Session.get("showSample");
+    var pigment = Session.get("showPigment");
+    if (sample || pigment){
       return false;
+    } else {
+      return true;
     }
   },
   painting:function(){
@@ -29,9 +32,15 @@ Template.form.helpers({
       return true;
     }
   },
+  sample:function(){
+    if(Session.get("showSample")){
+      return true;
+    }
+  },
   exclusive:function(){
     var painting = Session.get("showPainting");
     var sculpture = Session.get("showSculpture");
+    var sample = Session.get("showSample");
     var other = Session.get("showOther");
     if (painting || sculpture || other){
       return true;

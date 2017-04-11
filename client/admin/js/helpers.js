@@ -1,6 +1,9 @@
 // web ("/new") > local ("/client/admin/item-list")
 Template.adm_db.helpers({
   adminIndex: () => AdminIndex,
+  loadBtn:function () {
+    return {class:'btn btn-submit'};
+  }, 
   gallery:function(){
       return Prospero.find({}, {sort:Session.get("sortList"), limit:Session.get("siteLimit")});
   },

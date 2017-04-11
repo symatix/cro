@@ -91,13 +91,7 @@
             </div>
           </div>
           {{/if}}
-        {{#if details.methods.colorimetry.stretcherSupportStrainer}}
-          <div class="author">
-            <div class="individual-property-display">Stretcher/support/strainer identified:<br/>
-              <div class="individual-value-display">{{details.methods.colorimetry.stretcherSupportStrainer}}</div>
-            </div>
-          </div>
-          {{/if}}
+          
         </div>
 
 
@@ -115,8 +109,17 @@
 
 
 
+  {{#if details.methods.colorimetry.notes.interpretation}}
+  <div class="col-md-12">
+    <div class="interpretation">
+      <div class="individual-property-display">Interpretation of the instrumental results:<br/>
+        <div class="individual-value-display">{{details.methods.colorimetry.notes.interpretation}}</div>
+      </div>
+    </div>
+  </div>
+  {{/if}}
   {{#if details.methods.colorimetry.notes.brief}}
-  <div class="col-md-12 align-center">
+  <div class="col-md-12">
     <div class="samples">
       <div class="individual-property-display">Brief info about possible multilayers/underpaintings/retouches:<br/>
         <div class="individual-value-display">{{details.methods.colorimetry.notes.brief}}</div>
@@ -125,7 +128,7 @@
   </div>
   {{/if}}
   {{#if details.methods.colorimetry.notes.comments}}
-  <div class="col-md-12 align-center">
+  <div class="col-md-12">
     <div class="artHistory">
       <div class="individual-property-display">Comments:<br/>
         <div class="individual-value-display">{{details.methods.colorimetry.notes.comments}}</div>
@@ -134,7 +137,7 @@
   </div>
   {{/if}}
   {{#if details.methods.colorimetry.notes.sources}}
-  <div class="col-md-12 align-center">
+  <div class="col-md-12">
     <div class="artHistory">
       <div class="individual-property-display">Sources:<br/>
         <div class="individual-value-display">{{details.methods.colorimetry.notes.sources}}</div>

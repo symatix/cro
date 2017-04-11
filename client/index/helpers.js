@@ -1,7 +1,10 @@
 // web ("/") / local ("index/index")
 Template.mainGallery.helpers({
   galleryIndex: () => GalleryIndex,
-
+  // yup...just to style a damn button...
+  loadBtn:function () {
+    return {class:'btn btn-submit'};
+  }, 
   croartia:function(){
     return Prospero.find({}, {sort:{type:1}, limit:8});
   },

@@ -58,9 +58,8 @@ Template.item_new.events({
     }
 
     //other form
-    if (document.getElementById('item-architectural-heritage').checked || document.getElementById('item-archival-object').checked || document.getElementById('item-archaeological').checked || document.getElementById('item-other').checked){
+    if (document.getElementById('item-architectural-heritage').checked || document.getElementById('item-archival-object').checked || document.getElementById('item-archaeological').checked || document.getElementById('item-other').checked || document.getElementById('item-arts-crafts').checked){
       Session.set("showOther", true);
-      console.log("da");
     } else {
       Session.set("showOther", false);
     }

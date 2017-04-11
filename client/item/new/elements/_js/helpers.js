@@ -1,6 +1,6 @@
 Template.nav_scrollspy_affix.helpers({
   notPigment:function(){
-    if (Session.get("showPainting") || Session.get("showSculpture") || Session.get("showSample") || Session.get("showOther")){
+    if (Session.get("showPainting") || Session.get("showSculpture") || Session.get("showOther")){
       return true;
     } else {
       return false;
@@ -49,6 +49,15 @@ Template.objectType_hidden_fields.helpers({
     var id = Session.get("itemId");
     var object = Prospero.findOne(id).type;
     var type = 'Archaeological object';
+    if (object === type){
+      console.log("editing: "+object+" / id: "+id);
+      return true;
+    }
+  },
+  art:function(){
+    var id = Session.get("itemId");
+    var object = Prospero.findOne(id).type;
+    var type = 'Arts and crafts object';
     if (object === type){
       console.log("editing: "+object+" / id: "+id);
       return true;

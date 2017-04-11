@@ -3,7 +3,43 @@
 <!-- first col -->
   <div class="row form-box">
         <div class="col-xs-12 col-sm-7">
-
+      <!-- this is from sample -->
+        {{#if basic.name}}
+          <div class="type">
+            <div class="individual-property-display">Type of sample:<br/>
+              <div class="individual-value-display">{{basic.name}}</div>
+            </div>
+          </div>
+          {{/if}}
+        {{#if basic.samplingPerson}}
+          <div class="type">
+            <div class="individual-property-display">Name of the person who performed the sampling:<br/>
+              <div class="individual-value-display">{{basic.samplingPerson}}</div>
+            </div>
+          </div>
+          {{/if}}
+        {{#if basic.embedPerson}}
+          <div class="type">
+            <div class="individual-property-display">Name of the person/institution who performed the embedding and polishing:<br/>
+              <div class="individual-value-display">{{basic.embedPerson}}</div>
+            </div>
+          </div>
+          {{/if}}
+        {{#if basic.sampleDimensions}}
+          <div class="type">
+            <div class="individual-property-display">Sample dimensions (in mm):<br/>
+              <div class="individual-value-display">{{basic.sampleDimensions}}</div>
+            </div>
+          </div>
+          {{/if}}
+        {{#if basic.sampleInvestigated}}
+          <div class="type">
+            <div class="individual-property-display">Investigated by:<br/>
+              <div class="individual-value-display">{{basic.sampleInvestigated}}</div>
+            </div>
+          </div>
+          {{/if}}
+      <!-- /sample -->
         {{#if basic.type}}
           <div class="type">
             <div class="individual-property-display">Type of object:<br/>
@@ -57,13 +93,6 @@
           <div class="commonName">
             <div class="individual-property-display">Common commercial names from different manufacturers:<br/>
               <div class="individual-value-display">{{basic.commonName}}</div>
-            </div>
-          </div>
-          {{/if}}
-        {{#if basic.type}}
-          <div class="type">
-            <div class="individual-property-display">Type:<br/>
-              <div class="individual-value-display">{{basic.type}}</div>
             </div>
           </div>
           {{/if}}
@@ -265,8 +294,34 @@
           <!-- /images col -->
 
 
+        {{#if basic.notes.briefArea}}
+        <div class="col-md-12">
+          <div class="briefArea">
+            <div class="individual-property-display">Brief description of the area where the sample was taken from:<br/>
+              <div class="individual-value-display">
+                <pre>
+                  {{basic.notes.briefArea}}
+                </pre>
+              </div>
+            </div>
+          </div>
+        </div>
+        {{/if}}
+        {{#if basic.notes.briefResults}}
+        <div class="col-md-12">
+          <div class="briefResults">
+            <div class="individual-property-display">Brief description of the sample and interpretation of the results:<br/>
+              <div class="individual-value-display">
+                <pre>
+                  {{basic.notes.briefResults}}
+                </pre>
+              </div>
+            </div>
+          </div>
+        </div>
+        {{/if}}
         {{#if basic.notes.briefDescription}}
-        <div class="col-md-12 align-center">
+        <div class="col-md-12">
           <div class="briefDescription">
             <div class="individual-property-display">Brief description of pigment/dye/binder/varnish and history of use:<br/>
               <div class="individual-value-display">
@@ -279,7 +334,7 @@
         </div>
         {{/if}}
         {{#if basic.notes.degradation}}
-        <div class="col-md-12 align-center">
+        <div class="col-md-12">
           <div class="degradation">
             <div class="individual-property-display">Degradation processes:<br/>
               <div class="individual-value-display">
@@ -292,7 +347,7 @@
         </div>
         {{/if}}
         {{#if basic.notes.methodsOfIdentification}}
-        <div class="col-md-12 align-center">
+        <div class="col-md-12">
           <div class="methodsOfIdentification">
             <div class="individual-property-display">Possible methods of identification:<br/>
               <div class="individual-value-display">
@@ -305,7 +360,7 @@
         </div>
         {{/if}}
         {{#if basic.notes.sources}}
-        <div class="col-md-12 align-center">
+        <div class="col-md-12">
           <div class="methodsOfIdentification">
             <div class="individual-property-display">Sources:<br/>
               <div class="individual-value-display">
@@ -318,7 +373,7 @@
         </div>
         {{/if}}
         {{#if basic.notes.provenance}}
-        <div class="col-md-12 align-center">
+        <div class="col-md-12">
           <div class="samples">
             <div class="individual-property-display">Short overview of provenance:<br/>
               <div class="individual-value-display">
@@ -331,7 +386,7 @@
         </div>
         {{/if}}
         {{#if basic.notes.projectName}}
-        <div class="col-md-12 align-center">
+        <div class="col-md-12">
           <div class="projectName">
             <div class="individual-property-display">Related conservation/restoration/investigation project name:<br/>
               <div class="individual-value-display">
@@ -344,7 +399,7 @@
         </div>
         {{/if}}
         {{#if basic.notes.summaryProjects}}
-        <div class="col-md-12 align-center">
+        <div class="col-md-12">
           <div class="summaryProjects">
             <div class="individual-property-display">Summary of project/conservation/restoration and investigation works:<br/>
               <div class="individual-value-display">
@@ -357,7 +412,7 @@
         </div>
         {{/if}}
         {{#if basic.notes.comments}}
-        <div class="col-md-12 align-center">
+        <div class="col-md-12">
           <div class="artHistory">
             <div class="individual-property-display">Comments:<br/>
               <div class="individual-value-display">

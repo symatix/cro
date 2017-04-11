@@ -16,7 +16,9 @@
       <div class="item-list">
 <!-- title of item list -->
                   <div class="align-center item-list-heading item-heading">
-                      <span class="item-property">{{basic.title}}</span><br/>
+                      <span class="item-property">
+                        {{#if basic.title}}{{basic.title}}{{/if}}
+                        </span><br/>
                   </div>
                   <div class="row">
                     <div class="col-xs-12 col-sm-6">
@@ -25,54 +27,52 @@
                     <div class="col-xs-12 col-sm-6 list-font">
                       <br/>
                       <table>
+
+                        <!-- other -->
                         {{#if basic.type}}
                         <tr>
                           <td><i>Type:</i></td>
                           <td>{{basic.type}}</td>
                         </tr>
                         {{/if}}
-                        {{#if basic.appearence}}
+
+                        <!-- sample -->
+                        {{#if basic.name}}
                         <tr>
-                          <td><i>Appearance:</i></td>
-                          <td>{{basic.appearence}}</td>
+                          <td><i>Sample type:</i></td>
+                          <td>{{basic.name}}</td>
                         </tr>
                         {{/if}}
+
+
+                        <!-- pigment -->
                         {{#if basic.altName}}
                         <tr>
-                          <td><i>Alternative<br/>&emsp;name:</i></td>
+                          <td><i>Alternative name:</i></td>
                           <td>{{basic.altName}}</td>
                         </tr>
                         {{/if}}
-                        {{#if basic.purity}}
+                        {{#if basic.appearence}}
                         <tr>
-                          <td><i>Purity:</i></td>
-                          <td>{{basic.purity}}</td>
+                          <td><i>Appearence:</i></td>
+                          <td>{{basic.appearence}}</td>
                         </tr>
                         {{/if}}
-                        {{#if basic.stateForm}}
+                        {{#if basic.chemicalName}}
                         <tr>
-                          <td><i>State/form:</i></td>
-                          <td>{{basic.stateForm}}</td>
+                          <td><i>Chemical name:</i></td>
+                          <td>{{basic.chemicalName}}</td>
                         </tr>
                         {{/if}}
-                        {{#if basic.grainSize}}
-                        <tr>
-                          <td><i>Grain<br/>&emsp;size:</i></td>
-                          <td>{{basic.grainSize}}</td>
-                        </tr>
-                        {{/if}}
+
+                        <!-- !pigment -->
                         {{#if basic.author}}
                         <tr>
                           <td><i>Author:</i></td>
                           <td>{{basic.author}}</td>
                         </tr>
                         {{/if}}
-                        {{#if basic.date}}
-                        <tr>
-                          <td><i>Date:</i></td>
-                          <td>{{basic.date}}</td>
-                        </tr>
-                        {{/if}}
+                        <!-- !pigment && !sample -->
                         {{#if basic.currentLocation}}
                         <tr>
                           <td><i>Current<br/>&emsp;location:</i></td>
@@ -85,22 +85,19 @@
                           <td>{{basic.currentOwner}}</td>
                         </tr>
                         {{/if}}
-                        {{#if basic.originalLocation}}
+
+
+                        <!-- all -->
+                        {{#if basic.date}}
                         <tr>
-                          <td><i>Original<br/>&emsp;location:</i></td>
-                          <td>{{basic.originalLocation}}</td>
+                          <td><i>Date:</i></td>
+                          <td>{{basic.date}}</td>
                         </tr>
                         {{/if}}
-                        {{#if basic.originalOwner}}
+                        {{#if info.fullName}}
                         <tr>
-                          <td><i>Original<br/>&emsp;owner:</i></td>
-                          <td>{{basic.originalOwner}}</td>
-                        </tr>
-                        {{/if}}
-                        {{#if basic.inventoryNumber}}
-                        <tr>
-                          <td><i>Inventory<br/>&emsp;number(s)</i></td>
-                          <td>{{basic.inventoryNumber}}</td>
+                          <td><i>Submitted by:</i></td>
+                          <td>{{info.fullName}}</td>
                         </tr>
                         {{/if}}
                       </table>
@@ -128,7 +125,7 @@
             </div>
               <div class="col-xs-12 itemBox-lg">
                 <h4 class="itemBox-basicInfo">
-                  {{basic.title}}<br/>
+                  {{#if basic.title}}{{basic.title}} -{{/if}} {{basic.name}}<br/>
                   {{#if basic.author}}by{{/if}} {{basic.author}}
                 </h4>
               </div>

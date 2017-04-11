@@ -1,6 +1,9 @@
 
 Template.users.helpers({
     usersIndex: () => UsersIndex,
+  loadBtn:function () {
+    return {class:'btn btn-submit'};
+  }, 
   users:function(){
     return Meteor.users.find({username:{$ne:"admin"}});
   },

@@ -5,6 +5,7 @@ Router.configure({
 // GENERAL ROUTES
 Router.route("/", function(){ 
   Session.set("noFilter", true);
+  Session.set("details", true);
   this.render('navbar', {to:"header"});
   this.render('mainGallery', {to:"main"});
 });

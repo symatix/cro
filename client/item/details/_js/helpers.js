@@ -15,7 +15,8 @@ Template.item_details.helpers({
   pigmentView:function(){
   	var object = Prospero.findOne(this._id).type;
   	var pigment = "Pigment/dye/binder/varnish/reference materials";
-  	if (object !== pigment){
+  	var sample = "Sample/cross-section";
+  	if (object === pigment || object === sample){
   		return true;
   	}
   }

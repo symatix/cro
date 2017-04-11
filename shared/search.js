@@ -17,6 +17,8 @@ GalleryIndex = new EasySearch.Index({
     selector: function(searchObject, options, aggregation) {
       const selector = this.defaultConfiguration().selector(searchObject, options, aggregation);
 
+      // use this for deep selector
+      //selector['parent.child'] = "<value>";
 
       selector.isDeleted = "available";
       selector.visible = "public";
@@ -34,7 +36,7 @@ GalleryIndex = new EasySearch.Index({
     },
     sort: function (searchObject, options) {
       const guestSort = options.search.props.guestSort
-
+          
       // return a mongo sort specifier
           if ('addedBy' === guestSort) {
             return {
@@ -64,7 +66,11 @@ GalleryIndex = new EasySearch.Index({
             return {
               "basic.author": -1
             }
-          } 
+          } else {
+            return {
+              "info.last_edit": -1
+            }
+          }
     },
   }),
 })
@@ -183,6 +189,10 @@ ModeratorIndex = new EasySearch.Index({
             return {
               "basic.author": -1
             }
+          } else {
+            return {
+              "info.last_edit": -1
+            }
           }
     },
     defaultSearchOptions: {
@@ -222,6 +232,10 @@ AdminIndex = new EasySearch.Index({
             return {
               "info.addedBy": 1,
             }
+          } else if ('last_edit' === sortBy) {
+            return {
+              "info.last_edit": -1
+            }
           } else if ('last_entry' === sortBy) {
             return {
               "info.createdAt": -1
@@ -250,11 +264,14 @@ AdminIndex = new EasySearch.Index({
             return {
               "basic.author": -1
             }
+          } else {
+            return {
+              "info.last_edit": -1
+            }
           }
     },
   }),
 })
-
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
