@@ -144,5 +144,19 @@ Meteor.methods({
 	adminUsername: function(){
 		var admin = Meteor.users.findOne({username:"admin"}).username;
 		return admin;
+	},
+	contactForm:function(contact){
+		    Email.send({
+				  to: contact.email,
+				  from: "croartia.db@gmail.com",
+				  subject: "Re: "+contact.subject+"@croARTia",
+				  text: "Hello "+contact.name+"! \n\nWe have received your message and will review it as soon as possible.\nThank you for contacting us,\n\n croARTia Team",
+				});
+		    Email.send({
+				  to: "croartia.db@gmail.com",
+				  from: "croartia.contactForm",
+				  subject: contact.subject+"@croARTia",
+				  text: "Hello Admin! There was a form submit@croARTia\n\nName: "+contact.name+"\nE-mail: "+contact.email+"\nTelephone: "+contact.telephone+"\nInstitution: "+contact.institution+"\n\nContent:\n"+contact.text,
+				});
 	}
 })

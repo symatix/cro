@@ -31,7 +31,9 @@
                 <li class=""><a class="newUser-href" href="/admin/users/entry">Add user</a></li>
                 <li class=""><a href="/admin/users">Manage users</a></li>
                 <li role="separator" class="divider"></li>
-                <li class="disabled"><a href="/search">Advanced search</a></li>
+                <li class=""><a href="/search">Advanced search</a></li>
+                <li role="separator" class="divider"></li>
+                <li class="dropdown"><a href="/report.txt">[dev]</a></li>
               </ul>
             </li>
 
@@ -43,7 +45,7 @@
                 <li><a class="newItem-href" href="/new">New entry</a></li>
                 <li><a href="/moderator/collection">My collection</a></li>
                 <li role="separator" class="divider"></li>
-                <li class="disabled"><a href="/search">Advanced search</a></li>
+                <li class=""><a href="/search">Advanced search</a></li>
               </ul>
             </li>
 
@@ -51,13 +53,19 @@
 
             {{else}}
               <ul class="nav navbar-nav">
-                <li class="dropdown disabled"><a href="/search">Advanced search</a></li>
+                <li class="dropdown"><a href="/search">Advanced search</a></li>
               </ul>
             {{/if}}
+              <ul class="nav navbar-nav">
+                <li class="dropdown"><a href="/about">About</a></li>
+              </ul>
+              <ul class="nav navbar-nav">
+                <li class="dropdown"><a href="/contact">Contact Us</a></li>
+              </ul>
         </ul>
 
 
-
+        <div class="align-center">
         <!-- search for users -->
         {{#if currentUser.profile.isAdmin}}
           {{#if moderatorDbView}}
@@ -116,7 +124,7 @@
                   <option value="last_edit" selected>last edit</option>
                   <option value="first_entry">first entry</option>
                   <option value="last_entry">last entry</option>
-                  <option value="addedBy">added by</option>
+                  <!--<option value="addedBy">added by</option>-->
                   <option value="title_a">title a - z</option>
                   <option value="title_z">title z - a</option>
                   <option value="author_a">author a - z</option>
@@ -214,7 +222,7 @@
           {{/if}}
         {{/if}}<!-- /if guestSearch-->
 
-
+        </div>
 
         {{#if currentUser}}
         <ul class="nav navbar-nav float-right">
@@ -226,33 +234,13 @@
           </p>
         </ul>
 
-        <!-- remove this after finished -->
-        <ul class="nav navbar-nav float-right">
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">[dev] <span class="caret"></span></a>
-              <ul class="dropdown-menu pull-right dev">
-                {{> dev}}
-              </ul>
-            </li>
-        </ul><!-- remove dev report -->
 
           {{else}}
-
-
 
           <ul class="nav navbar-nav float-right">
             <li class ="dropdown"><a href="/login">Log in</a></li>
           </ul>
 
-        <!-- remove this after finished -->
-        <ul class="nav navbar-nav float-right">
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">[dev] <span class="caret"></span></a>
-              <ul class="dropdown-menu dev">
-                {{> dev}}
-              </ul>
-            </li>
-        </ul><!-- remove dev report -->
           {{/if}}
       </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->

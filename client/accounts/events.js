@@ -28,7 +28,7 @@ Template.login.events({
         if (!result){
           alert("No user with "+email+" email found!");
         } else {
-          alert("Email with login details sent to "+email);S
+          alert("Email with login details sent to "+email);
         }
       });
     }

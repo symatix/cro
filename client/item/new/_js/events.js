@@ -18,7 +18,12 @@ Template.item_new.events({
   'submit .js-input-painting-data':function(event){
     event.preventDefault();
     objectId = this._id;
-    Meteor.myFunctions.insertData();
+    var progress = $('.progress-bar-custom').attr('aria-valuenow');
+    if (progress==="100"){
+      Meteor.myFunctions.insertData();
+    } else {
+      alert("Error: upload not finished.");
+    }
     Session.set("showPicture", false);
   },
   'click #form-basic-select li':function(e){

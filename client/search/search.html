@@ -1,0 +1,299 @@
+<template name="advanced_search">
+  <div class="container-fluid">
+      <h1 class="breadcrumbs">
+        <a class="a-heading" href="/">croARTia </a> \ 
+        <span class="post-heading">advanced search</span>
+      </h1>
+
+      <div class="container align-left margin-top">
+      <div class="row form-box">
+
+
+      <div class="row relative">
+        <button class="btn btn-default btn-toggle btn_toggleBasic float-right">Colapse</button>
+        <h3 id="basic_href">&emsp;search by</h3>
+        <br/>
+      </div>
+
+      <form class="toggleBasic">
+
+        <div class="col-xs-12 align-center">
+        <h3 style="text-decoration:underline">basic information</h3>
+        </div>
+
+        <div class="col-xs-12 col-sm-1 individual-property">
+          Title/Name
+        </div>
+        <div class="col-xs-12 col-sm-5">
+              <input type="text" class="search search-title" id="" placeholder="">
+        </div>
+        <div class="col-xs-12 col-sm-1 individual-property">
+          Author
+        </div>
+        <div class="col-xs-12 col-sm-5">
+          <input type="text" class="search search-author" id="" placeholder="">
+        </div>
+
+        <div class="col-xs-12 col-sm-4 align-left individual-property">
+          Type
+              <input type="text" class="search search-type" id="" placeholder="">
+        </div>
+
+        <div class="col-xs-12 col-sm-4 align-left individual-property">
+          Technique
+              <input type="text" class="search search-technique" id="" placeholder="">
+        </div>
+
+        <div class="col-xs-12 col-sm-4 align-left individual-property">
+          Investigated by
+              <input type="text" class="search search-investigated" id="" placeholder="">
+        </div>
+
+        <div class="col-xs-12 col-sm-4 align-left individual-property">
+          Current owner
+              <input type="text" class="search search-currentOwner" id="" placeholder="">
+        </div>
+
+        <div class="col-xs-12 col-sm-4 align-left individual-property">
+          Current location
+              <input type="text" class="search search-currentLocation" id="" placeholder="">
+        </div>
+
+        <div class="col-xs-12 col-sm-4 align-left individual-property">
+          Inventory number
+              <input type="text" class="search search-inventoryNumber" id="" placeholder="">
+        </div>
+
+        <div class="col-xs-12 col-sm-offset-4 col-sm-8 align-left individual-property">
+          Date 
+          <input type="text" class="search search-date date-input" id="" placeholder="(YYYY)">
+          &emsp; 
+              <select class="date-range form-select">
+                <option value="exact" selected="selected">exact</option>
+                <option value="older">and older</option>
+                <option value="newer">and newer</option>
+                <option value="range">range</option>
+              </select>
+          &emsp;
+          <input type="text" class="search search-date-range date-input {{#unless range}}hidden{{/unless}}" id="" placeholder="(YYYY)">
+        </div>
+
+        <div class="col-xs-12 align-center">
+          <h3 style="text-decoration:underline">tags</h3>
+        </div>
+        <div class="col-xs-12 col-sm-12 align-left individual-property">
+          <input type="text" class="search search-tags" id="" placeholder="">
+        </div>
+
+        <div class="col-xs-12 align-center">
+        <h3 style="text-decoration:underline">materials</h3>
+        </div>
+
+        <div class="col-xs-12 col-sm-4 align-left individual-property">
+          Sample type
+              <input type="text" class="search search-name" id="" placeholder="">
+        </div>
+
+        <div class="col-xs-12 col-sm-4 align-left individual-property">
+          Appearance
+              <input type="text" class="search search-appearence" id="" placeholder="">
+        </div>
+
+        <div class="col-xs-12 col-sm-4 align-left individual-property">
+          Alternative names
+              <input type="text" class="search search-altName" id="" placeholder="">
+        </div>
+
+        <div class="col-xs-12 col-sm-4 align-left individual-property">
+          Chemical name
+              <input type="text" class="search search-chemicalName" id="" placeholder="">
+        </div>
+
+        <div class="col-xs-12 col-sm-4 align-left individual-property">
+          Chemical formula
+              <input type="text" class="search search-chemicalFormula" id="" placeholder="">
+        </div>
+
+
+        <div class="col-xs-12 col-sm-4 align-left individual-property">
+          Pigments/dyes identified
+              <input type="text" class="search search-pigmentsDyes" id="" placeholder="">
+        </div>
+
+        <div class="col-xs-12 col-sm-4 align-left individual-property">
+          Binding medium identified
+              <input type="text" class="search search-bendingMedium" id="" placeholder="">
+        </div>
+
+        <div class="col-xs-12 col-sm-4 align-left individual-property">
+          Materials involved
+              <input type="text" class="search search-materials" id="" placeholder="">
+        </div>
+
+
+
+        <div class="col-xs-12">
+        <h3 id="basic_href" >filter with</h3>
+        </div>
+
+        <div class="col-xs-12">
+          &nbsp;
+        </div>
+
+
+          {{> select_methods}}
+
+        <div class="col-xs-offset-3 col-xs-6 individual-property">
+            <button class="btn btn-submit search-query">SUBMIT QUERY</button>
+        </div>
+
+      </form>
+    </div>
+
+
+
+    <div class="row form-box search-results">
+      <h3 id="" >results</h3>
+
+
+        <div class="col-xs-12 col-sm-offset-2 col-sm-1 individual-property">
+          Category:
+        </div>
+        <div class="col-xs-12 col-sm-3">
+              <select name="typeFilter" class="sorting-search sorting-category form-select" id="categoryFilter">
+                <option value="" disabled selected style='display:none;'>Select...</option>
+                <option value="">All</option>
+                <option value="Painting" selected="{{painting}}">Painting</option>
+                <option value="Sculpture" selected="{{sculpture}}">Sculpture</option>
+                <option value="Architectural heritage" selected="{{architectural}}">Architectural heritage</option>
+                <option value="Archival object" selected="{{archival}}">Archival object</option>
+                <option value="Archaeological object" selected="{{archaeological}}">Archaeological object</option>
+                <option value="Arts and crafts object" selected="{{arts}}">Arts and crafts object</option>
+                <option value="Sample/cross-section" selected="{{sample}}">Sample</option>
+                <option value="Pigment/dye/binder/varnish/reference materials" selected="{{pigment}}">Pigment</option>
+                <option value="other" selected="{{other}}">Other</option>
+              </select>&nbsp;
+        </div>
+
+        <div class="col-xs-12 col-sm-1 individual-property">
+          Relevance:
+        </div>
+        <div class="col-xs-12 col-sm-3">
+                <select class="sorting-search sorting-filter form-select">
+                  <option value="title_a" selected>Title a - z</option>
+                  <option value="title_z">Title z - a</option>
+                  <option value="author_a">Author a - z</option>
+                  <option value="author_z">Author z - a</option>
+                  <option value="date_newer">Newer</option>
+                  <option value="date_older">Older</option>
+                </select>
+        </div>
+        <div class="col-xs-12">
+          &nbsp;
+        </div>
+
+      <table class="list-font-results">
+          <tr class="list-legend">
+            <td>
+              Type
+            </td>
+            <td>
+              Title / Name
+            </td>
+            <td>
+              Author
+            </td>
+            <td>
+              Technique / Sample type
+            </td>
+            <td>
+              Date
+            </td>
+            <td class="align-center"> 
+              View
+            </td>
+            {{#if currentUser.profile.isAdmin}}
+            <td class="align-center"> 
+              Edit
+            </td>
+            {{/if}}
+          </tr>
+
+
+
+
+        {{#EasySearch.Each index=searchIndex}} 
+          <tr>
+            <td class="search-results-list">
+              {{typeOfObject}}
+            </td>
+            <td class="search-results-list">
+            {{#if basic.title}}
+              {{basic.title}}
+            {{/if}}
+            </td>
+            <td class="search-results-list">
+            {{#if basic.author}}
+              {{basic.author}}
+            {{/if}}
+            </td>
+            <td class="search-results-list">
+            {{#if basic.technique}}
+              {{basic.technique}}
+            {{/if}}
+            {{#if basic.name}}
+              {{basic.name}}
+            {{/if}}
+            </td>
+            <td class="search-results-list">
+            {{#if basic.date}}
+              {{basic.date}}
+            {{/if}}
+            </td>
+            <td class="search-results-list align-center">
+              <a href="/gallery/details/{{__originalId}}">
+                <span class="glyphicon glyphicon-eye-open glyph"></span>
+              </a>
+            </td>
+
+            {{#if currentUser.profile.isAdmin}}
+            <td class="align-center">
+              <a class="btn-setSession" href="/edit/{{__originalId}}">
+                <span class="glyphicon glyphicon-edit glyph"></span>
+              </a>
+            </td>
+            {{/if}}
+
+          </tr>
+        {{/EasySearch.Each}}
+      </table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      {{> EasySearch.LoadMore attributes=loadBtn index=searchIndex content="Load more content"}}
+      {{#EasySearch.IfSearching index=searchIndex}}
+        <div class="list-font-results align-center">Searching...</div>
+      {{/EasySearch.IfSearching}}
+
+      {{#EasySearch.IfNoResults index=searchIndex}}
+        <div class="list-font-results align-center">No results matching your query found.</div>
+      {{/EasySearch.IfNoResults}}
+
+      </div>
+
+    </div>
+  </div>
+
+</template>

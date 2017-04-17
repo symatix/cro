@@ -67,7 +67,7 @@ Meteor.startup(() => {
 			basic:{
 				author:"Miroslav Kraljević",
 				title:"The Satyr and the Peasant",
-				date:"1910",
+				date:1910,
 			    technique:"oil on canvas",
 			  	dimensions_noFrame:"196; 199,9",
 				dimensions_frame:"201,5; 207",
@@ -156,7 +156,7 @@ Meteor.startup(() => {
 				basic:{
 					author:"Sculpture Author",
 					title:"Title",
-					date:"10.11.2016",
+					date:1946,
 			},
 		});
 		//Architectural heritage 
@@ -181,7 +181,7 @@ Meteor.startup(() => {
 				basic:{
 					author:"Heritage Author",
 					title:"Title",
-					date:"10.11.2016",
+					date:1310,
 			},
 		});
 		//Archival object 
@@ -206,7 +206,7 @@ Meteor.startup(() => {
 				basic:{
 					author:"Archival Author",
 					title:"Title",
-					date:"10.11.2016",
+					date:1610,
 			},
 		});
 		//Archaeological object 
@@ -231,7 +231,7 @@ Meteor.startup(() => {
 				basic:{
 					author:"Archaeological Author",
 					title:"Title",
-					date:"10.11.2016",
+				date:1345,
 			},
 		});
 		//Pigment 
@@ -324,7 +324,7 @@ Meteor.startup(() => {
 				basic:{
 					author:"Material Author",
 					title:"Title",
-					date:"10.11.2016",
+					date:710,
 			},
 		});
 		//Other 
@@ -349,7 +349,7 @@ Meteor.startup(() => {
 				basic:{
 					author:"Other Author",
 					title:"Title",
-					date:"10.11.2016",
+					date:1560,
 				},
 		});
 	var count = Prospero.find().count();

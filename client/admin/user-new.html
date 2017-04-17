@@ -18,53 +18,66 @@
       <!-- first row -->
       <div class="row">
         <!-- first col -->
-
-        <div class="col-xs-12 col-md-2 individual-property">
+        <div class="indent">
+        {{#if edit}}
+          <h3>edit user details</h3>
+        {{else}}
+          <h3>enter user details</h3>
+        {{/if}}
+        </div>
+        <div class="col-xs-12 col-md-2 individual-property add-top-padding">
           USERNAME
         </div>
         <div class="col-xs-12 col-md-4">
-          <input type="text" name="username" class="individual-value individual-form" id="username" placeholder="" value="{{username}}">
+          <input type="text" name="username" class="individual-value individual-form" id="username" placeholder="" value="{{username}}" required="{{#unless edit}}required{{/unless}}">
         </div>
 
         
-        <div class="col-xs-12 col-md-2 individual-property {{#if edit}}hidden{{/if}}">
+        <div class="col-xs-12 col-md-2 individual-property add-top-padding {{#if edit}}hidden{{/if}}">
           PASSWORD
         </div>
         <div class="col-xs-12 col-md-4 {{#if edit}}hidden{{/if}}">
-          <input type="text" name="password" class="individual-value individual-form" id="password" placeholder="" value="{{profile.password}}">
+          <input type="text" name="password" class="individual-value individual-form" id="password" placeholder="" value="{{profile.password}}" required="">
         </div>
         
 
-        <div class="col-xs-12 col-md-2 individual-property">
+        <div class="col-xs-12 col-md-2 individual-property add-top-padding">
           E-MAIL
         </div>
         <div class="col-xs-12 col-md-4">
-          <input type="text" name="email" class="individual-value individual-form" id="email" placeholder="" value="{{profile.email}}">
+          <input type="email" name="email" class="individual-value individual-form" id="email" placeholder="" value="{{profile.email}}" required>
         </div>
 
-        <div class="col-xs-12 col-md-2 individual-property">
+        <div class="col-xs-12 col-md-2 individual-property add-top-padding">
           FULL NAME
         </div>
         <div class="col-xs-12 col-md-4">
-          <input type="text" name="full_name" class="individual-value individual-form" id="full_name" placeholder="" value="{{profile.full_name}}">
+          <input type="text" name="full_name" class="individual-value individual-form" id="full_name" placeholder="" value="{{profile.full_name}}" required>
         </div>
 
-        <div class="col-xs-12 col-md-2 individual-property">
+        <div class="col-xs-12 col-md-2 individual-property add-top-padding">
           INSTITUTION
         </div>
         <div class="col-xs-12 col-md-4">
-          <input type="text" name="institution" class="individual-value individual-form" id="institution" placeholder="" value="{{profile.institution}}">
+          <input type="text" name="institution" class="individual-value individual-form" id="institution" placeholder="(optional)" value="{{profile.institution}}">
         </div>
 
-        <div class="col-xs-12 col-md-2 individual-property">
+        <div class="col-xs-12 col-md-2 individual-property add-top-padding">
           TELEPHONE
         </div>
         <div class="col-xs-12 col-md-4">
-          <input type="text" name="telephone" class="individual-value individual-form" id="telephone" placeholder="" value="{{profile.telephone}}">
+          <input type="text" name="telephone" class="individual-value individual-form" id="telephone" placeholder="(optional)" value="{{profile.telephone}}">
         </div>
 
+
+      <div class="col-xs-12 align-center">
+        &nbsp;
+      </div>
+      <div class="col-xs-12 align-center">
+        <button type="submit" class="btn btn-default btn-submit btn-login">SUBMIT ENTRY</button>
+      </div>
+
       </div><!-- first row -->
-      <button type="submit" class="btn btn-default btn-submit">SUBMIT ENTRY</button>
     </form>
       <div class="row">
         <div class="col-xs-12 align-center">

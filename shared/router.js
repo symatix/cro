@@ -19,6 +19,14 @@ Router.route("/search", function(){
   this.render('navbar', {to:"header"});
   this.render('advanced_search', {to:"main"});
 });
+Router.route("/about", function(){
+  this.render('navbar', {to:"header"});
+  this.render('about', {to:"main"});
+});
+Router.route("/contact", function(){
+  this.render('navbar', {to:"header"});
+  this.render('contact', {to:"main"});
+});
 
 Router.route("/new", function(){
   Session.set("noFilter", true);

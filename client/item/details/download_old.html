@@ -1,0 +1,1175 @@
+<template name="item_details_download_old">
+	<h3></h3>
+	<div class="row form-box">
+	<!-- row -->
+	{{#if basic}}
+		<div class="row">
+			<div class="col-xs-3">
+				<span class="download-files">Basic files</span>
+			</div>
+			<div class="col-xs-9">
+				{{#if data.basic.front}}
+					<a class="download-link" href="{{data.basic.front}}" target="_blank" download>|FRONT IMAGE| • </a>
+				{{/if}}
+
+				{{#if data.basic.back}}
+					<a class="download-link" href="{{data.basic.back}}" target="_blank" download>|BACK IMAGE| • </a>
+				{{/if}}
+
+				{{#if data.basic.side}}
+					<a class="download-link" href="{{data.basic.side}}" target="_blank" download>|SIDE IMAGE| • </a>
+				{{/if}}
+
+				{{#if data.basic.signature}}
+					<a class="download-link" href="{{data.basic.signature}}" target="_blank" download>|SIGNATURE| • </a>
+				{{/if}}
+
+				{{#if data.basic.basic_files}}
+					<a class="download-link" href="{{data.basic.basic_files}}" target="_blank" download>|RESEARCH DOCS|</a>
+				{{/if}}
+			</div>
+		</div> <!-- /end row -->
+		<br/>
+	{{/if}}
+	{{#if original}}
+	<!-- row -->
+		<div class="row">
+			<div class="col-xs-3">
+				<span class="download-files">Materials - original</span>
+			</div>
+			<div class="col-xs-9">
+				{{#if data.original.photoOne}}
+					<a class="download-link" href="{{data.original.photoOne}}" target="_blank" download>|FIRST IMAGE| • </a>
+				{{/if}}
+
+				{{#if data.original.photoTwo}}
+					<a class="download-link" href="{{data.original.photoTwo}}" target="_blank" download>|SECOND IMAGE| • </a>
+				{{/if}}
+
+				{{#if data.original.photoThree}}
+					<a class="download-link" href="{{data.original.photoThree}}" target="_blank" download>|THIRD IMAGE| • </a>
+				{{/if}}
+
+				{{#if data.original.photoFour}}
+					<a class="download-link" href="{{data.original.photoFour}}" target="_blank" download>|FOURTH IMAGE| • </a>
+				{{/if}}
+
+				{{#if data.original.files}}
+					<a class="download-link" href="{{data.original.files}}" target="_blank" download>|ADDITIONAL FILES|</a>
+				{{/if}}
+			</div>
+		</div> <!-- /end row -->
+		<br/>
+	{{/if}}
+	{{#if interventions}}
+	<!-- row -->
+		<div class="row">
+			<div class="col-xs-3">
+				<span class="download-files">Materials - interventions</span>
+			</div>
+			<div class="col-xs-9">
+				{{#if data.interventions.photoOne}}
+					<a class="download-link" href="{{data.interventions.photoOne}}" target="_blank" download>|FIRST IMAGE| • </a>
+				{{/if}}
+
+				{{#if data.interventions.photoTwo}}
+					<a class="download-link" href="{{data.interventions.photoTwo}}" target="_blank" download>|SECOND IMAGE| • </a>
+				{{/if}}
+
+				{{#if data.interventions.photoThree}}
+					<a class="download-link" href="{{data.interventions.photoThree}}" target="_blank" download>|THIRD IMAGE| • </a>
+				{{/if}}
+
+				{{#if data.interventions.photoFour}}
+					<a class="download-link" href="{{data.interventions.photoFour}}" target="_blank" download>|FOURTH IMAGE| • </a>
+				{{/if}}
+
+				{{#if data.interventions.files}}
+					<a class="download-link" href="{{data.interventions.files}}" target="_blank" download>|ADDITIONAL FILES|</a>
+				{{/if}}
+			</div>
+		</div> <!-- /end row -->
+		<br/>
+	{{/if}}
+	{{#if restoration}}
+	<!-- row -->
+		<div class="row">
+			<div class="col-xs-3">
+				<span class="download-files">Materials - restoration</span>
+			</div>
+			<div class="col-xs-9">
+				{{#if data.restoration.photoOne}}
+					<a class="download-link" href="{{data.restoration.photoOne}}" target="_blank" download>|FIRST IMAGE| • </a>
+				{{/if}}
+
+				{{#if data.restoration.photoTwo}}
+					<a class="download-link" href="{{data.restoration.photoTwo}}" target="_blank" download>|SECOND IMAGE| • </a>
+				{{/if}}
+
+				{{#if data.restoration.photoThree}}
+					<a class="download-link" href="{{data.restoration.photoThree}}" target="_blank" download>|THIRD IMAGE| • </a>
+				{{/if}}
+
+				{{#if data.restoration.photoFour}}
+					<a class="download-link" href="{{data.restoration.photoFour}}" target="_blank" download>|FOURTH IMAGE| • </a>
+				{{/if}}
+
+				{{#if data.restoration.files}}
+					<a class="download-link" href="{{data.restoration.files}}" target="_blank" download>|ADDITIONAL FILES|</a>
+				{{/if}}
+			</div>
+		</div> <!-- /end row -->
+		<br/>
+	{{/if}}
+	{{#if aas}}
+	<!-- row -->
+		<div class="row">
+			<div class="col-xs-3">
+				<span class="download-files">Methods - aas</span>
+			</div>
+			<div class="col-xs-9">
+				{{#if details.methods.aas.files.aasFiles1}}
+					<a class="download-link" href="{{details.methods.aas.files.aasFiles1}}" target="_blank" download>|FIRST IMAGE| • </a>
+				{{/if}}
+
+				{{#if details.methods.aas.files.aasFiles2}}
+					<a class="download-link" href="{{details.methods.aas.files.aasFiles2}}" target="_blank" download>|SECOND IMAGE| • </a>
+				{{/if}}
+
+				{{#if details.methods.aas.files.aasFiles3}}
+					<a class="download-link" href="{{details.methods.aas.files.aasFiles3}}" target="_blank" download>|THIRD IMAGE| • </a>
+				{{/if}}
+
+				{{#if details.methods.aas.files.aasFiles4}}
+					<a class="download-link" href="{{details.methods.aas.files.aasFiles4}}" target="_blank" download>|FOURTH IMAGE| • </a>
+				{{/if}}
+
+				{{#if details.methods.aas.files.aasFiles5}}
+					<a class="download-link" href="{{details.methods.aas.files.aasFiles5}}" target="_blank" download>|ADDITIONAL FILES|</a>
+				{{/if}}
+			</div>
+		</div> <!-- /end row -->
+		<br/>
+	{{/if}}
+	{{#if aes}}
+	<!-- row -->
+		<div class="row">
+			<div class="col-xs-3">
+				<span class="download-files">Methods - aes</span>
+			</div>
+			<div class="col-xs-9">
+				{{#if details.methods.aes.files.aesFiles1}}
+					<a class="download-link" href="{{details.methods.aes.files.aesFiles1}}" target="_blank" download>|FIRST IMAGE| • </a>
+				{{/if}}
+
+				{{#if details.methods.aes.files.aesFiles2}}
+					<a class="download-link" href="{{details.methods.aes.files.aesFiles2}}" target="_blank" download>|SECOND IMAGE| • </a>
+				{{/if}}
+
+				{{#if details.methods.aes.files.aesFiles3}}
+					<a class="download-link" href="{{details.methods.aes.files.aesFiles3}}" target="_blank" download>|THIRD IMAGE| • </a>
+				{{/if}}
+
+				{{#if details.methods.aes.files.aesFiles4}}
+					<a class="download-link" href="{{details.methods.aes.files.aesFiles4}}" target="_blank" download>|FOURTH IMAGE| • </a>
+				{{/if}}
+
+				{{#if details.methods.aes.files.aesFiles5}}
+					<a class="download-link" href="{{details.methods.aes.files.aesFiles5}}" target="_blank" download>|ADDITIONAL FILES|</a>
+				{{/if}}
+			</div>
+		</div> <!-- /end row -->
+		<br/>
+	{{/if}}
+	{{#if afm}}
+	<!-- row -->
+		<div class="row">
+			<div class="col-xs-3">
+				<span class="download-files">Methods - afm</span>
+			</div>
+			<div class="col-xs-9">
+				{{#if details.methods.afm.files.afmFiles1}}
+					<a class="download-link" href="{{details.methods.afm.files.afmFiles1}}" target="_blank" download>|FIRST IMAGE| • </a>
+				{{/if}}
+
+				{{#if details.methods.afm.files.afmFiles2}}
+					<a class="download-link" href="{{details.methods.afm.files.afmFiles2}}" target="_blank" download>|SECOND IMAGE| • </a>
+				{{/if}}
+
+				{{#if details.methods.afm.files.afmFiles3}}
+					<a class="download-link" href="{{details.methods.afm.files.afmFiles3}}" target="_blank" download>|THIRD IMAGE| • </a>
+				{{/if}}
+
+				{{#if details.methods.afm.files.afmFiles4}}
+					<a class="download-link" href="{{details.methods.afm.files.afmFiles4}}" target="_blank" download>|FOURTH IMAGE| • </a>
+				{{/if}}
+
+				{{#if details.methods.afm.files.afmFiles5}}
+					<a class="download-link" href="{{details.methods.afm.files.afmFiles5}}" target="_blank" download>|ADDITIONAL FILES|</a>
+				{{/if}}
+			</div>
+		</div> <!-- /end row -->
+		<br/>
+	{{/if}}
+	{{#if analysis}}
+	<!-- row -->
+		<div class="row">
+			<div class="col-xs-3">
+				<span class="download-files">Methods - analysis</span>
+			</div>
+			<div class="col-xs-9">
+				{{#if details.methods.analysis.files.analysisFiles1}}
+					<a class="download-link" href="{{details.methods.analysis.files.analysisFiles1}}" target="_blank" download>|FIRST IMAGE| • </a>
+				{{/if}}
+
+				{{#if details.methods.analysis.files.analysisFiles2}}
+					<a class="download-link" href="{{details.methods.analysis.files.analysisFiles2}}" target="_blank" download>|SECOND IMAGE| • </a>
+				{{/if}}
+
+				{{#if details.methods.analysis.files.analysisFiles3}}
+					<a class="download-link" href="{{details.methods.analysis.files.analysisFiles3}}" target="_blank" download>|THIRD IMAGE| • </a>
+				{{/if}}
+
+				{{#if details.methods.analysis.files.analysisFiles4}}
+					<a class="download-link" href="{{details.methods.analysis.files.analysisFiles4}}" target="_blank" download>|FOURTH IMAGE| • </a>
+				{{/if}}
+
+				{{#if details.methods.analysis.files.analysisFiles5}}
+					<a class="download-link" href="{{details.methods.analysis.files.analysisFiles5}}" target="_blank" download>|ADDITIONAL FILES|</a>
+				{{/if}}
+			</div>
+		</div> <!-- /end row -->
+		<br/>
+	{{/if}}
+	{{#if binderFiller}}
+	<!-- row -->
+		<div class="row">
+			<div class="col-xs-3">
+				<span class="download-files">Methods - binderFiller</span>
+			</div>
+			<div class="col-xs-9">
+				{{#if details.methods.binderFiller.files.binderFillerFiles1}}
+					<a class="download-link" href="{{details.methods.binderFiller.files.binderFillerFiles1}}" target="_blank" download>|FIRST IMAGE| • </a>
+				{{/if}}
+
+				{{#if details.methods.binderFiller.files.binderFillerFiles2}}
+					<a class="download-link" href="{{details.methods.binderFiller.files.binderFillerFiles2}}" target="_blank" download>|SECOND IMAGE| • </a>
+				{{/if}}
+
+				{{#if details.methods.binderFiller.files.binderFillerFiles3}}
+					<a class="download-link" href="{{details.methods.binderFiller.files.binderFillerFiles3}}" target="_blank" download>|THIRD IMAGE| • </a>
+				{{/if}}
+
+				{{#if details.methods.binderFiller.files.binderFillerFiles4}}
+					<a class="download-link" href="{{details.methods.binderFiller.files.binderFillerFiles4}}" target="_blank" download>|FOURTH IMAGE| • </a>
+				{{/if}}
+
+				{{#if details.methods.binderFiller.files.binderFillerFiles5}}
+					<a class="download-link" href="{{details.methods.binderFiller.files.binderFillerFiles5}}" target="_blank" download>|ADDITIONAL FILES|</a>
+				{{/if}}
+			</div>
+		</div> <!-- /end row -->
+		<br/>
+	{{/if}}
+	{{#if c_14}}
+	<!-- row -->
+		<div class="row">
+			<div class="col-xs-3">
+				<span class="download-files">Methods - c_14</span>
+			</div>
+			<div class="col-xs-9">
+				{{#if details.methods.c_14.files.c_14Files1}}
+					<a class="download-link" href="{{details.methods.c_14.files.c_14Files1}}" target="_blank" download>|FIRST IMAGE| • </a>
+				{{/if}}
+
+				{{#if details.methods.c_14.files.c_14Files2}}
+					<a class="download-link" href="{{details.methods.c_14.files.c_14Files2}}" target="_blank" download>|SECOND IMAGE| • </a>
+				{{/if}}
+
+				{{#if details.methods.c_14.files.c_14Files3}}
+					<a class="download-link" href="{{details.methods.c_14.files.c_14Files3}}" target="_blank" download>|THIRD IMAGE| • </a>
+				{{/if}}
+
+				{{#if details.methods.c_14.files.c_14Files4}}
+					<a class="download-link" href="{{details.methods.c_14.files.c_14Files4}}" target="_blank" download>|FOURTH IMAGE| • </a>
+				{{/if}}
+
+				{{#if details.methods.c_14.files.c_14Files5}}
+					<a class="download-link" href="{{details.methods.c_14.files.c_14Files5}}" target="_blank" download>|ADDITIONAL FILES|</a>
+				{{/if}}
+			</div>
+		</div> <!-- /end row -->
+		<br/>
+	{{/if}}
+	{{#if colorimetry}}
+	<!-- row -->
+		<div class="row">
+			<div class="col-xs-3">
+				<span class="download-files">Methods - colorimetry</span>
+			</div>
+			<div class="col-xs-9">
+				{{#if details.methods.colorimetry.files.colorimetryFiles1}}
+					<a class="download-link" href="{{details.methods.colorimetry.files.colorimetryFiles1}}" target="_blank" download>|FIRST IMAGE| • </a>
+				{{/if}}
+
+				{{#if details.methods.colorimetry.files.colorimetryFiles2}}
+					<a class="download-link" href="{{details.methods.colorimetry.files.colorimetryFiles2}}" target="_blank" download>|SECOND IMAGE| • </a>
+				{{/if}}
+
+				{{#if details.methods.colorimetry.files.colorimetryFiles3}}
+					<a class="download-link" href="{{details.methods.colorimetry.files.colorimetryFiles3}}" target="_blank" download>|THIRD IMAGE| • </a>
+				{{/if}}
+
+				{{#if details.methods.colorimetry.files.colorimetryFiles4}}
+					<a class="download-link" href="{{details.methods.colorimetry.files.colorimetryFiles4}}" target="_blank" download>|FOURTH IMAGE| • </a>
+				{{/if}}
+
+				{{#if details.methods.colorimetry.files.colorimetryFiles5}}
+					<a class="download-link" href="{{details.methods.colorimetry.files.colorimetryFiles5}}" target="_blank" download>|ADDITIONAL FILES|</a>
+				{{/if}}
+			</div>
+		</div> <!-- /end row -->
+		<br/>
+	{{/if}}
+	{{#if drms}}
+	<!-- row -->
+		<div class="row">
+			<div class="col-xs-3">
+				<span class="download-files">Methods - drms</span>
+			</div>
+			<div class="col-xs-9">
+				{{#if details.methods.drms.files.drmsFiles1}}
+					<a class="download-link" href="{{details.methods.drms.files.drmsFiles1}}" target="_blank" download>|FIRST IMAGE| • </a>
+				{{/if}}
+
+				{{#if details.methods.drms.files.drmsFiles2}}
+					<a class="download-link" href="{{details.methods.drms.files.drmsFiles2}}" target="_blank" download>|SECOND IMAGE| • </a>
+				{{/if}}
+
+				{{#if details.methods.drms.files.drmsFiles3}}
+					<a class="download-link" href="{{details.methods.drms.files.drmsFiles3}}" target="_blank" download>|THIRD IMAGE| • </a>
+				{{/if}}
+
+				{{#if details.methods.drms.files.drmsFiles4}}
+					<a class="download-link" href="{{details.methods.drms.files.drmsFiles4}}" target="_blank" download>|FOURTH IMAGE| • </a>
+				{{/if}}
+
+				{{#if details.methods.drms.files.drmsFiles5}}
+					<a class="download-link" href="{{details.methods.drms.files.drmsFiles5}}" target="_blank" download>|ADDITIONAL FILES|</a>
+				{{/if}}
+			</div>
+		</div> <!-- /end row -->
+		<br/>
+	{{/if}}
+	{{#if fors}}
+	<!-- row -->
+		<div class="row">
+			<div class="col-xs-3">
+				<span class="download-files">Methods - fors</span>
+			</div>
+			<div class="col-xs-9">
+				{{#if details.methods.fors.files.forsFiles1}}
+					<a class="download-link" href="{{details.methods.fors.files.forsFiles1}}" target="_blank" download>|FIRST IMAGE| • </a>
+				{{/if}}
+
+				{{#if details.methods.fors.files.forsFiles2}}
+					<a class="download-link" href="{{details.methods.fors.files.forsFiles2}}" target="_blank" download>|SECOND IMAGE| • </a>
+				{{/if}}
+
+				{{#if details.methods.fors.files.forsFiles3}}
+					<a class="download-link" href="{{details.methods.fors.files.forsFiles3}}" target="_blank" download>|THIRD IMAGE| • </a>
+				{{/if}}
+
+				{{#if details.methods.fors.files.forsFiles4}}
+					<a class="download-link" href="{{details.methods.fors.files.forsFiles4}}" target="_blank" download>|FOURTH IMAGE| • </a>
+				{{/if}}
+
+				{{#if details.methods.fors.files.forsFiles5}}
+					<a class="download-link" href="{{details.methods.fors.files.forsFiles5}}" target="_blank" download>|ADDITIONAL FILES|</a>
+				{{/if}}
+			</div>
+		</div> <!-- /end row -->
+		<br/>
+	{{/if}}
+	{{#if ft_ir}}
+	<!-- row -->
+		<div class="row">
+			<div class="col-xs-3">
+				<span class="download-files">Methods - ft_ir</span>
+			</div>
+			<div class="col-xs-9">
+				{{#if details.methods.ft_ir.files.ft_irFiles1}}
+					<a class="download-link" href="{{details.methods.ft_ir.files.ft_irFiles1}}" target="_blank" download>|FIRST IMAGE| • </a>
+				{{/if}}
+
+				{{#if details.methods.ft_ir.files.ft_irFiles2}}
+					<a class="download-link" href="{{details.methods.ft_ir.files.ft_irFiles2}}" target="_blank" download>|SECOND IMAGE| • </a>
+				{{/if}}
+
+				{{#if details.methods.ft_ir.files.ft_irFiles3}}
+					<a class="download-link" href="{{details.methods.ft_ir.files.ft_irFiles3}}" target="_blank" download>|THIRD IMAGE| • </a>
+				{{/if}}
+
+				{{#if details.methods.ft_ir.files.ft_irFiles4}}
+					<a class="download-link" href="{{details.methods.ft_ir.files.ft_irFiles4}}" target="_blank" download>|FOURTH IMAGE| • </a>
+				{{/if}}
+
+				{{#if details.methods.ft_ir.files.ft_irFiles5}}
+					<a class="download-link" href="{{details.methods.ft_ir.files.ft_irFiles5}}" target="_blank" download>|ADDITIONAL FILES|</a>
+				{{/if}}
+			</div>
+		</div> <!-- /end row -->
+		<br/>
+	{{/if}}
+	{{#if gc_ms}}
+	<!-- row -->
+		<div class="row">
+			<div class="col-xs-3">
+				<span class="download-files">Methods - gc_ms</span>
+			</div>
+			<div class="col-xs-9">
+				{{#if details.methods.gc_ms.files.gc_msFiles1}}
+					<a class="download-link" href="{{details.methods.gc_ms.files.gc_msFiles1}}" target="_blank" download>|FIRST IMAGE| • </a>
+				{{/if}}
+
+				{{#if details.methods.gc_ms.files.gc_msFiles2}}
+					<a class="download-link" href="{{details.methods.gc_ms.files.gc_msFiles2}}" target="_blank" download>|SECOND IMAGE| • </a>
+				{{/if}}
+
+				{{#if details.methods.gc_ms.files.gc_msFiles3}}
+					<a class="download-link" href="{{details.methods.gc_ms.files.gc_msFiles3}}" target="_blank" download>|THIRD IMAGE| • </a>
+				{{/if}}
+
+				{{#if details.methods.gc_ms.files.gc_msFiles4}}
+					<a class="download-link" href="{{details.methods.gc_ms.files.gc_msFiles4}}" target="_blank" download>|FOURTH IMAGE| • </a>
+				{{/if}}
+
+				{{#if details.methods.gc_ms.files.gc_msFiles5}}
+					<a class="download-link" href="{{details.methods.gc_ms.files.gc_msFiles5}}" target="_blank" download>|ADDITIONAL FILES|</a>
+				{{/if}}
+			</div>
+		</div> <!-- /end row -->
+		<br/>
+	{{/if}}
+	{{#if gl}}
+	<!-- row -->
+		<div class="row">
+			<div class="col-xs-3">
+				<span class="download-files">Methods - gl</span>
+			</div>
+			<div class="col-xs-9">
+				{{#if details.methods.gl.files.glFiles1}}
+					<a class="download-link" href="{{details.methods.gl.files.glFiles1}}" target="_blank" download>|FIRST IMAGE| • </a>
+				{{/if}}
+
+				{{#if details.methods.gl.files.glFiles2}}
+					<a class="download-link" href="{{details.methods.gl.files.glFiles2}}" target="_blank" download>|SECOND IMAGE| • </a>
+				{{/if}}
+
+				{{#if details.methods.gl.files.glFiles3}}
+					<a class="download-link" href="{{details.methods.gl.files.glFiles3}}" target="_blank" download>|THIRD IMAGE| • </a>
+				{{/if}}
+
+				{{#if details.methods.gl.files.glFiles4}}
+					<a class="download-link" href="{{details.methods.gl.files.glFiles4}}" target="_blank" download>|FOURTH IMAGE| • </a>
+				{{/if}}
+
+				{{#if details.methods.gl.files.glFiles5}}
+					<a class="download-link" href="{{details.methods.gl.files.glFiles5}}" target="_blank" download>|ADDITIONAL FILES|</a>
+				{{/if}}
+			</div>
+		</div> <!-- /end row -->
+		<br/>
+	{{/if}}
+	{{#if granulometry}}
+	<!-- row -->
+		<div class="row">
+			<div class="col-xs-3">
+				<span class="download-files">Methods - granulometry</span>
+			</div>
+			<div class="col-xs-9">
+				{{#if details.methods.granulometry.files.granulometryFiles1}}
+					<a class="download-link" href="{{details.methods.granulometry.files.granulometryFiles1}}" target="_blank" download>|FIRST IMAGE| • </a>
+				{{/if}}
+
+				{{#if details.methods.granulometry.files.granulometryFiles2}}
+					<a class="download-link" href="{{details.methods.granulometry.files.granulometryFiles2}}" target="_blank" download>|SECOND IMAGE| • </a>
+				{{/if}}
+
+				{{#if details.methods.granulometry.files.granulometryFiles3}}
+					<a class="download-link" href="{{details.methods.granulometry.files.granulometryFiles3}}" target="_blank" download>|THIRD IMAGE| • </a>
+				{{/if}}
+
+				{{#if details.methods.granulometry.files.granulometryFiles4}}
+					<a class="download-link" href="{{details.methods.granulometry.files.granulometryFiles4}}" target="_blank" download>|FOURTH IMAGE| • </a>
+				{{/if}}
+
+				{{#if details.methods.granulometry.files.granulometryFiles5}}
+					<a class="download-link" href="{{details.methods.granulometry.files.granulometryFiles5}}" target="_blank" download>|ADDITIONAL FILES|</a>
+				{{/if}}
+			</div>
+		</div> <!-- /end row -->
+		<br/>
+	{{/if}}
+	{{#if hygroscopic}}
+	<!-- row -->
+		<div class="row">
+			<div class="col-xs-3">
+				<span class="download-files">Methods - hygroscopic</span>
+			</div>
+			<div class="col-xs-9">
+				{{#if details.methods.hygroscopic.files.hygroscopicFiles1}}
+					<a class="download-link" href="{{details.methods.hygroscopic.files.hygroscopicFiles1}}" target="_blank" download>|FIRST IMAGE| • </a>
+				{{/if}}
+
+				{{#if details.methods.hygroscopic.files.hygroscopicFiles2}}
+					<a class="download-link" href="{{details.methods.hygroscopic.files.hygroscopicFiles2}}" target="_blank" download>|SECOND IMAGE| • </a>
+				{{/if}}
+
+				{{#if details.methods.hygroscopic.files.hygroscopicFiles3}}
+					<a class="download-link" href="{{details.methods.hygroscopic.files.hygroscopicFiles3}}" target="_blank" download>|THIRD IMAGE| • </a>
+				{{/if}}
+
+				{{#if details.methods.hygroscopic.files.hygroscopicFiles4}}
+					<a class="download-link" href="{{details.methods.hygroscopic.files.hygroscopicFiles4}}" target="_blank" download>|FOURTH IMAGE| • </a>
+				{{/if}}
+
+				{{#if details.methods.hygroscopic.files.hygroscopicFiles5}}
+					<a class="download-link" href="{{details.methods.hygroscopic.files.hygroscopicFiles5}}" target="_blank" download>|ADDITIONAL FILES|</a>
+				{{/if}}
+			</div>
+		</div> <!-- /end row -->
+		<br/>
+	{{/if}}
+	{{#if irpIrrIrfc}}
+	<!-- row -->
+		<div class="row">
+			<div class="col-xs-3">
+				<span class="download-files">Methods - irpIrrIrfc</span>
+			</div>
+			<div class="col-xs-9">
+				{{#if details.methods.irpIrrIrfc.files.irpIrrIrfcFiles1}}
+					<a class="download-link" href="{{details.methods.irpIrrIrfc.files.irpIrrIrfcFiles1}}" target="_blank" download>|FIRST IMAGE| • </a>
+				{{/if}}
+
+				{{#if details.methods.irpIrrIrfc.files.irpIrrIrfcFiles2}}
+					<a class="download-link" href="{{details.methods.irpIrrIrfc.files.irpIrrIrfcFiles2}}" target="_blank" download>|SECOND IMAGE| • </a>
+				{{/if}}
+
+				{{#if details.methods.irpIrrIrfc.files.irpIrrIrfcFiles3}}
+					<a class="download-link" href="{{details.methods.irpIrrIrfc.files.irpIrrIrfcFiles3}}" target="_blank" download>|THIRD IMAGE| • </a>
+				{{/if}}
+
+				{{#if details.methods.irpIrrIrfc.files.irpIrrIrfcFiles4}}
+					<a class="download-link" href="{{details.methods.irpIrrIrfc.files.irpIrrIrfcFiles4}}" target="_blank" download>|FOURTH IMAGE| • </a>
+				{{/if}}
+
+				{{#if details.methods.irpIrrIrfc.files.irpIrrIrfcFiles5}}
+					<a class="download-link" href="{{details.methods.irpIrrIrfc.files.irpIrrIrfcFiles5}}" target="_blank" download>|ADDITIONAL FILES|</a>
+				{{/if}}
+			</div>
+		</div> <!-- /end row -->
+		<br/>
+	{{/if}}
+	{{#if libs}}
+	<!-- row -->
+		<div class="row">
+			<div class="col-xs-3">
+				<span class="download-files">Methods - libs</span>
+			</div>
+			<div class="col-xs-9">
+				{{#if details.methods.libs.files.libsFiles1}}
+					<a class="download-link" href="{{details.methods.libs.files.libsFiles1}}" target="_blank" download>|FIRST IMAGE| • </a>
+				{{/if}}
+
+				{{#if details.methods.libs.files.libsFiles2}}
+					<a class="download-link" href="{{details.methods.libs.files.libsFiles2}}" target="_blank" download>|SECOND IMAGE| • </a>
+				{{/if}}
+
+				{{#if details.methods.libs.files.libsFiles3}}
+					<a class="download-link" href="{{details.methods.libs.files.libsFiles3}}" target="_blank" download>|THIRD IMAGE| • </a>
+				{{/if}}
+
+				{{#if details.methods.libs.files.libsFiles4}}
+					<a class="download-link" href="{{details.methods.libs.files.libsFiles4}}" target="_blank" download>|FOURTH IMAGE| • </a>
+				{{/if}}
+
+				{{#if details.methods.libs.files.libsFiles5}}
+					<a class="download-link" href="{{details.methods.libs.files.libsFiles5}}" target="_blank" download>|ADDITIONAL FILES|</a>
+				{{/if}}
+			</div>
+		</div> <!-- /end row -->
+		<br/>
+	{{/if}}
+	{{#if ol}}
+	<!-- row -->
+		<div class="row">
+			<div class="col-xs-3">
+				<span class="download-files">Methods - ol</span>
+			</div>
+			<div class="col-xs-9">
+				{{#if details.methods.ol.files.olFiles1}}
+					<a class="download-link" href="{{details.methods.ol.files.olFiles1}}" target="_blank" download>|FIRST IMAGE| • </a>
+				{{/if}}
+
+				{{#if details.methods.ol.files.olFiles2}}
+					<a class="download-link" href="{{details.methods.ol.files.olFiles2}}" target="_blank" download>|SECOND IMAGE| • </a>
+				{{/if}}
+
+				{{#if details.methods.ol.files.olFiles3}}
+					<a class="download-link" href="{{details.methods.ol.files.olFiles3}}" target="_blank" download>|THIRD IMAGE| • </a>
+				{{/if}}
+
+				{{#if details.methods.ol.files.olFiles4}}
+					<a class="download-link" href="{{details.methods.ol.files.olFiles4}}" target="_blank" download>|FOURTH IMAGE| • </a>
+				{{/if}}
+
+				{{#if details.methods.ol.files.olFiles5}}
+					<a class="download-link" href="{{details.methods.ol.files.olFiles5}}" target="_blank" download>|ADDITIONAL FILES|</a>
+				{{/if}}
+			</div>
+		</div> <!-- /end row -->
+		<br/>
+	{{/if}}
+	{{#if om}}
+	<!-- row -->
+		<div class="row">
+			<div class="col-xs-3">
+				<span class="download-files">Methods - om</span>
+			</div>
+			<div class="col-xs-9">
+				{{#if details.methods.om.files.omFiles1}}
+					<a class="download-link" href="{{details.methods.om.files.omFiles1}}" target="_blank" download>|FIRST IMAGE| • </a>
+				{{/if}}
+
+				{{#if details.methods.om.files.omFiles2}}
+					<a class="download-link" href="{{details.methods.om.files.omFiles2}}" target="_blank" download>|SECOND IMAGE| • </a>
+				{{/if}}
+
+				{{#if details.methods.om.files.omFiles3}}
+					<a class="download-link" href="{{details.methods.om.files.omFiles3}}" target="_blank" download>|THIRD IMAGE| • </a>
+				{{/if}}
+
+				{{#if details.methods.om.files.omFiles4}}
+					<a class="download-link" href="{{details.methods.om.files.omFiles4}}" target="_blank" download>|FOURTH IMAGE| • </a>
+				{{/if}}
+
+				{{#if details.methods.om.files.omFiles5}}
+					<a class="download-link" href="{{details.methods.om.files.omFiles5}}" target="_blank" download>|ADDITIONAL FILES|</a>
+				{{/if}}
+			</div>
+		</div> <!-- /end row -->
+		<br/>
+	{{/if}}
+	{{#if pige}}
+	<!-- row -->
+		<div class="row">
+			<div class="col-xs-3">
+				<span class="download-files">Methods - pige</span>
+			</div>
+			<div class="col-xs-9">
+				{{#if details.methods.pige.files.pigeFiles1}}
+					<a class="download-link" href="{{details.methods.pige.files.pigeFiles1}}" target="_blank" download>|FIRST IMAGE| • </a>
+				{{/if}}
+
+				{{#if details.methods.pige.files.pigeFiles2}}
+					<a class="download-link" href="{{details.methods.pige.files.pigeFiles2}}" target="_blank" download>|SECOND IMAGE| • </a>
+				{{/if}}
+
+				{{#if details.methods.pige.files.pigeFiles3}}
+					<a class="download-link" href="{{details.methods.pige.files.pigeFiles3}}" target="_blank" download>|THIRD IMAGE| • </a>
+				{{/if}}
+
+				{{#if details.methods.pige.files.pigeFiles4}}
+					<a class="download-link" href="{{details.methods.pige.files.pigeFiles4}}" target="_blank" download>|FOURTH IMAGE| • </a>
+				{{/if}}
+
+				{{#if details.methods.pige.files.pigeFiles5}}
+					<a class="download-link" href="{{details.methods.pige.files.pigeFiles5}}" target="_blank" download>|ADDITIONAL FILES|</a>
+				{{/if}}
+			</div>
+		</div> <!-- /end row -->
+		<br/>
+	{{/if}}
+	{{#if pixe}}
+	<!-- row -->
+		<div class="row">
+			<div class="col-xs-3">
+				<span class="download-files">Methods - pixe</span>
+			</div>
+			<div class="col-xs-9">
+				{{#if details.methods.pixe.files.pixeFiles1}}
+					<a class="download-link" href="{{details.methods.pixe.files.pixeFiles1}}" target="_blank" download>|FIRST IMAGE| • </a>
+				{{/if}}
+
+				{{#if details.methods.pixe.files.pixeFiles2}}
+					<a class="download-link" href="{{details.methods.pixe.files.pixeFiles2}}" target="_blank" download>|SECOND IMAGE| • </a>
+				{{/if}}
+
+				{{#if details.methods.pixe.files.pixeFiles3}}
+					<a class="download-link" href="{{details.methods.pixe.files.pixeFiles3}}" target="_blank" download>|THIRD IMAGE| • </a>
+				{{/if}}
+
+				{{#if details.methods.pixe.files.pixeFiles4}}
+					<a class="download-link" href="{{details.methods.pixe.files.pixeFiles4}}" target="_blank" download>|FOURTH IMAGE| • </a>
+				{{/if}}
+
+				{{#if details.methods.pixe.files.pixeFiles5}}
+					<a class="download-link" href="{{details.methods.pixe.files.pixeFiles5}}" target="_blank" download>|ADDITIONAL FILES|</a>
+				{{/if}}
+			</div>
+		</div> <!-- /end row -->
+		<br/>
+	{{/if}}
+	{{#if plm}}
+	<!-- row -->
+		<div class="row">
+			<div class="col-xs-3">
+				<span class="download-files">Methods - plm</span>
+			</div>
+			<div class="col-xs-9">
+				{{#if details.methods.plm.files.plmFiles1}}
+					<a class="download-link" href="{{details.methods.plm.files.plmFiles1}}" target="_blank" download>|FIRST IMAGE| • </a>
+				{{/if}}
+
+				{{#if details.methods.plm.files.plmFiles2}}
+					<a class="download-link" href="{{details.methods.plm.files.plmFiles2}}" target="_blank" download>|SECOND IMAGE| • </a>
+				{{/if}}
+
+				{{#if details.methods.plm.files.plmFiles3}}
+					<a class="download-link" href="{{details.methods.plm.files.plmFiles3}}" target="_blank" download>|THIRD IMAGE| • </a>
+				{{/if}}
+
+				{{#if details.methods.plm.files.plmFiles4}}
+					<a class="download-link" href="{{details.methods.plm.files.plmFiles4}}" target="_blank" download>|FOURTH IMAGE| • </a>
+				{{/if}}
+
+				{{#if details.methods.plm.files.plmFiles5}}
+					<a class="download-link" href="{{details.methods.plm.files.plmFiles5}}" target="_blank" download>|ADDITIONAL FILES|</a>
+				{{/if}}
+			</div>
+		</div> <!-- /end row -->
+		<br/>
+	{{/if}}
+	{{#if rbs}}
+	<!-- row -->
+		<div class="row">
+			<div class="col-xs-3">
+				<span class="download-files">Methods - rbs</span>
+			</div>
+			<div class="col-xs-9">
+				{{#if details.methods.rbs.files.rbsFiles1}}
+					<a class="download-link" href="{{details.methods.rbs.files.rbsFiles1}}" target="_blank" download>|FIRST IMAGE| • </a>
+				{{/if}}
+
+				{{#if details.methods.rbs.files.rbsFiles2}}
+					<a class="download-link" href="{{details.methods.rbs.files.rbsFiles2}}" target="_blank" download>|SECOND IMAGE| • </a>
+				{{/if}}
+
+				{{#if details.methods.rbs.files.rbsFiles3}}
+					<a class="download-link" href="{{details.methods.rbs.files.rbsFiles3}}" target="_blank" download>|THIRD IMAGE| • </a>
+				{{/if}}
+
+				{{#if details.methods.rbs.files.rbsFiles4}}
+					<a class="download-link" href="{{details.methods.rbs.files.rbsFiles4}}" target="_blank" download>|FOURTH IMAGE| • </a>
+				{{/if}}
+
+				{{#if details.methods.rbs.files.rbsFiles5}}
+					<a class="download-link" href="{{details.methods.rbs.files.rbsFiles5}}" target="_blank" download>|ADDITIONAL FILES|</a>
+				{{/if}}
+			</div>
+		</div> <!-- /end row -->
+		<br/>
+	{{/if}}
+	{{#if rs}}
+	<!-- row -->
+		<div class="row">
+			<div class="col-xs-3">
+				<span class="download-files">Methods - rs</span>
+			</div>
+			<div class="col-xs-9">
+				{{#if details.methods.rs.files.rsFiles1}}
+					<a class="download-link" href="{{details.methods.rs.files.rsFiles1}}" target="_blank" download>|FIRST IMAGE| • </a>
+				{{/if}}
+
+				{{#if details.methods.rs.files.rsFiles2}}
+					<a class="download-link" href="{{details.methods.rs.files.rsFiles2}}" target="_blank" download>|SECOND IMAGE| • </a>
+				{{/if}}
+
+				{{#if details.methods.rs.files.rsFiles3}}
+					<a class="download-link" href="{{details.methods.rs.files.rsFiles3}}" target="_blank" download>|THIRD IMAGE| • </a>
+				{{/if}}
+
+				{{#if details.methods.rs.files.rsFiles4}}
+					<a class="download-link" href="{{details.methods.rs.files.rsFiles4}}" target="_blank" download>|FOURTH IMAGE| • </a>
+				{{/if}}
+
+				{{#if details.methods.rs.files.rsFiles5}}
+					<a class="download-link" href="{{details.methods.rs.files.rsFiles5}}" target="_blank" download>|ADDITIONAL FILES|</a>
+				{{/if}}
+			</div>
+		</div> <!-- /end row -->
+		<br/>
+	{{/if}}
+	{{#if scanning}}
+	<!-- row -->
+		<div class="row">
+			<div class="col-xs-3">
+				<span class="download-files">Methods - scanning</span>
+			</div>
+			<div class="col-xs-9">
+				{{#if details.methods.scanning.files.scanningFiles1}}
+					<a class="download-link" href="{{details.methods.scanning.files.scanningFiles1}}" target="_blank" download>|FIRST IMAGE| • </a>
+				{{/if}}
+
+				{{#if details.methods.scanning.files.scanningFiles2}}
+					<a class="download-link" href="{{details.methods.scanning.files.scanningFiles2}}" target="_blank" download>|SECOND IMAGE| • </a>
+				{{/if}}
+
+				{{#if details.methods.scanning.files.scanningFiles3}}
+					<a class="download-link" href="{{details.methods.scanning.files.scanningFiles3}}" target="_blank" download>|THIRD IMAGE| • </a>
+				{{/if}}
+
+				{{#if details.methods.scanning.files.scanningFiles4}}
+					<a class="download-link" href="{{details.methods.scanning.files.scanningFiles4}}" target="_blank" download>|FOURTH IMAGE| • </a>
+				{{/if}}
+
+				{{#if details.methods.scanning.files.scanningFiles5}}
+					<a class="download-link" href="{{details.methods.scanning.files.scanningFiles5}}" target="_blank" download>|ADDITIONAL FILES|</a>
+				{{/if}}
+			</div>
+		</div> <!-- /end row -->
+		<br/>
+	{{/if}}
+	{{#if semSemEdx}}
+	<!-- row -->
+		<div class="row">
+			<div class="col-xs-3">
+				<span class="download-files">Methods - semSemEdx</span>
+			</div>
+			<div class="col-xs-9">
+				{{#if details.methods.semSemEdx.files.semSemEdxFiles1}}
+					<a class="download-link" href="{{details.methods.semSemEdx.files.semSemEdxFiles1}}" target="_blank" download>|FIRST IMAGE| • </a>
+				{{/if}}
+
+				{{#if details.methods.semSemEdx.files.semSemEdxFiles2}}
+					<a class="download-link" href="{{details.methods.semSemEdx.files.semSemEdxFiles2}}" target="_blank" download>|SECOND IMAGE| • </a>
+				{{/if}}
+
+				{{#if details.methods.semSemEdx.files.semSemEdxFiles3}}
+					<a class="download-link" href="{{details.methods.semSemEdx.files.semSemEdxFiles3}}" target="_blank" download>|THIRD IMAGE| • </a>
+				{{/if}}
+
+				{{#if details.methods.semSemEdx.files.semSemEdxFiles4}}
+					<a class="download-link" href="{{details.methods.semSemEdx.files.semSemEdxFiles4}}" target="_blank" download>|FOURTH IMAGE| • </a>
+				{{/if}}
+
+				{{#if details.methods.semSemEdx.files.semSemEdxFiles5}}
+					<a class="download-link" href="{{details.methods.semSemEdx.files.semSemEdxFiles5}}" target="_blank" download>|ADDITIONAL FILES|</a>
+				{{/if}}
+			</div>
+		</div> <!-- /end row -->
+		<br/>
+	{{/if}}
+	{{#if synchrotron}}
+	<!-- row -->
+		<div class="row">
+			<div class="col-xs-3">
+				<span class="download-files">Methods - synchrotron</span>
+			</div>
+			<div class="col-xs-9">
+				{{#if details.methods.synchrotron.files.synchrotronFiles1}}
+					<a class="download-link" href="{{details.methods.synchrotron.files.synchrotronFiles1}}" target="_blank" download>|FIRST IMAGE| • </a>
+				{{/if}}
+
+				{{#if details.methods.synchrotron.files.synchrotronFiles2}}
+					<a class="download-link" href="{{details.methods.synchrotron.files.synchrotronFiles2}}" target="_blank" download>|SECOND IMAGE| • </a>
+				{{/if}}
+
+				{{#if details.methods.synchrotron.files.synchrotronFiles3}}
+					<a class="download-link" href="{{details.methods.synchrotron.files.synchrotronFiles3}}" target="_blank" download>|THIRD IMAGE| • </a>
+				{{/if}}
+
+				{{#if details.methods.synchrotron.files.synchrotronFiles4}}
+					<a class="download-link" href="{{details.methods.synchrotron.files.synchrotronFiles4}}" target="_blank" download>|FOURTH IMAGE| • </a>
+				{{/if}}
+
+				{{#if details.methods.synchrotron.files.synchrotronFiles5}}
+					<a class="download-link" href="{{details.methods.synchrotron.files.synchrotronFiles5}}" target="_blank" download>|ADDITIONAL FILES|</a>
+				{{/if}}
+			</div>
+		</div> <!-- /end row -->
+		<br/>
+	{{/if}}
+	{{#if tem}}
+	<!-- row -->
+		<div class="row">
+			<div class="col-xs-3">
+				<span class="download-files">Methods - tem</span>
+			</div>
+			<div class="col-xs-9">
+				{{#if details.methods.tem.files.temFiles1}}
+					<a class="download-link" href="{{details.methods.tem.files.temFiles1}}" target="_blank" download>|FIRST IMAGE| • </a>
+				{{/if}}
+
+				{{#if details.methods.tem.files.temFiles2}}
+					<a class="download-link" href="{{details.methods.tem.files.temFiles2}}" target="_blank" download>|SECOND IMAGE| • </a>
+				{{/if}}
+
+				{{#if details.methods.tem.files.temFiles3}}
+					<a class="download-link" href="{{details.methods.tem.files.temFiles3}}" target="_blank" download>|THIRD IMAGE| • </a>
+				{{/if}}
+
+				{{#if details.methods.tem.files.temFiles4}}
+					<a class="download-link" href="{{details.methods.tem.files.temFiles4}}" target="_blank" download>|FOURTH IMAGE| • </a>
+				{{/if}}
+
+				{{#if details.methods.tem.files.temFiles5}}
+					<a class="download-link" href="{{details.methods.tem.files.temFiles5}}" target="_blank" download>|ADDITIONAL FILES|</a>
+				{{/if}}
+			</div>
+		</div> <!-- /end row -->
+		<br/>
+	{{/if}}
+	{{#if tl}}
+	<!-- row -->
+		<div class="row">
+			<div class="col-xs-3">
+				<span class="download-files">Methods - tl</span>
+			</div>
+			<div class="col-xs-9">
+				{{#if details.methods.tl.files.tlFiles1}}
+					<a class="download-link" href="{{details.methods.tl.files.tlFiles1}}" target="_blank" download>|FIRST IMAGE| • </a>
+				{{/if}}
+
+				{{#if details.methods.tl.files.tlFiles2}}
+					<a class="download-link" href="{{details.methods.tl.files.tlFiles2}}" target="_blank" download>|SECOND IMAGE| • </a>
+				{{/if}}
+
+				{{#if details.methods.tl.files.tlFiles3}}
+					<a class="download-link" href="{{details.methods.tl.files.tlFiles3}}" target="_blank" download>|THIRD IMAGE| • </a>
+				{{/if}}
+
+				{{#if details.methods.tl.files.tlFiles4}}
+					<a class="download-link" href="{{details.methods.tl.files.tlFiles4}}" target="_blank" download>|FOURTH IMAGE| • </a>
+				{{/if}}
+
+				{{#if details.methods.tl.files.tlFiles5}}
+					<a class="download-link" href="{{details.methods.tl.files.tlFiles5}}" target="_blank" download>|ADDITIONAL FILES|</a>
+				{{/if}}
+			</div>
+		</div> <!-- /end row -->
+		<br/>
+	{{/if}}
+	{{#if tlc}}
+	<!-- row -->
+		<div class="row">
+			<div class="col-xs-3">
+				<span class="download-files">Methods - tlc</span>
+			</div>
+			<div class="col-xs-9">
+				{{#if details.methods.tlc.files.tlcFiles1}}
+					<a class="download-link" href="{{details.methods.tlc.files.tlcFiles1}}" target="_blank" download>|FIRST IMAGE| • </a>
+				{{/if}}
+
+				{{#if details.methods.tlc.files.tlcFiles2}}
+					<a class="download-link" href="{{details.methods.tlc.files.tlcFiles2}}" target="_blank" download>|SECOND IMAGE| • </a>
+				{{/if}}
+
+				{{#if details.methods.tlc.files.tlcFiles3}}
+					<a class="download-link" href="{{details.methods.tlc.files.tlcFiles3}}" target="_blank" download>|THIRD IMAGE| • </a>
+				{{/if}}
+
+				{{#if details.methods.tlc.files.tlcFiles4}}
+					<a class="download-link" href="{{details.methods.tlc.files.tlcFiles4}}" target="_blank" download>|FOURTH IMAGE| • </a>
+				{{/if}}
+
+				{{#if details.methods.tlc.files.tlcFiles5}}
+					<a class="download-link" href="{{details.methods.tlc.files.tlcFiles5}}" target="_blank" download>|ADDITIONAL FILES|</a>
+				{{/if}}
+			</div>
+		</div> <!-- /end row -->
+		<br/>
+	{{/if}}
+	{{#if uv_vis}}
+	<!-- row -->
+		<div class="row">
+			<div class="col-xs-3">
+				<span class="download-files">Methods - uv_vis</span>
+			</div>
+			<div class="col-xs-9">
+				{{#if details.methods.uv_vis.files.uv_visFiles1}}
+					<a class="download-link" href="{{details.methods.uv_vis.files.uv_visFiles1}}" target="_blank" download>|FIRST IMAGE| • </a>
+				{{/if}}
+
+				{{#if details.methods.uv_vis.files.uv_visFiles2}}
+					<a class="download-link" href="{{details.methods.uv_vis.files.uv_visFiles2}}" target="_blank" download>|SECOND IMAGE| • </a>
+				{{/if}}
+
+				{{#if details.methods.uv_vis.files.uv_visFiles3}}
+					<a class="download-link" href="{{details.methods.uv_vis.files.uv_visFiles3}}" target="_blank" download>|THIRD IMAGE| • </a>
+				{{/if}}
+
+				{{#if details.methods.uv_vis.files.uv_visFiles4}}
+					<a class="download-link" href="{{details.methods.uv_vis.files.uv_visFiles4}}" target="_blank" download>|FOURTH IMAGE| • </a>
+				{{/if}}
+
+				{{#if details.methods.uv_vis.files.uv_visFiles5}}
+					<a class="download-link" href="{{details.methods.uv_vis.files.uv_visFiles5}}" target="_blank" download>|ADDITIONAL FILES|</a>
+				{{/if}}
+			</div>
+		</div> <!-- /end row -->
+		<br/>
+	{{/if}}
+	{{#if uvf}}
+	<!-- row -->
+		<div class="row">
+			<div class="col-xs-3">
+				<span class="download-files">Methods - uvf</span>
+			</div>
+			<div class="col-xs-9">
+				{{#if details.methods.uvf.files.uvfFiles1}}
+					<a class="download-link" href="{{details.methods.uvf.files.uvfFiles1}}" target="_blank" download>|FIRST IMAGE| • </a>
+				{{/if}}
+
+				{{#if details.methods.uvf.files.uvfFiles2}}
+					<a class="download-link" href="{{details.methods.uvf.files.uvfFiles2}}" target="_blank" download>|SECOND IMAGE| • </a>
+				{{/if}}
+
+				{{#if details.methods.uvf.files.uvfFiles3}}
+					<a class="download-link" href="{{details.methods.uvf.files.uvfFiles3}}" target="_blank" download>|THIRD IMAGE| • </a>
+				{{/if}}
+
+				{{#if details.methods.uvf.files.uvfFiles4}}
+					<a class="download-link" href="{{details.methods.uvf.files.uvfFiles4}}" target="_blank" download>|FOURTH IMAGE| • </a>
+				{{/if}}
+
+				{{#if details.methods.uvf.files.uvfFiles5}}
+					<a class="download-link" href="{{details.methods.uvf.files.uvfFiles5}}" target="_blank" download>|ADDITIONAL FILES|</a>
+				{{/if}}
+			</div>
+		</div> <!-- /end row -->
+		<br/>
+	{{/if}}
+	{{#if vis}}
+	<!-- row -->
+		<div class="row">
+			<div class="col-xs-3">
+				<span class="download-files">Methods - vis</span>
+			</div>
+			<div class="col-xs-9">
+				{{#if details.methods.vis.files.visFiles1}}
+					<a class="download-link" href="{{details.methods.vis.files.visFiles1}}" target="_blank" download>|FIRST IMAGE| • </a>
+				{{/if}}
+
+				{{#if details.methods.vis.files.visFiles2}}
+					<a class="download-link" href="{{details.methods.vis.files.visFiles2}}" target="_blank" download>|SECOND IMAGE| • </a>
+				{{/if}}
+
+				{{#if details.methods.vis.files.visFiles3}}
+					<a class="download-link" href="{{details.methods.vis.files.visFiles3}}" target="_blank" download>|THIRD IMAGE| • </a>
+				{{/if}}
+
+				{{#if details.methods.vis.files.visFiles4}}
+					<a class="download-link" href="{{details.methods.vis.files.visFiles4}}" target="_blank" download>|FOURTH IMAGE| • </a>
+				{{/if}}
+
+				{{#if details.methods.vis.files.visFiles5}}
+					<a class="download-link" href="{{details.methods.vis.files.visFiles5}}" target="_blank" download>|ADDITIONAL FILES|</a>
+				{{/if}}
+			</div>
+		</div> <!-- /end row -->
+		<br/>
+	{{/if}}
+	{{#if xrd}}
+	<!-- row -->
+		<div class="row">
+			<div class="col-xs-3">
+				<span class="download-files">Methods - xrd</span>
+			</div>
+			<div class="col-xs-9">
+				{{#if details.methods.xrd.files.xrdFiles1}}
+					<a class="download-link" href="{{details.methods.xrd.files.xrdFiles1}}" target="_blank" download>|FIRST IMAGE| • </a>
+				{{/if}}
+
+				{{#if details.methods.xrd.files.xrdFiles2}}
+					<a class="download-link" href="{{details.methods.xrd.files.xrdFiles2}}" target="_blank" download>|SECOND IMAGE| • </a>
+				{{/if}}
+
+				{{#if details.methods.xrd.files.xrdFiles3}}
+					<a class="download-link" href="{{details.methods.xrd.files.xrdFiles3}}" target="_blank" download>|THIRD IMAGE| • </a>
+				{{/if}}
+
+				{{#if details.methods.xrd.files.xrdFiles4}}
+					<a class="download-link" href="{{details.methods.xrd.files.xrdFiles4}}" target="_blank" download>|FOURTH IMAGE| • </a>
+				{{/if}}
+
+				{{#if details.methods.xrd.files.xrdFiles5}}
+					<a class="download-link" href="{{details.methods.xrd.files.xrdFiles5}}" target="_blank" download>|ADDITIONAL FILES|</a>
+				{{/if}}
+			</div>
+		</div> <!-- /end row -->
+		<br/>
+	{{/if}}
+	{{#if xrf}}
+	<!-- row -->
+		<div class="row">
+			<div class="col-xs-3">
+				<span class="download-files">Methods - xrf</span>
+			</div>
+			<div class="col-xs-9">
+				{{#if details.methods.xrf.files.xrfFiles1}}
+					<a class="download-link" href="{{details.methods.xrf.files.xrfFiles1}}" target="_blank" download>|FIRST IMAGE| • </a>
+				{{/if}}
+
+				{{#if details.methods.xrf.files.xrfFiles2}}
+					<a class="download-link" href="{{details.methods.xrf.files.xrfFiles2}}" target="_blank" download>|SECOND IMAGE| • </a>
+				{{/if}}
+
+				{{#if details.methods.xrf.files.xrfFiles3}}
+					<a class="download-link" href="{{details.methods.xrf.files.xrfFiles3}}" target="_blank" download>|THIRD IMAGE| • </a>
+				{{/if}}
+
+				{{#if details.methods.xrf.files.xrfFiles4}}
+					<a class="download-link" href="{{details.methods.xrf.files.xrfFiles4}}" target="_blank" download>|FOURTH IMAGE| • </a>
+				{{/if}}
+
+				{{#if details.methods.xrf.files.xrfFiles5}}
+					<a class="download-link" href="{{details.methods.xrf.files.xrfFiles5}}" target="_blank" download>|ADDITIONAL FILES|</a>
+				{{/if}}
+			</div>
+		</div> <!-- /end row -->
+		<br/>
+	{{/if}}
+	{{#if xrr}}
+	<!-- row -->
+		<div class="row">
+			<div class="col-xs-3">
+				<span class="download-files">Methods - xrr</span>
+			</div>
+			<div class="col-xs-9">
+				{{#if details.methods.xrr.files.xrrFiles1}}
+					<a class="download-link" href="{{details.methods.xrr.files.xrrFiles1}}" target="_blank" download>|FIRST IMAGE| • </a>
+				{{/if}}
+
+				{{#if details.methods.xrr.files.xrrFiles2}}
+					<a class="download-link" href="{{details.methods.xrr.files.xrrFiles2}}" target="_blank" download>|SECOND IMAGE| • </a>
+				{{/if}}
+
+				{{#if details.methods.xrr.files.xrrFiles3}}
+					<a class="download-link" href="{{details.methods.xrr.files.xrrFiles3}}" target="_blank" download>|THIRD IMAGE| • </a>
+				{{/if}}
+
+				{{#if details.methods.xrr.files.xrrFiles4}}
+					<a class="download-link" href="{{details.methods.xrr.files.xrrFiles4}}" target="_blank" download>|FOURTH IMAGE| • </a>
+				{{/if}}
+
+				{{#if details.methods.xrr.files.xrrFiles5}}
+					<a class="download-link" href="{{details.methods.xrr.files.xrrFiles5}}" target="_blank" download>|ADDITIONAL FILES|</a>
+				{{/if}}
+			</div>
+		</div> <!-- /end row -->
+		<br/>
+	{{/if}}
+	</div>
+</template>

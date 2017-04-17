@@ -113,6 +113,80 @@ Template.materials_interventions.helpers({
 })
 
 Template.item_details_download.helpers({
+	file:function(){
+
+   	var i;
+	var obj = Prospero.findOne(this._id);
+    var data = obj.data;
+    var methods = obj.details.methods;
+    var idArray = [];
+
+	    for (var property in data) {
+	     	if (data.hasOwnProperty(property)) {
+	            var parent = data[property];
+
+	            for (var sub_property in parent){
+
+	                 if (parent.hasOwnProperty(sub_property)) {
+	                    var child = parent[sub_property];
+				      	if (child[0] == "/" || !child){
+				      	} else {
+				      		// delete data entry
+
+				      		idArray.push(child);
+				      	}
+	                }
+	            }
+	        }
+	 	}
+
+	    for (var property in methods) {
+	     	if (methods.hasOwnProperty(property)) {
+	            var parent = methods[property];
+
+	            for (var sub_property in parent){
+
+	                 if (parent.hasOwnProperty(sub_property)) {
+	                    var child = parent[sub_property];
+
+	                    for (var baby in child){
+	                    	if(child.hasOwnProperty(baby)){
+	                    		var result = child[baby];
+
+	                    		if (result[0] == "/" || result.indexOf(' ') > 0 || !result){
+	                    		} else {
+	                    			//delete data entry
+				      				idArray.push(result);
+	                    		}
+	                    	}
+	                    }
+	                }
+	            }
+	        }
+	 	}
+	 	console.log(idArray);
+	 	console.log(Data.find({_id:{$in:idArray}}).fetch());
+	 	return Data.find({_id:{$in:idArray}});
+	}
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Template.item_details_download_old.helpers({
 	basic:function(){
 		var itemId = this._id;
 		var file1 = Prospero.findOne(itemId).data.basic.front;

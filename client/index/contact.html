@@ -1,0 +1,81 @@
+<template name="contact">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12">
+			     <h1 class="prospero-login">{contact : cro<span class="prospero" style="font-size:40px">ART</span>ia}</h1>
+			     <br/>
+			     <br/>
+			     <div class="row">
+				     <div class="col-xs-12 col-sm-push-1 col-sm-10 form-box">
+					    <form class="login">
+					    	<div class="row">
+
+					        <div class="col-xs-12 col-sm-offset-3 col-sm-6 login-propery align-center">
+					        	Subject&emsp;
+
+				              <select class="date-range form-contact" id="subject">
+                        		<option value="noSubject" selected style='display:none;'>Select...</option>
+				                <option value="Appy for an account">Appy for an account</option>
+				                <option value="Report an entry">Report an entry</option>
+				                <option value="Report a bug">Report a bug</option>
+				                <option value="Miscellaneous">Miscellaneous</option>
+				              </select>
+					       	</div>
+					       	<br/>
+					       	<br/>
+					       	<div class="align-center">
+					        <div class="col-xs-12 col-sm-2 login-propery align-right">
+					        	E-mail&emsp;
+					        </div>
+
+					        <div class="col-xs-12 col-sm-4 login-propery align-left">
+					        	<input class="remove-margin bottom-shadow form-transparent" id="eMail" type="text" name="contact">
+					       	</div>
+
+					        <div class="col-xs-12 col-sm-2 login-propery align-right">
+					        	Institution&emsp;
+					        </div>
+
+					        <div class="col-xs-12 col-sm-4 login-propery align-left">
+					        	<input class="remove-margin bottom-shadow form-transparent" id="institution" type="text" name="contact" placeholder="(optional)">
+					       	</div>
+
+					        <div class="col-xs-12 col-sm-2 login-propery align-right">
+					        	Full name&emsp;
+					        </div>
+
+					        <div class="col-xs-12 col-sm-4 login-propery align-left">
+					        	<input class="remove-margin bottom-shadow form-transparent" id="fullName" type="text" name="contact">
+					       	</div>
+
+					        <div class="col-xs-12 col-sm-2 login-propery align-right">
+					        	Telephone&emsp;
+					        </div>
+
+					        <div class="col-xs-12 col-sm-4 login-propery align-left">
+					        	<input class="remove-margin bottom-shadow form-transparent" id="telephone" type="text" name="contact" placeholder="(optional)">
+					       	</div>
+					       	</div>
+					        <br/>
+					        <br/>
+					        <br/>
+
+					      <div class="col-xs-12 login-propery align-center">
+					        Message
+					      </div>
+					      <div class="col-sm-8 col-sm-offset-2">
+					          <textarea class="" id="contactText" name="contact" rows="6" placeholder="" value=""></textarea>
+					      </div>
+
+					        <div class="align-center">
+					         <button class="btn btn-default btn-submit btn-login" type="submit" id="userContactForm">SUBMIT</button>
+					        </div>
+					        </div>
+					    </form>
+				    </div>
+			    </div>
+		    </div>
+	    </div>
+    </div>
+
+</template>

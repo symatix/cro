@@ -2717,7 +2717,7 @@ Meteor.myFunctions = {
         createdAt: Meteor.myFunctions.dateFormat(),
         addedBy:Meteor.user().username,
         last_edit: Meteor.myFunctions.dateFormat(),
-        editedBy:Meteor.user().username,
+        editedBy:Meteor.user().profile.full_name,
         editorId:Meteor.user()._id,
       }
     } else {
@@ -2729,7 +2729,7 @@ Meteor.myFunctions = {
         createdAt:oldObj.info.createdAt,
         addedBy:oldObj.info.addedBy,
         last_edit: Meteor.myFunctions.dateFormat(),
-        editedBy:Meteor.user().username,
+        editedBy:Meteor.user().profile.full_name,
         editorId:Meteor.user()._id,
 
       }
@@ -2864,6 +2864,7 @@ Meteor.myFunctions = {
 
     var itemType = $("input[name='type']:checked").val();
     var basicObject = {
+      tags:document.getElementById("tags").value,
       author:document.getElementById("author").value,
       title:document.getElementById("title").value,
       date:document.getElementById("date").value,
@@ -3038,6 +3039,7 @@ Meteor.myFunctions = {
 
     var itemType = $("input[name='type']:checked").val();
     var basicObject = {
+      tags:document.getElementById("tags").value,
       author:document.getElementById("author").value,
       title:document.getElementById("title").value,
       date:document.getElementById("date").value,
@@ -3151,6 +3153,7 @@ Meteor.myFunctions = {
 
     var itemType = $("input[name='type']:checked").val();
     var basicObject = {
+      tags:document.getElementById("tags").value,
       type:document.getElementById("typeOfObject").value,
       author:document.getElementById("author").value,
       title:document.getElementById("title").value,
@@ -3265,6 +3268,7 @@ Meteor.myFunctions = {
     var itemType = $("input[name='type']:checked").val();
 
     var basicObject = {
+      tags:document.getElementById("tags").value,
       title:document.getElementById("title").value,
       appearence:document.getElementById("appearence").value,
       altName:document.getElementById("altName").value,
@@ -3326,6 +3330,7 @@ Meteor.myFunctions = {
     var itemType = $("input[name='type']:checked").val();
 
     var basicObject = {
+      tags:document.getElementById("tags").value,
       name:document.getElementById("name").value,
       samplingPerson:document.getElementById("samplingPerson").value,
       embedPerson:document.getElementById("embedPerson").value,
