@@ -19,10 +19,11 @@ Template.item_new.events({
     event.preventDefault();
     objectId = this._id;
     var progress = $('.progress-bar-custom').attr('aria-valuenow');
-    if (progress==="100"){
+    console.log(progress);
+    if (progress==="100" || progress==="0"){
       Meteor.myFunctions.insertData();
     } else {
-      alert("Error: upload not finished.");
+      alert("Error: upload not finished. /"+progress);
     }
     Session.set("showPicture", false);
   },
