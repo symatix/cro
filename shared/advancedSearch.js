@@ -66,21 +66,21 @@ SearchIndex = new EasySearch.Index({
           //basicFields['type'] = 1;
           }
         if(date){
-            var dateNumber = parseInt(date,10);
-            basicSelector['basic.date'] = dateNumber;
+            //var dateNumber = parseInt(date,10);
+            basicSelector['basic.date'] = date;
 
             if(range === "exact"){
-              basicSelector['basic.date'] = dateNumber;
+              basicSelector['basic.date'] = date;
             }
             if(range === "older"){
-              basicSelector['basic.date'] = {$lte:dateNumber};
+              basicSelector['basic.date'] = {$lte:date};
             }
             if(range === "newer"){
-              basicSelector['basic.date'] = {$gte:dateNumber};
+              basicSelector['basic.date'] = {$gte:date};
             }
             if(range === "range"){
-              var dateNumberSecond = parseInt(dateSecond,10);
-              basicSelector['basic.date'] = {$gte:dateNumber,$lte:dateNumberSecond};
+              //var dateNumberSecond = parseInt(dateSecond,10);
+              basicSelector['basic.date'] = {$gte:date,$lte:dateSecond};
             }
           }
         if(technique){
