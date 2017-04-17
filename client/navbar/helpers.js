@@ -13,11 +13,11 @@ Template.navbar.helpers({
   usersIndex: () => UsersIndex,
 
   searchAttributesModerator:function(){
-    return {placeholder: ' Search by author, title or type',
+    return {placeholder: ' Search by author, title or tag',
             id:'input-basic-search'}
   },
   searchAttributesAdmin:function(){
-    return {placeholder: ' Search by author, title, user or type',
+    return {placeholder: ' Search by author, title, user or tag',
             id:'input-basic-search'}
   },
   searchAttributesUsers:function(){
