@@ -26,7 +26,8 @@ unknown
     - email validation on all input fields
     - user creation and edit validation fields
     - details button on main overlapping
-
+    - visual glitch on main>large & new>materials
+    
  * v0.34 - REVISION 1
   added
     - samples
