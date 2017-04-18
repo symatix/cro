@@ -19,14 +19,15 @@ unknown
     - font color scheme
     - font family
     - search fields on nav > tags
-    - download > file names
+    - details download > file names
     - basic > owner and editor fields
   fixed
-    - submit not possible if upload true
+    - submit not possible if upload running
     - email validation on all input fields
     - user creation and edit validation fields
     - details button on main overlapping
     - visual glitch on main>large & new>materials
+    - gridFS using C++ compiler instead of pure JS
     
  * v0.34 - REVISION 1
   added
