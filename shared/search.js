@@ -12,7 +12,7 @@
 GalleryIndex = new EasySearch.Index({
   collection: Prospero,
   name:'croartiaGallery',
-  fields: ['basic.author', 'basic.title','basic.tags'],
+  fields: ['basic.author', 'basic.title','basic.name','basic.altName','basic.tags'],
   engine: new EasySearch.MongoDB({
     selector: function(searchObject, options, aggregation) {
       const selector = this.defaultConfiguration().selector(searchObject, options, aggregation);
@@ -131,7 +131,7 @@ UsersIndex = new EasySearch.Index({
 ModeratorIndex = new EasySearch.Index({
   collection: Prospero,
   name:'moderatorGallery',
-  fields: ['basic.author', 'basic.title','basic.tags'],
+  fields: ['basic.author', 'basic.title','basic.tags','basic.name','basic.altName'],
   engine: new EasySearch.MongoDB({
     selector: function(searchObject, options, aggregation) {
       const selector = this.defaultConfiguration().selector(searchObject, options, aggregation);
@@ -204,7 +204,7 @@ ModeratorIndex = new EasySearch.Index({
 AdminIndex = new EasySearch.Index({
   collection: Prospero,
   name:'adminGallery',
-  fields: ['basic.author', 'basic.title', 'info.addedBy', 'basic.tags'],
+  fields: ['basic.author', 'basic.title','basic.name','basic.altName', 'info.addedBy','info.fullName', 'basic.tags'],
   engine: new EasySearch.MongoDB({
     selector: function(searchObject, options, aggregation) {
       const selector = this.defaultConfiguration().selector(searchObject, options, aggregation);

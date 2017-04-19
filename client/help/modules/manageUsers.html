@@ -1,0 +1,41 @@
+<template name="help_manageUsers">
+	<h4 class="help">Manage users</h4>
+	<p>Administrator can <b>view</b> the statistics of users and perform <i>multiple</i> <b>actions</b> inside the <i>Users dashboard</i>.</p>
+
+	<p>First, let's go thru <b>statistics</b>. The user dashboard is split into three sections:</p>
+	<ol> 
+		<li class="listNumber"><b>User details</b></li>
+		<li class="listNumber"><b>User entries</b></li>
+			<ul class="help-notice"> 
+				<li><i>Total*</i> number of entries</li>
+				<li><i>Private</i> entries</li>
+				<li><i>Deleted</i> entries</li>
+				<li>Number of entries depending on <i>type</i> of the entry</li>
+			</ul>
+		<li class="listNumber"><b>Last activity</b></li>
+			<ul class="help-notice"> 
+				<li><i>Time</i> of last activity</li>
+				<li>Last <i>6</i> entries</li>
+			</ul>
+	</ol>
+	<br/>
+
+	<p><b>Actions</b> administrator can do inside the <i>Users dashboard</i> are:</p>
+	<ol> 
+		<li class="listNumber"><b>Add user</b></li>
+		<li class="listNumber"><b>Edit user</b></li>
+		<li class="listNumber"><b>Resend user details</b></li>
+		<li class="listNumber"><b>Delete user</b></li>
+		<li class="listNumber"><b><i>View</i> details and <i>edit</i> last entries of the user</b></li>
+	</ol>
+
+    <div class="well">
+    	<div class="help-notice-warning">
+            <p><b>Notice!</b> When adding a user to the database, for security reasons the password is <i>encrypted</i> and <b>can not</b> be changed with the <i>user edit form</i>.</p>
+		</div>
+		<br/>
+    	<div class="help-notice-warning">
+            <p>* Total number, including private and deleted entries.</p>
+		</div>
+    </div>
+</template>

@@ -1,0 +1,43 @@
+<template name="help_basicSearch">
+	<h4 class="help">Basic search</h4>
+	<p>Basic search <i>differes</i> depending on the user <b>location</b>.</p>
+	<p>
+		In all cases, the search bar in the navigation panel will search thru the <b>authors name, name of the object</b>, <b>title</b> and <b>tags</b>.
+	</p>
+	<p> 
+		The difference is if the user is viewing his/her collection. In that case, the <b>private</b> collection becomes available.
+		If managing the database, administrator can also search by the <b>owner</b> of entry, while having access to <b>private</b> and <b>deleted</b> entries.
+	</p>
+	<p>
+		Search entries can be <i>filtered</i> by <b>category</b> and <i>sorted</i> by parametars such as <b>title, author, etc</b>...
+	</p>
+    <div class="well">
+    	<div class="help-notice-warning">
+            <p>Search is constantly updating as the user is typing.</p>
+		</div>
+    </div>
+</template>
+
+<template name="help_advancedSearch">
+	<h4 class="help">Advanced search</h4>
+	<p>While <i>basic search</i> has only few basic field that it queries, <i>advanced search</i> retains most of the characteristics* and adds multiple fields and filters.</p>
+	
+	<ol>Filtering of search data can be done by
+		<li class="listNumber"><b>Date</b></li>
+				<li class="listSubNumber push-toRight">Exact date</li>
+				<li class="listSubNumber push-toRight">Exact date and older</li>
+				<li class="listSubNumber push-toRight">Exact date and newer</li>
+				<li class="listSubNumber push-toRight">Range (another field will be presented if option is selected)</li>
+		<li class="listNumber"><b>Method</b></li>
+			<ul class="help-notice">
+				<li>Up to three different methods can be selected</li>	
+			</ul>
+		<li class="listNumber"><b>Category</b></li>
+	</ol>
+	<p> While <b>date</b> and <b>method</b> are part of the query, <b>filtering</b> by <i>category</i> and <b>sorting</b> is done after the search is complete.</p>
+    <div class="well">
+    	<div class="help-notice-warning">
+            <p>* Advanced search will wait for the user query and will be submitted upon pressing <b>enter</b> or by clicking on <b>Submit query</b>.</p>
+		</div>
+    </div>
+</template>

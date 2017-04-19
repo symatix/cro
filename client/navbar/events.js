@@ -1,5 +1,25 @@
 // web ("") / local ("index/navbar")
 Template.navbar.events({
+  'click #getModalHelp':function(event){
+    setTimeout(function(){
+      if($(".tab-help").hasClass("active")){
+        console.log("ima");
+        $('#help-home-first').addClass('active');
+        $('#help-home').addClass('active');
+
+      } else {
+        console.log("nema");
+        $(".tab-help").removeClass("active");
+        $('#help-home-first').addClass('active');
+        $('#help-home').addClass('active');
+      }
+
+    },200)
+  },
+  'click .toggle-active':function(event){
+    $('.active').removeClass('active');
+    $(event.target).parent().addClass("active");
+  },
   "click .logout":function(event){
     event.preventDefault();
     Meteor.logout();

@@ -1,0 +1,42 @@
+<template name="help_editItem">
+	<h4 class="help">Edit item</h4>
+	<p>There are two ways to edit an item.</p>
+	<p>One is thru navigation, and the other one is on details page</p>
+	<ol> 
+		<li class="listNumber"><b>Navigation</b></li>
+			{{#if currentUser.profile.isAdmin}}
+				<li class="listSubNumber push-toRight">Click on <i>Admin panel</i> &rarr; <i>Manage database</i></li>
+			{{else}}
+				<li class="listSubNumber push-toRight">Click on <i>Database</i> &rarr; <i>My collection</i></li>
+			{{/if}}
+				<li class="listSubNumber push-toRight">On the desired items box click on <i>Edit</i></li>
+				<li class="listSubNumber push-toRight">After making the changes, <i>submit</i> the form</li>
+
+		<li class="listNumber"><b>Details page</b></li>
+				<li class="listSuperSubNumber push-toRight">On the desired item click <i>Details</i> to enter the details page</li>
+				<li class="listSuperSubNumber push-toRight">Inside breadcrumbs*, next to your username, click on <i>{edit}</i></li>
+	</ol>
+	<p> If the form was successfully submitted, you should get a notice that the item was successfuly updated in the database.</p>
+	<p> To <b>delete</b> the entry, you have to go to 
+		{{#if currentUser.profile.isAdmin}}
+			<b>Admin panel</b> &rarr; <b>Manage database</b>
+		{{else}}
+			<b>Database</b> &rarr; <b>My collection</b>
+		{{/if}}
+		 and <i>delete</i> it from <b>there</b>.</p>
+    <div class="well">
+	{{#unless currentUser.profile.isAdmin}}<i>Admin panel</i> &rarr; <i>Manage database</i>
+    	<div class="help-notice-warning">
+            <p><b>Notice!</b> There are two prerequisites for editing an entry to the database:</p>
+			<ul class="help-notice"> 
+				<li>user needs to be logged in for the option to become available</li>
+				<li>user must be the original owner of the entry</li>
+			</ul>
+		</div>
+		<br/>
+    {{/unless}}
+    	<div class="help-notice-warning">
+            <p>* Check <b>Navigation</b> for breadcrumbs classification.</p>
+		</div>
+    </div>
+</template>

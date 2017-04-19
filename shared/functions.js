@@ -3022,11 +3022,23 @@ Meteor.myFunctions = {
     // WHAT TO DO IF NEW OR EDIT //
     if (!Session.get("itemId")){
       Meteor.call("insertItem", itemDetails, function(error,result){
-        if(!error){ Router.go("/gallery/details/"+result); }});
+        if(!error){ 
+          alert("Item successfully written to database.")
+          Router.go("/gallery/details/"+result); 
+        } else if (error){
+          alert("There was an error in your entry: "+error);
+        }
+      });
     } else {
-      Meteor.call("updateItem", itemId, itemDetails);
-      delete Session.keys.itemId;
-      Router.go("/gallery/details/"+itemId);
+      Meteor.call("updateItem", itemId, itemDetails, function(error,result){
+        if(!error){ 
+          delete Session.keys.itemId;
+          alert("Item successfully updated in database.")
+          Router.go("/gallery/details/"+result); 
+        } else if (error){
+          alert("There was an error in your entry: "+error);
+        }
+      });
     }
 
   } // end of painting object
@@ -3137,11 +3149,23 @@ Meteor.myFunctions = {
     // WHAT TO DO IF NEW OR EDIT //
     if (!Session.get("itemId")){
       Meteor.call("insertItem", itemDetails, function(error,result){
-        if(!error){ Router.go("/gallery/details/"+result); }});
+        if(!error){ 
+          alert("Item successfully written to database.")
+          Router.go("/gallery/details/"+result); 
+        } else if (error){
+          alert("There was an error in your entry: "+error);
+        }
+      });
     } else {
-      Meteor.call("updateItem", itemId, itemDetails);
-      delete Session.keys.itemId;
-      Router.go("/gallery/details/"+itemId);
+      Meteor.call("updateItem", itemId, itemDetails, function(error,result){
+        if(!error){ 
+          delete Session.keys.itemId;
+          alert("Item successfully updated in database.")
+          Router.go("/gallery/details/"+result); 
+        } else if (error){
+          alert("There was an error in your entry: "+error);
+        }
+      });
     }
 
   }
@@ -3250,11 +3274,23 @@ Meteor.myFunctions = {
     // WHAT TO DO IF NEW OR EDIT //
     if (!Session.get("itemId")){
       Meteor.call("insertItem", itemDetails, function(error,result){
-        if(!error){ Router.go("/gallery/details/"+result); }});
+        if(!error){ 
+          alert("Item successfully written to database.")
+          Router.go("/gallery/details/"+result); 
+        } else if (error){
+          alert("There was an error in your entry: "+error);
+        }
+      });
     } else {
-      Meteor.call("updateItem", itemId, itemDetails);
-      delete Session.keys.itemId;
-      Router.go("/gallery/details/"+itemId);
+      Meteor.call("updateItem", itemId, itemDetails, function(error,result){
+        if(!error){ 
+          delete Session.keys.itemId;
+          alert("Item successfully updated in database.")
+          Router.go("/gallery/details/"+result); 
+        } else if (error){
+          alert("There was an error in your entry: "+error);
+        }
+      });
     }
 
   }
@@ -3312,11 +3348,23 @@ Meteor.myFunctions = {
     // WHAT TO DO IF NEW OR EDIT //
     if (!Session.get("itemId")){
       Meteor.call("insertItem", itemDetails, function(error,result){
-        if(!error){ Router.go("/gallery/details/"+result); }});
+        if(!error){ 
+          alert("Item successfully written to database.")
+          Router.go("/gallery/details/"+result); 
+        } else if (error){
+          alert("There was an error in your entry: "+error);
+        }
+      });
     } else {
-      Meteor.call("updateItem", itemId, itemDetails);
-      delete Session.keys.itemId;
-      Router.go("/gallery/details/"+itemId);
+      Meteor.call("updateItem", itemId, itemDetails, function(error,result){
+        if(!error){ 
+          delete Session.keys.itemId;
+          alert("Item successfully updated in database.")
+          Router.go("/gallery/details/"+result); 
+        } else if (error){
+          alert("There was an error in your entry: "+error);
+        }
+      });
     }
 
   }
@@ -3363,15 +3411,26 @@ Meteor.myFunctions = {
     // WHAT TO DO IF NEW OR EDIT //
     if (!Session.get("itemId")){
       Meteor.call("insertItem", itemDetails, function(error,result){
-        if(!error){ Router.go("/gallery/details/"+result); }});
+        if(!error){ 
+          alert("Item successfully written to database.")
+          Router.go("/gallery/details/"+result); 
+        } else if (error){
+          alert("There was an error in your entry: "+error);
+        }
+      });
     } else {
-      Meteor.call("updateItem", itemId, itemDetails);
-      delete Session.keys.itemId;
-      Router.go("/gallery/details/"+itemId);
+      Meteor.call("updateItem", itemId, itemDetails, function(error,result){
+        if(!error){ 
+          delete Session.keys.itemId;
+          alert("Item successfully updated in database.")
+          Router.go("/gallery/details/"+result); 
+        } else if (error){
+          alert("There was an error in your entry: "+error);
+        }
+      });
     }
 
   }
-  alert("["+basicObject.title+"] successfully updated");
   },
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

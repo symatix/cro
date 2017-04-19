@@ -7,7 +7,9 @@ Meteor.methods({
     	return id;
 	},
 	updateItem:function(itemId, itemDetails){
-		Prospero.update({_id:itemId},{$set:itemDetails},{multi:true});
+		Prospero.update({_id:itemId},{$set:itemDetails},{multi:true});// don't know why I put {multi:true} but promise an investigation
+		var id = Prospero.findOne(itemDetails)._id;
+		return id;
 	},
 	hideItem:function(itemId, dateFormat){
 		Prospero.update({_id:itemId},{$set:{"isDeleted":"deleted", "info.last_edit": dateFormat}});

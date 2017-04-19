@@ -1,0 +1,95 @@
+<template name="help">
+<div class="container">
+	<div class="row">
+		<!-- nav -->
+		<div class="col-xs-12 col-sm-2">
+			<ul class="nav nav-pills nav-stacked" role="tablist" id="help-tabs">
+
+			  	<li role="presentation" class="" id="help-home-first">
+			  		<a role="tab" data-toggle="tab" aria-controls="tab-content" class="nav-help" href="#help-home">
+			  			Home
+			  		</a>
+			 	</li>
+
+				<li role="presentation"><a class="nav-help" href="#help-navigation" aria-controls="tab-content" role="tab" data-toggle="tab">Navigation</a></li>
+				<li role="presentation"><a class="nav-help" href="#help-new" aria-controls="tab-content" role="tab" data-toggle="tab">New item</a></li>
+				<li role="presentation"><a class="nav-help" href="#help-edit" aria-controls="tab-content" role="tab" data-toggle="tab">Edit item</a></li>
+				<li role="presentation"><a class="nav-help" href="#help-basicSearch" aria-controls="tab-content" role="tab" data-toggle="tab">Basic search</a></li>
+				<li role="presentation"><a class="nav-help" href="#help-advancedSearch" aria-controls="tab-content" role="tab" data-toggle="tab">Advanced search</a></li>
+				{{#if currentUser.profile.isAdmin}}
+					<li role="presentation"><a class="nav-help" href="#help-database" aria-controls="tab-content" role="tab" data-toggle="tab">Manage database</a></li>
+					<li role="presentation"><a class="nav-help" href="#help-dbStatistics" aria-controls="tab-content" role="tab" data-toggle="tab">Database statistics</a></li>
+					<li role="presentation"><a class="nav-help" href="#help-addUser" aria-controls="tab-content" role="tab" data-toggle="tab">Add users</a></li>
+					<li role="presentation"><a class="nav-help" href="#help-manageUsers" aria-controls="tab-content" role="tab" data-toggle="tab">Manage users</a></li>
+				{{else}}
+					{{#if currentUser}}
+						{{#unless currentUser.profile.isAdmin}}
+							<li role="presentation"><a class="nav-help" href="#help-myCollection" aria-controls="tab-content" role="tab" data-toggle="tab">Manage collection</a></li>
+						{{/unless}}
+					{{/if}}
+				{{/if}}
+			</ul>
+		</div><!-- /nav -->
+
+
+		<div class="col-xs-12 col-sm-10 help-box">
+        	<div class="tab-content">
+
+				<div role="" class="tab-help tab-pane active in" id="help-home">
+					{{> help_home}}
+				</div>
+
+				<div role="" class="tab-help tab-pane fade in" id="help-navigation">
+					{{> help_navigation}}
+				</div>
+
+				<div role="" class="tab-help tab-pane fade in" id="help-new">
+					{{> help_newItem}}
+				</div>
+
+				<div role="" class="tab-help tab-pane fade in" id="help-edit">
+					{{> help_editItem}}
+				</div>
+
+				<div role="" class="tab-help tab-pane fade in" id="help-basicSearch">
+					{{> help_basicSearch}}
+				</div>
+
+				<div role="" class="tab-help tab-pane fade in" id="help-advancedSearch">
+					{{> help_advancedSearch}}
+				</div>
+
+				<div role="" class="tab-help tab-pane fade in" id="help-myCollection">
+					{{> help_myCollection}}
+				</div>
+
+				<div role="" class="tab-help tab-pane fade in" id="help-database">
+					{{> help_database}}
+				</div>
+
+				<div role="" class="tab-help tab-pane fade in" id="help-addUser">
+					{{> help_addUsers}}
+				</div>
+
+				<div role="" class="tab-help tab-pane fade in" id="help-addUser">
+					{{> help_editItem}}
+				</div>
+
+				<div role="" class="tab-help tab-pane fade in" id="help-manageUsers">
+					{{> help_manageUsers}}
+				</div>
+
+				<div role="" class="tab-help tab-pane fade in" id="help-dbStatistics">
+					{{> help_dbStatistics}}
+				</div>
+
+
+			</div>
+
+
+		</div>
+
+
+	</div><!-- /row -->
+</div>
+</template>

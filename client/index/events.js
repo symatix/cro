@@ -5,10 +5,10 @@ Template.mainGallery.events({
     var title = Prospero.findOne(this.__originalId).basic.title;
     if (author && title){
 	    $(".img-modal").attr("src",imgSrc);
-	    $(".modal-title").text(author+" - "+title);
+	    $(".modal-thumb-title").text(author+" - "+title);
     } else if (!author && title){
 	    $(".img-modal").attr("src",imgSrc);
-	    $(".modal-title").text(title);
+	    $(".modal-thumb-title").text(title);
     }
   }
 })

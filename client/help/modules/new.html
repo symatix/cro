@@ -1,0 +1,24 @@
+<template name="help_newItem">
+	<h4 class="help">New item</h4>
+	<p>The process of adding an item to the database is pretty straight forward.</p>
+	<p>To add an item, follow these steps</p>
+	<ol> 
+		<li class="listNumber"><b>Click on <i>{{#if currentUser.profile.isAdmin}}Admin panel{{else}}Database{{/if}}</i> &rarr; <i>New entry</i></b></li>
+		<li class="listNumber"><b>Select the type of the object (Painting, Sculpture,etc..)</b></li>
+		<li class="listNumber"><b>Fill out the form with data available to you</b></li>
+		<li class="listNumber"><b><i>Submit</i> form</b></li>
+	</ol>
+	<p>If the form was successfully submitted, you should get a notice that the item was successfuly written to the database.</p>
+    <div class="well">
+    	<div class="help-notice-warning">
+            <p><b>Notice!</b> There are two prerequisites for adding an entry to the database:</p>
+			<ul class="help-notice"> 
+				<li>user needs to be logged in for the option to become available</li>
+				<li>all uploads must finish (indication bar must reach 100%)</li>
+			</ul>
+		</div>
+    	<div class="help-notice-warning">
+            <p><b>Public</b> entries can be viewed by anyone, <b>private</b> entries can be veiwed only by the owner or administrator.</p>
+		</div>
+    </div>
+</template>

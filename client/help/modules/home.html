@@ -1,0 +1,24 @@
+<template name="help_home">
+	<h4 class="help">Welcome!</h4>
+	<p>This guide will walk you through the basics of using croARTia database. The topics covered by the guide are:</p>
+
+	<ol> 
+		<li class="listNumber"><b>Navigation</b></li>
+		<li class="listNumber"><b>Searching the database</b></li>
+		<li class="listNumber"><b>Creating and editing a database entry</b></li>
+		{{#if currentUser.profile.isAdmin}}
+		<li class="listNumber"><b>Creating and editing users</b></li>
+		<li class="listNumber"><b>Managing the database</b></li>
+		<li class="listNumber"><b>Database and user statistics</b></li>
+		{{else}}
+		<li class="listNumber"><b>Managing your collection</b></li>
+		{{/if}}
+	</ol>
+
+	<p>To get started, choose a topic of intrest from the left navigation.</p>
+    <div class="well">
+    	<div class="help-notice-warning">
+            <p><b>Notice!</b> Altho different resolutions are supported, for best experience use 1920*1080 resolution.</p>
+		</div>
+    </div>
+</template>

@@ -10,8 +10,9 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand active" href="/"><span class="hoverGlow text-shadow">
-          croARTia art&research database</span></a>
+              <ul class="nav navbar-nav">
+                <li class="dropdown active"><a class="toggle-active navbar-brand hoverGlow text-shadow" href="/">croARTia</a></li>
+              </ul>
       </div>
 
       <!-- Collect the nav links, forms, and other content for toggling -->
@@ -24,14 +25,14 @@
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Admin panel <span class="caret"></span></a>
               <ul class="dropdown-menu">
-                <li class=""><a href="/search">Advanced search</a></li>
+                <li class=""><a class="toggle-active" href="/search">Advanced search</a></li>
                 <li role="separator" class="divider"></li>
-                <li><a class="newItem-href" href="/new">New entry</a></li>
-                <li class=""><a href="/admin/db">Manage database</a></li>
-                <li class=""><a href="/admin/db/stats">Database statistics</a></li>
+                <li><a class="toggle-active newItem-href" href="/new">New entry</a></li>
+                <li class=""><a class="toggle-active" href="/admin/db">Manage database</a></li>
+                <li class=""><a class="toggle-active" href="/admin/db/stats">Database statistics</a></li>
                 <li role="separator" class="divider"></li>
-                <li class=""><a class="newUser-href" href="/admin/users/entry">Add user</a></li>
-                <li class=""><a href="/admin/users">Manage users</a></li>
+                <li class=""><a class="toggle-active newUser-href" href="/admin/users/entry">Add user</a></li>
+                <li class=""><a class="toggle-active" href="/admin/users">Manage users</a></li>
                 <li role="separator" class="divider"></li>
                 <li class="dropdown"><a href="/report.txt">[dev]</a></li>
               </ul>
@@ -42,10 +43,10 @@
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Database <span class="caret"></span></a>
               <ul class="dropdown-menu">
-                <li class=""><a href="/search">Advanced search</a></li>
+                <li class=""><a class="toggle-active" href="/search">Advanced search</a></li>
                 <li role="separator" class="divider"></li>
-                <li><a class="newItem-href" href="/new">New entry</a></li>
-                <li><a href="/moderator/collection">My collection</a></li>
+                <li><a class="toggle-active newItem-href" href="/new">New entry</a></li>
+                <li><a class="toggle-active" href="/moderator/collection">My collection</a></li>
               </ul>
             </li>
 
@@ -53,14 +54,17 @@
 
             {{else}}
               <ul class="nav navbar-nav">
-                <li class="dropdown"><a href="/search">Advanced search</a></li>
+                <li class="dropdown"><a class="toggle-active" href="/search">Advanced search</a></li>
               </ul>
             {{/if}}
               <ul class="nav navbar-nav">
-                <li class="dropdown"><a href="/about">About</a></li>
+                <li class="dropdown"><a class="toggle-active" href="/about">About</a></li>
               </ul>
               <ul class="nav navbar-nav">
-                <li class="dropdown"><a href="/contact">Contact Us</a></li>
+                <li class="dropdown"><a class="toggle-active" href="/contact">Contact Us</a></li>
+              </ul>
+              <ul class="nav navbar-nav">
+                <li class="dropdown"><a class="toggle-active" href="#" data-toggle="modal" data-target="#help" id="getModalHelp">Help</a></li>
               </ul>
         </ul>
 
@@ -238,7 +242,7 @@
           {{else}}
 
           <ul class="nav navbar-nav float-right">
-            <li class ="dropdown"><a href="/login">Log in</a></li>
+            <li class ="dropdown"><a class="toggle-active" href="/login">Log in</a></li>
           </ul>
 
           {{/if}}
@@ -247,24 +251,31 @@
   </nav>
 </div>
 
+<!-- Modal -->
+<div class="modal fade" id="help" tabindex="-1" role="dialog" aria-labelledby="modal-helpDesk" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title" id="modal-helpDesk">
+          croARTia helpDesk
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        </h3>
+      </div>
+      <div class="modal-body">
+        {{> help}}
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 <script>
-
-
-
-$(function(){
-
-
-    $('#documentTop').load({
-      $.fn.changeVal = function () {
-          return $(".sorting-category").val("").trigger("change");
-      }
-      $(".sorting-category").changeVal("");
-      alert("jesam");
-
-    });
-  changeVal();
-});
-
+$(document).ready(function(){
+  $('#help').on('hidden.bs.modal', function () {
+      $("#help-navigation").click();
+  })
+})
 </script>
-
 </template>

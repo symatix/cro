@@ -10,6 +10,12 @@ Template.users.helpers({
 	total:function(){
 		return Prospero.find({"info.userId":this.__originalId}).count();
 	},
+	private:function(){
+		return Prospero.find({"info.userId":this.__originalId, "visible":"private"}).count();
+	},
+	deleted:function(){
+		return Prospero.find({"info.userId":this.__originalId, "isDeleted":"deleted"}).count();
+	},
 	lastEdit:function(){
 		var lastEdit = Prospero.findOne({"info.userId":this.__originalId},{sort:{"info.last_edit": -1}}).info.last_edit;
 		return lastEdit;

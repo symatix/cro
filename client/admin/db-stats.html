@@ -8,7 +8,7 @@
     <h1 class="breadcrumbs">{{#if currentUser}}{{currentUser.username}} } {{/if}}
       <a class="a-heading" href="/">croARTia </a>/ 
       <a class="a-heading" href="/admin/db">db </a>/
-      statistics
+      <span class="post-heading"> statistics</span>
     </h1>
 
         <div class="row form-box">
@@ -56,7 +56,7 @@
           </div>
 
           <div class="col-xs-6 personal-data">
-            <h4>available.{{totalPublic}}.private.{{totalPrivate}}.deleted.{{totalDeleted}}.
+            <h4>public.{{totalPublic}}.private.{{totalPrivate}}.deleted.{{totalDeleted}}.
             </h4>
             <table class="admin-stats">
               <tr>
@@ -100,7 +100,7 @@
 
         <div class="col-xs-12 align-center">
         <hr/>
-            <h4>last entries</h4>
+            <h4>last activity</h4>
             <table>
               <tr style="font-size:18px">
                 <td><b>status</b></td>

@@ -10,6 +10,15 @@ unknown
 ********************
 *** VERSION LOGS ***
 ********************
+ * v0.36 - BETA
+  added
+    - documentation (help)
+  fixed
+    - moderator statistics now showing correct count
+    - character out of place on sample and sculpture
+    - function inside global navigation
+    - materials tab layout missing line on two options
+
  * v0.35 - BETA
   added
     - advanced search
