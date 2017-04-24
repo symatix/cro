@@ -13,11 +13,15 @@ unknown
  * v0.36 - BETA
   added
     - documentation (help)
+    - abbrevations
+  changed
+    - tags > key words
   fixed
     - moderator statistics now showing correct count
     - character out of place on sample and sculpture
     - function inside global navigation
     - materials tab layout missing line on two options
+    - xrr method name on advanced search
 
  * v0.35 - BETA
   added
