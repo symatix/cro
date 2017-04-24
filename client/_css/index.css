@@ -544,6 +544,11 @@ h1{
   font-family:logoBold;
   text-decoration:underline;
 }
+.table-heading{
+  font-family:logoBold;
+  font-size:larger;
+  padding-bottom:15px;
+}
 .item-property-author{
   font-family:logoBold;
 }
@@ -617,6 +622,17 @@ h1{
   color:#ffffff;
   font-weight:900;
 }
+.list-font-abbrevations{
+  word-wrap: break-word;
+  padding-top:5px;
+  font-family:logoThin;
+  font-size:14px;
+  color:#000000;
+  font-weight:900;
+}
+table.list-font-abbrevations>tr{
+  border-color:#bfbfbf;
+}
 .list-font-results{
   width:100%;
   word-wrap: break-word;
@@ -689,6 +705,13 @@ button, .btn-submit:focus{
   width:100%;
   box-shadow: 0 0 8px #ffffff;
   margin:25px auto;
+}
+.btn-modal{
+  color:black;
+  font-family:logoBold;
+  width:100%;
+  box-shadow: 0 0 8px #ffffff;
+  margin:15px auto 0px auto;
 }
 .loadBtn{
   color:black;
@@ -1067,6 +1090,9 @@ li.dropdown>a:focus{
 .align-right{
   text-align:right;
 }
+.margin-center{
+  margin:0 auto;
+}
 .align-left{
   text-align:left;
 }
@@ -1371,4 +1397,16 @@ tr.noBorder{
 ul.help-notice{
   list-style-type:disc;
 }
+.remove-focus:focus{
+  outline:none;
+  text-decoration:inherit;
+  border:inherit;
+  color:#ffffff;
+}
 
+.remove-focus:active{
+  outline:none;
+  text-decoration:inherit;
+  border:inherit;
+  color:#ffffff;
+}

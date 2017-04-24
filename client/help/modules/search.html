@@ -20,7 +20,7 @@
 
 <template name="help_advancedSearch">
 	<h4 class="help">Advanced search</h4>
-	<p>While <i>basic search</i> has only few basic field that it queries, <i>advanced search</i> retains most of the characteristics* and adds multiple fields and filters.</p>
+	<p>While <i>basic search</i> has only few basic field that it queries, <i>advanced search</i> retains most of the characteristics* and adds multiple fields and filters. To access advanced search, go to {{#if currentUser.profile.isAdmin}}<b>Admin panel</b> &rarr;{{else}}{{#if currentUser}}<b>Database</b> &rarr;{{/if}}{{/if}} <b>Advanced search</b>.</p>
 	
 	<ol>Filtering of search data can be done by
 		<li class="listNumber"><b>Date</b></li>
