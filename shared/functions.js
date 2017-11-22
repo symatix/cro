@@ -40,7 +40,7 @@ Meteor.myFunctions = {
     if(!$('#aas').is(':checked')){
 
       var aasDetails = false;
-      
+
     } else {
       if(painting || sculpture || other){
 
@@ -110,14 +110,14 @@ Meteor.myFunctions = {
 
       }
     }
-////////////////////////////////////////////////////////////////////////////////////////    
-  
+////////////////////////////////////////////////////////////////////////////////////////
+
 ////////////////////////////////////////////////////////////////////////////////////////
     $(':input').removeAttr('placeholder');
     if(!$('#aes').is(':checked')){
 
       var aesDetails = false;
-      
+
     } else {
 
       if(painting || sculpture || other){
@@ -193,7 +193,7 @@ Meteor.myFunctions = {
     if(!$('#afm').is(':checked')){
 
       var afmDetails = false;
-      
+
     } else {
 
       if(painting || sculpture || other){
@@ -269,7 +269,7 @@ Meteor.myFunctions = {
     if(!$('#analysis').is(':checked')){
 
       var analysisDetails = false;
-      
+
     } else {
 
       if(painting || sculpture || other){
@@ -345,7 +345,7 @@ Meteor.myFunctions = {
     if(!$('#binderFiller').is(':checked')){
 
       var binderFillerDetails = false;
-      
+
     } else {
 
       if(painting || sculpture || other){
@@ -421,7 +421,7 @@ Meteor.myFunctions = {
     if(!$('#c_14').is(':checked')){
 
       var c_14Details = false;
-      
+
     } else {
 
       if(painting || sculpture || other){
@@ -497,7 +497,7 @@ Meteor.myFunctions = {
     if(!$('#colorimetry').is(':checked')){
 
       var colorimetryDetails = false;
-      
+
     } else {
 
       if(painting || sculpture || other){
@@ -573,7 +573,7 @@ Meteor.myFunctions = {
     if(!$('#drms').is(':checked')){
 
       var drmsDetails = false;
-      
+
     } else {
 
       if(painting || sculpture || other){
@@ -649,7 +649,7 @@ Meteor.myFunctions = {
     if(!$('#fors').is(':checked')){
 
       var forsDetails = false;
-      
+
     } else {
 
       if(painting || sculpture || other){
@@ -725,7 +725,7 @@ Meteor.myFunctions = {
     if(!$('#ft_ir').is(':checked')){
 
       var ft_irDetails = false;
-      
+
     } else {
 
       if(painting || sculpture || other){
@@ -801,7 +801,7 @@ Meteor.myFunctions = {
     if(!$('#gc_ms').is(':checked')){
 
       var gc_msDetails = false;
-      
+
     } else {
 
       if(painting || sculpture || other){
@@ -877,7 +877,7 @@ Meteor.myFunctions = {
     if(!$('#gl').is(':checked')){
 
       var glDetails = false;
-      
+
     } else {
 
       if(painting || sculpture || other){
@@ -953,7 +953,7 @@ Meteor.myFunctions = {
     if(!$('#granulometry').is(':checked')){
 
       var granulometryDetails = false;
-      
+
     } else {
 
       if(painting || sculpture || other){
@@ -1029,7 +1029,7 @@ Meteor.myFunctions = {
     if(!$('#hygroscopic').is(':checked')){
 
       var hygroscopicDetails = false;
-      
+
     } else {
 
       if(painting || sculpture || other){
@@ -1105,7 +1105,7 @@ Meteor.myFunctions = {
     if(!$('#irpIrrIrfc').is(':checked')){
 
       var irpIrrIrfcDetails = false;
-      
+
     } else {
 
       if(painting || sculpture || other){
@@ -1181,7 +1181,7 @@ Meteor.myFunctions = {
     if(!$('#libs').is(':checked')){
 
       var libsDetails = false;
-      
+
     } else {
 
       if(painting || sculpture || other){
@@ -1257,7 +1257,7 @@ Meteor.myFunctions = {
     if(!$('#ol').is(':checked')){
 
       var olDetails = false;
-      
+
     } else {
 
       if(painting || sculpture || other){
@@ -1333,7 +1333,7 @@ Meteor.myFunctions = {
     if(!$('#om').is(':checked')){
 
       var omDetails = false;
-      
+
     } else {
 
       if(painting || sculpture || other){
@@ -1409,7 +1409,7 @@ Meteor.myFunctions = {
     if(!$('#pige').is(':checked')){
 
       var pigeDetails = false;
-      
+
     } else {
 
       if(painting || sculpture || other){
@@ -1485,7 +1485,7 @@ Meteor.myFunctions = {
     if(!$('#pixe').is(':checked')){
 
       var pixeDetails = false;
-      
+
     } else {
 
       if(painting || sculpture || other){
@@ -1561,7 +1561,7 @@ Meteor.myFunctions = {
     if(!$('#plm').is(':checked')){
 
       var plmDetails = false;
-      
+
     } else {
 
       if(painting || sculpture || other){
@@ -1637,7 +1637,7 @@ Meteor.myFunctions = {
     if(!$('#rbs').is(':checked')){
 
       var rbsDetails = false;
-      
+
     } else {
 
       if(painting || sculpture || other){
@@ -1713,7 +1713,7 @@ Meteor.myFunctions = {
     if(!$('#rs').is(':checked')){
 
       var rsDetails = false;
-      
+
     } else {
 
       if(painting || sculpture || other){
@@ -1789,7 +1789,7 @@ Meteor.myFunctions = {
     if(!$('#scanning').is(':checked')){
 
       var scanningDetails = false;
-      
+
     } else {
 
       if(painting || sculpture || other){
@@ -1865,7 +1865,7 @@ Meteor.myFunctions = {
     if(!$('#semSemEdx').is(':checked')){
 
       var semSemEdxDetails = false;
-      
+
     } else {
 
       if(painting || sculpture || other){
@@ -1941,7 +1941,7 @@ Meteor.myFunctions = {
     if(!$('#synchrotron').is(':checked')){
 
       var synchrotronDetails = false;
-      
+
     } else {
 
       if(painting || sculpture || other){
@@ -2017,7 +2017,7 @@ Meteor.myFunctions = {
     if(!$('#tem').is(':checked')){
 
       var temDetails = false;
-      
+
     } else {
 
       if(painting || sculpture || other){
@@ -2093,7 +2093,7 @@ Meteor.myFunctions = {
     if(!$('#tl').is(':checked')){
 
       var tlDetails = false;
-      
+
     } else {
 
       if(painting || sculpture || other){
@@ -2169,7 +2169,7 @@ Meteor.myFunctions = {
     if(!$('#tlc').is(':checked')){
 
       var tlcDetails = false;
-      
+
     } else {
 
       if(painting || sculpture || other){
@@ -2245,7 +2245,7 @@ Meteor.myFunctions = {
     if(!$('#uv_vis').is(':checked')){
 
       var uv_visDetails = false;
-      
+
     } else {
 
       if(painting || sculpture || other){
@@ -2321,7 +2321,7 @@ Meteor.myFunctions = {
     if(!$('#uvf').is(':checked')){
 
       var uvfDetails = false;
-      
+
     } else {
 
       if(painting || sculpture || other){
@@ -2397,7 +2397,7 @@ Meteor.myFunctions = {
     if(!$('#vis').is(':checked')){
 
       var visDetails = false;
-      
+
     } else {
 
       if(painting || sculpture || other){
@@ -2473,7 +2473,7 @@ Meteor.myFunctions = {
     if(!$('#xrd').is(':checked')){
 
       var xrdDetails = false;
-      
+
     } else {
 
       if(painting || sculpture || other){
@@ -2549,7 +2549,7 @@ Meteor.myFunctions = {
     if(!$('#xrf').is(':checked')){
 
       var xrfDetails = false;
-      
+
     } else {
 
       if(painting || sculpture || other){
@@ -2625,7 +2625,7 @@ Meteor.myFunctions = {
     if(!$('#xrr').is(':checked')){
 
       var xrrDetails = false;
-      
+
     } else {
 
       if(painting || sculpture || other){
@@ -2697,7 +2697,7 @@ Meteor.myFunctions = {
       }
     }
 ////////////////////////////////////////////////////////////////////////////////////////
-    
+
 ///////////////////////////////////////////////////////////////////////
 //////
 //////                UNIVERSAL OBJECTS
@@ -2708,7 +2708,7 @@ Meteor.myFunctions = {
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////      USER INFO / DATA INFO
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    
+
     if (!Prospero.findOne(Session.get("itemId"))){
       var owner = Meteor.user()._id;
       var infoObject = {
@@ -2809,7 +2809,7 @@ Meteor.myFunctions = {
       }
     }
     // end of intruder data
-    
+
     var methodsObject = {
       methods:{
         aas:aasDetails,
@@ -2867,7 +2867,7 @@ Meteor.myFunctions = {
       tags:document.getElementById("tags").value,
       author:document.getElementById("author").value,
       title:document.getElementById("title").value,
-      date:document.getElementById("date").value,
+      date:parseInt(document.getElementById("date").value, 10),
       technique:document.getElementById("technique").value,
       dimensions_noFrame:document.getElementById("dimensions_noFrame").value,
       dimensions_frame:document.getElementById("dimensions_frame").value,
@@ -3022,21 +3022,21 @@ Meteor.myFunctions = {
     // WHAT TO DO IF NEW OR EDIT //
     if (!Session.get("itemId")){
       Meteor.call("insertItem", itemDetails, function(error,result){
-        if(!error){ 
-          alert("Item successfully written to database.")
-          Router.go("/gallery/details/"+result); 
+        if(!error){
+          toastr.success("Item successfully written to database.")
+          Router.go("/gallery/details/"+result);
         } else if (error){
-          alert("There was an error in your entry: "+error);
+          toastr.error(`There was an error in your entry: ${error}`);
         }
       });
     } else {
       Meteor.call("updateItem", itemId, itemDetails, function(error,result){
-        if(!error){ 
+        if(!error){
           delete Session.keys.itemId;
-          alert("Item successfully updated in database.")
-          Router.go("/gallery/details/"+result); 
+          toastr.success("Item successfully updated in database.");
+          Router.go("/gallery/details/"+result);
         } else if (error){
-          alert("There was an error in your entry: "+error);
+          toastr.error(`There was an error in your entry: ${error}`);
         }
       });
     }
@@ -3149,21 +3149,21 @@ Meteor.myFunctions = {
     // WHAT TO DO IF NEW OR EDIT //
     if (!Session.get("itemId")){
       Meteor.call("insertItem", itemDetails, function(error,result){
-        if(!error){ 
-          alert("Item successfully written to database.")
-          Router.go("/gallery/details/"+result); 
+        if(!error){
+          toastr.success("Item successfully written to database.")
+          Router.go("/gallery/details/"+result);
         } else if (error){
-          alert("There was an error in your entry: "+error);
+          toastr.error(`There was an error in your entry: ${error}`);
         }
       });
     } else {
       Meteor.call("updateItem", itemId, itemDetails, function(error,result){
-        if(!error){ 
+        if(!error){
           delete Session.keys.itemId;
-          alert("Item successfully updated in database.")
-          Router.go("/gallery/details/"+result); 
+          toastr.success("Item successfully updated in database.")
+          Router.go("/gallery/details/"+result);
         } else if (error){
-          alert("There was an error in your entry: "+error);
+          toastr.error(`There was an error in your entry: ${error}`);
         }
       });
     }
@@ -3274,21 +3274,21 @@ Meteor.myFunctions = {
     // WHAT TO DO IF NEW OR EDIT //
     if (!Session.get("itemId")){
       Meteor.call("insertItem", itemDetails, function(error,result){
-        if(!error){ 
-          alert("Item successfully written to database.")
-          Router.go("/gallery/details/"+result); 
+        if(!error){
+          toastr.success("Item successfully written to database.")
+          Router.go("/gallery/details/"+result);
         } else if (error){
-          alert("There was an error in your entry: "+error);
+          toastr.error(`There was an error in your entry: ${error}`);
         }
       });
     } else {
       Meteor.call("updateItem", itemId, itemDetails, function(error,result){
-        if(!error){ 
+        if(!error){
           delete Session.keys.itemId;
-          alert("Item successfully updated in database.")
-          Router.go("/gallery/details/"+result); 
+          toastr.success("Item successfully updated in database.")
+          Router.go("/gallery/details/"+result);
         } else if (error){
-          alert("There was an error in your entry: "+error);
+          toastr.error(`There was an error in your entry: ${error}`);
         }
       });
     }
@@ -3348,21 +3348,21 @@ Meteor.myFunctions = {
     // WHAT TO DO IF NEW OR EDIT //
     if (!Session.get("itemId")){
       Meteor.call("insertItem", itemDetails, function(error,result){
-        if(!error){ 
-          alert("Item successfully written to database.")
-          Router.go("/gallery/details/"+result); 
+        if(!error){
+          toastr.success("Item successfully written to database.")
+          Router.go("/gallery/details/"+result);
         } else if (error){
-          alert("There was an error in your entry: "+error);
+          toastr.error(`There was an error in your entry: ${error}`);
         }
       });
     } else {
       Meteor.call("updateItem", itemId, itemDetails, function(error,result){
-        if(!error){ 
+        if(!error){
           delete Session.keys.itemId;
-          alert("Item successfully updated in database.")
-          Router.go("/gallery/details/"+result); 
+          toastr.success("Item successfully updated in database.")
+          Router.go("/gallery/details/"+result);
         } else if (error){
-          alert("There was an error in your entry: "+error);
+          toastr.error(`There was an error in your entry: ${error}`);
         }
       });
     }
@@ -3411,21 +3411,21 @@ Meteor.myFunctions = {
     // WHAT TO DO IF NEW OR EDIT //
     if (!Session.get("itemId")){
       Meteor.call("insertItem", itemDetails, function(error,result){
-        if(!error){ 
-          alert("Item successfully written to database.")
-          Router.go("/gallery/details/"+result); 
+        if(!error){
+          toastr.success("Item successfully written to database.")
+          Router.go("/gallery/details/"+result);
         } else if (error){
-          alert("There was an error in your entry: "+error);
+          toastr.error(`There was an error in your entry: ${error}`);
         }
       });
     } else {
       Meteor.call("updateItem", itemId, itemDetails, function(error,result){
-        if(!error){ 
+        if(!error){
           delete Session.keys.itemId;
-          alert("Item successfully updated in database.")
-          Router.go("/gallery/details/"+result); 
+          toastr.success("Item successfully updated in database.");
+          Router.go("/gallery/details/"+result);
         } else if (error){
-          alert("There was an error in your entry: "+error);
+          toastr.error(`There was an error in your entry: ${error}`);
         }
       });
     }
@@ -3477,7 +3477,7 @@ Meteor.myFunctions = {
       username:username,
       password: password,
       email: email,
-      profile: { 
+      profile: {
         username:username,
         visible:1,
         isAdmin:false,

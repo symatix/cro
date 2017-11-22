@@ -2,16 +2,13 @@
   <div class="container-fluid">
     <h1>cro<span class="prospero">ART</span>ia</h1>
     <h2 class="subhead"> ART & RESEARCH DATABASE</h2>
-    {{#if currentUser}}
-      <h3 class="welcome-msg">welcome <span class="post-heading underline">{{currentUser.username}}</span></h3>
-    {{/if}}
       <div class="container margin-top">
         <div class="row">
 
         <!-- pictures -->
-      {{#EasySearch.Each index=galleryIndex}} 
+      {{#EasySearch.Each index=galleryIndex}}
 
-      {{#if viewDetails}}  
+      {{#if viewDetails}}
       <div class="col-xs-12 col-sm-6" id="{{__originalId}}">
       <div class="item-list">
 <!-- title of item list -->
@@ -138,7 +135,7 @@
 
 
 
-      
+
       {{> EasySearch.LoadMore attributes=loadBtn index=galleryIndex content="Load more content"}}
       {{#EasySearch.IfNoResults index=galleryIndex}}
         <div class="no-search">No results found!</div>
@@ -166,4 +163,3 @@
   </div>
 
 </template>
-
