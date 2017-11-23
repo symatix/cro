@@ -2714,9 +2714,9 @@ Meteor.myFunctions = {
       var infoObject = {
         userId:Meteor.user()._id,
         fullName:Meteor.user().profile.full_name,
-        createdAt: Meteor.myFunctions.dateFormat(),
+        createdAt: new Date(),
         addedBy:Meteor.user().username,
-        last_edit: Meteor.myFunctions.dateFormat(),
+        last_edit: new Date(),
         editedBy:Meteor.user().profile.full_name,
         editorId:Meteor.user()._id,
       }
@@ -2728,7 +2728,7 @@ Meteor.myFunctions = {
         fullName:oldObj.info.fullName,
         createdAt:oldObj.info.createdAt,
         addedBy:oldObj.info.addedBy,
-        last_edit: Meteor.myFunctions.dateFormat(),
+        last_edit: new Date(),
         editedBy:Meteor.user().profile.full_name,
         editorId:Meteor.user()._id,
 

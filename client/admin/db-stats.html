@@ -6,7 +6,7 @@
 
 
     <h1 class="breadcrumbs">{{#if currentUser}}{{currentUser.username}} } {{/if}}
-      <a class="a-heading" href="/">croARTia </a>/ 
+      <a class="a-heading" href="/">croARTia </a>/
       <a class="a-heading" href="/admin/db">db </a>/
       <span class="post-heading"> statistics</span>
     </h1>
@@ -108,10 +108,10 @@
                 <td><b>object</b></td>
                 <td><b>author</b></td>
                 <td><b>title</b></td>
-                <td><b>created at</b></td>
-                <td><b>last edit</b></td>
+                <td><b>created</b></td>
+                <td><b>edited</b></td>
                 <td><b>owner</b></td>
-                <td><b>edited by</b></td>
+                <td><b>editor</b></td>
                 <td><b>view</b></td>
                 <td><b>edit</b></td>
               </tr>
@@ -128,8 +128,8 @@
                     {{/if}}
                   </td>
                   <td>{{basic.title}}</td>
-                  <td>{{info.createdAt}}</td>
-                  <td>{{info.last_edit}}</td>
+                  <td>{{createdAt}}</td>
+                  <td>{{editedAt}}</td>
                   <td>{{info.addedBy}}</td>
                   <td>{{info.editedBy}}</td>
                   <td class="align-center">

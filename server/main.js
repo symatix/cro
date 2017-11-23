@@ -12,6 +12,9 @@ Meteor.startup(() => {
 	Accounts.emailTemplates.siteName = 'croARTia';
 	Accounts.emailTemplates.from = 'croARTia Admin <admin@croartia.org>';
 
+
+
+
 	if (Meteor.users.find().count() === 0) {
 
 		Accounts.createUser({
@@ -30,6 +33,30 @@ Meteor.startup(() => {
 		});
 		console.log("ADMIN created");
 	}
+	// delete this code after deploy
+	// just to fix the dates
+	if (Prospero.find().count() !== 0) {
+		const db = Prospero.find();
+		db.forEach(function (item) {
+			var createdAt = item.info.createdAt;
+			var editedAt = item.info.last_edit;
+
+			var dateTimeCreated = createdAt.split(' ');
+			var dateTimeEdited = editedAt.split(' ');
+			console.log(dateTimeCreated, dateTimeEdited)
+			var dc = dateTimeCreated[0].split('.');
+			var tc = dateTimeCreated[2].split(':');
+
+			var de = dateTimeEdited[0].split('.');
+			var te = dateTimeEdited[2].split(':');
+
+			item.info.createdAt = new Date(dc[2], parseInt(dc[1] - 1, 10).toString(), dc[0], tc[0], tc[1], tc[2]);
+			item.info.last_edit = new Date(de[2], parseInt(de[1] - 1, 10).toString(), de[0], te[0], te[1], te[2]);
+			Prospero.update({ _id: item._id }, { $set: item }, { multi: true });
+
+		})
+	}
+
 	// start of dummy
 	if (Prospero.find().count() === 0) {
 		console.log("no data found > generating dummy input");

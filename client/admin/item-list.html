@@ -12,7 +12,7 @@
     <div class="container margin-top">
       <div class="row item-list">
         <ul>
-          {{#EasySearch.Each index=adminIndex }}    
+          {{#EasySearch.Each index=adminIndex }}
 
             <li>
               <div class="col-xs-12 admin-list" id="{{__originalId}}">
@@ -135,7 +135,7 @@
                         </tr>
                         <tr>
                           <td><i>Created at:</i></td>
-                          <td>{{info.createdAt}}</td>
+                          <td>{{createdAt}}</td>
                         </tr>
                         <tr>
                           <td><i>Edited by:</i></td>
@@ -143,7 +143,7 @@
                         </tr>
                         <tr>
                           <td><i>Edited at:</i></td>
-                          <td>{{info.last_edit}}</td>
+                          <td>{{editedAt}}</td>
                         </tr>
                         <tr>
                           <td><i>Added by:</i></td>
@@ -218,7 +218,7 @@
         </div>
 
       {{/EasySearch.Each}}
-      
+
       {{> EasySearch.LoadMore attributes=loadBtn index=adminIndex content="Load more content"}}
       {{#EasySearch.IfNoResults index=adminIndex}}
         <div class="no-search">No results found!</div>

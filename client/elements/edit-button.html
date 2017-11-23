@@ -1,19 +1,14 @@
 <!--
 maybe change this to global if user/admin
 -->
-
 <template name="edit_button">
-
-	    
     {{#if admin}}
-	       {
-	    <a class="btn-setSession a-heading" href="/edit/{{_id}}#documentTop">edit
-	    </a>  
+	    {
+	    <a class="btn-setSession a-heading" href="/edit/{{_id}}#documentTop">edit</a>
 	{{else}}
-	{{#if owner}}
-	       {
-	    <a class="btn-setSession a-heading" href="/edit/{{_id}}#documentTop">edit
-	    </a>
-   {{/if}}
-  {{/if}}
+		{{#if owner}}
+		    {
+		    <a class="btn-setSession a-heading" href="/edit/{{_id}}#documentTop">edit</a>
+	   {{/if}}
+  	{{/if}}
 </template>
