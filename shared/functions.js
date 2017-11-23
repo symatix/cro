@@ -3020,8 +3020,10 @@ Meteor.myFunctions = {
 
     var itemId = Session.get("itemId");
     // WHAT TO DO IF NEW OR EDIT //
+    UIBlock.block();
     if (!Session.get("itemId")){
       Meteor.call("insertItem", itemDetails, function(error,result){
+        UIBlock.unblock();
         if(!error){
           toastr.success("Item successfully written to database.")
           Router.go("/gallery/details/"+result);
@@ -3031,6 +3033,7 @@ Meteor.myFunctions = {
       });
     } else {
       Meteor.call("updateItem", itemId, itemDetails, function(error,result){
+        UIBlock.unblock();
         if(!error){
           delete Session.keys.itemId;
           toastr.success("Item successfully updated in database.");
@@ -3147,8 +3150,10 @@ Meteor.myFunctions = {
 
     var itemId = Session.get("itemId");
     // WHAT TO DO IF NEW OR EDIT //
+    UIBlock.block();
     if (!Session.get("itemId")){
       Meteor.call("insertItem", itemDetails, function(error,result){
+        UIBlock.unblock();
         if(!error){
           toastr.success("Item successfully written to database.")
           Router.go("/gallery/details/"+result);
@@ -3158,6 +3163,7 @@ Meteor.myFunctions = {
       });
     } else {
       Meteor.call("updateItem", itemId, itemDetails, function(error,result){
+        UIBlock.unblock();
         if(!error){
           delete Session.keys.itemId;
           toastr.success("Item successfully updated in database.")
@@ -3272,8 +3278,10 @@ Meteor.myFunctions = {
 
     var itemId = Session.get("itemId");
     // WHAT TO DO IF NEW OR EDIT //
+    UIBlock.block();
     if (!Session.get("itemId")){
       Meteor.call("insertItem", itemDetails, function(error,result){
+        UIBlock.unblock();
         if(!error){
           toastr.success("Item successfully written to database.")
           Router.go("/gallery/details/"+result);
@@ -3283,6 +3291,7 @@ Meteor.myFunctions = {
       });
     } else {
       Meteor.call("updateItem", itemId, itemDetails, function(error,result){
+        UIBlock.unblock();
         if(!error){
           delete Session.keys.itemId;
           toastr.success("Item successfully updated in database.")
@@ -3346,8 +3355,10 @@ Meteor.myFunctions = {
 
     var itemId = Session.get("itemId");
     // WHAT TO DO IF NEW OR EDIT //
+    UIBlock.unblock();
     if (!Session.get("itemId")){
       Meteor.call("insertItem", itemDetails, function(error,result){
+        UIBlock.unblock();
         if(!error){
           toastr.success("Item successfully written to database.")
           Router.go("/gallery/details/"+result);
@@ -3357,6 +3368,7 @@ Meteor.myFunctions = {
       });
     } else {
       Meteor.call("updateItem", itemId, itemDetails, function(error,result){
+        UIBlock.unblock();
         if(!error){
           delete Session.keys.itemId;
           toastr.success("Item successfully updated in database.")
@@ -3409,8 +3421,10 @@ Meteor.myFunctions = {
 
     var itemId = Session.get("itemId");
     // WHAT TO DO IF NEW OR EDIT //
+    UIBlock.block();
     if (!Session.get("itemId")){
       Meteor.call("insertItem", itemDetails, function(error,result){
+        UIBlock.unblock();
         if(!error){
           toastr.success("Item successfully written to database.")
           Router.go("/gallery/details/"+result);
@@ -3419,9 +3433,12 @@ Meteor.myFunctions = {
         }
       });
     } else {
+      UIBlock.block();
       Meteor.call("updateItem", itemId, itemDetails, function(error,result){
+        UIBlock.unblock();
         if(!error){
           delete Session.keys.itemId;
+          UIBlock.unblock();
           toastr.success("Item successfully updated in database.");
           Router.go("/gallery/details/"+result);
         } else if (error){
@@ -3463,7 +3480,13 @@ Meteor.myFunctions = {
         password:password // this is insecure, only admin should see this field
       }
     }
-    Meteor.call("createUsers", userDetails);
+    UIBlock.block();
+    Meteor.call("createUsers", userDetails, function(err){
+        UIBlock.unblock();
+        if(!err){
+            toastr.success("User successfuly created!")
+        }
+    });
   },
   editUser: function(userId){
     var username = $('[name=username]').val();
@@ -3488,7 +3511,14 @@ Meteor.myFunctions = {
         password:password // this is insecure, only admin should see this field
       }
     }
-    Meteor.call("editUsers", userId, password, userDetails);
+    UIBlock.block();
+    Meteor.call("editUsers", userId, password, userDetails, function(err){
+        UIBlock.unblock();
+        if(!err){
+            toastr.success("User successfuly updated!")
+            return;
+        }
+    });
   },
   deleteUser:function(){
     var userId = Session.get("userId");
