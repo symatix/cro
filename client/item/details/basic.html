@@ -1,5 +1,5 @@
-<template name="item_details_basic">   
-  <h3></h3>     
+<template name="item_details_basic">
+  <h3></h3>
 <!-- first col -->
   <div class="row form-box">
         <div class="col-xs-12 col-sm-7">
@@ -411,6 +411,7 @@
           </div>
         </div>
         {{/if}}
+
         {{#if basic.notes.comments}}
         <div class="col-md-12">
           <div class="artHistory">
@@ -424,11 +425,28 @@
           </div>
         </div>
         {{/if}}
+
+        {{#if basic.tags}}
+        <div class="col-md-12">
+          <div class="artHistory">
+            <div class="individual-property-display">Tags:<br/>
+              <div class="individual-value-display">
+                <pre>
+                  {{basic.tags}}
+                </pre>
+              </div>
+            </div>
+          </div>
+        </div>
+        {{/if}}
+
+        {{#if currentUser.profile.isAdmin}}
           <div class="list-font sig-details align-right">
             <div class="">Entry sumbitted by: {{info.fullName}}
             </div>
             <div class="">Edited by: {{info.editedBy}}
             </div>
           </div>
+        {{/if}}
         </div>
 </template>

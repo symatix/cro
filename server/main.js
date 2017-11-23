@@ -33,52 +33,6 @@ Meteor.startup(() => {
 		});
 		console.log("ADMIN created");
 	}
-	// delete this code after deploy
-	// just to fix the dates
-	if (Prospero.find().count() !== 0) {
-		const db = Prospero.find();
-		db.forEach(function (item) {
-			var createdAt = item.info.createdAt;
-			var dateTimeCreated = createdAt.split(' ');
-			var dc = dateTimeCreated[0].split('.');
-			var tc = dateTimeCreated[2].split(':');
-
-			var dateStringCreated = `2017-${dc[0]}-${dc[1]}T${tc[0]}:${tc[1]}:${tc[2]}`;
-			var createdObject = new Date(2017, parseInt(dc[0] - 1, 10), parseInt(dc[1]), tc[0], tc[1], tc[2]);
-
-			var editedAt = item.info.last_edit;
-			var dateTimeEdited = editedAt.split(' ');
-			var de = dateTimeEdited[0].split('.');
-			var te = dateTimeEdited[2].split(':');
-			var dateStringEdited = `2017-${de[0]}-${de[1]}T${te[0]}:${te[1]}:${te[2]}`
-			var editedObject = new Date(2017, parseInt(de[0] - 1, 10), parseInt(de[1]), te[0], te[1], te[2]);
-
-
-
-			const createdDate = new Date(dateStringCreated);
-			const editedDate = new Date(dateStringEdited);
-
-
-
-			item.info.createdAt = createdObject;
-			item.info.last_edit = editedObject;
-
-
-			console.log('**************')
-			console.log('DATE OBJECT')
-			console.log(createdObject);
-			console.log(editedObject);
-			console.log('--------------')
-			console.log('ITEM ENTRY')
-			console.log(item.info.createdAt)
-			console.log(item.info.last_edit)
-			console.log('**************')
-
-			Prospero.update({ _id: item._id }, { $set: item }, { multi: true });
-
-		})
-	}
-
 	// start of dummy
 	if (Prospero.find().count() === 0) {
 		console.log("no data found > generating dummy input");
@@ -93,8 +47,8 @@ Meteor.startup(() => {
 				editorId: "adminXxX",
 				addedBy: "generated",
 				editedBy: "admin",
-				createdAt: "7.27.2017  00:00:00",
-				last_edit: "11.23.2017  01:07:00",
+				createdAt: new Date(),
+				last_edit: new Date(),
 			},
 			data: {
 				basic: {
@@ -196,8 +150,8 @@ Meteor.startup(() => {
 				editorId: "adminXxX",
 				addedBy: "generated",
 				editedBy: "admin",
-				createdAt: "1.1.2017  00:01:00",
-				last_edit: "11.23.2017  01:06:00",
+				createdAt: new Date(),
+				last_edit: new Date(),
 			},
 			data: {
 				basic: {
@@ -221,8 +175,8 @@ Meteor.startup(() => {
 			info: {
 				addedBy: "generated",
 				editedBy: "admin",
-				createdAt: "1.1.2017  00:02:00",
-				last_edit: "1.1.2017  01:05:00",
+				createdAt: new Date(),
+				last_edit: new Date(),
 			},
 			data: {
 				basic: {
@@ -246,8 +200,8 @@ Meteor.startup(() => {
 				editorId: "adminXxX",
 				addedBy: "generated",
 				editedBy: "admin",
-				createdAt: "1.1.2017  00:03:00",
-				last_edit: "1.1.2017  01:04:00",
+				createdAt: new Date(),
+				last_edit: new Date(),
 			},
 			data: {
 				basic: {
@@ -271,8 +225,8 @@ Meteor.startup(() => {
 				editorId: "adminXxX",
 				addedBy: "generated",
 				editedBy: "admin",
-				createdAt: "1.1.2017  00:04:00",
-				last_edit: "1.1.2017  01:03:00",
+				createdAt: new Date(),
+				last_edit: new Date(),
 			},
 			data: {
 				basic: {
@@ -296,8 +250,8 @@ Meteor.startup(() => {
 				editorId: "adminXxX",
 				addedBy: "generated",
 				editedBy: "admin",
-				createdAt: "1.1.2017  00:05:00",
-				last_edit: "1.1.2017  01:02:00",
+				createdAt: new Date(),
+				last_edit: new Date(),
 			},
 			data: {
 				basic: {
@@ -364,8 +318,8 @@ Meteor.startup(() => {
 				editorId: "adminXxX",
 				addedBy: "generated",
 				editedBy: "admin",
-				createdAt: "1.1.2017  00:06:00",
-				last_edit: "1.1.2017  01:01:00",
+				createdAt: new Date(),
+				last_edit: new Date(),
 			},
 			data: {
 				basic: {
@@ -389,8 +343,8 @@ Meteor.startup(() => {
 				editorId: "adminXxX",
 				addedBy: "generated",
 				editedBy: "admin",
-				createdAt: "1.1.2017  00:07:00",
-				last_edit: "1.1.2017  01:00:00",
+				createdAt: new Date(),
+				last_edit: new Date(),
 			},
 			data: {
 				basic: {
