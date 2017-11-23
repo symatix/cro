@@ -37,7 +37,7 @@
 
         <li role="presentation">
             <a class="a-heading-tab" href="#objectTypeForm" aria-controls="objectTypeForm" role="tab" data-toggle="tab">
-                Arts&nbsp;& 
+                Arts&nbsp;&
                 crafts
             </a>
             <input type="checkbox" name="type" value="Arts and crafts object" class="objectType hidden" id="item-arts-crafts">
@@ -52,7 +52,7 @@
 
         <li role="presentation">
             <a class="a-heading-tab" href="#objectTypeForm" aria-controls="objectTypeForm" role="tab" data-toggle="tab">
-                Pigment/dye/binder/varnish/<br/>reference materials
+                Reference materials
             </a>
             <input type="checkbox" name="type" value="Pigment/dye/binder/varnish/reference materials" class="objectType hidden" id="item-pigment-dye-binder">
         </li>
@@ -64,7 +64,7 @@
             <input type="checkbox" name="type" value="other" class="objectType hidden" id="item-other">
         </li>
     </ul>
-    
+
         <!-- does not work on template events - drity hack, but works oooooohhhhh yeaaa -->
     <script>
     $('#form-basic-select li').click(function (e) {
@@ -73,7 +73,7 @@
      // $(this).tab('show');
          $(this).closest('ul').find('input[type="checkbox"]').prop('checked','');
          $(this).closest('li').find('input[type="checkbox"]').prop('checked','checked');
-       
+
     });
     </script>
 </template>

@@ -3,12 +3,12 @@
     <div class="container">
       <div class="row">
       <h1 class="breadcrumbs">
-        <a class="a-heading" href="/">croARTia </a> \ 
+        <a class="a-heading" href="/">croARTia </a> \
       {{#if admin}}
-        <a class="a-heading" href="/admin/db/">manageDB</a> \ 
+        <a class="a-heading" href="/admin/db/">manageDB</a> \
       {{/if}}
       {{#unless editObject}}
-       <a class="a-heading" href="/gallery/details/{{_id}}">details</a> \ 
+       <a class="a-heading" href="/gallery/details/{{_id}}">details</a> \
       {{/unless}}
       <span class="post-heading">database entry</span>
       </h1>
@@ -27,7 +27,7 @@
                   {{> form}}
                   {{> inputTags}}
                   <div class="col-xs-12 col-md-6 individual-property relief">
-                    Make this entry 
+                    Make this entry
                   </div>
                   <div class="col-xs-12 col-md-6 visible">
                   <select class="form-select" id="visible" value="{{visible}}">
@@ -51,7 +51,7 @@
                   {{> inputTags}}
 
                   <div class="col-xs-6 col-md-3 individual-property relief">
-                    Make this entry 
+                    Make this entry
                   </div>
                   <div class="col-xs-6 col-md-3 visible">
                     <select class="form-select" id="visible" value="{{visible}}">
@@ -62,7 +62,7 @@
                   {{#if currentUser.profile.isAdmin}}
                   <br/>
                   <div class="col-xs-6 col-md-3 individual-property relief">
-                    Status  
+                    Status
                   </div>
                   <div class="col-xs-6 col-md-3 isDeleted">
                     <select class="form-select" id="isDeleted" value="{{isDeleted}}">
@@ -84,7 +84,7 @@
               </div>
             </div>
             <hr/>
-            </div> 
+            </div>
           </div>
         </form>
 

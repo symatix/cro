@@ -2,13 +2,13 @@
   <!-- container -->
     <div class="container">
 
-    <h1 class="breadcrumbs">admin } 
+    <h1 class="breadcrumbs">admin }
       <a class="a-heading" href="/admin/users">usersDB</a> \
-      <span class="post-heading"> 
+      <span class="post-heading">
         {{#if username}}
-          edit 
+          edit
         {{else}}
-          add 
+          add
         {{/if}}
         entry
       </span>
@@ -32,14 +32,14 @@
           <input type="text" name="username" class="individual-value individual-form" id="username" placeholder="" value="{{username}}" required="{{#unless edit}}required{{/unless}}">
         </div>
 
-        
+
         <div class="col-xs-12 col-md-2 individual-property add-top-padding {{#if edit}}hidden{{/if}}">
           PASSWORD
         </div>
         <div class="col-xs-12 col-md-4 {{#if edit}}hidden{{/if}}">
           <input type="text" name="password" class="individual-value individual-form" id="password" placeholder="" value="{{profile.password}}" required="">
         </div>
-        
+
 
         <div class="col-xs-12 col-md-2 individual-property add-top-padding">
           E-MAIL
@@ -75,6 +75,7 @@
       </div>
       <div class="col-xs-12 align-center">
         <button type="submit" class="btn btn-default btn-submit btn-login">SUBMIT ENTRY</button>
+        <a href="/admin/users" type="button" class="btn btn-default btn-submit btn-login">CANCLE</a>
       </div>
 
       </div><!-- first row -->
