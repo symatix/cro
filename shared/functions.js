@@ -3315,6 +3315,7 @@ Meteor.myFunctions = {
     var basicObject = {
       tags:document.getElementById("tags").value,
       title:document.getElementById("title").value,
+      colorFamily:document.getElementById("colorFamily").value,
       appearence:document.getElementById("appearence").value,
       altName:document.getElementById("altName").value,
       manufacturer:document.getElementById("manufacturer").value,

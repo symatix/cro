@@ -13,6 +13,25 @@
       <input type="text" class="individual-value individual-form" id="title" placeholder="(e.g. red lead, mastic, SS3186, etc.)" value="{{basic.title}}" required>
     </div>
 
+    <div class="col-xs-12 col-md-6 individual-property colorFamily">
+      COLOR FAMILY
+    </div>
+    <div class="col-xs-12 col-md-6 material_basic_type">
+    <select class="form-select" id="colorFamily">
+      <option value="" disabled selected style='display:none;'>Select...</option>
+      <option id="white" value="white" selected="{{#if white}}selected{{/if}}"> white</option>
+      <option id="yellow" value="yellow" selected="{{#if yellow}}selected{{/if}}"> yellow</option>
+      <option id="orange" value="orange" selected="{{#if orange}}selected{{/if}}"> orange</option>
+      <option id="red" value="red" selected="{{#if red}}selected{{/if}}"> red</option>
+      <option id="purple" value="purple" selected="{{#if purple}}selected{{/if}}"> purple</option>
+      <option id="blue" value="blue" selected="{{#if blue}}selected{{/if}}"> blue</option>
+      <option id="green" value="green" selected="{{#if green}}selected{{/if}}"> green</option>
+      <option id="brown" value="brown" selected="{{#if brown}}selected{{/if}}"> brown</option>
+      <option id="black" value="black" selected="{{#if black}}selected{{/if}}"> black</option>
+      <option id="metals" value="metals" selected="{{#if metals}}selected{{/if}}"> metals</option>
+    </select>
+    </div>
+
     <div class="col-xs-12 col-md-6 individual-property manufacturer">
       APPEARENCE
     </div>
@@ -23,7 +42,7 @@
     <div class="col-xs-12 col-md-6 individual-property altName">
       ALTERNATIVE NAMES AND NON-ENGLISH NAMES
     </div>
-    <div class="col-xs-12 col-md-6"> 
+    <div class="col-xs-12 col-md-6">
       <input type="text" class="individual-value individual-form" id="altName" placeholder="(e.g. minium, Mennige (German), minio (Italian), etc.)" value="{{basic.altName}}">
     </div>
 
@@ -44,14 +63,14 @@
     <div class="col-xs-12 col-md-6 individual-property chemicalName">
       CHEMICAL NAME
     </div>
-    <div class="col-xs-12 col-md-6"> 
+    <div class="col-xs-12 col-md-6">
       <input type="text" class="individual-value individual-form" id="chemicalName" placeholder="(e.g. Lead(II,IV)-oxide)" value="{{basic.chemicalName}}">
     </div>
 
     <div class="col-xs-12 col-md-6 individual-property chemicalFormula">
       CHEMICAL FORMULA
     </div>
-    <div class="col-xs-12 col-md-6"> 
+    <div class="col-xs-12 col-md-6">
       <input type="text" class="individual-value individual-form" id="chemicalFormula" placeholder="(e.g. 2CuCO3, SiO2(65%) + K20 (15%) + Al2O3 (5%) + CoO (10%),  etc.)" value="{{basic.chemicalFormula}}">
     </div>
 
@@ -104,11 +123,13 @@
       <input type="text" class="individual-value individual-form" id="refractiveIndex" placeholder="" value="{{basic.refractiveIndex}}">
     </div>
 
-    <div class="col-xs-12 col-md-6 individual-property methodsTechniques">
-      INVESTIGATED BY THE FOLLOWING METHODS/TECHNIQUES
-    </div>
-    <div class="col-xs-12 col-md-6">
-      <input type="text" class="individual-value individual-form" id="methodsTechniques" placeholder="" value="{{basic.investigated}}" required>
+    <div class="hidden">
+        <div class="col-xs-12 col-md-6 individual-property location">
+          INVESTIGATED BY THE FOLLOWING METHODS/TECHNIQUES
+        </div>
+        <div class="col-xs-12 col-md-6">
+          <input type="text" class="individual-value individual-form" id="methodsTechniques" placeholder="" value="{{basic.investigated}}">
+        </div>
     </div>
 
     <div class="col-xs-12 col-md-6 individual-property periodFrom">
@@ -158,7 +179,7 @@ notes fileds
           <textarea class="" id="degradationNotes" name="notesBasic" rows="4" placeholder="(e.g. darkening of lead white pigment (into PbS) when exposed to H2S, oxidation of blue azurite to form green malachite, etc.)" value="{{basic.notes.degradation}}"></textarea>
       </div>
       <div class="col-xs-12 notes">
-        Brief description of pigment/dye/binder/varnish and history of use 
+        Brief description of pigment/dye/binder/varnish and history of use
       </div>
       <div class="col-sm-8 col-sm-offset-2">
           <textarea class="" id="briefDescriptionBasic" name="notesBasic" rows="4" placeholder="(e.g. darkening of lead white pigment (into PbS) when exposed to H2S, oxidation of blue azurite to form green malachite, etc.)" value="{{basic.notes.briefDescription}}"></textarea>

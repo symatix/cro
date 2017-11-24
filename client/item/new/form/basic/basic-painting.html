@@ -97,11 +97,13 @@
       <input type="text" class="individual-value individual-form" id="legalStatus" placeholder="(e.g. protected cultural heritage)" value="{{basic.legalStatus}}">
     </div>
 
-    <div class="col-xs-12 col-md-6 individual-property location">
-      INVESTIGATED BY THE FOLLOWING METHODS/TECHNIQUES
-    </div>
-    <div class="col-xs-12 col-md-6">
-      <input type="text" class="individual-value individual-form" id="methodsTechniques" placeholder="" value="{{basic.investigated}}">
+    <div class="hidden">
+        <div class="col-xs-12 col-md-6 individual-property location">
+          INVESTIGATED BY THE FOLLOWING METHODS/TECHNIQUES
+        </div>
+        <div class="col-xs-12 col-md-6">
+          <input type="text" class="individual-value individual-form" id="methodsTechniques" placeholder="" value="{{basic.investigated}}">
+        </div>
     </div>
 
 <!--
@@ -126,7 +128,7 @@ notes fileds
       <div class="col-sm-8 col-sm-offset-2">
           <textarea class="" id="projectName" name="notesBasic" rows="4" placeholder="(e.g. Diploma thesis: Conservation works on painting The Satyr and the Peasant by Miroslav Kraljević)" value="{{basic.notes.projectName}}"></textarea>
       </div>
-      <br/>    
+      <br/>
 
       <div class="col-xs-12 notes">
         Summary of project/conservation/restoration and investigation works
@@ -146,7 +148,7 @@ notes fileds
   </div><!-- /row global -->
 
     {{> form_files_basic}}
-    
+
 
   </div>
 </template>

@@ -67,6 +67,14 @@
             </div>
           </div>
           {{/if}}
+
+        {{#if basic.colorFamily}}
+            <div class="colorFamily">
+              <div class="individual-property-display">Color family:<br/>
+                <div class="individual-value-display">{{basic.colorFamily}}</div>
+              </div>
+            </div>
+        {{/if}}
 <!-- most of this below is from pigment -->
         {{#if basic.appearence}}
           <div class="appearence">
