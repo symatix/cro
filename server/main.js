@@ -37,6 +37,46 @@ Meteor.startup(() => {
 	if (Prospero.find().count() === 0) {
 		console.log("no data found > generating dummy input");
 		//pictures
+
+		for (var i = 0; i < 40; i++) {
+
+			Prospero.insert({
+				owner: "adminXxX",
+				visible: "public",
+				isDeleted: "available",
+				type: "Painting",
+				info: {
+					userId: "adminXxX",
+					editorId: "adminXxX",
+					addedBy: "generated",
+					editedBy: "admin",
+					createdAt: new Date(),
+					last_edit: new Date(),
+				},
+				data: {
+					basic: {
+						front: "/1front.jpg",
+						back: "/1back.jpg",
+						side: "/1side.jpg",
+						signature: "/1sig.jpg",
+					},
+					original: {
+						photoOne: "/original1.jpg",
+						photoTwo: "/original2.jpg",
+						photoThree: "/original3.jpg",
+					},
+					restoration: {
+						photoOne: "/restoration1.jpg",
+						photoTwo: "/restoration2.jpg",
+						photoThree: "/restoration3.jpg",
+					}
+				},
+				basic: {
+					author: "Miroslav Kraljević",
+					title: "The Satyr and the Peasant"
+				}
+			})
+		}
 		Prospero.insert({
 			owner: "adminXxX",
 			visible: "public",

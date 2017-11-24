@@ -9,7 +9,7 @@
       {{#EasySearch.Each index=galleryIndex}}
 
       {{#if viewDetails}}
-      <div class="col-xs-12 col-sm-3" id="{{__originalId}}">
+      <div class="col-xs-12 col-sm-6 col-md-3" id="{{__originalId}}">
       <div class="item-list">
 <!-- title of item list -->
                   <div class="row">
@@ -127,5 +127,11 @@
 
     </div>
   </div>
-
+  <script>
+      $(window).scroll(function() {
+         if($(window).scrollTop() + $(window).height() > $(document).height() - 300) {
+             $('.btn-load-more').click();
+         }
+      });
+  </script>
 </template>

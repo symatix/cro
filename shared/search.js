@@ -9,10 +9,12 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 GalleryIndex = new EasySearch.Index({
 	collection: Prospero,
 	name: 'croartiaGallery',
 	fields: ['basic.author', 'basic.title', 'basic.name', 'basic.altName', 'basic.tags'],
+	defaultSearchOptions: { limit: 24 },
 	engine: new EasySearch.MongoDB({
 		selector: function (searchObject, options, aggregation) {
 			const selector = this.defaultConfiguration().selector(searchObject, options, aggregation);
@@ -26,12 +28,9 @@ GalleryIndex = new EasySearch.Index({
 			// filter for the category if set
 
 			if (options.search.props.guestCategory) {
-				var option = options.search.props.guestCategory;
 				selector.type = options.search.props.guestCategory;
 			}
-
 			//selector = {"type":"other"};
-			//console.log(selector);
 			return selector;
 		},
 		sort: function (searchObject, options) {
@@ -71,7 +70,7 @@ GalleryIndex = new EasySearch.Index({
 					"info.last_edit": -1
 				}
 			}
-		},
+		}
 	}),
 })
 
@@ -150,7 +149,6 @@ ModeratorIndex = new EasySearch.Index({
 			}
 
 			//selector = {"type":"other"};
-			//console.log(selector);
 			return selector;
 		},
 		sort: function (searchObject, options) {
@@ -195,12 +193,10 @@ ModeratorIndex = new EasySearch.Index({
 				}
 			}
 		},
-		defaultSearchOptions: {
-			limit: 4 // could also have skip and props
-		}
 	}),
 	permission: (options) => options.userId,
-})
+});
+
 AdminIndex = new EasySearch.Index({
 	collection: Prospero,
 	name: 'adminGallery',

@@ -3,7 +3,7 @@ Template.mainGallery.helpers({
 	galleryIndex: () => GalleryIndex,
 	// yup...just to style a damn button...
 	loadBtn: function () {
-		return { class: 'btn btn-submit' };
+		return { class: 'btn btn-submit btn-load-more' };
 	},
 	croartia: function () {
 		return Prospero.find({}, { sort: { type: 1 }, limit: 8 });

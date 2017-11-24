@@ -11,7 +11,6 @@ Template.navbar.helpers({
 	adminIndex: () => AdminIndex,
 	moderatorIndex: () => ModeratorIndex,
 	usersIndex: () => UsersIndex,
-
 	searchAttributesModerator: function () {
 		return {
 			placeholder: ' Search by author, title/name or tag',

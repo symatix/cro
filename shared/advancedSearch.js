@@ -144,15 +144,12 @@ SearchIndex = new EasySearch.Index({
 
 
 			if (methodsFirst) {
-				console.log(methodsFirst)
 				basicSelector['details.methods.' + methodsFirst] = { $ne: false };
 			}
 			if (methodsSecond) {
-				console.log(methodsSecond)
 				basicSelector['details.methods.' + methodsSecond] = { $ne: false };
 			}
 			if (methodsThird) {
-				console.log(methodsThird)
 				basicSelector['details.methods.' + methodsThird] = { $ne: false };
 			}
 
