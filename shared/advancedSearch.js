@@ -32,6 +32,7 @@ SearchIndex = new EasySearch.Index({
 			const chemicalName = options.search.props.chemicalName;
 			const chemicalFormula = options.search.props.chemicalFormula;
 			const tags = options.search.props.tags;
+			const colorFamily = options.search.props.colorFamily;
 
 			// materials
 			const pigmentsDyes = options.search.props.pigmentsDyes;
@@ -127,7 +128,9 @@ SearchIndex = new EasySearch.Index({
 				basicSelector['basic.tags'] = { "$regex": ".*" + tags + ".*", "$options": "i" };
 				basicFields['tags'] = 0;
 			}
-
+			if (colorFamily) {
+				basicSelector['basic.colorFamily'] = { "$regex": ".*" + colorFamily + ".*", "$options": "i" };
+			}
 
 			if (pigmentsDyes) {
 				basicSelector['materials.original.pigmentsDyes'] = { "$regex": ".*" + pigmentsDyes + ".*", "$options": "i" };

@@ -47,6 +47,13 @@ Template.advanced_search.events({
 		}
 	},
 	'change .sorting-category': function (e) {
+		if (e.target.value === "Pigment/dye/binder/varnish/reference materials") {
+			$("#colorFamilySelect").removeClass("hidden");
+		} else {
+			if (!$("#colorFamilySelect").hasClass("hidden")) {
+				$("#colorFamilySelect").addClass("hidden");
+			}
+		}
 		SearchIndex.getComponentMethods()
 			.addProps('sortBy', $(e.target).val())
 	},
@@ -59,6 +66,7 @@ Template.advanced_search.events({
 
 		SearchIndex.getComponentMethods().addProps('title', $(".search-title").val());
 		SearchIndex.getComponentMethods().addProps('author', $(".search-author").val());
+		SearchIndex.getComponentMethods().addProps('colorFamily', $("#colorFamily").val());
 		SearchIndex.getComponentMethods().addProps('type', $(".search-type").val());
 		SearchIndex.getComponentMethods().addProps('technique', $(".search-technique").val());
 		SearchIndex.getComponentMethods().addProps('investigated', $(".search-investigated").val());

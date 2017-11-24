@@ -11,14 +11,46 @@
 
       <div class="row relative">
         <button class="btn btn-default btn-toggle btn_toggleBasic float-right">Colapse</button>
-        <h3 id="basic_href">&emsp;search by</h3>
-        <br/>
+        <h3  class="col-xs-12 align-center" id="basic_href" style="text-decoration:underline">search by category</h3>
+        <div class="align-center">
+              <select name="typeFilter" class="sorting-search sorting-category form-select" id="categoryFilter">
+                <option value="" disabled selected style='display:none;'>Select...</option>
+                <option value="">All</option>
+                <option value="Painting" selected="{{painting}}">Painting</option>
+                <option value="Sculpture" selected="{{sculpture}}">Sculpture</option>
+                <option value="Architectural heritage" selected="{{architectural}}">Architectural heritage</option>
+                <option value="Archival object" selected="{{archival}}">Archival object</option>
+                <option value="Archaeological object" selected="{{archaeological}}">Archaeological object</option>
+                <option value="Arts and crafts object" selected="{{arts}}">Arts and crafts object</option>
+                <option value="Sample/cross-section" selected="{{sample}}">Sample</option>
+                <option value="Pigment/dye/binder/varnish/reference materials" selected="{{pigment}}">Pigment</option>
+                <option value="other" selected="{{other}}">Other</option>
+              </select>&nbsp;
+        </div>
       </div>
 
       <form class="toggleBasic">
 
         <div class="col-xs-12 align-center">
         <h3 style="text-decoration:underline">basic information</h3>
+        </div>
+
+        <div class="col-xs-12 align-center individual-property hidden" id="colorFamilySelect">
+            Color family
+            <select class="form-select" id="colorFamily">
+              <option value="" disabled selected style='display:none;'>Select...</option>
+              <option id="any" value=""> any</option>
+              <option id="white" value="white"> white</option>
+              <option id="yellow" value="yellow"> yellow</option>
+              <option id="orange" value="orange"> orange</option>
+              <option id="red" value="red"> red</option>
+              <option id="purple" value="purple"> purple</option>
+              <option id="blue" value="blue"> blue</option>
+              <option id="green" value="green"> green</option>
+              <option id="brown" value="brown"> brown</option>
+              <option id="black" value="black"> black</option>
+              <option id="metals" value="metals"> metals</option>
+            </select>
         </div>
 
         <div class="col-xs-12 col-sm-1 individual-property">
@@ -153,26 +185,6 @@
 
     <div class="row form-box search-results">
       <h3 id="" >results</h3>
-
-
-        <div class="col-xs-12 col-sm-offset-2 col-sm-1 individual-property">
-          Category:
-        </div>
-        <div class="col-xs-12 col-sm-3">
-              <select name="typeFilter" class="sorting-search sorting-category form-select" id="categoryFilter">
-                <option value="" disabled selected style='display:none;'>Select...</option>
-                <option value="">All</option>
-                <option value="Painting" selected="{{painting}}">Painting</option>
-                <option value="Sculpture" selected="{{sculpture}}">Sculpture</option>
-                <option value="Architectural heritage" selected="{{architectural}}">Architectural heritage</option>
-                <option value="Archival object" selected="{{archival}}">Archival object</option>
-                <option value="Archaeological object" selected="{{archaeological}}">Archaeological object</option>
-                <option value="Arts and crafts object" selected="{{arts}}">Arts and crafts object</option>
-                <option value="Sample/cross-section" selected="{{sample}}">Sample</option>
-                <option value="Pigment/dye/binder/varnish/reference materials" selected="{{pigment}}">Pigment</option>
-                <option value="other" selected="{{other}}">Other</option>
-              </select>&nbsp;
-        </div>
 
         <div class="col-xs-12 col-sm-1 individual-property">
           Relevance:
