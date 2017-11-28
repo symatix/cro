@@ -1,6 +1,7 @@
 <template name="item_details_download">
-	<h3></h3>
+	{{#if file}}
 	<div class="row form-box">
+
 		<div class="col-xs-12">
 			<h3>available files</h3>
 		</div>
@@ -12,4 +13,8 @@
 			{{/each}}
 		</div>
 	</div>
+
+	{{else}}
+		<div class="no-search">No files present.</div>
+	{{/if}}
 </template>

@@ -33,4 +33,13 @@ Template.mainGallery.helpers({
 			return true;
 		}
 	},
+	noCategory: function () {
+		return !Session.get("categorySelected");
+	},
+	category: function () {
+		if (Session.get("categorySelected") === '') {
+			return "All";
+		}
+		return Session.get("categorySelected");
+	}
 })

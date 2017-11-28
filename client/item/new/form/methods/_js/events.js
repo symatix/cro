@@ -26,7 +26,7 @@ Template.methods_checkbox.events({
 			$(event.target).removeClass('check-active');
 		}
 	},
-	'click .checkbox-input': function (event) {
+	'change .checkbox-input': function (event) {
 		event.stopPropagation();
 		// this will fill or remove entries for investigatedBy entry
 		if (event.target.checked) {

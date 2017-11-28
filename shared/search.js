@@ -18,6 +18,7 @@ GalleryIndex = new EasySearch.Index({
 	engine: new EasySearch.MongoDB({
 		selector: function (searchObject, options, aggregation) {
 			const selector = this.defaultConfiguration().selector(searchObject, options, aggregation);
+			const category = options.search.props.guestCategory;
 
 			// use this for deep selector
 			//selector['parent.child'] = "<value>";
@@ -26,18 +27,13 @@ GalleryIndex = new EasySearch.Index({
 			selector.visible = "public";
 
 			// filter for the category if set
-
-			if (options.search.props.guestCategory) {
-				selector.type = options.search.props.guestCategory;
-
-				// use this for multiple types
-				selector.type = { $regex: /Archival|Archaeological/ }
+			if (category === "Other") {
+				selector.type = { $regex: /Archival|Archaeological|other|Architectual|Arts/ }
+			}
+			if (category !== '' && category !== "Other") {
+				selector.type = category;
 			}
 
-
-			//selector = { $or: [{ "type": "Archaeological object" }, { "type": "Archival object" }] }
-			// TRY this
-			// selector = [{"type":"Other"}, {"type":"Arch..."},......]
 			return selector;
 		},
 		sort: function (searchObject, options) {

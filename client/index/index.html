@@ -3,9 +3,20 @@
     <h1>cro<span class="prospero">ART</span>ia</h1>
     <h2 class="subhead"> ART & RESEARCH DATABASE</h2>
       <div class="container margin-top">
-        <div class="row">
+        <div class="category-div">
+        {{> mainCategory}}
+        </div>
+    <div class="row">
 
         <!-- pictures -->
+    {{#transition in="slideInLeft"}}
+    {{#if category}}
+    <div class="category-heading">
+        <div class="category-box">
+            <h4>{{category}}</h4>
+        </div>
+    </div>
+    {{/if}}
       {{#EasySearch.Each index=galleryIndex}}
 
       {{#if viewDetails}}
@@ -18,7 +29,7 @@
                             <div class="img-list-block">
                                 <a href="/gallery/details/{{__originalId}}">
                                     <div class="img-list-overlay">
-                                        + DETAILS
+                                        <span class="glyphicon glyphicon-plus" style="font-size:50px;color:#ffd500"></span>
                                     </div>
                                 </a>
                                 <img class="img-list" id="img-front-{{__originalId}}" src="{{data.basic.front}}">
@@ -26,65 +37,48 @@
                         {{else}}
                             <a href="/gallery/details/{{__originalId}}">
                                 <div class="no-img-list-overlay">
-                                    + DETAILS
+                                    <span class="glyphicon glyphicon-plus" style="font-size:50px;color:#ffd500"></span>
                                 </div>
                             </a>
                         {{/if}}
                     </div>
                     <div class="col-xs-12 col-sm-12 list-font">
                       <br/>
-                      <table>
-
-                        <!-- other -->
-                        {{#if basic.type}}
-                        <tr>
-                          <td><i>Type:</i></td>
-                          <td>{{basic.type}}</td>
-                        </tr>
-                        {{/if}}
-                        {{#if basic.title}}
-                        <tr>
-                          <td><i>Title:</i></td>
-                          <td>{{basic.title}}</td>
-                        </tr>
-                        {{/if}}
-                        <!-- sample -->
-                        {{#if basic.name}}
-                        <tr>
-                          <td><i>Sample type:</i></td>
-                          <td>{{basic.name}}</td>
-                        </tr>
-                        {{/if}}
-
-
-                        <!-- pigment -->
-                        {{#if basic.altName}}
-                        <tr>
-                          <td><i>Alternative name:</i></td>
-                          <td>{{basic.altName}}</td>
-                        </tr>
-                        {{/if}}
-                        {{#if basic.colorFamily}}
-                        <tr>
-                          <td><i>Color family:</i></td>
-                          <td>{{basic.colorFamily}}</td>
-                        </tr>
-                        {{/if}}
-                        <!-- !pigment -->
-                        {{#if basic.author}}
-                        <tr>
-                          <td><i>Author:</i></td>
-                          <td>{{basic.author}}</td>
-                        </tr>
-                        {{/if}}
-                        <!-- !pigment && !sample -->
+                        <div class="row">
+                            <div class="col-xs-12">
+                                {{#if basic.title}}
+                                    <span class="list-value">{{basic.title}}</span><br/>
+                                {{/if}}
+                                {{#if basic.name}}
+                                    <span class="list-value">{{basic.name}}</span><br/>
+                                {{/if}}
+                                {{#if basic.type}}
+                                    <span class="list-value">{{basic.type}}</span><br/>
+                                {{/if}}
+                                {{#if basic.author}}
+                                    <span class="list-value">- {{basic.author}}</span><br/>
+                                {{/if}}
+                                {{#if basic.colorFamily}}
+                                    <span class="list-value">Color family: {{basic.colorFamily}}</span>
+                                {{/if}}
+                            </div>
+                        </div>
                         {{#if basic.currentLocation}}
-                        <tr>
-                          <td><i>Current<br/>&emsp;location:</i></td>
-                          <td>{{basic.currentLocation}}</td>
-                        </tr>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <div class="list-key">Current location</div>
+                                <span class="list-value">{{basic.currentLocation}}</span>
+                            </div>
+                        </div>
                         {{/if}}
-                      </table>
+                        {{#if basic.altName}}
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <div class="list-key">Alternative name</div>
+                                <span class="list-value">{{basic.altName}}</span>
+                            </div>
+                        </div>
+                        {{/if}}
                     </div>
                   </div>
                 </div>
@@ -114,14 +108,18 @@
       {{/if}}
 
       {{/EasySearch.Each}}
-
-
-
+      {{/transition}}
 
       {{> EasySearch.LoadMore attributes=loadBtn index=galleryIndex content="Load more content"}}
       {{#EasySearch.IfNoResults index=galleryIndex}}
-        <div class="no-search">No results found!</div>
+      {{#if noCategory}}
+      <div class="no-search" style="color:#1a1a1a">Please select a category.</div>
+      {{else}}
+      <div class="no-search">No results found!</div>
+      {{/if}}
       {{/EasySearch.IfNoResults}}
+
+
 
       </div>
 

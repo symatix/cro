@@ -1,11 +1,11 @@
 <template name="item_details">
   <!-- container -->
     <div class="container">
-    <h1 class="breadcrumbs">{{#if currentUser}}{{currentUser.username}} 
+    <h1 class="breadcrumbs">{{#if currentUser}}{{currentUser.username}}
               {{> edit_button}}} {{/if}}
       <a class="a-heading" href="/">croARTia </a>
       {{#if currentUser.profile.isAdmin}}
-        \ <a class="a-heading" href="/admin/db/">manageDB </a> 
+        \ <a class="a-heading" href="/admin/db/">manageDB </a>
       {{else}}
         {{#if currentUser}}
          \ <a class="a-heading" href="/moderator/collection/">myCollection </a>
@@ -20,15 +20,16 @@
       <li role="presentation" class="active">
         <a class="a-heading-tab" href="#basic_view" aria-controls="basic_view" role="tab" data-toggle="tab">Basic details</a>
       </li>
-
       {{#unless pigmentView}}
-      <li role="presentation">
-        <a class="a-heading-tab" href="#materials_view" aria-controls="materials_view" role="tab" data-toggle="tab">Materials and techniques</a>
-      </li>
+        <li role="presentation">
+            <a class="a-heading-tab" href="#materials_view" aria-controls="materials_view" role="tab" data-toggle="tab">Materials and techniques</a>
+        </li>
       {{/unless}}
+      {{#if methodsView}}
       <li role="presentation">
         <a class="a-heading-tab" href="#methods_view" aria-controls="methods_view" role="tab" data-toggle="tab">Methods</a>
       </li>
+      {{/if}}
       <li role="presentation">
         <a class="a-heading-tab" href="#downloads_view" aria-controls="downloads_view" role="tab" data-toggle="tab">Downloads</a>
       </li>
@@ -43,27 +44,43 @@
       </div>
 
       <div role="tabpanel" class="tab-pane fade in" id="materials_view">
-        <div class="row">    
+        <div class="row">
           <div class="col-xs-12 col-sm-10 col-sm-offset-1">
-
+              {{#unless originalView}}
+              {{#unless laterView}}
+              {{#unless laterView}}
+                  <div class="row">
+                    <div class="col-xs-12">
+                      <div class="no-search">No information present.</div>
+                    </div>
+                  </div>
+              {{/unless}}
+              {{/unless}}
+              {{/unless}}
               <ul class="nav nav-pills materials-details-box" role="tablist">
-
+                  {{#if originalView}}
                   <li role="presentation" class="active">
                       <a class="details-material" href="#materials1" aria-controls="materials1" role="tab" data-toggle="tab">Original artist's materials/techniques</a>
                   </li>
-
+                  {{/if}}
+                  {{#if laterView}}
                   <li role="presentation">
                       <a class="details-material" href="#materials2" aria-controls="materials2" role="tab" data-toggle="tab">Later interventions/retouches</a>
                   </li>
-
+                  {{/if}}
+                  {{#if conservationView}}
                   <li role="presentation">
                       <a class="details-material" href="#materials3" aria-controls="materials3" role="tab" data-toggle="tab">Conservation and restoration works</a>
                   </li>
-                  
-              </ul>
+                  {{/if}}
 
+
+              </ul>
           </div>
+
+
           <div class="col-xs-12">
+
             <div class="tab-content">
                 <div role="tabpanel" class="tab-pane fade in active" id="materials1">
                   <div class="row form-box">
@@ -75,14 +92,14 @@
                     <div class="col-xs-12 form-box">
                   {{> materials_interventions}}
                     </div>
-                  </div>  
+                  </div>
                 </div>
                 <div role="tabpanel" class="tab-pane fade in" id="materials3">
                   <div class="row">
                     <div class="col-xs-12 form-box">
                   {{> materials_restoration}}
                     </div>
-                  </div>  
+                  </div>
                 </div>
             </div>
           </div>
@@ -113,7 +130,7 @@
 
     </div><!-- /container -->
 
-   
+
 
       <script>
       $(document).ready(function(){

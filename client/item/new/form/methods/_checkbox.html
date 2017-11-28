@@ -1,10 +1,11 @@
 <template name="methods_checkbox">
 	<div class="row methods-checkbox">
 		  <div class="col-xs-6 col-sm-3">
-		    <ul>        
+		    <ul>
+
 		      <li>
 		      <div class="row relative">
-		          <label for="scanning" class="method-checkbox"> 3D scanning</label>
+		          <label for="scanning" class="{{#if methodChecked}}method-checkbox-active{{else}}method-checkbox{{/if}}"> 3D scanning</label>
 		          <input class="checkbox-input" type="checkbox" value="3D scanning" name="methodCheck" id="scanning" checked="{{#if details.methods.scanning}}checked{{/if}}">
 		      </div>
 		      </li>
@@ -59,7 +60,7 @@
 		    </ul>
 		  </div>
 		  <div class="col-xs-6 col-sm-3">
-		    <ul>        
+		    <ul>
 		      <li>
 		      <div class="row relative">
 		          <label for="fors" class="method-checkbox"> FORS</label>
@@ -83,13 +84,13 @@
 		          <label for="gl" class="method-checkbox"> GL</label>
 		          <input class="checkbox-input" type="checkbox" value="GL" name="methodCheck" id="gl" checked="{{#if details.methods.gl}}checked{{/if}}">
 		      </div>
-		      </li>   
+		      </li>
 		      <li>
 		      <div class="row relative">
 		          <label for="granulometry" class="method-checkbox"> Granulometry</label>
 		          <input class="checkbox-input" type="checkbox" value="Granulometry" name="methodCheck" id="granulometry" checked="{{#if details.methods.granulometry}}checked{{/if}}">
 		      </div>
-		      </li>   
+		      </li>
 		      <li>
 		      <div class="row relative">
 		          <label for="hygroscopic" class="method-checkbox"> Hygroscopic measurements</label>
@@ -101,7 +102,7 @@
 		          <label for="irpIrrIrfc" class="method-checkbox"> IRP/IRR/IRFC</label>
 		          <input class="checkbox-input" type="checkbox" value="IRP/IRR/IRFC" name="methodCheck" id="irpIrrIrfc" checked="{{#if details.methods.irpIrrIrfc}}checked{{/if}}">
 		      </div>
-		      </li> 
+		      </li>
 		      <li>
 		      <div class="row relative">
 		          <label for="libs" class="method-checkbox"> LIBS</label>
@@ -117,7 +118,7 @@
 		    </ul>
 		  </div>
 		  <div class="col-xs-6 col-sm-3">
-		    <ul>        
+		    <ul>
 		      <li>
 		      <div class="row relative">
 		          <label for="om" class="method-checkbox"> OM</label>
@@ -175,7 +176,7 @@
 		    </ul>
 		  </div>
 		  <div class="col-xs-6 col-sm-3">
-		    <ul>        
+		    <ul>
 		      <li>
 		      <div class="row relative">
 		          <label for="tl" class="method-checkbox"> TL</label>
@@ -205,13 +206,13 @@
 		          <label for="vis" class="method-checkbox"> VIS</label>
 		          <input class="checkbox-input" type="checkbox" value="VIS" name="methodCheck" id="vis" checked="{{#if details.methods.vis}}checked{{/if}}">
 		      </div>
-		      </li>  
+		      </li>
 		      <li>
 		      <div class="row relative">
 		          <label for="xrd" class="method-checkbox"> XRD</label>
 		          <input class="checkbox-input" type="checkbox" value="XRD" name="methodCheck" id="xrd" checked="{{#if details.methods.xrd}}checked{{/if}}">
 		      </div>
-		      </li>  
+		      </li>
 		      <li>
 		      <div class="row relative">
 		          <label for="xrf" class="method-checkbox"> XRF</label>
@@ -220,14 +221,15 @@
 		      </li>
 		      <li>
 		      <div class="row relative">
+				  <input class="checkbox-input" type="checkbox" value="XRR" name="methodCheck" id="xrr" checked="{{#if details.methods.xrr}}checked{{/if}}">
 		          <label for="xrr" class="method-checkbox"> XRR</label>
-		          <input class="checkbox-input" type="checkbox" value="XRR" name="methodCheck" id="xrr" checked="{{#if details.methods.xrr}}checked{{/if}}">
 		      </div>
 		      </li>
 		    </ul>
 		  </div>
 		  <div class="col-xs-12">
 		 	&nbsp;
+
 		  </div>
 		</div>
 </template>

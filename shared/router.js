@@ -6,6 +6,7 @@ Router.configure({
 Router.route("/", function () {
 	Session.set("noFilter", true);
 	Session.set("details", true);
+	Session.set("categorySelected", false);
 	this.render('navbar', { to: "header" });
 	this.render('mainGallery', { to: "main" });
 });

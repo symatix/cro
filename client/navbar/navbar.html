@@ -11,7 +11,7 @@
           <span class="icon-bar"></span>
         </button>
               <ul class="nav navbar-nav">
-                <li class="dropdown active"><a class="toggle-active navbar-brand hoverGlow text-shadow" href="/">croARTia</a></li>
+                <li class="dropdown active"><a class="toggle-active navbar-brand" href="/">croARTia</a></li>
               </ul>
       </div>
 
@@ -25,14 +25,14 @@
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Admin panel <span class="caret"></span></a>
               <ul class="dropdown-menu">
-                <li class=""><a class="toggle-active" href="/search">Advanced search</a></li>
+                <li class="dropdown"><a class="toggle-active" href="/search">Advanced search</a></li>
                 <li role="separator" class="divider"></li>
-                <li><a class="toggle-active newItem-href" href="/new">New entry</a></li>
-                <li class=""><a class="toggle-active" href="/admin/db">Manage database</a></li>
-                <li class=""><a class="toggle-active" href="/admin/db/stats">Database statistics</a></li>
+                <li class="dropdown"><a class="toggle-active newItem-href" href="/new">New entry</a></li>
+                <li class="dropdown"><a class="toggle-active" href="/admin/db">Manage database</a></li>
+                <li class="dropdown"><a class="toggle-active" href="/admin/db/stats">Database statistics</a></li>
                 <li role="separator" class="divider"></li>
-                <li class=""><a class="toggle-active newUser-href" href="/admin/users/entry">Add user</a></li>
-                <li class=""><a class="toggle-active" href="/admin/users">Manage users</a></li>
+                <li class="dropdown"><a class="toggle-active newUser-href" href="/admin/users/entry">Add user</a></li>
+                <li class="dropdown"><a class="toggle-active" href="/admin/users">Manage users</a></li>
                 <li role="separator" class="divider"></li>
                 <li class="dropdown"><a href="/report.txt">[dev]</a></li>
               </ul>
@@ -186,21 +186,6 @@
                   <span class="glyphicon glyphicon-search"></span>
                   &emsp;
 
-                  <select name="" class="sorting-category-guest sorting-category form-control">
-                    <option value="" disabled selected style='display:none;'>Select...</option>
-                    <option value="">All</option>
-                    <option value="Painting" selected="{{painting}}">Painting</option>
-                    <option value="Sculpture" selected="{{sculpture}}">Sculpture</option>
-                    <option value="Architectural heritage" selected="{{architectural}}">Architectural heritage</option>
-                    <option value="Archival object" selected="{{archival}}">Archival object</option>
-                    <option value="Archaeological object" selected="{{archaeological}}">Archaeological object</option>
-                    <option value="Arts and crafts object" selected="{{arts}}">Arts and crafts object</option>
-                    <option value="Sample/cross-section" selected="{{sample}}">Sample</option>
-                    <option value="Pigment/dye/binder/varnish/reference materials" selected="{{pigment}}">Pigment</option>
-                    <option value="other" selected="{{other}}">Other</option>
-                  </select>
-                  <span class="glyphicon glyphicon-align-justify"></span>
-                  &emsp;
                   <select class="sorting-guest sorting-filter form-control">
                     <option value="last_edit" selected>last edit</option>
                     <option value="last_entry" >last entry</option>
@@ -212,15 +197,6 @@
                   </select>
                   <span class="glyphicon glyphicon-sort"></span>
                   &emsp;
-                    <select name="" class="sorting-view form-control">
-                      <option value="5" selected="{{large}}">
-                        5
-                      </option>
-                      <option value="10" selected="{{details}}">
-                        10
-                      </option>
-                    </select>
-                    <span class="glyphicon glyphicon-eye-open"></span>
               </div>
             </form>
           {{/if}}
