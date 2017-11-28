@@ -29,8 +29,15 @@ GalleryIndex = new EasySearch.Index({
 
 			if (options.search.props.guestCategory) {
 				selector.type = options.search.props.guestCategory;
+
+				// use this for multiple types
+				selector.type = { $regex: /Archival|Archaeological/ }
 			}
-			//selector = {"type":"other"};
+
+
+			//selector = { $or: [{ "type": "Archaeological object" }, { "type": "Archival object" }] }
+			// TRY this
+			// selector = [{"type":"Other"}, {"type":"Arch..."},......]
 			return selector;
 		},
 		sort: function (searchObject, options) {
