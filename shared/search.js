@@ -28,7 +28,7 @@ GalleryIndex = new EasySearch.Index({
 
 			// filter for the category if set
 			if (category === "Other") {
-				selector.type = { $regex: /Archival|Archaeological|other|Architectual|Arts/ }
+				selector.type = { $regex: /Archival|Archaeological|other|Architectural|Arts/ }
 			}
 			if (category !== '' && category !== "Other") {
 				selector.type = category;

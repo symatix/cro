@@ -285,7 +285,14 @@ h4 {
   color:#1a1a1a;
 }
 h4.help {
-  color:#333333;
+  color:lightgrey;
+}
+.well{
+    color:#1a1a1a;
+}
+div.modal-footer{
+    background-color:black;
+    border:none;
 }
 a {
   text-decoration:none !important;
@@ -633,6 +640,9 @@ h1{
     text-decoration: underline;
     font-style:italic;
     text-decoration-color: #ffda21;
+}
+.modal-abbrevations{
+    background-color:white !important;
 }
 .list-font-abbrevations{
   word-wrap: break-word;
@@ -1231,9 +1241,10 @@ background-color:#FFFFFC;
   font-family:valueRegular;
   font-size:15px;
   text-align:center;
-  background-color:#666666;
+  background-color:;
 }
 .nav-pills>li>a.nav-help:hover{
+    color:white;
   background-color:rgb(0,0,0);
 }
 .nav-pills>li>a.nav-help:focus{
@@ -1404,6 +1415,7 @@ tr.noBorder{
 .about-us{
   padding:0 40px 60px 40px;
   font-family:valueThin;
+  font-size:1.2em;
   text-align: justify;
 }
 .download-box{
@@ -1419,6 +1431,7 @@ tr.noBorder{
   margin-right:30px;
 }
 .help-box{
+    color:white;
   height:427px;
   overflow-y: scroll;
 }
