@@ -86,7 +86,22 @@ Template.navbar.helpers({
 			return "selected";
 		}
 	},
-
+	category: function () {
+		let category = Session.get("categorySelected");
+		if (category === "Pigment/dye/binder/varnish/reference materials") {
+			category = "Reference materials";
+		}
+		if (category === "") {
+			category = "All";
+		}
+		if (!category) {
+			category = "Category"
+		}
+		if (Router.current().route.path() === '/') {
+			return category;
+		}
+		return null;
+	},
 	first_entry: function () {
 		if (Session.get("first_entry")) {
 			return "selected";

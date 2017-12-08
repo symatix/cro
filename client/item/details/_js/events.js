@@ -1,3 +1,11 @@
+Template.item_details.events({
+	'click .home-route': function () {
+		Session.set("categorySelected", false);
+		GalleryIndex.getComponentMethods()
+			.addProps('guestCategory', false);
+	},
+})
+
 Template.methods_view.events({
 	'click .btn_toggleMethods': function (event) {
 		event.preventDefault();

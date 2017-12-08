@@ -1,6 +1,6 @@
 <template name="navbar">
 <div id="documentTop">
-  <nav class="navbar navbar-default">
+  <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container-fluid">
       <!-- Brand and toggle get grouped for better mobile display -->
       <div class="navbar-header">
@@ -11,7 +11,7 @@
           <span class="icon-bar"></span>
         </button>
               <ul class="nav navbar-nav">
-                <li class="dropdown active"><a class="toggle-active navbar-brand" href="/">croARTia</a></li>
+                <li class="dropdown active"><a class="toggle-active navbar-brand home-route" href="/">croARTia</a></li>
               </ul>
       </div>
 
@@ -201,6 +201,11 @@
             </form>
           {{/if}}
         {{/if}}<!-- /if guestSearch-->
+        <ul class="nav navbar-nav">
+            <p class="navbar-text">
+              <b class="nav-category">{{category}}</b>
+            </p>
+        </ul>
 
         </div>
 

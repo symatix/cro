@@ -25,7 +25,6 @@ GalleryIndex = new EasySearch.Index({
 
 			selector.isDeleted = "available";
 			selector.visible = "public";
-
 			// filter for the category if set
 			if (category === "Other") {
 				selector.type = { $regex: /Archival|Archaeological|other|Architectural|Arts/ }
@@ -37,6 +36,7 @@ GalleryIndex = new EasySearch.Index({
 			return selector;
 		},
 		sort: function (searchObject, options) {
+			console.log(options)
 			const guestSort = options.search.props.guestSort
 
 			// return a mongo sort specifier
@@ -62,10 +62,16 @@ GalleryIndex = new EasySearch.Index({
 				}
 			} else if ('author_a' === guestSort) {
 				return {
+					"basic.author": {
+						$exists: true
+					},
 					"basic.author": 1
 				}
 			} else if ('author_z' === guestSort) {
 				return {
+					"basic.author": {
+						$exists: true
+					},
 					"basic.author": -1
 				}
 			} else {

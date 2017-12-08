@@ -3,7 +3,7 @@
     <div class="container">
     <h1 class="breadcrumbs">{{#if currentUser}}{{currentUser.username}}
               {{> edit_button}}} {{/if}}
-      <a class="a-heading" href="/">croARTia </a>
+      <a class="a-heading home-route" href="/">croARTia </a>
       {{#if currentUser.profile.isAdmin}}
         \ <a class="a-heading" href="/admin/db/">manageDB </a>
       {{else}}

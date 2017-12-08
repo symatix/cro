@@ -23,16 +23,6 @@ Template.mainGallery.helpers({
 		}
 
 	},
-	viewLarge: function () {
-		if (Session.get("large")) {
-			return true;
-		}
-	},
-	viewDetails: function () {
-		if (Session.get("details")) {
-			return true;
-		}
-	},
 	noCategory: function () {
 		return !Session.get("categorySelected");
 	},

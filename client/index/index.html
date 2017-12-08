@@ -19,7 +19,6 @@
     {{/if}}
       {{#EasySearch.Each index=galleryIndex}}
 
-      {{#if viewDetails}}
       <div class="col-xs-12 col-sm-6 col-md-3" id="{{__originalId}}">
       <div class="item-list">
 <!-- title of item list -->
@@ -29,7 +28,7 @@
                             <div class="img-list-block">
                                 <a href="/gallery/details/{{__originalId}}">
                                     <div class="img-list-overlay">
-                                        <span class="glyphicon glyphicon-plus" style="font-size:50px;color:#ffd500"></span>
+                                        <span class="glyphicon glyphicon-plus" style="font-size:50px;color:#413d25"></span>
                                     </div>
                                 </a>
                                 <img class="img-list" id="img-front-{{__originalId}}" src="{{data.basic.front}}">
@@ -37,7 +36,7 @@
                         {{else}}
                             <a href="/gallery/details/{{__originalId}}">
                                 <div class="no-img-list-overlay">
-                                    <span class="glyphicon glyphicon-plus" style="font-size:50px;color:#ffd500"></span>
+                                    <span class="glyphicon glyphicon-plus" style="font-size:50px;color:#413d25"></span>
                                 </div>
                             </a>
                         {{/if}}
@@ -84,33 +83,11 @@
                 </div>
             </div>
 
-
-
-
-
-      {{else}}
-      <a class="object-href" href="/gallery/details/{{__originalId}}">
-        <div class="col-xs-12 col-sm-6 col-md-4">
-          <div class="row align-center form-box objectBranch">
-            <h3 class="object-class-href">{{typeOfObject}}</h3>
-            <div class="col-xs-12">
-              <img class="img-edit" src="{{data.basic.front}}"/>
-            </div>
-              <div class="col-xs-12 itemBox-lg">
-                <h4 class="itemBox-basicInfo">
-                  {{#if basic.title}}{{basic.title}}{{/if}} {{basic.name}}<br/>
-                  {{#if basic.author}}by{{/if}} {{basic.author}}
-                </h4>
-              </div>
-          </div>
-        </div> <!-- /end pictures -->
-      </a>
-      {{/if}}
-
       {{/EasySearch.Each}}
       {{/transition}}
 
       {{> EasySearch.LoadMore attributes=loadBtn index=galleryIndex content="Load more content"}}
+
       {{#EasySearch.IfNoResults index=galleryIndex}}
       {{#if noCategory}}
       <div class="no-search" style="color:#1a1a1a">Please select a category.</div>

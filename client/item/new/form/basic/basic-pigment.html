@@ -157,7 +157,7 @@
       <option id="naturalSyntetic" value="naturalSyntetic" selected="{{#if naturalSyntetic}}selected{{/if}}"> natural and syntetic</option>
     </select>
     </div>
-
+    {{> inputTags}}
 <!--
 notes fileds
 -->
@@ -182,7 +182,7 @@ notes fileds
         Brief description of pigment/dye/binder/varnish and history of use
       </div>
       <div class="col-sm-8 col-sm-offset-2">
-          <textarea class="" id="briefDescriptionBasic" name="notesBasic" rows="4" placeholder="(e.g. darkening of lead white pigment (into PbS) when exposed to H2S, oxidation of blue azurite to form green malachite, etc.)" value="{{basic.notes.briefDescription}}"></textarea>
+          <textarea class="" id="briefDescriptionBasic" name="notesBasic" rows="4" placeholder="" value="{{basic.notes.briefDescription}}"></textarea>
       </div>
       <div class="col-xs-12 notes">
         Sources

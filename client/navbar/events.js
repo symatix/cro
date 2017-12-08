@@ -8,13 +8,17 @@ Template.navbar.events({
 				$('#help-home').addClass('active');
 
 			} else {
-				console.log("nema");
 				$(".tab-help").removeClass("active");
 				$('#help-home-first').addClass('active');
 				$('#help-home').addClass('active');
 			}
 
 		}, 200)
+	},
+	'click .home-route': function () {
+		Session.set("categorySelected", false);
+		GalleryIndex.getComponentMethods()
+			.addProps('guestCategory', false);
 	},
 	'click .toggle-active': function (event) {
 		$('.active').removeClass('active');

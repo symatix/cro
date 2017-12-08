@@ -1,15 +1,19 @@
 Template.mainGallery.events({
 	"mouseenter .img-list-block": function (event) {
-		const overlay = $(event.target).find('.img-list-overlay');
-		const width = $(event.target).find('.img-list').width();
 
 		// chrome and safari calculate position() differently, so that's why offset()
-		// it still spits out an error in the console, but fuck it...it works
-		const parentPos = $(event.target).offset().left;
-		const imgPos = $(event.target).find('.img-list').offset().left;
-		const left = imgPos - parentPos;
-
-		overlay.css({ width, left }).animate({ height: '100%' }, 500);
+		// and as it still spits out an error, thus setInterval
+		var waitDocument = setInterval(function () {
+			if ($(event.target).find('.img-list').length > 0) {
+				const overlay = $(event.target).find('.img-list-overlay');
+				const width = $(event.target).find('.img-list').width();
+				const parentPos = $(event.target).offset().left;
+				const imgPos = $(event.target).find('.img-list').offset().left;
+				const left = imgPos - parentPos;
+				overlay.css({ width, left }).animate({ height: '100%' }, 500);
+				clearInterval(waitDocument);
+			}
+		}, 50)
 	},
 	"mouseleave .img-list-block": function (event) {
 		$(event.target).find('.img-list-overlay').animate({ height: '0%' }, 500);
