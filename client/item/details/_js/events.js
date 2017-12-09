@@ -4,6 +4,21 @@ Template.item_details.events({
 		GalleryIndex.getComponentMethods()
 			.addProps('guestCategory', false);
 	},
+	'click .pagination-next': function (event) {
+		const _id = this._id;
+		const session = Session.keys;
+		const type = session.categorySelected;
+		let sorting;
+
+		Object.keys(Session.keys).forEach(function (key) {
+			if (Session.keys[key] == "true" && key !== "details" && key !== "addedBy" && key !== "noFilter") {
+				sorting = key;
+			}
+		});
+		sorting = sorting === undefined ? "last_edit" : sorting;
+
+		console.log(sorting);
+	}
 })
 
 Template.methods_view.events({
