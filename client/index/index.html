@@ -15,8 +15,11 @@
         <div class="category-box">
             <h4>{{category}}</h4>
         </div>
+
+
     </div>
     {{/if}}
+
       {{#EasySearch.Each index=galleryIndex}}
 
       <div class="col-xs-12 col-sm-6 col-md-3" id="{{__originalId}}">
@@ -82,7 +85,6 @@
                   </div>
                 </div>
             </div>
-
       {{/EasySearch.Each}}
       {{/transition}}
 
@@ -97,9 +99,10 @@
       {{/EasySearch.IfNoResults}}
 
 
-
       </div>
-
+      <!-- remove comments if load more btn is used
+      {{> EasySearch.Pagination index=galleryIndex prevAndNext=true}}
+        -->
     </div>
   </div>
   <script>

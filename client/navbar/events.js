@@ -15,6 +15,12 @@ Template.navbar.events({
 
 		}, 200)
 	},
+	'keypress input': function (event) {
+		if (event.which === 13) {
+			event.stopPropagation();
+			return false;
+		}
+	},
 	'click .home-route': function () {
 		Session.set("categorySelected", false);
 		GalleryIndex.getComponentMethods()

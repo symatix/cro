@@ -75,7 +75,7 @@
           {{#if moderatorDbView}}
           <form class="navbar-form navbar-left">
             <div class="form-group">
-            {{> EasySearch.Input index=usersIndex attributes=searchAttributesUsers}}
+            {{> EasySearch.Input timeout=500 index=usersIndex attributes=searchAttributesUsers}}
               <span class="glyphicon glyphicon-search"></span>
                 &emsp;
                 <select class="sorting-users sorting-filter form-control">
@@ -102,7 +102,7 @@
           <div class="form-group">
 
             {{#if currentUser.profile.isAdmin}}
-              {{> EasySearch.Input index=adminIndex attributes=searchAttributesAdmin}}
+              {{> EasySearch.Input timeout=500 index=adminIndex attributes=searchAttributesAdmin}}
               {{#if adminUrl}}
               <span class="glyphicon glyphicon-search"></span>
                 &emsp;
@@ -141,7 +141,7 @@
 
                {{#if currentUser}}
                 {{#if moderatorUrl}}
-                  {{> EasySearch.Input index=moderatorIndex attributes=searchAttributesModerator}}
+                  {{> EasySearch.Input timeout=500 index=moderatorIndex attributes=searchAttributesModerator}}
                   <span class="glyphicon glyphicon-search"></span>
                     &emsp;
                     <select name="typeFilter" class="sorting-moderator sorting-category form-control" id="categoryFilter">
@@ -182,7 +182,7 @@
           {{#if homeUrl}}
             <form class="navbar-form navbar-left">
               <div class="form-group">
-                {{> EasySearch.Input index=galleryIndex attributes=searchAttributesModerator}}
+                {{> EasySearch.Input timeout=500 index=galleryIndex attributes=searchAttributesModerator}}
                   <span class="glyphicon glyphicon-search"></span>
                   &emsp;
 
@@ -246,7 +246,7 @@
         {{> help}}
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
       </div>
     </div>
   </div>

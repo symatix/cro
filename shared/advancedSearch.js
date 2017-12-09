@@ -153,8 +153,8 @@ SearchIndex = new EasySearch.Index({
 				basicSelector['details.methods.' + methodsThird] = { $ne: false };
 			}
 
-			console.log("#**************** Query Issued *******************#");
-			console.log(basicSelector);
+			//console.log("#**************** Query Issued *******************#");
+			//console.log(basicSelector);
 
 			return basicSelector;
 		},

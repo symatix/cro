@@ -14,14 +14,21 @@ GalleryIndex = new EasySearch.Index({
 	collection: Prospero,
 	name: 'croartiaGallery',
 	fields: ['basic.author', 'basic.title', 'basic.name', 'basic.altName', 'basic.tags'],
-	defaultSearchOptions: { limit: 24 },
+	defaultSearchOptions: { limit: 10 },
 	engine: new EasySearch.MongoDB({
 		selector: function (searchObject, options, aggregation) {
 			const selector = this.defaultConfiguration().selector(searchObject, options, aggregation);
 			const category = options.search.props.guestCategory;
+			const sorting = options.search.props.guestSort;
+
 
 			// use this for deep selector
 			//selector['parent.child'] = "<value>";
+			if (sorting === "author_a" || sorting === "author_z") {
+				selector['basic.author'] = {
+					"$exists": 1
+				};
+			}
 
 			selector.isDeleted = "available";
 			selector.visible = "public";
@@ -36,7 +43,6 @@ GalleryIndex = new EasySearch.Index({
 			return selector;
 		},
 		sort: function (searchObject, options) {
-			console.log(options)
 			const guestSort = options.search.props.guestSort
 
 			// return a mongo sort specifier
@@ -62,16 +68,10 @@ GalleryIndex = new EasySearch.Index({
 				}
 			} else if ('author_a' === guestSort) {
 				return {
-					"basic.author": {
-						$exists: true
-					},
 					"basic.author": 1
 				}
 			} else if ('author_z' === guestSort) {
 				return {
-					"basic.author": {
-						$exists: true
-					},
 					"basic.author": -1
 				}
 			} else {
@@ -91,6 +91,13 @@ UsersIndex = new EasySearch.Index({
 	engine: new EasySearch.MongoDB({
 		selector: function (searchObject, options, aggregation) {
 			const selector = this.defaultConfiguration().selector(searchObject, options, aggregation);
+			const sorting = options.search.props.guestSort;
+
+			if (sorting === "author_a" || sorting === "author_z") {
+				selector['basic.author'] = {
+					"$exists": 1
+				};
+			}
 
 			return selector;
 		},
@@ -143,7 +150,13 @@ ModeratorIndex = new EasySearch.Index({
 	engine: new EasySearch.MongoDB({
 		selector: function (searchObject, options, aggregation) {
 			const selector = this.defaultConfiguration().selector(searchObject, options, aggregation);
+			const sorting = options.search.props.guestSort;
 
+			if (sorting === "author_a" || sorting === "author_z") {
+				selector['basic.author'] = {
+					"$exists": 1
+				};
+			}
 			selector.owner = options.search.userId;
 			selector.isDeleted = "available";
 			// filter for the category if set
@@ -214,6 +227,13 @@ AdminIndex = new EasySearch.Index({
 		selector: function (searchObject, options, aggregation) {
 			const selector = this.defaultConfiguration().selector(searchObject, options, aggregation);
 
+			const sorting = options.search.props.guestSort;
+
+			if (sorting === "author_a" || sorting === "author_z") {
+				selector['basic.author'] = {
+					"$exists": 1
+				};
+			}
 			// filter for the category if set
 			if (options.search.props.categoryFilter) {
 				var option = options.search.props.categoryFilter;

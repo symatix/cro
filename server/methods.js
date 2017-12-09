@@ -32,7 +32,6 @@ Meteor.methods({
 						if (child[0] == "/" || !child) {} else {
 							// delete data entry
 							Data.remove(child);
-							console.log("deleted data with id: " + child);
 						}
 					}
 				}
@@ -55,7 +54,6 @@ Meteor.methods({
 								if (result[0] == "/" || result.indexOf(' ') > 0 || !result) {} else {
 									//delete data entry
 									Data.remove(result);
-									console.log("deleted data with id: " + result);
 								}
 							}
 						}
@@ -157,6 +155,17 @@ Meteor.methods({
 			from: "croartia.contactForm",
 			subject: contact.subject + "@croARTia",
 			text: "Hello Admin! There was a form submit@croARTia\n\nName: " + contact.name + "\nE-mail: " + contact.email + "\nTelephone: " + contact.telephone + "\nInstitution: " + contact.institution + "\n\nContent:\n" + contact.text,
+		});
+	},
+	sendMailToAll: function (email) {
+		const users = Meteor.users.find({ "profile.isAdmin": false });
+		const emails = users.map(user => user.profile.email);
+		console.log(emails);
+		Email.send({
+			bcc: emails,
+			from: "croartia.db@gmail.com",
+			subject: email.subject,
+			text: email.body,
 		});
 	}
 })

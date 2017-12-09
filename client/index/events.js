@@ -2,8 +2,9 @@ Template.mainGallery.events({
 	"mouseenter .img-list-block": function (event) {
 
 		// chrome and safari calculate position() differently, so that's why offset()
-		// and as it still spits out an error, thus setInterval
-		var waitDocument = setInterval(function () {
+		// and as it turns out, they still spit an error in the console, thus setInterval
+		// ... eat that chrome!
+		var imgReady = setInterval(function () {
 			if ($(event.target).find('.img-list').length > 0) {
 				const overlay = $(event.target).find('.img-list-overlay');
 				const width = $(event.target).find('.img-list').width();
@@ -11,7 +12,7 @@ Template.mainGallery.events({
 				const imgPos = $(event.target).find('.img-list').offset().left;
 				const left = imgPos - parentPos;
 				overlay.css({ width, left }).animate({ height: '100%' }, 500);
-				clearInterval(waitDocument);
+				clearInterval(imgReady);
 			}
 		}, 50)
 	},
