@@ -12,9 +12,27 @@
          {{/if}}
       {{/if}}
       <span class="post-heading">\ details<br/>
+
         {{basic.author}} {{#if basic.author}}-{{/if}} {{basic.title}} {{#if basic.name}}• {{basic.name}}{{/if}}
       </span>
     </h1>
+    <div class="col-xs-12 align-center">
+        {{#if prevItem}}
+        <div class="pagination pagination-prev">
+            <a href="{{prevItem}}">
+                <span class="glyphicon glyphicon-menu-left"></span>
+            </a>
+        </div>
+        {{/if}}
+        &emsp;...&emsp;
+        {{#if nextItem}}
+        <div class="pagination pagination-next">
+            <a href="{{nextItem}}">
+                <span class="glyphicon glyphicon-menu-right"></span>
+            </a>
+        </div>
+        {{/if}}
+    </div>
 
     <ul class="nav nav-tabs nav-justified form-box-font" role="tablist" id="form-basic-select">
       <li role="presentation" class="active">
