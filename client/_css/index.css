@@ -1505,5 +1505,7 @@ ul.help-notice{
     margin:25px;
     width:460px;
     min-height: 480px;
-
+}
+.pagination{
+    display:inline-block;
 }
