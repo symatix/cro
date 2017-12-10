@@ -39,6 +39,12 @@ Template
 				type = type
 					.substr(1)
 					.slice(0, -1);
+
+				if (type === 'Other') {
+					type = {
+						$regex: /Archival|Archaeological|other|Architectural|Arts/
+					};
+				}
 				field.push({"type": type})
 			}
 
@@ -55,13 +61,9 @@ Template
 
 			// check if it returned an empty array
 			if (typeof nextItem !== 'undefined' && nextItem.length > 0) {
-				if ($(".pagination-next").hasClass('hidden')) {
-					$(".pagination-next").removeClass('hidden');
-				}
 				return '/gallery/details/' + nextItem[0]._id;
 			} else {
-				$(".pagination-next").addClass('hidden');
-				return '#';
+				return false;
 			}
 		},
 		prevItem: function () {
@@ -81,6 +83,11 @@ Template
 				type = type
 					.substr(1)
 					.slice(0, -1);
+				if (type === 'Other') {
+					type = {
+						$regex: /Archival|Archaeological|other|Architectural|Arts/
+					};
+				}
 				field.push({"type": type})
 			}
 
@@ -88,12 +95,8 @@ Template
 
 			// check if it returned an empty object
 			if ($.isEmptyObject(prevItem)) {
-				$(".pagination-prev").addClass('hidden');
 				return false;
 			} else {
-				if ($(".pagination-prev").hasClass('hidden')) {
-					$(".pagination-prev").removeClass('hidden');
-				}
 				return '/gallery/details/' + prevItem._id;
 			}
 		},
