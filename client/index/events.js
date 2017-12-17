@@ -25,5 +25,10 @@ Template.mainGallery.events({
 		Session.set("categorySelected", category);
 		GalleryIndex.getComponentMethods()
 			.addProps('guestCategory', category)
+
+		GalleryIndex.getComponentMethods()
+			.addProps('guestSort', 'last_edit');
+
+		$(".sorting-guest option[value='last_edit']").prop('selected', 'selected').change();
 	},
 })

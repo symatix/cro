@@ -54,6 +54,10 @@ GalleryIndex = new EasySearch.Index({
 				return {
 					"info.createdAt": -1
 				}
+			} else if ('last_edit' === guestSort) {
+				return {
+					"info.last_edit": -1
+				}
 			} else if ('first_entry' === guestSort) {
 				return {
 					"info.createdAt": 1
