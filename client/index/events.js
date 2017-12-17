@@ -11,13 +11,13 @@ Template.mainGallery.events({
 				const parentPos = $(event.target).offset().left;
 				const imgPos = $(event.target).find('.img-list').offset().left;
 				const left = imgPos - parentPos;
-				overlay.css({ width, left }).animate({ height: '100%' }, 500);
+				overlay.css({ width, left }).animate({ height: '100%' }, 250);
 				clearInterval(imgReady);
 			}
 		}, 50)
 	},
 	"mouseleave .img-list-block": function (event) {
-		$(event.target).find('.img-list-overlay').animate({ height: '0%' }, 500);
+		$('.img-list-overlay').animate({ height: '0%' }, 250);
 	},
 
 	'click .category-list-block': function (e) {

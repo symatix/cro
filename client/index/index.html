@@ -27,26 +27,24 @@
 <!-- title of item list -->
                   <div class="row">
                     <div class="col-xs-12 col-sm-12 img-list-container">
+                        <a href="/gallery/details/{{__originalId}}">
                         {{#if data.basic.front}}
                             <div class="img-list-block">
-                                <a href="/gallery/details/{{__originalId}}">
                                     <div class="img-list-overlay">
-                                        <span class="glyphicon glyphicon-plus" style="font-size:50px;color:#413d25"></span>
+                                        <span class="glyphicon glyphicon-search" style="font-size:50px;color:#FFFFFC"></span>
                                     </div>
-                                </a>
                                 <img class="img-list" id="img-front-{{__originalId}}" src="{{data.basic.front}}">
                             </div>
                         {{else}}
-                            <a href="/gallery/details/{{__originalId}}">
-                                <div class="no-img-list-overlay">
-                                    <span class="glyphicon glyphicon-plus" style="font-size:50px;color:#413d25"></span>
+                                <div class="img-list-block no-img-list-overlay">
+                                    <span class="glyphicon glyphicon-search" style="font-size:50px;color:#FFFFFC"></span>
                                 </div>
-                            </a>
                         {{/if}}
+                    </a>
                     </div>
                     <div class="col-xs-12 col-sm-12 list-font">
                       <br/>
-                        <div class="row">
+                        <div class="row card-details">
                             <div class="col-xs-12">
                                 {{#if basic.title}}
                                     <span class="list-value">{{basic.title}}</span><br/>
@@ -58,29 +56,19 @@
                                     <span class="list-value">{{basic.type}}</span><br/>
                                 {{/if}}
                                 {{#if basic.author}}
-                                    <span class="list-value">- {{basic.author}}</span><br/>
+                                    <span class="list-value">{{basic.author}}</span><br/>
                                 {{/if}}
                                 {{#if basic.colorFamily}}
                                     <span class="list-value">Color family: {{basic.colorFamily}}</span>
                                 {{/if}}
+                                {{#if basic.currentLocation}}
+                                    <span class="list-value">{{basic.currentLocation}}</span>
+                                {{/if}}
+                                {{#if basic.altName}}
+                                    <span class="list-value">{{basic.altName}}</span>
+                                {{/if}}
                             </div>
                         </div>
-                        {{#if basic.currentLocation}}
-                        <div class="row">
-                            <div class="col-xs-12">
-                                <div class="list-key">Current location</div>
-                                <span class="list-value">{{basic.currentLocation}}</span>
-                            </div>
-                        </div>
-                        {{/if}}
-                        {{#if basic.altName}}
-                        <div class="row">
-                            <div class="col-xs-12">
-                                <div class="list-key">Alternative name</div>
-                                <span class="list-value">{{basic.altName}}</span>
-                            </div>
-                        </div>
-                        {{/if}}
                     </div>
                   </div>
                 </div>

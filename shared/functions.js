@@ -3399,7 +3399,7 @@ Meteor.myFunctions = {
       author:document.getElementById("author").value,
       date:document.getElementById("date").value,
       sampleDimensions:document.getElementById("sampleDimensions").value,
-      sampleInvestigated:document.getElementById("sampleInvestigated").value,
+      investigated:document.getElementById("methodsTechniques").value,
       notes:{
         briefArea:document.getElementById("briefArea").value,
         briefResults:document.getElementById("briefResults").value,

@@ -64,8 +64,21 @@ Template.item_new.events({
 		}
 
 		//other form
-		if (document.getElementById('item-architectural-heritage').checked || document.getElementById('item-archival-object').checked || document.getElementById('item-archaeological').checked || document.getElementById('item-other').checked || document.getElementById('item-arts-crafts').checked) {
+		if (document.getElementById('item-architectural-heritage').checked) {
 			Session.set("showOther", true);
+			Session.set("placeholder", "(e.g. church, castle, chapel, etc.)")
+		} else if (document.getElementById('item-archival-object').checked) {
+			Session.set("showOther", true);
+			Session.set("placeholder", "(e.g. books, documents, maps, etc.)")
+		} else if (document.getElementById('item-archaeological').checked) {
+			Session.set("showOther", true);
+			Session.set("placeholder", "(e.g. antique weapons, tools, pottery, etc.)")
+		} else if (document.getElementById('item-other').checked) {
+			Session.set("showOther", true);
+			Session.set("placeholder", "(e.g. altars, coins, coat-of-armor shields, etc.) ")
+		} else if (document.getElementById('item-arts-crafts').checked) {
+			Session.set("showOther", true);
+			Session.set("placeholder", "(e.g. furniture, clocks, musical instruments, etc.)")
 		} else {
 			Session.set("showOther", false);
 		}

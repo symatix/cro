@@ -58,11 +58,13 @@
     <div class="col-xs-12 col-md-6">
       <input type="text" class="individual-value individual-form" id="sampleDimensions" placeholder="(in mm)" value="{{basic.sampleDimensions}}">
     </div>
-    <div class="col-xs-12 col-md-6 individual-property sampleInvestigated">
-      INVESTIGATED BY
-    </div>
-    <div class="col-xs-12 col-md-6">
-      <input type="text" class="individual-value individual-form" id="sampleInvestigated" placeholder="" value="{{basic.sampleInvestigated}}">
+    <div class="hidden">
+        <div class="col-xs-12 col-md-6 individual-property location">
+          INVESTIGATED BY THE FOLLOWING METHODS/TECHNIQUES
+        </div>
+        <div class="col-xs-12 col-md-6">
+          <input type="text" class="individual-value individual-form" id="methodsTechniques" placeholder="" value="{{basic.investigated}}">
+        </div>
     </div>
     {{> inputTags}}
 <!--

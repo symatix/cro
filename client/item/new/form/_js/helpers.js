@@ -159,3 +159,8 @@ Template.basic_pigment.helpers({
 		}
 	},
 })
+Template.basic_other.helpers({
+	otherPlaceholder: function () {
+		return Session.get("placeholder");
+	}
+})

@@ -642,8 +642,6 @@ h1{
   color:#1a1a1a;
 }
 .list-key{
-    width:100%;
-    text-align:center;
     padding-top:5px;
     text-decoration: underline;
     font-style:italic;
@@ -681,7 +679,7 @@ table.list-font-abbrevations>tr{
     display: flex;
     height:0%;
     z-index: 1000;
-    background-color: rgba(196, 189, 151,0.4);
+    background-color: rgba(196, 189, 151,0.6);
     display: flex;
     justify-content: center; /* align horizontal */
     align-items: center;
@@ -690,11 +688,16 @@ table.list-font-abbrevations>tr{
     cursor:pointer;
     overflow:hidden;
 }
-
+.img-list-container{
+    height:200px;
+}
+.card-details{
+    border-left:2px solid #d1ccad;
+}
 .no-img-list-overlay{
     width:100%;
     height:160px;
-    background-color: rgba(0,0,0,0.7);
+    background-color: rgba(196, 189, 151,0.4);
     display: flex;
     justify-content: center; /* align horizontal */
     align-items: center;
@@ -1334,13 +1337,21 @@ input.userEmail{
   color:#1a1a1a;
   border: 2px solid #d1ccad;
 }
-.form-select:focus{
+.form-select:focus, .entry-type:focus{
   border-color:#d1ccad;
   outline:none;
 }
 .form-contact{
   font-family:valueThin;
   border: 1px solid #c4bd97;
+}
+.entry-type{
+    border:none;
+    border-bottom:2px solid #d1ccad;
+    font-size:1.5em;
+}
+.entry-type:hover{
+    cursor:pointer;
 }
 .progress {
   background: #FFFFFC;

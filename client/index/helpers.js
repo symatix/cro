@@ -27,8 +27,16 @@ Template.mainGallery.helpers({
 		return !Session.get("categorySelected");
 	},
 	category: function () {
-		if (Session.get("categorySelected") === '') {
+		let category = Session.get("categorySelected");
+
+		if (category === '') {
 			return "All";
+		}
+		if (category === 'Painting') {
+			return 'Paintings'
+		}
+		if (category === 'Sculpture') {
+			return 'Sculptures'
 		}
 		return Session.get("categorySelected");
 	}
