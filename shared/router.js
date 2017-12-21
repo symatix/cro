@@ -7,6 +7,7 @@ Router.route("/", function () {
 	Session.set("noFilter", true);
 	Session.set("details", true);
 	Session.set("categorySelected", false);
+	Session.set("guestSort", 'last_edit');
 	this.render('navbar', { to: "header" });
 	this.render('mainGallery', { to: "main" });
 });
