@@ -68,7 +68,7 @@ Template.users.events({
 		console.log(userDetails.profile.email);
 		Meteor.call("resendUserDetails", userDetails, function (error, result) {
 			if (error) {
-				toastr.error(`errorError: ${error}`);
+				toastr.error(error);
 			} else {
 				return toastr.success(`Email to ${userDetails.profile.email} sent!`)
 			}

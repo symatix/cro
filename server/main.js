@@ -4,7 +4,7 @@ Meteor.startup(() => {
 
 	// set up email
 	var uMail = encodeURIComponent("croartia.db@gmail.com");
-	var pMail = encodeURIComponent("croartia.123");
+	var pMail = encodeURIComponent("croartia.321");
 	var server = "smtp.gmail.com";
 	var port = 465;
 

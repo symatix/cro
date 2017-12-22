@@ -3,19 +3,12 @@ Template.contact.events({
 		event.preventDefault();
 		var subject = $("#subject").val();
 		var email = $("#eMail").val();
-		var fullName = $("#fullName").val();
+		var name = $("#fullName").val();
 		var institution = $("#institution").val();
 		var telephone = $("#telephone").val();
 		var text = $("#contactText").val();
 
-		var contact = {
-			subject: subject,
-			email: email,
-			name: fullName,
-			institution: institution,
-			telephone: telephone,
-			text: text,
-		}
+		var contact = { subject, email, name, institution, telephone, text }
 
 		Meteor.call("contactForm", contact, function (error) {
 			if (error) {
